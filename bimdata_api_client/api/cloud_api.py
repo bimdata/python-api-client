@@ -33,6 +33,105 @@ class CloudApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
+    def create_cloud(self, data, **kwargs):  # noqa: E501
+        """create_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.create_cloud(data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.create_cloud_with_http_info(data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.create_cloud_with_http_info(data, **kwargs)  # noqa: E501
+            return data
+
+    def create_cloud_with_http_info(self, data, **kwargs):  # noqa: E501
+        """create_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.create_cloud_with_http_info(data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_cloud" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `create_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def create_cloud_user(self, cloud_pk, data, **kwargs):  # noqa: E501
         """create_cloud_user  # noqa: E501
 
@@ -140,47 +239,47 @@ class CloudApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_cloud_user(self, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_cloud_user(self, id, cloud_pk, **kwargs):  # noqa: E501
         """delete_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_cloud_user(cloud_pk, id, async=True)
+        >>> thread = api.delete_cloud_user(id, cloud_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_cloud_user_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+            return self.delete_cloud_user_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_cloud_user_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_cloud_user_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_cloud_user_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_cloud_user_with_http_info(self, id, cloud_pk, **kwargs):  # noqa: E501
         """delete_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_cloud_user_with_http_info(cloud_pk, id, async=True)
+        >>> thread = api.delete_cloud_user_with_http_info(id, cloud_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params = ['id', 'cloud_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -195,22 +294,22 @@ class CloudApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_cloud_user`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_cloud_user`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_cloud_user`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
 
         query_params = []
 
@@ -247,18 +346,125 @@ class CloudApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_cloud_user(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_cloud(self, id, data, **kwargs):  # noqa: E501
+        """full_update_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.full_update_cloud(id, data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.full_update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.full_update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def full_update_cloud_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """full_update_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.full_update_cloud_with_http_info(id, data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method full_update_cloud" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_cloud`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `full_update_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def full_update_cloud_user(self, id, cloud_pk, data, **kwargs):  # noqa: E501
         """full_update_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_cloud_user(cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_cloud_user(id, cloud_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
@@ -266,30 +472,30 @@ class CloudApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_cloud_user_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_cloud_user_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_cloud_user_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_cloud_user_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_cloud_user_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_cloud_user_with_http_info(self, id, cloud_pk, data, **kwargs):  # noqa: E501
         """full_update_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_cloud_user_with_http_info(cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_cloud_user_with_http_info(id, cloud_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'cloud_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -304,14 +510,14 @@ class CloudApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_cloud_user`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_cloud_user`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_cloud_user`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -320,10 +526,10 @@ class CloudApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
 
         query_params = []
 
@@ -560,47 +766,47 @@ class CloudApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_cloud_user(self, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_cloud_user(self, id, cloud_pk, **kwargs):  # noqa: E501
         """get_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_cloud_user(cloud_pk, id, async=True)
+        >>> thread = api.get_cloud_user(id, cloud_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_cloud_user_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_cloud_user_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_cloud_user_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_cloud_user_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_cloud_user_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_cloud_user_with_http_info(self, id, cloud_pk, **kwargs):  # noqa: E501
         """get_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_cloud_user_with_http_info(cloud_pk, id, async=True)
+        >>> thread = api.get_cloud_user_with_http_info(id, cloud_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params = ['id', 'cloud_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -615,22 +821,22 @@ class CloudApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_cloud_user`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_cloud_user`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_cloud_user`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
 
         query_params = []
 
@@ -857,18 +1063,125 @@ class CloudApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_cloud_user(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_cloud(self, id, data, **kwargs):  # noqa: E501
+        """update_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.update_cloud(id, data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+            return data
+
+    def update_cloud_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """update_cloud  # noqa: E501
+
+          # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.update_cloud_with_http_info(id, data, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str id: (required)
+        :param Cloud data: (required)
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_cloud" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_cloud`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `update_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in params:
+            body_params = params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_cloud_user(self, id, cloud_pk, data, **kwargs):  # noqa: E501
         """update_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_cloud_user(cloud_pk, id, data, async=True)
+        >>> thread = api.update_cloud_user(id, cloud_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
@@ -876,30 +1189,30 @@ class CloudApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_cloud_user_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_cloud_user_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_cloud_user_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_cloud_user_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_cloud_user_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_cloud_user_with_http_info(self, id, cloud_pk, data, **kwargs):  # noqa: E501
         """update_cloud_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_cloud_user_with_http_info(cloud_pk, id, data, async=True)
+        >>> thread = api.update_cloud_user_with_http_info(id, cloud_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
         :param str id: (required)
+        :param str cloud_pk: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'cloud_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -914,14 +1227,14 @@ class CloudApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_cloud_user`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_cloud_user`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_cloud_user`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -930,10 +1243,10 @@ class CloudApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
 
         query_params = []
 
