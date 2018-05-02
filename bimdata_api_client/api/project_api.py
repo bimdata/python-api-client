@@ -600,49 +600,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_classification(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_classification(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_classification(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_classification(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_classification_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.delete_classification_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_classification_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_classification_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_classification_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_classification_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_classification_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_classification_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -661,24 +661,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `delete_classification`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_classification`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_classification`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_classification`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -715,49 +715,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_document(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_document(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_document(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_document_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.delete_document_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_document_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_document_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_document_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_document_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_document_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -776,24 +776,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `delete_document`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_document`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -830,49 +830,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_folder(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_folder(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_folder(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_folder(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_folder_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.delete_folder_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_folder_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_folder_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_folder_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_folder_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_folder_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_folder_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -891,24 +891,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `delete_folder`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_folder`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_folder`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_folder`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -945,47 +945,47 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_project(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_project(self, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project(id, cloud_pk, async=True)
+        >>> thread = api.delete_project(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_project_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            return self.delete_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_project_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_project_with_http_info(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_project_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_with_http_info(id, cloud_pk, async=True)
+        >>> thread = api.delete_project_with_http_info(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1000,22 +1000,22 @@ class ProjectApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_project`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_project`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1052,49 +1052,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_project_user(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_project_user(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_user(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_project_user(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_project_user_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.delete_project_user_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_project_user_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_project_user_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_project_user_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def delete_project_user_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """delete_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_user_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.delete_project_user_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1113,24 +1113,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `delete_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_project_user`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_project_user`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_project_user`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1167,19 +1167,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_classification(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_classification(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_classification(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_classification(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Classification data: (required)
         :return: Classification
                  If the method is called asynchronously,
@@ -1187,31 +1187,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_classification_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_classification_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_classification_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_classification_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_classification_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_classification_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_classification_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_classification_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Classification data: (required)
         :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1230,14 +1230,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `full_update_classification`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_classification`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_classification`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_classification`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1248,10 +1248,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1290,19 +1290,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_document(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_document(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_document(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Document data: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -1310,31 +1310,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_document_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_document_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_document_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_document_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_document_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_document_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_document_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Document data: (required)
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1353,14 +1353,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `full_update_document`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1371,10 +1371,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1413,19 +1413,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_folder(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_folder(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_folder(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_folder(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Folder data: (required)
         :return: Folder
                  If the method is called asynchronously,
@@ -1433,31 +1433,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_folder_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_folder_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_folder_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_folder_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_folder_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_folder_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_folder_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_folder_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Folder data: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1476,14 +1476,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `full_update_folder`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_folder`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_folder`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_folder`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1494,10 +1494,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1536,18 +1536,18 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_project(self, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_project(self, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project(id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_project(cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Project data: (required)
         :return: Project
                  If the method is called asynchronously,
@@ -1555,30 +1555,30 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_project_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_project_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_project_with_http_info(self, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_project_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_with_http_info(id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_project_with_http_info(cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Project data: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1593,14 +1593,14 @@ class ProjectApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_project`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_project`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1609,10 +1609,10 @@ class ProjectApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1651,19 +1651,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_project_user(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_project_user(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_user(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_project_user(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
@@ -1671,31 +1671,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_project_user_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_project_user_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_project_user_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_project_user_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_project_user_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def full_update_project_user_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """full_update_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_user_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.full_update_project_user_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1714,14 +1714,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_project_user`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_project_user`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_project_user`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1732,10 +1732,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1774,49 +1774,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_classification(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_classification(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classification(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_classification(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_classification_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_classification_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_classification_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_classification_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_classification_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_classification_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classification_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_classification_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1835,24 +1835,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_classification`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_classification`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_classification`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_classification`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1996,49 +1996,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_document(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_document(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_document(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_document_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_document_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_document_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_document_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_document_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_document_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_document_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2057,24 +2057,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_document`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_document`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2218,49 +2218,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_folder(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_folder(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folder(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_folder(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_folder_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_folder_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_folder_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_folder_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_folder_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_folder_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folder_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_folder_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2279,24 +2279,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_folder`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_folder`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_folder`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_folder`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2440,47 +2440,47 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_project(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project(self, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project(id, cloud_pk, async=True)
+        >>> thread = api.get_project(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_project_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_project_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_project_with_http_info(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_with_http_info(id, cloud_pk, async=True)
+        >>> thread = api.get_project_with_http_info(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2495,22 +2495,22 @@ class ProjectApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_project`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_project`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2547,47 +2547,47 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_project_tree(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project_tree(self, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project_tree  # noqa: E501
 
         Returns the document tree from root folder  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_tree(id, cloud_pk, async=True)
+        >>> thread = api.get_project_tree(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_project_tree_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_project_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_project_tree_with_http_info(id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_project_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_project_tree_with_http_info(self, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project_tree_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project_tree  # noqa: E501
 
         Returns the document tree from root folder  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_tree_with_http_info(id, cloud_pk, async=True)
+        >>> thread = api.get_project_tree_with_http_info(cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2602,22 +2602,22 @@ class ProjectApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_project_tree`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_project_tree`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_project_tree`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2654,49 +2654,49 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_project_user(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project_user(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_user(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_project_user(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_project_user_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_project_user_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_project_user_with_http_info(project_pk, id, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_project_user_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_project_user_with_http_info(self, project_pk, id, cloud_pk, **kwargs):  # noqa: E501
+    def get_project_user_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
         """get_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_user_with_http_info(project_pk, id, cloud_pk, async=True)
+        >>> thread = api.get_project_user_with_http_info(project_pk, cloud_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2715,24 +2715,24 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_project_user`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_project_user`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_project_user`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2975,19 +2975,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_classification(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_classification(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_classification(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_classification(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Classification data: (required)
         :return: Classification
                  If the method is called asynchronously,
@@ -2995,31 +2995,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_classification_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.update_classification_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_classification_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_classification_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_classification_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_classification_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_classification_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_classification_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Classification data: (required)
         :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3038,14 +3038,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `update_classification`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_classification`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_classification`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_classification`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3056,10 +3056,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3098,19 +3098,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_document(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_document(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_document(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Document data: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -3118,31 +3118,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_document_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.update_document_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_document_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_document_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_document_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_document_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_document_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Document data: (required)
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3161,14 +3161,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `update_document`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_document`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_document`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3179,10 +3179,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3221,19 +3221,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_folder(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_folder(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_folder(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_folder(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Folder data: (required)
         :return: Folder
                  If the method is called asynchronously,
@@ -3241,31 +3241,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_folder_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.update_folder_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_folder_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_folder_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_folder_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_folder_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_folder  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_folder_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_folder_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Folder data: (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3284,14 +3284,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `update_folder`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_folder`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_folder`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_folder`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3302,10 +3302,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3344,18 +3344,18 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_project(self, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_project(self, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project(id, cloud_pk, data, async=True)
+        >>> thread = api.update_project(cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Project data: (required)
         :return: Project
                  If the method is called asynchronously,
@@ -3363,30 +3363,30 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_project_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_project_with_http_info(id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_project_with_http_info(self, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_project_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_project  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_with_http_info(id, cloud_pk, data, async=True)
+        >>> thread = api.update_project_with_http_info(cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param Project data: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3401,14 +3401,14 @@ class ProjectApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_project`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_project`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3417,10 +3417,10 @@ class ProjectApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3459,19 +3459,19 @@ class ProjectApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_project_user(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_project_user(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_user(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_project_user(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
@@ -3479,31 +3479,31 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_project_user_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.update_project_user_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_project_user_with_http_info(project_pk, id, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_project_user_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_project_user_with_http_info(self, project_pk, id, cloud_pk, data, **kwargs):  # noqa: E501
+    def update_project_user_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
         """update_project_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_user_with_http_info(project_pk, id, cloud_pk, data, async=True)
+        >>> thread = api.update_project_user_with_http_info(project_pk, cloud_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
         :param str project_pk: (required)
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str id: (required)
         :param FosUserWrite data: (required)
         :return: FosUserWrite
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'id', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3522,14 +3522,14 @@ class ProjectApi(object):
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `update_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_project_user`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_project_user`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_project_user`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3540,10 +3540,10 @@ class ProjectApi(object):
         path_params = {}
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
