@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **parent_id** | **int** |  | [optional] 
 **creator** | **int** |  | [optional] 
 **project** | **int** |  | [optional] 
-**project_id** | **int** |  | 
+**project_id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **file_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 

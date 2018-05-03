@@ -78,7 +78,8 @@ class Folder(object):
             self.updated_at = updated_at
         if children is not None:
             self.children = children
-        self.project_id = project_id
+        if project_id is not None:
+            self.project_id = project_id
         if created_by is not None:
             self.created_by = created_by
 
@@ -230,8 +231,6 @@ class Folder(object):
         :param project_id: The project_id of this Folder.  # noqa: E501
         :type: int
         """
-        if project_id is None:
-            raise ValueError("Invalid value for `project_id`, must not be `None`")  # noqa: E501
 
         self._project_id = project_id
 

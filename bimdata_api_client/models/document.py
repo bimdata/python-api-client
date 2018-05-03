@@ -90,7 +90,8 @@ class Document(object):
             self.creator = creator
         if project is not None:
             self.project = project
-        self.project_id = project_id
+        if project_id is not None:
+            self.project_id = project_id
         self.name = name
         if file_name is not None:
             self.file_name = file_name
@@ -228,8 +229,6 @@ class Document(object):
         :param project_id: The project_id of this Document.  # noqa: E501
         :type: int
         """
-        if project_id is None:
-            raise ValueError("Invalid value for `project_id`, must not be `None`")  # noqa: E501
 
         self._project_id = project_id
 

@@ -91,7 +91,8 @@ class Project(object):
             self.root_folder = root_folder
         if property_permissions_enabled is not None:
             self.property_permissions_enabled = property_permissions_enabled
-        self.cloud_id = cloud_id
+        if cloud_id is not None:
+            self.cloud_id = cloud_id
 
     @property
     def id(self):
@@ -310,8 +311,6 @@ class Project(object):
         :param cloud_id: The cloud_id of this Project.  # noqa: E501
         :type: int
         """
-        if cloud_id is None:
-            raise ValueError("Invalid value for `cloud_id`, must not be `None`")  # noqa: E501
 
         self._cloud_id = cloud_id
 
