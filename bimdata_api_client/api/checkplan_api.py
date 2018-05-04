@@ -33,18 +33,18 @@ class CheckplanApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_check_plan_result(self, project_pk, cloud_pk, checker_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_check_plan_result(self, cloud_pk, project_pk, checker_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_check_plan_result(project_pk, cloud_pk, checker_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_check_plan_result(cloud_pk, project_pk, checker_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
         :param CheckPlanResult data: (required)
@@ -54,23 +54,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_check_plan_result_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_check_plan_result_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_check_plan_result_with_http_info(self, project_pk, cloud_pk, checker_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_check_plan_result_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_check_plan_result_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
         :param CheckPlanResult data: (required)
@@ -79,7 +79,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'checker_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -94,14 +94,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_check_plan_result`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_check_plan_result`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -118,10 +118,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
@@ -164,18 +164,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_checker(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_checker(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_checker(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
         :return: IfcChecker
@@ -184,23 +184,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_checker_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_checker_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_checker_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_checker_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_checker_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_checker_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_checker_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
         :return: IfcChecker
@@ -208,7 +208,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -223,14 +223,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_checker`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_checker`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_checker`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -243,10 +243,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -287,18 +287,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_checkplan(self, project_pk, cloud_pk, data, **kwargs):  # noqa: E501
+    def create_checkplan(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checkplan(project_pk, cloud_pk, data, async=True)
+        >>> thread = api.create_checkplan(cloud_pk, project_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
@@ -306,30 +306,30 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_checkplan_with_http_info(project_pk, cloud_pk, data, **kwargs)  # noqa: E501
+            return self.create_checkplan_with_http_info(cloud_pk, project_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_checkplan_with_http_info(project_pk, cloud_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_checkplan_with_http_info(cloud_pk, project_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_checkplan_with_http_info(self, project_pk, cloud_pk, data, **kwargs):  # noqa: E501
+    def create_checkplan_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checkplan_with_http_info(project_pk, cloud_pk, data, async=True)
+        >>> thread = api.create_checkplan_with_http_info(cloud_pk, project_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -344,14 +344,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_checkplan`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_checkplan`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_checkplan`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -360,10 +360,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -402,19 +402,19 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_rule(self, project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, **kwargs):  # noqa: E501
+    def create_rule(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, **kwargs):  # noqa: E501
         """create_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule(project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, async=True)
+        >>> thread = api.create_rule(ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :param Rule data: (required)
         :return: Rule
@@ -423,24 +423,24 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_rule_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, **kwargs)  # noqa: E501
+            return self.create_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_rule_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_rule_with_http_info(self, project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, **kwargs):  # noqa: E501
+    def create_rule_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, **kwargs):  # noqa: E501
         """create_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, data, async=True)
+        >>> thread = api.create_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :param Rule data: (required)
         :return: Rule
@@ -448,7 +448,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ruleset_pk', 'check_plan_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -463,18 +463,18 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_rule`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_rule`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `create_rule`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_rule`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_rule`")  # noqa: E501
         # verify the required parameter 'check_plan_pk' is set
         if ('check_plan_pk' not in params or
                 params['check_plan_pk'] is None):
@@ -487,12 +487,12 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'check_plan_pk' in params:
             path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
 
@@ -533,21 +533,21 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_rule_component(self, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def create_rule_component(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, **kwargs):  # noqa: E501
         """create_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_component(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.create_rule_component(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
@@ -555,33 +555,33 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_rule_component_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            return self.create_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_rule_component_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_rule_component_with_http_info(self, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def create_rule_component_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, **kwargs):  # noqa: E501
         """create_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_component_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.create_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'rule_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -596,26 +596,26 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_rule_component`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `create_rule_component`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `create_rule_component`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_rule_component`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `create_rule_component`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_rule_component`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_rule_component`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `create_rule_component`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `create_rule_component`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -624,16 +624,16 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -672,18 +672,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_ruleset(self, project_pk, cloud_pk, check_plan_pk, data, **kwargs):  # noqa: E501
+    def create_ruleset(self, cloud_pk, project_pk, check_plan_pk, data, **kwargs):  # noqa: E501
         """create_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ruleset(project_pk, cloud_pk, check_plan_pk, data, async=True)
+        >>> thread = api.create_ruleset(cloud_pk, project_pk, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
@@ -692,23 +692,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_ruleset_with_http_info(project_pk, cloud_pk, check_plan_pk, data, **kwargs)  # noqa: E501
+            return self.create_ruleset_with_http_info(cloud_pk, project_pk, check_plan_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_ruleset_with_http_info(project_pk, cloud_pk, check_plan_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_ruleset_with_http_info(cloud_pk, project_pk, check_plan_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_ruleset_with_http_info(self, project_pk, cloud_pk, check_plan_pk, data, **kwargs):  # noqa: E501
+    def create_ruleset_with_http_info(self, cloud_pk, project_pk, check_plan_pk, data, **kwargs):  # noqa: E501
         """create_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ruleset_with_http_info(project_pk, cloud_pk, check_plan_pk, data, async=True)
+        >>> thread = api.create_ruleset_with_http_info(cloud_pk, project_pk, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
@@ -716,7 +716,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'check_plan_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'check_plan_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -731,14 +731,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_ruleset`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_ruleset`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_ruleset`")  # noqa: E501
         # verify the required parameter 'check_plan_pk' is set
         if ('check_plan_pk' not in params or
                 params['check_plan_pk'] is None):
@@ -751,10 +751,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'check_plan_pk' in params:
             path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
 
@@ -795,53 +795,53 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_check_plan_result(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_check_plan_result(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """delete_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_check_plan_result(id, cloud_pk, checker_pk, ifc_pk, project_pk, async=True)
+        >>> thread = api.delete_check_plan_result(cloud_pk, project_pk, checker_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.delete_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_check_plan_result_with_http_info(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_check_plan_result_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """delete_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, async=True)
+        >>> thread = api.delete_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'checker_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -856,14 +856,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_check_plan_result`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_check_plan_result`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -872,24 +872,24 @@ class CheckplanApi(object):
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `delete_check_plan_result`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_check_plan_result`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -926,18 +926,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_checker(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_checker(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_checker(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -946,23 +946,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_checker_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_checker_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -970,7 +970,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -985,14 +985,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_checker`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_checker`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_checker`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1005,10 +1005,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -1049,18 +1049,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_checkplan(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_checkplan(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """delete_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checkplan(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.delete_checkplan(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1068,30 +1068,30 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_checkplan_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.delete_checkplan_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_checkplan_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_checkplan_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_checkplan_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_checkplan_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """delete_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checkplan_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.delete_checkplan_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1106,14 +1106,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_checkplan`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_checkplan`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_checkplan`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1122,10 +1122,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -1164,53 +1164,53 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_rule(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def delete_rule(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs):  # noqa: E501
         """delete_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.delete_rule(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            return self.delete_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_rule_with_http_info(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def delete_rule_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs):  # noqa: E501
         """delete_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.delete_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1225,40 +1225,40 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_rule`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_rule`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `delete_rule`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_rule`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `delete_rule`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_rule`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_rule`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `delete_rule`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_rule`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1295,55 +1295,55 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_rule_component(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def delete_rule_component(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs):  # noqa: E501
         """delete_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_component(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.delete_rule_component(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            return self.delete_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_rule_component_with_http_info(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def delete_rule_component_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs):  # noqa: E501
         """delete_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.delete_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'rule_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1358,46 +1358,46 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_rule_component`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_rule_component`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `delete_rule_component`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `delete_rule_component`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_rule_component`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `delete_rule_component`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_rule_component`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_rule_component`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `delete_rule_component`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_rule_component`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `delete_rule_component`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -1434,18 +1434,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ruleset(self, project_pk, cloud_pk, id, check_plan_pk, **kwargs):  # noqa: E501
+    def delete_ruleset(self, cloud_pk, project_pk, id, check_plan_pk, **kwargs):  # noqa: E501
         """delete_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ruleset(project_pk, cloud_pk, id, check_plan_pk, async=True)
+        >>> thread = api.delete_ruleset(cloud_pk, project_pk, id, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :return: None
@@ -1454,23 +1454,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, **kwargs)  # noqa: E501
+            return self.delete_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_ruleset_with_http_info(self, project_pk, cloud_pk, id, check_plan_pk, **kwargs):  # noqa: E501
+    def delete_ruleset_with_http_info(self, cloud_pk, project_pk, id, check_plan_pk, **kwargs):  # noqa: E501
         """delete_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, async=True)
+        >>> thread = api.delete_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :return: None
@@ -1478,7 +1478,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'check_plan_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'check_plan_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1493,14 +1493,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ruleset`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_ruleset`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ruleset`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1513,10 +1513,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'check_plan_pk' in params:
@@ -1557,21 +1557,21 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_check_plan_result(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def full_update_check_plan_result(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """full_update_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_check_plan_result(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.full_update_check_plan_result(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :param CheckPlanResult data: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
@@ -1579,33 +1579,33 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_check_plan_result_with_http_info(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def full_update_check_plan_result_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """full_update_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.full_update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :param CheckPlanResult data: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'checker_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1620,14 +1620,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -1636,10 +1636,10 @@ class CheckplanApi(object):
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `full_update_check_plan_result`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1648,16 +1648,16 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -1696,18 +1696,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_checker(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_checker(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_checker(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -1717,23 +1717,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_checker_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_checker_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -1742,7 +1742,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1757,14 +1757,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_checker`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_checker`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_checker`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1781,10 +1781,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -1827,18 +1827,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_checkplan(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_checkplan(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """full_update_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checkplan(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_checkplan(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -1847,23 +1847,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_checkplan_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_checkplan_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_checkplan_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_checkplan_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_checkplan_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_checkplan_with_http_info(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """full_update_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checkplan_with_http_info(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_checkplan_with_http_info(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -1871,7 +1871,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1886,14 +1886,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_checkplan`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_checkplan`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_checkplan`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -1906,10 +1906,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -1950,21 +1950,21 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_rule(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def full_update_rule(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs):  # noqa: E501
         """full_update_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.full_update_rule(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :param Rule data: (required)
         :return: Rule
                  If the method is called asynchronously,
@@ -1972,33 +1972,33 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_rule_with_http_info(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def full_update_rule_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs):  # noqa: E501
         """full_update_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.full_update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :param Rule data: (required)
         :return: Rule
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2013,26 +2013,26 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_rule`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_rule`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `full_update_rule`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_rule`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `full_update_rule`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_rule`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_rule`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `full_update_rule`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_rule`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2041,16 +2041,16 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2089,22 +2089,22 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_rule_component(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def full_update_rule_component(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs):  # noqa: E501
         """full_update_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_component(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.full_update_rule_component(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
@@ -2112,34 +2112,34 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_rule_component_with_http_info(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def full_update_rule_component_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs):  # noqa: E501
         """full_update_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.full_update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'rule_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2154,30 +2154,30 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_rule_component`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_rule_component`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `full_update_rule_component`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `full_update_rule_component`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_rule_component`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `full_update_rule_component`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_rule_component`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_rule_component`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `full_update_rule_component`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_rule_component`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `full_update_rule_component`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2186,18 +2186,18 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -2236,18 +2236,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ruleset(self, project_pk, cloud_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
+    def full_update_ruleset(self, cloud_pk, project_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
         """full_update_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ruleset(project_pk, cloud_pk, id, check_plan_pk, data, async=True)
+        >>> thread = api.full_update_ruleset(cloud_pk, project_pk, id, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
@@ -2257,23 +2257,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ruleset_with_http_info(self, project_pk, cloud_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
+    def full_update_ruleset_with_http_info(self, cloud_pk, project_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
         """full_update_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, async=True)
+        >>> thread = api.full_update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
@@ -2282,7 +2282,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'check_plan_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'check_plan_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2297,14 +2297,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ruleset`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ruleset`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ruleset`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -2321,10 +2321,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'check_plan_pk' in params:
@@ -2367,53 +2367,53 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_check_plan_result(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_check_plan_result(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_check_plan_result(id, cloud_pk, checker_pk, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_check_plan_result(cloud_pk, project_pk, checker_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_check_plan_result_with_http_info(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_check_plan_result_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'checker_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2428,14 +2428,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_check_plan_result`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_check_plan_result`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -2444,24 +2444,24 @@ class CheckplanApi(object):
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `get_check_plan_result`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_check_plan_result`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -2498,18 +2498,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_check_plan_results(self, project_pk, cloud_pk, checker_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_check_plan_results(self, cloud_pk, project_pk, checker_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_check_plan_results  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_check_plan_results(project_pk, cloud_pk, checker_pk, ifc_pk, async=True)
+        >>> thread = api.get_check_plan_results(cloud_pk, project_pk, checker_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
         :return: list[CheckPlanResult]
@@ -2518,23 +2518,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_check_plan_results_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_check_plan_results_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_check_plan_results_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_check_plan_results_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_check_plan_results_with_http_info(self, project_pk, cloud_pk, checker_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_check_plan_results_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_check_plan_results  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_check_plan_results_with_http_info(project_pk, cloud_pk, checker_pk, ifc_pk, async=True)
+        >>> thread = api.get_check_plan_results_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
         :return: list[CheckPlanResult]
@@ -2542,7 +2542,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'checker_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2557,14 +2557,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_check_plan_results`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_check_plan_results`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_check_plan_results`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -2577,10 +2577,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
@@ -2621,18 +2621,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checker(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_checker(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_checker(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: IfcChecker
@@ -2641,23 +2641,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_checker_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_checker_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: IfcChecker
@@ -2665,7 +2665,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2680,14 +2680,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_checker`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_checker`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_checker`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -2700,10 +2700,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -2744,18 +2744,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checkers(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_checkers(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_checkers  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkers(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_checkers(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[IfcChecker]
                  If the method is called asynchronously,
@@ -2763,30 +2763,30 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_checkers_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_checkers_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_checkers_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_checkers_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_checkers_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_checkers_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_checkers  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkers_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_checkers_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[IfcChecker]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2801,14 +2801,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkers`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_checkers`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkers`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2817,10 +2817,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2859,18 +2859,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checkplan(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_checkplan(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplan(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_checkplan(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
@@ -2878,30 +2878,30 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_checkplan_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_checkplan_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_checkplan_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_checkplan_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_checkplan_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_checkplan_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplan_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_checkplan_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2916,14 +2916,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkplan`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_checkplan`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkplan`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -2932,10 +2932,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -2974,47 +2974,47 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checkplans(self, project_pk, cloud_pk, **kwargs):  # noqa: E501
+    def get_checkplans(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_checkplans  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplans(project_pk, cloud_pk, async=True)
+        >>> thread = api.get_checkplans(cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :return: list[CheckPlan]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_checkplans_with_http_info(project_pk, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_checkplans_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_checkplans_with_http_info(project_pk, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_checkplans_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_checkplans_with_http_info(self, project_pk, cloud_pk, **kwargs):  # noqa: E501
+    def get_checkplans_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_checkplans  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplans_with_http_info(project_pk, cloud_pk, async=True)
+        >>> thread = api.get_checkplans_with_http_info(cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :return: list[CheckPlan]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3029,22 +3029,22 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkplans`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_checkplans`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_checkplans`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -3081,53 +3081,53 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_rule(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs):  # noqa: E501
         """get_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :return: Rule
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            return self.get_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            (data) = self.get_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_rule_with_http_info(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, **kwargs):  # noqa: E501
         """get_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :return: Rule
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3142,40 +3142,40 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_rule`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `get_rule`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_rule`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3212,55 +3212,55 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_rule_component(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule_component(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs):  # noqa: E501
         """get_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_component(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule_component(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            return self.get_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            (data) = self.get_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_rule_component_with_http_info(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule_component_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, **kwargs):  # noqa: E501
         """get_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'rule_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3275,46 +3275,46 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_rule_component`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule_component`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `get_rule_component`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule_component`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule_component`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `get_rule_component`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule_component`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule_component`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule_component`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_rule_component`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `get_rule_component`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -3351,53 +3351,53 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_rule_components(self, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule_components(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, **kwargs):  # noqa: E501
         """get_rule_components  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_components(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule_components(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str rule_pk: (required)
         :return: list[RuleComponent]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_rule_components_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            return self.get_rule_components_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_rule_components_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
+            (data) = self.get_rule_components_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_rule_components_with_http_info(self, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
+    def get_rule_components_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, **kwargs):  # noqa: E501
         """get_rule_components  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_components_with_http_info(cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, async=True)
+        >>> thread = api.get_rule_components_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, rule_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str rule_pk: (required)
         :return: list[RuleComponent]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'rule_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3412,40 +3412,40 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule_components`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `get_rule_components`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule_components`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule_components`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `get_rule_components`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rule_components`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_rule_components`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `get_rule_components`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `get_rule_components`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -3482,19 +3482,19 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_rules(self, project_pk, cloud_pk, ruleset_pk, check_plan_pk, **kwargs):  # noqa: E501
+    def get_rules(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, **kwargs):  # noqa: E501
         """get_rules  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rules(project_pk, cloud_pk, ruleset_pk, check_plan_pk, async=True)
+        >>> thread = api.get_rules(ruleset_pk, cloud_pk, project_pk, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :return: list[Rule]
                  If the method is called asynchronously,
@@ -3502,31 +3502,31 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_rules_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, **kwargs)  # noqa: E501
+            return self.get_rules_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_rules_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, **kwargs)  # noqa: E501
+            (data) = self.get_rules_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_rules_with_http_info(self, project_pk, cloud_pk, ruleset_pk, check_plan_pk, **kwargs):  # noqa: E501
+    def get_rules_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, **kwargs):  # noqa: E501
         """get_rules  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rules_with_http_info(project_pk, cloud_pk, ruleset_pk, check_plan_pk, async=True)
+        >>> thread = api.get_rules_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :return: list[Rule]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ruleset_pk', 'check_plan_pk']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3541,18 +3541,18 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_rules`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rules`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `get_rules`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rules`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_rules`")  # noqa: E501
         # verify the required parameter 'check_plan_pk' is set
         if ('check_plan_pk' not in params or
                 params['check_plan_pk'] is None):
@@ -3561,12 +3561,12 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'check_plan_pk' in params:
             path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
 
@@ -3605,18 +3605,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ruleset(self, project_pk, cloud_pk, id, check_plan_pk, **kwargs):  # noqa: E501
+    def get_ruleset(self, cloud_pk, project_pk, id, check_plan_pk, **kwargs):  # noqa: E501
         """get_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ruleset(project_pk, cloud_pk, id, check_plan_pk, async=True)
+        >>> thread = api.get_ruleset(cloud_pk, project_pk, id, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :return: Ruleset
@@ -3625,23 +3625,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, **kwargs)  # noqa: E501
+            return self.get_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ruleset_with_http_info(self, project_pk, cloud_pk, id, check_plan_pk, **kwargs):  # noqa: E501
+    def get_ruleset_with_http_info(self, cloud_pk, project_pk, id, check_plan_pk, **kwargs):  # noqa: E501
         """get_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, async=True)
+        >>> thread = api.get_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :return: Ruleset
@@ -3649,7 +3649,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'check_plan_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'check_plan_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3664,14 +3664,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ruleset`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ruleset`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ruleset`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3684,10 +3684,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'check_plan_pk' in params:
@@ -3728,18 +3728,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_rulesets(self, project_pk, cloud_pk, check_plan_pk, **kwargs):  # noqa: E501
+    def get_rulesets(self, cloud_pk, project_pk, check_plan_pk, **kwargs):  # noqa: E501
         """get_rulesets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rulesets(project_pk, cloud_pk, check_plan_pk, async=True)
+        >>> thread = api.get_rulesets(cloud_pk, project_pk, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :return: list[Ruleset]
                  If the method is called asynchronously,
@@ -3747,30 +3747,30 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_rulesets_with_http_info(project_pk, cloud_pk, check_plan_pk, **kwargs)  # noqa: E501
+            return self.get_rulesets_with_http_info(cloud_pk, project_pk, check_plan_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_rulesets_with_http_info(project_pk, cloud_pk, check_plan_pk, **kwargs)  # noqa: E501
+            (data) = self.get_rulesets_with_http_info(cloud_pk, project_pk, check_plan_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_rulesets_with_http_info(self, project_pk, cloud_pk, check_plan_pk, **kwargs):  # noqa: E501
+    def get_rulesets_with_http_info(self, cloud_pk, project_pk, check_plan_pk, **kwargs):  # noqa: E501
         """get_rulesets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rulesets_with_http_info(project_pk, cloud_pk, check_plan_pk, async=True)
+        >>> thread = api.get_rulesets_with_http_info(cloud_pk, project_pk, check_plan_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str check_plan_pk: (required)
         :return: list[Ruleset]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'check_plan_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'check_plan_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3785,14 +3785,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_rulesets`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_rulesets`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_rulesets`")  # noqa: E501
         # verify the required parameter 'check_plan_pk' is set
         if ('check_plan_pk' not in params or
                 params['check_plan_pk'] is None):
@@ -3801,10 +3801,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'check_plan_pk' in params:
             path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
 
@@ -3843,18 +3843,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def launch_new_check(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def launch_new_check(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """launch_new_check  # noqa: E501
 
         Starts a new check in the checker  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.launch_new_check(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.launch_new_check(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -3864,23 +3864,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.launch_new_check_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.launch_new_check_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.launch_new_check_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.launch_new_check_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def launch_new_check_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def launch_new_check_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """launch_new_check  # noqa: E501
 
         Starts a new check in the checker  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.launch_new_check_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.launch_new_check_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -3889,7 +3889,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3904,14 +3904,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `launch_new_check`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `launch_new_check`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `launch_new_check`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3928,10 +3928,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3974,21 +3974,21 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_check_plan_result(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_check_plan_result(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """update_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_check_plan_result(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.update_check_plan_result(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :param CheckPlanResult data: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
@@ -3996,33 +3996,33 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_check_plan_result_with_http_info(self, id, cloud_pk, checker_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_check_plan_result_with_http_info(self, cloud_pk, project_pk, checker_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """update_check_plan_result  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_check_plan_result_with_http_info(id, cloud_pk, checker_pk, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.update_check_plan_result_with_http_info(cloud_pk, project_pk, checker_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str checker_pk: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
+        :param str id: (required)
         :param CheckPlanResult data: (required)
         :return: CheckPlanResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'checker_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'checker_pk', 'ifc_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4037,14 +4037,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'checker_pk' is set
         if ('checker_pk' not in params or
                 params['checker_pk'] is None):
@@ -4053,10 +4053,10 @@ class CheckplanApi(object):
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `update_check_plan_result`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_check_plan_result`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_check_plan_result`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4065,16 +4065,16 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'checker_pk' in params:
             path_params['checker_pk'] = params['checker_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -4113,18 +4113,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_checker(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_checker(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_checker(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -4134,23 +4134,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_checker_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_checker_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_checker  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_checker_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param IfcChecker data: (required)
@@ -4159,7 +4159,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4174,14 +4174,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_checker`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_checker`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_checker`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4198,10 +4198,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -4244,18 +4244,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_checkplan(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_checkplan(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """update_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checkplan(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.update_checkplan(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -4264,23 +4264,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_checkplan_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_checkplan_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_checkplan_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_checkplan_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_checkplan_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_checkplan_with_http_info(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """update_checkplan  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checkplan_with_http_info(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.update_checkplan_with_http_info(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -4288,7 +4288,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4303,14 +4303,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_checkplan`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_checkplan`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_checkplan`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4323,10 +4323,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -4367,21 +4367,21 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_rule(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def update_rule(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs):  # noqa: E501
         """update_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.update_rule(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :param Rule data: (required)
         :return: Rule
                  If the method is called asynchronously,
@@ -4389,33 +4389,33 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            return self.update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_rule_with_http_info(self, id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def update_rule_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, **kwargs):  # noqa: E501
         """update_rule  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_with_http_info(id, cloud_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.update_rule_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
         :param Rule data: (required)
         :return: Rule
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4430,26 +4430,26 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_rule`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_rule`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `update_rule`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_rule`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `update_rule`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_rule`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_rule`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `update_rule`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_rule`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4458,16 +4458,16 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -4506,22 +4506,22 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_rule_component(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def update_rule_component(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs):  # noqa: E501
         """update_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_component(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.update_rule_component(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
@@ -4529,34 +4529,34 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            return self.update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_rule_component_with_http_info(self, id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
+    def update_rule_component_with_http_info(self, ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, **kwargs):  # noqa: E501
         """update_rule_component  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_component_with_http_info(id, cloud_pk, rule_pk, check_plan_pk, project_pk, ruleset_pk, data, async=True)
+        >>> thread = api.update_rule_component_with_http_info(ruleset_pk, cloud_pk, project_pk, check_plan_pk, id, rule_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str rule_pk: (required)
-        :param str check_plan_pk: (required)
-        :param str project_pk: (required)
         :param str ruleset_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str check_plan_pk: (required)
+        :param str id: (required)
+        :param str rule_pk: (required)
         :param RuleComponent data: (required)
         :return: RuleComponent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'rule_pk', 'check_plan_pk', 'project_pk', 'ruleset_pk', 'data']  # noqa: E501
+        all_params = ['ruleset_pk', 'cloud_pk', 'project_pk', 'check_plan_pk', 'id', 'rule_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4571,30 +4571,30 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_rule_component`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_rule_component`")  # noqa: E501
-        # verify the required parameter 'rule_pk' is set
-        if ('rule_pk' not in params or
-                params['rule_pk'] is None):
-            raise ValueError("Missing the required parameter `rule_pk` when calling `update_rule_component`")  # noqa: E501
-        # verify the required parameter 'check_plan_pk' is set
-        if ('check_plan_pk' not in params or
-                params['check_plan_pk'] is None):
-            raise ValueError("Missing the required parameter `check_plan_pk` when calling `update_rule_component`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_rule_component`")  # noqa: E501
         # verify the required parameter 'ruleset_pk' is set
         if ('ruleset_pk' not in params or
                 params['ruleset_pk'] is None):
             raise ValueError("Missing the required parameter `ruleset_pk` when calling `update_rule_component`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_rule_component`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_rule_component`")  # noqa: E501
+        # verify the required parameter 'check_plan_pk' is set
+        if ('check_plan_pk' not in params or
+                params['check_plan_pk'] is None):
+            raise ValueError("Missing the required parameter `check_plan_pk` when calling `update_rule_component`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_rule_component`")  # noqa: E501
+        # verify the required parameter 'rule_pk' is set
+        if ('rule_pk' not in params or
+                params['rule_pk'] is None):
+            raise ValueError("Missing the required parameter `rule_pk` when calling `update_rule_component`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4603,18 +4603,18 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'rule_pk' in params:
-            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
-        if 'check_plan_pk' in params:
-            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ruleset_pk' in params:
             path_params['ruleset_pk'] = params['ruleset_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'check_plan_pk' in params:
+            path_params['check_plan_pk'] = params['check_plan_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'rule_pk' in params:
+            path_params['rule_pk'] = params['rule_pk']  # noqa: E501
 
         query_params = []
 
@@ -4653,18 +4653,18 @@ class CheckplanApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ruleset(self, project_pk, cloud_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
+    def update_ruleset(self, cloud_pk, project_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
         """update_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ruleset(project_pk, cloud_pk, id, check_plan_pk, data, async=True)
+        >>> thread = api.update_ruleset(cloud_pk, project_pk, id, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
@@ -4674,23 +4674,23 @@ class CheckplanApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
+            return self.update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ruleset_with_http_info(self, project_pk, cloud_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
+    def update_ruleset_with_http_info(self, cloud_pk, project_pk, id, check_plan_pk, data, **kwargs):  # noqa: E501
         """update_ruleset  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ruleset_with_http_info(project_pk, cloud_pk, id, check_plan_pk, data, async=True)
+        >>> thread = api.update_ruleset_with_http_info(cloud_pk, project_pk, id, check_plan_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str check_plan_pk: (required)
         :param Ruleset data: (required)
@@ -4699,7 +4699,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'check_plan_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'check_plan_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4714,14 +4714,14 @@ class CheckplanApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ruleset`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ruleset`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ruleset`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4738,10 +4738,10 @@ class CheckplanApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'check_plan_pk' in params:

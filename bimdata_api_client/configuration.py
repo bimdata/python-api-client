@@ -47,7 +47,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "http://api-staging.bimdata.io"
+        self.host = "https://api-staging.bimdata.io"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 
@@ -243,5 +243,5 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
                "Version of the API: v1\n"\
-               "SDK Package Version: 1.0.4".\
+               "SDK Package Version: 1.0.5".\
                format(env=sys.platform, pyversion=sys.version)

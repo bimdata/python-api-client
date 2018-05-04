@@ -43,7 +43,8 @@ class Document(object):
         'file': 'str',
         'size': 'str',
         'created_at': 'datetime',
-        'updated_at': 'datetime'
+        'updated_at': 'datetime',
+        'ifc_id': 'str'
     }
 
     attribute_map = {
@@ -59,10 +60,11 @@ class Document(object):
         'file': 'file',
         'size': 'size',
         'created_at': 'created_at',
-        'updated_at': 'updated_at'
+        'updated_at': 'updated_at',
+        'ifc_id': 'ifc_id'
     }
 
-    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, project_id=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, project_id=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_id=None):  # noqa: E501
         """Document - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -78,6 +80,7 @@ class Document(object):
         self._size = None
         self._created_at = None
         self._updated_at = None
+        self._ifc_id = None
         self.discriminator = None
 
         if id is not None:
@@ -105,6 +108,8 @@ class Document(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if ifc_id is not None:
+            self.ifc_id = ifc_id
 
     @property
     def id(self):
@@ -384,6 +389,27 @@ class Document(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def ifc_id(self):
+        """Gets the ifc_id of this Document.  # noqa: E501
+
+
+        :return: The ifc_id of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._ifc_id
+
+    @ifc_id.setter
+    def ifc_id(self, ifc_id):
+        """Sets the ifc_id of this Document.
+
+
+        :param ifc_id: The ifc_id of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._ifc_id = ifc_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -33,18 +33,18 @@ class IfcApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def bulk_delete_ifc_classifications(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_classifications(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_classifications  # noqa: E501
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all ifc's elements.             No classification will be deleted on this endpoint, only the relation between ifc's elements and their classification.           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_classifications(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_classifications(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -52,30 +52,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_delete_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_delete_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_delete_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_delete_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_delete_ifc_classifications_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_classifications_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_classifications  # noqa: E501
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all ifc's elements.             No classification will be deleted on this endpoint, only the relation between ifc's elements and their classification.           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -90,14 +90,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -106,10 +106,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -148,18 +148,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_properties(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_properties(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_properties  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_properties(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -167,30 +167,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_delete_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_delete_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_delete_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_delete_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_delete_ifc_properties_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_properties_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_properties  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -205,14 +205,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -221,10 +221,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -263,18 +263,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_property_definitions(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_property_definitions(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_property_definitions  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_property_definitions(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -282,30 +282,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_delete_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_delete_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_delete_ifc_property_definitions_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_property_definitions_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_property_definitions  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -320,14 +320,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -336,10 +336,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -378,18 +378,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_units(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_units(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_units  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_units(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_units(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -397,30 +397,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_delete_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_delete_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_delete_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_delete_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_delete_ifc_units_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_units_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_ifc_units  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -435,14 +435,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -451,10 +451,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -493,18 +493,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_property_set(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_property_set(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_property_set  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_property_set(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_property_set(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -512,30 +512,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_delete_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_delete_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_delete_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_delete_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_delete_property_set_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_delete_property_set_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_delete_property_set  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_delete_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -550,14 +550,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_delete_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -566,10 +566,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -608,19 +608,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_remove_classifications_of_element(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_remove_classifications_of_element(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_remove_classifications_of_element  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_classifications_of_element(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.bulk_remove_classifications_of_element(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -628,31 +628,31 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_remove_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_remove_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_remove_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_remove_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_remove_classifications_of_element_with_http_info(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_remove_classifications_of_element_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_remove_classifications_of_element  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'element_uuid', 'ifc_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -667,18 +667,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -687,12 +687,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -731,19 +731,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_remove_elements_from_classification(self, project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_remove_elements_from_classification(self, ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_remove_elements_from_classification  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_elements_from_classification(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_remove_elements_from_classification(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -751,31 +751,31 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bulk_remove_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.bulk_remove_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bulk_remove_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.bulk_remove_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def bulk_remove_elements_from_classification_with_http_info(self, project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
+    def bulk_remove_elements_from_classification_with_http_info(self, ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """bulk_remove_elements_from_classification  # noqa: E501
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, async=True)
+        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_classification_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['ifc_classification_pk', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -790,18 +790,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
         if ('ifc_classification_pk' not in params or
                 params['ifc_classification_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_classification_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -810,12 +810,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'ifc_classification_pk' in params:
             path_params['ifc_classification_pk'] = params['ifc_classification_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -854,18 +854,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_classification_element_relations(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_classification_element_relations(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_classification_element_relations  # noqa: E501
 
                  create association between existing classification and existing element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification_element_relations(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_classification_element_relations(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ElementClassificationRelation] data: (required)
         :return: None
@@ -874,23 +874,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_classification_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_classification_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_classification_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_classification_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_classification_element_relations_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_classification_element_relations_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_classification_element_relations  # noqa: E501
 
                  create association between existing classification and existing element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ElementClassificationRelation] data: (required)
         :return: None
@@ -898,7 +898,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -913,14 +913,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_classification_element_relations`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -933,10 +933,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -977,19 +977,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_classifications_of_element(self, project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_classifications_of_element(self, element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_classifications_of_element  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classifications_of_element(project_pk, cloud_pk, element_uuid, ifc_pk, data, async=True)
+        >>> thread = api.create_classifications_of_element(element_uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Classification] data: (required)
         :return: list[Classification]
@@ -998,24 +998,24 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_classifications_of_element_with_http_info(self, project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_classifications_of_element_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_classifications_of_element  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, async=True)
+        >>> thread = api.create_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Classification] data: (required)
         :return: list[Classification]
@@ -1023,7 +1023,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'element_uuid', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1038,18 +1038,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_classifications_of_element`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `create_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -1062,12 +1062,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -1108,18 +1108,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_element(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -1128,23 +1128,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -1152,7 +1152,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1167,14 +1167,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_element`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -1187,10 +1187,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -1231,18 +1231,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element_0(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element_0(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_0  # noqa: E501
 
                  You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_0(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_element_0(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param Element data: (required)
         :return: None
@@ -1251,23 +1251,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_0_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_0_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_0_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element_0_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_0  # noqa: E501
 
                  You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_element_0_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param Element data: (required)
         :return: None
@@ -1275,7 +1275,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1290,14 +1290,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_0`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_0`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -1310,10 +1310,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -1354,19 +1354,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element_property_set(self, project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set(self, element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set  # noqa: E501
 
                  Create an property_set that will be automatically linked to the element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set(project_pk, cloud_pk, element_uuid, ifc_pk, data, async=True)
+        >>> thread = api.create_element_property_set(element_uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
         :return: None
@@ -1375,24 +1375,24 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_property_set_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_property_set_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_property_set_with_http_info(self, project_pk, cloud_pk, element_uuid, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set  # noqa: E501
 
                  Create an property_set that will be automatically linked to the element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, data, async=True)
+        >>> thread = api.create_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
         :return: None
@@ -1400,7 +1400,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'element_uuid', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1415,18 +1415,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_property_set`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -1439,12 +1439,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -1485,21 +1485,21 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element_property_set_property(self, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property(self, element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str ifc_pk: (required)
         :param ModelProperty data: (required)
         :return: ModelProperty
                  If the method is called asynchronously,
@@ -1507,33 +1507,33 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_property_set_property_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_property_set_property_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_property_set_property_with_http_info(self, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str ifc_pk: (required)
         :param ModelProperty data: (required)
         :return: ModelProperty
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1548,26 +1548,26 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1576,16 +1576,16 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -1624,22 +1624,22 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element_property_set_property_definition(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property_definition(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property_definition(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :param PropertyDefinition data: (required)
         :return: PropertyDefinition
                  If the method is called asynchronously,
@@ -1647,34 +1647,34 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_property_set_property_definition_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_property_set_property_definition_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_property_set_property_definition_with_http_info(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property_definition_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :param PropertyDefinition data: (required)
         :return: PropertyDefinition
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'property_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1689,10 +1689,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'element_uuid' is set
+        if ('element_uuid' not in params or
+                params['element_uuid'] is None):
+            raise ValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
@@ -1701,18 +1709,10 @@ class IfcApi(object):
         if ('property_pk' not in params or
                 params['property_pk'] is None):
             raise ValueError("Missing the required parameter `property_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in params or
-                params['element_uuid'] is None):
-            raise ValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1721,18 +1721,18 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
+        if 'element_uuid' in params:
+            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'property_pk' in params:
             path_params['property_pk'] = params['property_pk']  # noqa: E501
-        if 'element_uuid' in params:
-            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -1771,23 +1771,23 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_element_property_set_property_definition_unit(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property_definition_unit(self, element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_unit(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property_definition_unit(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str propertydefinition_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str property_pk: (required)
+        :param str ifc_pk: (required)
         :param Unit data: (required)
         :return: Unit
                  If the method is called asynchronously,
@@ -1795,35 +1795,35 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, **kwargs)  # noqa: E501
+            return self.create_element_property_set_property_definition_unit_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_element_property_set_property_definition_unit_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_element_property_set_property_definition_unit_with_http_info(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, **kwargs):  # noqa: E501
+    def create_element_property_set_property_definition_unit_with_http_info(self, element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, data, async=True)
+        >>> thread = api.create_element_property_set_property_definition_unit_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str propertydefinition_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str property_pk: (required)
+        :param str ifc_pk: (required)
         :param Unit data: (required)
         :return: Unit
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'propertydefinition_pk', 'data']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertydefinition_pk', 'propertyset_pk', 'property_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1838,26 +1838,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in params or
-                params['property_pk'] is None):
-            raise ValueError("Missing the required parameter `property_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
@@ -1866,6 +1854,18 @@ class IfcApi(object):
         if ('propertydefinition_pk' not in params or
                 params['propertydefinition_pk'] is None):
             raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'property_pk' is set
+        if ('property_pk' not in params or
+                params['property_pk'] is None):
+            raise ValueError("Missing the required parameter `property_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1874,20 +1874,20 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
-        if 'property_pk' in params:
-            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertydefinition_pk' in params:
             path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'property_pk' in params:
+            path_params['property_pk'] = params['property_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -1926,18 +1926,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_ifc_property_definition(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_ifc_property_definition(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_ifc_property_definition  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_property_definition(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_ifc_property_definition(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[PropertyDefinition] data: (required)
         :return: list[PropertyDefinition]
@@ -1946,23 +1946,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_ifc_property_definition_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_ifc_property_definition_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_ifc_property_definition_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_ifc_property_definition_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_ifc_property_definition_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_ifc_property_definition_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_ifc_property_definition  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_property_definition_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[PropertyDefinition] data: (required)
         :return: list[PropertyDefinition]
@@ -1970,7 +1970,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1985,14 +1985,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2005,10 +2005,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2049,18 +2049,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_ifc_unit(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_ifc_unit(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_ifc_unit  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_unit(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_ifc_unit(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Unit] data: (required)
         :return: list[Unit]
@@ -2069,23 +2069,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_ifc_unit_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_ifc_unit_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_ifc_unit_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_ifc_unit_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_ifc_unit_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_ifc_unit_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_ifc_unit  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_unit_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Unit] data: (required)
         :return: list[Unit]
@@ -2093,7 +2093,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2108,14 +2108,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_ifc_unit`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2128,10 +2128,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2172,18 +2172,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_property_set(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_property_set(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_property_set  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_property_set(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[PropertySet] data: (required)
         :return: list[PropertySet]
@@ -2192,23 +2192,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_property_set_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_property_set_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_property_set  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_property_set_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[PropertySet] data: (required)
         :return: list[PropertySet]
@@ -2216,7 +2216,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2231,14 +2231,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2251,10 +2251,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2295,18 +2295,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_property_set_element_relations(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_property_set_element_relations(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_property_set_element_relations  # noqa: E501
 
                  create association between existing classification and existing element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_element_relations(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_property_set_element_relations(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ElementPropertySetRelation] data: (required)
         :return: None
@@ -2315,23 +2315,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_property_set_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_property_set_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_property_set_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_property_set_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_property_set_element_relations_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_property_set_element_relations_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_property_set_element_relations  # noqa: E501
 
                  create association between existing classification and existing element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_element_relations_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ElementPropertySetRelation] data: (required)
         :return: None
@@ -2339,7 +2339,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2354,14 +2354,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_property_set_element_relations`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_property_set_element_relations`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_property_set_element_relations`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2374,10 +2374,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2418,18 +2418,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_space(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_space(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_space(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_space(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
         :return: Space
@@ -2438,23 +2438,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_space_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_space_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_space_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_space_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_space_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_space_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_space_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_space_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
         :return: Space
@@ -2462,7 +2462,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2477,14 +2477,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_space`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2497,10 +2497,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2541,18 +2541,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_zone(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_zone(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_zone  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_zone(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Zone]
@@ -2561,23 +2561,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_zone_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.create_zone_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_zone_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_zone_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_zone_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def create_zone_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_zone  # noqa: E501
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.create_zone_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Zone]
@@ -2585,7 +2585,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2600,14 +2600,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_zone`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `create_zone`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -2620,10 +2620,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -2664,20 +2664,20 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_zone_space(self, project_pk, cloud_pk, ifc_pk, zone_pk, data, **kwargs):  # noqa: E501
+    def create_zone_space(self, zone_pk, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_space(project_pk, cloud_pk, ifc_pk, zone_pk, data, async=True)
+        >>> thread = api.create_zone_space(zone_pk, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
@@ -2685,32 +2685,32 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_zone_space_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, data, **kwargs)  # noqa: E501
+            return self.create_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_zone_space_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_zone_space_with_http_info(self, project_pk, cloud_pk, ifc_pk, zone_pk, data, **kwargs):  # noqa: E501
+    def create_zone_space_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """create_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_space_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, data, async=True)
+        >>> thread = api.create_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'zone_pk', 'data']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2725,22 +2725,22 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_zone_space`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_zone_space`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `create_zone_space`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_zone_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_zone_space`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2749,14 +2749,14 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -2795,51 +2795,51 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_element(self, project_pk, cloud_pk, ifc_pk, uuid, **kwargs):  # noqa: E501
+    def delete_element(self, uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """delete_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_element(project_pk, cloud_pk, ifc_pk, uuid, async=True)
+        >>> thread = api.delete_element(uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_element_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, **kwargs)  # noqa: E501
+            return self.delete_element_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_element_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, **kwargs)  # noqa: E501
+            (data) = self.delete_element_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_element_with_http_info(self, project_pk, cloud_pk, ifc_pk, uuid, **kwargs):  # noqa: E501
+    def delete_element_with_http_info(self, uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """delete_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_element_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, async=True)
+        >>> thread = api.delete_element_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'uuid']  # noqa: E501
+        all_params = ['uuid', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2854,34 +2854,34 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_element`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_element`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `delete_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
         if ('uuid' not in params or
                 params['uuid'] is None):
             raise ValueError("Missing the required parameter `uuid` when calling `delete_element`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `delete_element`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'uuid' in params:
             path_params['uuid'] = params['uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -2918,18 +2918,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ifc(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_ifc(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """delete_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.delete_ifc(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -2937,30 +2937,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_ifc_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.delete_ifc_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_ifc_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_ifc_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_ifc_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def delete_ifc_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """delete_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.delete_ifc_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2975,14 +2975,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -2991,10 +2991,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -3033,18 +3033,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ifc_property(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_property(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_property(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3053,23 +3053,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_ifc_property_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_property_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3077,7 +3077,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3092,14 +3092,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3112,10 +3112,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3156,18 +3156,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ifc_property_definition(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_property_definition(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_definition(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_property_definition(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3176,23 +3176,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_ifc_property_definition_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_property_definition_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3200,7 +3200,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3215,14 +3215,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3235,10 +3235,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3279,18 +3279,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ifc_unit(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_unit(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_unit(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_unit(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3299,23 +3299,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_ifc_unit_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_ifc_unit_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3323,7 +3323,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3338,14 +3338,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_unit`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3358,10 +3358,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3402,18 +3402,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_property_set(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_property_set(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_property_set(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_property_set(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3422,23 +3422,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_property_set_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_property_set_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3446,7 +3446,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3461,14 +3461,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3481,10 +3481,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3525,18 +3525,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_space(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_space(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_space(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_space(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3545,23 +3545,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_space_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_space_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3569,7 +3569,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3584,14 +3584,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_space`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_space`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3604,10 +3604,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3648,18 +3648,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_zone(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_zone(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_zone(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3668,23 +3668,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.delete_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_zone_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def delete_zone_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """delete_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.delete_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: None
@@ -3692,7 +3692,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3707,14 +3707,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_zone`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_zone`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -3727,10 +3727,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -3771,53 +3771,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_zone_space(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_zone_space(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """delete_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_space(id, cloud_pk, ifc_pk, zone_pk, project_pk, async=True)
+        >>> thread = api.delete_zone_space(zone_pk, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs)  # noqa: E501
+            return self.delete_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def delete_zone_space_with_http_info(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_zone_space_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """delete_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, async=True)
+        >>> thread = api.delete_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'ifc_pk', 'zone_pk', 'project_pk']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3832,40 +3832,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_zone_space`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_zone_space`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `delete_zone_space`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `delete_zone_space`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `delete_zone_space`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `delete_zone_space`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -3902,18 +3902,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_element(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_element(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_element  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.full_update_element(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -3922,23 +3922,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_element_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_element_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_element  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.full_update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -3946,7 +3946,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3961,14 +3961,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -3981,10 +3981,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -4025,20 +4025,20 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_element_0(self, project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs):  # noqa: E501
+    def full_update_element_0(self, uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element_0(project_pk, cloud_pk, ifc_pk, uuid, data, async=True)
+        >>> thread = api.full_update_element_0(uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -4046,32 +4046,32 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs)  # noqa: E501
+            return self.full_update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_element_0_with_http_info(self, project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs):  # noqa: E501
+    def full_update_element_0_with_http_info(self, uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, async=True)
+        >>> thread = api.full_update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'uuid', 'data']  # noqa: E501
+        all_params = ['uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4086,22 +4086,22 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_element_0`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_element_0`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `full_update_element_0`")  # noqa: E501
         # verify the required parameter 'uuid' is set
         if ('uuid' not in params or
                 params['uuid'] is None):
             raise ValueError("Missing the required parameter `uuid` when calling `full_update_element_0`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_element_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_element_0`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `full_update_element_0`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4110,14 +4110,14 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'uuid' in params:
             path_params['uuid'] = params['uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -4156,18 +4156,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ifc(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_ifc(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """full_update_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_ifc(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -4176,23 +4176,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ifc_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_ifc_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ifc_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ifc_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ifc_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_ifc_with_http_info(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """full_update_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_with_http_info(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.full_update_ifc_with_http_info(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -4200,7 +4200,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4215,14 +4215,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4235,10 +4235,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -4279,18 +4279,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ifc_property(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ModelProperty] data: (required)
         :return: list[ModelProperty]
@@ -4299,23 +4299,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ifc_property_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ModelProperty] data: (required)
         :return: list[ModelProperty]
@@ -4323,7 +4323,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4338,14 +4338,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -4358,10 +4358,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -4402,18 +4402,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ifc_property_0(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property_0(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_0(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property_0(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param ModelProperty data: (required)
@@ -4423,23 +4423,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ifc_property_0_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property_0_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param ModelProperty data: (required)
@@ -4448,7 +4448,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4463,14 +4463,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property_0`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_property_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4487,10 +4487,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -4533,18 +4533,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ifc_property_definition(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property_definition(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_definition(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property_definition(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertyDefinition data: (required)
@@ -4554,23 +4554,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ifc_property_definition_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_property_definition_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertyDefinition data: (required)
@@ -4579,7 +4579,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4594,14 +4594,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4618,10 +4618,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -4664,18 +4664,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_ifc_unit(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_unit(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_unit(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_unit(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Unit data: (required)
@@ -4685,23 +4685,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_ifc_unit_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_ifc_unit_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Unit data: (required)
@@ -4710,7 +4710,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4725,14 +4725,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4749,10 +4749,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -4795,18 +4795,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_property_set(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_property_set(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_property_set(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_property_set(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
@@ -4816,23 +4816,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_property_set_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_property_set_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
@@ -4841,7 +4841,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4856,14 +4856,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -4880,10 +4880,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -4926,18 +4926,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_space(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_space(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_space(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_space(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
@@ -4947,23 +4947,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_space_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_space_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
@@ -4972,7 +4972,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4987,14 +4987,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -5011,10 +5011,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -5057,18 +5057,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_zone(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_zone(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_zone(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Zone data: (required)
@@ -5078,23 +5078,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_zone_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def full_update_zone_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """full_update_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.full_update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Zone data: (required)
@@ -5103,7 +5103,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5118,14 +5118,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_zone`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -5142,10 +5142,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -5188,21 +5188,21 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_zone_space(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs):  # noqa: E501
+    def full_update_zone_space(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """full_update_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_space(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, async=True)
+        >>> thread = api.full_update_zone_space(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
@@ -5210,33 +5210,33 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.full_update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_zone_space_with_http_info(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs):  # noqa: E501
+    def full_update_zone_space_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """full_update_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, async=True)
+        >>> thread = api.full_update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'ifc_pk', 'zone_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5251,26 +5251,26 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_zone_space`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_zone_space`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `full_update_zone_space`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `full_update_zone_space`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `full_update_zone_space`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5279,16 +5279,16 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -5327,19 +5327,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_classifications_of_element(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def get_classifications_of_element(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_classifications_of_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications_of_element(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.get_classifications_of_element(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Classification]
                  If the method is called asynchronously,
@@ -5347,31 +5347,31 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_classifications_of_element_with_http_info(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def get_classifications_of_element_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_classifications_of_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications_of_element_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.get_classifications_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Classification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'element_uuid', 'ifc_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5386,18 +5386,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_classifications_of_element`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -5406,12 +5406,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -5450,18 +5450,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_element(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element  # noqa: E501
 
                  Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_element(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -5469,30 +5469,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_element_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_element_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element  # noqa: E501
 
                  Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_element_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5507,14 +5507,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_element`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -5523,10 +5523,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -5565,51 +5565,51 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_0(self, project_pk, cloud_pk, ifc_pk, uuid, **kwargs):  # noqa: E501
+    def get_element_0(self, uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_0(project_pk, cloud_pk, ifc_pk, uuid, async=True)
+        >>> thread = api.get_element_0(uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, **kwargs)  # noqa: E501
+            return self.get_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, **kwargs)  # noqa: E501
+            (data) = self.get_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_0_with_http_info(self, project_pk, cloud_pk, ifc_pk, uuid, **kwargs):  # noqa: E501
+    def get_element_0_with_http_info(self, uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, async=True)
+        >>> thread = api.get_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'uuid']  # noqa: E501
+        all_params = ['uuid', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5624,34 +5624,34 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_0`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_0`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_0`")  # noqa: E501
         # verify the required parameter 'uuid' is set
         if ('uuid' not in params or
                 params['uuid'] is None):
             raise ValueError("Missing the required parameter `uuid` when calling `get_element_0`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_0`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_0`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'uuid' in params:
             path_params['uuid'] = params['uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -5688,53 +5688,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_element_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: PropertySet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_with_http_info(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_element_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: PropertySet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5749,40 +5749,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -5819,53 +5819,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_properties(self, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_properties(self, element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_properties  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_properties(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_properties(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[ModelProperty]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_properties_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_properties_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_properties_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_properties_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_properties_with_http_info(self, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_properties_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_properties  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_properties_with_http_info(cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_properties_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[ModelProperty]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5880,40 +5880,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_properties`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_properties`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_properties`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_properties`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_properties`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_properties`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -5950,55 +5950,55 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_property(self, id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property(self, element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str id: (required)
+        :param str ifc_pk: (required)
         :return: ModelProperty
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_property_with_http_info(self, id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str id: (required)
+        :param str ifc_pk: (required)
         :return: ModelProperty
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'propertyset_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6013,46 +6013,46 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -6089,57 +6089,57 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_property_definition(self, id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
+        :param str id: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: PropertyDefinition
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_property_definition_with_http_info(self, id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
+        :param str id: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: PropertyDefinition
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'property_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6154,14 +6154,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if ('element_uuid' not in params or
+                params['element_uuid'] is None):
+            raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
@@ -6170,36 +6174,32 @@ class IfcApi(object):
         if ('property_pk' not in params or
                 params['property_pk'] is None):
             raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in params or
-                params['element_uuid'] is None):
-            raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
+        if 'element_uuid' in params:
+            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'property_pk' in params:
             path_params['property_pk'] = params['property_pk']  # noqa: E501
-        if 'element_uuid' in params:
-            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -6236,59 +6236,59 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_property_definition_unit(self, cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition_unit(self, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_unit(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition_unit(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
+        :param str propertydefinition_pk: (required)
         :param str propertyset_pk: (required)
+        :param str property_pk: (required)
         :param str ifc_pk: (required)
         :param str id: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param str propertydefinition_pk: (required)
         :return: Unit
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_property_definition_unit_with_http_info(self, cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition_unit_with_http_info(self, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
+        :param str propertydefinition_pk: (required)
         :param str propertyset_pk: (required)
+        :param str property_pk: (required)
         :param str ifc_pk: (required)
         :param str id: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param str propertydefinition_pk: (required)
         :return: Unit
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'ifc_pk', 'id', 'property_pk', 'element_uuid', 'project_pk', 'propertydefinition_pk']  # noqa: E501
+        all_params = ['propertydefinition_pk', 'propertyset_pk', 'property_pk', 'ifc_pk', 'id', 'element_uuid', 'cloud_pk', 'project_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6303,14 +6303,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'propertydefinition_pk' is set
+        if ('propertydefinition_pk' not in params or
+                params['propertydefinition_pk'] is None):
+            raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
             raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'property_pk' is set
+        if ('property_pk' not in params or
+                params['property_pk'] is None):
+            raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -6319,42 +6323,38 @@ class IfcApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in params or
-                params['property_pk'] is None):
-            raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in params or
-                params['propertydefinition_pk'] is None):
-            raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'propertydefinition_pk' in params:
+            path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'property_pk' in params:
+            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
-        if 'property_pk' in params:
-            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'propertydefinition_pk' in params:
-            path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
 
         query_params = []
 
@@ -6391,57 +6391,57 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_property_definition_units(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition_units(self, element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition_units  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_units(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition_units(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str propertydefinition_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str property_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[Unit]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_property_definition_units_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_property_definition_units_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_property_definition_units_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_property_definition_units_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_property_definition_units_with_http_info(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definition_units_with_http_info(self, element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definition_units  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_units_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definition_units_with_http_info(element_uuid, cloud_pk, project_pk, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str propertydefinition_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str property_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[Unit]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'propertydefinition_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertydefinition_pk', 'propertyset_pk', 'property_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6456,26 +6456,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
-        # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in params or
-                params['property_pk'] is None):
-            raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
@@ -6484,24 +6472,36 @@ class IfcApi(object):
         if ('propertydefinition_pk' not in params or
                 params['propertydefinition_pk'] is None):
             raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
+        # verify the required parameter 'property_pk' is set
+        if ('property_pk' not in params or
+                params['property_pk'] is None):
+            raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
-        if 'property_pk' in params:
-            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertydefinition_pk' in params:
             path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'property_pk' in params:
+            path_params['property_pk'] = params['property_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -6538,55 +6538,55 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_set_property_definitions(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definitions(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definitions  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definitions(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definitions(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: list[PropertyDefinition]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_set_property_definitions_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_set_property_definitions_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_set_property_definitions_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_set_property_definitions_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_set_property_definitions_with_http_info(self, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_element_property_set_property_definitions_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_set_property_definitions  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definitions_with_http_info(cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.get_element_property_set_property_definitions_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: list[PropertyDefinition]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'property_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6601,10 +6601,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'element_uuid' is set
+        if ('element_uuid' not in params or
+                params['element_uuid'] is None):
+            raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
@@ -6613,34 +6621,26 @@ class IfcApi(object):
         if ('property_pk' not in params or
                 params['property_pk'] is None):
             raise ValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
-        # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in params or
-                params['element_uuid'] is None):
-            raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'element_uuid' in params:
+            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'property_pk' in params:
             path_params['property_pk'] = params['property_pk']  # noqa: E501
-        if 'element_uuid' in params:
-            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -6677,19 +6677,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_element_property_sets(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def get_element_property_sets(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_sets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_sets(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.get_element_property_sets(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertySet]
                  If the method is called asynchronously,
@@ -6697,31 +6697,31 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_element_property_sets_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_element_property_sets_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_element_property_sets_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_element_property_sets_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_element_property_sets_with_http_info(self, project_pk, cloud_pk, element_uuid, ifc_pk, **kwargs):  # noqa: E501
+    def get_element_property_sets_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_element_property_sets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_sets_with_http_info(project_pk, cloud_pk, element_uuid, ifc_pk, async=True)
+        >>> thread = api.get_element_property_sets_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertySet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'element_uuid', 'ifc_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6736,18 +6736,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_sets`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_sets`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `get_element_property_sets`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_sets`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_element_property_sets`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -6756,12 +6756,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -6800,18 +6800,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_elements(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_elements(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_elements  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_elements(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Element]
                  If the method is called asynchronously,
@@ -6819,30 +6819,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_elements_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_elements_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_elements_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_elements_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_elements_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_elements_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_elements  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_elements_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Element]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6857,14 +6857,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_elements`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_elements`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -6873,10 +6873,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -6915,19 +6915,19 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_elements_from_classification(self, project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_elements_from_classification(self, ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_elements_from_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_from_classification(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, async=True)
+        >>> thread = api.get_elements_from_classification(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Element]
                  If the method is called asynchronously,
@@ -6935,31 +6935,31 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_elements_from_classification_with_http_info(self, project_pk, cloud_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_elements_from_classification_with_http_info(self, ifc_classification_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_elements_from_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_from_classification_with_http_info(project_pk, cloud_pk, ifc_classification_pk, ifc_pk, async=True)
+        >>> thread = api.get_elements_from_classification_with_http_info(ifc_classification_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Element]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_classification_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['ifc_classification_pk', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6974,18 +6974,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_elements_from_classification`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
         if ('ifc_classification_pk' not in params or
                 params['ifc_classification_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_classification_pk` when calling `get_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -6994,12 +6994,12 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'ifc_classification_pk' in params:
             path_params['ifc_classification_pk'] = params['ifc_classification_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -7038,18 +7038,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: Ifc
                  If the method is called asynchronously,
@@ -7057,30 +7057,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: Ifc
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7095,14 +7095,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7111,10 +7111,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -7153,18 +7153,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_bvh(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_bvh(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_bvh  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the bvh file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_bvh(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_bvh(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7172,30 +7172,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_bvh_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_bvh_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_bvh_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_bvh_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_bvh_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_bvh_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_bvh  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the bvh file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_bvh_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_bvh_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7210,14 +7210,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_bvh`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_bvh`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_bvh`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7226,10 +7226,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -7268,18 +7268,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_classifications(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_classifications(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_classifications  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_classifications(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_classifications(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Classification]
                  If the method is called asynchronously,
@@ -7287,30 +7287,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_classifications_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_classifications_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_classifications  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_classifications_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_classifications_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Classification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7325,14 +7325,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_classifications`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -7341,10 +7341,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -7383,18 +7383,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_gltf(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_gltf(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_gltf  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the gltf file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_gltf(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_gltf(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7402,30 +7402,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_gltf_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_gltf_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_gltf_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_gltf_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_gltf_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_gltf_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_gltf  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the gltf file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_gltf_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_gltf_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7440,14 +7440,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_gltf`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_gltf`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_gltf`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7456,10 +7456,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -7498,18 +7498,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_map(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_map(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_map  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the map file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_map(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_map(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7517,30 +7517,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_map_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_map_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_map_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_map_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_map_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_map_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_map  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the map file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_map_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_map_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7555,14 +7555,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_map`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_map`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_map`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7571,10 +7571,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -7613,18 +7613,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_properties(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_properties(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_properties  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_properties(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_properties(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[ModelProperty]
                  If the method is called asynchronously,
@@ -7632,30 +7632,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_properties_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_properties_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_properties  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_properties_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_properties_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[ModelProperty]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7670,14 +7670,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_properties`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_properties`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_properties`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -7686,10 +7686,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -7728,18 +7728,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_property(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: ModelProperty
@@ -7748,23 +7748,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_property_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: ModelProperty
@@ -7772,7 +7772,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7787,14 +7787,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7807,10 +7807,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -7851,18 +7851,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_property_definition(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property_definition(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definition(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property_definition(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: PropertyDefinition
@@ -7871,23 +7871,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_property_definition_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property_definition_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: PropertyDefinition
@@ -7895,7 +7895,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7910,14 +7910,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -7930,10 +7930,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -7974,18 +7974,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_property_definitions(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property_definitions(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property_definitions  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definitions(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property_definitions(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertyDefinition]
                  If the method is called asynchronously,
@@ -7993,30 +7993,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_property_definitions_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_property_definitions_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_property_definitions  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definitions_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_property_definitions_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertyDefinition]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8031,14 +8031,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -8047,10 +8047,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -8089,18 +8089,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_structure(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_structure(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_structure  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the structure file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_structure(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_structure(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8108,30 +8108,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_structure_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_structure_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_structure_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_structure_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_structure_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_structure_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_structure  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the structure file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_structure_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_structure_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8146,14 +8146,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_structure`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_structure`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_structure`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -8162,10 +8162,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -8204,18 +8204,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_systems(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_systems(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_systems  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the system file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_systems(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_systems(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8223,30 +8223,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_systems_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            return self.get_ifc_systems_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_systems_with_http_info(project_pk, cloud_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_systems_with_http_info(cloud_pk, project_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_systems_with_http_info(self, project_pk, cloud_pk, id, **kwargs):  # noqa: E501
+    def get_ifc_systems_with_http_info(self, cloud_pk, project_pk, id, **kwargs):  # noqa: E501
         """get_ifc_systems  # noqa: E501
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the system file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_systems_with_http_info(project_pk, cloud_pk, id, async=True)
+        >>> thread = api.get_ifc_systems_with_http_info(cloud_pk, project_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8261,14 +8261,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_systems`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_systems`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_systems`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -8277,10 +8277,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -8319,18 +8319,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_unit(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_unit(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_unit(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_unit(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Unit
@@ -8339,23 +8339,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_unit_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_unit_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Unit
@@ -8363,7 +8363,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8378,14 +8378,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_unit`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -8398,10 +8398,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -8442,18 +8442,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_units(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_units(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_units  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_units(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_units(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Unit]
                  If the method is called asynchronously,
@@ -8461,30 +8461,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifc_units_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_ifc_units_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_ifc_units  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_units_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_ifc_units_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Unit]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8499,14 +8499,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_units`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_units`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifc_units`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -8515,10 +8515,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -8557,47 +8557,47 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifcs(self, project_pk, cloud_pk, **kwargs):  # noqa: E501
+    def get_ifcs(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_ifcs  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifcs(project_pk, cloud_pk, async=True)
+        >>> thread = api.get_ifcs(cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :return: list[Ifc]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_ifcs_with_http_info(project_pk, cloud_pk, **kwargs)  # noqa: E501
+            return self.get_ifcs_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_ifcs_with_http_info(project_pk, cloud_pk, **kwargs)  # noqa: E501
+            (data) = self.get_ifcs_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_ifcs_with_http_info(self, project_pk, cloud_pk, **kwargs):  # noqa: E501
+    def get_ifcs_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_ifcs  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifcs_with_http_info(project_pk, cloud_pk, async=True)
+        >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :return: list[Ifc]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8612,22 +8612,22 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifcs`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_ifcs`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_ifcs`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -8664,18 +8664,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_property_set(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_property_set(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_set(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_property_set(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: PropertySet
@@ -8684,23 +8684,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_property_set_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_property_set_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: PropertySet
@@ -8708,7 +8708,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8723,14 +8723,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -8743,10 +8743,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -8787,18 +8787,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_property_sets(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_property_sets(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_property_sets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_sets(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_property_sets(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertySet]
                  If the method is called asynchronously,
@@ -8806,30 +8806,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_property_sets_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_property_sets_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_property_sets_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_property_sets_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_property_sets_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_property_sets_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_property_sets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_sets_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_property_sets_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[PropertySet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8844,14 +8844,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_property_sets`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_property_sets`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_property_sets`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -8860,10 +8860,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -8902,18 +8902,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_space(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_space(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_space(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_space(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Space
@@ -8922,23 +8922,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_space_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_space_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Space
@@ -8946,7 +8946,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8961,14 +8961,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_space`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_space`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -8981,10 +8981,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -9025,18 +9025,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_spaces(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_spaces(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_spaces  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_spaces(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_spaces(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Space]
                  If the method is called asynchronously,
@@ -9044,30 +9044,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_spaces_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_spaces_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_spaces_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_spaces_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_spaces  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_spaces_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Space]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9082,14 +9082,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_spaces`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_spaces`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_spaces`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -9098,10 +9098,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -9140,18 +9140,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_zone(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_zone(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_zone(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Zone
@@ -9160,23 +9160,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_zone_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, **kwargs):  # noqa: E501
+    def get_zone_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """get_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, async=True)
+        >>> thread = api.get_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :return: Zone
@@ -9184,7 +9184,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9199,14 +9199,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_zone`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zone`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -9219,10 +9219,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -9263,53 +9263,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_zone_space(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs):  # noqa: E501
+    def get_zone_space(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_space(id, cloud_pk, ifc_pk, zone_pk, project_pk, async=True)
+        >>> thread = api.get_zone_space(zone_pk, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def get_zone_space_with_http_info(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, **kwargs):  # noqa: E501
+    def get_zone_space_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """get_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, async=True)
+        >>> thread = api.get_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'ifc_pk', 'zone_pk', 'project_pk']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9324,40 +9324,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_zone_space`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zone_space`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `get_zone_space`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `get_zone_space`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_zone_space`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_zone_space`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -9394,51 +9394,51 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_zone_spaces(self, project_pk, cloud_pk, ifc_pk, zone_pk, **kwargs):  # noqa: E501
+    def get_zone_spaces(self, zone_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_zone_spaces  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_spaces(project_pk, cloud_pk, ifc_pk, zone_pk, async=True)
+        >>> thread = api.get_zone_spaces(zone_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[ZoneSpace]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_zone_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, **kwargs)  # noqa: E501
+            return self.get_zone_spaces_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_zone_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, **kwargs)  # noqa: E501
+            (data) = self.get_zone_spaces_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_zone_spaces_with_http_info(self, project_pk, cloud_pk, ifc_pk, zone_pk, **kwargs):  # noqa: E501
+    def get_zone_spaces_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_zone_spaces  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_spaces_with_http_info(project_pk, cloud_pk, ifc_pk, zone_pk, async=True)
+        >>> thread = api.get_zone_spaces_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :return: list[ZoneSpace]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'zone_pk']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9453,34 +9453,34 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_zone_spaces`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zone_spaces`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_zone_spaces`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `get_zone_spaces`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zone_spaces`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_zone_spaces`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_zone_spaces`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -9517,18 +9517,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_zones(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_zones(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_zones  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_zones(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Zone]
                  If the method is called asynchronously,
@@ -9536,30 +9536,30 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_zones_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            return self.get_zones_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_zones_with_http_info(project_pk, cloud_pk, ifc_pk, **kwargs)  # noqa: E501
+            (data) = self.get_zones_with_http_info(cloud_pk, project_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_zones_with_http_info(self, project_pk, cloud_pk, ifc_pk, **kwargs):  # noqa: E501
+    def get_zones_with_http_info(self, cloud_pk, project_pk, ifc_pk, **kwargs):  # noqa: E501
         """get_zones  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones_with_http_info(project_pk, cloud_pk, ifc_pk, async=True)
+        >>> thread = api.get_zones_with_http_info(cloud_pk, project_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :return: list[Zone]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9574,14 +9574,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_zones`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `get_zones`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_zones`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -9590,10 +9590,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -9632,53 +9632,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_classification_of_element(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_classification_of_element(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """remove_classification_of_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_classification_of_element(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_classification_of_element(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_classification_of_element_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.remove_classification_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_classification_of_element_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_classification_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def remove_classification_of_element_with_http_info(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_classification_of_element_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """remove_classification_of_element  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_classification_of_element_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_classification_of_element_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9693,40 +9693,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `remove_classification_of_element`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `remove_classification_of_element`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_classification_of_element`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `remove_classification_of_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_classification_of_element`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `remove_classification_of_element`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -9763,53 +9763,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_element_property_set(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """remove_element_property_set  # noqa: E501
 
                  Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.remove_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs)  # noqa: E501
             return data
 
-    def remove_element_property_set_with_http_info(self, id, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_with_http_info(self, element_uuid, cloud_pk, project_pk, ifc_pk, id, **kwargs):  # noqa: E501
         """remove_element_property_set  # noqa: E501
 
                  Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_with_http_info(id, cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set_with_http_info(element_uuid, cloud_pk, project_pk, ifc_pk, id, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'id']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9824,40 +9824,40 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
@@ -9894,55 +9894,55 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_element_property_set_property(self, id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property(self, element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set_property(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str id: (required)
+        :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.remove_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def remove_element_property_set_property_with_http_info(self, id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_with_http_info(id, cloud_pk, propertyset_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set_property_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str propertyset_pk: (required)
         :param str element_uuid: (required)
-        :param str ifc_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str propertyset_pk: (required)
+        :param str id: (required)
+        :param str ifc_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'propertyset_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9957,46 +9957,46 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in params or
-                params['propertyset_pk'] is None):
-            raise ValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'propertyset_pk' is set
+        if ('propertyset_pk' not in params or
+                params['propertyset_pk'] is None):
+            raise ValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set_property`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'propertyset_pk' in params:
-            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'propertyset_pk' in params:
+            path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -10033,57 +10033,57 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_element_property_set_property_definition(self, id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property_definition(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set_property_definition(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
+        :param str id: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return self.remove_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def remove_element_property_set_property_definition_with_http_info(self, id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property_definition_with_http_info(self, element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_with_http_info(id, cloud_pk, propertyset_pk, property_pk, element_uuid, ifc_pk, project_pk, async=True)
+        >>> thread = api.remove_element_property_set_property_definition_with_http_info(element_uuid, cloud_pk, project_pk, propertyset_pk, property_pk, id, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
+        :param str element_uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str propertyset_pk: (required)
         :param str property_pk: (required)
-        :param str element_uuid: (required)
+        :param str id: (required)
         :param str ifc_pk: (required)
-        :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'propertyset_pk', 'property_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['element_uuid', 'cloud_pk', 'project_pk', 'propertyset_pk', 'property_pk', 'id', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10098,14 +10098,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if ('element_uuid' not in params or
+                params['element_uuid'] is None):
+            raise ValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
@@ -10114,36 +10118,32 @@ class IfcApi(object):
         if ('property_pk' not in params or
                 params['property_pk'] is None):
             raise ValueError("Missing the required parameter `property_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in params or
-                params['element_uuid'] is None):
-            raise ValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property_definition`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
+        if 'element_uuid' in params:
+            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
         if 'property_pk' in params:
             path_params['property_pk'] = params['property_pk']  # noqa: E501
-        if 'element_uuid' in params:
-            path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -10180,59 +10180,59 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_element_property_set_property_definition_unit(self, cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property_definition_unit(self, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_unit(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.remove_element_property_set_property_definition_unit(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
+        :param str propertydefinition_pk: (required)
         :param str propertyset_pk: (required)
+        :param str property_pk: (required)
         :param str ifc_pk: (required)
         :param str id: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param str propertydefinition_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            return self.remove_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def remove_element_property_set_property_definition_unit_with_http_info(self, cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, **kwargs):  # noqa: E501
+    def remove_element_property_set_property_definition_unit_with_http_info(self, propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """remove_element_property_set_property_definition_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, propertyset_pk, ifc_pk, id, property_pk, element_uuid, project_pk, propertydefinition_pk, async=True)
+        >>> thread = api.remove_element_property_set_property_definition_unit_with_http_info(propertydefinition_pk, propertyset_pk, property_pk, ifc_pk, id, element_uuid, cloud_pk, project_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str cloud_pk: (required)
+        :param str propertydefinition_pk: (required)
         :param str propertyset_pk: (required)
+        :param str property_pk: (required)
         :param str ifc_pk: (required)
         :param str id: (required)
-        :param str property_pk: (required)
         :param str element_uuid: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param str propertydefinition_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'propertyset_pk', 'ifc_pk', 'id', 'property_pk', 'element_uuid', 'project_pk', 'propertydefinition_pk']  # noqa: E501
+        all_params = ['propertydefinition_pk', 'propertyset_pk', 'property_pk', 'ifc_pk', 'id', 'element_uuid', 'cloud_pk', 'project_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10247,14 +10247,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'propertydefinition_pk' is set
+        if ('propertydefinition_pk' not in params or
+                params['propertydefinition_pk'] is None):
+            raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
         if ('propertyset_pk' not in params or
                 params['propertyset_pk'] is None):
             raise ValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'property_pk' is set
+        if ('property_pk' not in params or
+                params['property_pk'] is None):
+            raise ValueError("Missing the required parameter `property_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -10263,42 +10267,38 @@ class IfcApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in params or
-                params['property_pk'] is None):
-            raise ValueError("Missing the required parameter `property_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
         if ('element_uuid' not in params or
                 params['element_uuid'] is None):
             raise ValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
-        # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in params or
-                params['propertydefinition_pk'] is None):
-            raise ValueError("Missing the required parameter `propertydefinition_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'propertydefinition_pk' in params:
+            path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
         if 'propertyset_pk' in params:
             path_params['propertyset_pk'] = params['propertyset_pk']  # noqa: E501
+        if 'property_pk' in params:
+            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
-        if 'property_pk' in params:
-            path_params['property_pk'] = params['property_pk']  # noqa: E501
         if 'element_uuid' in params:
             path_params['element_uuid'] = params['element_uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'propertydefinition_pk' in params:
-            path_params['propertydefinition_pk'] = params['propertydefinition_pk']  # noqa: E501
 
         query_params = []
 
@@ -10335,53 +10335,53 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def remove_elements_from_classification(self, cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, **kwargs):  # noqa: E501
+    def remove_elements_from_classification(self, uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
         """remove_elements_from_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, async=True)
+        >>> thread = api.remove_elements_from_classification(uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
-        :param str uuid: (required)
-        :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, **kwargs)  # noqa: E501
+            return self.remove_elements_from_classification_with_http_info(uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, **kwargs)  # noqa: E501
+            (data) = self.remove_elements_from_classification_with_http_info(uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, **kwargs)  # noqa: E501
             return data
 
-    def remove_elements_from_classification_with_http_info(self, cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, **kwargs):  # noqa: E501
+    def remove_elements_from_classification_with_http_info(self, uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, **kwargs):  # noqa: E501
         """remove_elements_from_classification  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, uuid, project_pk, async=True)
+        >>> thread = api.remove_elements_from_classification_with_http_info(uuid, cloud_pk, project_pk, ifc_classification_pk, ifc_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param str uuid: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
-        :param str uuid: (required)
-        :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'ifc_classification_pk', 'ifc_pk', 'uuid', 'project_pk']  # noqa: E501
+        all_params = ['uuid', 'cloud_pk', 'project_pk', 'ifc_classification_pk', 'ifc_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10396,10 +10396,18 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'uuid' is set
+        if ('uuid' not in params or
+                params['uuid'] is None):
+            raise ValueError("Missing the required parameter `uuid` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `remove_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
         if ('ifc_classification_pk' not in params or
                 params['ifc_classification_pk'] is None):
@@ -10408,28 +10416,20 @@ class IfcApi(object):
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
             raise ValueError("Missing the required parameter `ifc_pk` when calling `remove_elements_from_classification`")  # noqa: E501
-        # verify the required parameter 'uuid' is set
-        if ('uuid' not in params or
-                params['uuid'] is None):
-            raise ValueError("Missing the required parameter `uuid` when calling `remove_elements_from_classification`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `remove_elements_from_classification`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'uuid' in params:
+            path_params['uuid'] = params['uuid']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_classification_pk' in params:
             path_params['ifc_classification_pk'] = params['ifc_classification_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
-        if 'uuid' in params:
-            path_params['uuid'] = params['uuid']  # noqa: E501
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
 
@@ -10466,18 +10466,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_element(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_element(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_element  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.update_element(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -10486,23 +10486,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_element_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_element_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_element  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.update_element_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[Element] data: (required)
         :return: list[Element]
@@ -10510,7 +10510,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10525,14 +10525,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -10545,10 +10545,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -10589,20 +10589,20 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_element_0(self, project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs):  # noqa: E501
+    def update_element_0(self, uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element_0(project_pk, cloud_pk, ifc_pk, uuid, data, async=True)
+        >>> thread = api.update_element_0(uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -10610,32 +10610,32 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs)  # noqa: E501
+            return self.update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs)  # noqa: E501
+            (data) = self.update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_element_0_with_http_info(self, project_pk, cloud_pk, ifc_pk, uuid, data, **kwargs):  # noqa: E501
+    def update_element_0_with_http_info(self, uuid, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_element_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element_0_with_http_info(project_pk, cloud_pk, ifc_pk, uuid, data, async=True)
+        >>> thread = api.update_element_0_with_http_info(uuid, cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str uuid: (required)
+        :param str cloud_pk: (required)
+        :param str project_pk: (required)
+        :param str ifc_pk: (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'uuid', 'data']  # noqa: E501
+        all_params = ['uuid', 'cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10650,22 +10650,22 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_element_0`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_element_0`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `update_element_0`")  # noqa: E501
         # verify the required parameter 'uuid' is set
         if ('uuid' not in params or
                 params['uuid'] is None):
             raise ValueError("Missing the required parameter `uuid` when calling `update_element_0`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_element_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_element_0`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `update_element_0`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -10674,14 +10674,14 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'uuid' in params:
             path_params['uuid'] = params['uuid']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
         query_params = []
 
@@ -10720,18 +10720,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_ifc(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """update_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.update_ifc(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -10740,23 +10740,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ifc_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_ifc_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ifc_with_http_info(project_pk, cloud_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_ifc_with_http_info(cloud_pk, project_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ifc_with_http_info(self, project_pk, cloud_pk, id, data, **kwargs):  # noqa: E501
+    def update_ifc_with_http_info(self, cloud_pk, project_pk, id, data, **kwargs):  # noqa: E501
         """update_ifc  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_with_http_info(project_pk, cloud_pk, id, data, async=True)
+        >>> thread = api.update_ifc_with_http_info(cloud_pk, project_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -10764,7 +10764,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10779,14 +10779,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ifc`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -10799,10 +10799,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
 
@@ -10843,18 +10843,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc_property(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ModelProperty] data: (required)
         :return: list[ModelProperty]
@@ -10863,23 +10863,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ifc_property_with_http_info(self, project_pk, cloud_pk, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property_with_http_info(self, cloud_pk, project_pk, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_with_http_info(project_pk, cloud_pk, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property_with_http_info(cloud_pk, project_pk, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str ifc_pk: (required)
         :param list[ModelProperty] data: (required)
         :return: list[ModelProperty]
@@ -10887,7 +10887,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10902,14 +10902,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if ('ifc_pk' not in params or
                 params['ifc_pk'] is None):
@@ -10922,10 +10922,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'ifc_pk' in params:
             path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
 
@@ -10966,18 +10966,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc_property_0(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property_0(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_0(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property_0(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param ModelProperty data: (required)
@@ -10987,23 +10987,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ifc_property_0_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property_0_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_0_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property_0_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param ModelProperty data: (required)
@@ -11012,7 +11012,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11027,14 +11027,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_0`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property_0`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11051,10 +11051,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11097,18 +11097,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc_property_definition(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property_definition(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_definition(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property_definition(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertyDefinition data: (required)
@@ -11118,23 +11118,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ifc_property_definition_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_property_definition_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_property_definition  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_definition_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_property_definition_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertyDefinition data: (required)
@@ -11143,7 +11143,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11158,14 +11158,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11182,10 +11182,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11228,18 +11228,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc_unit(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_unit(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_unit(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_unit(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Unit data: (required)
@@ -11249,23 +11249,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_ifc_unit_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_ifc_unit_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_ifc_unit  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_unit_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_ifc_unit_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Unit data: (required)
@@ -11274,7 +11274,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11289,14 +11289,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11313,10 +11313,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11359,18 +11359,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_property_set(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_property_set(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_property_set(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_property_set(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
@@ -11380,23 +11380,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_property_set_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_property_set_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_property_set  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_property_set_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_property_set_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param PropertySet data: (required)
@@ -11405,7 +11405,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11420,14 +11420,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_property_set`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11444,10 +11444,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11490,18 +11490,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_space(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_space(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_space(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_space(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
@@ -11511,23 +11511,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_space_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_space_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_space_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_space_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Space data: (required)
@@ -11536,7 +11536,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11551,14 +11551,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_space`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11575,10 +11575,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11621,18 +11621,18 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_zone(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_zone(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_zone(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Zone data: (required)
@@ -11642,23 +11642,23 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            return self.update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_zone_with_http_info(self, project_pk, cloud_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
+    def update_zone_with_http_info(self, cloud_pk, project_pk, id, ifc_pk, data, **kwargs):  # noqa: E501
         """update_zone  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_with_http_info(project_pk, cloud_pk, id, ifc_pk, data, async=True)
+        >>> thread = api.update_zone_with_http_info(cloud_pk, project_pk, id, ifc_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str project_pk: (required)
         :param str cloud_pk: (required)
+        :param str project_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
         :param Zone data: (required)
@@ -11667,7 +11667,7 @@ class IfcApi(object):
                  returns the request thread.
         """
 
-        all_params = ['project_pk', 'cloud_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'id', 'ifc_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11682,14 +11682,14 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in params or
-                params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in params or
                 params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `update_zone`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
@@ -11706,10 +11706,10 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'project_pk' in params:
-            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'cloud_pk' in params:
             path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
         if 'ifc_pk' in params:
@@ -11752,21 +11752,21 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_zone_space(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_zone_space(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """update_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_space(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, async=True)
+        >>> thread = api.update_zone_space(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
@@ -11774,33 +11774,33 @@ class IfcApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs)  # noqa: E501
+            return self.update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs)  # noqa: E501
+            (data) = self.update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs)  # noqa: E501
             return data
 
-    def update_zone_space_with_http_info(self, id, cloud_pk, ifc_pk, zone_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_zone_space_with_http_info(self, zone_pk, cloud_pk, project_pk, ifc_pk, id, data, **kwargs):  # noqa: E501
         """update_zone_space  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_space_with_http_info(id, cloud_pk, ifc_pk, zone_pk, project_pk, data, async=True)
+        >>> thread = api.update_zone_space_with_http_info(zone_pk, cloud_pk, project_pk, ifc_pk, id, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str id: (required)
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
         :param str zone_pk: (required)
+        :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str ifc_pk: (required)
+        :param str id: (required)
         :param ZoneSpace data: (required)
         :return: ZoneSpace
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['id', 'cloud_pk', 'ifc_pk', 'zone_pk', 'project_pk', 'data']  # noqa: E501
+        all_params = ['zone_pk', 'cloud_pk', 'project_pk', 'ifc_pk', 'id', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11815,26 +11815,26 @@ class IfcApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'id' is set
-        if ('id' not in params or
-                params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_zone_space`")  # noqa: E501
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in params or
-                params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_zone_space`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in params or
-                params['ifc_pk'] is None):
-            raise ValueError("Missing the required parameter `ifc_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
         if ('zone_pk' not in params or
                 params['zone_pk'] is None):
             raise ValueError("Missing the required parameter `zone_pk` when calling `update_zone_space`")  # noqa: E501
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in params or
                 params['project_pk'] is None):
             raise ValueError("Missing the required parameter `project_pk` when calling `update_zone_space`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `update_zone_space`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in params or
+                params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11843,16 +11843,16 @@ class IfcApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'id' in params:
-            path_params['id'] = params['id']  # noqa: E501
-        if 'cloud_pk' in params:
-            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in params:
-            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
         if 'zone_pk' in params:
             path_params['zone_pk'] = params['zone_pk']  # noqa: E501
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
         if 'project_pk' in params:
             path_params['project_pk'] = params['project_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'id' in params:
+            path_params['id'] = params['id']  # noqa: E501
 
         query_params = []
 
