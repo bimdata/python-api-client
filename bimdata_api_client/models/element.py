@@ -168,6 +168,8 @@ class Element(object):
         """
         if type is None:
             raise ValueError("Invalid value for `type`, must not be `None`")  # noqa: E501
+        if type is not None and len(type) > 64:
+            raise ValueError("Invalid value for `type`, length must be less than or equal to `64`")  # noqa: E501
 
         self._type = type
 

@@ -20,7 +20,7 @@ from bimdata_api_client.models.bcf_project import BcfProject
 from bimdata_api_client.models.bim_snippet import BimSnippet
 from bimdata_api_client.models.bitmap import Bitmap
 from bimdata_api_client.models.check_plan import CheckPlan
-from bimdata_api_client.models.check_plan_result import CheckPlanResult
+from bimdata_api_client.models.checker_result import CheckerResult
 from bimdata_api_client.models.classification import Classification
 from bimdata_api_client.models.clipping_plane import ClippingPlane
 from bimdata_api_client.models.cloud import Cloud
@@ -31,7 +31,6 @@ from bimdata_api_client.models.comment_event import CommentEvent
 from bimdata_api_client.models.component import Component
 from bimdata_api_client.models.components_parent import ComponentsParent
 from bimdata_api_client.models.direction import Direction
-from bimdata_api_client.models.document import Document
 from bimdata_api_client.models.document_reference import DocumentReference
 from bimdata_api_client.models.element import Element
 from bimdata_api_client.models.element_classification_relation import ElementClassificationRelation
@@ -49,6 +48,7 @@ from bimdata_api_client.models.ifc_checker_ifc import IfcCheckerIfc
 from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
 from bimdata_api_client.models.ifc_creator import IfcCreator
 from bimdata_api_client.models.ifc_document import IfcDocument
+from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.ifc_project import IfcProject
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.line_seriaizer import LineSeriaizer
