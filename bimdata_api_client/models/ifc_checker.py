@@ -81,10 +81,12 @@ class IfcChecker(object):
             self.creator = creator
         if name is not None:
             self.name = name
-        self.ifc_id = ifc_id
+        if ifc_id is not None:
+            self.ifc_id = ifc_id
         if ifc is not None:
             self.ifc = ifc
-        self.checkplan_id = checkplan_id
+        if checkplan_id is not None:
+            self.checkplan_id = checkplan_id
         if results is not None:
             self.results = results
         if created_at is not None:
@@ -177,8 +179,6 @@ class IfcChecker(object):
         :param ifc_id: The ifc_id of this IfcChecker.  # noqa: E501
         :type: int
         """
-        if ifc_id is None:
-            raise ValueError("Invalid value for `ifc_id`, must not be `None`")  # noqa: E501
 
         self._ifc_id = ifc_id
 
@@ -221,8 +221,6 @@ class IfcChecker(object):
         :param checkplan_id: The checkplan_id of this IfcChecker.  # noqa: E501
         :type: int
         """
-        if checkplan_id is None:
-            raise ValueError("Invalid value for `checkplan_id`, must not be `None`")  # noqa: E501
 
         self._checkplan_id = checkplan_id
 

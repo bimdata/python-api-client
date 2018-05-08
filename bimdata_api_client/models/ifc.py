@@ -43,7 +43,6 @@ class Ifc(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'document': 'IfcDocument',
-        'document_id': 'int',
         'project': 'IfcProject',
         'project_id': 'int',
         'zones': 'list[Zone]',
@@ -63,7 +62,6 @@ class Ifc(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'document': 'document',
-        'document_id': 'document_id',
         'project': 'project',
         'project_id': 'project_id',
         'zones': 'zones',
@@ -75,7 +73,7 @@ class Ifc(object):
         'error_detail': 'error_detail'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document=None, document_id=None, project=None, project_id=None, zones=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document=None, project=None, project_id=None, zones=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None):  # noqa: E501
         """Ifc - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -85,7 +83,6 @@ class Ifc(object):
         self._created_at = None
         self._updated_at = None
         self._document = None
-        self._document_id = None
         self._project = None
         self._project_id = None
         self._zones = None
@@ -111,10 +108,10 @@ class Ifc(object):
             self.updated_at = updated_at
         if document is not None:
             self.document = document
-        self.document_id = document_id
         if project is not None:
             self.project = project
-        self.project_id = project_id
+        if project_id is not None:
+            self.project_id = project_id
         if zones is not None:
             self.zones = zones
         if structure_file is not None:
@@ -284,29 +281,6 @@ class Ifc(object):
         self._document = document
 
     @property
-    def document_id(self):
-        """Gets the document_id of this Ifc.  # noqa: E501
-
-
-        :return: The document_id of this Ifc.  # noqa: E501
-        :rtype: int
-        """
-        return self._document_id
-
-    @document_id.setter
-    def document_id(self, document_id):
-        """Sets the document_id of this Ifc.
-
-
-        :param document_id: The document_id of this Ifc.  # noqa: E501
-        :type: int
-        """
-        if document_id is None:
-            raise ValueError("Invalid value for `document_id`, must not be `None`")  # noqa: E501
-
-        self._document_id = document_id
-
-    @property
     def project(self):
         """Gets the project of this Ifc.  # noqa: E501
 
@@ -345,8 +319,6 @@ class Ifc(object):
         :param project_id: The project_id of this Ifc.  # noqa: E501
         :type: int
         """
-        if project_id is None:
-            raise ValueError("Invalid value for `project_id`, must not be `None`")  # noqa: E501
 
         self._project_id = project_id
 

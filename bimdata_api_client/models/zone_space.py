@@ -74,14 +74,16 @@ class ZoneSpace(object):
         if longname is not None:
             self.longname = longname
         self.uuid = uuid
-        self.ifc_id = ifc_id
+        if ifc_id is not None:
+            self.ifc_id = ifc_id
         if zone_set is not None:
             self.zone_set = zone_set
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        self.zone_id = zone_id
+        if zone_id is not None:
+            self.zone_id = zone_id
 
     @property
     def id(self):
@@ -195,8 +197,6 @@ class ZoneSpace(object):
         :param ifc_id: The ifc_id of this ZoneSpace.  # noqa: E501
         :type: int
         """
-        if ifc_id is None:
-            raise ValueError("Invalid value for `ifc_id`, must not be `None`")  # noqa: E501
 
         self._ifc_id = ifc_id
 
@@ -281,8 +281,6 @@ class ZoneSpace(object):
         :param zone_id: The zone_id of this ZoneSpace.  # noqa: E501
         :type: int
         """
-        if zone_id is None:
-            raise ValueError("Invalid value for `zone_id`, must not be `None`")  # noqa: E501
 
         self._zone_id = zone_id
 
