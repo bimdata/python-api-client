@@ -74,7 +74,8 @@ class RuleResult(object):
             self.id = id
         self.name = name
         self.ruleset_result = ruleset_result
-        self.ruleset_result_id = ruleset_result_id
+        if ruleset_result_id is not None:
+            self.ruleset_result_id = ruleset_result_id
         if components is not None:
             self.components = components
         self.rule = rule
@@ -170,8 +171,6 @@ class RuleResult(object):
         :param ruleset_result_id: The ruleset_result_id of this RuleResult.  # noqa: E501
         :type: int
         """
-        if ruleset_result_id is None:
-            raise ValueError("Invalid value for `ruleset_result_id`, must not be `None`")  # noqa: E501
 
         self._ruleset_result_id = ruleset_result_id
 

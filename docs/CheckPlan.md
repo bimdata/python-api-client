@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**project_id** | **int** |  | 
+**project_id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **description** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

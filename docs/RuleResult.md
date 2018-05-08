@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **ruleset_result** | **int** |  | 
-**ruleset_result_id** | **int** |  | 
+**ruleset_result_id** | **int** |  | [optional] 
 **components** | [**list[RuleComponentResult]**](RuleComponentResult.md) |  | [optional] 
 **rule** | **int** |  | 
 **rule_id** | **str** |  | [optional] 

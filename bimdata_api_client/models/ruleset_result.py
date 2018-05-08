@@ -69,7 +69,8 @@ class RulesetResult(object):
         self.name = name
         if description is not None:
             self.description = description
-        self.check_plan_result_id = check_plan_result_id
+        if check_plan_result_id is not None:
+            self.check_plan_result_id = check_plan_result_id
         if rules_results is not None:
             self.rules_results = rules_results
         if created_at is not None:
@@ -160,8 +161,6 @@ class RulesetResult(object):
         :param check_plan_result_id: The check_plan_result_id of this RulesetResult.  # noqa: E501
         :type: int
         """
-        if check_plan_result_id is None:
-            raise ValueError("Invalid value for `check_plan_result_id`, must not be `None`")  # noqa: E501
 
         self._check_plan_result_id = check_plan_result_id
 

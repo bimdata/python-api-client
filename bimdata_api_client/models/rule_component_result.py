@@ -62,7 +62,8 @@ class RuleComponentResult(object):
         if id is not None:
             self.id = id
         self.name = name
-        self.rule_result_id = rule_result_id
+        if rule_result_id is not None:
+            self.rule_result_id = rule_result_id
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -132,8 +133,6 @@ class RuleComponentResult(object):
         :param rule_result_id: The rule_result_id of this RuleComponentResult.  # noqa: E501
         :type: int
         """
-        if rule_result_id is None:
-            raise ValueError("Invalid value for `rule_result_id`, must not be `None`")  # noqa: E501
 
         self._rule_result_id = rule_result_id
 

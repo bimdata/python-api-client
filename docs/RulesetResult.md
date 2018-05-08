@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **description** | **str** |  | [optional] 
-**check_plan_result_id** | **int** |  | 
+**check_plan_result_id** | **int** |  | [optional] 
 **rules_results** | [**list[RuleResult]**](RuleResult.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
