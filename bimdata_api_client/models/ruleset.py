@@ -34,7 +34,6 @@ class Ruleset(object):
     """
     swagger_types = {
         'id': 'int',
-        'check_plan_id': 'int',
         'parent_ruleset_id': 'int',
         'name': 'str',
         'description': 'str',
@@ -44,7 +43,6 @@ class Ruleset(object):
 
     attribute_map = {
         'id': 'id',
-        'check_plan_id': 'check_plan_id',
         'parent_ruleset_id': 'parent_ruleset_id',
         'name': 'name',
         'description': 'description',
@@ -52,11 +50,10 @@ class Ruleset(object):
         'rulesets': 'rulesets'
     }
 
-    def __init__(self, id=None, check_plan_id=None, parent_ruleset_id=None, name=None, description=None, rules=None, rulesets=None):  # noqa: E501
+    def __init__(self, id=None, parent_ruleset_id=None, name=None, description=None, rules=None, rulesets=None):  # noqa: E501
         """Ruleset - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._check_plan_id = None
         self._parent_ruleset_id = None
         self._name = None
         self._description = None
@@ -66,8 +63,6 @@ class Ruleset(object):
 
         if id is not None:
             self.id = id
-        if check_plan_id is not None:
-            self.check_plan_id = check_plan_id
         if parent_ruleset_id is not None:
             self.parent_ruleset_id = parent_ruleset_id
         self.name = name
@@ -98,27 +93,6 @@ class Ruleset(object):
         """
 
         self._id = id
-
-    @property
-    def check_plan_id(self):
-        """Gets the check_plan_id of this Ruleset.  # noqa: E501
-
-
-        :return: The check_plan_id of this Ruleset.  # noqa: E501
-        :rtype: int
-        """
-        return self._check_plan_id
-
-    @check_plan_id.setter
-    def check_plan_id(self, check_plan_id):
-        """Sets the check_plan_id of this Ruleset.
-
-
-        :param check_plan_id: The check_plan_id of this Ruleset.  # noqa: E501
-        :type: int
-        """
-
-        self._check_plan_id = check_plan_id
 
     @property
     def parent_ruleset_id(self):

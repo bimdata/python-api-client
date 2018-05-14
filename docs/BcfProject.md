@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**project_id** | **int** |  | [optional] 
+**project_id** | **str** |  | [optional] 
 **name** | **str** |  | 
 **autorization_project_actions** | [**list[ProjectAction]**](ProjectAction.md) |  | [optional] 
 

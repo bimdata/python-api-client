@@ -32,7 +32,6 @@ class Unit(object):
     """
     swagger_types = {
         'id': 'int',
-        'ifc_id': 'int',
         'type': 'str',
         'name': 'str',
         'unit_type': 'str',
@@ -45,7 +44,6 @@ class Unit(object):
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
         'type': 'type',
         'name': 'name',
         'unit_type': 'unit_type',
@@ -56,11 +54,10 @@ class Unit(object):
         'elements': 'elements'
     }
 
-    def __init__(self, id=None, ifc_id=None, type=None, name=None, unit_type=None, prefix=None, dimensions=None, conversion_factor=None, conversion_baseunit=None, elements=None):  # noqa: E501
+    def __init__(self, id=None, type=None, name=None, unit_type=None, prefix=None, dimensions=None, conversion_factor=None, conversion_baseunit=None, elements=None):  # noqa: E501
         """Unit - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._ifc_id = None
         self._type = None
         self._name = None
         self._unit_type = None
@@ -73,8 +70,6 @@ class Unit(object):
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         self.type = type
         if name is not None:
             self.name = name
@@ -111,27 +106,6 @@ class Unit(object):
         """
 
         self._id = id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this Unit.  # noqa: E501
-
-
-        :return: The ifc_id of this Unit.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this Unit.
-
-
-        :param ifc_id: The ifc_id of this Unit.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def type(self):

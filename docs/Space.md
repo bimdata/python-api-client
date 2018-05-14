@@ -7,7 +7,6 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **longname** | **str** |  | [optional] 
 **uuid** | **str** |  | 
-**ifc_id** | **int** |  | [optional] 
 **zone_set** | **list[str]** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

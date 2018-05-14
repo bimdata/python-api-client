@@ -127,7 +127,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_cloud_user**
-> delete_cloud_user(cloud_pk, id)
+> delete_cloud_user(id, cloud_pk)
 
 
 
@@ -149,11 +149,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_instance.delete_cloud_user(cloud_pk, id)
+    api_instance.delete_cloud_user(id, cloud_pk)
 except ApiException as e:
     print("Exception when calling CloudApi->delete_cloud_user: %s\n" % e)
 ```
@@ -162,8 +162,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_cloud_user**
-> FosUserWrite full_update_cloud_user(cloud_pk, id, data)
+> FosUserWrite full_update_cloud_user(id, cloud_pk, data)
 
 
 
@@ -258,12 +258,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.FosUserWrite() # FosUserWrite | 
 
 try:
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
+    api_response = api_instance.full_update_cloud_user(id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->full_update_cloud_user: %s\n" % e)
@@ -273,8 +273,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **data** | [**FosUserWrite**](FosUserWrite.md)|  | 
 
 ### Return type
@@ -399,7 +399,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_user**
-> FosUser get_cloud_user(cloud_pk, id)
+> FosUser get_cloud_user(id, cloud_pk)
 
 
 
@@ -421,11 +421,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_cloud_user(cloud_pk, id)
+    api_response = api_instance.get_cloud_user(id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->get_cloud_user: %s\n" % e)
@@ -435,8 +435,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -611,7 +611,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cloud_user**
-> FosUserWrite update_cloud_user(cloud_pk, id, data)
+> FosUserWrite update_cloud_user(id, cloud_pk, data)
 
 
 
@@ -633,12 +633,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.FosUserWrite() # FosUserWrite | 
 
 try:
-    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
+    api_response = api_instance.update_cloud_user(id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->update_cloud_user: %s\n" % e)
@@ -648,8 +648,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **data** | [**FosUserWrite**](FosUserWrite.md)|  | 
 
 ### Return type

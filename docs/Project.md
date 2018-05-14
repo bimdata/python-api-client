@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **root_folder** | [**ProjectRootFolder**](ProjectRootFolder.md) |  | [optional] 
 **property_permissions_enabled** | **bool** |  | [optional] 
-**cloud_id** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -34,7 +34,6 @@ class PropertySet(object):
     """
     swagger_types = {
         'id': 'int',
-        'ifc_id': 'int',
         'name': 'str',
         'description': 'str',
         'type': 'str',
@@ -43,18 +42,16 @@ class PropertySet(object):
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
         'name': 'name',
         'description': 'description',
         'type': 'type',
         'properties': 'properties'
     }
 
-    def __init__(self, id=None, ifc_id=None, name=None, description=None, type=None, properties=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, type=None, properties=None):  # noqa: E501
         """PropertySet - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._ifc_id = None
         self._name = None
         self._description = None
         self._type = None
@@ -63,8 +60,6 @@ class PropertySet(object):
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if name is not None:
             self.name = name
         if description is not None:
@@ -94,27 +89,6 @@ class PropertySet(object):
         """
 
         self._id = id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this PropertySet.  # noqa: E501
-
-
-        :return: The ifc_id of this PropertySet.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this PropertySet.
-
-
-        :param ifc_id: The ifc_id of this PropertySet.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def name(self):

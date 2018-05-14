@@ -4,10 +4,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**checker** | **int** |  | 
 **status** | **str** |  | [optional] 
 **result** | **str** |  | [optional] 
-**rulesets_results** | [**list[RulesetResult]**](RulesetResult.md) |  | [optional] 
 **collisions** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

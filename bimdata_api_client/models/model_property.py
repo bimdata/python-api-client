@@ -34,39 +34,29 @@ class ModelProperty(object):
     """
     swagger_types = {
         'id': 'int',
-        'ifc_id': 'int',
         'definition': 'PropertyDefinition',
-        'value': 'str',
-        'propertyset_id': 'int'
+        'value': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
         'definition': 'definition',
-        'value': 'value',
-        'propertyset_id': 'propertyset_id'
+        'value': 'value'
     }
 
-    def __init__(self, id=None, ifc_id=None, definition=None, value=None, propertyset_id=None):  # noqa: E501
+    def __init__(self, id=None, definition=None, value=None):  # noqa: E501
         """ModelProperty - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._ifc_id = None
         self._definition = None
         self._value = None
-        self._propertyset_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         self.definition = definition
         if value is not None:
             self.value = value
-        if propertyset_id is not None:
-            self.propertyset_id = propertyset_id
 
     @property
     def id(self):
@@ -88,27 +78,6 @@ class ModelProperty(object):
         """
 
         self._id = id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this ModelProperty.  # noqa: E501
-
-
-        :return: The ifc_id of this ModelProperty.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this ModelProperty.
-
-
-        :param ifc_id: The ifc_id of this ModelProperty.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def definition(self):
@@ -153,27 +122,6 @@ class ModelProperty(object):
         """
 
         self._value = value
-
-    @property
-    def propertyset_id(self):
-        """Gets the propertyset_id of this ModelProperty.  # noqa: E501
-
-
-        :return: The propertyset_id of this ModelProperty.  # noqa: E501
-        :rtype: int
-        """
-        return self._propertyset_id
-
-    @propertyset_id.setter
-    def propertyset_id(self, propertyset_id):
-        """Sets the propertyset_id of this ModelProperty.
-
-
-        :param propertyset_id: The propertyset_id of this ModelProperty.  # noqa: E501
-        :type: int
-        """
-
-        self._propertyset_id = propertyset_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

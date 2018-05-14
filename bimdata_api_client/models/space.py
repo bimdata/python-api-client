@@ -35,7 +35,6 @@ class Space(object):
         'name': 'str',
         'longname': 'str',
         'uuid': 'str',
-        'ifc_id': 'int',
         'zone_set': 'list[str]',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -46,20 +45,18 @@ class Space(object):
         'name': 'name',
         'longname': 'longname',
         'uuid': 'uuid',
-        'ifc_id': 'ifc_id',
         'zone_set': 'zone_set',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, longname=None, uuid=None, ifc_id=None, zone_set=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, name=None, longname=None, uuid=None, zone_set=None, created_at=None, updated_at=None):  # noqa: E501
         """Space - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._longname = None
         self._uuid = None
-        self._ifc_id = None
         self._zone_set = None
         self._created_at = None
         self._updated_at = None
@@ -71,8 +68,6 @@ class Space(object):
         if longname is not None:
             self.longname = longname
         self.uuid = uuid
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if zone_set is not None:
             self.zone_set = zone_set
         if created_at is not None:
@@ -173,27 +168,6 @@ class Space(object):
             raise ValueError("Invalid value for `uuid`, length must be less than or equal to `255`")  # noqa: E501
 
         self._uuid = uuid
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this Space.  # noqa: E501
-
-
-        :return: The ifc_id of this Space.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this Space.
-
-
-        :param ifc_id: The ifc_id of this Space.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def zone_set(self):

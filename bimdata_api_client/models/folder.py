@@ -39,7 +39,6 @@ class Folder(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'children': 'list[str]',
-        'project_id': 'int',
         'created_by': 'FosUser'
     }
 
@@ -50,11 +49,10 @@ class Folder(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'children': 'children',
-        'project_id': 'project_id',
         'created_by': 'created_by'
     }
 
-    def __init__(self, id=None, parent_id=None, name=None, created_at=None, updated_at=None, children=None, project_id=None, created_by=None):  # noqa: E501
+    def __init__(self, id=None, parent_id=None, name=None, created_at=None, updated_at=None, children=None, created_by=None):  # noqa: E501
         """Folder - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -63,7 +61,6 @@ class Folder(object):
         self._created_at = None
         self._updated_at = None
         self._children = None
-        self._project_id = None
         self._created_by = None
         self.discriminator = None
 
@@ -78,8 +75,6 @@ class Folder(object):
             self.updated_at = updated_at
         if children is not None:
             self.children = children
-        if project_id is not None:
-            self.project_id = project_id
         if created_by is not None:
             self.created_by = created_by
 
@@ -212,27 +207,6 @@ class Folder(object):
         """
 
         self._children = children
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this Folder.  # noqa: E501
-
-
-        :return: The project_id of this Folder.  # noqa: E501
-        :rtype: int
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this Folder.
-
-
-        :param project_id: The project_id of this Folder.  # noqa: E501
-        :type: int
-        """
-
-        self._project_id = project_id
 
     @property
     def created_by(self):

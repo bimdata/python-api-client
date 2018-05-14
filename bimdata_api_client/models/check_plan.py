@@ -34,7 +34,6 @@ class CheckPlan(object):
     """
     swagger_types = {
         'id': 'int',
-        'project_id': 'int',
         'name': 'str',
         'description': 'str',
         'created_at': 'datetime',
@@ -45,7 +44,6 @@ class CheckPlan(object):
 
     attribute_map = {
         'id': 'id',
-        'project_id': 'project_id',
         'name': 'name',
         'description': 'description',
         'created_at': 'created_at',
@@ -54,11 +52,10 @@ class CheckPlan(object):
         'is_default': 'is_default'
     }
 
-    def __init__(self, id=None, project_id=None, name=None, description=None, created_at=None, updated_at=None, rulesets=None, is_default=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, created_at=None, updated_at=None, rulesets=None, is_default=None):  # noqa: E501
         """CheckPlan - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._project_id = None
         self._name = None
         self._description = None
         self._created_at = None
@@ -69,8 +66,6 @@ class CheckPlan(object):
 
         if id is not None:
             self.id = id
-        if project_id is not None:
-            self.project_id = project_id
         self.name = name
         if description is not None:
             self.description = description
@@ -103,27 +98,6 @@ class CheckPlan(object):
         """
 
         self._id = id
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this CheckPlan.  # noqa: E501
-
-
-        :return: The project_id of this CheckPlan.  # noqa: E501
-        :rtype: int
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this CheckPlan.
-
-
-        :param project_id: The project_id of this CheckPlan.  # noqa: E501
-        :type: int
-        """
-
-        self._project_id = project_id
 
     @property
     def name(self):

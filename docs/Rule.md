@@ -5,7 +5,6 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**ruleset_id** | **int** |  | [optional] 
 **condition** | **str** |  | 
 **rule_components** | [**list[RuleComponent]**](RuleComponent.md) |  | [optional] 
 **on** | **str** |  | [optional] 

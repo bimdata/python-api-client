@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 
 # **create_classification**
-> list[WrappedClass] create_classification(cloud_pk, project_pk, data)
+> list[Classification] create_classification(project_pk, cloud_pk, data)
 
 
 
@@ -60,12 +60,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.WrappedClass()] # list[WrappedClass] | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
+    api_response = api_instance.create_classification(project_pk, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_classification: %s\n" % e)
@@ -75,13 +75,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[WrappedClass]**](WrappedClass.md)|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**list[Classification]**](Classification.md)|  | 
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[Classification]**](Classification.md)
 
 ### Authorization
 
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> WrappedClass create_document(cloud_pk, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+> Document create_document(project_pk, cloud_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
 
 
 
@@ -117,8 +117,8 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 name = 'name_example' # str | 
 id = 56 # int |  (optional)
 parent = 56 # int |  (optional)
@@ -134,7 +134,7 @@ updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.create_document(project_pk, cloud_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_document: %s\n" % e)
@@ -144,8 +144,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **name** | **str**|  | 
  **id** | **int**|  | [optional] 
  **parent** | **int**|  | [optional] 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_folder**
-> WrappedClass create_folder(cloud_pk, project_pk, data)
+> Folder create_folder(project_pk, cloud_pk, data)
 
 
 
@@ -198,12 +198,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.create_folder(cloud_pk, project_pk, data)
+    api_response = api_instance.create_folder(project_pk, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_folder: %s\n" % e)
@@ -213,13 +213,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -233,7 +233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_project**
-> WrappedClass create_project(cloud_pk, data)
+> Project create_project(cloud_pk, data)
 
 
 
@@ -256,7 +256,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.Project() # Project | 
 
 try:
     api_response = api_instance.create_project(cloud_pk, data)
@@ -270,11 +270,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**Project**](Project.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Project**](Project.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_project_user**
-> FosUserWrite create_project_user(cloud_pk, project_pk, data)
+> FosUserWrite create_project_user(project_pk, cloud_pk, data)
 
 
 
@@ -310,12 +310,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.FosUserWrite() # FosUserWrite | 
 
 try:
-    api_response = api_instance.create_project_user(cloud_pk, project_pk, data)
+    api_response = api_instance.create_project_user(project_pk, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_project_user: %s\n" % e)
@@ -325,8 +325,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **data** | [**FosUserWrite**](FosUserWrite.md)|  | 
 
 ### Return type
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_classification**
-> delete_classification(cloud_pk, id, project_pk)
+> delete_classification(project_pk, id, cloud_pk)
 
 
 
@@ -367,12 +367,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_instance.delete_classification(cloud_pk, id, project_pk)
+    api_instance.delete_classification(project_pk, id, cloud_pk)
 except ApiException as e:
     print("Exception when calling ProjectApi->delete_classification: %s\n" % e)
 ```
@@ -381,9 +381,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -401,7 +401,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
-> WrappedClass delete_document(cloud_pk, id, project_pk)
+> Document delete_document(project_pk, id, cloud_pk)
 
 
 
@@ -423,12 +423,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.delete_document(cloud_pk, id, project_pk)
+    api_response = api_instance.delete_document(project_pk, id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->delete_document: %s\n" % e)
@@ -438,13 +438,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -458,7 +458,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_folder**
-> delete_folder(cloud_pk, id, project_pk)
+> delete_folder(project_pk, id, cloud_pk)
 
 
 
@@ -480,12 +480,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_instance.delete_folder(cloud_pk, id, project_pk)
+    api_instance.delete_folder(project_pk, id, cloud_pk)
 except ApiException as e:
     print("Exception when calling ProjectApi->delete_folder: %s\n" % e)
 ```
@@ -494,9 +494,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -514,7 +514,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project**
-> delete_project(cloud_pk, id)
+> delete_project(id, cloud_pk)
 
 
 
@@ -536,11 +536,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_instance.delete_project(cloud_pk, id)
+    api_instance.delete_project(id, cloud_pk)
 except ApiException as e:
     print("Exception when calling ProjectApi->delete_project: %s\n" % e)
 ```
@@ -549,8 +549,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -568,7 +568,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project_user**
-> delete_project_user(cloud_pk, id, project_pk)
+> delete_project_user(project_pk, id, cloud_pk)
 
 
 
@@ -590,12 +590,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_instance.delete_project_user(cloud_pk, id, project_pk)
+    api_instance.delete_project_user(project_pk, id, cloud_pk)
 except ApiException as e:
     print("Exception when calling ProjectApi->delete_project_user: %s\n" % e)
 ```
@@ -604,9 +604,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -624,7 +624,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_classification**
-> WrappedClass full_update_classification(cloud_pk, id, project_pk, data)
+> Classification full_update_classification(project_pk, id, cloud_pk, data)
 
 
 
@@ -646,13 +646,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_classification(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_classification: %s\n" % e)
@@ -662,14 +662,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Classification**](Classification.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Classification**](Classification.md)
 
 ### Authorization
 
@@ -683,7 +683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> WrappedClass full_update_document(cloud_pk, id, project_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+> Document full_update_document(project_pk, id, cloud_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
 
 
 
@@ -705,9 +705,9 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 name = 'name_example' # str | 
 id2 = 56 # int |  (optional)
 parent = 56 # int |  (optional)
@@ -723,7 +723,7 @@ updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.full_update_document(project_pk, id, cloud_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_document: %s\n" % e)
@@ -733,9 +733,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **name** | **str**|  | 
  **id2** | **int**|  | [optional] 
  **parent** | **int**|  | [optional] 
@@ -752,7 +752,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_folder**
-> WrappedClass full_update_folder(cloud_pk, id, project_pk, data)
+> Folder full_update_folder(project_pk, id, cloud_pk, data)
 
 
 
@@ -788,13 +788,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_folder(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_folder: %s\n" % e)
@@ -804,14 +804,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -825,7 +825,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_project**
-> WrappedClass full_update_project(cloud_pk, id, data)
+> Project full_update_project(id, cloud_pk, data)
 
 
 
@@ -847,12 +847,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Project() # Project | 
 
 try:
-    api_response = api_instance.full_update_project(cloud_pk, id, data)
+    api_response = api_instance.full_update_project(id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project: %s\n" % e)
@@ -862,13 +862,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Project**](Project.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Project**](Project.md)
 
 ### Authorization
 
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_project_user**
-> FosUserWrite full_update_project_user(cloud_pk, id, project_pk, data)
+> FosUserWrite full_update_project_user(project_pk, id, cloud_pk, data)
 
 
 
@@ -904,13 +904,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.FosUserWrite() # FosUserWrite | 
 
 try:
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_project_user(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project_user: %s\n" % e)
@@ -920,9 +920,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **data** | [**FosUserWrite**](FosUserWrite.md)|  | 
 
 ### Return type
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classification**
-> WrappedClass get_classification(cloud_pk, id, project_pk)
+> Classification get_classification(project_pk, id, cloud_pk)
 
 
 
@@ -963,12 +963,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_classification(cloud_pk, id, project_pk)
+    api_response = api_instance.get_classification(project_pk, id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_classification: %s\n" % e)
@@ -978,13 +978,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Classification**](Classification.md)
 
 ### Authorization
 
@@ -998,7 +998,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classifications**
-> list[WrappedClass] get_classifications(cloud_pk, project_pk)
+> list[Classification] get_classifications(project_pk, cloud_pk)
 
 
 
@@ -1020,11 +1020,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_classifications(cloud_pk, project_pk)
+    api_response = api_instance.get_classifications(project_pk, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_classifications: %s\n" % e)
@@ -1034,12 +1034,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[Classification]**](Classification.md)
 
 ### Authorization
 
@@ -1053,7 +1053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document**
-> WrappedClass get_document(cloud_pk, id, project_pk)
+> Document get_document(project_pk, id, cloud_pk)
 
 
 
@@ -1075,12 +1075,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_document(cloud_pk, id, project_pk)
+    api_response = api_instance.get_document(project_pk, id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_document: %s\n" % e)
@@ -1090,13 +1090,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -1110,7 +1110,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_documents**
-> WrappedClass get_documents(cloud_pk, project_pk)
+> Document get_documents(project_pk, cloud_pk)
 
 
 
@@ -1132,11 +1132,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_documents(cloud_pk, project_pk)
+    api_response = api_instance.get_documents(project_pk, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_documents: %s\n" % e)
@@ -1146,12 +1146,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -1165,7 +1165,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folder**
-> WrappedClass get_folder(cloud_pk, id, project_pk)
+> Folder get_folder(project_pk, id, cloud_pk)
 
 
 
@@ -1187,12 +1187,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_folder(cloud_pk, id, project_pk)
+    api_response = api_instance.get_folder(project_pk, id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_folder: %s\n" % e)
@@ -1202,13 +1202,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -1222,7 +1222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folders**
-> list[WrappedClass] get_folders(cloud_pk, project_pk)
+> list[Folder] get_folders(project_pk, cloud_pk)
 
 
 
@@ -1244,11 +1244,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_folders(cloud_pk, project_pk)
+    api_response = api_instance.get_folders(project_pk, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_folders: %s\n" % e)
@@ -1258,12 +1258,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[Folder]**](Folder.md)
 
 ### Authorization
 
@@ -1277,7 +1277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project**
-> WrappedClass get_project(cloud_pk, id)
+> Project get_project(id, cloud_pk)
 
 
 
@@ -1299,11 +1299,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_project(cloud_pk, id)
+    api_response = api_instance.get_project(id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_project: %s\n" % e)
@@ -1313,12 +1313,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Project**](Project.md)
 
 ### Authorization
 
@@ -1332,7 +1332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_tree**
-> WrappedClass get_project_tree(cloud_pk, id)
+> Folder get_project_tree(id, cloud_pk)
 
 
 
@@ -1354,11 +1354,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_project_tree(cloud_pk, id)
+    api_response = api_instance.get_project_tree(id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_project_tree: %s\n" % e)
@@ -1368,12 +1368,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -1387,7 +1387,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_user**
-> FosUser get_project_user(cloud_pk, id, project_pk)
+> FosUser get_project_user(project_pk, id, cloud_pk)
 
 
 
@@ -1409,12 +1409,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
+    api_response = api_instance.get_project_user(project_pk, id, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_project_user: %s\n" % e)
@@ -1424,9 +1424,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -1444,7 +1444,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_users**
-> list[FosUser] get_project_users(cloud_pk, project_pk)
+> list[FosUser] get_project_users(project_pk, cloud_pk)
 
 
 
@@ -1466,11 +1466,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_project_users(cloud_pk, project_pk)
+    api_response = api_instance.get_project_users(project_pk, cloud_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->get_project_users: %s\n" % e)
@@ -1480,8 +1480,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
 
 ### Return type
 
@@ -1499,7 +1499,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_projects**
-> list[WrappedClass] get_projects(cloud_pk)
+> list[Project] get_projects(cloud_pk)
 
 
 
@@ -1538,7 +1538,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[Project]**](Project.md)
 
 ### Authorization
 
@@ -1552,7 +1552,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_classification**
-> WrappedClass update_classification(cloud_pk, id, project_pk, data)
+> Classification update_classification(project_pk, id, cloud_pk, data)
 
 
 
@@ -1574,13 +1574,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_classification(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_classification: %s\n" % e)
@@ -1590,14 +1590,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Classification**](Classification.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Classification**](Classification.md)
 
 ### Authorization
 
@@ -1611,7 +1611,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document**
-> WrappedClass update_document(cloud_pk, id, project_pk, data)
+> Document update_document(project_pk, id, cloud_pk, data)
 
 
 
@@ -1633,13 +1633,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Document() # Document | 
 
 try:
-    api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_document(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_document: %s\n" % e)
@@ -1649,14 +1649,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Document**](Document.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -1670,7 +1670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_folder**
-> WrappedClass update_folder(cloud_pk, id, project_pk, data)
+> Folder update_folder(project_pk, id, cloud_pk, data)
 
 
 
@@ -1692,13 +1692,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_folder(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_folder: %s\n" % e)
@@ -1708,14 +1708,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -1729,7 +1729,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_project**
-> WrappedClass update_project(cloud_pk, id, data)
+> Project update_project(id, cloud_pk, data)
 
 
 
@@ -1751,12 +1751,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+cloud_pk = 'cloud_pk_example' # str | 
+data = bimdata_api_client.Project() # Project | 
 
 try:
-    api_response = api_instance.update_project(cloud_pk, id, data)
+    api_response = api_instance.update_project(id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_project: %s\n" % e)
@@ -1766,13 +1766,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **cloud_pk** | **str**|  | 
+ **data** | [**Project**](Project.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Project**](Project.md)
 
 ### Authorization
 
@@ -1786,7 +1786,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_project_user**
-> FosUserWrite update_project_user(cloud_pk, id, project_pk, data)
+> FosUserWrite update_project_user(project_pk, id, cloud_pk, data)
 
 
 
@@ -1808,13 +1808,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
+id = 'id_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.FosUserWrite() # FosUserWrite | 
 
 try:
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_project_user(project_pk, id, cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_project_user: %s\n" % e)
@@ -1824,9 +1824,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
  **project_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **data** | [**FosUserWrite**](FosUserWrite.md)|  | 
 
 ### Return type

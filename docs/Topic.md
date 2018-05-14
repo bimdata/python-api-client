@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **due_date** | **datetime** |  | [optional] 
 **autorization_topic_actions** | [**list[TopicAction]**](TopicAction.md) |  | [optional] 
 **autorization_topic_status** | [**list[TopicStatus]**](TopicStatus.md) |  | [optional] 
-**bcf_project_id** | **int** |  | [optional] 
+**bcf_project_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

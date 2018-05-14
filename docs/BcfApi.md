@@ -219,7 +219,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_comments_events_delete_0**
-> bcf2_1_projects_topics_comments_events_delete_0(id, projects_pk, topics_pk, comments_pk)
+> bcf2_1_projects_topics_comments_events_delete_0(comments_pk, id, projects_pk, topics_pk)
 
 
 
@@ -241,13 +241,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_comments_events_delete_0(id, projects_pk, topics_pk, comments_pk)
+    api_instance.bcf2_1_projects_topics_comments_events_delete_0(comments_pk, id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_comments_events_delete_0: %s\n" % e)
 ```
@@ -256,10 +256,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
 
 ### Return type
 
@@ -729,7 +729,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bcf_project**
-> WrappedClass create_bcf_project(data)
+> BcfProject create_bcf_project(data)
 
 
 
@@ -751,7 +751,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
     api_response = api_instance.create_bcf_project(data)
@@ -764,11 +764,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**BcfProject**](BcfProject.md)
 
 ### Authorization
 
@@ -1014,7 +1014,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment_event_0**
-> CommentEvent create_comment_event_0(projects_pk, topics_pk, comments_pk, data)
+> CommentEvent create_comment_event_0(comments_pk, projects_pk, topics_pk, data)
 
 
 
@@ -1036,13 +1036,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.create_comment_event_0(projects_pk, topics_pk, comments_pk, data)
+    api_response = api_instance.create_comment_event_0(comments_pk, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment_event_0: %s\n" % e)
@@ -1052,9 +1052,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -1360,7 +1360,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_topic**
-> WrappedClass create_topic(projects_pk, data)
+> Topic create_topic(projects_pk, data)
 
 
 
@@ -1383,7 +1383,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.Topic() # Topic | 
 
 try:
     api_response = api_instance.create_topic(projects_pk, data)
@@ -1397,11 +1397,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Topic**](Topic.md)
 
 ### Authorization
 
@@ -2139,7 +2139,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bcf_project**
-> WrappedClass full_update_bcf_project(id, data)
+> BcfProject full_update_bcf_project(id, data)
 
 
 
@@ -2162,7 +2162,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
     api_response = api_instance.full_update_bcf_project(id, data)
@@ -2176,11 +2176,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**BcfProject**](BcfProject.md)
 
 ### Authorization
 
@@ -2434,7 +2434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment_event_0**
-> CommentEvent full_update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
+> CommentEvent full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -2456,14 +2456,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.full_update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
+    api_response = api_instance.full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment_event_0: %s\n" % e)
@@ -2473,10 +2473,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -2792,7 +2792,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_topic**
-> WrappedClass full_update_topic(id, projects_pk, data)
+> Topic full_update_topic(id, projects_pk, data)
 
 
 
@@ -2816,7 +2816,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.Topic() # Topic | 
 
 try:
     api_response = api_instance.full_update_topic(id, projects_pk, data)
@@ -2831,11 +2831,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Topic**](Topic.md)
 
 ### Authorization
 
@@ -3295,7 +3295,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_project**
-> WrappedClass get_bcf_project(id)
+> BcfProject get_bcf_project(id)
 
 
 
@@ -3334,7 +3334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**BcfProject**](BcfProject.md)
 
 ### Authorization
 
@@ -3348,7 +3348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_projects**
-> list[WrappedClass] get_bcf_projects()
+> list[BcfProject] get_bcf_projects()
 
 
 
@@ -3383,7 +3383,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[BcfProject]**](BcfProject.md)
 
 ### Authorization
 
@@ -3743,7 +3743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_event_0**
-> CommentEvent get_comment_event_0(id, projects_pk, topics_pk, comments_pk)
+> CommentEvent get_comment_event_0(comments_pk, id, projects_pk, topics_pk)
 
 
 
@@ -3765,13 +3765,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_event_0(id, projects_pk, topics_pk, comments_pk)
+    api_response = api_instance.get_comment_event_0(comments_pk, id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_event_0: %s\n" % e)
@@ -3781,10 +3781,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
 
 ### Return type
 
@@ -3857,7 +3857,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_events_0**
-> list[CommentEvent] get_comment_events_0(projects_pk, topics_pk, comments_pk)
+> list[CommentEvent] get_comment_events_0(comments_pk, projects_pk, topics_pk)
 
 
 
@@ -3879,12 +3879,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_events_0(projects_pk, topics_pk, comments_pk)
+    api_response = api_instance.get_comment_events_0(comments_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_events_0: %s\n" % e)
@@ -3894,9 +3894,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
 
 ### Return type
 
@@ -4643,7 +4643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic**
-> WrappedClass get_topic(id, projects_pk)
+> Topic get_topic(id, projects_pk)
 
 
 
@@ -4684,7 +4684,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Topic**](Topic.md)
 
 ### Authorization
 
@@ -4810,7 +4810,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topics**
-> list[WrappedClass] get_topics(projects_pk)
+> list[Topic] get_topics(projects_pk)
 
 
 
@@ -4849,7 +4849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[WrappedClass]**](WrappedClass.md)
+[**list[Topic]**](Topic.md)
 
 ### Authorization
 
@@ -5251,7 +5251,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bcf_project**
-> WrappedClass update_bcf_project(id, data)
+> BcfProject update_bcf_project(id, data)
 
 
 
@@ -5274,7 +5274,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
     api_response = api_instance.update_bcf_project(id, data)
@@ -5288,11 +5288,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**BcfProject**](BcfProject.md)
 
 ### Authorization
 
@@ -5546,7 +5546,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment_event_0**
-> CommentEvent update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
+> CommentEvent update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -5568,14 +5568,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
+    api_response = api_instance.update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment_event_0: %s\n" % e)
@@ -5585,10 +5585,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **comments_pk** | **str**|  | 
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -5904,7 +5904,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_topic**
-> WrappedClass update_topic(id, projects_pk, data)
+> Topic update_topic(id, projects_pk, data)
 
 
 
@@ -5928,7 +5928,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.WrappedClass() # WrappedClass | 
+data = bimdata_api_client.Topic() # Topic | 
 
 try:
     api_response = api_instance.update_topic(id, projects_pk, data)
@@ -5943,11 +5943,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **data** | [**WrappedClass**](WrappedClass.md)|  | 
+ **data** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
-[**WrappedClass**](WrappedClass.md)
+[**Topic**](Topic.md)
 
 ### Authorization
 

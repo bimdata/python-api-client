@@ -34,7 +34,6 @@ class PropertyDefinition(object):
     """
     swagger_types = {
         'id': 'int',
-        'ifc_id': 'int',
         'unit': 'Unit',
         'name': 'str',
         'description': 'str',
@@ -44,7 +43,6 @@ class PropertyDefinition(object):
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
         'unit': 'unit',
         'name': 'name',
         'description': 'description',
@@ -52,11 +50,10 @@ class PropertyDefinition(object):
         'value_type': 'value_type'
     }
 
-    def __init__(self, id=None, ifc_id=None, unit=None, name=None, description=None, type=None, value_type=None):  # noqa: E501
+    def __init__(self, id=None, unit=None, name=None, description=None, type=None, value_type=None):  # noqa: E501
         """PropertyDefinition - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._ifc_id = None
         self._unit = None
         self._name = None
         self._description = None
@@ -66,8 +63,6 @@ class PropertyDefinition(object):
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if unit is not None:
             self.unit = unit
         self.name = name
@@ -98,27 +93,6 @@ class PropertyDefinition(object):
         """
 
         self._id = id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this PropertyDefinition.  # noqa: E501
-
-
-        :return: The ifc_id of this PropertyDefinition.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this PropertyDefinition.
-
-
-        :param ifc_id: The ifc_id of this PropertyDefinition.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def unit(self):

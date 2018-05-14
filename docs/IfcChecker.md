@@ -6,8 +6,6 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **creator** | **int** |  | [optional] 
 **name** | **str** |  | [optional] 
-**ifc_id** | **int** |  | [optional] 
-**ifc** | [**IfcCheckerIfc**](IfcCheckerIfc.md) |  | [optional] 
 **checkplan_id** | **int** |  | [optional] 
 **results** | [**list[IfcCheckerResults]**](IfcCheckerResults.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

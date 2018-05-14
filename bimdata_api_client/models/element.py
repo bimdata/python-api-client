@@ -35,7 +35,6 @@ class Element(object):
     """
     swagger_types = {
         'id': 'int',
-        'ifc_id': 'int',
         'uuid': 'str',
         'type': 'str',
         'attributes': 'PropertySet',
@@ -45,7 +44,6 @@ class Element(object):
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
         'uuid': 'uuid',
         'type': 'type',
         'attributes': 'attributes',
@@ -53,11 +51,10 @@ class Element(object):
         'classifications': 'classifications'
     }
 
-    def __init__(self, id=None, ifc_id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None):  # noqa: E501
+    def __init__(self, id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None):  # noqa: E501
         """Element - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._ifc_id = None
         self._uuid = None
         self._type = None
         self._attributes = None
@@ -67,8 +64,6 @@ class Element(object):
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if uuid is not None:
             self.uuid = uuid
         self.type = type
@@ -99,27 +94,6 @@ class Element(object):
         """
 
         self._id = id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this Element.  # noqa: E501
-
-
-        :return: The ifc_id of this Element.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this Element.
-
-
-        :param ifc_id: The ifc_id of this Element.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def uuid(self):

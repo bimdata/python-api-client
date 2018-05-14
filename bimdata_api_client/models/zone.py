@@ -38,7 +38,6 @@ class Zone(object):
         'uuid': 'str',
         'zones': 'list[str]',
         'parent_id': 'int',
-        'ifc_id': 'int',
         'spaces': 'list[Space]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -51,14 +50,13 @@ class Zone(object):
         'uuid': 'uuid',
         'zones': 'zones',
         'parent_id': 'parent_id',
-        'ifc_id': 'ifc_id',
         'spaces': 'spaces',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'color': 'color'
     }
 
-    def __init__(self, id=None, name=None, uuid=None, zones=None, parent_id=None, ifc_id=None, spaces=None, created_at=None, updated_at=None, color=None):  # noqa: E501
+    def __init__(self, id=None, name=None, uuid=None, zones=None, parent_id=None, spaces=None, created_at=None, updated_at=None, color=None):  # noqa: E501
         """Zone - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -66,7 +64,6 @@ class Zone(object):
         self._uuid = None
         self._zones = None
         self._parent_id = None
-        self._ifc_id = None
         self._spaces = None
         self._created_at = None
         self._updated_at = None
@@ -81,8 +78,6 @@ class Zone(object):
             self.zones = zones
         if parent_id is not None:
             self.parent_id = parent_id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if spaces is not None:
             self.spaces = spaces
         if created_at is not None:
@@ -204,27 +199,6 @@ class Zone(object):
         """
 
         self._parent_id = parent_id
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this Zone.  # noqa: E501
-
-
-        :return: The ifc_id of this Zone.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this Zone.
-
-
-        :param ifc_id: The ifc_id of this Zone.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
 
     @property
     def spaces(self):

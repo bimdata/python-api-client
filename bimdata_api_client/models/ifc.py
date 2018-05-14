@@ -18,8 +18,6 @@ import six
 
 from bimdata_api_client.models.ifc_creator import IfcCreator  # noqa: F401,E501
 from bimdata_api_client.models.ifc_document import IfcDocument  # noqa: F401,E501
-from bimdata_api_client.models.ifc_project import IfcProject  # noqa: F401,E501
-from bimdata_api_client.models.zone import Zone  # noqa: F401,E501
 
 
 class Ifc(object):
@@ -43,9 +41,6 @@ class Ifc(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'document': 'IfcDocument',
-        'project': 'IfcProject',
-        'project_id': 'int',
-        'zones': 'list[Zone]',
         'structure_file': 'str',
         'systems_file': 'str',
         'map_file': 'str',
@@ -62,9 +57,6 @@ class Ifc(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'document': 'document',
-        'project': 'project',
-        'project_id': 'project_id',
-        'zones': 'zones',
         'structure_file': 'structure_file',
         'systems_file': 'systems_file',
         'map_file': 'map_file',
@@ -73,7 +65,7 @@ class Ifc(object):
         'error_detail': 'error_detail'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document=None, project=None, project_id=None, zones=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None):  # noqa: E501
         """Ifc - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -83,9 +75,6 @@ class Ifc(object):
         self._created_at = None
         self._updated_at = None
         self._document = None
-        self._project = None
-        self._project_id = None
-        self._zones = None
         self._structure_file = None
         self._systems_file = None
         self._map_file = None
@@ -108,12 +97,6 @@ class Ifc(object):
             self.updated_at = updated_at
         if document is not None:
             self.document = document
-        if project is not None:
-            self.project = project
-        if project_id is not None:
-            self.project_id = project_id
-        if zones is not None:
-            self.zones = zones
         if structure_file is not None:
             self.structure_file = structure_file
         if systems_file is not None:
@@ -279,69 +262,6 @@ class Ifc(object):
         """
 
         self._document = document
-
-    @property
-    def project(self):
-        """Gets the project of this Ifc.  # noqa: E501
-
-
-        :return: The project of this Ifc.  # noqa: E501
-        :rtype: IfcProject
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this Ifc.
-
-
-        :param project: The project of this Ifc.  # noqa: E501
-        :type: IfcProject
-        """
-
-        self._project = project
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this Ifc.  # noqa: E501
-
-
-        :return: The project_id of this Ifc.  # noqa: E501
-        :rtype: int
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this Ifc.
-
-
-        :param project_id: The project_id of this Ifc.  # noqa: E501
-        :type: int
-        """
-
-        self._project_id = project_id
-
-    @property
-    def zones(self):
-        """Gets the zones of this Ifc.  # noqa: E501
-
-
-        :return: The zones of this Ifc.  # noqa: E501
-        :rtype: list[Zone]
-        """
-        return self._zones
-
-    @zones.setter
-    def zones(self, zones):
-        """Sets the zones of this Ifc.
-
-
-        :param zones: The zones of this Ifc.  # noqa: E501
-        :type: list[Zone]
-        """
-
-        self._zones = zones
 
     @property
     def structure_file(self):

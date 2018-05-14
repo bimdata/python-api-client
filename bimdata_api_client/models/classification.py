@@ -32,7 +32,6 @@ class Classification(object):
     """
     swagger_types = {
         'id': 'int',
-        'project_id': 'int',
         'name': 'str',
         'notation': 'str',
         'title': 'str'
@@ -40,17 +39,15 @@ class Classification(object):
 
     attribute_map = {
         'id': 'id',
-        'project_id': 'project_id',
         'name': 'name',
         'notation': 'notation',
         'title': 'title'
     }
 
-    def __init__(self, id=None, project_id=None, name=None, notation=None, title=None):  # noqa: E501
+    def __init__(self, id=None, name=None, notation=None, title=None):  # noqa: E501
         """Classification - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._project_id = None
         self._name = None
         self._notation = None
         self._title = None
@@ -58,8 +55,6 @@ class Classification(object):
 
         if id is not None:
             self.id = id
-        if project_id is not None:
-            self.project_id = project_id
         self.name = name
         self.notation = notation
         if title is not None:
@@ -85,27 +80,6 @@ class Classification(object):
         """
 
         self._id = id
-
-    @property
-    def project_id(self):
-        """Gets the project_id of this Classification.  # noqa: E501
-
-
-        :return: The project_id of this Classification.  # noqa: E501
-        :rtype: int
-        """
-        return self._project_id
-
-    @project_id.setter
-    def project_id(self, project_id):
-        """Sets the project_id of this Classification.
-
-
-        :param project_id: The project_id of this Classification.  # noqa: E501
-        :type: int
-        """
-
-        self._project_id = project_id
 
     @property
     def name(self):

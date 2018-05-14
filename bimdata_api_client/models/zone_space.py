@@ -35,11 +35,9 @@ class ZoneSpace(object):
         'name': 'str',
         'longname': 'str',
         'uuid': 'str',
-        'ifc_id': 'int',
         'zone_set': 'list[str]',
         'created_at': 'datetime',
-        'updated_at': 'datetime',
-        'zone_id': 'int'
+        'updated_at': 'datetime'
     }
 
     attribute_map = {
@@ -47,25 +45,21 @@ class ZoneSpace(object):
         'name': 'name',
         'longname': 'longname',
         'uuid': 'uuid',
-        'ifc_id': 'ifc_id',
         'zone_set': 'zone_set',
         'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'zone_id': 'zone_id'
+        'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, longname=None, uuid=None, ifc_id=None, zone_set=None, created_at=None, updated_at=None, zone_id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, longname=None, uuid=None, zone_set=None, created_at=None, updated_at=None):  # noqa: E501
         """ZoneSpace - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._longname = None
         self._uuid = None
-        self._ifc_id = None
         self._zone_set = None
         self._created_at = None
         self._updated_at = None
-        self._zone_id = None
         self.discriminator = None
 
         if id is not None:
@@ -74,16 +68,12 @@ class ZoneSpace(object):
         if longname is not None:
             self.longname = longname
         self.uuid = uuid
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
         if zone_set is not None:
             self.zone_set = zone_set
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if zone_id is not None:
-            self.zone_id = zone_id
 
     @property
     def id(self):
@@ -180,27 +170,6 @@ class ZoneSpace(object):
         self._uuid = uuid
 
     @property
-    def ifc_id(self):
-        """Gets the ifc_id of this ZoneSpace.  # noqa: E501
-
-
-        :return: The ifc_id of this ZoneSpace.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this ZoneSpace.
-
-
-        :param ifc_id: The ifc_id of this ZoneSpace.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
-
-    @property
     def zone_set(self):
         """Gets the zone_set of this ZoneSpace.  # noqa: E501
 
@@ -262,27 +231,6 @@ class ZoneSpace(object):
         """
 
         self._updated_at = updated_at
-
-    @property
-    def zone_id(self):
-        """Gets the zone_id of this ZoneSpace.  # noqa: E501
-
-
-        :return: The zone_id of this ZoneSpace.  # noqa: E501
-        :rtype: int
-        """
-        return self._zone_id
-
-    @zone_id.setter
-    def zone_id(self, zone_id):
-        """Sets the zone_id of this ZoneSpace.
-
-
-        :param zone_id: The zone_id of this ZoneSpace.  # noqa: E501
-        :type: int
-        """
-
-        self._zone_id = zone_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

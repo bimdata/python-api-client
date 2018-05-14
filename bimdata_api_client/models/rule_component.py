@@ -32,7 +32,6 @@ class RuleComponent(object):
     """
     swagger_types = {
         'id': 'int',
-        'rule_id': 'int',
         'type': 'str',
         'value': 'str',
         'operator': 'str',
@@ -43,7 +42,6 @@ class RuleComponent(object):
 
     attribute_map = {
         'id': 'id',
-        'rule_id': 'rule_id',
         'type': 'type',
         'value': 'value',
         'operator': 'operator',
@@ -52,11 +50,10 @@ class RuleComponent(object):
         'rule_components': 'rule_components'
     }
 
-    def __init__(self, id=None, rule_id=None, type=None, value=None, operator=None, params=None, condition=None, rule_components=None):  # noqa: E501
+    def __init__(self, id=None, type=None, value=None, operator=None, params=None, condition=None, rule_components=None):  # noqa: E501
         """RuleComponent - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
-        self._rule_id = None
         self._type = None
         self._value = None
         self._operator = None
@@ -67,8 +64,6 @@ class RuleComponent(object):
 
         if id is not None:
             self.id = id
-        if rule_id is not None:
-            self.rule_id = rule_id
         if type is not None:
             self.type = type
         if value is not None:
@@ -102,27 +97,6 @@ class RuleComponent(object):
         """
 
         self._id = id
-
-    @property
-    def rule_id(self):
-        """Gets the rule_id of this RuleComponent.  # noqa: E501
-
-
-        :return: The rule_id of this RuleComponent.  # noqa: E501
-        :rtype: int
-        """
-        return self._rule_id
-
-    @rule_id.setter
-    def rule_id(self, rule_id):
-        """Sets the rule_id of this RuleComponent.
-
-
-        :param rule_id: The rule_id of this RuleComponent.  # noqa: E501
-        :type: int
-        """
-
-        self._rule_id = rule_id
 
     @property
     def type(self):

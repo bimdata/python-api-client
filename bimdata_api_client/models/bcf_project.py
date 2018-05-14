@@ -33,7 +33,7 @@ class BcfProject(object):
                             and the value is json key in definition.
     """
     swagger_types = {
-        'project_id': 'int',
+        'project_id': 'str',
         'name': 'str',
         'autorization_project_actions': 'list[ProjectAction]'
     }
@@ -64,7 +64,7 @@ class BcfProject(object):
 
 
         :return: The project_id of this BcfProject.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._project_id
 
@@ -74,7 +74,7 @@ class BcfProject(object):
 
 
         :param project_id: The project_id of this BcfProject.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._project_id = project_id

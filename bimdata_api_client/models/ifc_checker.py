@@ -17,7 +17,6 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan  # noqa: F401,E501
-from bimdata_api_client.models.ifc_checker_ifc import IfcCheckerIfc  # noqa: F401,E501
 from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults  # noqa: F401,E501
 
 
@@ -38,8 +37,6 @@ class IfcChecker(object):
         'id': 'int',
         'creator': 'int',
         'name': 'str',
-        'ifc_id': 'int',
-        'ifc': 'IfcCheckerIfc',
         'checkplan_id': 'int',
         'results': 'list[IfcCheckerResults]',
         'created_at': 'datetime',
@@ -51,8 +48,6 @@ class IfcChecker(object):
         'id': 'id',
         'creator': 'creator',
         'name': 'name',
-        'ifc_id': 'ifc_id',
-        'ifc': 'ifc',
         'checkplan_id': 'checkplan_id',
         'results': 'results',
         'created_at': 'created_at',
@@ -60,14 +55,12 @@ class IfcChecker(object):
         'checkplan': 'checkplan'
     }
 
-    def __init__(self, id=None, creator=None, name=None, ifc_id=None, ifc=None, checkplan_id=None, results=None, created_at=None, updated_at=None, checkplan=None):  # noqa: E501
+    def __init__(self, id=None, creator=None, name=None, checkplan_id=None, results=None, created_at=None, updated_at=None, checkplan=None):  # noqa: E501
         """IfcChecker - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._creator = None
         self._name = None
-        self._ifc_id = None
-        self._ifc = None
         self._checkplan_id = None
         self._results = None
         self._created_at = None
@@ -81,10 +74,6 @@ class IfcChecker(object):
             self.creator = creator
         if name is not None:
             self.name = name
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
-        if ifc is not None:
-            self.ifc = ifc
         if checkplan_id is not None:
             self.checkplan_id = checkplan_id
         if results is not None:
@@ -160,48 +149,6 @@ class IfcChecker(object):
             raise ValueError("Invalid value for `name`, length must be less than or equal to `256`")  # noqa: E501
 
         self._name = name
-
-    @property
-    def ifc_id(self):
-        """Gets the ifc_id of this IfcChecker.  # noqa: E501
-
-
-        :return: The ifc_id of this IfcChecker.  # noqa: E501
-        :rtype: int
-        """
-        return self._ifc_id
-
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this IfcChecker.
-
-
-        :param ifc_id: The ifc_id of this IfcChecker.  # noqa: E501
-        :type: int
-        """
-
-        self._ifc_id = ifc_id
-
-    @property
-    def ifc(self):
-        """Gets the ifc of this IfcChecker.  # noqa: E501
-
-
-        :return: The ifc of this IfcChecker.  # noqa: E501
-        :rtype: IfcCheckerIfc
-        """
-        return self._ifc
-
-    @ifc.setter
-    def ifc(self, ifc):
-        """Sets the ifc of this IfcChecker.
-
-
-        :param ifc: The ifc of this IfcChecker.  # noqa: E501
-        :type: IfcCheckerIfc
-        """
-
-        self._ifc = ifc
 
     @property
     def checkplan_id(self):

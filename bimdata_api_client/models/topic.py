@@ -60,7 +60,7 @@ class Topic(object):
         'due_date': 'datetime',
         'autorization_topic_actions': 'list[TopicAction]',
         'autorization_topic_status': 'list[TopicStatus]',
-        'bcf_project_id': 'int'
+        'bcf_project_id': 'str'
     }
 
     attribute_map = {
@@ -566,7 +566,7 @@ class Topic(object):
 
 
         :return: The bcf_project_id of this Topic.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._bcf_project_id
 
@@ -576,7 +576,7 @@ class Topic(object):
 
 
         :param bcf_project_id: The bcf_project_id of this Topic.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._bcf_project_id = bcf_project_id

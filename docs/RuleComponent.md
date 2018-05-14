@@ -4,7 +4,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**rule_id** | **int** |  | [optional] 
 **type** | **str** |  | [optional] 
 **value** | **str** |  | [optional] 
 **operator** | **str** |  | [optional] 

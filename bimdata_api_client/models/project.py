@@ -42,8 +42,7 @@ class Project(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'root_folder': 'ProjectRootFolder',
-        'property_permissions_enabled': 'bool',
-        'cloud_id': 'int'
+        'property_permissions_enabled': 'bool'
     }
 
     attribute_map = {
@@ -55,11 +54,10 @@ class Project(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'root_folder': 'root_folder',
-        'property_permissions_enabled': 'property_permissions_enabled',
-        'cloud_id': 'cloud_id'
+        'property_permissions_enabled': 'property_permissions_enabled'
     }
 
-    def __init__(self, id=None, logo=None, cloud=None, name=None, status=None, created_at=None, updated_at=None, root_folder=None, property_permissions_enabled=None, cloud_id=None):  # noqa: E501
+    def __init__(self, id=None, logo=None, cloud=None, name=None, status=None, created_at=None, updated_at=None, root_folder=None, property_permissions_enabled=None):  # noqa: E501
         """Project - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -71,7 +69,6 @@ class Project(object):
         self._updated_at = None
         self._root_folder = None
         self._property_permissions_enabled = None
-        self._cloud_id = None
         self.discriminator = None
 
         if id is not None:
@@ -91,8 +88,6 @@ class Project(object):
             self.root_folder = root_folder
         if property_permissions_enabled is not None:
             self.property_permissions_enabled = property_permissions_enabled
-        if cloud_id is not None:
-            self.cloud_id = cloud_id
 
     @property
     def id(self):
@@ -292,27 +287,6 @@ class Project(object):
         """
 
         self._property_permissions_enabled = property_permissions_enabled
-
-    @property
-    def cloud_id(self):
-        """Gets the cloud_id of this Project.  # noqa: E501
-
-
-        :return: The cloud_id of this Project.  # noqa: E501
-        :rtype: int
-        """
-        return self._cloud_id
-
-    @cloud_id.setter
-    def cloud_id(self, cloud_id):
-        """Sets the cloud_id of this Project.
-
-
-        :param cloud_id: The cloud_id of this Project.  # noqa: E501
-        :type: int
-        """
-
-        self._cloud_id = cloud_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
