@@ -163,7 +163,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_comments_events_delete**
-> bcf2_1_projects_topics_comments_events_delete(topics_pk, projects_pk, id)
+> bcf2_1_projects_topics_comments_events_delete(id, projects_pk, topics_pk)
 
 
 
@@ -185,12 +185,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_comments_events_delete(topics_pk, projects_pk, id)
+    api_instance.bcf2_1_projects_topics_comments_events_delete(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_comments_events_delete: %s\n" % e)
 ```
@@ -199,9 +199,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -219,7 +219,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_comments_events_delete_0**
-> bcf2_1_projects_topics_comments_events_delete_0(topics_pk, projects_pk, comments_pk, id)
+> bcf2_1_projects_topics_comments_events_delete_0(id, projects_pk, topics_pk, comments_pk)
 
 
 
@@ -241,13 +241,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
+comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_comments_events_delete_0(topics_pk, projects_pk, comments_pk, id)
+    api_instance.bcf2_1_projects_topics_comments_events_delete_0(id, projects_pk, topics_pk, comments_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_comments_events_delete_0: %s\n" % e)
 ```
@@ -256,10 +256,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
+ **comments_pk** | **str**|  | 
 
 ### Return type
 
@@ -277,7 +277,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_events_delete**
-> bcf2_1_projects_topics_events_delete(topics_pk, projects_pk, id)
+> bcf2_1_projects_topics_events_delete(id, projects_pk, topics_pk)
 
 
 
@@ -299,12 +299,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_events_delete(topics_pk, projects_pk, id)
+    api_instance.bcf2_1_projects_topics_events_delete(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_events_delete: %s\n" % e)
 ```
@@ -313,9 +313,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -333,7 +333,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_bitmap_delete**
-> bcf2_1_projects_topics_viewpoints_bitmap_delete(topics_pk, projects_pk, viewpoints_pk, id)
+> bcf2_1_projects_topics_viewpoints_bitmap_delete(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -355,13 +355,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_viewpoints_bitmap_delete(topics_pk, projects_pk, viewpoints_pk, id)
+    api_instance.bcf2_1_projects_topics_viewpoints_bitmap_delete(viewpoints_pk, id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_viewpoints_bitmap_delete: %s\n" % e)
 ```
@@ -370,10 +370,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -391,7 +391,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_coloring_delete**
-> bcf2_1_projects_topics_viewpoints_coloring_delete(topics_pk, projects_pk, viewpoints_pk, id)
+> bcf2_1_projects_topics_viewpoints_coloring_delete(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -413,13 +413,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_viewpoints_coloring_delete(topics_pk, projects_pk, viewpoints_pk, id)
+    api_instance.bcf2_1_projects_topics_viewpoints_coloring_delete(viewpoints_pk, id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_viewpoints_coloring_delete: %s\n" % e)
 ```
@@ -428,10 +428,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -449,7 +449,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_delete**
-> bcf2_1_projects_topics_viewpoints_delete(topics_pk, projects_pk, id)
+> bcf2_1_projects_topics_viewpoints_delete(id, projects_pk, topics_pk)
 
 
 
@@ -471,12 +471,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_viewpoints_delete(topics_pk, projects_pk, id)
+    api_instance.bcf2_1_projects_topics_viewpoints_delete(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_viewpoints_delete: %s\n" % e)
 ```
@@ -485,9 +485,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -505,7 +505,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_selection_delete**
-> bcf2_1_projects_topics_viewpoints_selection_delete(topics_pk, projects_pk, viewpoints_pk, id)
+> bcf2_1_projects_topics_viewpoints_selection_delete(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -527,13 +527,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_viewpoints_selection_delete(topics_pk, projects_pk, viewpoints_pk, id)
+    api_instance.bcf2_1_projects_topics_viewpoints_selection_delete(viewpoints_pk, id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_viewpoints_selection_delete: %s\n" % e)
 ```
@@ -542,10 +542,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -563,7 +563,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_visibility_delete**
-> bcf2_1_projects_topics_viewpoints_visibility_delete(topics_pk, projects_pk, viewpoints_pk, id)
+> bcf2_1_projects_topics_viewpoints_visibility_delete(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -585,13 +585,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.bcf2_1_projects_topics_viewpoints_visibility_delete(topics_pk, projects_pk, viewpoints_pk, id)
+    api_instance.bcf2_1_projects_topics_viewpoints_visibility_delete(viewpoints_pk, id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->bcf2_1_projects_topics_viewpoints_visibility_delete: %s\n" % e)
 ```
@@ -600,10 +600,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -729,7 +729,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bcf_project**
-> BcfProject create_bcf_project(data)
+> WrappedClass create_bcf_project(data)
 
 
 
@@ -751,7 +751,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.BcfProject() # BcfProject | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
     api_response = api_instance.create_bcf_project(data)
@@ -764,11 +764,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**BcfProject**](BcfProject.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -782,7 +782,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bitmap**
-> Bitmap create_bitmap(topics_pk, projects_pk, viewpoints_pk, data)
+> Bitmap create_bitmap(viewpoints_pk, projects_pk, topics_pk, data)
 
 
 
@@ -804,13 +804,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.create_bitmap(topics_pk, projects_pk, viewpoints_pk, data)
+    api_response = api_instance.create_bitmap(viewpoints_pk, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_bitmap: %s\n" % e)
@@ -820,9 +820,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
@@ -841,7 +841,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_coloring**
-> Coloring create_coloring(topics_pk, projects_pk, viewpoints_pk, data)
+> Coloring create_coloring(viewpoints_pk, projects_pk, topics_pk, data)
 
 
 
@@ -863,13 +863,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.create_coloring(topics_pk, projects_pk, viewpoints_pk, data)
+    api_response = api_instance.create_coloring(viewpoints_pk, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_coloring: %s\n" % e)
@@ -879,9 +879,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
@@ -900,7 +900,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment**
-> Comment create_comment(topics_pk, projects_pk, data)
+> Comment create_comment(projects_pk, topics_pk, data)
 
 
 
@@ -922,12 +922,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.create_comment(topics_pk, projects_pk, data)
+    api_response = api_instance.create_comment(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment: %s\n" % e)
@@ -937,8 +937,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Comment**](Comment.md)|  | 
 
 ### Return type
@@ -957,7 +957,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment_event**
-> CommentEvent create_comment_event(topics_pk, projects_pk, data)
+> CommentEvent create_comment_event(projects_pk, topics_pk, data)
 
 
 
@@ -979,12 +979,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.create_comment_event(topics_pk, projects_pk, data)
+    api_response = api_instance.create_comment_event(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment_event: %s\n" % e)
@@ -994,8 +994,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -1014,7 +1014,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment_event_0**
-> CommentEvent create_comment_event_0(topics_pk, projects_pk, comments_pk, data)
+> CommentEvent create_comment_event_0(projects_pk, topics_pk, comments_pk, data)
 
 
 
@@ -1036,13 +1036,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.create_comment_event_0(topics_pk, projects_pk, comments_pk, data)
+    api_response = api_instance.create_comment_event_0(projects_pk, topics_pk, comments_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment_event_0: %s\n" % e)
@@ -1052,8 +1052,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
@@ -1073,7 +1073,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document_reference**
-> DocumentReference create_document_reference(topics_pk, projects_pk, data)
+> DocumentReference create_document_reference(projects_pk, topics_pk, data)
 
 
 
@@ -1095,12 +1095,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.create_document_reference(topics_pk, projects_pk, data)
+    api_response = api_instance.create_document_reference(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_document_reference: %s\n" % e)
@@ -1110,8 +1110,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
@@ -1130,7 +1130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_file**
-> BimSnippet create_file(topics_pk, projects_pk, data)
+> BimSnippet create_file(projects_pk, topics_pk, data)
 
 
 
@@ -1152,12 +1152,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.create_file(topics_pk, projects_pk, data)
+    api_response = api_instance.create_file(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_file: %s\n" % e)
@@ -1167,8 +1167,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -1187,7 +1187,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_related_topic**
-> RelatedTopic create_related_topic(topics_pk, projects_pk, data)
+> RelatedTopic create_related_topic(projects_pk, topics_pk, data)
 
 
 
@@ -1209,12 +1209,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.create_related_topic(topics_pk, projects_pk, data)
+    api_response = api_instance.create_related_topic(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_related_topic: %s\n" % e)
@@ -1224,8 +1224,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
@@ -1244,7 +1244,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_selection**
-> Component create_selection(topics_pk, projects_pk, viewpoints_pk, data)
+> Component create_selection(viewpoints_pk, projects_pk, topics_pk, data)
 
 
 
@@ -1266,13 +1266,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.create_selection(topics_pk, projects_pk, viewpoints_pk, data)
+    api_response = api_instance.create_selection(viewpoints_pk, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_selection: %s\n" % e)
@@ -1282,9 +1282,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Component**](Component.md)|  | 
 
 ### Return type
@@ -1303,7 +1303,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_snippet**
-> BimSnippet create_snippet(topics_pk, projects_pk, data)
+> BimSnippet create_snippet(projects_pk, topics_pk, data)
 
 
 
@@ -1325,12 +1325,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.create_snippet(topics_pk, projects_pk, data)
+    api_response = api_instance.create_snippet(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_snippet: %s\n" % e)
@@ -1340,8 +1340,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -1360,7 +1360,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_topic**
-> Topic create_topic(projects_pk, data)
+> WrappedClass create_topic(projects_pk, data)
 
 
 
@@ -1383,7 +1383,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
     api_response = api_instance.create_topic(projects_pk, data)
@@ -1397,11 +1397,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**Topic**](Topic.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -1415,7 +1415,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_topic_event**
-> TopicEvents create_topic_event(topics_pk, projects_pk, data)
+> TopicEvents create_topic_event(projects_pk, topics_pk, data)
 
 
 
@@ -1437,12 +1437,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.create_topic_event(topics_pk, projects_pk, data)
+    api_response = api_instance.create_topic_event(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_topic_event: %s\n" % e)
@@ -1452,8 +1452,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
@@ -1525,7 +1525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_viewpoint**
-> Viewpoint create_viewpoint(topics_pk, projects_pk, data)
+> Viewpoint create_viewpoint(projects_pk, topics_pk, data)
 
 
 
@@ -1547,12 +1547,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.create_viewpoint(topics_pk, projects_pk, data)
+    api_response = api_instance.create_viewpoint(projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
@@ -1562,8 +1562,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
@@ -1582,7 +1582,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_visibility**
-> Visibility create_visibility(topics_pk, projects_pk, viewpoints_pk, data)
+> Visibility create_visibility(viewpoints_pk, projects_pk, topics_pk, data)
 
 
 
@@ -1604,13 +1604,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.create_visibility(topics_pk, projects_pk, viewpoints_pk, data)
+    api_response = api_instance.create_visibility(viewpoints_pk, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_visibility: %s\n" % e)
@@ -1620,9 +1620,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type
@@ -1641,7 +1641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_bcf_document**
-> delete_bcf_document(projects_pk, id)
+> delete_bcf_document(id, projects_pk)
 
 
 
@@ -1663,11 +1663,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 
 try:
-    api_instance.delete_bcf_document(projects_pk, id)
+    api_instance.delete_bcf_document(id, projects_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_bcf_document: %s\n" % e)
 ```
@@ -1676,8 +1676,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
 
 ### Return type
 
@@ -1747,7 +1747,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comment**
-> delete_comment(topics_pk, projects_pk, id)
+> delete_comment(id, projects_pk, topics_pk)
 
 
 
@@ -1769,12 +1769,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.delete_comment(topics_pk, projects_pk, id)
+    api_instance.delete_comment(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_comment: %s\n" % e)
 ```
@@ -1783,9 +1783,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -1803,7 +1803,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_reference**
-> delete_document_reference(topics_pk, projects_pk, id)
+> delete_document_reference(id, projects_pk, topics_pk)
 
 
 
@@ -1825,12 +1825,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.delete_document_reference(topics_pk, projects_pk, id)
+    api_instance.delete_document_reference(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_document_reference: %s\n" % e)
 ```
@@ -1839,9 +1839,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -1859,7 +1859,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_file**
-> delete_file(topics_pk, projects_pk, id)
+> delete_file(id, projects_pk, topics_pk)
 
 
 
@@ -1881,12 +1881,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.delete_file(topics_pk, projects_pk, id)
+    api_instance.delete_file(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_file: %s\n" % e)
 ```
@@ -1895,9 +1895,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -1915,7 +1915,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_related_topic**
-> delete_related_topic(topics_pk, projects_pk, id)
+> delete_related_topic(id, projects_pk, topics_pk)
 
 
 
@@ -1937,12 +1937,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.delete_related_topic(topics_pk, projects_pk, id)
+    api_instance.delete_related_topic(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_related_topic: %s\n" % e)
 ```
@@ -1951,9 +1951,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -1971,7 +1971,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_snippet**
-> delete_snippet(topics_pk, projects_pk, id)
+> delete_snippet(id, projects_pk, topics_pk)
 
 
 
@@ -1993,12 +1993,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_instance.delete_snippet(topics_pk, projects_pk, id)
+    api_instance.delete_snippet(id, projects_pk, topics_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_snippet: %s\n" % e)
 ```
@@ -2007,9 +2007,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -2027,7 +2027,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_topic**
-> delete_topic(projects_pk, id)
+> delete_topic(id, projects_pk)
 
 
 
@@ -2049,11 +2049,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 
 try:
-    api_instance.delete_topic(projects_pk, id)
+    api_instance.delete_topic(id, projects_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->delete_topic: %s\n" % e)
 ```
@@ -2062,8 +2062,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
 
 ### Return type
 
@@ -2081,7 +2081,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bcf_document**
-> full_update_bcf_document(projects_pk, id, guid=guid, filename=filename)
+> full_update_bcf_document(id, projects_pk, guid=guid, filename=filename)
 
 
 
@@ -2103,13 +2103,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 guid = 'guid_example' # str |  (optional)
 filename = 'filename_example' # str |  (optional)
 
 try:
-    api_instance.full_update_bcf_document(projects_pk, id, guid=guid, filename=filename)
+    api_instance.full_update_bcf_document(id, projects_pk, guid=guid, filename=filename)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_bcf_document: %s\n" % e)
 ```
@@ -2118,8 +2118,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
  **guid** | [**str**](.md)|  | [optional] 
  **filename** | **str**|  | [optional] 
 
@@ -2139,7 +2139,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bcf_project**
-> BcfProject full_update_bcf_project(id, data)
+> WrappedClass full_update_bcf_project(id, data)
 
 
 
@@ -2162,7 +2162,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.BcfProject() # BcfProject | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
     api_response = api_instance.full_update_bcf_project(id, data)
@@ -2176,11 +2176,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**BcfProject**](BcfProject.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -2194,7 +2194,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bitmap**
-> Bitmap full_update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Bitmap full_update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -2216,14 +2216,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.full_update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.full_update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_bitmap: %s\n" % e)
@@ -2233,10 +2233,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
@@ -2255,7 +2255,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_coloring**
-> Coloring full_update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Coloring full_update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -2277,14 +2277,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.full_update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.full_update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_coloring: %s\n" % e)
@@ -2294,10 +2294,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
@@ -2316,7 +2316,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment**
-> Comment full_update_comment(topics_pk, projects_pk, id, data)
+> Comment full_update_comment(id, projects_pk, topics_pk, data)
 
 
 
@@ -2338,13 +2338,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.full_update_comment(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_comment(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment: %s\n" % e)
@@ -2354,9 +2354,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Comment**](Comment.md)|  | 
 
 ### Return type
@@ -2375,7 +2375,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment_event**
-> CommentEvent full_update_comment_event(topics_pk, projects_pk, id, data)
+> CommentEvent full_update_comment_event(id, projects_pk, topics_pk, data)
 
 
 
@@ -2397,13 +2397,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.full_update_comment_event(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_comment_event(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment_event: %s\n" % e)
@@ -2413,9 +2413,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -2434,7 +2434,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment_event_0**
-> CommentEvent full_update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data)
+> CommentEvent full_update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
 
 
 
@@ -2456,14 +2456,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
+comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.full_update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data)
+    api_response = api_instance.full_update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment_event_0: %s\n" % e)
@@ -2473,10 +2473,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
+ **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -2495,7 +2495,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document_reference**
-> DocumentReference full_update_document_reference(topics_pk, projects_pk, id, data)
+> DocumentReference full_update_document_reference(id, projects_pk, topics_pk, data)
 
 
 
@@ -2517,13 +2517,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.full_update_document_reference(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_document_reference(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_document_reference: %s\n" % e)
@@ -2533,9 +2533,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
@@ -2554,7 +2554,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_file**
-> BimSnippet full_update_file(topics_pk, projects_pk, id, data)
+> BimSnippet full_update_file(id, projects_pk, topics_pk, data)
 
 
 
@@ -2576,13 +2576,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.full_update_file(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_file(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_file: %s\n" % e)
@@ -2592,9 +2592,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -2613,7 +2613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_related_topic**
-> RelatedTopic full_update_related_topic(topics_pk, projects_pk, id, data)
+> RelatedTopic full_update_related_topic(id, projects_pk, topics_pk, data)
 
 
 
@@ -2635,13 +2635,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.full_update_related_topic(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_related_topic(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_related_topic: %s\n" % e)
@@ -2651,9 +2651,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
@@ -2672,7 +2672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_selection**
-> Component full_update_selection(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Component full_update_selection(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -2694,14 +2694,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.full_update_selection(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.full_update_selection(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_selection: %s\n" % e)
@@ -2711,10 +2711,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Component**](Component.md)|  | 
 
 ### Return type
@@ -2733,7 +2733,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_snippet**
-> BimSnippet full_update_snippet(topics_pk, projects_pk, id, data)
+> BimSnippet full_update_snippet(id, projects_pk, topics_pk, data)
 
 
 
@@ -2755,13 +2755,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.full_update_snippet(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_snippet(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_snippet: %s\n" % e)
@@ -2771,9 +2771,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -2792,7 +2792,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_topic**
-> Topic full_update_topic(projects_pk, id, data)
+> WrappedClass full_update_topic(id, projects_pk, data)
 
 
 
@@ -2814,12 +2814,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
-    api_response = api_instance.full_update_topic(projects_pk, id, data)
+    api_response = api_instance.full_update_topic(id, projects_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_topic: %s\n" % e)
@@ -2829,13 +2829,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **projects_pk** | **str**|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**Topic**](Topic.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -2849,7 +2849,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_topic_event**
-> TopicEvents full_update_topic_event(topics_pk, projects_pk, id, data)
+> TopicEvents full_update_topic_event(id, projects_pk, topics_pk, data)
 
 
 
@@ -2871,13 +2871,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.full_update_topic_event(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_topic_event(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_topic_event: %s\n" % e)
@@ -2887,9 +2887,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
@@ -2963,7 +2963,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_viewpoint**
-> Viewpoint full_update_viewpoint(topics_pk, projects_pk, id, data)
+> Viewpoint full_update_viewpoint(id, projects_pk, topics_pk, data)
 
 
 
@@ -2985,13 +2985,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.full_update_viewpoint(topics_pk, projects_pk, id, data)
+    api_response = api_instance.full_update_viewpoint(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_viewpoint: %s\n" % e)
@@ -3001,9 +3001,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
@@ -3022,7 +3022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_visibility**
-> Visibility full_update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Visibility full_update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -3044,14 +3044,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.full_update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.full_update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_visibility: %s\n" % e)
@@ -3061,10 +3061,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type
@@ -3189,7 +3189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_document**
-> get_bcf_document(projects_pk, id)
+> get_bcf_document(id, projects_pk)
 
 
 
@@ -3211,11 +3211,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 
 try:
-    api_instance.get_bcf_document(projects_pk, id)
+    api_instance.get_bcf_document(id, projects_pk)
 except ApiException as e:
     print("Exception when calling BcfApi->get_bcf_document: %s\n" % e)
 ```
@@ -3224,8 +3224,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
 
 ### Return type
 
@@ -3295,7 +3295,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_project**
-> BcfProject get_bcf_project(id)
+> WrappedClass get_bcf_project(id)
 
 
 
@@ -3334,7 +3334,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**BcfProject**](BcfProject.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -3348,7 +3348,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_projects**
-> list[BcfProject] get_bcf_projects()
+> list[WrappedClass] get_bcf_projects()
 
 
 
@@ -3383,7 +3383,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[BcfProject]**](BcfProject.md)
+[**list[WrappedClass]**](WrappedClass.md)
 
 ### Authorization
 
@@ -3397,7 +3397,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bitmap**
-> Bitmap get_bitmap(topics_pk, projects_pk, viewpoints_pk, id)
+> Bitmap get_bitmap(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -3419,13 +3419,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_bitmap(topics_pk, projects_pk, viewpoints_pk, id)
+    api_response = api_instance.get_bitmap(viewpoints_pk, id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_bitmap: %s\n" % e)
@@ -3435,10 +3435,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3456,7 +3456,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bitmaps**
-> list[Bitmap] get_bitmaps(topics_pk, projects_pk, viewpoints_pk)
+> list[Bitmap] get_bitmaps(viewpoints_pk, projects_pk, topics_pk)
 
 
 
@@ -3478,12 +3478,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_bitmaps(topics_pk, projects_pk, viewpoints_pk)
+    api_response = api_instance.get_bitmaps(viewpoints_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_bitmaps: %s\n" % e)
@@ -3493,9 +3493,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3513,7 +3513,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_coloring**
-> Coloring get_coloring(topics_pk, projects_pk, viewpoints_pk, id)
+> Coloring get_coloring(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -3535,13 +3535,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_coloring(topics_pk, projects_pk, viewpoints_pk, id)
+    api_response = api_instance.get_coloring(viewpoints_pk, id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_coloring: %s\n" % e)
@@ -3551,10 +3551,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3572,7 +3572,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_colorings**
-> list[Coloring] get_colorings(topics_pk, projects_pk, viewpoints_pk)
+> list[Coloring] get_colorings(viewpoints_pk, projects_pk, topics_pk)
 
 
 
@@ -3594,12 +3594,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_colorings(topics_pk, projects_pk, viewpoints_pk)
+    api_response = api_instance.get_colorings(viewpoints_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_colorings: %s\n" % e)
@@ -3609,9 +3609,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3629,7 +3629,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment**
-> Comment get_comment(topics_pk, projects_pk, id)
+> Comment get_comment(id, projects_pk, topics_pk)
 
 
 
@@ -3651,12 +3651,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment(topics_pk, projects_pk, id)
+    api_response = api_instance.get_comment(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment: %s\n" % e)
@@ -3666,9 +3666,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3686,7 +3686,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_event**
-> CommentEvent get_comment_event(topics_pk, projects_pk, id)
+> CommentEvent get_comment_event(id, projects_pk, topics_pk)
 
 
 
@@ -3708,12 +3708,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_event(topics_pk, projects_pk, id)
+    api_response = api_instance.get_comment_event(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_event: %s\n" % e)
@@ -3723,9 +3723,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3743,7 +3743,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_event_0**
-> CommentEvent get_comment_event_0(topics_pk, projects_pk, comments_pk, id)
+> CommentEvent get_comment_event_0(id, projects_pk, topics_pk, comments_pk)
 
 
 
@@ -3765,13 +3765,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
+comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_event_0(topics_pk, projects_pk, comments_pk, id)
+    api_response = api_instance.get_comment_event_0(id, projects_pk, topics_pk, comments_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_event_0: %s\n" % e)
@@ -3781,10 +3781,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
+ **comments_pk** | **str**|  | 
 
 ### Return type
 
@@ -3802,7 +3802,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_events**
-> list[CommentEvent] get_comment_events(topics_pk, projects_pk)
+> list[CommentEvent] get_comment_events(projects_pk, topics_pk)
 
 
 
@@ -3824,11 +3824,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_events(topics_pk, projects_pk)
+    api_response = api_instance.get_comment_events(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_events: %s\n" % e)
@@ -3838,8 +3838,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3857,7 +3857,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_events_0**
-> list[CommentEvent] get_comment_events_0(topics_pk, projects_pk, comments_pk)
+> list[CommentEvent] get_comment_events_0(projects_pk, topics_pk, comments_pk)
 
 
 
@@ -3879,12 +3879,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 comments_pk = 'comments_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comment_events_0(topics_pk, projects_pk, comments_pk)
+    api_response = api_instance.get_comment_events_0(projects_pk, topics_pk, comments_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comment_events_0: %s\n" % e)
@@ -3894,8 +3894,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **comments_pk** | **str**|  | 
 
 ### Return type
@@ -3914,7 +3914,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comments**
-> list[Comment] get_comments(topics_pk, projects_pk)
+> list[Comment] get_comments(projects_pk, topics_pk)
 
 
 
@@ -3936,11 +3936,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_comments(topics_pk, projects_pk)
+    api_response = api_instance.get_comments(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_comments: %s\n" % e)
@@ -3950,8 +3950,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -3969,7 +3969,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_reference**
-> DocumentReference get_document_reference(topics_pk, projects_pk, id)
+> DocumentReference get_document_reference(id, projects_pk, topics_pk)
 
 
 
@@ -3991,12 +3991,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_document_reference(topics_pk, projects_pk, id)
+    api_response = api_instance.get_document_reference(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_document_reference: %s\n" % e)
@@ -4006,9 +4006,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4026,7 +4026,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_references**
-> list[DocumentReference] get_document_references(topics_pk, projects_pk)
+> list[DocumentReference] get_document_references(projects_pk, topics_pk)
 
 
 
@@ -4048,11 +4048,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_document_references(topics_pk, projects_pk)
+    api_response = api_instance.get_document_references(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_document_references: %s\n" % e)
@@ -4062,8 +4062,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4134,7 +4134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_file**
-> BimSnippet get_file(topics_pk, projects_pk, id)
+> BimSnippet get_file(id, projects_pk, topics_pk)
 
 
 
@@ -4156,12 +4156,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_file(topics_pk, projects_pk, id)
+    api_response = api_instance.get_file(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_file: %s\n" % e)
@@ -4171,9 +4171,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4191,7 +4191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_files**
-> list[BimSnippet] get_files(topics_pk, projects_pk)
+> list[BimSnippet] get_files(projects_pk, topics_pk)
 
 
 
@@ -4213,11 +4213,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_files(topics_pk, projects_pk)
+    api_response = api_instance.get_files(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_files: %s\n" % e)
@@ -4227,8 +4227,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4246,7 +4246,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_related_topic**
-> RelatedTopic get_related_topic(topics_pk, projects_pk, id)
+> RelatedTopic get_related_topic(id, projects_pk, topics_pk)
 
 
 
@@ -4268,12 +4268,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_related_topic(topics_pk, projects_pk, id)
+    api_response = api_instance.get_related_topic(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_related_topic: %s\n" % e)
@@ -4283,9 +4283,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4303,7 +4303,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_related_topics**
-> list[RelatedTopic] get_related_topics(topics_pk, projects_pk)
+> list[RelatedTopic] get_related_topics(projects_pk, topics_pk)
 
 
 
@@ -4325,11 +4325,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_related_topics(topics_pk, projects_pk)
+    api_response = api_instance.get_related_topics(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_related_topics: %s\n" % e)
@@ -4339,8 +4339,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4358,7 +4358,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_selection**
-> Component get_selection(topics_pk, projects_pk, viewpoints_pk, id)
+> Component get_selection(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -4380,13 +4380,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_selection(topics_pk, projects_pk, viewpoints_pk, id)
+    api_response = api_instance.get_selection(viewpoints_pk, id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_selection: %s\n" % e)
@@ -4396,10 +4396,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4417,7 +4417,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_selections**
-> list[Component] get_selections(topics_pk, projects_pk, viewpoints_pk)
+> list[Component] get_selections(viewpoints_pk, projects_pk, topics_pk)
 
 
 
@@ -4439,12 +4439,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_selections(topics_pk, projects_pk, viewpoints_pk)
+    api_response = api_instance.get_selections(viewpoints_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_selections: %s\n" % e)
@@ -4454,9 +4454,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4474,7 +4474,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snapshots**
-> list[Snapshot] get_snapshots(topics_pk, projects_pk, viewpoints_pk)
+> list[Snapshot] get_snapshots(viewpoints_pk, projects_pk, topics_pk)
 
 
 
@@ -4496,12 +4496,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_snapshots(topics_pk, projects_pk, viewpoints_pk)
+    api_response = api_instance.get_snapshots(viewpoints_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_snapshots: %s\n" % e)
@@ -4511,9 +4511,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4531,7 +4531,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snippet**
-> BimSnippet get_snippet(topics_pk, projects_pk, id)
+> BimSnippet get_snippet(id, projects_pk, topics_pk)
 
 
 
@@ -4553,12 +4553,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_snippet(topics_pk, projects_pk, id)
+    api_response = api_instance.get_snippet(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_snippet: %s\n" % e)
@@ -4568,9 +4568,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4588,7 +4588,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snippets**
-> list[BimSnippet] get_snippets(topics_pk, projects_pk)
+> list[BimSnippet] get_snippets(projects_pk, topics_pk)
 
 
 
@@ -4610,11 +4610,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_snippets(topics_pk, projects_pk)
+    api_response = api_instance.get_snippets(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_snippets: %s\n" % e)
@@ -4624,8 +4624,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4643,7 +4643,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic**
-> Topic get_topic(projects_pk, id)
+> WrappedClass get_topic(id, projects_pk)
 
 
 
@@ -4665,11 +4665,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_topic(projects_pk, id)
+    api_response = api_instance.get_topic(id, projects_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_topic: %s\n" % e)
@@ -4679,12 +4679,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
 
 ### Return type
 
-[**Topic**](Topic.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -4698,7 +4698,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic_event**
-> TopicEvents get_topic_event(topics_pk, projects_pk, id)
+> TopicEvents get_topic_event(id, projects_pk, topics_pk)
 
 
 
@@ -4720,12 +4720,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_topic_event(topics_pk, projects_pk, id)
+    api_response = api_instance.get_topic_event(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_topic_event: %s\n" % e)
@@ -4735,9 +4735,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4755,7 +4755,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic_events**
-> list[TopicEvents] get_topic_events(topics_pk, projects_pk)
+> list[TopicEvents] get_topic_events(projects_pk, topics_pk)
 
 
 
@@ -4777,11 +4777,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_topic_events(topics_pk, projects_pk)
+    api_response = api_instance.get_topic_events(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_topic_events: %s\n" % e)
@@ -4791,8 +4791,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -4810,7 +4810,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topics**
-> list[Topic] get_topics(projects_pk)
+> list[WrappedClass] get_topics(projects_pk)
 
 
 
@@ -4849,7 +4849,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Topic]**](Topic.md)
+[**list[WrappedClass]**](WrappedClass.md)
 
 ### Authorization
 
@@ -4965,7 +4965,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoint**
-> Viewpoint get_viewpoint(topics_pk, projects_pk, id)
+> Viewpoint get_viewpoint(id, projects_pk, topics_pk)
 
 
 
@@ -4987,12 +4987,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_viewpoint(topics_pk, projects_pk, id)
+    api_response = api_instance.get_viewpoint(id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
@@ -5002,9 +5002,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -5022,7 +5022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoints**
-> list[Viewpoint] get_viewpoints(topics_pk, projects_pk)
+> list[Viewpoint] get_viewpoints(projects_pk, topics_pk)
 
 
 
@@ -5044,11 +5044,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_viewpoints(topics_pk, projects_pk)
+    api_response = api_instance.get_viewpoints(projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
@@ -5058,8 +5058,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -5077,7 +5077,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_visibilities**
-> list[Visibility] get_visibilities(topics_pk, projects_pk, viewpoints_pk)
+> list[Visibility] get_visibilities(viewpoints_pk, projects_pk, topics_pk)
 
 
 
@@ -5099,12 +5099,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_visibilities(topics_pk, projects_pk, viewpoints_pk)
+    api_response = api_instance.get_visibilities(viewpoints_pk, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_visibilities: %s\n" % e)
@@ -5114,9 +5114,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -5134,7 +5134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_visibility**
-> Visibility get_visibility(topics_pk, projects_pk, viewpoints_pk, id)
+> Visibility get_visibility(viewpoints_pk, id, projects_pk, topics_pk)
 
 
 
@@ -5156,13 +5156,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_visibility(topics_pk, projects_pk, viewpoints_pk, id)
+    api_response = api_instance.get_visibility(viewpoints_pk, id, projects_pk, topics_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_visibility: %s\n" % e)
@@ -5172,10 +5172,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
 
 ### Return type
 
@@ -5193,7 +5193,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bcf_document**
-> update_bcf_document(projects_pk, id, guid=guid, filename=filename)
+> update_bcf_document(id, projects_pk, guid=guid, filename=filename)
 
 
 
@@ -5215,13 +5215,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
 guid = 'guid_example' # str |  (optional)
 filename = 'filename_example' # str |  (optional)
 
 try:
-    api_instance.update_bcf_document(projects_pk, id, guid=guid, filename=filename)
+    api_instance.update_bcf_document(id, projects_pk, guid=guid, filename=filename)
 except ApiException as e:
     print("Exception when calling BcfApi->update_bcf_document: %s\n" % e)
 ```
@@ -5230,8 +5230,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
  **guid** | [**str**](.md)|  | [optional] 
  **filename** | **str**|  | [optional] 
 
@@ -5251,7 +5251,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bcf_project**
-> BcfProject update_bcf_project(id, data)
+> WrappedClass update_bcf_project(id, data)
 
 
 
@@ -5274,7 +5274,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.BcfProject() # BcfProject | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
     api_response = api_instance.update_bcf_project(id, data)
@@ -5288,11 +5288,11 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**BcfProject**](BcfProject.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -5306,7 +5306,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bitmap**
-> Bitmap update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Bitmap update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -5328,14 +5328,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_bitmap: %s\n" % e)
@@ -5345,10 +5345,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
@@ -5367,7 +5367,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_coloring**
-> Coloring update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Coloring update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -5389,14 +5389,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_coloring: %s\n" % e)
@@ -5406,10 +5406,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
@@ -5428,7 +5428,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment**
-> Comment update_comment(topics_pk, projects_pk, id, data)
+> Comment update_comment(id, projects_pk, topics_pk, data)
 
 
 
@@ -5450,13 +5450,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.update_comment(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_comment(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment: %s\n" % e)
@@ -5466,9 +5466,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Comment**](Comment.md)|  | 
 
 ### Return type
@@ -5487,7 +5487,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment_event**
-> CommentEvent update_comment_event(topics_pk, projects_pk, id, data)
+> CommentEvent update_comment_event(id, projects_pk, topics_pk, data)
 
 
 
@@ -5509,13 +5509,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.update_comment_event(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_comment_event(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment_event: %s\n" % e)
@@ -5525,9 +5525,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -5546,7 +5546,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment_event_0**
-> CommentEvent update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data)
+> CommentEvent update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
 
 
 
@@ -5568,14 +5568,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
-comments_pk = 'comments_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
+comments_pk = 'comments_pk_example' # str | 
 data = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data)
+    api_response = api_instance.update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment_event_0: %s\n" % e)
@@ -5585,10 +5585,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
- **comments_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
+ **comments_pk** | **str**|  | 
  **data** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
@@ -5607,7 +5607,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document_reference**
-> DocumentReference update_document_reference(topics_pk, projects_pk, id, data)
+> DocumentReference update_document_reference(id, projects_pk, topics_pk, data)
 
 
 
@@ -5629,13 +5629,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.update_document_reference(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_document_reference(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_document_reference: %s\n" % e)
@@ -5645,9 +5645,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
@@ -5666,7 +5666,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_file**
-> BimSnippet update_file(topics_pk, projects_pk, id, data)
+> BimSnippet update_file(id, projects_pk, topics_pk, data)
 
 
 
@@ -5688,13 +5688,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.update_file(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_file(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_file: %s\n" % e)
@@ -5704,9 +5704,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -5725,7 +5725,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_related_topic**
-> RelatedTopic update_related_topic(topics_pk, projects_pk, id, data)
+> RelatedTopic update_related_topic(id, projects_pk, topics_pk, data)
 
 
 
@@ -5747,13 +5747,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.update_related_topic(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_related_topic(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_related_topic: %s\n" % e)
@@ -5763,9 +5763,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
@@ -5784,7 +5784,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_selection**
-> Component update_selection(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Component update_selection(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -5806,14 +5806,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.update_selection(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.update_selection(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_selection: %s\n" % e)
@@ -5823,10 +5823,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Component**](Component.md)|  | 
 
 ### Return type
@@ -5845,7 +5845,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_snippet**
-> BimSnippet update_snippet(topics_pk, projects_pk, id, data)
+> BimSnippet update_snippet(id, projects_pk, topics_pk, data)
 
 
 
@@ -5867,13 +5867,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.update_snippet(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_snippet(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_snippet: %s\n" % e)
@@ -5883,9 +5883,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
@@ -5904,7 +5904,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_topic**
-> Topic update_topic(projects_pk, id, data)
+> WrappedClass update_topic(id, projects_pk, data)
 
 
 
@@ -5926,12 +5926,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.WrappedClass() # WrappedClass | 
 
 try:
-    api_response = api_instance.update_topic(projects_pk, id, data)
+    api_response = api_instance.update_topic(id, projects_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_topic: %s\n" % e)
@@ -5941,13 +5941,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **projects_pk** | **str**|  | 
+ **data** | [**WrappedClass**](WrappedClass.md)|  | 
 
 ### Return type
 
-[**Topic**](Topic.md)
+[**WrappedClass**](WrappedClass.md)
 
 ### Authorization
 
@@ -5961,7 +5961,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_topic_event**
-> TopicEvents update_topic_event(topics_pk, projects_pk, id, data)
+> TopicEvents update_topic_event(id, projects_pk, topics_pk, data)
 
 
 
@@ -5983,13 +5983,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.update_topic_event(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_topic_event(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_topic_event: %s\n" % e)
@@ -5999,9 +5999,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
@@ -6075,7 +6075,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_viewpoint**
-> Viewpoint update_viewpoint(topics_pk, projects_pk, id, data)
+> Viewpoint update_viewpoint(id, projects_pk, topics_pk, data)
 
 
 
@@ -6097,13 +6097,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.update_viewpoint(topics_pk, projects_pk, id, data)
+    api_response = api_instance.update_viewpoint(id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
@@ -6113,9 +6113,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
@@ -6134,7 +6134,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_visibility**
-> Visibility update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data)
+> Visibility update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data)
 
 
 
@@ -6156,14 +6156,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-topics_pk = 'topics_pk_example' # str | 
-projects_pk = 'projects_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 id = 'id_example' # str | 
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
 data = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data)
+    api_response = api_instance.update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_visibility: %s\n" % e)
@@ -6173,10 +6173,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **topics_pk** | **str**|  | 
- **projects_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
  **id** | **str**|  | 
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
  **data** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type

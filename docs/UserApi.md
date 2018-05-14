@@ -223,7 +223,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_projects**
-> list[Project] get_self_projects()
+> list[WrappedClass] get_self_projects()
 
 
 
@@ -258,7 +258,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[Project]**](Project.md)
+[**list[WrappedClass]**](WrappedClass.md)
 
 ### Authorization
 

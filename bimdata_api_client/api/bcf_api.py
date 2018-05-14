@@ -124,49 +124,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_comments_events_delete(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_comments_events_delete(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_comments_events_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_comments_events_delete(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_comments_events_delete(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_comments_events_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_comments_events_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_comments_events_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_comments_events_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_comments_events_delete_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_comments_events_delete_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_comments_events_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -181,28 +181,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_comments_events_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_comments_events_delete`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_comments_events_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_comments_events_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_comments_events_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -239,51 +239,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_comments_events_delete_0(self, topics_pk, projects_pk, comments_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_comments_events_delete_0(self, id, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_comments_events_delete_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_0(topics_pk, projects_pk, comments_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_0(id, projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(topics_pk, projects_pk, comments_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(id, projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(topics_pk, projects_pk, comments_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(id, projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_comments_events_delete_0_with_http_info(self, topics_pk, projects_pk, comments_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_comments_events_delete_0_with_http_info(self, id, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_comments_events_delete_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(topics_pk, projects_pk, comments_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_comments_events_delete_0_with_http_info(id, projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'comments_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -298,34 +298,34 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
-        # verify the required parameter 'comments_pk' is set
-        if ('comments_pk' not in params or
-                params['comments_pk'] is None):
-            raise ValueError("Missing the required parameter `comments_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
+        # verify the required parameter 'comments_pk' is set
+        if ('comments_pk' not in params or
+                params['comments_pk'] is None):
+            raise ValueError("Missing the required parameter `comments_pk` when calling `bcf2_1_projects_topics_comments_events_delete_0`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
-        if 'comments_pk' in params:
-            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
+        if 'comments_pk' in params:
+            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
         query_params = []
 
@@ -362,49 +362,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_events_delete(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_events_delete(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_events_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_events_delete(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_events_delete(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_events_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_events_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_events_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_events_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_events_delete_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_events_delete_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_events_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_events_delete_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_events_delete_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -419,28 +419,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_events_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_events_delete`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_events_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_events_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_events_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -477,51 +477,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_viewpoints_bitmap_delete(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_bitmap_delete(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_bitmap_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_bitmap_delete(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_bitmap_delete(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_bitmap_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_bitmap_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -536,14 +536,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_bitmap_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_bitmap_delete`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -552,18 +544,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_viewpoints_bitmap_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_bitmap_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_bitmap_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -600,51 +600,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_viewpoints_coloring_delete(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_coloring_delete(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_coloring_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_coloring_delete(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_coloring_delete(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_coloring_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_coloring_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -659,14 +659,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_coloring_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_coloring_delete`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -675,18 +667,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_viewpoints_coloring_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_coloring_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_coloring_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -723,49 +723,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_viewpoints_delete(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_delete(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_delete(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_delete(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_viewpoints_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_viewpoints_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_viewpoints_delete_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_viewpoints_delete_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_viewpoints_delete_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_delete_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_delete_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_delete_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -780,28 +780,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_delete`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_viewpoints_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -838,51 +838,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_viewpoints_selection_delete(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_selection_delete(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_selection_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_selection_delete(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_selection_delete(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_selection_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_selection_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -897,14 +897,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_selection_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_selection_delete`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -913,18 +905,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_viewpoints_selection_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_selection_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_selection_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -961,51 +961,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bcf2_1_projects_topics_viewpoints_visibility_delete(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_visibility_delete(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_visibility_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_visibility_delete(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_visibility_delete(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """bcf2_1_projects_topics_viewpoints_visibility_delete  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.bcf2_1_projects_topics_viewpoints_visibility_delete_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1020,14 +1020,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_visibility_delete`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_visibility_delete`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -1036,18 +1028,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `bcf2_1_projects_topics_viewpoints_visibility_delete`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_viewpoints_visibility_delete`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_viewpoints_visibility_delete`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -1300,8 +1300,8 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async bool
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1322,8 +1322,8 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async bool
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1381,7 +1381,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BcfProject',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -1389,19 +1389,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_bitmap(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_bitmap(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bitmap(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_bitmap(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
@@ -1409,31 +1409,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            return self.create_bitmap_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_bitmap_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_bitmap_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_bitmap_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_bitmap_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1448,18 +1448,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_bitmap`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `create_bitmap`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `create_bitmap`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `create_bitmap`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_bitmap`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1468,12 +1468,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -1512,19 +1512,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_coloring(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_coloring(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_coloring(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_coloring(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
@@ -1532,31 +1532,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            return self.create_coloring_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_coloring_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_coloring_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_coloring_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_coloring_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1571,18 +1571,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_coloring`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `create_coloring`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `create_coloring`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `create_coloring`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_coloring`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1591,12 +1591,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -1635,18 +1635,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_comment(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_comment(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_comment(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
@@ -1654,30 +1654,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_comment_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_comment_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_comment_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_comment_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_comment_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_comment_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_comment_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1692,14 +1692,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_comment`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1708,10 +1708,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -1750,18 +1750,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_comment_event(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_comment_event(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment_event(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_comment_event(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
@@ -1769,30 +1769,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_comment_event_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_comment_event_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_comment_event_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_comment_event_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_comment_event_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_comment_event_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment_event_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_comment_event_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1807,14 +1807,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment_event`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_comment_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -1823,10 +1823,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -1865,18 +1865,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_comment_event_0(self, topics_pk, projects_pk, comments_pk, data, **kwargs):  # noqa: E501
+    def create_comment_event_0(self, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """create_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment_event_0(topics_pk, projects_pk, comments_pk, data, async=True)
+        >>> thread = api.create_comment_event_0(projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
@@ -1885,23 +1885,23 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, data, **kwargs)  # noqa: E501
+            return self.create_comment_event_0_with_http_info(projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_comment_event_0_with_http_info(projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_comment_event_0_with_http_info(self, topics_pk, projects_pk, comments_pk, data, **kwargs):  # noqa: E501
+    def create_comment_event_0_with_http_info(self, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """create_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, data, async=True)
+        >>> thread = api.create_comment_event_0_with_http_info(projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
@@ -1909,7 +1909,7 @@ class BcfApi(object):
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'comments_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1924,14 +1924,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment_event_0`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_comment_event_0`")  # noqa: E501
         # verify the required parameter 'comments_pk' is set
         if ('comments_pk' not in params or
                 params['comments_pk'] is None):
@@ -1944,10 +1944,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'comments_pk' in params:
             path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
@@ -1988,18 +1988,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_document_reference(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_document_reference(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_document_reference(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_document_reference(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
@@ -2007,30 +2007,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_document_reference_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_document_reference_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_document_reference_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_document_reference_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_document_reference_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_document_reference_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_document_reference_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_document_reference_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2045,14 +2045,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_document_reference`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_document_reference`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_document_reference`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2061,10 +2061,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2103,18 +2103,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_file(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_file(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_file(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_file(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -2122,30 +2122,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_file_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_file_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_file_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_file_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_file_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_file_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_file_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_file_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2160,14 +2160,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_file`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_file`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_file`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2176,10 +2176,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2218,18 +2218,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_related_topic(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_related_topic(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_related_topic(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_related_topic(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
@@ -2237,30 +2237,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_related_topic_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_related_topic_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_related_topic_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_related_topic_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_related_topic_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_related_topic_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_related_topic_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_related_topic_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2275,14 +2275,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_related_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_related_topic`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_related_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2291,10 +2291,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2333,19 +2333,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_selection(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_selection(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_selection(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_selection(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
@@ -2353,31 +2353,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            return self.create_selection_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_selection_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_selection_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_selection_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_selection_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2392,18 +2392,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_selection`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `create_selection`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `create_selection`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `create_selection`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_selection`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2412,12 +2412,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2456,18 +2456,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_snippet(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_snippet(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_snippet(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_snippet(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -2475,30 +2475,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_snippet_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_snippet_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_snippet_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_snippet_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_snippet_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_snippet_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_snippet_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_snippet_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2513,14 +2513,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_snippet`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_snippet`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_snippet`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2529,10 +2529,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2582,8 +2582,8 @@ class BcfApi(object):
 
         :param async bool
         :param str projects_pk: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2605,8 +2605,8 @@ class BcfApi(object):
 
         :param async bool
         :param str projects_pk: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2670,7 +2670,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Topic',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -2678,18 +2678,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_topic_event(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_topic_event(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_topic_event(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_topic_event(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
@@ -2697,30 +2697,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_topic_event_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_topic_event_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_topic_event_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_topic_event_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_topic_event_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_topic_event_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_topic_event_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_topic_event_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2735,14 +2735,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_topic_event`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_topic_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_topic_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2751,10 +2751,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -2892,18 +2892,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_viewpoint(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_viewpoint(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_viewpoint(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_viewpoint(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
@@ -2911,30 +2911,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_viewpoint_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            return self.create_viewpoint_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_viewpoint_with_http_info(topics_pk, projects_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_viewpoint_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_viewpoint_with_http_info(self, topics_pk, projects_pk, data, **kwargs):  # noqa: E501
+    def create_viewpoint_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_viewpoint_with_http_info(topics_pk, projects_pk, data, async=True)
+        >>> thread = api.create_viewpoint_with_http_info(projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2949,14 +2949,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_viewpoint`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `create_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -2965,10 +2965,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3007,19 +3007,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_visibility(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_visibility(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_visibility(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_visibility(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
@@ -3027,31 +3027,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.create_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            return self.create_visibility_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, **kwargs)  # noqa: E501
+            (data) = self.create_visibility_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def create_visibility_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, data, **kwargs):  # noqa: E501
+    def create_visibility_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """create_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, data, async=True)
+        >>> thread = api.create_visibility_with_http_info(viewpoints_pk, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3066,18 +3066,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `create_visibility`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `create_visibility`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `create_visibility`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `create_visibility`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `create_visibility`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -3086,12 +3086,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3130,47 +3130,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_bcf_document(self, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_bcf_document(self, id, projects_pk, **kwargs):  # noqa: E501
         """delete_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bcf_document(projects_pk, id, async=True)
+        >>> thread = api.delete_bcf_document(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_bcf_document_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_bcf_document_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """delete_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_bcf_document_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.delete_bcf_document_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3185,22 +3185,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_bcf_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_bcf_document`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_bcf_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -3336,49 +3336,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_comment(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_comment(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_comment(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_comment(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_comment_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_comment_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_comment_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_comment_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_comment_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_comment_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_comment_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_comment_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3393,28 +3393,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_comment`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_comment`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_comment`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_comment`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_comment`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3451,49 +3451,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_document_reference(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_document_reference(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document_reference(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_document_reference(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_document_reference_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_document_reference_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_document_reference_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_document_reference_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_document_reference_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_document_reference_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document_reference_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_document_reference_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3508,28 +3508,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_document_reference`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_document_reference`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_document_reference`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_document_reference`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_document_reference`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3566,49 +3566,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_file(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_file(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_file(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_file(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_file_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_file_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_file_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_file_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_file_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_file_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_file_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_file_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3623,28 +3623,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_file`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_file`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_file`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_file`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_file`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3681,49 +3681,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_related_topic(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_related_topic(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_related_topic(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_related_topic(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_related_topic_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_related_topic_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_related_topic_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_related_topic_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_related_topic_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_related_topic_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_related_topic_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_related_topic_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3738,28 +3738,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_related_topic`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_related_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_related_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_related_topic`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_related_topic`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3796,49 +3796,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_snippet(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_snippet(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_snippet(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_snippet(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_snippet_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_snippet_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_snippet_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_snippet_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_snippet_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_snippet_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """delete_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_snippet_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.delete_snippet_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3853,28 +3853,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_snippet`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_snippet`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_snippet`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_snippet`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `delete_snippet`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -3911,47 +3911,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_topic(self, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_topic(self, id, projects_pk, **kwargs):  # noqa: E501
         """delete_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_topic(projects_pk, id, async=True)
+        >>> thread = api.delete_topic(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.delete_topic_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.delete_topic_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_topic_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.delete_topic_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_topic_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def delete_topic_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """delete_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_topic_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.delete_topic_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3966,22 +3966,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `delete_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `delete_topic`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -4018,18 +4018,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_bcf_document(self, projects_pk, id, **kwargs):  # noqa: E501
+    def full_update_bcf_document(self, id, projects_pk, **kwargs):  # noqa: E501
         """full_update_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_bcf_document(projects_pk, id, async=True)
+        >>> thread = api.full_update_bcf_document(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :param str guid:
         :param str filename:
         :return: None
@@ -4038,23 +4038,23 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.full_update_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.full_update_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def full_update_bcf_document_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def full_update_bcf_document_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """full_update_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_bcf_document_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.full_update_bcf_document_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :param str guid:
         :param str filename:
         :return: None
@@ -4062,7 +4062,7 @@ class BcfApi(object):
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id', 'guid', 'filename']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'guid', 'filename']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4077,22 +4077,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_bcf_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_bcf_document`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_bcf_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -4144,8 +4144,8 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4167,8 +4167,8 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4232,7 +4232,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BcfProject',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -4240,20 +4240,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_bitmap(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_bitmap(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
@@ -4261,32 +4261,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_bitmap_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_bitmap_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4301,14 +4301,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_bitmap`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_bitmap`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -4317,6 +4309,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_bitmap`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_bitmap`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_bitmap`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4325,14 +4325,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -4371,20 +4371,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_coloring(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_coloring(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
@@ -4392,32 +4392,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_coloring_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_coloring_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4432,14 +4432,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_coloring`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_coloring`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -4448,6 +4440,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_coloring`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_coloring`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_coloring`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4456,14 +4456,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -4502,19 +4502,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_comment(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_comment(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
@@ -4522,31 +4522,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_comment_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_comment_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_comment_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_comment_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_comment_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_comment_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4561,18 +4561,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_comment`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4581,12 +4581,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -4625,19 +4625,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_comment_event(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment_event(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment_event(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_comment_event(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
@@ -4645,31 +4645,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_comment_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_comment_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_comment_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_comment_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_comment_event_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment_event_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment_event_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_comment_event_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4684,18 +4684,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_comment_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4704,12 +4704,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -4748,20 +4748,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_comment_event_0(self, topics_pk, projects_pk, comments_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment_event_0(self, id, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """full_update_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data, async=True)
+        >>> thread = api.full_update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
@@ -4769,32 +4769,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_comment_event_0_with_http_info(self, topics_pk, projects_pk, comments_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_comment_event_0_with_http_info(self, id, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """full_update_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, async=True)
+        >>> thread = api.full_update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'comments_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4809,22 +4809,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'comments_pk' is set
-        if ('comments_pk' not in params or
-                params['comments_pk'] is None):
-            raise ValueError("Missing the required parameter `comments_pk` when calling `full_update_comment_event_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'comments_pk' is set
+        if ('comments_pk' not in params or
+                params['comments_pk'] is None):
+            raise ValueError("Missing the required parameter `comments_pk` when calling `full_update_comment_event_0`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4833,14 +4833,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
-        if 'comments_pk' in params:
-            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
+        if 'comments_pk' in params:
+            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
         query_params = []
 
@@ -4879,19 +4879,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_document_reference(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_document_reference(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document_reference(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_document_reference(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
@@ -4899,31 +4899,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_document_reference_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_document_reference_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_document_reference_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_document_reference_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_document_reference_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_document_reference_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document_reference_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_document_reference_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4938,18 +4938,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_document_reference`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_document_reference`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_document_reference`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_document_reference`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_document_reference`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -4958,12 +4958,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5002,19 +5002,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_file(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_file(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_file(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_file(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -5022,31 +5022,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_file_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_file_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_file_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_file_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_file_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_file_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_file_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_file_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5061,18 +5061,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_file`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_file`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_file`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_file`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_file`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5081,12 +5081,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5125,19 +5125,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_related_topic(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_related_topic(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_related_topic(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_related_topic(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
@@ -5145,31 +5145,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_related_topic_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_related_topic_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_related_topic_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_related_topic_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_related_topic_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_related_topic_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_related_topic_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_related_topic_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5184,18 +5184,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_related_topic`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_related_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_related_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_related_topic`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_related_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5204,12 +5204,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5248,20 +5248,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_selection(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_selection(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_selection(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_selection(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
@@ -5269,32 +5269,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_selection_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_selection_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5309,14 +5309,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_selection`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_selection`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -5325,6 +5317,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_selection`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_selection`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_selection`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5333,14 +5333,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5379,19 +5379,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_snippet(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_snippet(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_snippet(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_snippet(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -5399,31 +5399,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_snippet_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_snippet_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_snippet_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_snippet_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_snippet_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_snippet_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_snippet_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_snippet_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5438,18 +5438,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_snippet`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_snippet`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_snippet`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_snippet`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_snippet`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5458,12 +5458,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5502,49 +5502,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_topic(self, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_topic(self, id, projects_pk, data, **kwargs):  # noqa: E501
         """full_update_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_topic(projects_pk, id, data, async=True)
+        >>> thread = api.full_update_topic(id, projects_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_topic_with_http_info(projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_topic_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_topic_with_http_info(projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_topic_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_topic_with_http_info(self, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_topic_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
         """full_update_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_topic_with_http_info(projects_pk, id, data, async=True)
+        >>> thread = api.full_update_topic_with_http_info(id, projects_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5559,14 +5559,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5575,10 +5575,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -5609,7 +5609,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Topic',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -5617,19 +5617,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_topic_event(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_topic_event(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_topic_event(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_topic_event(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
@@ -5637,31 +5637,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_topic_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_topic_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_topic_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_topic_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_topic_event_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_topic_event_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_topic_event_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_topic_event_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5676,18 +5676,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_topic_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_topic_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_topic_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_topic_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_topic_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5696,12 +5696,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5847,19 +5847,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_viewpoint(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_viewpoint(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_viewpoint(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_viewpoint(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
@@ -5867,31 +5867,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_viewpoint_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_viewpoint_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.full_update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -5906,18 +5906,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_viewpoint`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -5926,12 +5926,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -5970,20 +5970,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_visibility(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_visibility(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
@@ -5991,32 +5991,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.full_update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.full_update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.full_update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def full_update_visibility_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def full_update_visibility_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """full_update_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.full_update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6031,14 +6031,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_visibility`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_visibility`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -6047,6 +6039,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `full_update_visibility`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `full_update_visibility`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `full_update_visibility`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -6055,14 +6055,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -6299,47 +6299,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_bcf_document(self, projects_pk, id, **kwargs):  # noqa: E501
+    def get_bcf_document(self, id, projects_pk, **kwargs):  # noqa: E501
         """get_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bcf_document(projects_pk, id, async=True)
+        >>> thread = api.get_bcf_document(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_bcf_document_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def get_bcf_document_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """get_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bcf_document_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.get_bcf_document_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6354,22 +6354,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bcf_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_bcf_document`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bcf_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -6516,7 +6516,7 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :return: BcfProject
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6538,7 +6538,7 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :return: BcfProject
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6596,7 +6596,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BcfProject',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6614,7 +6614,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async bool
-        :return: list[BcfProject]
+        :return: list[WrappedClass]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6635,7 +6635,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async bool
-        :return: list[BcfProject]
+        :return: list[WrappedClass]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -6687,7 +6687,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[BcfProject]',  # noqa: E501
+            response_type='list[WrappedClass]',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -6695,51 +6695,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_bitmap(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_bitmap(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bitmap(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_bitmap(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Bitmap
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.get_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_bitmap_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_bitmap_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Bitmap
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6754,14 +6754,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_bitmap`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bitmap`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -6770,18 +6762,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_bitmap`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bitmap`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_bitmap`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -6818,49 +6818,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_bitmaps(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_bitmaps(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_bitmaps  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bitmaps(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_bitmaps(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Bitmap]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_bitmaps_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_bitmaps_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_bitmaps_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_bitmaps_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_bitmaps_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_bitmaps_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_bitmaps  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_bitmaps_with_http_info(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_bitmaps_with_http_info(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Bitmap]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6875,28 +6875,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_bitmaps`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bitmaps`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_bitmaps`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_bitmaps`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_bitmaps`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -6933,51 +6933,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_coloring(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_coloring(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_coloring(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_coloring(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Coloring
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.get_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_coloring_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_coloring_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Coloring
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -6992,14 +6992,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_coloring`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_coloring`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -7008,18 +7000,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_coloring`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_coloring`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_coloring`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7056,49 +7056,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_colorings(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_colorings(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_colorings  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_colorings(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_colorings(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Coloring]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_colorings_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_colorings_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_colorings_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_colorings_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_colorings_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_colorings_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_colorings  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_colorings_with_http_info(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_colorings_with_http_info(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Coloring]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7113,28 +7113,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_colorings`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_colorings`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_colorings`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_colorings`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_colorings`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7171,49 +7171,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_comment(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_comment(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Comment
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comment_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_comment_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comment_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_comment_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comment_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_comment_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_comment_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Comment
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7228,28 +7228,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_comment`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7286,49 +7286,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment_event(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_comment_event(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_event(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_comment_event(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comment_event_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_comment_event_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comment_event_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_comment_event_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comment_event_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_comment_event_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_event_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_comment_event_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7343,28 +7343,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_comment_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_event`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7401,51 +7401,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment_event_0(self, topics_pk, projects_pk, comments_pk, id, **kwargs):  # noqa: E501
+    def get_comment_event_0(self, id, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """get_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_event_0(topics_pk, projects_pk, comments_pk, id, async=True)
+        >>> thread = api.get_comment_event_0(id, projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, **kwargs)  # noqa: E501
+            return self.get_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comment_event_0_with_http_info(self, topics_pk, projects_pk, comments_pk, id, **kwargs):  # noqa: E501
+    def get_comment_event_0_with_http_info(self, id, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """get_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, async=True)
+        >>> thread = api.get_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'comments_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7460,34 +7460,34 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'comments_pk' is set
-        if ('comments_pk' not in params or
-                params['comments_pk'] is None):
-            raise ValueError("Missing the required parameter `comments_pk` when calling `get_comment_event_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'comments_pk' is set
+        if ('comments_pk' not in params or
+                params['comments_pk'] is None):
+            raise ValueError("Missing the required parameter `comments_pk` when calling `get_comment_event_0`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
-        if 'comments_pk' in params:
-            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
+        if 'comments_pk' in params:
+            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
         query_params = []
 
@@ -7524,47 +7524,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment_events(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_comment_events(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment_events  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_events(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_comment_events(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[CommentEvent]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comment_events_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_comment_events_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comment_events_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_comment_events_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comment_events_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_comment_events_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comment_events  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_events_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_comment_events_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[CommentEvent]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7579,22 +7579,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_events`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_events`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_events`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7631,18 +7631,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment_events_0(self, topics_pk, projects_pk, comments_pk, **kwargs):  # noqa: E501
+    def get_comment_events_0(self, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """get_comment_events_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_events_0(topics_pk, projects_pk, comments_pk, async=True)
+        >>> thread = api.get_comment_events_0(projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param str comments_pk: (required)
         :return: list[CommentEvent]
                  If the method is called asynchronously,
@@ -7650,30 +7650,30 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comment_events_0_with_http_info(topics_pk, projects_pk, comments_pk, **kwargs)  # noqa: E501
+            return self.get_comment_events_0_with_http_info(projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comment_events_0_with_http_info(topics_pk, projects_pk, comments_pk, **kwargs)  # noqa: E501
+            (data) = self.get_comment_events_0_with_http_info(projects_pk, topics_pk, comments_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comment_events_0_with_http_info(self, topics_pk, projects_pk, comments_pk, **kwargs):  # noqa: E501
+    def get_comment_events_0_with_http_info(self, projects_pk, topics_pk, comments_pk, **kwargs):  # noqa: E501
         """get_comment_events_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comment_events_0_with_http_info(topics_pk, projects_pk, comments_pk, async=True)
+        >>> thread = api.get_comment_events_0_with_http_info(projects_pk, topics_pk, comments_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param str comments_pk: (required)
         :return: list[CommentEvent]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk', 'comments_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7688,14 +7688,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_events_0`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_comment_events_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comment_events_0`")  # noqa: E501
         # verify the required parameter 'comments_pk' is set
         if ('comments_pk' not in params or
                 params['comments_pk'] is None):
@@ -7704,10 +7704,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'comments_pk' in params:
             path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
@@ -7746,47 +7746,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comments(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_comments(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comments  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comments(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_comments(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_comments_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_comments_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_comments_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_comments_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_comments_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_comments_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_comments  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_comments_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_comments_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Comment]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7801,22 +7801,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comments`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_comments`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_comments`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7853,49 +7853,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_document_reference(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_document_reference(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_reference(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_document_reference(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_document_reference_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_document_reference_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_document_reference_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_document_reference_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_document_reference_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_document_reference_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_reference_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_document_reference_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7910,28 +7910,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_document_reference`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_document_reference`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_document_reference`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_document_reference`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_document_reference`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -7968,47 +7968,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_document_references(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_document_references(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_document_references  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_references(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_document_references(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[DocumentReference]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_document_references_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_document_references_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_document_references_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_document_references_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_document_references_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_document_references_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_document_references  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_references_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_document_references_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[DocumentReference]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8023,22 +8023,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_document_references`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_document_references`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_document_references`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8174,49 +8174,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_file(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_file(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_file(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_file(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_file_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_file_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_file_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_file_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_file_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_file_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_file_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_file_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8231,28 +8231,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_file`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_file`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_file`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_file`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_file`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8289,47 +8289,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_files(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_files(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_files  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_files(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_files(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[BimSnippet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_files_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_files_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_files_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_files_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_files_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_files_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_files  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_files_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_files_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[BimSnippet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8344,22 +8344,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_files`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_files`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_files`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8396,49 +8396,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_related_topic(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_related_topic(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_related_topic(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_related_topic(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_related_topic_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_related_topic_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_related_topic_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_related_topic_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_related_topic_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_related_topic_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_related_topic_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_related_topic_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8453,28 +8453,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_related_topic`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_related_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_related_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_related_topic`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_related_topic`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8511,47 +8511,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_related_topics(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_related_topics(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_related_topics  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_related_topics(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_related_topics(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[RelatedTopic]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_related_topics_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_related_topics_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_related_topics_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_related_topics_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_related_topics_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_related_topics_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_related_topics  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_related_topics_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_related_topics_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[RelatedTopic]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8566,22 +8566,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_related_topics`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_related_topics`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_related_topics`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8618,51 +8618,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_selection(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_selection(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_selection(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_selection(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Component
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.get_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_selection_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_selection_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Component
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8677,14 +8677,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_selection`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_selection`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -8693,18 +8685,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_selection`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_selection`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_selection`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8741,49 +8741,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_selections(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_selections(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_selections  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_selections(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_selections(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Component]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_selections_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_selections_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_selections_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_selections_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_selections_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_selections_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_selections  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_selections_with_http_info(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_selections_with_http_info(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Component]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8798,28 +8798,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_selections`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_selections`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_selections`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_selections`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_selections`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8856,49 +8856,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_snapshots(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_snapshots(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snapshots  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snapshots(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_snapshots(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Snapshot]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_snapshots_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_snapshots_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_snapshots_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_snapshots_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_snapshots_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_snapshots_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snapshots  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snapshots_with_http_info(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_snapshots_with_http_info(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Snapshot]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8913,28 +8913,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snapshots`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snapshots`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_snapshots`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snapshots`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snapshots`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -8971,49 +8971,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_snippet(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_snippet(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snippet(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_snippet(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_snippet_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_snippet_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_snippet_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_snippet_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_snippet_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_snippet_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snippet_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_snippet_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9028,28 +9028,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snippet`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snippet`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_snippet`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snippet`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snippet`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -9086,47 +9086,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_snippets(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_snippets(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snippets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snippets(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_snippets(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[BimSnippet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_snippets_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_snippets_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_snippets_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_snippets_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_snippets_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_snippets_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_snippets  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_snippets_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_snippets_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[BimSnippet]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9141,22 +9141,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snippets`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_snippets`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snippets`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -9193,47 +9193,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_topic(self, projects_pk, id, **kwargs):  # noqa: E501
+    def get_topic(self, id, projects_pk, **kwargs):  # noqa: E501
         """get_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic(projects_pk, id, async=True)
+        >>> thread = api.get_topic(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_topic_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_topic_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_topic_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_topic_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_topic_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def get_topic_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """get_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.get_topic_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9248,22 +9248,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_topic`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -9292,7 +9292,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Topic',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -9300,49 +9300,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_topic_event(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_topic_event(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic_event(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_topic_event(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_topic_event_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_topic_event_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_topic_event_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_topic_event_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_topic_event_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_topic_event_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic_event_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_topic_event_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9357,28 +9357,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_topic_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_topic_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_topic_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_topic_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_topic_event`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -9415,47 +9415,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_topic_events(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_topic_events(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_topic_events  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic_events(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_topic_events(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[TopicEvents]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_topic_events_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_topic_events_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_topic_events_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_topic_events_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_topic_events_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_topic_events_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_topic_events  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_topic_events_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_topic_events_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[TopicEvents]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9470,22 +9470,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_topic_events`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_topic_events`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_topic_events`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -9533,7 +9533,7 @@ class BcfApi(object):
 
         :param async bool
         :param str projects_pk: (required)
-        :return: list[Topic]
+        :return: list[WrappedClass]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9555,7 +9555,7 @@ class BcfApi(object):
 
         :param async bool
         :param str projects_pk: (required)
-        :return: list[Topic]
+        :return: list[WrappedClass]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9613,7 +9613,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Topic]',  # noqa: E501
+            response_type='list[WrappedClass]',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -9811,49 +9811,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_viewpoint(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_viewpoint(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_viewpoint(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_viewpoint(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_viewpoint_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            return self.get_viewpoint_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_viewpoint_with_http_info(topics_pk, projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_viewpoint_with_http_info(id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_viewpoint_with_http_info(self, topics_pk, projects_pk, id, **kwargs):  # noqa: E501
+    def get_viewpoint_with_http_info(self, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_viewpoint_with_http_info(topics_pk, projects_pk, id, async=True)
+        >>> thread = api.get_viewpoint_with_http_info(id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9868,28 +9868,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_viewpoint`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_viewpoint`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_viewpoint`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_viewpoint`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -9926,47 +9926,47 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_viewpoints(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_viewpoints(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_viewpoints  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_viewpoints(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_viewpoints(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Viewpoint]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_viewpoints_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            return self.get_viewpoints_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_viewpoints_with_http_info(topics_pk, projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_viewpoints_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_viewpoints_with_http_info(self, topics_pk, projects_pk, **kwargs):  # noqa: E501
+    def get_viewpoints_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_viewpoints  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_viewpoints_with_http_info(topics_pk, projects_pk, async=True)
+        >>> thread = api.get_viewpoints_with_http_info(projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
         :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Viewpoint]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9981,22 +9981,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_viewpoints`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in params or
                 params['projects_pk'] is None):
             raise ValueError("Missing the required parameter `projects_pk` when calling `get_viewpoints`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_viewpoints`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
         if 'projects_pk' in params:
             path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10033,49 +10033,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_visibilities(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_visibilities(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_visibilities  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_visibilities(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_visibilities(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Visibility]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_visibilities_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_visibilities_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_visibilities_with_http_info(topics_pk, projects_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_visibilities_with_http_info(viewpoints_pk, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_visibilities_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, **kwargs):  # noqa: E501
+    def get_visibilities_with_http_info(self, viewpoints_pk, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_visibilities  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_visibilities_with_http_info(topics_pk, projects_pk, viewpoints_pk, async=True)
+        >>> thread = api.get_visibilities_with_http_info(viewpoints_pk, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: list[Visibility]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk']  # noqa: E501
+        all_params = ['viewpoints_pk', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10090,28 +10090,28 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_visibilities`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_visibilities`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
             raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_visibilities`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_visibilities`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_visibilities`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10148,51 +10148,51 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_visibility(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_visibility(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_visibility(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_visibility(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Visibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.get_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            return self.get_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, **kwargs)  # noqa: E501
+            (data) = self.get_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_visibility_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, **kwargs):  # noqa: E501
+    def get_visibility_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """get_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, async=True)
+        >>> thread = api.get_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :return: Visibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10207,14 +10207,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_visibility`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_visibility`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -10223,18 +10215,26 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `get_visibility`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_visibility`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_visibility`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10271,18 +10271,18 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_bcf_document(self, projects_pk, id, **kwargs):  # noqa: E501
+    def update_bcf_document(self, id, projects_pk, **kwargs):  # noqa: E501
         """update_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_bcf_document(projects_pk, id, async=True)
+        >>> thread = api.update_bcf_document(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :param str guid:
         :param str filename:
         :return: None
@@ -10291,23 +10291,23 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            return self.update_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_bcf_document_with_http_info(projects_pk, id, **kwargs)  # noqa: E501
+            (data) = self.update_bcf_document_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def update_bcf_document_with_http_info(self, projects_pk, id, **kwargs):  # noqa: E501
+    def update_bcf_document_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
         """update_bcf_document  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_bcf_document_with_http_info(projects_pk, id, async=True)
+        >>> thread = api.update_bcf_document_with_http_info(id, projects_pk, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
         :param str guid:
         :param str filename:
         :return: None
@@ -10315,7 +10315,7 @@ class BcfApi(object):
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id', 'guid', 'filename']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'guid', 'filename']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10330,22 +10330,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_bcf_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_bcf_document`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_bcf_document`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -10397,8 +10397,8 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10420,8 +10420,8 @@ class BcfApi(object):
 
         :param async bool
         :param str id: (required)
-        :param BcfProject data: (required)
-        :return: BcfProject
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -10485,7 +10485,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='BcfProject',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -10493,20 +10493,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_bitmap(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_bitmap(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_bitmap(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_bitmap(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
@@ -10514,32 +10514,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_bitmap_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_bitmap_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_bitmap  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_bitmap_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_bitmap_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Bitmap data: (required)
         :return: Bitmap
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10554,14 +10554,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_bitmap`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_bitmap`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -10570,6 +10562,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_bitmap`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_bitmap`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_bitmap`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -10578,14 +10578,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10624,20 +10624,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_coloring(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_coloring(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_coloring(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_coloring(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
@@ -10645,32 +10645,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_coloring_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_coloring_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_coloring  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_coloring_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_coloring_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Coloring data: (required)
         :return: Coloring
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10685,14 +10685,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_coloring`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_coloring`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -10701,6 +10693,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_coloring`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_coloring`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_coloring`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -10709,14 +10709,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10755,19 +10755,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_comment(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_comment(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
@@ -10775,31 +10775,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_comment_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_comment_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_comment_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_comment_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_comment_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_comment  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_comment_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Comment data: (required)
         :return: Comment
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10814,18 +10814,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_comment`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -10834,12 +10834,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -10878,19 +10878,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_comment_event(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment_event(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment_event(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_comment_event(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
@@ -10898,31 +10898,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_comment_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_comment_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_comment_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_comment_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_comment_event_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment_event_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_comment_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment_event_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_comment_event_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10937,18 +10937,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_comment_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -10957,12 +10957,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11001,20 +11001,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_comment_event_0(self, topics_pk, projects_pk, comments_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment_event_0(self, id, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """update_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment_event_0(topics_pk, projects_pk, comments_pk, id, data, async=True)
+        >>> thread = api.update_comment_event_0(id, projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
@@ -11022,32 +11022,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_comment_event_0_with_http_info(self, topics_pk, projects_pk, comments_pk, id, data, **kwargs):  # noqa: E501
+    def update_comment_event_0_with_http_info(self, id, projects_pk, topics_pk, comments_pk, data, **kwargs):  # noqa: E501
         """update_comment_event_0  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_comment_event_0_with_http_info(topics_pk, projects_pk, comments_pk, id, data, async=True)
+        >>> thread = api.update_comment_event_0_with_http_info(id, projects_pk, topics_pk, comments_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
-        :param str comments_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
+        :param str comments_pk: (required)
         :param CommentEvent data: (required)
         :return: CommentEvent
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'comments_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'comments_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11062,22 +11062,22 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment_event_0`")  # noqa: E501
-        # verify the required parameter 'comments_pk' is set
-        if ('comments_pk' not in params or
-                params['comments_pk'] is None):
-            raise ValueError("Missing the required parameter `comments_pk` when calling `update_comment_event_0`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_comment_event_0`")  # noqa: E501
+        # verify the required parameter 'comments_pk' is set
+        if ('comments_pk' not in params or
+                params['comments_pk'] is None):
+            raise ValueError("Missing the required parameter `comments_pk` when calling `update_comment_event_0`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11086,14 +11086,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
-        if 'comments_pk' in params:
-            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
+        if 'comments_pk' in params:
+            path_params['comments_pk'] = params['comments_pk']  # noqa: E501
 
         query_params = []
 
@@ -11132,19 +11132,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_document_reference(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_document_reference(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document_reference(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_document_reference(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
@@ -11152,31 +11152,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_document_reference_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_document_reference_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_document_reference_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_document_reference_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_document_reference_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_document_reference_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_document_reference  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document_reference_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_document_reference_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param DocumentReference data: (required)
         :return: DocumentReference
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11191,18 +11191,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_document_reference`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_document_reference`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_document_reference`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_document_reference`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_document_reference`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11211,12 +11211,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11255,19 +11255,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_file(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_file(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_file(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_file(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -11275,31 +11275,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_file_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_file_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_file_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_file_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_file_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_file_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_file  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_file_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_file_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11314,18 +11314,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_file`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_file`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_file`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_file`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_file`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11334,12 +11334,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11378,19 +11378,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_related_topic(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_related_topic(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_related_topic(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_related_topic(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
@@ -11398,31 +11398,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_related_topic_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_related_topic_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_related_topic_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_related_topic_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_related_topic_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_related_topic_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_related_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_related_topic_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_related_topic_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param RelatedTopic data: (required)
         :return: RelatedTopic
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11437,18 +11437,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_related_topic`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_related_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_related_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_related_topic`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_related_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11457,12 +11457,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11501,20 +11501,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_selection(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_selection(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_selection(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_selection(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
@@ -11522,32 +11522,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_selection_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_selection_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_selection  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_selection_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_selection_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Component data: (required)
         :return: Component
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11562,14 +11562,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_selection`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_selection`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -11578,6 +11570,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_selection`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_selection`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_selection`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11586,14 +11586,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11632,19 +11632,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_snippet(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_snippet(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_snippet(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_snippet(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
@@ -11652,31 +11652,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_snippet_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_snippet_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_snippet_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_snippet_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_snippet_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_snippet_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_snippet  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_snippet_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_snippet_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param BimSnippet data: (required)
         :return: BimSnippet
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11691,18 +11691,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_snippet`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_snippet`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_snippet`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_snippet`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_snippet`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11711,12 +11711,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -11755,49 +11755,49 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_topic(self, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_topic(self, id, projects_pk, data, **kwargs):  # noqa: E501
         """update_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_topic(projects_pk, id, data, async=True)
+        >>> thread = api.update_topic(id, projects_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_topic_with_http_info(projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_topic_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_topic_with_http_info(projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_topic_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_topic_with_http_info(self, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_topic_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
         """update_topic  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_topic_with_http_info(projects_pk, id, data, async=True)
+        >>> thread = api.update_topic_with_http_info(id, projects_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str projects_pk: (required)
         :param str id: (required)
-        :param Topic data: (required)
-        :return: Topic
+        :param str projects_pk: (required)
+        :param WrappedClass data: (required)
+        :return: WrappedClass
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11812,14 +11812,14 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_topic`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_topic`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11828,10 +11828,10 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
 
         query_params = []
 
@@ -11862,7 +11862,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Topic',  # noqa: E501
+            response_type='WrappedClass',  # noqa: E501
             auth_settings=auth_settings,
             async=params.get('async'),
             _return_http_data_only=params.get('_return_http_data_only'),
@@ -11870,19 +11870,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_topic_event(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_topic_event(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_topic_event(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_topic_event(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
@@ -11890,31 +11890,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_topic_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_topic_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_topic_event_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_topic_event_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_topic_event_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_topic_event_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_topic_event  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_topic_event_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_topic_event_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param TopicEvents data: (required)
         :return: TopicEvents
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11929,18 +11929,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_topic_event`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_topic_event`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_topic_event`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_topic_event`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_topic_event`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -11949,12 +11949,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -12100,19 +12100,19 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_viewpoint(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_viewpoint(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_viewpoint(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_viewpoint(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
@@ -12120,31 +12120,31 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_viewpoint_with_http_info(self, topics_pk, projects_pk, id, data, **kwargs):  # noqa: E501
+    def update_viewpoint_with_http_info(self, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_viewpoint  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_viewpoint_with_http_info(topics_pk, projects_pk, id, data, async=True)
+        >>> thread = api.update_viewpoint_with_http_info(id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Viewpoint data: (required)
         :return: Viewpoint
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'id', 'data']  # noqa: E501
+        all_params = ['id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -12159,18 +12159,18 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_viewpoint`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -12179,12 +12179,12 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
@@ -12223,20 +12223,20 @@ class BcfApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_visibility(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_visibility(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_visibility(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_visibility(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
@@ -12244,32 +12244,32 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            return self.update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs)  # noqa: E501
+            (data) = self.update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
             return data
 
-    def update_visibility_with_http_info(self, topics_pk, projects_pk, viewpoints_pk, id, data, **kwargs):  # noqa: E501
+    def update_visibility_with_http_info(self, viewpoints_pk, id, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """update_visibility  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_visibility_with_http_info(topics_pk, projects_pk, viewpoints_pk, id, data, async=True)
+        >>> thread = api.update_visibility_with_http_info(viewpoints_pk, id, projects_pk, topics_pk, data, async=True)
         >>> result = thread.get()
 
         :param async bool
-        :param str topics_pk: (required)
-        :param str projects_pk: (required)
         :param str viewpoints_pk: (required)
         :param str id: (required)
+        :param str projects_pk: (required)
+        :param str topics_pk: (required)
         :param Visibility data: (required)
         :return: Visibility
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['topics_pk', 'projects_pk', 'viewpoints_pk', 'id', 'data']  # noqa: E501
+        all_params = ['viewpoints_pk', 'id', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -12284,14 +12284,6 @@ class BcfApi(object):
                 )
             params[key] = val
         del params['kwargs']
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in params or
-                params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `update_visibility`")  # noqa: E501
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in params or
-                params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `update_visibility`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in params or
                 params['viewpoints_pk'] is None):
@@ -12300,6 +12292,14 @@ class BcfApi(object):
         if ('id' not in params or
                 params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `update_visibility`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in params or
+                params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_visibility`")  # noqa: E501
+        # verify the required parameter 'topics_pk' is set
+        if ('topics_pk' not in params or
+                params['topics_pk'] is None):
+            raise ValueError("Missing the required parameter `topics_pk` when calling `update_visibility`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in params or
                 params['data'] is None):
@@ -12308,14 +12308,14 @@ class BcfApi(object):
         collection_formats = {}
 
         path_params = {}
-        if 'topics_pk' in params:
-            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
-        if 'projects_pk' in params:
-            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
         if 'viewpoints_pk' in params:
             path_params['viewpoints_pk'] = params['viewpoints_pk']  # noqa: E501
         if 'id' in params:
             path_params['id'] = params['id']  # noqa: E501
+        if 'projects_pk' in params:
+            path_params['projects_pk'] = params['projects_pk']  # noqa: E501
+        if 'topics_pk' in params:
+            path_params['topics_pk'] = params['topics_pk']  # noqa: E501
 
         query_params = []
 
