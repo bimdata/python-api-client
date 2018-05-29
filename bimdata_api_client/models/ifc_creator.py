@@ -159,6 +159,8 @@ class IfcCreator(object):
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
         if email is not None and len(email) > 254:
             raise ValueError("Invalid value for `email`, length must be less than or equal to `254`")  # noqa: E501
+        if email is not None and len(email) < 1:
+            raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
 

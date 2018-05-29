@@ -89,6 +89,8 @@ class FosUserWrite(object):
         :param company: The company of this FosUserWrite.  # noqa: E501
         :type: str
         """
+        if company is not None and len(company) < 1:
+            raise ValueError("Invalid value for `company`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._company = company
 
@@ -112,6 +114,8 @@ class FosUserWrite(object):
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
+        if email is not None and len(email) < 1:
+            raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
 
@@ -133,6 +137,8 @@ class FosUserWrite(object):
         :param firstname: The firstname of this FosUserWrite.  # noqa: E501
         :type: str
         """
+        if firstname is not None and len(firstname) < 1:
+            raise ValueError("Invalid value for `firstname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._firstname = firstname
 
@@ -154,6 +160,8 @@ class FosUserWrite(object):
         :param lastname: The lastname of this FosUserWrite.  # noqa: E501
         :type: str
         """
+        if lastname is not None and len(lastname) < 1:
+            raise ValueError("Invalid value for `lastname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._lastname = lastname
 

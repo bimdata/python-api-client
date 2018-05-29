@@ -70,6 +70,8 @@ class ElementPropertySetRelation(object):
         """
         if element_uuid is None:
             raise ValueError("Invalid value for `element_uuid`, must not be `None`")  # noqa: E501
+        if element_uuid is not None and len(element_uuid) < 1:
+            raise ValueError("Invalid value for `element_uuid`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._element_uuid = element_uuid
 

@@ -17,6 +17,7 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.space import Space  # noqa: F401,E501
+from bimdata_api_client.models.zone import Zone  # noqa: F401,E501
 
 
 class Zone(object):
@@ -36,7 +37,7 @@ class Zone(object):
         'id': 'int',
         'name': 'str',
         'uuid': 'str',
-        'zones': 'list[str]',
+        'zones': 'list[Zone]',
         'parent_id': 'int',
         'spaces': 'list[Space]',
         'created_at': 'datetime',
@@ -130,6 +131,8 @@ class Zone(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if name is not None and len(name) > 255:
             raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -155,6 +158,8 @@ class Zone(object):
             raise ValueError("Invalid value for `uuid`, must not be `None`")  # noqa: E501
         if uuid is not None and len(uuid) > 255:
             raise ValueError("Invalid value for `uuid`, length must be less than or equal to `255`")  # noqa: E501
+        if uuid is not None and len(uuid) < 1:
+            raise ValueError("Invalid value for `uuid`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._uuid = uuid
 
@@ -164,7 +169,7 @@ class Zone(object):
 
 
         :return: The zones of this Zone.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[Zone]
         """
         return self._zones
 
@@ -174,7 +179,7 @@ class Zone(object):
 
 
         :param zones: The zones of this Zone.  # noqa: E501
-        :type: list[str]
+        :type: list[Zone]
         """
 
         self._zones = zones

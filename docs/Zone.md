@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **uuid** | **str** |  | 
-**zones** | **list[str]** |  | [optional] 
+**zones** | [**list[Zone]**](Zone.md) |  | [optional] 
 **parent_id** | **int** |  | [optional] 
 **spaces** | [**list[Space]**](Space.md) |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

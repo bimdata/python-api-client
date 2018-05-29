@@ -121,6 +121,8 @@ class SignupFosUser(object):
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
         if email is not None and len(email) > 254:
             raise ValueError("Invalid value for `email`, length must be less than or equal to `254`")  # noqa: E501
+        if email is not None and len(email) < 1:
+            raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
 
@@ -165,6 +167,8 @@ class SignupFosUser(object):
         """
         if firstname is None:
             raise ValueError("Invalid value for `firstname`, must not be `None`")  # noqa: E501
+        if firstname is not None and len(firstname) < 1:
+            raise ValueError("Invalid value for `firstname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._firstname = firstname
 
@@ -188,6 +192,8 @@ class SignupFosUser(object):
         """
         if lastname is None:
             raise ValueError("Invalid value for `lastname`, must not be `None`")  # noqa: E501
+        if lastname is not None and len(lastname) < 1:
+            raise ValueError("Invalid value for `lastname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._lastname = lastname
 
@@ -211,6 +217,8 @@ class SignupFosUser(object):
         """
         if password is None:
             raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
+        if password is not None and len(password) < 1:
+            raise ValueError("Invalid value for `password`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._password = password
 

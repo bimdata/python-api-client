@@ -227,6 +227,8 @@ class CheckerResult(object):
         :param error_detail: The error_detail of this CheckerResult.  # noqa: E501
         :type: str
         """
+        if error_detail is not None and len(error_detail) < 1:
+            raise ValueError("Invalid value for `error_detail`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._error_detail = error_detail
 

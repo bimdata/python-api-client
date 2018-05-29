@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from bimdata_api_client.models.rule import Rule  # noqa: F401,E501
 from bimdata_api_client.models.rule_component import RuleComponent  # noqa: F401,E501
 
 
@@ -37,7 +38,7 @@ class Rule(object):
         'name': 'str',
         'condition': 'str',
         'rule_components': 'list[RuleComponent]',
-        'on': 'str'
+        'on': 'Rule'
     }
 
     attribute_map = {
@@ -130,6 +131,8 @@ class Rule(object):
         """
         if condition is None:
             raise ValueError("Invalid value for `condition`, must not be `None`")  # noqa: E501
+        if condition is not None and len(condition) < 1:
+            raise ValueError("Invalid value for `condition`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._condition = condition
 
@@ -160,7 +163,7 @@ class Rule(object):
 
 
         :return: The on of this Rule.  # noqa: E501
-        :rtype: str
+        :rtype: Rule
         """
         return self._on
 
@@ -170,7 +173,7 @@ class Rule(object):
 
 
         :param on: The on of this Rule.  # noqa: E501
-        :type: str
+        :type: Rule
         """
 
         self._on = on

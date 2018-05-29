@@ -132,8 +132,10 @@ class IfcDocument(object):
         """
         if name is None:
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if name is not None and len(name) > 255:
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+        if name is not None and len(name) > 512:
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `512`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -155,8 +157,8 @@ class IfcDocument(object):
         :param file_name: The file_name of this IfcDocument.  # noqa: E501
         :type: str
         """
-        if file_name is not None and len(file_name) > 255:
-            raise ValueError("Invalid value for `file_name`, length must be less than or equal to `255`")  # noqa: E501
+        if file_name is not None and len(file_name) > 512:
+            raise ValueError("Invalid value for `file_name`, length must be less than or equal to `512`")  # noqa: E501
 
         self._file_name = file_name
 

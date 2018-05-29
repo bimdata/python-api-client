@@ -102,7 +102,7 @@ Method | HTTP request | Description
 
 
 # **bulk_delete_ifc_classifications**
-> bulk_delete_ifc_classifications(project_pk, ifc_pk, cloud_pk)
+> bulk_delete_ifc_classifications(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -124,12 +124,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_delete_ifc_classifications(project_pk, ifc_pk, cloud_pk)
+    api_instance.bulk_delete_ifc_classifications(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_delete_ifc_classifications: %s\n" % e)
 ```
@@ -138,9 +138,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -158,7 +158,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_properties**
-> bulk_delete_ifc_properties(project_pk, ifc_pk, cloud_pk)
+> bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -180,12 +180,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_delete_ifc_properties(project_pk, ifc_pk, cloud_pk)
+    api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
@@ -194,9 +194,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -214,7 +214,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_property_definitions**
-> bulk_delete_ifc_property_definitions(project_pk, ifc_pk, cloud_pk)
+> bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -236,12 +236,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_delete_ifc_property_definitions(project_pk, ifc_pk, cloud_pk)
+    api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
@@ -250,9 +250,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -270,7 +270,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_units**
-> bulk_delete_ifc_units(project_pk, ifc_pk, cloud_pk)
+> bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -292,12 +292,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_delete_ifc_units(project_pk, ifc_pk, cloud_pk)
+    api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_delete_ifc_units: %s\n" % e)
 ```
@@ -306,9 +306,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -326,7 +326,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_property_set**
-> bulk_delete_property_set(project_pk, ifc_pk, cloud_pk)
+> bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -348,12 +348,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_delete_property_set(project_pk, ifc_pk, cloud_pk)
+    api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_delete_property_set: %s\n" % e)
 ```
@@ -362,9 +362,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -382,7 +382,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_elements**
-> list[Element] bulk_full_update_elements(project_pk, ifc_pk, cloud_pk, data)
+> list[Element] bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -404,13 +404,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_full_update_elements(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_elements: %s\n" % e)
@@ -420,9 +420,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_ifc_property**
-> list[ModelProperty] bulk_full_update_ifc_property(project_pk, ifc_pk, cloud_pk, data)
+> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -463,13 +463,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_full_update_ifc_property(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_ifc_property: %s\n" % e)
@@ -479,9 +479,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
 ### Return type
@@ -500,7 +500,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_remove_classifications_of_element**
-> bulk_remove_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid)
+> bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
 
 
 
@@ -522,13 +522,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_remove_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid)
+    api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
@@ -537,10 +537,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -558,7 +558,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_remove_elements_from_classification**
-> bulk_remove_elements_from_classification(project_pk, ifc_pk, cloud_pk, ifc_classification_pk)
+> bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
 
 
 
@@ -580,13 +580,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.bulk_remove_elements_from_classification(project_pk, ifc_pk, cloud_pk, ifc_classification_pk)
+    api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
@@ -595,10 +595,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **ifc_classification_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -616,7 +616,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_elements**
-> list[Element] bulk_update_elements(project_pk, ifc_pk, cloud_pk, data)
+> list[Element] bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -638,13 +638,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_update_elements(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_elements: %s\n" % e)
@@ -654,9 +654,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
@@ -675,7 +675,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_ifc_property**
-> list[ModelProperty] bulk_update_ifc_property(project_pk, ifc_pk, cloud_pk, data)
+> list[ModelProperty] bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -697,13 +697,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_update_ifc_property(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_ifc_property: %s\n" % e)
@@ -713,9 +713,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
 ### Return type
@@ -734,7 +734,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification_element_relations**
-> create_classification_element_relations(project_pk, ifc_pk, cloud_pk, data)
+> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -756,13 +756,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
 try:
-    api_instance.create_classification_element_relations(project_pk, ifc_pk, cloud_pk, data)
+    api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -771,9 +771,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[ElementClassificationRelation]**](ElementClassificationRelation.md)|  | 
 
 ### Return type
@@ -792,7 +792,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classifications_of_element**
-> list[Classification] create_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid, data)
+> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 
 
@@ -814,14 +814,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
-    api_response = api_instance.create_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid, data)
+    api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classifications_of_element: %s\n" % e)
@@ -831,10 +831,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[Classification]**](Classification.md)|  | 
 
 ### Return type
@@ -853,7 +853,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element**
-> list[Element] create_element(project_pk, ifc_pk, cloud_pk, data)
+> list[Element] create_element(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -875,13 +875,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.create_element(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_element(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element: %s\n" % e)
@@ -891,9 +891,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
@@ -912,7 +912,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set**
-> create_element_property_set(project_pk, ifc_pk, cloud_pk, element_uuid, data)
+> create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 
 
@@ -934,14 +934,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_instance.create_element_property_set(project_pk, ifc_pk, cloud_pk, element_uuid, data)
+    api_instance.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set: %s\n" % e)
 ```
@@ -950,10 +950,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
@@ -972,7 +972,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property**
-> ModelProperty create_element_property_set_property(project_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid, data)
+> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
 
 
 
@@ -994,15 +994,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.create_element_property_set_property(project_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid, data)
+    api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property: %s\n" % e)
@@ -1012,11 +1012,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
@@ -1035,7 +1035,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition**
-> PropertyDefinition create_element_property_set_property_definition(project_pk, property_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid, data)
+> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
 
 
 
@@ -1057,16 +1057,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition(project_pk, property_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid, data)
+    api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition: %s\n" % e)
@@ -1076,12 +1076,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
  **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
@@ -1100,7 +1100,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition_unit**
-> Unit create_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, element_uuid, data)
+> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
 
 
 
@@ -1122,17 +1122,17 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, element_uuid, data)
+    api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition_unit: %s\n" % e)
@@ -1142,13 +1142,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
  **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
@@ -1167,7 +1167,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_property_definition**
-> list[PropertyDefinition] create_ifc_property_definition(project_pk, ifc_pk, cloud_pk, data)
+> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1189,13 +1189,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
 try:
-    api_response = api_instance.create_ifc_property_definition(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_property_definition: %s\n" % e)
@@ -1205,9 +1205,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[PropertyDefinition]**](PropertyDefinition.md)|  | 
 
 ### Return type
@@ -1226,7 +1226,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_unit**
-> list[Unit] create_ifc_unit(project_pk, ifc_pk, cloud_pk, data)
+> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1248,13 +1248,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Unit()] # list[Unit] | 
 
 try:
-    api_response = api_instance.create_ifc_unit(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_unit: %s\n" % e)
@@ -1264,9 +1264,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[Unit]**](Unit.md)|  | 
 
 ### Return type
@@ -1285,7 +1285,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set**
-> list[PropertySet] create_property_set(project_pk, ifc_pk, cloud_pk, data)
+> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1307,13 +1307,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
 try:
-    api_response = api_instance.create_property_set(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_property_set(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set: %s\n" % e)
@@ -1323,9 +1323,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[PropertySet]**](PropertySet.md)|  | 
 
 ### Return type
@@ -1344,7 +1344,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set_element_relations**
-> create_property_set_element_relations(project_pk, ifc_pk, cloud_pk, data)
+> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1366,13 +1366,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
 try:
-    api_instance.create_property_set_element_relations(project_pk, ifc_pk, cloud_pk, data)
+    api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -1381,9 +1381,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**list[ElementPropertySetRelation]**](ElementPropertySetRelation.md)|  | 
 
 ### Return type
@@ -1402,7 +1402,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_raw_elements**
-> create_raw_elements(project_pk, ifc_pk, cloud_pk, data)
+> create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1424,13 +1424,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Element() # Element | 
 
 try:
-    api_instance.create_raw_elements(project_pk, ifc_pk, cloud_pk, data)
+    api_instance.create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_raw_elements: %s\n" % e)
 ```
@@ -1439,9 +1439,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Element**](Element.md)|  | 
 
 ### Return type
@@ -1460,66 +1460,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_space**
-> Space create_space(project_pk, ifc_pk, cloud_pk, data)
-
-
-
-
-
-### Example
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
-
-try:
-    api_response = api_instance.create_space(project_pk, ifc_pk, cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling IfcApi->create_space: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **data** | [**Space**](Space.md)|  | 
-
-### Return type
-
-[**Space**](Space.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_zone**
-> list[Zone] create_zone(project_pk, ifc_pk, cloud_pk, data)
+> list[Space] create_space(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1541,13 +1482,72 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-data = [bimdata_api_client.Element()] # list[Element] | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.Space()] # list[Space] | 
 
 try:
-    api_response = api_instance.create_zone(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_space(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->create_space: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**list[Space]**](Space.md)|  | 
+
+### Return type
+
+[**list[Space]**](Space.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_zone**
+> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, data)
+
+
+
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors     
+
+### Example
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.Zone()] # list[Zone] | 
+
+try:
+    api_response = api_instance.create_zone(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone: %s\n" % e)
@@ -1557,10 +1557,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **data** | [**list[Element]**](Element.md)|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**list[Zone]**](Zone.md)|  | 
 
 ### Return type
 
@@ -1578,7 +1578,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone_space**
-> ZoneSpace create_zone_space(project_pk, ifc_pk, zone_pk, cloud_pk, data)
+> ZoneSpace create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
 
 
 
@@ -1600,14 +1600,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.create_zone_space(project_pk, ifc_pk, zone_pk, cloud_pk, data)
+    api_response = api_instance.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone_space: %s\n" % e)
@@ -1617,10 +1617,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
  **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
@@ -1639,7 +1639,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_element**
-> delete_element(project_pk, ifc_pk, cloud_pk, uuid)
+> delete_element(cloud_pk, ifc_pk, project_pk, uuid)
 
 
 
@@ -1661,13 +1661,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | 
 
 try:
-    api_instance.delete_element(project_pk, ifc_pk, cloud_pk, uuid)
+    api_instance.delete_element(cloud_pk, ifc_pk, project_pk, uuid)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_element: %s\n" % e)
 ```
@@ -1676,9 +1676,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **uuid** | **str**|  | 
 
 ### Return type
@@ -1697,7 +1697,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc**
-> delete_ifc(project_pk, id, cloud_pk)
+> delete_ifc(cloud_pk, id, project_pk)
 
 
 
@@ -1719,12 +1719,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_ifc(project_pk, id, cloud_pk)
+    api_instance.delete_ifc(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_ifc: %s\n" % e)
 ```
@@ -1733,9 +1733,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1753,7 +1753,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property**
-> delete_ifc_property(project_pk, ifc_pk, cloud_pk, id)
+> delete_ifc_property(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1775,13 +1775,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_ifc_property(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_ifc_property(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_ifc_property: %s\n" % e)
 ```
@@ -1790,10 +1790,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1811,7 +1811,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property_definition**
-> delete_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id)
+> delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1833,13 +1833,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_ifc_property_definition: %s\n" % e)
 ```
@@ -1848,10 +1848,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1869,7 +1869,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_unit**
-> delete_ifc_unit(project_pk, ifc_pk, cloud_pk, id)
+> delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1891,13 +1891,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_ifc_unit(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_ifc_unit: %s\n" % e)
 ```
@@ -1906,10 +1906,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1927,7 +1927,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_property_set**
-> delete_property_set(project_pk, ifc_pk, cloud_pk, id)
+> delete_property_set(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1949,13 +1949,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_property_set(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_property_set(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_property_set: %s\n" % e)
 ```
@@ -1964,10 +1964,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1985,7 +1985,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_space**
-> delete_space(project_pk, ifc_pk, cloud_pk, id)
+> delete_space(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -2007,13 +2007,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_space(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_space(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_space: %s\n" % e)
 ```
@@ -2022,10 +2022,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -2043,7 +2043,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone**
-> delete_zone(project_pk, ifc_pk, cloud_pk, id)
+> delete_zone(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -2065,13 +2065,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_zone(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_zone(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_zone: %s\n" % e)
 ```
@@ -2080,10 +2080,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -2101,7 +2101,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone_space**
-> delete_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk)
+> delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
 
 
 
@@ -2123,14 +2123,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 
 try:
-    api_instance.delete_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk)
+    api_instance.delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->delete_zone_space: %s\n" % e)
 ```
@@ -2139,11 +2139,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
 
 ### Return type
 
@@ -2161,7 +2161,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_element**
-> Element full_update_element(project_pk, ifc_pk, cloud_pk, uuid, data)
+> Element full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
 
 
 
@@ -2183,14 +2183,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | 
 data = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.full_update_element(project_pk, ifc_pk, cloud_pk, uuid, data)
+    api_response = api_instance.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_element: %s\n" % e)
@@ -2200,9 +2200,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **uuid** | **str**|  | 
  **data** | [**Element**](Element.md)|  | 
 
@@ -2222,7 +2222,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc**
-> Ifc full_update_ifc(project_pk, id, cloud_pk, data)
+> Ifc full_update_ifc(cloud_pk, id, project_pk, data)
 
 
 
@@ -2244,13 +2244,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.full_update_ifc(project_pk, id, cloud_pk, data)
+    api_response = api_instance.full_update_ifc(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc: %s\n" % e)
@@ -2260,9 +2260,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
@@ -2281,7 +2281,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property**
-> ModelProperty full_update_ifc_property(project_pk, ifc_pk, cloud_pk, id, data)
+> ModelProperty full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2303,14 +2303,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.full_update_ifc_property(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property: %s\n" % e)
@@ -2320,10 +2320,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
@@ -2342,7 +2342,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property_definition**
-> PropertyDefinition full_update_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id, data)
+> PropertyDefinition full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2364,14 +2364,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.full_update_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property_definition: %s\n" % e)
@@ -2381,10 +2381,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
@@ -2403,7 +2403,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_unit**
-> Unit full_update_ifc_unit(project_pk, ifc_pk, cloud_pk, id, data)
+> Unit full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2425,14 +2425,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.full_update_ifc_unit(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_unit: %s\n" % e)
@@ -2442,10 +2442,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
@@ -2464,7 +2464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_property_set**
-> PropertySet full_update_property_set(project_pk, ifc_pk, cloud_pk, id, data)
+> PropertySet full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2486,14 +2486,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.full_update_property_set(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_property_set: %s\n" % e)
@@ -2503,10 +2503,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
@@ -2525,7 +2525,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_space**
-> Space full_update_space(project_pk, ifc_pk, cloud_pk, id, data)
+> Space full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2547,14 +2547,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.full_update_space(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_space: %s\n" % e)
@@ -2564,10 +2564,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Space**](Space.md)|  | 
 
 ### Return type
@@ -2586,7 +2586,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone**
-> Zone full_update_zone(project_pk, ifc_pk, cloud_pk, id, data)
+> Zone full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -2608,14 +2608,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.full_update_zone(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone: %s\n" % e)
@@ -2625,10 +2625,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Zone**](Zone.md)|  | 
 
 ### Return type
@@ -2647,7 +2647,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone_space**
-> ZoneSpace full_update_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk, data)
+> ZoneSpace full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
 
 
 
@@ -2669,15 +2669,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.full_update_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk, data)
+    api_response = api_instance.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone_space: %s\n" % e)
@@ -2687,11 +2687,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
  **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
@@ -2710,7 +2710,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classifications_of_element**
-> list[Classification] get_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid)
+> list[Classification] get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
 
 
 
@@ -2732,13 +2732,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_classifications_of_element(project_pk, ifc_pk, cloud_pk, element_uuid)
+    api_response = api_instance.get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_classifications_of_element: %s\n" % e)
@@ -2748,10 +2748,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -2769,7 +2769,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element**
-> Element get_element(project_pk, ifc_pk, cloud_pk, uuid)
+> Element get_element(cloud_pk, ifc_pk, project_pk, uuid)
 
 
 
@@ -2791,13 +2791,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element(project_pk, ifc_pk, cloud_pk, uuid)
+    api_response = api_instance.get_element(cloud_pk, ifc_pk, project_pk, uuid)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element: %s\n" % e)
@@ -2807,9 +2807,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **uuid** | **str**|  | 
 
 ### Return type
@@ -2828,7 +2828,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set**
-> PropertySet get_element_property_set(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+> PropertySet get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 
 
 
@@ -2850,14 +2850,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+    api_response = api_instance.get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set: %s\n" % e)
@@ -2867,11 +2867,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -2889,7 +2889,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_properties**
-> list[ModelProperty] get_element_property_set_properties(project_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> list[ModelProperty] get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
 
 
 
@@ -2911,14 +2911,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_properties(project_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_response = api_instance.get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_properties: %s\n" % e)
@@ -2928,11 +2928,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
 
 ### Return type
 
@@ -2950,7 +2950,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property**
-> ModelProperty get_element_property_set_property(project_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> ModelProperty get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
 
 
 
@@ -2972,15 +2972,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_property(project_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_response = api_instance.get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_property: %s\n" % e)
@@ -2990,12 +2990,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -3013,7 +3013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition**
-> PropertyDefinition get_element_property_set_property_definition(project_pk, property_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> PropertyDefinition get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
 
 
 
@@ -3035,16 +3035,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_property_definition(project_pk, property_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_response = api_instance.get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_property_definition: %s\n" % e)
@@ -3054,13 +3054,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -3078,7 +3078,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_unit**
-> Unit get_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, id, element_uuid)
+> Unit get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
 
 
 
@@ -3100,17 +3100,17 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-id = 'id_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, id, element_uuid)
+    api_response = api_instance.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_property_definition_unit: %s\n" % e)
@@ -3120,14 +3120,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **id** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -3145,7 +3145,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_units**
-> list[Unit] get_element_property_set_property_definition_units(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, element_uuid)
+> list[Unit] get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
 
 
 
@@ -3167,16 +3167,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_property_definition_units(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_response = api_instance.get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_property_definition_units: %s\n" % e)
@@ -3186,13 +3186,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -3210,7 +3210,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definitions**
-> list[PropertyDefinition] get_element_property_set_property_definitions(project_pk, property_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> list[PropertyDefinition] get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
 
 
 
@@ -3232,15 +3232,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_set_property_definitions(project_pk, property_pk, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_response = api_instance.get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_set_property_definitions: %s\n" % e)
@@ -3250,12 +3250,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -3273,7 +3273,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_sets**
-> list[PropertySet] get_element_property_sets(project_pk, ifc_pk, cloud_pk, element_uuid)
+> list[PropertySet] get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk)
 
 
 
@@ -3295,13 +3295,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_element_property_sets(project_pk, ifc_pk, cloud_pk, element_uuid)
+    api_response = api_instance.get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_element_property_sets: %s\n" % e)
@@ -3311,10 +3311,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3332,7 +3332,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements**
-> list[Element] get_elements(project_pk, ifc_pk, cloud_pk)
+> list[Element] get_elements(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -3354,12 +3354,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_elements(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_elements(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_elements: %s\n" % e)
@@ -3369,9 +3369,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3389,7 +3389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements_from_classification**
-> list[Element] get_elements_from_classification(project_pk, ifc_pk, cloud_pk, ifc_classification_pk)
+> list[Element] get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
 
 
 
@@ -3411,13 +3411,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_elements_from_classification(project_pk, ifc_pk, cloud_pk, ifc_classification_pk)
+    api_response = api_instance.get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_elements_from_classification: %s\n" % e)
@@ -3427,10 +3427,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **ifc_classification_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3448,7 +3448,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc**
-> Ifc get_ifc(project_pk, id, cloud_pk)
+> Ifc get_ifc(cloud_pk, id, project_pk)
 
 
 
@@ -3470,12 +3470,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc(project_pk, id, cloud_pk)
+    api_response = api_instance.get_ifc(cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc: %s\n" % e)
@@ -3485,9 +3485,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3505,7 +3505,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_bvh**
-> get_ifc_bvh(project_pk, id, cloud_pk)
+> get_ifc_bvh(cloud_pk, id, project_pk)
 
 
 
@@ -3527,12 +3527,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_ifc_bvh(project_pk, id, cloud_pk)
+    api_instance.get_ifc_bvh(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_bvh: %s\n" % e)
 ```
@@ -3541,9 +3541,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3561,7 +3561,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_classifications**
-> list[Classification] get_ifc_classifications(project_pk, ifc_pk, cloud_pk)
+> list[Classification] get_ifc_classifications(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -3583,12 +3583,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_classifications(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_ifc_classifications(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_classifications: %s\n" % e)
@@ -3598,9 +3598,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3618,7 +3618,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_gltf**
-> get_ifc_gltf(project_pk, id, cloud_pk)
+> get_ifc_gltf(cloud_pk, id, project_pk)
 
 
 
@@ -3640,12 +3640,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_ifc_gltf(project_pk, id, cloud_pk)
+    api_instance.get_ifc_gltf(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_gltf: %s\n" % e)
 ```
@@ -3654,9 +3654,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3674,7 +3674,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_map**
-> get_ifc_map(project_pk, id, cloud_pk)
+> get_ifc_map(cloud_pk, id, project_pk)
 
 
 
@@ -3696,12 +3696,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_ifc_map(project_pk, id, cloud_pk)
+    api_instance.get_ifc_map(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_map: %s\n" % e)
 ```
@@ -3710,9 +3710,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3730,7 +3730,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_properties**
-> list[ModelProperty] get_ifc_properties(project_pk, ifc_pk, cloud_pk)
+> list[ModelProperty] get_ifc_properties(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -3752,12 +3752,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_properties(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_ifc_properties(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_properties: %s\n" % e)
@@ -3767,9 +3767,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3787,7 +3787,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property**
-> ModelProperty get_ifc_property(project_pk, ifc_pk, cloud_pk, id)
+> ModelProperty get_ifc_property(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -3809,13 +3809,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_property(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_ifc_property(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_property: %s\n" % e)
@@ -3825,10 +3825,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3846,7 +3846,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definition**
-> PropertyDefinition get_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id)
+> PropertyDefinition get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -3868,13 +3868,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_property_definition: %s\n" % e)
@@ -3884,10 +3884,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3905,7 +3905,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definitions**
-> list[PropertyDefinition] get_ifc_property_definitions(project_pk, ifc_pk, cloud_pk)
+> list[PropertyDefinition] get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -3927,12 +3927,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_property_definitions(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_property_definitions: %s\n" % e)
@@ -3942,9 +3942,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -3962,7 +3962,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_structure**
-> get_ifc_structure(project_pk, id, cloud_pk)
+> get_ifc_structure(cloud_pk, id, project_pk)
 
 
 
@@ -3984,12 +3984,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_ifc_structure(project_pk, id, cloud_pk)
+    api_instance.get_ifc_structure(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_structure: %s\n" % e)
 ```
@@ -3998,9 +3998,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4018,7 +4018,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_systems**
-> get_ifc_systems(project_pk, id, cloud_pk)
+> get_ifc_systems(cloud_pk, id, project_pk)
 
 
 
@@ -4040,12 +4040,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_ifc_systems(project_pk, id, cloud_pk)
+    api_instance.get_ifc_systems(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_systems: %s\n" % e)
 ```
@@ -4054,9 +4054,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4074,7 +4074,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_unit**
-> Unit get_ifc_unit(project_pk, ifc_pk, cloud_pk, id)
+> Unit get_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -4096,13 +4096,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_unit(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_unit: %s\n" % e)
@@ -4112,10 +4112,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4133,7 +4133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_units**
-> list[Unit] get_ifc_units(project_pk, ifc_pk, cloud_pk)
+> list[Unit] get_ifc_units(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -4155,12 +4155,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifc_units(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_ifc_units(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifc_units: %s\n" % e)
@@ -4170,9 +4170,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4190,7 +4190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
-> list[Ifc] get_ifcs(project_pk, cloud_pk)
+> list[Ifc] get_ifcs(cloud_pk, project_pk)
 
 
 
@@ -4212,11 +4212,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ifcs(project_pk, cloud_pk)
+    api_response = api_instance.get_ifcs(cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -4226,8 +4226,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4245,7 +4245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_set**
-> PropertySet get_property_set(project_pk, ifc_pk, cloud_pk, id)
+> PropertySet get_property_set(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -4267,13 +4267,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_property_set(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_property_set(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_property_set: %s\n" % e)
@@ -4283,10 +4283,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4304,7 +4304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_sets**
-> list[PropertySet] get_property_sets(project_pk, ifc_pk, cloud_pk)
+> list[PropertySet] get_property_sets(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -4326,12 +4326,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_property_sets(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_property_sets(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_property_sets: %s\n" % e)
@@ -4341,9 +4341,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4361,7 +4361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_raw_elements**
-> get_raw_elements(project_pk, ifc_pk, cloud_pk)
+> get_raw_elements(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -4383,12 +4383,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.get_raw_elements(project_pk, ifc_pk, cloud_pk)
+    api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->get_raw_elements: %s\n" % e)
 ```
@@ -4397,9 +4397,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4417,7 +4417,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_space**
-> Space get_space(project_pk, ifc_pk, cloud_pk, id)
+> Space get_space(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -4439,13 +4439,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_space(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_space(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_space: %s\n" % e)
@@ -4455,10 +4455,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4476,7 +4476,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_spaces**
-> list[Space] get_spaces(project_pk, ifc_pk, cloud_pk)
+> list[Space] get_spaces(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -4498,12 +4498,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_spaces(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_spaces(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_spaces: %s\n" % e)
@@ -4513,9 +4513,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4533,7 +4533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone**
-> Zone get_zone(project_pk, ifc_pk, cloud_pk, id)
+> Zone get_zone(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -4555,13 +4555,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_zone(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_zone(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_zone: %s\n" % e)
@@ -4571,10 +4571,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4592,7 +4592,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_space**
-> ZoneSpace get_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk)
+> ZoneSpace get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
 
 
 
@@ -4614,14 +4614,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk)
+    api_response = api_instance.get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_zone_space: %s\n" % e)
@@ -4631,11 +4631,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
 
 ### Return type
 
@@ -4653,7 +4653,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_spaces**
-> list[ZoneSpace] get_zone_spaces(project_pk, ifc_pk, zone_pk, cloud_pk)
+> list[ZoneSpace] get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk)
 
 
 
@@ -4675,13 +4675,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_zone_spaces(project_pk, ifc_pk, zone_pk, cloud_pk)
+    api_response = api_instance.get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_zone_spaces: %s\n" % e)
@@ -4691,10 +4691,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
 
 ### Return type
 
@@ -4712,7 +4712,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zones**
-> list[Zone] get_zones(project_pk, ifc_pk, cloud_pk)
+> list[Zone] get_zones(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -4734,12 +4734,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_zones(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_zones: %s\n" % e)
@@ -4749,9 +4749,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4769,7 +4769,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_classification_of_element**
-> remove_classification_of_element(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+> remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 
 
 
@@ -4791,14 +4791,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.remove_classification_of_element(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+    api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_classification_of_element: %s\n" % e)
 ```
@@ -4807,11 +4807,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4829,7 +4829,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set**
-> remove_element_property_set(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+> remove_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 
 
 
@@ -4851,14 +4851,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.remove_element_property_set(project_pk, id, ifc_pk, cloud_pk, element_uuid)
+    api_instance.remove_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_element_property_set: %s\n" % e)
 ```
@@ -4867,11 +4867,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -4889,7 +4889,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property**
-> remove_element_property_set_property(project_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
 
 
 
@@ -4911,15 +4911,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_instance.remove_element_property_set_property(project_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_element_property_set_property: %s\n" % e)
 ```
@@ -4928,12 +4928,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -4951,7 +4951,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition**
-> remove_element_property_set_property_definition(project_pk, property_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+> remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
 
 
 
@@ -4973,16 +4973,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_instance.remove_element_property_set_property_definition(project_pk, property_pk, id, ifc_pk, cloud_pk, propertyset_pk, element_uuid)
+    api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_element_property_set_property_definition: %s\n" % e)
 ```
@@ -4991,13 +4991,13 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -5015,7 +5015,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition_unit**
-> remove_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, id, element_uuid)
+> remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
 
 
 
@@ -5037,17 +5037,17 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-id = 'id_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
 
 try:
-    api_instance.remove_element_property_set_property_definition_unit(project_pk, property_pk, ifc_pk, propertydefinition_pk, cloud_pk, propertyset_pk, id, element_uuid)
+    api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_element_property_set_property_definition_unit: %s\n" % e)
 ```
@@ -5056,14 +5056,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **id** | **str**|  | 
- **element_uuid** | **str**|  | 
 
 ### Return type
 
@@ -5081,7 +5081,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_elements_from_classification**
-> remove_elements_from_classification(project_pk, ifc_classification_pk, ifc_pk, cloud_pk, uuid)
+> remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid)
 
 
 
@@ -5103,14 +5103,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | 
 
 try:
-    api_instance.remove_elements_from_classification(project_pk, ifc_classification_pk, ifc_pk, cloud_pk, uuid)
+    api_instance.remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid)
 except ApiException as e:
     print("Exception when calling IfcApi->remove_elements_from_classification: %s\n" % e)
 ```
@@ -5119,10 +5119,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **ifc_classification_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **uuid** | **str**|  | 
 
 ### Return type
@@ -5141,7 +5141,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_element**
-> Element update_element(project_pk, ifc_pk, cloud_pk, uuid, data)
+> Element update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
 
 
 
@@ -5163,14 +5163,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | 
 data = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.update_element(project_pk, ifc_pk, cloud_pk, uuid, data)
+    api_response = api_instance.update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_element: %s\n" % e)
@@ -5180,9 +5180,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **uuid** | **str**|  | 
  **data** | [**Element**](Element.md)|  | 
 
@@ -5202,7 +5202,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc**
-> Ifc update_ifc(project_pk, id, cloud_pk, data)
+> Ifc update_ifc(cloud_pk, id, project_pk, data)
 
 
 
@@ -5224,13 +5224,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.update_ifc(project_pk, id, cloud_pk, data)
+    api_response = api_instance.update_ifc(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc: %s\n" % e)
@@ -5240,9 +5240,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
@@ -5261,7 +5261,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_files**
-> IfcFiles update_ifc_files(project_pk, id, cloud_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
+> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
 
 
 
@@ -5283,9 +5283,9 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 structure_file = '/path/to/file.txt' # file |  (optional)
 systems_file = '/path/to/file.txt' # file |  (optional)
 map_file = '/path/to/file.txt' # file |  (optional)
@@ -5293,7 +5293,7 @@ gltf_file = '/path/to/file.txt' # file |  (optional)
 bvh_tree_file = '/path/to/file.txt' # file |  (optional)
 
 try:
-    api_response = api_instance.update_ifc_files(project_pk, id, cloud_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -5303,9 +5303,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **structure_file** | **file**|  | [optional] 
  **systems_file** | **file**|  | [optional] 
  **map_file** | **file**|  | [optional] 
@@ -5328,7 +5328,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property**
-> ModelProperty update_ifc_property(project_pk, ifc_pk, cloud_pk, id, data)
+> ModelProperty update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5350,14 +5350,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.update_ifc_property(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property: %s\n" % e)
@@ -5367,10 +5367,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
@@ -5389,7 +5389,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property_definition**
-> PropertyDefinition update_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id, data)
+> PropertyDefinition update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5411,14 +5411,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.update_ifc_property_definition(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property_definition: %s\n" % e)
@@ -5428,10 +5428,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
@@ -5450,7 +5450,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_unit**
-> Unit update_ifc_unit(project_pk, ifc_pk, cloud_pk, id, data)
+> Unit update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5472,14 +5472,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.update_ifc_unit(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_unit: %s\n" % e)
@@ -5489,10 +5489,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
@@ -5511,7 +5511,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_property_set**
-> PropertySet update_property_set(project_pk, ifc_pk, cloud_pk, id, data)
+> PropertySet update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5533,14 +5533,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.update_property_set(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_property_set: %s\n" % e)
@@ -5550,10 +5550,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
@@ -5572,7 +5572,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_space**
-> Space update_space(project_pk, ifc_pk, cloud_pk, id, data)
+> Space update_space(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5594,14 +5594,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.update_space(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_space(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_space: %s\n" % e)
@@ -5611,10 +5611,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Space**](Space.md)|  | 
 
 ### Return type
@@ -5633,7 +5633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone**
-> Zone update_zone(project_pk, ifc_pk, cloud_pk, id, data)
+> Zone update_zone(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -5655,14 +5655,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.update_zone(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_zone(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone: %s\n" % e)
@@ -5672,10 +5672,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Zone**](Zone.md)|  | 
 
 ### Return type
@@ -5694,7 +5694,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone_space**
-> ZoneSpace update_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk, data)
+> ZoneSpace update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
 
 
 
@@ -5716,15 +5716,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-zone_pk = 'zone_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.update_zone_space(project_pk, zone_pk, id, ifc_pk, cloud_pk, data)
+    api_response = api_instance.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone_space: %s\n" % e)
@@ -5734,11 +5734,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **zone_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **zone_pk** | **str**|  | 
  **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type

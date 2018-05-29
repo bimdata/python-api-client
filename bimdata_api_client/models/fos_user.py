@@ -126,6 +126,8 @@ class FosUser(object):
         :param email: The email of this FosUser.  # noqa: E501
         :type: str
         """
+        if email is not None and len(email) < 1:
+            raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
 
@@ -147,6 +149,8 @@ class FosUser(object):
         :param company: The company of this FosUser.  # noqa: E501
         :type: str
         """
+        if company is not None and len(company) < 1:
+            raise ValueError("Invalid value for `company`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._company = company
 
@@ -189,6 +193,8 @@ class FosUser(object):
         :param firstname: The firstname of this FosUser.  # noqa: E501
         :type: str
         """
+        if firstname is not None and len(firstname) < 1:
+            raise ValueError("Invalid value for `firstname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._firstname = firstname
 
@@ -210,6 +216,8 @@ class FosUser(object):
         :param lastname: The lastname of this FosUser.  # noqa: E501
         :type: str
         """
+        if lastname is not None and len(lastname) < 1:
+            raise ValueError("Invalid value for `lastname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._lastname = lastname
 

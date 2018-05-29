@@ -68,6 +68,8 @@ class Feature(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if name is not None and len(name) > 127:
             raise ValueError("Invalid value for `name`, length must be less than or equal to `127`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 

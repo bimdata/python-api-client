@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from bimdata_api_client.models.folder import Folder  # noqa: F401,E501
 from bimdata_api_client.models.fos_user import FosUser  # noqa: F401,E501
 
 
@@ -38,7 +39,7 @@ class Folder(object):
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'children': 'list[str]',
+        'children': 'list[Folder]',
         'created_by': 'FosUser'
     }
 
@@ -142,6 +143,8 @@ class Folder(object):
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if name is not None and len(name) > 255:
             raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -193,7 +196,7 @@ class Folder(object):
 
 
         :return: The children of this Folder.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[Folder]
         """
         return self._children
 
@@ -203,7 +206,7 @@ class Folder(object):
 
 
         :param children: The children of this Folder.  # noqa: E501
-        :type: list[str]
+        :type: list[Folder]
         """
 
         self._children = children

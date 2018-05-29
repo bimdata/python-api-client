@@ -44,7 +44,7 @@ Method | HTTP request | Description
 
 
 # **create_checker**
-> IfcChecker create_checker(project_pk, ifc_pk, cloud_pk, data)
+> IfcChecker create_checker(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -66,13 +66,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
 try:
-    api_response = api_instance.create_checker(project_pk, ifc_pk, cloud_pk, data)
+    api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_checker: %s\n" % e)
@@ -82,9 +82,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
 ### Return type
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_checker_result**
-> CheckerResult create_checker_result(project_pk, ifc_pk, checker_pk, cloud_pk, data)
+> CheckerResult create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -125,14 +125,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
 try:
-    api_response = api_instance.create_checker_result(project_pk, ifc_pk, checker_pk, cloud_pk, data)
+    api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_checker_result: %s\n" % e)
@@ -142,10 +142,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
 
 ### Return type
@@ -164,7 +164,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_checkplan**
-> CheckPlan create_checkplan(project_pk, cloud_pk, data)
+> CheckPlan create_checkplan(cloud_pk, project_pk, data)
 
 
 
@@ -186,12 +186,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
 try:
-    api_response = api_instance.create_checkplan(project_pk, cloud_pk, data)
+    api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_checkplan: %s\n" % e)
@@ -201,8 +201,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckPlan**](CheckPlan.md)|  | 
 
 ### Return type
@@ -221,7 +221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_rule**
-> Rule create_rule(project_pk, ruleset_pk, cloud_pk, check_plan_pk, data)
+> Rule create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
 
 
 
@@ -243,14 +243,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-check_plan_pk = 'check_plan_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
 try:
-    api_response = api_instance.create_rule(project_pk, ruleset_pk, cloud_pk, check_plan_pk, data)
+    api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_rule: %s\n" % e)
@@ -260,10 +260,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **check_plan_pk** | **str**|  | 
  **data** | [**Rule**](Rule.md)|  | 
 
 ### Return type
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_rule_component**
-> RuleComponent create_rule_component(project_pk, check_plan_pk, ruleset_pk, rule_pk, cloud_pk, data)
+> RuleComponent create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
 
 
 
@@ -304,15 +304,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
 try:
-    api_response = api_instance.create_rule_component(project_pk, check_plan_pk, ruleset_pk, rule_pk, cloud_pk, data)
+    api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_rule_component: %s\n" % e)
@@ -322,11 +322,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
  **data** | [**RuleComponent**](RuleComponent.md)|  | 
 
 ### Return type
@@ -345,7 +345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ruleset**
-> Ruleset create_ruleset(project_pk, cloud_pk, check_plan_pk, data)
+> Ruleset create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
 
 
 
@@ -367,13 +367,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
 try:
-    api_response = api_instance.create_ruleset(project_pk, cloud_pk, check_plan_pk, data)
+    api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->create_ruleset: %s\n" % e)
@@ -383,9 +383,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Ruleset**](Ruleset.md)|  | 
 
 ### Return type
@@ -404,7 +404,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checker**
-> delete_checker(project_pk, ifc_pk, cloud_pk, id)
+> delete_checker(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -426,13 +426,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_checker(project_pk, ifc_pk, cloud_pk, id)
+    api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_checker: %s\n" % e)
 ```
@@ -441,10 +441,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -462,7 +462,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checker_result**
-> delete_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk)
+> delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -484,14 +484,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk)
+    api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_checker_result: %s\n" % e)
 ```
@@ -500,11 +500,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -522,7 +522,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checkplan**
-> delete_checkplan(project_pk, id, cloud_pk)
+> delete_checkplan(cloud_pk, id, project_pk)
 
 
 
@@ -544,12 +544,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_checkplan(project_pk, id, cloud_pk)
+    api_instance.delete_checkplan(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_checkplan: %s\n" % e)
 ```
@@ -558,9 +558,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -578,7 +578,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_rule**
-> delete_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk)
+> delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 
 
 
@@ -600,14 +600,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 
 try:
-    api_instance.delete_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk)
+    api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_rule: %s\n" % e)
 ```
@@ -616,11 +616,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
 
 ### Return type
 
@@ -638,7 +638,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_rule_component**
-> delete_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk)
+> delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 
 
 
@@ -660,15 +660,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 
 try:
-    api_instance.delete_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk)
+    api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_rule_component: %s\n" % e)
 ```
@@ -677,12 +677,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
 
 ### Return type
 
@@ -700,7 +700,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ruleset**
-> delete_ruleset(project_pk, id, cloud_pk, check_plan_pk)
+> delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 
 
 
@@ -722,13 +722,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_instance.delete_ruleset(project_pk, id, cloud_pk, check_plan_pk)
+    api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling CheckplanApi->delete_ruleset: %s\n" % e)
 ```
@@ -737,10 +737,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -758,7 +758,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_checker**
-> IfcChecker full_update_checker(project_pk, ifc_pk, cloud_pk, id, data)
+> IfcChecker full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -780,14 +780,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
 try:
-    api_response = api_instance.full_update_checker(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_checker: %s\n" % e)
@@ -797,10 +797,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
 ### Return type
@@ -819,7 +819,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_checker_result**
-> CheckerResult full_update_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk, data)
+> CheckerResult full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -841,15 +841,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
 try:
-    api_response = api_instance.full_update_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk, data)
+    api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_checker_result: %s\n" % e)
@@ -859,11 +859,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
 
 ### Return type
@@ -882,7 +882,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_checkplan**
-> CheckPlan full_update_checkplan(project_pk, id, cloud_pk, data)
+> CheckPlan full_update_checkplan(cloud_pk, id, project_pk, data)
 
 
 
@@ -904,13 +904,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
 try:
-    api_response = api_instance.full_update_checkplan(project_pk, id, cloud_pk, data)
+    api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_checkplan: %s\n" % e)
@@ -920,9 +920,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckPlan**](CheckPlan.md)|  | 
 
 ### Return type
@@ -941,7 +941,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_rule**
-> Rule full_update_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk, data)
+> Rule full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
 
 
 
@@ -963,15 +963,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
 try:
-    api_response = api_instance.full_update_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk, data)
+    api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_rule: %s\n" % e)
@@ -981,11 +981,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
  **data** | [**Rule**](Rule.md)|  | 
 
 ### Return type
@@ -1004,7 +1004,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_rule_component**
-> RuleComponent full_update_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk, data)
+> RuleComponent full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
 
 
 
@@ -1026,16 +1026,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
 try:
-    api_response = api_instance.full_update_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk, data)
+    api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_rule_component: %s\n" % e)
@@ -1045,12 +1045,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
  **data** | [**RuleComponent**](RuleComponent.md)|  | 
 
 ### Return type
@@ -1069,7 +1069,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ruleset**
-> Ruleset full_update_ruleset(project_pk, id, cloud_pk, check_plan_pk, data)
+> Ruleset full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
 
 
 
@@ -1091,14 +1091,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
 try:
-    api_response = api_instance.full_update_ruleset(project_pk, id, cloud_pk, check_plan_pk, data)
+    api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->full_update_ruleset: %s\n" % e)
@@ -1108,10 +1108,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Ruleset**](Ruleset.md)|  | 
 
 ### Return type
@@ -1130,7 +1130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker**
-> IfcChecker get_checker(project_pk, ifc_pk, cloud_pk, id)
+> IfcChecker get_checker(cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1152,13 +1152,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checker(project_pk, ifc_pk, cloud_pk, id)
+    api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checker: %s\n" % e)
@@ -1168,10 +1168,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1189,7 +1189,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker_result**
-> CheckerResult get_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk)
+> CheckerResult get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 
 
 
@@ -1211,14 +1211,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk)
+    api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checker_result: %s\n" % e)
@@ -1228,11 +1228,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1250,7 +1250,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker_results**
-> list[CheckerResult] get_checker_results(project_pk, ifc_pk, checker_pk, cloud_pk)
+> list[CheckerResult] get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -1272,13 +1272,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checker_results(project_pk, ifc_pk, checker_pk, cloud_pk)
+    api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checker_results: %s\n" % e)
@@ -1288,10 +1288,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1309,7 +1309,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checkers**
-> list[IfcChecker] get_checkers(project_pk, ifc_pk, cloud_pk)
+> list[IfcChecker] get_checkers(cloud_pk, ifc_pk, project_pk)
 
 
 
@@ -1331,12 +1331,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checkers(project_pk, ifc_pk, cloud_pk)
+    api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checkers: %s\n" % e)
@@ -1346,9 +1346,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1366,7 +1366,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checkplan**
-> CheckPlan get_checkplan(project_pk, id, cloud_pk)
+> CheckPlan get_checkplan(cloud_pk, id, project_pk)
 
 
 
@@ -1388,12 +1388,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checkplan(project_pk, id, cloud_pk)
+    api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checkplan: %s\n" % e)
@@ -1403,9 +1403,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1423,7 +1423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checkplans**
-> list[CheckPlan] get_checkplans(project_pk, cloud_pk)
+> list[CheckPlan] get_checkplans(cloud_pk, project_pk)
 
 
 
@@ -1445,11 +1445,11 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_checkplans(project_pk, cloud_pk)
+    api_response = api_instance.get_checkplans(cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_checkplans: %s\n" % e)
@@ -1459,8 +1459,8 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1478,7 +1478,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_rule**
-> Rule get_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk)
+> Rule get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 
 
 
@@ -1500,14 +1500,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk)
+    api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_rule: %s\n" % e)
@@ -1517,11 +1517,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
 
 ### Return type
 
@@ -1539,7 +1539,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_rule_component**
-> RuleComponent get_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk)
+> RuleComponent get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 
 
 
@@ -1561,15 +1561,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk)
+    api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_rule_component: %s\n" % e)
@@ -1579,12 +1579,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
 
 ### Return type
 
@@ -1602,7 +1602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_rule_components**
-> list[RuleComponent] get_rule_components(project_pk, check_plan_pk, ruleset_pk, rule_pk, cloud_pk)
+> list[RuleComponent] get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
 
 
 
@@ -1624,14 +1624,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_rule_components(project_pk, check_plan_pk, ruleset_pk, rule_pk, cloud_pk)
+    api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_rule_components: %s\n" % e)
@@ -1641,11 +1641,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
 
 ### Return type
 
@@ -1663,7 +1663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_rules**
-> list[Rule] get_rules(project_pk, ruleset_pk, cloud_pk, check_plan_pk)
+> list[Rule] get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
 
 
 
@@ -1685,13 +1685,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-check_plan_pk = 'check_plan_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_rules(project_pk, ruleset_pk, cloud_pk, check_plan_pk)
+    api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_rules: %s\n" % e)
@@ -1701,10 +1701,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **check_plan_pk** | **str**|  | 
 
 ### Return type
 
@@ -1722,7 +1722,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ruleset**
-> Ruleset get_ruleset(project_pk, id, cloud_pk, check_plan_pk)
+> Ruleset get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 
 
 
@@ -1744,13 +1744,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_ruleset(project_pk, id, cloud_pk, check_plan_pk)
+    api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_ruleset: %s\n" % e)
@@ -1760,10 +1760,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1781,7 +1781,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_rulesets**
-> list[Ruleset] get_rulesets(project_pk, cloud_pk, check_plan_pk)
+> list[Ruleset] get_rulesets(check_plan_pk, cloud_pk, project_pk)
 
 
 
@@ -1803,12 +1803,12 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_rulesets(project_pk, cloud_pk, check_plan_pk)
+    api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->get_rulesets: %s\n" % e)
@@ -1818,9 +1818,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
 
 ### Return type
 
@@ -1838,7 +1838,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **launch_new_check**
-> launch_new_check(project_pk, ifc_pk, cloud_pk, id, data)
+> launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -1860,14 +1860,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
 try:
-    api_instance.launch_new_check(project_pk, ifc_pk, cloud_pk, id, data)
+    api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling CheckplanApi->launch_new_check: %s\n" % e)
 ```
@@ -1876,10 +1876,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
 ### Return type
@@ -1898,7 +1898,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checker**
-> IfcChecker update_checker(project_pk, ifc_pk, cloud_pk, id, data)
+> IfcChecker update_checker(cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -1920,14 +1920,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
 try:
-    api_response = api_instance.update_checker(project_pk, ifc_pk, cloud_pk, id, data)
+    api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_checker: %s\n" % e)
@@ -1937,10 +1937,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
 ### Return type
@@ -1959,7 +1959,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checker_result**
-> CheckerResult update_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk, data)
+> CheckerResult update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
 
 
 
@@ -1981,15 +1981,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
 try:
-    api_response = api_instance.update_checker_result(project_pk, id, ifc_pk, checker_pk, cloud_pk, data)
+    api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_checker_result: %s\n" % e)
@@ -1999,11 +1999,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
 
 ### Return type
@@ -2022,7 +2022,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checkplan**
-> CheckPlan update_checkplan(project_pk, id, cloud_pk, data)
+> CheckPlan update_checkplan(cloud_pk, id, project_pk, data)
 
 
 
@@ -2044,13 +2044,13 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
 try:
-    api_response = api_instance.update_checkplan(project_pk, id, cloud_pk, data)
+    api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_checkplan: %s\n" % e)
@@ -2060,9 +2060,9 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**CheckPlan**](CheckPlan.md)|  | 
 
 ### Return type
@@ -2081,7 +2081,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_rule**
-> Rule update_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk, data)
+> Rule update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
 
 
 
@@ -2103,15 +2103,15 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
 try:
-    api_response = api_instance.update_rule(project_pk, check_plan_pk, ruleset_pk, id, cloud_pk, data)
+    api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_rule: %s\n" % e)
@@ -2121,11 +2121,11 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
  **data** | [**Rule**](Rule.md)|  | 
 
 ### Return type
@@ -2144,7 +2144,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_rule_component**
-> RuleComponent update_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk, data)
+> RuleComponent update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
 
 
 
@@ -2166,16 +2166,16 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
-ruleset_pk = 'ruleset_pk_example' # str | 
-id = 'id_example' # str | 
-rule_pk = 'rule_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+rule_pk = 'rule_pk_example' # str | 
+ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
 try:
-    api_response = api_instance.update_rule_component(project_pk, check_plan_pk, ruleset_pk, id, rule_pk, cloud_pk, data)
+    api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_rule_component: %s\n" % e)
@@ -2185,12 +2185,12 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
- **ruleset_pk** | **str**|  | 
- **id** | **str**|  | 
- **rule_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **rule_pk** | **str**|  | 
+ **ruleset_pk** | **str**|  | 
  **data** | [**RuleComponent**](RuleComponent.md)|  | 
 
 ### Return type
@@ -2209,7 +2209,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ruleset**
-> Ruleset update_ruleset(project_pk, id, cloud_pk, check_plan_pk, data)
+> Ruleset update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
 
 
 
@@ -2231,14 +2231,14 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
-project_pk = 'project_pk_example' # str | 
-id = 'id_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
 check_plan_pk = 'check_plan_pk_example' # str | 
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
 try:
-    api_response = api_instance.update_ruleset(project_pk, id, cloud_pk, check_plan_pk, data)
+    api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CheckplanApi->update_ruleset: %s\n" % e)
@@ -2248,10 +2248,10 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **project_pk** | **str**|  | 
- **id** | **str**|  | 
- **cloud_pk** | **str**|  | 
  **check_plan_pk** | **str**|  | 
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
  **data** | [**Ruleset**](Ruleset.md)|  | 
 
 ### Return type

@@ -17,6 +17,7 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.rule import Rule  # noqa: F401,E501
+from bimdata_api_client.models.ruleset import Ruleset  # noqa: F401,E501
 
 
 class Ruleset(object):
@@ -38,7 +39,7 @@ class Ruleset(object):
         'name': 'str',
         'description': 'str',
         'rules': 'list[Rule]',
-        'rulesets': 'list[str]'
+        'rulesets': 'list[Ruleset]'
     }
 
     attribute_map = {
@@ -135,6 +136,8 @@ class Ruleset(object):
         """
         if name is None:
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -186,7 +189,7 @@ class Ruleset(object):
 
 
         :return: The rulesets of this Ruleset.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[Ruleset]
         """
         return self._rulesets
 
@@ -196,7 +199,7 @@ class Ruleset(object):
 
 
         :param rulesets: The rulesets of this Ruleset.  # noqa: E501
-        :type: list[str]
+        :type: list[Ruleset]
         """
 
         self._rulesets = rulesets

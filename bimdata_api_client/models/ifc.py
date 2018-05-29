@@ -40,13 +40,15 @@ class Ifc(object):
         'status': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'document_id': 'str',
         'document': 'IfcDocument',
         'structure_file': 'str',
         'systems_file': 'str',
         'map_file': 'str',
         'gltf_file': 'str',
         'bvh_tree_file': 'str',
-        'error_detail': 'str'
+        'error_detail': 'str',
+        'project_id': 'str'
     }
 
     attribute_map = {
@@ -56,16 +58,18 @@ class Ifc(object):
         'status': 'status',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
+        'document_id': 'document_id',
         'document': 'document',
         'structure_file': 'structure_file',
         'systems_file': 'systems_file',
         'map_file': 'map_file',
         'gltf_file': 'gltf_file',
         'bvh_tree_file': 'bvh_tree_file',
-        'error_detail': 'error_detail'
+        'error_detail': 'error_detail',
+        'project_id': 'project_id'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None, project_id=None):  # noqa: E501
         """Ifc - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -74,6 +78,7 @@ class Ifc(object):
         self._status = None
         self._created_at = None
         self._updated_at = None
+        self._document_id = None
         self._document = None
         self._structure_file = None
         self._systems_file = None
@@ -81,6 +86,7 @@ class Ifc(object):
         self._gltf_file = None
         self._bvh_tree_file = None
         self._error_detail = None
+        self._project_id = None
         self.discriminator = None
 
         if id is not None:
@@ -95,6 +101,8 @@ class Ifc(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if document_id is not None:
+            self.document_id = document_id
         if document is not None:
             self.document = document
         if structure_file is not None:
@@ -109,6 +117,8 @@ class Ifc(object):
             self.bvh_tree_file = bvh_tree_file
         if error_detail is not None:
             self.error_detail = error_detail
+        if project_id is not None:
+            self.project_id = project_id
 
     @property
     def id(self):
@@ -241,6 +251,27 @@ class Ifc(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def document_id(self):
+        """Gets the document_id of this Ifc.  # noqa: E501
+
+
+        :return: The document_id of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._document_id
+
+    @document_id.setter
+    def document_id(self, document_id):
+        """Sets the document_id of this Ifc.
+
+
+        :param document_id: The document_id of this Ifc.  # noqa: E501
+        :type: str
+        """
+
+        self._document_id = document_id
 
     @property
     def document(self):
@@ -386,8 +417,31 @@ class Ifc(object):
         :param error_detail: The error_detail of this Ifc.  # noqa: E501
         :type: str
         """
+        if error_detail is not None and len(error_detail) < 1:
+            raise ValueError("Invalid value for `error_detail`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._error_detail = error_detail
+
+    @property
+    def project_id(self):
+        """Gets the project_id of this Ifc.  # noqa: E501
+
+
+        :return: The project_id of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this Ifc.
+
+
+        :param project_id: The project_id of this Ifc.  # noqa: E501
+        :type: str
+        """
+
+        self._project_id = project_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

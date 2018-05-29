@@ -101,6 +101,8 @@ class Classification(object):
         """
         if name is None:
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
+        if name is not None and len(name) < 1:
+            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -124,6 +126,8 @@ class Classification(object):
         """
         if notation is None:
             raise ValueError("Invalid value for `notation`, must not be `None`")  # noqa: E501
+        if notation is not None and len(notation) < 1:
+            raise ValueError("Invalid value for `notation`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._notation = notation
 
