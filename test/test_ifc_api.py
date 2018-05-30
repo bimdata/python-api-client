@@ -59,6 +59,18 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_bulk_full_update_elements(self):
+        """Test case for bulk_full_update_elements
+
+        """
+        pass
+
+    def test_bulk_full_update_ifc_property(self):
+        """Test case for bulk_full_update_ifc_property
+
+        """
+        pass
+
     def test_bulk_remove_classifications_of_element(self):
         """Test case for bulk_remove_classifications_of_element
 
@@ -67,6 +79,18 @@ class TestIfcApi(unittest.TestCase):
 
     def test_bulk_remove_elements_from_classification(self):
         """Test case for bulk_remove_elements_from_classification
+
+        """
+        pass
+
+    def test_bulk_update_elements(self):
+        """Test case for bulk_update_elements
+
+        """
+        pass
+
+    def test_bulk_update_ifc_property(self):
+        """Test case for bulk_update_ifc_property
 
         """
         pass
@@ -85,12 +109,6 @@ class TestIfcApi(unittest.TestCase):
 
     def test_create_element(self):
         """Test case for create_element
-
-        """
-        pass
-
-    def test_create_element_0(self):
-        """Test case for create_element_0
 
         """
         pass
@@ -139,6 +157,12 @@ class TestIfcApi(unittest.TestCase):
 
     def test_create_property_set_element_relations(self):
         """Test case for create_property_set_element_relations
+
+        """
+        pass
+
+    def test_create_raw_elements(self):
+        """Test case for create_raw_elements
 
         """
         pass
@@ -221,12 +245,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_element_0(self):
-        """Test case for full_update_element_0
-
-        """
-        pass
-
     def test_full_update_ifc(self):
         """Test case for full_update_ifc
 
@@ -235,12 +253,6 @@ class TestIfcApi(unittest.TestCase):
 
     def test_full_update_ifc_property(self):
         """Test case for full_update_ifc_property
-
-        """
-        pass
-
-    def test_full_update_ifc_property_0(self):
-        """Test case for full_update_ifc_property_0
 
         """
         pass
@@ -289,12 +301,6 @@ class TestIfcApi(unittest.TestCase):
 
     def test_get_element(self):
         """Test case for get_element
-
-        """
-        pass
-
-    def test_get_element_0(self):
-        """Test case for get_element_0
 
         """
         pass
@@ -455,6 +461,12 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_raw_elements(self):
+        """Test case for get_raw_elements
+
+        """
+        pass
+
     def test_get_space(self):
         """Test case for get_space
 
@@ -533,26 +545,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_update_element_0(self):
-        """Test case for update_element_0
-
-        """
-        pass
-
     def test_update_ifc(self):
         """Test case for update_ifc
 
         """
         pass
 
-    def test_update_ifc_property(self):
-        """Test case for update_ifc_property
+    def test_update_ifc_files(self):
+        """Test case for update_ifc_files
 
         """
         pass
 
-    def test_update_ifc_property_0(self):
-        """Test case for update_ifc_property_0
+    def test_update_ifc_property(self):
+        """Test case for update_ifc_property
 
         """
         pass

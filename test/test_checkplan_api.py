@@ -29,14 +29,14 @@ class TestCheckplanApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_check_plan_result(self):
-        """Test case for create_check_plan_result
+    def test_create_checker(self):
+        """Test case for create_checker
 
         """
         pass
 
-    def test_create_checker(self):
-        """Test case for create_checker
+    def test_create_checker_result(self):
+        """Test case for create_checker_result
 
         """
         pass
@@ -65,14 +65,14 @@ class TestCheckplanApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_check_plan_result(self):
-        """Test case for delete_check_plan_result
+    def test_delete_checker(self):
+        """Test case for delete_checker
 
         """
         pass
 
-    def test_delete_checker(self):
-        """Test case for delete_checker
+    def test_delete_checker_result(self):
+        """Test case for delete_checker_result
 
         """
         pass
@@ -101,14 +101,14 @@ class TestCheckplanApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_check_plan_result(self):
-        """Test case for full_update_check_plan_result
+    def test_full_update_checker(self):
+        """Test case for full_update_checker
 
         """
         pass
 
-    def test_full_update_checker(self):
-        """Test case for full_update_checker
+    def test_full_update_checker_result(self):
+        """Test case for full_update_checker_result
 
         """
         pass
@@ -137,20 +137,20 @@ class TestCheckplanApi(unittest.TestCase):
         """
         pass
 
-    def test_get_check_plan_result(self):
-        """Test case for get_check_plan_result
-
-        """
-        pass
-
-    def test_get_check_plan_results(self):
-        """Test case for get_check_plan_results
-
-        """
-        pass
-
     def test_get_checker(self):
         """Test case for get_checker
+
+        """
+        pass
+
+    def test_get_checker_result(self):
+        """Test case for get_checker_result
+
+        """
+        pass
+
+    def test_get_checker_results(self):
+        """Test case for get_checker_results
 
         """
         pass
@@ -215,14 +215,14 @@ class TestCheckplanApi(unittest.TestCase):
         """
         pass
 
-    def test_update_check_plan_result(self):
-        """Test case for update_check_plan_result
+    def test_update_checker(self):
+        """Test case for update_checker
 
         """
         pass
 
-    def test_update_checker(self):
-        """Test case for update_checker
+    def test_update_checker_result(self):
+        """Test case for update_checker_result
 
         """
         pass

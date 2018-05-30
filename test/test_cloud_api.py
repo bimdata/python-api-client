@@ -29,6 +29,12 @@ class TestCloudApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_create_cloud(self):
+        """Test case for create_cloud
+
+        """
+        pass
+
     def test_create_cloud_user(self):
         """Test case for create_cloud_user
 
@@ -37,6 +43,12 @@ class TestCloudApi(unittest.TestCase):
 
     def test_delete_cloud_user(self):
         """Test case for delete_cloud_user
+
+        """
+        pass
+
+    def test_full_update_cloud(self):
+        """Test case for full_update_cloud
 
         """
         pass
@@ -73,6 +85,12 @@ class TestCloudApi(unittest.TestCase):
 
     def test_get_clouds(self):
         """Test case for get_clouds
+
+        """
+        pass
+
+    def test_update_cloud(self):
+        """Test case for update_cloud
 
         """
         pass
