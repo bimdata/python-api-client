@@ -17,7 +17,6 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.space import Space  # noqa: F401,E501
-from bimdata_api_client.models.zone import Zone  # noqa: F401,E501
 
 
 class Zone(object):

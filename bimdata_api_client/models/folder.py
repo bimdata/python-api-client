@@ -16,7 +16,6 @@ import re  # noqa: F401
 
 import six
 
-from bimdata_api_client.models.folder import Folder  # noqa: F401,E501
 from bimdata_api_client.models.fos_user import FosUser  # noqa: F401,E501
 
 
