@@ -37,10 +37,7 @@ class Cloud(object):
         'id': 'int',
         'name': 'str',
         'features': 'list[Feature]',
-        'address': 'str',
         'creator': 'FosUser',
-        'postal_code': 'str',
-        'city': 'str',
         'is_default': 'bool',
         'created_at': 'datetime',
         'updated_at': 'datetime'
@@ -50,25 +47,19 @@ class Cloud(object):
         'id': 'id',
         'name': 'name',
         'features': 'features',
-        'address': 'address',
         'creator': 'creator',
-        'postal_code': 'postal_code',
-        'city': 'city',
         'is_default': 'is_default',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, features=None, address=None, creator=None, postal_code=None, city=None, is_default=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, name=None, features=None, creator=None, is_default=None, created_at=None, updated_at=None):  # noqa: E501
         """Cloud - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._features = None
-        self._address = None
         self._creator = None
-        self._postal_code = None
-        self._city = None
         self._is_default = None
         self._created_at = None
         self._updated_at = None
@@ -79,14 +70,8 @@ class Cloud(object):
         self.name = name
         if features is not None:
             self.features = features
-        if address is not None:
-            self.address = address
         if creator is not None:
             self.creator = creator
-        if postal_code is not None:
-            self.postal_code = postal_code
-        if city is not None:
-            self.city = city
         if is_default is not None:
             self.is_default = is_default
         if created_at is not None:
@@ -164,29 +149,6 @@ class Cloud(object):
         self._features = features
 
     @property
-    def address(self):
-        """Gets the address of this Cloud.  # noqa: E501
-
-
-        :return: The address of this Cloud.  # noqa: E501
-        :rtype: str
-        """
-        return self._address
-
-    @address.setter
-    def address(self, address):
-        """Sets the address of this Cloud.
-
-
-        :param address: The address of this Cloud.  # noqa: E501
-        :type: str
-        """
-        if address is not None and len(address) > 255:
-            raise ValueError("Invalid value for `address`, length must be less than or equal to `255`")  # noqa: E501
-
-        self._address = address
-
-    @property
     def creator(self):
         """Gets the creator of this Cloud.  # noqa: E501
 
@@ -206,52 +168,6 @@ class Cloud(object):
         """
 
         self._creator = creator
-
-    @property
-    def postal_code(self):
-        """Gets the postal_code of this Cloud.  # noqa: E501
-
-
-        :return: The postal_code of this Cloud.  # noqa: E501
-        :rtype: str
-        """
-        return self._postal_code
-
-    @postal_code.setter
-    def postal_code(self, postal_code):
-        """Sets the postal_code of this Cloud.
-
-
-        :param postal_code: The postal_code of this Cloud.  # noqa: E501
-        :type: str
-        """
-        if postal_code is not None and len(postal_code) > 255:
-            raise ValueError("Invalid value for `postal_code`, length must be less than or equal to `255`")  # noqa: E501
-
-        self._postal_code = postal_code
-
-    @property
-    def city(self):
-        """Gets the city of this Cloud.  # noqa: E501
-
-
-        :return: The city of this Cloud.  # noqa: E501
-        :rtype: str
-        """
-        return self._city
-
-    @city.setter
-    def city(self, city):
-        """Sets the city of this Cloud.
-
-
-        :param city: The city of this Cloud.  # noqa: E501
-        :type: str
-        """
-        if city is not None and len(city) > 255:
-            raise ValueError("Invalid value for `city`, length must be less than or equal to `255`")  # noqa: E501
-
-        self._city = city
 
     @property
     def is_default(self):

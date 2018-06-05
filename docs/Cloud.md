@@ -6,10 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **features** | [**list[Feature]**](Feature.md) |  | [optional] 
-**address** | **str** |  | [optional] 
 **creator** | [**FosUser**](FosUser.md) |  | [optional] 
-**postal_code** | **str** |  | [optional] 
-**city** | **str** |  | [optional] 
 **is_default** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

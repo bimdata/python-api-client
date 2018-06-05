@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **status** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**root_folder** | [**ProjectRootFolder**](ProjectRootFolder.md) |  | [optional] 
+**root_folder_id** | **str** |  | [optional] 
 **property_permissions_enabled** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

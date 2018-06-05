@@ -17,6 +17,7 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.rule import Rule  # noqa: F401,E501
+from bimdata_api_client.models.ruleset import Ruleset  # noqa: F401,E501
 
 
 class Ruleset(object):
@@ -34,7 +35,7 @@ class Ruleset(object):
     """
     swagger_types = {
         'id': 'int',
-        'parent_ruleset_id': 'int',
+        'parent_ruleset_id': 'str',
         'name': 'str',
         'description': 'str',
         'rules': 'list[Rule]',
@@ -100,7 +101,7 @@ class Ruleset(object):
 
 
         :return: The parent_ruleset_id of this Ruleset.  # noqa: E501
-        :rtype: int
+        :rtype: str
         """
         return self._parent_ruleset_id
 
@@ -110,7 +111,7 @@ class Ruleset(object):
 
 
         :param parent_ruleset_id: The parent_ruleset_id of this Ruleset.  # noqa: E501
-        :type: int
+        :type: str
         """
 
         self._parent_ruleset_id = parent_ruleset_id

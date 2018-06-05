@@ -37,7 +37,6 @@ from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.model_property import ModelProperty
 from bimdata_api_client.models.notification import Notification
 from bimdata_api_client.models.project import Project
-from bimdata_api_client.models.project_root_folder import ProjectRootFolder
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
 from bimdata_api_client.models.rule import Rule

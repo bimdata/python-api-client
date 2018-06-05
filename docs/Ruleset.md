@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**parent_ruleset_id** | **int** |  | [optional] 
+**parent_ruleset_id** | **str** |  | [optional] 
 **name** | **str** |  | 
 **description** | **str** |  | [optional] 
 **rules** | [**list[Rule]**](Rule.md) |  | [optional] 

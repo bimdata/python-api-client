@@ -272,7 +272,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_user**
-> get_self_user()
+> FosUser get_self_user()
 
 
 
@@ -296,7 +296,8 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 
 try:
-    api_instance.get_self_user()
+    api_response = api_instance.get_self_user()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->get_self_user: %s\n" % e)
 ```
@@ -306,7 +307,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**FosUser**](FosUser.md)
 
 ### Authorization
 
@@ -525,7 +526,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_self_user**
-> update_self_user()
+> FosUser update_self_user()
 
 
 
@@ -549,7 +550,8 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 
 try:
-    api_instance.update_self_user()
+    api_response = api_instance.update_self_user()
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_self_user: %s\n" % e)
 ```
@@ -559,7 +561,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-void (empty response body)
+[**FosUser**](FosUser.md)
 
 ### Authorization
 

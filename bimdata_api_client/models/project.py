@@ -17,7 +17,6 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.cloud import Cloud  # noqa: F401,E501
-from bimdata_api_client.models.project_root_folder import ProjectRootFolder  # noqa: F401,E501
 
 
 class Project(object):
@@ -41,7 +40,7 @@ class Project(object):
         'status': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'root_folder': 'ProjectRootFolder',
+        'root_folder_id': 'str',
         'property_permissions_enabled': 'bool'
     }
 
@@ -53,11 +52,11 @@ class Project(object):
         'status': 'status',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'root_folder': 'root_folder',
+        'root_folder_id': 'root_folder_id',
         'property_permissions_enabled': 'property_permissions_enabled'
     }
 
-    def __init__(self, id=None, logo=None, cloud=None, name=None, status=None, created_at=None, updated_at=None, root_folder=None, property_permissions_enabled=None):  # noqa: E501
+    def __init__(self, id=None, logo=None, cloud=None, name=None, status=None, created_at=None, updated_at=None, root_folder_id=None, property_permissions_enabled=None):  # noqa: E501
         """Project - a model defined in Swagger"""  # noqa: E501
 
         self._id = None
@@ -67,7 +66,7 @@ class Project(object):
         self._status = None
         self._created_at = None
         self._updated_at = None
-        self._root_folder = None
+        self._root_folder_id = None
         self._property_permissions_enabled = None
         self.discriminator = None
 
@@ -84,8 +83,8 @@ class Project(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if root_folder is not None:
-            self.root_folder = root_folder
+        if root_folder_id is not None:
+            self.root_folder_id = root_folder_id
         if property_permissions_enabled is not None:
             self.property_permissions_enabled = property_permissions_enabled
 
@@ -249,25 +248,25 @@ class Project(object):
         self._updated_at = updated_at
 
     @property
-    def root_folder(self):
-        """Gets the root_folder of this Project.  # noqa: E501
+    def root_folder_id(self):
+        """Gets the root_folder_id of this Project.  # noqa: E501
 
 
-        :return: The root_folder of this Project.  # noqa: E501
-        :rtype: ProjectRootFolder
+        :return: The root_folder_id of this Project.  # noqa: E501
+        :rtype: str
         """
-        return self._root_folder
+        return self._root_folder_id
 
-    @root_folder.setter
-    def root_folder(self, root_folder):
-        """Sets the root_folder of this Project.
+    @root_folder_id.setter
+    def root_folder_id(self, root_folder_id):
+        """Sets the root_folder_id of this Project.
 
 
-        :param root_folder: The root_folder of this Project.  # noqa: E501
-        :type: ProjectRootFolder
+        :param root_folder_id: The root_folder_id of this Project.  # noqa: E501
+        :type: str
         """
 
-        self._root_folder = root_folder
+        self._root_folder_id = root_folder_id
 
     @property
     def property_permissions_enabled(self):
