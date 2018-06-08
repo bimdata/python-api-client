@@ -3333,7 +3333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements**
-> list[Element] get_elements(cloud_pk, ifc_pk, project_pk)
+> list[Element] get_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 
 
@@ -3358,9 +3358,12 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+type = 'type_example' # str | Filter the returned list by type (optional)
+classification = 'classification_example' # str | Filter the returned list by classification (optional)
+classification__notation = 'classification__notation_example' # str | Filter the returned list by classification__notation (optional)
 
 try:
-    api_response = api_instance.get_elements(cloud_pk, ifc_pk, project_pk)
+    api_response = api_instance.get_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_elements: %s\n" % e)
@@ -3373,6 +3376,9 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **type** | **str**| Filter the returned list by type | [optional] 
+ **classification** | **str**| Filter the returned list by classification | [optional] 
+ **classification__notation** | **str**| Filter the returned list by classification__notation | [optional] 
 
 ### Return type
 
@@ -4191,7 +4197,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
-> list[Ifc] get_ifcs(cloud_pk, project_pk)
+> list[Ifc] get_ifcs(cloud_pk, project_pk, status=status)
 
 
 
@@ -4215,9 +4221,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
-    api_response = api_instance.get_ifcs(cloud_pk, project_pk)
+    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -4229,6 +4236,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **status** | **str**| Filter the returned list by status | [optional] 
 
 ### Return type
 
@@ -4362,7 +4370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_raw_elements**
-> get_raw_elements(cloud_pk, ifc_pk, project_pk)
+> get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 
 
@@ -4387,9 +4395,12 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+type = 'type_example' # str | Filter the returned list by type (optional)
+classification = 'classification_example' # str | Filter the returned list by classification (optional)
+classification__notation = 'classification__notation_example' # str | Filter the returned list by classification__notation (optional)
 
 try:
-    api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk)
+    api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 except ApiException as e:
     print("Exception when calling IfcApi->get_raw_elements: %s\n" % e)
 ```
@@ -4401,6 +4412,9 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **type** | **str**| Filter the returned list by type | [optional] 
+ **classification** | **str**| Filter the returned list by classification | [optional] 
+ **classification__notation** | **str**| Filter the returned list by classification__notation | [optional] 
 
 ### Return type
 
@@ -4713,7 +4727,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zones**
-> list[Zone] get_zones(cloud_pk, ifc_pk, project_pk)
+> list[Zone] get_zones(cloud_pk, ifc_pk, project_pk, color=color)
 
 
 
@@ -4738,9 +4752,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+color = 'color_example' # str | Filter the returned list by color (optional)
 
 try:
-    api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk)
+    api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk, color=color)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_zones: %s\n" % e)
@@ -4753,6 +4768,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **color** | **str**| Filter the returned list by color | [optional] 
 
 ### Return type
 
@@ -4851,7 +4867,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this classification.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -4867,7 +4883,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this classification. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 

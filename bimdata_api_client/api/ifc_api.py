@@ -6944,6 +6944,9 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str type: Filter the returned list by type
+        :param str classification: Filter the returned list by classification
+        :param str classification__notation: Filter the returned list by classification__notation
         :return: list[Element]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -6968,12 +6971,15 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str type: Filter the returned list by type
+        :param str classification: Filter the returned list by classification
+        :param str classification__notation: Filter the returned list by classification__notation
         :return: list[Element]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'type', 'classification', 'classification__notation']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -7012,6 +7018,12 @@ class IfcApi(object):
             path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))  # noqa: E501
+        if 'classification' in params:
+            query_params.append(('classification', params['classification']))  # noqa: E501
+        if 'classification__notation' in params:
+            query_params.append(('classification__notation', params['classification__notation']))  # noqa: E501
 
         header_params = {}
 
@@ -8700,6 +8712,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str status: Filter the returned list by status
         :return: list[Ifc]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -8723,12 +8736,13 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str status: Filter the returned list by status
         :return: list[Ifc]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'status']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -8761,6 +8775,8 @@ class IfcApi(object):
             path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
+        if 'status' in params:
+            query_params.append(('status', params['status']))  # noqa: E501
 
         header_params = {}
 
@@ -9046,6 +9062,9 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str type: Filter the returned list by type
+        :param str classification: Filter the returned list by classification
+        :param str classification__notation: Filter the returned list by classification__notation
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -9070,12 +9089,15 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str type: Filter the returned list by type
+        :param str classification: Filter the returned list by classification
+        :param str classification__notation: Filter the returned list by classification__notation
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'type', 'classification', 'classification__notation']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9114,6 +9136,12 @@ class IfcApi(object):
             path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
+        if 'type' in params:
+            query_params.append(('type', params['type']))  # noqa: E501
+        if 'classification' in params:
+            query_params.append(('classification', params['classification']))  # noqa: E501
+        if 'classification__notation' in params:
+            query_params.append(('classification__notation', params['classification__notation']))  # noqa: E501
 
         header_params = {}
 
@@ -9776,6 +9804,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str color: Filter the returned list by color
         :return: list[Zone]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -9800,12 +9829,13 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param str color: Filter the returned list by color
         :return: list[Zone]
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'color']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -9844,6 +9874,8 @@ class IfcApi(object):
             path_params['project_pk'] = params['project_pk']  # noqa: E501
 
         query_params = []
+        if 'color' in params:
+            query_params.append(('color', params['color']))  # noqa: E501
 
         header_params = {}
 
@@ -10005,7 +10037,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -10031,7 +10063,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
