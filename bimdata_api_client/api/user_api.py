@@ -33,43 +33,45 @@ class UserApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def ask_reset_password_token(self, **kwargs):  # noqa: E501
+    def ask_reset_password_token(self, data, **kwargs):  # noqa: E501
         """ask_reset_password_token  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.ask_reset_password_token(async=True)
+        >>> thread = api.ask_reset_password_token(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param ForgotPassword data: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.ask_reset_password_token_with_http_info(**kwargs)  # noqa: E501
+            return self.ask_reset_password_token_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.ask_reset_password_token_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.ask_reset_password_token_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def ask_reset_password_token_with_http_info(self, **kwargs):  # noqa: E501
+    def ask_reset_password_token_with_http_info(self, data, **kwargs):  # noqa: E501
         """ask_reset_password_token  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.ask_reset_password_token_with_http_info(async=True)
+        >>> thread = api.ask_reset_password_token_with_http_info(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param ForgotPassword data: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -84,6 +86,10 @@ class UserApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `ask_reset_password_token`")  # noqa: E501
 
         collection_formats = {}
 
@@ -97,6 +103,8 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -603,43 +611,45 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def reset_password(self, **kwargs):  # noqa: E501
+    def reset_password(self, data, **kwargs):  # noqa: E501
         """reset_password  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.reset_password(async=True)
+        >>> thread = api.reset_password(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param ResetPassword data: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.reset_password_with_http_info(**kwargs)  # noqa: E501
+            return self.reset_password_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.reset_password_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.reset_password_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def reset_password_with_http_info(self, **kwargs):  # noqa: E501
+    def reset_password_with_http_info(self, data, **kwargs):  # noqa: E501
         """reset_password  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.reset_password_with_http_info(async=True)
+        >>> thread = api.reset_password_with_http_info(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param ResetPassword data: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -654,6 +664,10 @@ class UserApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `reset_password`")  # noqa: E501
 
         collection_formats = {}
 
@@ -667,6 +681,8 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -793,43 +809,45 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def sign_up_with_invitation_token(self, **kwargs):  # noqa: E501
+    def sign_up_with_invitation_token(self, data, **kwargs):  # noqa: E501
         """sign_up_with_invitation_token  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up_with_invitation_token(async=True)
+        >>> thread = api.sign_up_with_invitation_token(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param InvitedSignUp data: (required)
         :return: SignupFosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.sign_up_with_invitation_token_with_http_info(**kwargs)  # noqa: E501
+            return self.sign_up_with_invitation_token_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.sign_up_with_invitation_token_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.sign_up_with_invitation_token_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def sign_up_with_invitation_token_with_http_info(self, **kwargs):  # noqa: E501
+    def sign_up_with_invitation_token_with_http_info(self, data, **kwargs):  # noqa: E501
         """sign_up_with_invitation_token  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up_with_invitation_token_with_http_info(async=True)
+        >>> thread = api.sign_up_with_invitation_token_with_http_info(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param InvitedSignUp data: (required)
         :return: SignupFosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -844,6 +862,10 @@ class UserApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `sign_up_with_invitation_token`")  # noqa: E501
 
         collection_formats = {}
 
@@ -857,6 +879,8 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
@@ -991,43 +1015,45 @@ class UserApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_self_user(self, **kwargs):  # noqa: E501
+    def update_self_user(self, data, **kwargs):  # noqa: E501
         """update_self_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_self_user(async=True)
+        >>> thread = api.update_self_user(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param SelfFosUser data: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async'):
-            return self.update_self_user_with_http_info(**kwargs)  # noqa: E501
+            return self.update_self_user_with_http_info(data, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_self_user_with_http_info(**kwargs)  # noqa: E501
+            (data) = self.update_self_user_with_http_info(data, **kwargs)  # noqa: E501
             return data
 
-    def update_self_user_with_http_info(self, **kwargs):  # noqa: E501
+    def update_self_user_with_http_info(self, data, **kwargs):  # noqa: E501
         """update_self_user  # noqa: E501
 
           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_self_user_with_http_info(async=True)
+        >>> thread = api.update_self_user_with_http_info(data, async=True)
         >>> result = thread.get()
 
         :param async bool
+        :param SelfFosUser data: (required)
         :return: FosUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = []  # noqa: E501
+        all_params = ['data']  # noqa: E501
         all_params.append('async')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1042,6 +1068,10 @@ class UserApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'data' is set
+        if ('data' not in params or
+                params['data'] is None):
+            raise ValueError("Missing the required parameter `data` when calling `update_self_user`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1055,6 +1085,8 @@ class UserApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in params:
+            body_params = params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501

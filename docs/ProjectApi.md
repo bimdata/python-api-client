@@ -368,7 +368,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -382,7 +382,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -424,7 +424,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -439,7 +439,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -481,7 +481,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -495,7 +495,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -647,7 +647,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
@@ -663,7 +663,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
  **data** | [**Classification**](Classification.md)|  | 
 
@@ -706,7 +706,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | 
 id2 = 56 # int |  (optional)
@@ -734,7 +734,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
  **name** | **str**|  | 
  **id2** | **int**|  | [optional] 
@@ -789,7 +789,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
@@ -805,7 +805,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
  **data** | [**Folder**](Folder.md)|  | 
 
@@ -964,7 +964,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -979,7 +979,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1076,7 +1076,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1091,7 +1091,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1188,7 +1188,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1203,7 +1203,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1575,7 +1575,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
@@ -1591,7 +1591,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
  **data** | [**Classification**](Classification.md)|  | 
 
@@ -1634,7 +1634,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Document() # Document | 
 
@@ -1650,7 +1650,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
  **data** | [**Document**](Document.md)|  | 
 
@@ -1693,7 +1693,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
@@ -1709,7 +1709,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
  **data** | [**Folder**](Folder.md)|  | 
 

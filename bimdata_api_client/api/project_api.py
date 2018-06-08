@@ -668,7 +668,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -692,7 +692,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -783,7 +783,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -807,7 +807,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -898,7 +898,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -922,7 +922,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1235,7 +1235,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :param Classification data: (required)
         :return: Classification
@@ -1260,7 +1260,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :param Classification data: (required)
         :return: Classification
@@ -1358,7 +1358,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
         :param int id2:
@@ -1395,7 +1395,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
         :param int id2:
@@ -1538,7 +1538,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :param Folder data: (required)
         :return: Folder
@@ -1563,7 +1563,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :param Folder data: (required)
         :return: Folder
@@ -1899,7 +1899,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :return: Classification
                  If the method is called asynchronously,
@@ -1923,7 +1923,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :return: Classification
                  If the method is called asynchronously,
@@ -2121,7 +2121,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -2145,7 +2145,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :return: Document
                  If the method is called asynchronously,
@@ -2343,7 +2343,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :return: Folder
                  If the method is called asynchronously,
@@ -2367,7 +2367,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :return: Folder
                  If the method is called asynchronously,
@@ -3100,7 +3100,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :param Classification data: (required)
         :return: Classification
@@ -3125,7 +3125,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
         :param Classification data: (required)
         :return: Classification
@@ -3223,7 +3223,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param Document data: (required)
         :return: Document
@@ -3248,7 +3248,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param Document data: (required)
         :return: Document
@@ -3346,7 +3346,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :param Folder data: (required)
         :return: Folder
@@ -3371,7 +3371,7 @@ class ProjectApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
         :param Folder data: (required)
         :return: Folder

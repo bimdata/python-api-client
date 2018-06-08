@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **ask_reset_password_token**
-> ask_reset_password_token()
+> ask_reset_password_token(data)
 
 
 
@@ -40,15 +40,19 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+data = bimdata_api_client.ForgotPassword() # ForgotPassword | 
 
 try:
-    api_instance.ask_reset_password_token()
+    api_instance.ask_reset_password_token(data)
 except ApiException as e:
     print("Exception when calling UserApi->ask_reset_password_token: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**ForgotPassword**](ForgotPassword.md)|  | 
 
 ### Return type
 
@@ -321,7 +325,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reset_password**
-> reset_password()
+> reset_password(data)
 
 
 
@@ -343,15 +347,19 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+data = bimdata_api_client.ResetPassword() # ResetPassword | 
 
 try:
-    api_instance.reset_password()
+    api_instance.reset_password(data)
 except ApiException as e:
     print("Exception when calling UserApi->reset_password: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**ResetPassword**](ResetPassword.md)|  | 
 
 ### Return type
 
@@ -422,7 +430,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_up_with_invitation_token**
-> SignupFosUser sign_up_with_invitation_token()
+> SignupFosUser sign_up_with_invitation_token(data)
 
 
 
@@ -444,16 +452,20 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+data = bimdata_api_client.InvitedSignUp() # InvitedSignUp | 
 
 try:
-    api_response = api_instance.sign_up_with_invitation_token()
+    api_response = api_instance.sign_up_with_invitation_token(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->sign_up_with_invitation_token: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**InvitedSignUp**](InvitedSignUp.md)|  | 
 
 ### Return type
 
@@ -526,7 +538,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_self_user**
-> FosUser update_self_user()
+> FosUser update_self_user(data)
 
 
 
@@ -548,16 +560,20 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+data = bimdata_api_client.SelfFosUser() # SelfFosUser | 
 
 try:
-    api_response = api_instance.update_self_user()
+    api_response = api_instance.update_self_user(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_self_user: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **data** | [**SelfFosUser**](SelfFosUser.md)|  | 
 
 ### Return type
 

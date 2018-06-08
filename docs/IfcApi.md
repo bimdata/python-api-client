@@ -83,6 +83,7 @@ Method | HTTP request | Description
 [**get_zone_space**](IfcApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | 
 [**get_zone_spaces**](IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | 
 [**get_zones**](IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | 
+[**list_classification_element_relations**](IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | 
 [**remove_classification_of_element**](IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | 
 [**remove_element_property_set**](IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | 
 [**remove_element_property_set_property**](IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | 
@@ -738,7 +739,7 @@ Name | Type | Description  | Notes
 
 
 
-         create association between existing classification and existing element     
+             create association between existing classification and existing element         
 
 ### Example
 ```python
@@ -1348,7 +1349,7 @@ Name | Type | Description  | Notes
 
 
 
-         create association between existing classification and existing element     
+             create association between existing classification and existing element         
 
 ### Example
 ```python
@@ -1664,7 +1665,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-uuid = 'uuid_example' # str | 
+uuid = 'uuid_example' # str | IFC element or element type UUID
 
 try:
     api_instance.delete_element(cloud_pk, ifc_pk, project_pk, uuid)
@@ -1679,7 +1680,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **uuid** | **str**|  | 
+ **uuid** | **str**| IFC element or element type UUID | 
 
 ### Return type
 
@@ -1720,7 +1721,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1734,7 +1735,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -2008,7 +2009,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -2023,7 +2024,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -2066,7 +2067,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -2081,7 +2082,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -2124,7 +2125,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
@@ -2140,7 +2141,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
@@ -2186,7 +2187,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-uuid = 'uuid_example' # str | 
+uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
 try:
@@ -2203,7 +2204,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **uuid** | **str**|  | 
+ **uuid** | **str**| IFC element or element type UUID | 
  **data** | [**Element**](Element.md)|  | 
 
 ### Return type
@@ -2245,7 +2246,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ifc() # Ifc | 
 
@@ -2261,7 +2262,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
  **data** | [**Ifc**](Ifc.md)|  | 
 
@@ -2548,7 +2549,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
@@ -2565,7 +2566,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Space**](Space.md)|  | 
@@ -2609,7 +2610,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
@@ -2626,7 +2627,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Zone**](Zone.md)|  | 
@@ -2670,7 +2671,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
@@ -2688,7 +2689,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
@@ -2794,7 +2795,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-uuid = 'uuid_example' # str | 
+uuid = 'uuid_example' # str | IFC element or element type UUID
 
 try:
     api_response = api_instance.get_element(cloud_pk, ifc_pk, project_pk, uuid)
@@ -2810,7 +2811,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **uuid** | **str**|  | 
+ **uuid** | **str**| IFC element or element type UUID | 
 
 ### Return type
 
@@ -2852,7 +2853,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property set.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -2869,7 +2870,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property set. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -2974,7 +2975,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
@@ -2992,7 +2993,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
@@ -3037,7 +3038,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
@@ -3056,7 +3057,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
@@ -3102,7 +3103,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
@@ -3122,7 +3123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this unit. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
@@ -3471,7 +3472,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3486,7 +3487,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3528,7 +3529,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3542,7 +3543,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3641,7 +3642,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3655,7 +3656,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3697,7 +3698,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3711,7 +3712,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3985,7 +3986,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3999,7 +4000,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -4041,7 +4042,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -4055,7 +4056,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -4440,7 +4441,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -4456,7 +4457,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -4556,7 +4557,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -4572,7 +4573,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -4615,7 +4616,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
@@ -4632,7 +4633,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
@@ -4768,6 +4769,63 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **list_classification_element_relations**
+> list[ElementClassificationRelation] list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+
+
+
+             list association between classifications and elements         
+
+### Example
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['access_token'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['access_token'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    api_response = api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->list_classification_element_relations: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**list[ElementClassificationRelation]**](ElementClassificationRelation.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **remove_classification_of_element**
 > remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 
@@ -4853,7 +4911,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property set.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -4869,7 +4927,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property set. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -4913,7 +4971,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
@@ -4930,7 +4988,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
@@ -4975,7 +5033,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
@@ -4993,7 +5051,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
@@ -5039,7 +5097,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
@@ -5058,7 +5116,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this unit. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
@@ -5166,7 +5224,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-uuid = 'uuid_example' # str | 
+uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
 try:
@@ -5183,7 +5241,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **uuid** | **str**|  | 
+ **uuid** | **str**| IFC element or element type UUID | 
  **data** | [**Element**](Element.md)|  | 
 
 ### Return type
@@ -5225,7 +5283,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ifc() # Ifc | 
 
@@ -5241,7 +5299,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
  **data** | [**Ifc**](Ifc.md)|  | 
 
@@ -5284,7 +5342,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 structure_file = '/path/to/file.txt' # file |  (optional)
 systems_file = '/path/to/file.txt' # file |  (optional)
@@ -5304,7 +5362,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
  **structure_file** | **file**|  | [optional] 
  **systems_file** | **file**|  | [optional] 
@@ -5595,7 +5653,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
@@ -5612,7 +5670,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Space**](Space.md)|  | 
@@ -5656,7 +5714,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
@@ -5673,7 +5731,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Zone**](Zone.md)|  | 
@@ -5717,7 +5775,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
@@ -5735,7 +5793,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 

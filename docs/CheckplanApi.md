@@ -427,7 +427,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -442,7 +442,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc checker. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -486,7 +486,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this checker result. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -545,7 +545,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -559,7 +559,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this check plan. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -602,7 +602,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule. | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
 
@@ -662,7 +662,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
@@ -679,7 +679,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule component. | 
  **project_pk** | **str**|  | 
  **rule_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
@@ -724,7 +724,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -739,7 +739,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ruleset. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -781,7 +781,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
@@ -798,7 +798,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc checker. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
@@ -843,7 +843,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
@@ -861,7 +861,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this checker result. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
@@ -905,7 +905,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
@@ -921,7 +921,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this check plan. | 
  **project_pk** | **str**|  | 
  **data** | [**CheckPlan**](CheckPlan.md)|  | 
 
@@ -965,7 +965,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
@@ -983,7 +983,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule. | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
  **data** | [**Rule**](Rule.md)|  | 
@@ -1028,7 +1028,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
@@ -1047,7 +1047,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule component. | 
  **project_pk** | **str**|  | 
  **rule_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
@@ -1093,7 +1093,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
@@ -1110,7 +1110,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ruleset. | 
  **project_pk** | **str**|  | 
  **data** | [**Ruleset**](Ruleset.md)|  | 
 
@@ -1153,7 +1153,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -1169,7 +1169,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc checker. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -1213,7 +1213,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -1230,7 +1230,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this checker result. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
@@ -1389,7 +1389,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1404,7 +1404,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this check plan. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1502,7 +1502,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
@@ -1519,7 +1519,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule. | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
 
@@ -1563,7 +1563,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
@@ -1581,7 +1581,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule component. | 
  **project_pk** | **str**|  | 
  **rule_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
@@ -1746,7 +1746,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1762,7 +1762,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ruleset. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1861,7 +1861,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
@@ -1877,7 +1877,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc checker. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
@@ -1921,7 +1921,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
@@ -1938,7 +1938,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc checker. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
@@ -1983,7 +1983,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
@@ -2001,7 +2001,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this checker result. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
@@ -2045,7 +2045,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
@@ -2061,7 +2061,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this check plan. | 
  **project_pk** | **str**|  | 
  **data** | [**CheckPlan**](CheckPlan.md)|  | 
 
@@ -2105,7 +2105,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
@@ -2123,7 +2123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule. | 
  **project_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
  **data** | [**Rule**](Rule.md)|  | 
@@ -2168,7 +2168,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
@@ -2187,7 +2187,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this rule component. | 
  **project_pk** | **str**|  | 
  **rule_pk** | **str**|  | 
  **ruleset_pk** | **str**|  | 
@@ -2233,7 +2233,7 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
@@ -2250,7 +2250,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **check_plan_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ruleset. | 
  **project_pk** | **str**|  | 
  **data** | [**Ruleset**](Ruleset.md)|  | 
 

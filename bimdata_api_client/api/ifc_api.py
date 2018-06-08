@@ -1349,7 +1349,7 @@ class IfcApi(object):
     def create_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_classification_element_relations  # noqa: E501
 
-                 create association between existing classification and existing element       # noqa: E501
+                     create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data, async=True)
@@ -1374,7 +1374,7 @@ class IfcApi(object):
     def create_classification_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_classification_element_relations  # noqa: E501
 
-                 create association between existing classification and existing element       # noqa: E501
+                     create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, async=True)
@@ -2667,7 +2667,7 @@ class IfcApi(object):
     def create_property_set_element_relations(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_property_set_element_relations  # noqa: E501
 
-                 create association between existing classification and existing element       # noqa: E501
+                     create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data, async=True)
@@ -2692,7 +2692,7 @@ class IfcApi(object):
     def create_property_set_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """create_property_set_element_relations  # noqa: E501
 
-                 create association between existing classification and existing element       # noqa: E501
+                     create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async=True
         >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, async=True)
@@ -3300,7 +3300,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3325,7 +3325,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3421,7 +3421,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -3445,7 +3445,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -4028,7 +4028,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -4053,7 +4053,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -4151,7 +4151,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -4176,7 +4176,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -4274,7 +4274,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -4300,7 +4300,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -4407,7 +4407,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -4433,7 +4433,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -4536,7 +4536,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -4561,7 +4561,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -5183,7 +5183,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Space data: (required)
@@ -5209,7 +5209,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Space data: (required)
@@ -5314,7 +5314,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Zone data: (required)
@@ -5340,7 +5340,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Zone data: (required)
@@ -5445,7 +5445,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -5472,7 +5472,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -5709,7 +5709,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5734,7 +5734,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
@@ -5831,7 +5831,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertySet
@@ -5857,7 +5857,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertySet
@@ -6093,7 +6093,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str propertyset_pk: (required)
@@ -6120,7 +6120,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str propertyset_pk: (required)
@@ -6232,7 +6232,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -6260,7 +6260,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -6379,7 +6379,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -6408,7 +6408,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -7180,7 +7180,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: Ifc
                  If the method is called asynchronously,
@@ -7204,7 +7204,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: Ifc
                  If the method is called asynchronously,
@@ -7295,7 +7295,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7319,7 +7319,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7525,7 +7525,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7549,7 +7549,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7640,7 +7640,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -7664,7 +7664,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8231,7 +8231,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8255,7 +8255,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8346,7 +8346,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -8370,7 +8370,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -9159,7 +9159,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Space
@@ -9184,7 +9184,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Space
@@ -9397,7 +9397,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Zone
@@ -9422,7 +9422,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Zone
@@ -9520,7 +9520,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -9546,7 +9546,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -9878,6 +9878,121 @@ class IfcApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def list_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """list_classification_element_relations  # noqa: E501
+
+                     list association between classifications and elements           # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.list_classification_element_relations(cloud_pk, ifc_pk, project_pk, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: list[ElementClassificationRelation]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async'):
+            return self.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        else:
+            (data) = self.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return data
+
+    def list_classification_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """list_classification_element_relations  # noqa: E501
+
+                     list association between classifications and elements           # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async=True
+        >>> thread = api.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        >>> result = thread.get()
+
+        :param async bool
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: list[ElementClassificationRelation]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in six.iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method list_classification_element_relations" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in params or
+                params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `list_classification_element_relations`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in params or
+                params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `list_classification_element_relations`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in params or
+                params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `list_classification_element_relations`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in params:
+            path_params['cloud_pk'] = params['cloud_pk']  # noqa: E501
+        if 'ifc_pk' in params:
+            path_params['ifc_pk'] = params['ifc_pk']  # noqa: E501
+        if 'project_pk' in params:
+            path_params['project_pk'] = params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ElementClassificationRelation]',  # noqa: E501
+            auth_settings=auth_settings,
+            async=params.get('async'),
+            _return_http_data_only=params.get('_return_http_data_only'),
+            _preload_content=params.get('_preload_content', True),
+            _request_timeout=params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def remove_classification_of_element(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """remove_classification_of_element  # noqa: E501
 
@@ -10021,7 +10136,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -10047,7 +10162,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -10152,7 +10267,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str propertyset_pk: (required)
@@ -10179,7 +10294,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str propertyset_pk: (required)
@@ -10291,7 +10406,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -10319,7 +10434,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -10438,7 +10553,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -10467,7 +10582,7 @@ class IfcApi(object):
         :param async bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str property_pk: (required)
@@ -10725,7 +10840,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -10751,7 +10866,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :param Element data: (required)
         :return: Element
                  If the method is called asynchronously,
@@ -10854,7 +10969,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -10879,7 +10994,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param Ifc data: (required)
         :return: Ifc
@@ -10977,7 +11092,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param file structure_file:
         :param file systems_file:
@@ -11006,7 +11121,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
         :param file structure_file:
         :param file systems_file:
@@ -11636,7 +11751,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Space data: (required)
@@ -11662,7 +11777,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Space data: (required)
@@ -11767,7 +11882,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Zone data: (required)
@@ -11793,7 +11908,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Zone data: (required)
@@ -11898,7 +12013,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)
@@ -11925,7 +12040,7 @@ class IfcApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str zone_pk: (required)

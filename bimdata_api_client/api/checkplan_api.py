@@ -806,7 +806,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -831,7 +831,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -930,7 +930,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -956,7 +956,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -1060,7 +1060,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1084,7 +1084,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1176,7 +1176,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :return: None
@@ -1202,7 +1202,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :return: None
@@ -1307,7 +1307,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -1334,7 +1334,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -1446,7 +1446,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1471,7 +1471,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :return: None
                  If the method is called asynchronously,
@@ -1568,7 +1568,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -1594,7 +1594,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -1700,7 +1700,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
@@ -1727,7 +1727,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
@@ -1838,7 +1838,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -1863,7 +1863,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -1962,7 +1962,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :param Rule data: (required)
@@ -1989,7 +1989,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :param Rule data: (required)
@@ -2101,7 +2101,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -2129,7 +2129,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -2248,7 +2248,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
@@ -2274,7 +2274,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
@@ -2378,7 +2378,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: IfcChecker
@@ -2403,7 +2403,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: IfcChecker
@@ -2502,7 +2502,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: CheckerResult
@@ -2528,7 +2528,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: CheckerResult
@@ -2870,7 +2870,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
@@ -2894,7 +2894,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :return: CheckPlan
                  If the method is called asynchronously,
@@ -3093,7 +3093,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :return: Rule
@@ -3119,7 +3119,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :return: Rule
@@ -3224,7 +3224,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -3251,7 +3251,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -3617,7 +3617,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :return: Ruleset
                  If the method is called asynchronously,
@@ -3642,7 +3642,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :return: Ruleset
                  If the method is called asynchronously,
@@ -3854,7 +3854,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -3880,7 +3880,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -3985,7 +3985,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -4011,7 +4011,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
@@ -4117,7 +4117,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
@@ -4144,7 +4144,7 @@ class CheckplanApi(object):
         :param async bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this checker result. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
@@ -4255,7 +4255,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -4280,7 +4280,7 @@ class CheckplanApi(object):
 
         :param async bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
         :param CheckPlan data: (required)
         :return: CheckPlan
@@ -4379,7 +4379,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :param Rule data: (required)
@@ -4406,7 +4406,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule. (required)
         :param str project_pk: (required)
         :param str ruleset_pk: (required)
         :param Rule data: (required)
@@ -4518,7 +4518,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -4546,7 +4546,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this rule component. (required)
         :param str project_pk: (required)
         :param str rule_pk: (required)
         :param str ruleset_pk: (required)
@@ -4665,7 +4665,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
@@ -4691,7 +4691,7 @@ class CheckplanApi(object):
         :param async bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this ruleset. (required)
         :param str project_pk: (required)
         :param Ruleset data: (required)
         :return: Ruleset
