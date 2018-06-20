@@ -14,10 +14,11 @@ references:
         - v1-repo
 
   restore_env: &restore_env
-    - restore_cache:
-          keys:
-            - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
-            - v1-dependencies
+    restore_cache:
+      keys:
+        - v1-dependencies-{{ checksum "requirements.txt" }}-{{ checksum "test-requirements.txt" }}
+        - v1-dependencies
+
 jobs:
   checkout_code:
     <<: *container_config
