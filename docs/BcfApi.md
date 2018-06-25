@@ -1,6 +1,6 @@
 # bimdata_api_client.BcfApi
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api-beta.bimdata.io/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -112,8 +112,6 @@ Method | HTTP request | Description
 
 
 
-
-
 ### Example
 ```python
 from __future__ import print_function
@@ -151,15 +149,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_comments_events_delete**
 > bcf2_1_projects_topics_comments_events_delete(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -207,15 +203,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_comments_events_delete_0**
 > bcf2_1_projects_topics_comments_events_delete_0(comments_pk, id, projects_pk, topics_pk)
-
-
 
 
 
@@ -265,15 +259,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_events_delete**
 > bcf2_1_projects_topics_events_delete(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -321,15 +313,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_bitmap_delete**
 > bcf2_1_projects_topics_viewpoints_bitmap_delete(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -379,15 +369,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_coloring_delete**
 > bcf2_1_projects_topics_viewpoints_coloring_delete(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -437,15 +425,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_delete**
 > bcf2_1_projects_topics_viewpoints_delete(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -493,15 +479,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_selection_delete**
 > bcf2_1_projects_topics_viewpoints_selection_delete(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -551,15 +535,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bcf2_1_projects_topics_viewpoints_visibility_delete**
 > bcf2_1_projects_topics_viewpoints_visibility_delete(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -609,15 +591,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bcf_document**
 > create_bcf_document(projects_pk, guid=guid, filename=filename)
-
-
 
 
 
@@ -652,7 +632,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
- **guid** | [**str**](.md)|  | [optional] 
+ **guid** | [**str**](str.md)|  | [optional] 
  **filename** | **str**|  | [optional] 
 
 ### Return type
@@ -666,14 +646,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bcf_project**
-> BcfProject create_bcf_project(data)
-
-
+> BcfProject create_bcf_project(bcf_project)
 
 
 
@@ -693,10 +671,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.BcfProject() # BcfProject | 
+bcf_project = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
-    api_response = api_instance.create_bcf_project(data)
+    api_response = api_instance.create_bcf_project(bcf_project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_bcf_project: %s\n" % e)
@@ -706,7 +684,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **bcf_project** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
@@ -724,9 +702,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_bitmap**
-> Bitmap create_bitmap(projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Bitmap create_bitmap(projects_pk, topics_pk, viewpoints_pk, bitmap)
 
 
 
@@ -749,10 +725,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Bitmap() # Bitmap | 
+bitmap = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.create_bitmap(projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.create_bitmap(projects_pk, topics_pk, viewpoints_pk, bitmap)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_bitmap: %s\n" % e)
@@ -765,7 +741,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Bitmap**](Bitmap.md)|  | 
+ **bitmap** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
 
@@ -783,9 +759,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_coloring**
-> Coloring create_coloring(projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Coloring create_coloring(projects_pk, topics_pk, viewpoints_pk, coloring)
 
 
 
@@ -808,10 +782,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Coloring() # Coloring | 
+coloring = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.create_coloring(projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.create_coloring(projects_pk, topics_pk, viewpoints_pk, coloring)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_coloring: %s\n" % e)
@@ -824,7 +798,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Coloring**](Coloring.md)|  | 
+ **coloring** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
 
@@ -842,9 +816,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment**
-> Comment create_comment(projects_pk, topics_pk, data)
-
-
+> Comment create_comment(projects_pk, topics_pk, comment)
 
 
 
@@ -866,10 +838,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Comment() # Comment | 
+comment = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.create_comment(projects_pk, topics_pk, data)
+    api_response = api_instance.create_comment(projects_pk, topics_pk, comment)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment: %s\n" % e)
@@ -881,7 +853,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Comment**](Comment.md)|  | 
+ **comment** | [**Comment**](Comment.md)|  | 
 
 ### Return type
 
@@ -899,9 +871,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment_event**
-> CommentEvent create_comment_event(projects_pk, topics_pk, data)
-
-
+> CommentEvent create_comment_event(projects_pk, topics_pk, comment_event)
 
 
 
@@ -923,10 +893,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.create_comment_event(projects_pk, topics_pk, data)
+    api_response = api_instance.create_comment_event(projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment_event: %s\n" % e)
@@ -938,7 +908,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -956,9 +926,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_comment_event_0**
-> CommentEvent create_comment_event_0(comments_pk, projects_pk, topics_pk, data)
-
-
+> CommentEvent create_comment_event_0(comments_pk, projects_pk, topics_pk, comment_event)
 
 
 
@@ -981,10 +949,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 comments_pk = 'comments_pk_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.create_comment_event_0(comments_pk, projects_pk, topics_pk, data)
+    api_response = api_instance.create_comment_event_0(comments_pk, projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_comment_event_0: %s\n" % e)
@@ -997,7 +965,7 @@ Name | Type | Description  | Notes
  **comments_pk** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -1015,9 +983,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document_reference**
-> DocumentReference create_document_reference(projects_pk, topics_pk, data)
-
-
+> DocumentReference create_document_reference(projects_pk, topics_pk, document_reference)
 
 
 
@@ -1039,10 +1005,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.DocumentReference() # DocumentReference | 
+document_reference = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.create_document_reference(projects_pk, topics_pk, data)
+    api_response = api_instance.create_document_reference(projects_pk, topics_pk, document_reference)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_document_reference: %s\n" % e)
@@ -1054,7 +1020,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**DocumentReference**](DocumentReference.md)|  | 
+ **document_reference** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
 
@@ -1072,9 +1038,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_file**
-> BimSnippet create_file(projects_pk, topics_pk, data)
-
-
+> BimSnippet create_file(projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -1096,10 +1060,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.create_file(projects_pk, topics_pk, data)
+    api_response = api_instance.create_file(projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_file: %s\n" % e)
@@ -1111,7 +1075,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -1129,9 +1093,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_related_topic**
-> RelatedTopic create_related_topic(projects_pk, topics_pk, data)
-
-
+> RelatedTopic create_related_topic(projects_pk, topics_pk, related_topic)
 
 
 
@@ -1153,10 +1115,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
+related_topic = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.create_related_topic(projects_pk, topics_pk, data)
+    api_response = api_instance.create_related_topic(projects_pk, topics_pk, related_topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_related_topic: %s\n" % e)
@@ -1168,7 +1130,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
+ **related_topic** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
 
@@ -1186,9 +1148,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_selection**
-> Component create_selection(projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Component create_selection(projects_pk, topics_pk, viewpoints_pk, component)
 
 
 
@@ -1211,10 +1171,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Component() # Component | 
+component = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.create_selection(projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.create_selection(projects_pk, topics_pk, viewpoints_pk, component)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_selection: %s\n" % e)
@@ -1227,7 +1187,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Component**](Component.md)|  | 
+ **component** | [**Component**](Component.md)|  | 
 
 ### Return type
 
@@ -1245,9 +1205,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_snippet**
-> BimSnippet create_snippet(projects_pk, topics_pk, data)
-
-
+> BimSnippet create_snippet(projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -1269,10 +1227,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.create_snippet(projects_pk, topics_pk, data)
+    api_response = api_instance.create_snippet(projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_snippet: %s\n" % e)
@@ -1284,7 +1242,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -1302,9 +1260,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_topic**
-> Topic create_topic(projects_pk, data)
-
-
+> Topic create_topic(projects_pk, topic)
 
 
 
@@ -1325,10 +1281,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+topic = bimdata_api_client.Topic() # Topic | 
 
 try:
-    api_response = api_instance.create_topic(projects_pk, data)
+    api_response = api_instance.create_topic(projects_pk, topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_topic: %s\n" % e)
@@ -1339,7 +1295,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **topic** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
@@ -1357,9 +1313,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_topic_event**
-> TopicEvents create_topic_event(projects_pk, topics_pk, data)
-
-
+> TopicEvents create_topic_event(projects_pk, topics_pk, topic_events)
 
 
 
@@ -1381,10 +1335,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.TopicEvents() # TopicEvents | 
+topic_events = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.create_topic_event(projects_pk, topics_pk, data)
+    api_response = api_instance.create_topic_event(projects_pk, topics_pk, topic_events)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_topic_event: %s\n" % e)
@@ -1396,7 +1350,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**TopicEvents**](TopicEvents.md)|  | 
+ **topic_events** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
 
@@ -1414,9 +1368,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_viewpoint**
-> Viewpoint create_viewpoint(projects_pk, topics_pk, data)
-
-
+> Viewpoint create_viewpoint(projects_pk, topics_pk, viewpoint)
 
 
 
@@ -1438,10 +1390,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
+viewpoint = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.create_viewpoint(projects_pk, topics_pk, data)
+    api_response = api_instance.create_viewpoint(projects_pk, topics_pk, viewpoint)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
@@ -1453,7 +1405,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **viewpoint** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
 
@@ -1471,9 +1423,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_visibility**
-> Visibility create_visibility(projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Visibility create_visibility(projects_pk, topics_pk, viewpoints_pk, visibility)
 
 
 
@@ -1496,10 +1446,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Visibility() # Visibility | 
+visibility = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.create_visibility(projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.create_visibility(projects_pk, topics_pk, viewpoints_pk, visibility)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->create_visibility: %s\n" % e)
@@ -1512,7 +1462,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Visibility**](Visibility.md)|  | 
+ **visibility** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type
 
@@ -1531,8 +1481,6 @@ Name | Type | Description  | Notes
 
 # **delete_bcf_document**
 > delete_bcf_document(id, projects_pk)
-
-
 
 
 
@@ -1578,15 +1526,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_bcf_project**
 > delete_bcf_project(id)
-
-
 
 
 
@@ -1630,15 +1576,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_comment**
 > delete_comment(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -1686,15 +1630,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_reference**
 > delete_document_reference(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -1742,15 +1684,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_file**
 > delete_file(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -1798,15 +1738,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_related_topic**
 > delete_related_topic(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -1854,15 +1792,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_snippet**
 > delete_snippet(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -1910,15 +1846,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_topic**
 > delete_topic(id, projects_pk)
-
-
 
 
 
@@ -1964,15 +1898,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bcf_document**
 > full_update_bcf_document(id, projects_pk, guid=guid, filename=filename)
-
-
 
 
 
@@ -2009,7 +1941,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **guid** | [**str**](.md)|  | [optional] 
+ **guid** | [**str**](str.md)|  | [optional] 
  **filename** | **str**|  | [optional] 
 
 ### Return type
@@ -2023,14 +1955,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bcf_project**
-> BcfProject full_update_bcf_project(id, data)
-
-
+> BcfProject full_update_bcf_project(id, bcf_project)
 
 
 
@@ -2051,10 +1981,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.BcfProject() # BcfProject | 
+bcf_project = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
-    api_response = api_instance.full_update_bcf_project(id, data)
+    api_response = api_instance.full_update_bcf_project(id, bcf_project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_bcf_project: %s\n" % e)
@@ -2065,7 +1995,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **bcf_project** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
@@ -2083,9 +2013,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_bitmap**
-> Bitmap full_update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Bitmap full_update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, bitmap)
 
 
 
@@ -2109,10 +2037,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Bitmap() # Bitmap | 
+bitmap = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.full_update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.full_update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, bitmap)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_bitmap: %s\n" % e)
@@ -2126,7 +2054,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Bitmap**](Bitmap.md)|  | 
+ **bitmap** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
 
@@ -2144,9 +2072,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_coloring**
-> Coloring full_update_coloring(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Coloring full_update_coloring(id, projects_pk, topics_pk, viewpoints_pk, coloring)
 
 
 
@@ -2170,10 +2096,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Coloring() # Coloring | 
+coloring = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.full_update_coloring(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.full_update_coloring(id, projects_pk, topics_pk, viewpoints_pk, coloring)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_coloring: %s\n" % e)
@@ -2187,7 +2113,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Coloring**](Coloring.md)|  | 
+ **coloring** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
 
@@ -2205,9 +2131,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment**
-> Comment full_update_comment(id, projects_pk, topics_pk, data)
-
-
+> Comment full_update_comment(id, projects_pk, topics_pk, comment)
 
 
 
@@ -2230,10 +2154,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Comment() # Comment | 
+comment = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.full_update_comment(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_comment(id, projects_pk, topics_pk, comment)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment: %s\n" % e)
@@ -2246,7 +2170,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Comment**](Comment.md)|  | 
+ **comment** | [**Comment**](Comment.md)|  | 
 
 ### Return type
 
@@ -2264,9 +2188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment_event**
-> CommentEvent full_update_comment_event(id, projects_pk, topics_pk, data)
-
-
+> CommentEvent full_update_comment_event(id, projects_pk, topics_pk, comment_event)
 
 
 
@@ -2289,10 +2211,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.full_update_comment_event(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_comment_event(id, projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment_event: %s\n" % e)
@@ -2305,7 +2227,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -2323,9 +2245,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_comment_event_0**
-> CommentEvent full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
-
-
+> CommentEvent full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, comment_event)
 
 
 
@@ -2349,10 +2269,10 @@ comments_pk = 'comments_pk_example' # str |
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_comment_event_0(comments_pk, id, projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_comment_event_0: %s\n" % e)
@@ -2366,7 +2286,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -2384,9 +2304,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document_reference**
-> DocumentReference full_update_document_reference(id, projects_pk, topics_pk, data)
-
-
+> DocumentReference full_update_document_reference(id, projects_pk, topics_pk, document_reference)
 
 
 
@@ -2409,10 +2327,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.DocumentReference() # DocumentReference | 
+document_reference = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.full_update_document_reference(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_document_reference(id, projects_pk, topics_pk, document_reference)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_document_reference: %s\n" % e)
@@ -2425,7 +2343,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**DocumentReference**](DocumentReference.md)|  | 
+ **document_reference** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
 
@@ -2443,9 +2361,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_file**
-> BimSnippet full_update_file(id, projects_pk, topics_pk, data)
-
-
+> BimSnippet full_update_file(id, projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -2468,10 +2384,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.full_update_file(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_file(id, projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_file: %s\n" % e)
@@ -2484,7 +2400,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -2502,9 +2418,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_related_topic**
-> RelatedTopic full_update_related_topic(id, projects_pk, topics_pk, data)
-
-
+> RelatedTopic full_update_related_topic(id, projects_pk, topics_pk, related_topic)
 
 
 
@@ -2527,10 +2441,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
+related_topic = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.full_update_related_topic(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_related_topic(id, projects_pk, topics_pk, related_topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_related_topic: %s\n" % e)
@@ -2543,7 +2457,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
+ **related_topic** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
 
@@ -2561,9 +2475,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_selection**
-> Component full_update_selection(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Component full_update_selection(id, projects_pk, topics_pk, viewpoints_pk, component)
 
 
 
@@ -2587,10 +2499,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Component() # Component | 
+component = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.full_update_selection(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.full_update_selection(id, projects_pk, topics_pk, viewpoints_pk, component)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_selection: %s\n" % e)
@@ -2604,7 +2516,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Component**](Component.md)|  | 
+ **component** | [**Component**](Component.md)|  | 
 
 ### Return type
 
@@ -2622,9 +2534,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_snippet**
-> BimSnippet full_update_snippet(id, projects_pk, topics_pk, data)
-
-
+> BimSnippet full_update_snippet(id, projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -2647,10 +2557,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.full_update_snippet(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_snippet(id, projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_snippet: %s\n" % e)
@@ -2663,7 +2573,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -2681,9 +2591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_topic**
-> Topic full_update_topic(id, projects_pk, data)
-
-
+> Topic full_update_topic(id, projects_pk, topic)
 
 
 
@@ -2705,10 +2613,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+topic = bimdata_api_client.Topic() # Topic | 
 
 try:
-    api_response = api_instance.full_update_topic(id, projects_pk, data)
+    api_response = api_instance.full_update_topic(id, projects_pk, topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_topic: %s\n" % e)
@@ -2720,7 +2628,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **topic** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
@@ -2738,9 +2646,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_topic_event**
-> TopicEvents full_update_topic_event(id, projects_pk, topics_pk, data)
-
-
+> TopicEvents full_update_topic_event(id, projects_pk, topics_pk, topic_events)
 
 
 
@@ -2763,10 +2669,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.TopicEvents() # TopicEvents | 
+topic_events = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.full_update_topic_event(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_topic_event(id, projects_pk, topics_pk, topic_events)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_topic_event: %s\n" % e)
@@ -2779,7 +2685,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**TopicEvents**](TopicEvents.md)|  | 
+ **topic_events** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
 
@@ -2797,9 +2703,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_viewpoint**
-> Viewpoint full_update_viewpoint(id, projects_pk, topics_pk, data)
-
-
+> Viewpoint full_update_viewpoint(id, projects_pk, topics_pk, viewpoint)
 
 
 
@@ -2822,10 +2726,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
+viewpoint = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.full_update_viewpoint(id, projects_pk, topics_pk, data)
+    api_response = api_instance.full_update_viewpoint(id, projects_pk, topics_pk, viewpoint)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_viewpoint: %s\n" % e)
@@ -2838,7 +2742,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **viewpoint** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
 
@@ -2856,9 +2760,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_visibility**
-> Visibility full_update_visibility(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Visibility full_update_visibility(id, projects_pk, topics_pk, viewpoints_pk, visibility)
 
 
 
@@ -2882,10 +2784,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Visibility() # Visibility | 
+visibility = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.full_update_visibility(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.full_update_visibility(id, projects_pk, topics_pk, viewpoints_pk, visibility)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->full_update_visibility: %s\n" % e)
@@ -2899,7 +2801,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Visibility**](Visibility.md)|  | 
+ **visibility** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type
 
@@ -2918,8 +2820,6 @@ Name | Type | Description  | Notes
 
 # **get_all_comments_events**
 > list[CommentEvent] get_all_comments_events(projects_pk)
-
-
 
 
 
@@ -2964,15 +2864,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_all_topics_events**
 > list[TopicEvents] get_all_topics_events(projects_pk)
-
-
 
 
 
@@ -3017,15 +2915,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_document**
 > get_bcf_document(id, projects_pk)
-
-
 
 
 
@@ -3071,15 +2967,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_documents**
 > get_bcf_documents(projects_pk)
-
-
 
 
 
@@ -3123,15 +3017,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_project**
 > BcfProject get_bcf_project(id)
-
-
 
 
 
@@ -3176,15 +3068,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bcf_projects**
 > list[BcfProject] get_bcf_projects()
-
-
 
 
 
@@ -3225,15 +3115,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bitmap**
 > Bitmap get_bitmap(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -3284,15 +3172,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_bitmaps**
 > list[Bitmap] get_bitmaps(projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -3341,15 +3227,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_coloring**
 > Coloring get_coloring(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -3400,15 +3284,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_colorings**
 > list[Coloring] get_colorings(projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -3457,15 +3339,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment**
 > Comment get_comment(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -3514,15 +3394,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_event**
 > CommentEvent get_comment_event(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -3571,15 +3449,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_event_0**
 > CommentEvent get_comment_event_0(comments_pk, id, projects_pk, topics_pk)
-
-
 
 
 
@@ -3630,15 +3506,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_events**
 > list[CommentEvent] get_comment_events(projects_pk, topics_pk)
-
-
 
 
 
@@ -3685,15 +3559,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comment_events_0**
 > list[CommentEvent] get_comment_events_0(comments_pk, projects_pk, topics_pk)
-
-
 
 
 
@@ -3742,15 +3614,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_comments**
 > list[Comment] get_comments(projects_pk, topics_pk)
-
-
 
 
 
@@ -3797,15 +3667,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_reference**
 > DocumentReference get_document_reference(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -3854,15 +3722,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document_references**
 > list[DocumentReference] get_document_references(projects_pk, topics_pk)
-
-
 
 
 
@@ -3909,15 +3775,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_extensions**
 > list[Extensions] get_extensions(projects_pk)
-
-
 
 
 
@@ -3962,15 +3826,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_file**
 > BimSnippet get_file(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -4019,15 +3881,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_files**
 > list[BimSnippet] get_files(projects_pk, topics_pk)
-
-
 
 
 
@@ -4074,15 +3934,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_related_topic**
 > RelatedTopic get_related_topic(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -4131,15 +3989,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_related_topics**
 > list[RelatedTopic] get_related_topics(projects_pk, topics_pk)
-
-
 
 
 
@@ -4186,15 +4042,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_selection**
 > Component get_selection(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -4245,15 +4099,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_selections**
 > list[Component] get_selections(projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -4302,15 +4154,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snapshots**
 > list[Snapshot] get_snapshots(projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -4359,15 +4209,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snippet**
 > BimSnippet get_snippet(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -4416,15 +4264,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_snippets**
 > list[BimSnippet] get_snippets(projects_pk, topics_pk)
-
-
 
 
 
@@ -4471,15 +4317,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic**
 > Topic get_topic(id, projects_pk)
-
-
 
 
 
@@ -4526,15 +4370,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic_event**
 > TopicEvents get_topic_event(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -4583,15 +4425,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic_events**
 > list[TopicEvents] get_topic_events(projects_pk, topics_pk)
-
-
 
 
 
@@ -4638,15 +4478,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topics**
 > list[Topic] get_topics(projects_pk)
-
-
 
 
 
@@ -4691,15 +4529,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoint**
 > Viewpoint get_viewpoint(id, projects_pk, topics_pk)
-
-
 
 
 
@@ -4748,15 +4584,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoints**
 > list[Viewpoint] get_viewpoints(projects_pk, topics_pk)
-
-
 
 
 
@@ -4803,15 +4637,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_visibilities**
 > list[Visibility] get_visibilities(projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -4860,15 +4692,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_visibility**
 > Visibility get_visibility(id, projects_pk, topics_pk, viewpoints_pk)
-
-
 
 
 
@@ -4919,15 +4749,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bcf_document**
 > update_bcf_document(id, projects_pk, guid=guid, filename=filename)
-
-
 
 
 
@@ -4964,7 +4792,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **guid** | [**str**](.md)|  | [optional] 
+ **guid** | [**str**](str.md)|  | [optional] 
  **filename** | **str**|  | [optional] 
 
 ### Return type
@@ -4978,14 +4806,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bcf_project**
-> BcfProject update_bcf_project(id, data)
-
-
+> BcfProject update_bcf_project(id, bcf_project)
 
 
 
@@ -5006,10 +4832,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.BcfProject() # BcfProject | 
+bcf_project = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
-    api_response = api_instance.update_bcf_project(id, data)
+    api_response = api_instance.update_bcf_project(id, bcf_project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_bcf_project: %s\n" % e)
@@ -5020,7 +4846,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**BcfProject**](BcfProject.md)|  | 
+ **bcf_project** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
 
@@ -5038,9 +4864,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_bitmap**
-> Bitmap update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Bitmap update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, bitmap)
 
 
 
@@ -5064,10 +4888,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Bitmap() # Bitmap | 
+bitmap = bimdata_api_client.Bitmap() # Bitmap | 
 
 try:
-    api_response = api_instance.update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.update_bitmap(id, projects_pk, topics_pk, viewpoints_pk, bitmap)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_bitmap: %s\n" % e)
@@ -5081,7 +4905,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Bitmap**](Bitmap.md)|  | 
+ **bitmap** | [**Bitmap**](Bitmap.md)|  | 
 
 ### Return type
 
@@ -5099,9 +4923,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_coloring**
-> Coloring update_coloring(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Coloring update_coloring(id, projects_pk, topics_pk, viewpoints_pk, coloring)
 
 
 
@@ -5125,10 +4947,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Coloring() # Coloring | 
+coloring = bimdata_api_client.Coloring() # Coloring | 
 
 try:
-    api_response = api_instance.update_coloring(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.update_coloring(id, projects_pk, topics_pk, viewpoints_pk, coloring)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_coloring: %s\n" % e)
@@ -5142,7 +4964,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Coloring**](Coloring.md)|  | 
+ **coloring** | [**Coloring**](Coloring.md)|  | 
 
 ### Return type
 
@@ -5160,9 +4982,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment**
-> Comment update_comment(id, projects_pk, topics_pk, data)
-
-
+> Comment update_comment(id, projects_pk, topics_pk, comment)
 
 
 
@@ -5185,10 +5005,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Comment() # Comment | 
+comment = bimdata_api_client.Comment() # Comment | 
 
 try:
-    api_response = api_instance.update_comment(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_comment(id, projects_pk, topics_pk, comment)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment: %s\n" % e)
@@ -5201,7 +5021,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Comment**](Comment.md)|  | 
+ **comment** | [**Comment**](Comment.md)|  | 
 
 ### Return type
 
@@ -5219,9 +5039,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment_event**
-> CommentEvent update_comment_event(id, projects_pk, topics_pk, data)
-
-
+> CommentEvent update_comment_event(id, projects_pk, topics_pk, comment_event)
 
 
 
@@ -5244,10 +5062,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.update_comment_event(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_comment_event(id, projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment_event: %s\n" % e)
@@ -5260,7 +5078,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -5278,9 +5096,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_comment_event_0**
-> CommentEvent update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
-
-
+> CommentEvent update_comment_event_0(comments_pk, id, projects_pk, topics_pk, comment_event)
 
 
 
@@ -5304,10 +5120,10 @@ comments_pk = 'comments_pk_example' # str |
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.CommentEvent() # CommentEvent | 
+comment_event = bimdata_api_client.CommentEvent() # CommentEvent | 
 
 try:
-    api_response = api_instance.update_comment_event_0(comments_pk, id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_comment_event_0(comments_pk, id, projects_pk, topics_pk, comment_event)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_comment_event_0: %s\n" % e)
@@ -5321,7 +5137,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**CommentEvent**](CommentEvent.md)|  | 
+ **comment_event** | [**CommentEvent**](CommentEvent.md)|  | 
 
 ### Return type
 
@@ -5339,9 +5155,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document_reference**
-> DocumentReference update_document_reference(id, projects_pk, topics_pk, data)
-
-
+> DocumentReference update_document_reference(id, projects_pk, topics_pk, document_reference)
 
 
 
@@ -5364,10 +5178,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.DocumentReference() # DocumentReference | 
+document_reference = bimdata_api_client.DocumentReference() # DocumentReference | 
 
 try:
-    api_response = api_instance.update_document_reference(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_document_reference(id, projects_pk, topics_pk, document_reference)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_document_reference: %s\n" % e)
@@ -5380,7 +5194,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**DocumentReference**](DocumentReference.md)|  | 
+ **document_reference** | [**DocumentReference**](DocumentReference.md)|  | 
 
 ### Return type
 
@@ -5398,9 +5212,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_file**
-> BimSnippet update_file(id, projects_pk, topics_pk, data)
-
-
+> BimSnippet update_file(id, projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -5423,10 +5235,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.update_file(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_file(id, projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_file: %s\n" % e)
@@ -5439,7 +5251,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -5457,9 +5269,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_related_topic**
-> RelatedTopic update_related_topic(id, projects_pk, topics_pk, data)
-
-
+> RelatedTopic update_related_topic(id, projects_pk, topics_pk, related_topic)
 
 
 
@@ -5482,10 +5292,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.RelatedTopic() # RelatedTopic | 
+related_topic = bimdata_api_client.RelatedTopic() # RelatedTopic | 
 
 try:
-    api_response = api_instance.update_related_topic(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_related_topic(id, projects_pk, topics_pk, related_topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_related_topic: %s\n" % e)
@@ -5498,7 +5308,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**RelatedTopic**](RelatedTopic.md)|  | 
+ **related_topic** | [**RelatedTopic**](RelatedTopic.md)|  | 
 
 ### Return type
 
@@ -5516,9 +5326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_selection**
-> Component update_selection(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Component update_selection(id, projects_pk, topics_pk, viewpoints_pk, component)
 
 
 
@@ -5542,10 +5350,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Component() # Component | 
+component = bimdata_api_client.Component() # Component | 
 
 try:
-    api_response = api_instance.update_selection(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.update_selection(id, projects_pk, topics_pk, viewpoints_pk, component)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_selection: %s\n" % e)
@@ -5559,7 +5367,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Component**](Component.md)|  | 
+ **component** | [**Component**](Component.md)|  | 
 
 ### Return type
 
@@ -5577,9 +5385,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_snippet**
-> BimSnippet update_snippet(id, projects_pk, topics_pk, data)
-
-
+> BimSnippet update_snippet(id, projects_pk, topics_pk, bim_snippet)
 
 
 
@@ -5602,10 +5408,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.BimSnippet() # BimSnippet | 
+bim_snippet = bimdata_api_client.BimSnippet() # BimSnippet | 
 
 try:
-    api_response = api_instance.update_snippet(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_snippet(id, projects_pk, topics_pk, bim_snippet)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_snippet: %s\n" % e)
@@ -5618,7 +5424,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**BimSnippet**](BimSnippet.md)|  | 
+ **bim_snippet** | [**BimSnippet**](BimSnippet.md)|  | 
 
 ### Return type
 
@@ -5636,9 +5442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_topic**
-> Topic update_topic(id, projects_pk, data)
-
-
+> Topic update_topic(id, projects_pk, topic)
 
 
 
@@ -5660,10 +5464,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Topic() # Topic | 
+topic = bimdata_api_client.Topic() # Topic | 
 
 try:
-    api_response = api_instance.update_topic(id, projects_pk, data)
+    api_response = api_instance.update_topic(id, projects_pk, topic)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_topic: %s\n" % e)
@@ -5675,7 +5479,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
- **data** | [**Topic**](Topic.md)|  | 
+ **topic** | [**Topic**](Topic.md)|  | 
 
 ### Return type
 
@@ -5693,9 +5497,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_topic_event**
-> TopicEvents update_topic_event(id, projects_pk, topics_pk, data)
-
-
+> TopicEvents update_topic_event(id, projects_pk, topics_pk, topic_events)
 
 
 
@@ -5718,10 +5520,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.TopicEvents() # TopicEvents | 
+topic_events = bimdata_api_client.TopicEvents() # TopicEvents | 
 
 try:
-    api_response = api_instance.update_topic_event(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_topic_event(id, projects_pk, topics_pk, topic_events)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_topic_event: %s\n" % e)
@@ -5734,7 +5536,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**TopicEvents**](TopicEvents.md)|  | 
+ **topic_events** | [**TopicEvents**](TopicEvents.md)|  | 
 
 ### Return type
 
@@ -5752,9 +5554,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_viewpoint**
-> Viewpoint update_viewpoint(id, projects_pk, topics_pk, data)
-
-
+> Viewpoint update_viewpoint(id, projects_pk, topics_pk, viewpoint)
 
 
 
@@ -5777,10 +5577,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 id = 'id_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
+viewpoint = bimdata_api_client.Viewpoint() # Viewpoint | 
 
 try:
-    api_response = api_instance.update_viewpoint(id, projects_pk, topics_pk, data)
+    api_response = api_instance.update_viewpoint(id, projects_pk, topics_pk, viewpoint)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
@@ -5793,7 +5593,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
- **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **viewpoint** | [**Viewpoint**](Viewpoint.md)|  | 
 
 ### Return type
 
@@ -5811,9 +5611,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_visibility**
-> Visibility update_visibility(id, projects_pk, topics_pk, viewpoints_pk, data)
-
-
+> Visibility update_visibility(id, projects_pk, topics_pk, viewpoints_pk, visibility)
 
 
 
@@ -5837,10 +5635,10 @@ id = 'id_example' # str |
 projects_pk = 'projects_pk_example' # str | 
 topics_pk = 'topics_pk_example' # str | 
 viewpoints_pk = 'viewpoints_pk_example' # str | 
-data = bimdata_api_client.Visibility() # Visibility | 
+visibility = bimdata_api_client.Visibility() # Visibility | 
 
 try:
-    api_response = api_instance.update_visibility(id, projects_pk, topics_pk, viewpoints_pk, data)
+    api_response = api_instance.update_visibility(id, projects_pk, topics_pk, viewpoints_pk, visibility)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->update_visibility: %s\n" % e)
@@ -5854,7 +5652,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_pk** | **str**|  | 
  **viewpoints_pk** | **str**|  | 
- **data** | [**Visibility**](Visibility.md)|  | 
+ **visibility** | [**Visibility**](Visibility.md)|  | 
 
 ### Return type
 
