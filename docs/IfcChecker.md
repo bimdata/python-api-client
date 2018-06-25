@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**creator** | **int** |  | [optional] 
+**creator** | [**FosUser**](FosUser.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **checkplan_id** | **int** |  | [optional] 
 **results** | [**list[IfcCheckerResults]**](IfcCheckerResults.md) |  | [optional] 

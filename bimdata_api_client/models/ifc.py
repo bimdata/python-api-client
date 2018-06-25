@@ -16,8 +16,8 @@ import re  # noqa: F401
 
 import six
 
-from bimdata_api_client.models.ifc_creator import IfcCreator  # noqa: F401,E501
-from bimdata_api_client.models.ifc_document import IfcDocument  # noqa: F401,E501
+from bimdata_api_client.models.document import Document  # noqa: F401,E501
+from bimdata_api_client.models.fos_user import FosUser  # noqa: F401,E501
 
 
 class Ifc(object):
@@ -36,12 +36,12 @@ class Ifc(object):
     swagger_types = {
         'id': 'int',
         'name': 'str',
-        'creator': 'IfcCreator',
+        'creator': 'FosUser',
         'status': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'document_id': 'str',
-        'document': 'IfcDocument',
+        'document': 'Document',
         'structure_file': 'str',
         'systems_file': 'str',
         'map_file': 'str',
@@ -168,7 +168,7 @@ class Ifc(object):
 
 
         :return: The creator of this Ifc.  # noqa: E501
-        :rtype: IfcCreator
+        :rtype: FosUser
         """
         return self._creator
 
@@ -178,7 +178,7 @@ class Ifc(object):
 
 
         :param creator: The creator of this Ifc.  # noqa: E501
-        :type: IfcCreator
+        :type: FosUser
         """
 
         self._creator = creator
@@ -279,7 +279,7 @@ class Ifc(object):
 
 
         :return: The document of this Ifc.  # noqa: E501
-        :rtype: IfcDocument
+        :rtype: Document
         """
         return self._document
 
@@ -289,7 +289,7 @@ class Ifc(object):
 
 
         :param document: The document of this Ifc.  # noqa: E501
-        :type: IfcDocument
+        :type: Document
         """
 
         self._document = document

@@ -1,6 +1,6 @@
 # bimdata_api_client.CloudApi
 
-All URIs are relative to *https://api-staging.bimdata.io*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

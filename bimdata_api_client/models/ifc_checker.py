@@ -16,6 +16,7 @@ import re  # noqa: F401
 
 import six
 
+from bimdata_api_client.models.fos_user import FosUser  # noqa: F401,E501
 from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan  # noqa: F401,E501
 from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults  # noqa: F401,E501
 
@@ -35,7 +36,7 @@ class IfcChecker(object):
     """
     swagger_types = {
         'id': 'int',
-        'creator': 'int',
+        'creator': 'FosUser',
         'name': 'str',
         'checkplan_id': 'int',
         'results': 'list[IfcCheckerResults]',
@@ -112,7 +113,7 @@ class IfcChecker(object):
 
 
         :return: The creator of this IfcChecker.  # noqa: E501
-        :rtype: int
+        :rtype: FosUser
         """
         return self._creator
 
@@ -122,7 +123,7 @@ class IfcChecker(object):
 
 
         :param creator: The creator of this IfcChecker.  # noqa: E501
-        :type: int
+        :type: FosUser
         """
 
         self._creator = creator

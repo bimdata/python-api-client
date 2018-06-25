@@ -503,6 +503,12 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_list_classification_element_relations(self):
+        """Test case for list_classification_element_relations
+
+        """
+        pass
+
     def test_remove_classification_of_element(self):
         """Test case for remove_classification_of_element
 
