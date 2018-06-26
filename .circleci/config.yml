@@ -61,13 +61,14 @@ jobs:
     steps:
       - *restore_repo
       - *restore_env
+      - add_ssh_keys
       - run:
           environment:
             GIT_COMMIT_DESC: git log --format=oneline -n 1 $CIRCLE_SHA1
           command: |
             git config --global user.email "infra@bimdata.io"
             git config --global user.name "Circle CI"
-            mkdir ~/.ssh/ && echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            echo -e "  StrictHostKeyChecking no\n" >> ~/.ssh/config
             . venv/bin/activate
             PYTHONPATH=/home/circleci/repo semantic-release publish
 
