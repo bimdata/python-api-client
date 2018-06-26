@@ -14,6 +14,8 @@ Name | Type | Description | Notes
 **clouds** | [**list[CloudRole]**](CloudRole.md) |  | [optional] 
 **projects** | [**list[ProjectRole]**](ProjectRole.md) |  | [optional] 
 **last_login** | **datetime** |  | [optional] 
+**default_cloud_id** | **str** |  | [optional] 
+**default_project_id** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

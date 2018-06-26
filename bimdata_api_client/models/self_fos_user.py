@@ -42,7 +42,9 @@ class SelfFosUser(object):
         'updated_at': 'datetime',
         'clouds': 'list[CloudRole]',
         'projects': 'list[ProjectRole]',
-        'last_login': 'datetime'
+        'last_login': 'datetime',
+        'default_cloud_id': 'str',
+        'default_project_id': 'str'
     }
 
     attribute_map = {
@@ -56,10 +58,12 @@ class SelfFosUser(object):
         'updated_at': 'updated_at',
         'clouds': 'clouds',
         'projects': 'projects',
-        'last_login': 'last_login'
+        'last_login': 'last_login',
+        'default_cloud_id': 'default_cloud_id',
+        'default_project_id': 'default_project_id'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, password=None, created_at=None, updated_at=None, clouds=None, projects=None, last_login=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, password=None, created_at=None, updated_at=None, clouds=None, projects=None, last_login=None, default_cloud_id=None, default_project_id=None):  # noqa: E501
         """SelfFosUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -73,6 +77,8 @@ class SelfFosUser(object):
         self._clouds = None
         self._projects = None
         self._last_login = None
+        self._default_cloud_id = None
+        self._default_project_id = None
         self.discriminator = None
 
         if id is not None:
@@ -93,6 +99,10 @@ class SelfFosUser(object):
             self.projects = projects
         if last_login is not None:
             self.last_login = last_login
+        if default_cloud_id is not None:
+            self.default_cloud_id = default_cloud_id
+        if default_project_id is not None:
+            self.default_project_id = default_project_id
 
     @property
     def id(self):
@@ -342,6 +352,48 @@ class SelfFosUser(object):
         """
 
         self._last_login = last_login
+
+    @property
+    def default_cloud_id(self):
+        """Gets the default_cloud_id of this SelfFosUser.  # noqa: E501
+
+
+        :return: The default_cloud_id of this SelfFosUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_cloud_id
+
+    @default_cloud_id.setter
+    def default_cloud_id(self, default_cloud_id):
+        """Sets the default_cloud_id of this SelfFosUser.
+
+
+        :param default_cloud_id: The default_cloud_id of this SelfFosUser.  # noqa: E501
+        :type: str
+        """
+
+        self._default_cloud_id = default_cloud_id
+
+    @property
+    def default_project_id(self):
+        """Gets the default_project_id of this SelfFosUser.  # noqa: E501
+
+
+        :return: The default_project_id of this SelfFosUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._default_project_id
+
+    @default_project_id.setter
+    def default_project_id(self, default_project_id):
+        """Sets the default_project_id of this SelfFosUser.
+
+
+        :param default_project_id: The default_project_id of this SelfFosUser.  # noqa: E501
+        :type: str
+        """
+
+        self._default_project_id = default_project_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
