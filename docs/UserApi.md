@@ -1,6 +1,6 @@
 # bimdata_api_client.UserApi
 
-All URIs are relative to *https://api-staging.bimdata.io/*
+All URIs are relative to *https://api-staging.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,9 @@ Method | HTTP request | Description
 
 
 # **ask_reset_password_token**
-> ask_reset_password_token(forgot_password)
+> ask_reset_password_token(data)
+
+
 
 
 
@@ -38,10 +40,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-forgot_password = bimdata_api_client.ForgotPassword() # ForgotPassword | 
+data = bimdata_api_client.ForgotPassword() # ForgotPassword | 
 
 try:
-    api_instance.ask_reset_password_token(forgot_password)
+    api_instance.ask_reset_password_token(data)
 except ApiException as e:
     print("Exception when calling UserApi->ask_reset_password_token: %s\n" % e)
 ```
@@ -50,7 +52,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgot_password** | [**ForgotPassword**](ForgotPassword.md)|  | 
+ **data** | [**ForgotPassword**](ForgotPassword.md)|  | 
 
 ### Return type
 
@@ -63,12 +65,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_notification**
-> Notification full_update_notification(id, notification)
+> Notification full_update_notification(id, data)
+
+
 
 
 
@@ -89,10 +93,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-notification = bimdata_api_client.Notification() # Notification | 
+data = bimdata_api_client.Notification() # Notification | 
 
 try:
-    api_response = api_instance.full_update_notification(id, notification)
+    api_response = api_instance.full_update_notification(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->full_update_notification: %s\n" % e)
@@ -103,7 +107,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **notification** | [**Notification**](Notification.md)|  | 
+ **data** | [**Notification**](Notification.md)|  | 
 
 ### Return type
 
@@ -122,6 +126,8 @@ Name | Type | Description  | Notes
 
 # **get_notification**
 > Notification get_notification(id)
+
+
 
 
 
@@ -166,13 +172,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_notifications**
 > list[Notification] get_self_notifications()
+
+
 
 
 
@@ -213,13 +221,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_projects**
 > list[Project] get_self_projects()
+
+
 
 
 
@@ -260,13 +270,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_user**
 > FosUser get_self_user()
+
+
 
 
 
@@ -307,13 +319,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reset_password**
-> reset_password(reset_password)
+> reset_password(data)
+
+
 
 
 
@@ -333,10 +347,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-reset_password = bimdata_api_client.ResetPassword() # ResetPassword | 
+data = bimdata_api_client.ResetPassword() # ResetPassword | 
 
 try:
-    api_instance.reset_password(reset_password)
+    api_instance.reset_password(data)
 except ApiException as e:
     print("Exception when calling UserApi->reset_password: %s\n" % e)
 ```
@@ -345,7 +359,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reset_password** | [**ResetPassword**](ResetPassword.md)|  | 
+ **data** | [**ResetPassword**](ResetPassword.md)|  | 
 
 ### Return type
 
@@ -358,12 +372,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_up**
-> SignupFosUser sign_up(signup_fos_user)
+> SignupFosUser sign_up(data)
+
+
 
 
 
@@ -383,10 +399,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-signup_fos_user = bimdata_api_client.SignupFosUser() # SignupFosUser | 
+data = bimdata_api_client.SignupFosUser() # SignupFosUser | 
 
 try:
-    api_response = api_instance.sign_up(signup_fos_user)
+    api_response = api_instance.sign_up(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->sign_up: %s\n" % e)
@@ -396,7 +412,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **signup_fos_user** | [**SignupFosUser**](SignupFosUser.md)|  | 
+ **data** | [**SignupFosUser**](SignupFosUser.md)|  | 
 
 ### Return type
 
@@ -414,7 +430,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_up_with_invitation_token**
-> SignupFosUser sign_up_with_invitation_token(invited_sign_up)
+> SignupFosUser sign_up_with_invitation_token(data)
+
+
 
 
 
@@ -434,10 +452,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-invited_sign_up = bimdata_api_client.InvitedSignUp() # InvitedSignUp | 
+data = bimdata_api_client.InvitedSignUp() # InvitedSignUp | 
 
 try:
-    api_response = api_instance.sign_up_with_invitation_token(invited_sign_up)
+    api_response = api_instance.sign_up_with_invitation_token(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->sign_up_with_invitation_token: %s\n" % e)
@@ -447,7 +465,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **invited_sign_up** | [**InvitedSignUp**](InvitedSignUp.md)|  | 
+ **data** | [**InvitedSignUp**](InvitedSignUp.md)|  | 
 
 ### Return type
 
@@ -465,7 +483,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_notification**
-> Notification update_notification(id, notification)
+> Notification update_notification(id, data)
+
+
 
 
 
@@ -486,10 +506,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-notification = bimdata_api_client.Notification() # Notification | 
+data = bimdata_api_client.Notification() # Notification | 
 
 try:
-    api_response = api_instance.update_notification(id, notification)
+    api_response = api_instance.update_notification(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_notification: %s\n" % e)
@@ -500,7 +520,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **notification** | [**Notification**](Notification.md)|  | 
+ **data** | [**Notification**](Notification.md)|  | 
 
 ### Return type
 
@@ -518,7 +538,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_self_user**
-> FosUser update_self_user(self_fos_user)
+> FosUser update_self_user(data)
+
+
 
 
 
@@ -538,10 +560,10 @@ configuration.api_key['access_token'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-self_fos_user = bimdata_api_client.SelfFosUser() # SelfFosUser | 
+data = bimdata_api_client.SelfFosUser() # SelfFosUser | 
 
 try:
-    api_response = api_instance.update_self_user(self_fos_user)
+    api_response = api_instance.update_self_user(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_self_user: %s\n" % e)
@@ -551,7 +573,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **self_fos_user** | [**SelfFosUser**](SelfFosUser.md)|  | 
+ **data** | [**SelfFosUser**](SelfFosUser.md)|  | 
 
 ### Return type
 
