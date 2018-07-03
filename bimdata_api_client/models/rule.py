@@ -16,7 +16,6 @@ import re  # noqa: F401
 
 import six
 
-from bimdata_api_client.models.rule import Rule  # noqa: F401,E501
 from bimdata_api_client.models.rule_component import RuleComponent  # noqa: F401,E501
 
 
