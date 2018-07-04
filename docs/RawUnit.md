@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str** |  | [optional] 
 **type** | **str** |  | 
-**unit_type** | **str** |  | 
+**unit_type** | **str** |  | [optional] 
 **prefix** | **str** |  | [optional] 
 **elements** | **str** |  | [optional] 
 **conversion_factor** | **float** |  | [optional] 

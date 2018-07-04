@@ -68,7 +68,8 @@ class RawUnit(object):
         if name is not None:
             self.name = name
         self.type = type
-        self.unit_type = unit_type
+        if unit_type is not None:
+            self.unit_type = unit_type
         if prefix is not None:
             self.prefix = prefix
         if elements is not None:
@@ -144,10 +145,6 @@ class RawUnit(object):
         :param unit_type: The unit_type of this RawUnit.  # noqa: E501
         :type: str
         """
-        if unit_type is None:
-            raise ValueError("Invalid value for `unit_type`, must not be `None`")  # noqa: E501
-        if unit_type is not None and len(unit_type) < 1:
-            raise ValueError("Invalid value for `unit_type`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._unit_type = unit_type
 

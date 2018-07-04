@@ -62,10 +62,14 @@ class RawElements(object):
         self._elements = None
         self.discriminator = None
 
-        self.units = units
-        self.definitions = definitions
-        self.property_sets = property_sets
-        self.classifications = classifications
+        if units is not None:
+            self.units = units
+        if definitions is not None:
+            self.definitions = definitions
+        if property_sets is not None:
+            self.property_sets = property_sets
+        if classifications is not None:
+            self.classifications = classifications
         self.elements = elements
 
     @property
@@ -86,8 +90,6 @@ class RawElements(object):
         :param units: The units of this RawElements.  # noqa: E501
         :type: list[RawUnit]
         """
-        if units is None:
-            raise ValueError("Invalid value for `units`, must not be `None`")  # noqa: E501
 
         self._units = units
 
@@ -109,8 +111,6 @@ class RawElements(object):
         :param definitions: The definitions of this RawElements.  # noqa: E501
         :type: list[RawDefinition]
         """
-        if definitions is None:
-            raise ValueError("Invalid value for `definitions`, must not be `None`")  # noqa: E501
 
         self._definitions = definitions
 
@@ -132,8 +132,6 @@ class RawElements(object):
         :param property_sets: The property_sets of this RawElements.  # noqa: E501
         :type: list[RawPropertySet]
         """
-        if property_sets is None:
-            raise ValueError("Invalid value for `property_sets`, must not be `None`")  # noqa: E501
 
         self._property_sets = property_sets
 
@@ -155,8 +153,6 @@ class RawElements(object):
         :param classifications: The classifications of this RawElements.  # noqa: E501
         :type: list[Classification]
         """
-        if classifications is None:
-            raise ValueError("Invalid value for `classifications`, must not be `None`")  # noqa: E501
 
         self._classifications = classifications
 

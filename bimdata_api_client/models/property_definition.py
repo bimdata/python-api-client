@@ -65,7 +65,8 @@ class PropertyDefinition(object):
             self.id = id
         if unit is not None:
             self.unit = unit
-        self.name = name
+        if name is not None:
+            self.name = name
         if description is not None:
             self.description = description
         if type is not None:
@@ -133,10 +134,6 @@ class PropertyDefinition(object):
         :param name: The name of this PropertyDefinition.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 

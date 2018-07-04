@@ -17,6 +17,7 @@ import re  # noqa: F401
 import six
 
 from bimdata_api_client.models.rule import Rule  # noqa: F401,E501
+from bimdata_api_client.models.ruleset import Ruleset  # noqa: F401,E501
 
 
 class Ruleset(object):

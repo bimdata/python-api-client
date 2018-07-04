@@ -58,9 +58,12 @@ class RawElement(object):
 
         self.uuid = uuid
         self.type = type
-        self.attributes = attributes
-        self.psets = psets
-        self.classifications = classifications
+        if attributes is not None:
+            self.attributes = attributes
+        if psets is not None:
+            self.psets = psets
+        if classifications is not None:
+            self.classifications = classifications
 
     @property
     def uuid(self):
@@ -130,8 +133,6 @@ class RawElement(object):
         :param attributes: The attributes of this RawElement.  # noqa: E501
         :type: int
         """
-        if attributes is None:
-            raise ValueError("Invalid value for `attributes`, must not be `None`")  # noqa: E501
 
         self._attributes = attributes
 
@@ -153,8 +154,6 @@ class RawElement(object):
         :param psets: The psets of this RawElement.  # noqa: E501
         :type: list[int]
         """
-        if psets is None:
-            raise ValueError("Invalid value for `psets`, must not be `None`")  # noqa: E501
 
         self._psets = psets
 
@@ -176,8 +175,6 @@ class RawElement(object):
         :param classifications: The classifications of this RawElement.  # noqa: E501
         :type: list[int]
         """
-        if classifications is None:
-            raise ValueError("Invalid value for `classifications`, must not be `None`")  # noqa: E501
 
         self._classifications = classifications
 

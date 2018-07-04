@@ -149,8 +149,6 @@ class FosUser(object):
         :param company: The company of this FosUser.  # noqa: E501
         :type: str
         """
-        if company is not None and len(company) < 1:
-            raise ValueError("Invalid value for `company`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._company = company
 

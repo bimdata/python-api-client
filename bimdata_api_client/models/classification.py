@@ -55,8 +55,10 @@ class Classification(object):
 
         if id is not None:
             self.id = id
-        self.name = name
-        self.notation = notation
+        if name is not None:
+            self.name = name
+        if notation is not None:
+            self.notation = notation
         if title is not None:
             self.title = title
 
@@ -99,10 +101,6 @@ class Classification(object):
         :param name: The name of this Classification.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -124,10 +122,6 @@ class Classification(object):
         :param notation: The notation of this Classification.  # noqa: E501
         :type: str
         """
-        if notation is None:
-            raise ValueError("Invalid value for `notation`, must not be `None`")  # noqa: E501
-        if notation is not None and len(notation) < 1:
-            raise ValueError("Invalid value for `notation`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._notation = notation
 
