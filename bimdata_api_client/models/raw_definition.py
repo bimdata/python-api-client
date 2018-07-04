@@ -58,7 +58,8 @@ class RawDefinition(object):
 
         if description is not None:
             self.description = description
-        self.name = name
+        if name is not None:
+            self.name = name
         if type is not None:
             self.type = type
         if value_type is not None:
@@ -105,10 +106,6 @@ class RawDefinition(object):
         :param name: The name of this RawDefinition.  # noqa: E501
         :type: str
         """
-        if name is None:
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if name is not None and len(name) < 1:
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 

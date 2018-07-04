@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **description** | **str** |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] 
 **value_type** | **str** |  | [optional] 
 **unit_id** | **int** |  | [optional] 
