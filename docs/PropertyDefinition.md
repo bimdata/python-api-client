@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
 **unit** | [**Unit**](Unit.md) |  | [optional] 
-**name** | **str** |  | [optional] 
+**name** | **str** |  | 
 **description** | **str** |  | [optional] 
 **type** | **str** | IfcProperty*, Ifc*Properties, IfcComplexProperty, IfcQuantity*, IfcComplexQuantity, Attribute | [optional] 
 **value_type** | **str** | Type of the corresponding value (Boolean, integer, float, string, IfcRange, ...) | [optional] 

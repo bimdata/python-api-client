@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **name** | **str** |  | 
 **features** | [**list[Feature]**](Feature.md) |  | [optional] 
-**creator** | [**FosUser**](FosUser.md) |  | [optional] 
+**creator** | [**User**](User.md) |  | [optional] 
 **is_default** | **bool** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 

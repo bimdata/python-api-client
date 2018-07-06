@@ -1,6 +1,6 @@
 # bimdata_api_client.IfcApi
 
-All URIs are relative to *https://api-staging.bimdata.io*
+All URIs are relative to *https://api-beta.bimdata.io/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -153,8 +153,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -209,8 +209,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -265,8 +265,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -321,8 +321,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -377,13 +377,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_elements**
-> list[Element] bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
+> list[Element] bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element)
 
 
 
@@ -408,10 +408,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Element()] # list[Element] | 
+element = NULL # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_elements: %s\n" % e)
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Element]**](Element.md)|  | 
+ **element** | [**list[Element]**](list.md)|  | 
 
 ### Return type
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_ifc_property**
-> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
+> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
 
 
 
@@ -467,10 +467,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
+model_property = NULL # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_ifc_property: %s\n" % e)
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
+ **model_property** | [**list[ModelProperty]**](list.md)|  | 
 
 ### Return type
 
@@ -553,8 +553,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -611,13 +611,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_elements**
-> list[Element] bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
+> list[Element] bulk_update_elements(cloud_pk, ifc_pk, project_pk, element)
 
 
 
@@ -642,10 +642,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Element()] # list[Element] | 
+element = NULL # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.bulk_update_elements(cloud_pk, ifc_pk, project_pk, element)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_elements: %s\n" % e)
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Element]**](Element.md)|  | 
+ **element** | [**list[Element]**](list.md)|  | 
 
 ### Return type
 
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_ifc_property**
-> list[ModelProperty] bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
+> list[ModelProperty] bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
 
 
 
@@ -701,10 +701,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
+model_property = NULL # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_ifc_property: %s\n" % e)
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
+ **model_property** | [**list[ModelProperty]**](list.md)|  | 
 
 ### Return type
 
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification_element_relations**
-> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
+> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation)
 
 
 
@@ -760,10 +760,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
+element_classification_relation = NULL # list[ElementClassificationRelation] | 
 
 try:
-    api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
+    api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[ElementClassificationRelation]**](ElementClassificationRelation.md)|  | 
+ **element_classification_relation** | [**list[ElementClassificationRelation]**](list.md)|  | 
 
 ### Return type
 
@@ -788,12 +788,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classifications_of_element**
-> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification)
 
 
 
@@ -819,10 +819,10 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Classification()] # list[Classification] | 
+classification = NULL # list[Classification] | 
 
 try:
-    api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+    api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classifications_of_element: %s\n" % e)
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Classification]**](Classification.md)|  | 
+ **classification** | [**list[Classification]**](list.md)|  | 
 
 ### Return type
 
@@ -854,7 +854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element**
-> list[Element] create_element(cloud_pk, ifc_pk, project_pk, data)
+> list[Element] create_element(cloud_pk, ifc_pk, project_pk, element)
 
 
 
@@ -879,10 +879,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Element()] # list[Element] | 
+element = NULL # list[Element] | 
 
 try:
-    api_response = api_instance.create_element(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_element(cloud_pk, ifc_pk, project_pk, element)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element: %s\n" % e)
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Element]**](Element.md)|  | 
+ **element** | [**list[Element]**](list.md)|  | 
 
 ### Return type
 
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set**
-> create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+> create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set)
 
 
 
@@ -939,10 +939,10 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+property_set = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_instance.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+    api_instance.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set: %s\n" % e)
 ```
@@ -955,7 +955,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertySet**](PropertySet.md)|  | 
+ **property_set** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -968,14 +968,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property**
-> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
-
-
+> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property)
 
 
 
@@ -1000,10 +998,10 @@ element_uuid = 'element_uuid_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.ModelProperty() # ModelProperty | 
+model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+    api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property: %s\n" % e)
@@ -1018,7 +1016,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **data** | [**ModelProperty**](ModelProperty.md)|  | 
+ **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -1036,9 +1034,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition**
-> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
-
-
+> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition)
 
 
 
@@ -1064,10 +1060,10 @@ ifc_pk = 'ifc_pk_example' # str |
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
+    api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition: %s\n" % e)
@@ -1083,7 +1079,7 @@ Name | Type | Description  | Notes
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -1101,9 +1097,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition_unit**
-> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
-
-
+> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit)
 
 
 
@@ -1130,10 +1124,10 @@ project_pk = 'project_pk_example' # str |
 property_pk = 'property_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+unit = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+    api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition_unit: %s\n" % e)
@@ -1150,7 +1144,7 @@ Name | Type | Description  | Notes
  **property_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **data** | [**Unit**](Unit.md)|  | 
+ **unit** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -1168,7 +1162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_property_definition**
-> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
+> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition)
 
 
 
@@ -1193,10 +1187,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
+property_definition = NULL # list[PropertyDefinition] | 
 
 try:
-    api_response = api_instance.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_property_definition: %s\n" % e)
@@ -1209,7 +1203,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[PropertyDefinition]**](PropertyDefinition.md)|  | 
+ **property_definition** | [**list[PropertyDefinition]**](list.md)|  | 
 
 ### Return type
 
@@ -1227,7 +1221,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_unit**
-> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
+> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit)
 
 
 
@@ -1252,10 +1246,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Unit()] # list[Unit] | 
+unit = NULL # list[Unit] | 
 
 try:
-    api_response = api_instance.create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_unit: %s\n" % e)
@@ -1268,7 +1262,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Unit]**](Unit.md)|  | 
+ **unit** | [**list[Unit]**](list.md)|  | 
 
 ### Return type
 
@@ -1286,7 +1280,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set**
-> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, data)
+> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, property_set)
 
 
 
@@ -1311,10 +1305,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
+property_set = NULL # list[PropertySet] | 
 
 try:
-    api_response = api_instance.create_property_set(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_property_set(cloud_pk, ifc_pk, project_pk, property_set)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set: %s\n" % e)
@@ -1327,7 +1321,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[PropertySet]**](PropertySet.md)|  | 
+ **property_set** | [**list[PropertySet]**](list.md)|  | 
 
 ### Return type
 
@@ -1345,7 +1339,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set_element_relations**
-> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
+> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation)
 
 
 
@@ -1370,10 +1364,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
+element_property_set_relation = NULL # list[ElementPropertySetRelation] | 
 
 try:
-    api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
+    api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -1385,7 +1379,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[ElementPropertySetRelation]**](ElementPropertySetRelation.md)|  | 
+ **element_property_set_relation** | [**list[ElementPropertySetRelation]**](list.md)|  | 
 
 ### Return type
 
@@ -1398,12 +1392,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_raw_elements**
-> create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
+> create_raw_elements(cloud_pk, ifc_pk, project_pk, element)
 
 
 
@@ -1428,10 +1422,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.RawElements() # RawElements | 
+element = bimdata_api_client.Element() # Element | 
 
 try:
-    api_instance.create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
+    api_instance.create_raw_elements(cloud_pk, ifc_pk, project_pk, element)
 except ApiException as e:
     print("Exception when calling IfcApi->create_raw_elements: %s\n" % e)
 ```
@@ -1443,7 +1437,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**RawElements**](RawElements.md)|  | 
+ **element** | [**Element**](Element.md)|  | 
 
 ### Return type
 
@@ -1456,12 +1450,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_space**
-> list[Space] create_space(cloud_pk, ifc_pk, project_pk, data)
+> list[Space] create_space(cloud_pk, ifc_pk, project_pk, space)
 
 
 
@@ -1486,10 +1480,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Space()] # list[Space] | 
+space = NULL # list[Space] | 
 
 try:
-    api_response = api_instance.create_space(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_space(cloud_pk, ifc_pk, project_pk, space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_space: %s\n" % e)
@@ -1502,7 +1496,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Space]**](Space.md)|  | 
+ **space** | [**list[Space]**](list.md)|  | 
 
 ### Return type
 
@@ -1520,7 +1514,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone**
-> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, data)
+> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, zone)
 
 
 
@@ -1545,10 +1539,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Zone()] # list[Zone] | 
+zone = NULL # list[Zone] | 
 
 try:
-    api_response = api_instance.create_zone(cloud_pk, ifc_pk, project_pk, data)
+    api_response = api_instance.create_zone(cloud_pk, ifc_pk, project_pk, zone)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone: %s\n" % e)
@@ -1561,7 +1555,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Zone]**](Zone.md)|  | 
+ **zone** | [**list[Zone]**](list.md)|  | 
 
 ### Return type
 
@@ -1579,9 +1573,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone_space**
-> ZoneSpace create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
-
-
+> ZoneSpace create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space)
 
 
 
@@ -1605,10 +1597,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+    api_response = api_instance.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone_space: %s\n" % e)
@@ -1622,7 +1614,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
@@ -1641,8 +1633,6 @@ Name | Type | Description  | Notes
 
 # **delete_element**
 > delete_element(cloud_pk, ifc_pk, project_pk, uuid)
-
-
 
 
 
@@ -1692,15 +1682,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc**
 > delete_ifc(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -1748,15 +1736,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property**
 > delete_ifc_property(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -1806,15 +1792,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property_definition**
 > delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -1864,15 +1848,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_unit**
 > delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -1922,15 +1904,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_property_set**
 > delete_property_set(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -1980,15 +1960,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_space**
 > delete_space(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -2038,15 +2016,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone**
 > delete_zone(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -2096,15 +2072,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone_space**
 > delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
-
-
 
 
 
@@ -2156,15 +2130,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_element**
-> Element full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
-
-
+> Element full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
 
 
 
@@ -2188,10 +2160,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.Element() # Element | 
+element = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
+    api_response = api_instance.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_element: %s\n" % e)
@@ -2205,7 +2177,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **data** | [**Element**](Element.md)|  | 
+ **element** | [**Element**](Element.md)|  | 
 
 ### Return type
 
@@ -2223,9 +2195,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc**
-> Ifc full_update_ifc(cloud_pk, id, project_pk, data)
-
-
+> Ifc full_update_ifc(cloud_pk, id, project_pk, ifc)
 
 
 
@@ -2248,10 +2218,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Ifc() # Ifc | 
+ifc = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.full_update_ifc(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_ifc(cloud_pk, id, project_pk, ifc)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc: %s\n" % e)
@@ -2264,7 +2234,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
- **data** | [**Ifc**](Ifc.md)|  | 
+ **ifc** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
 
@@ -2282,9 +2252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property**
-> ModelProperty full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> ModelProperty full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
 
 
 
@@ -2308,10 +2276,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.ModelProperty() # ModelProperty | 
+model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property: %s\n" % e)
@@ -2325,7 +2293,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**ModelProperty**](ModelProperty.md)|  | 
+ **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -2343,9 +2311,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property_definition**
-> PropertyDefinition full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> PropertyDefinition full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
 
 
 
@@ -2369,10 +2335,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property_definition: %s\n" % e)
@@ -2386,7 +2352,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -2404,9 +2370,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_unit**
-> Unit full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Unit full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
 
 
 
@@ -2430,10 +2394,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+unit = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_unit: %s\n" % e)
@@ -2447,7 +2411,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Unit**](Unit.md)|  | 
+ **unit** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -2465,9 +2429,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_property_set**
-> PropertySet full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> PropertySet full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
 
 
 
@@ -2491,10 +2453,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+property_set = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_property_set: %s\n" % e)
@@ -2508,7 +2470,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertySet**](PropertySet.md)|  | 
+ **property_set** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -2526,9 +2488,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_space**
-> Space full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Space full_update_space(cloud_pk, id, ifc_pk, project_pk, space)
 
 
 
@@ -2552,10 +2512,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
+space = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_space(cloud_pk, id, ifc_pk, project_pk, space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_space: %s\n" % e)
@@ -2569,7 +2529,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Space**](Space.md)|  | 
+ **space** | [**Space**](Space.md)|  | 
 
 ### Return type
 
@@ -2587,9 +2547,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone**
-> Zone full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Zone full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
 
 
 
@@ -2613,10 +2571,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Zone() # Zone | 
+zone = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone: %s\n" % e)
@@ -2630,7 +2588,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Zone**](Zone.md)|  | 
+ **zone** | [**Zone**](Zone.md)|  | 
 
 ### Return type
 
@@ -2648,9 +2606,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone_space**
-> ZoneSpace full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
-
-
+> ZoneSpace full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
 
 
 
@@ -2675,10 +2631,10 @@ id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+    api_response = api_instance.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone_space: %s\n" % e)
@@ -2693,7 +2649,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
@@ -2712,8 +2668,6 @@ Name | Type | Description  | Notes
 
 # **get_classifications_of_element**
 > list[Classification] get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
-
-
 
 
 
@@ -2764,15 +2718,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element**
 > Element get_element(cloud_pk, ifc_pk, project_pk, uuid)
-
-
 
 
 
@@ -2823,15 +2775,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set**
 > PropertySet get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -2884,15 +2834,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_properties**
 > list[ModelProperty] get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
-
-
 
 
 
@@ -2945,15 +2893,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property**
 > ModelProperty get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
-
-
 
 
 
@@ -3008,15 +2954,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition**
 > PropertyDefinition get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-
 
 
 
@@ -3073,15 +3017,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_unit**
 > Unit get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-
 
 
 
@@ -3140,15 +3082,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_units**
 > list[Unit] get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-
 
 
 
@@ -3205,15 +3145,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definitions**
 > list[PropertyDefinition] get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-
 
 
 
@@ -3268,15 +3206,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_sets**
 > list[PropertySet] get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk)
-
-
 
 
 
@@ -3327,15 +3263,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements**
 > list[Element] get_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
-
-
 
 
 
@@ -3390,15 +3324,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements_from_classification**
 > list[Element] get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -3449,15 +3381,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc**
 > Ifc get_ifc(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -3506,7 +3436,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3562,15 +3492,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_classifications**
 > list[Classification] get_ifc_classifications(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -3619,7 +3547,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3675,8 +3603,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3731,15 +3659,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_properties**
 > list[ModelProperty] get_ifc_properties(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -3788,15 +3714,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property**
 > ModelProperty get_ifc_property(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -3847,15 +3771,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definition**
 > PropertyDefinition get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -3906,15 +3828,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definitions**
 > list[PropertyDefinition] get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -3963,7 +3883,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4019,8 +3939,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4075,15 +3995,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_unit**
 > Unit get_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -4134,15 +4052,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_units**
 > list[Unit] get_ifc_units(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -4191,15 +4107,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
 > list[Ifc] get_ifcs(cloud_pk, project_pk, status=status)
-
-
 
 
 
@@ -4248,15 +4162,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_set**
 > PropertySet get_property_set(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -4307,15 +4219,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_sets**
 > list[PropertySet] get_property_sets(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -4364,13 +4274,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_raw_elements**
-> RawElements get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+> get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 
 
@@ -4400,8 +4310,7 @@ classification = 'classification_example' # str | Filter the returned list by cl
 classification__notation = 'classification__notation_example' # str | Filter the returned list by classification__notation (optional)
 
 try:
-    api_response = api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
-    pprint(api_response)
+    api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 except ApiException as e:
     print("Exception when calling IfcApi->get_raw_elements: %s\n" % e)
 ```
@@ -4419,7 +4328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RawElements**](RawElements.md)
+void (empty response body)
 
 ### Authorization
 
@@ -4427,15 +4336,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_space**
 > Space get_space(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -4486,15 +4393,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_spaces**
 > list[Space] get_spaces(cloud_pk, ifc_pk, project_pk)
-
-
 
 
 
@@ -4543,15 +4448,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone**
 > Zone get_zone(cloud_pk, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -4602,15 +4505,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_space**
 > ZoneSpace get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
-
-
 
 
 
@@ -4663,15 +4564,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_spaces**
 > list[ZoneSpace] get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk)
-
-
 
 
 
@@ -4722,15 +4621,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zones**
 > list[Zone] get_zones(cloud_pk, ifc_pk, project_pk, color=color)
-
-
 
 
 
@@ -4781,7 +4678,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4838,15 +4735,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_classification_of_element**
 > remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
-
-
 
 
 
@@ -4898,8 +4793,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4958,15 +4853,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property**
 > remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
-
-
 
 
 
@@ -5020,15 +4913,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition**
 > remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-
 
 
 
@@ -5084,15 +4975,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition_unit**
 > remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-
 
 
 
@@ -5150,15 +5039,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_elements_from_classification**
 > remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid)
-
-
 
 
 
@@ -5210,15 +5097,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_element**
-> Element update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
-
-
+> Element update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
 
 
 
@@ -5242,10 +5127,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.Element() # Element | 
+element = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
+    api_response = api_instance.update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_element: %s\n" % e)
@@ -5259,7 +5144,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **data** | [**Element**](Element.md)|  | 
+ **element** | [**Element**](Element.md)|  | 
 
 ### Return type
 
@@ -5277,9 +5162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc**
-> Ifc update_ifc(cloud_pk, id, project_pk, data)
-
-
+> Ifc update_ifc(cloud_pk, id, project_pk, ifc)
 
 
 
@@ -5302,10 +5185,10 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Ifc() # Ifc | 
+ifc = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.update_ifc(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_ifc(cloud_pk, id, project_pk, ifc)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc: %s\n" % e)
@@ -5318,7 +5201,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
- **data** | [**Ifc**](Ifc.md)|  | 
+ **ifc** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
 
@@ -5361,11 +5244,11 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-structure_file = '/path/to/file.txt' # file |  (optional)
-systems_file = '/path/to/file.txt' # file |  (optional)
-map_file = '/path/to/file.txt' # file |  (optional)
-gltf_file = '/path/to/file.txt' # file |  (optional)
-bvh_tree_file = '/path/to/file.txt' # file |  (optional)
+structure_file = '/path/to/file' # file |  (optional)
+systems_file = '/path/to/file' # file |  (optional)
+map_file = '/path/to/file' # file |  (optional)
+gltf_file = '/path/to/file' # file |  (optional)
+bvh_tree_file = '/path/to/file' # file |  (optional)
 
 try:
     api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
@@ -5403,9 +5286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property**
-> ModelProperty update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> ModelProperty update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
 
 
 
@@ -5429,10 +5310,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.ModelProperty() # ModelProperty | 
+model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property: %s\n" % e)
@@ -5446,7 +5327,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**ModelProperty**](ModelProperty.md)|  | 
+ **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -5464,9 +5345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property_definition**
-> PropertyDefinition update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> PropertyDefinition update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
 
 
 
@@ -5490,10 +5369,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property_definition: %s\n" % e)
@@ -5507,7 +5386,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -5525,9 +5404,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_unit**
-> Unit update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Unit update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
 
 
 
@@ -5551,10 +5428,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+unit = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_unit: %s\n" % e)
@@ -5568,7 +5445,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Unit**](Unit.md)|  | 
+ **unit** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -5586,9 +5463,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_property_set**
-> PropertySet update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> PropertySet update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
 
 
 
@@ -5612,10 +5487,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+property_set = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_property_set: %s\n" % e)
@@ -5629,7 +5504,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertySet**](PropertySet.md)|  | 
+ **property_set** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -5647,9 +5522,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_space**
-> Space update_space(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Space update_space(cloud_pk, id, ifc_pk, project_pk, space)
 
 
 
@@ -5673,10 +5546,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
+space = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.update_space(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_space(cloud_pk, id, ifc_pk, project_pk, space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_space: %s\n" % e)
@@ -5690,7 +5563,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Space**](Space.md)|  | 
+ **space** | [**Space**](Space.md)|  | 
 
 ### Return type
 
@@ -5708,9 +5581,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone**
-> Zone update_zone(cloud_pk, id, ifc_pk, project_pk, data)
-
-
+> Zone update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
 
 
 
@@ -5734,10 +5605,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Zone() # Zone | 
+zone = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.update_zone(cloud_pk, id, ifc_pk, project_pk, data)
+    api_response = api_instance.update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone: %s\n" % e)
@@ -5751,7 +5622,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Zone**](Zone.md)|  | 
+ **zone** | [**Zone**](Zone.md)|  | 
 
 ### Return type
 
@@ -5769,9 +5640,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone_space**
-> ZoneSpace update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
-
-
+> ZoneSpace update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
 
 
 
@@ -5796,10 +5665,10 @@ id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+    api_response = api_instance.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone_space: %s\n" % e)
@@ -5814,7 +5683,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
