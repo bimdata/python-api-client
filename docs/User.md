@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **email** | **str** |  | [optional] 
 **company** | **str** |  | [optional] 
-**enabled** | **bool** |  | [optional] 
 **firstname** | **str** |  | [optional] 
 **lastname** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 

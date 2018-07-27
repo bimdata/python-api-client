@@ -35,7 +35,6 @@ class User(object):
         'id': 'int',
         'email': 'str',
         'company': 'str',
-        'enabled': 'bool',
         'firstname': 'str',
         'lastname': 'str',
         'created_at': 'datetime',
@@ -47,7 +46,6 @@ class User(object):
         'id': 'id',
         'email': 'email',
         'company': 'company',
-        'enabled': 'enabled',
         'firstname': 'firstname',
         'lastname': 'lastname',
         'created_at': 'created_at',
@@ -55,13 +53,12 @@ class User(object):
         'last_login': 'last_login'
     }
 
-    def __init__(self, id=None, email=None, company=None, enabled=None, firstname=None, lastname=None, created_at=None, updated_at=None, last_login=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, last_login=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._email = None
         self._company = None
-        self._enabled = None
         self._firstname = None
         self._lastname = None
         self._created_at = None
@@ -75,8 +72,6 @@ class User(object):
             self.email = email
         if company is not None:
             self.company = company
-        if enabled is not None:
-            self.enabled = enabled
         if firstname is not None:
             self.firstname = firstname
         if lastname is not None:
@@ -152,27 +147,6 @@ class User(object):
         """
 
         self._company = company
-
-    @property
-    def enabled(self):
-        """Gets the enabled of this User.  # noqa: E501
-
-
-        :return: The enabled of this User.  # noqa: E501
-        :rtype: bool
-        """
-        return self._enabled
-
-    @enabled.setter
-    def enabled(self, enabled):
-        """Sets the enabled of this User.
-
-
-        :param enabled: The enabled of this User.  # noqa: E501
-        :type: bool
-        """
-
-        self._enabled = enabled
 
     @property
     def firstname(self):
