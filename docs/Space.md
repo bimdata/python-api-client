@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **longname** | **str** |  | [optional] 
 **uuid** | **str** |  | 
 **zone_set** | **list[str]** |  | [optional] 

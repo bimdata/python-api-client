@@ -1,6 +1,6 @@
 # bimdata_api_client.UserApi
 
-All URIs are relative to *https://api-beta.bimdata.io/*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -18,7 +18,9 @@ Method | HTTP request | Description
 
 
 # **ask_reset_password_token**
-> ask_reset_password_token(forgot_password)
+> ask_reset_password_token(data)
+
+
 
 
 
@@ -32,16 +34,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-forgot_password = bimdata_api_client.ForgotPassword() # ForgotPassword | 
+data = bimdata_api_client.ForgotPassword() # ForgotPassword | 
 
 try:
-    api_instance.ask_reset_password_token(forgot_password)
+    api_instance.ask_reset_password_token(data)
 except ApiException as e:
     print("Exception when calling UserApi->ask_reset_password_token: %s\n" % e)
 ```
@@ -50,7 +52,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **forgot_password** | [**ForgotPassword**](ForgotPassword.md)|  | 
+ **data** | [**ForgotPassword**](ForgotPassword.md)|  | 
 
 ### Return type
 
@@ -63,12 +65,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_notification**
-> Notification full_update_notification(id, notification)
+> Notification full_update_notification(id, data)
+
+
 
 
 
@@ -82,17 +86,17 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-notification = bimdata_api_client.Notification() # Notification | 
+data = bimdata_api_client.Notification() # Notification | 
 
 try:
-    api_response = api_instance.full_update_notification(id, notification)
+    api_response = api_instance.full_update_notification(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->full_update_notification: %s\n" % e)
@@ -103,7 +107,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **notification** | [**Notification**](Notification.md)|  | 
+ **data** | [**Notification**](Notification.md)|  | 
 
 ### Return type
 
@@ -125,6 +129,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 ```python
 from __future__ import print_function
@@ -135,9 +141,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
@@ -166,13 +172,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_notifications**
 > list[Notification] get_self_notifications()
+
+
 
 
 
@@ -186,9 +194,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
@@ -213,13 +221,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_projects**
 > list[Project] get_self_projects()
+
+
 
 
 
@@ -233,9 +243,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
@@ -260,13 +270,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_self_user**
 > SelfUser get_self_user()
+
+
 
 
 
@@ -280,9 +292,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
@@ -307,13 +319,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **reset_password**
-> reset_password(reset_password)
+> reset_password(data)
+
+
 
 
 
@@ -327,16 +341,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-reset_password = bimdata_api_client.ResetPassword() # ResetPassword | 
+data = bimdata_api_client.ResetPassword() # ResetPassword | 
 
 try:
-    api_instance.reset_password(reset_password)
+    api_instance.reset_password(data)
 except ApiException as e:
     print("Exception when calling UserApi->reset_password: %s\n" % e)
 ```
@@ -345,7 +359,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **reset_password** | [**ResetPassword**](ResetPassword.md)|  | 
+ **data** | [**ResetPassword**](ResetPassword.md)|  | 
 
 ### Return type
 
@@ -358,12 +372,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_up**
-> SignUpUser sign_up(sign_up_user)
+> SignUpUser sign_up(data)
+
+
 
 
 
@@ -377,16 +393,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-sign_up_user = bimdata_api_client.SignUpUser() # SignUpUser | 
+data = bimdata_api_client.SignUpUser() # SignUpUser | 
 
 try:
-    api_response = api_instance.sign_up(sign_up_user)
+    api_response = api_instance.sign_up(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->sign_up: %s\n" % e)
@@ -396,7 +412,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **sign_up_user** | [**SignUpUser**](SignUpUser.md)|  | 
+ **data** | [**SignUpUser**](SignUpUser.md)|  | 
 
 ### Return type
 
@@ -414,7 +430,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **sign_up_with_invitation_token**
-> SignUpUser sign_up_with_invitation_token(invited_sign_up_user)
+> SignUpUser sign_up_with_invitation_token(data)
+
+
 
 
 
@@ -428,16 +446,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-invited_sign_up_user = bimdata_api_client.InvitedSignUpUser() # InvitedSignUpUser | 
+data = bimdata_api_client.InvitedSignUpUser() # InvitedSignUpUser | 
 
 try:
-    api_response = api_instance.sign_up_with_invitation_token(invited_sign_up_user)
+    api_response = api_instance.sign_up_with_invitation_token(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->sign_up_with_invitation_token: %s\n" % e)
@@ -447,7 +465,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **invited_sign_up_user** | [**InvitedSignUpUser**](InvitedSignUpUser.md)|  | 
+ **data** | [**InvitedSignUpUser**](InvitedSignUpUser.md)|  | 
 
 ### Return type
 
@@ -465,7 +483,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_notification**
-> Notification update_notification(id, notification)
+> Notification update_notification(id, data)
+
+
 
 
 
@@ -479,17 +499,17 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-notification = bimdata_api_client.Notification() # Notification | 
+data = bimdata_api_client.Notification() # Notification | 
 
 try:
-    api_response = api_instance.update_notification(id, notification)
+    api_response = api_instance.update_notification(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_notification: %s\n" % e)
@@ -500,7 +520,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **notification** | [**Notification**](Notification.md)|  | 
+ **data** | [**Notification**](Notification.md)|  | 
 
 ### Return type
 
@@ -518,7 +538,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_self_user**
-> SelfUser update_self_user(self_user)
+> SelfUser update_self_user(data)
+
+
 
 
 
@@ -532,16 +554,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-self_user = bimdata_api_client.SelfUser() # SelfUser | 
+data = bimdata_api_client.SelfUser() # SelfUser | 
 
 try:
-    api_response = api_instance.update_self_user(self_user)
+    api_response = api_instance.update_self_user(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling UserApi->update_self_user: %s\n" % e)
@@ -551,7 +573,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **self_user** | [**SelfUser**](SelfUser.md)|  | 
+ **data** | [**SelfUser**](SelfUser.md)|  | 
 
 ### Return type
 

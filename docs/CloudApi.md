@@ -1,6 +1,6 @@
 # bimdata_api_client.CloudApi
 
-All URIs are relative to *https://api-beta.bimdata.io/*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,7 +19,9 @@ Method | HTTP request | Description
 
 
 # **create_cloud**
-> Cloud create_cloud(cloud)
+> Cloud create_cloud(data)
+
+
 
 
 
@@ -33,16 +35,16 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud = bimdata_api_client.Cloud() # Cloud | 
+data = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.create_cloud(cloud)
+    api_response = api_instance.create_cloud(data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->create_cloud: %s\n" % e)
@@ -52,7 +54,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **cloud** | [**Cloud**](Cloud.md)|  | 
+ **data** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -70,7 +72,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_cloud_user**
-> InviteUser create_cloud_user(cloud_pk, invite_user)
+> InviteUser create_cloud_user(cloud_pk, data)
+
+
 
 
 
@@ -84,17 +88,17 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
+data = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.create_cloud_user(cloud_pk, invite_user)
+    api_response = api_instance.create_cloud_user(cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->create_cloud_user: %s\n" % e)
@@ -105,7 +109,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
+ **data** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -127,6 +131,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 ```python
 from __future__ import print_function
@@ -137,9 +143,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -169,13 +175,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_cloud**
-> Cloud full_update_cloud(id, cloud)
+> Cloud full_update_cloud(id, data)
+
+
 
 
 
@@ -189,17 +197,17 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-cloud = bimdata_api_client.Cloud() # Cloud | 
+data = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.full_update_cloud(id, cloud)
+    api_response = api_instance.full_update_cloud(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->full_update_cloud: %s\n" % e)
@@ -210,7 +218,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **cloud** | [**Cloud**](Cloud.md)|  | 
+ **data** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -228,7 +236,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_cloud_user**
-> InviteUser full_update_cloud_user(cloud_pk, id, invite_user)
+> InviteUser full_update_cloud_user(cloud_pk, id, data)
+
+
 
 
 
@@ -242,18 +252,18 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
+data = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, invite_user)
+    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->full_update_cloud_user: %s\n" % e)
@@ -265,7 +275,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
+ **data** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -299,9 +309,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -330,7 +340,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -352,9 +362,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -383,13 +393,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_user**
 > User get_cloud_user(cloud_pk, id)
+
+
 
 
 
@@ -403,9 +415,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -436,13 +448,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_users**
 > list[User] get_cloud_users(cloud_pk)
+
+
 
 
 
@@ -456,9 +470,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -487,7 +501,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -509,9 +523,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
@@ -536,13 +550,15 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cloud**
-> Cloud update_cloud(id, cloud)
+> Cloud update_cloud(id, data)
+
+
 
 
 
@@ -556,17 +572,17 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-cloud = bimdata_api_client.Cloud() # Cloud | 
+data = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.update_cloud(id, cloud)
+    api_response = api_instance.update_cloud(id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->update_cloud: %s\n" % e)
@@ -577,7 +593,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **cloud** | [**Cloud**](Cloud.md)|  | 
+ **data** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -595,7 +611,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cloud_user**
-> InviteUser update_cloud_user(cloud_pk, id, invite_user)
+> InviteUser update_cloud_user(cloud_pk, id, data)
+
+
 
 
 
@@ -609,18 +627,18 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
+data = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.update_cloud_user(cloud_pk, id, invite_user)
+    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->update_cloud_user: %s\n" % e)
@@ -632,7 +650,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
+ **data** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 

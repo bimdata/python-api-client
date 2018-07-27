@@ -1,6 +1,6 @@
 # bimdata_api_client.IfcApi
 
-All URIs are relative to *https://api-beta.bimdata.io/*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -119,9 +119,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -153,8 +153,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -175,9 +175,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -209,8 +209,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -231,9 +231,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -265,8 +265,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -287,9 +287,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -321,8 +321,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -343,9 +343,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -377,13 +377,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_elements**
-> list[Element] bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element)
+> list[Element] bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -399,19 +399,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element = NULL # list[Element] | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element)
+    api_response = api_instance.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_elements: %s\n" % e)
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element** | [**list[Element]**](list.md)|  | 
+ **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
 
@@ -442,7 +442,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_full_update_ifc_property**
-> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
+> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -458,19 +458,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-model_property = NULL # list[ModelProperty] | 
+data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
+    api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_full_update_ifc_property: %s\n" % e)
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **model_property** | [**list[ModelProperty]**](list.md)|  | 
+ **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -517,9 +517,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -553,8 +553,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -575,9 +575,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -611,13 +611,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_elements**
-> list[Element] bulk_update_elements(cloud_pk, ifc_pk, project_pk, element)
+> list[Element] bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -633,19 +633,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element = NULL # list[Element] | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.bulk_update_elements(cloud_pk, ifc_pk, project_pk, element)
+    api_response = api_instance.bulk_update_elements(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_elements: %s\n" % e)
@@ -658,7 +658,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element** | [**list[Element]**](list.md)|  | 
+ **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
 
@@ -676,7 +676,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_update_ifc_property**
-> list[ModelProperty] bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
+> list[ModelProperty] bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -692,19 +692,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-model_property = NULL # list[ModelProperty] | 
+data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
 try:
-    api_response = api_instance.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property)
+    api_response = api_instance.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->bulk_update_ifc_property: %s\n" % e)
@@ -717,7 +717,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **model_property** | [**list[ModelProperty]**](list.md)|  | 
+ **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -735,7 +735,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification_element_relations**
-> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation)
+> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -751,19 +751,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element_classification_relation = NULL # list[ElementClassificationRelation] | 
+data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
 try:
-    api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation)
+    api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -775,7 +775,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element_classification_relation** | [**list[ElementClassificationRelation]**](list.md)|  | 
+ **data** | [**list[ElementClassificationRelation]**](ElementClassificationRelation.md)|  | 
 
 ### Return type
 
@@ -788,12 +788,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classifications_of_element**
-> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification)
+> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 
 
@@ -809,9 +809,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -819,10 +819,10 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-classification = NULL # list[Classification] | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
-    api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification)
+    api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_classifications_of_element: %s\n" % e)
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **classification** | [**list[Classification]**](list.md)|  | 
+ **data** | [**list[Classification]**](Classification.md)|  | 
 
 ### Return type
 
@@ -854,7 +854,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element**
-> list[Element] create_element(cloud_pk, ifc_pk, project_pk, element)
+> list[Element] create_element(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -870,19 +870,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element = NULL # list[Element] | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
-    api_response = api_instance.create_element(cloud_pk, ifc_pk, project_pk, element)
+    api_response = api_instance.create_element(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element: %s\n" % e)
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element** | [**list[Element]**](list.md)|  | 
+ **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
 
@@ -913,7 +913,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set**
-> create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set)
+> create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 
 
@@ -929,9 +929,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -939,10 +939,10 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_set = bimdata_api_client.PropertySet() # PropertySet | 
+data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_instance.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set)
+    api_instance.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set: %s\n" % e)
 ```
@@ -955,7 +955,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_set** | [**PropertySet**](PropertySet.md)|  | 
+ **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -968,12 +968,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property**
-> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property)
+> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+
+
 
 
 
@@ -987,9 +989,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -998,10 +1000,10 @@ element_uuid = 'element_uuid_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property)
+    api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property: %s\n" % e)
@@ -1016,7 +1018,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
+ **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -1034,7 +1036,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition**
-> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition)
+> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
+
+
 
 
 
@@ -1048,9 +1052,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1060,10 +1064,10 @@ ifc_pk = 'ifc_pk_example' # str |
 project_pk = 'project_pk_example' # str | 
 property_pk = 'property_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition)
+    api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition: %s\n" % e)
@@ -1079,7 +1083,7 @@ Name | Type | Description  | Notes
  **project_pk** | **str**|  | 
  **property_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -1097,7 +1101,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element_property_set_property_definition_unit**
-> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit)
+> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+
+
 
 
 
@@ -1111,9 +1117,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1124,10 +1130,10 @@ project_pk = 'project_pk_example' # str |
 property_pk = 'property_pk_example' # str | 
 propertydefinition_pk = 'propertydefinition_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
-unit = bimdata_api_client.Unit() # Unit | 
+data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit)
+    api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_element_property_set_property_definition_unit: %s\n" % e)
@@ -1144,7 +1150,7 @@ Name | Type | Description  | Notes
  **property_pk** | **str**|  | 
  **propertydefinition_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
- **unit** | [**Unit**](Unit.md)|  | 
+ **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -1162,7 +1168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_property_definition**
-> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition)
+> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1178,19 +1184,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_definition = NULL # list[PropertyDefinition] | 
+data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
 try:
-    api_response = api_instance.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition)
+    api_response = api_instance.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_property_definition: %s\n" % e)
@@ -1203,7 +1209,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_definition** | [**list[PropertyDefinition]**](list.md)|  | 
+ **data** | [**list[PropertyDefinition]**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -1221,7 +1227,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_unit**
-> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit)
+> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1237,19 +1243,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-unit = NULL # list[Unit] | 
+data = [bimdata_api_client.Unit()] # list[Unit] | 
 
 try:
-    api_response = api_instance.create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit)
+    api_response = api_instance.create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_ifc_unit: %s\n" % e)
@@ -1262,7 +1268,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **unit** | [**list[Unit]**](list.md)|  | 
+ **data** | [**list[Unit]**](Unit.md)|  | 
 
 ### Return type
 
@@ -1280,7 +1286,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set**
-> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, property_set)
+> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1296,19 +1302,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_set = NULL # list[PropertySet] | 
+data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
 try:
-    api_response = api_instance.create_property_set(cloud_pk, ifc_pk, project_pk, property_set)
+    api_response = api_instance.create_property_set(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set: %s\n" % e)
@@ -1321,7 +1327,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_set** | [**list[PropertySet]**](list.md)|  | 
+ **data** | [**list[PropertySet]**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -1339,7 +1345,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set_element_relations**
-> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation)
+> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1355,19 +1361,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element_property_set_relation = NULL # list[ElementPropertySetRelation] | 
+data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
 try:
-    api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation)
+    api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -1379,7 +1385,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element_property_set_relation** | [**list[ElementPropertySetRelation]**](list.md)|  | 
+ **data** | [**list[ElementPropertySetRelation]**](ElementPropertySetRelation.md)|  | 
 
 ### Return type
 
@@ -1392,12 +1398,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_raw_elements**
-> create_raw_elements(cloud_pk, ifc_pk, project_pk, element)
+> create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1413,19 +1419,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-element = bimdata_api_client.Element() # Element | 
+data = bimdata_api_client.RawElements() # RawElements | 
 
 try:
-    api_instance.create_raw_elements(cloud_pk, ifc_pk, project_pk, element)
+    api_instance.create_raw_elements(cloud_pk, ifc_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->create_raw_elements: %s\n" % e)
 ```
@@ -1437,7 +1443,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **element** | [**Element**](Element.md)|  | 
+ **data** | [**RawElements**](RawElements.md)|  | 
 
 ### Return type
 
@@ -1450,12 +1456,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_space**
-> list[Space] create_space(cloud_pk, ifc_pk, project_pk, space)
+> list[Space] create_space(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1471,19 +1477,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-space = NULL # list[Space] | 
+data = [bimdata_api_client.Space()] # list[Space] | 
 
 try:
-    api_response = api_instance.create_space(cloud_pk, ifc_pk, project_pk, space)
+    api_response = api_instance.create_space(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_space: %s\n" % e)
@@ -1496,7 +1502,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **space** | [**list[Space]**](list.md)|  | 
+ **data** | [**list[Space]**](Space.md)|  | 
 
 ### Return type
 
@@ -1514,7 +1520,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone**
-> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, zone)
+> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, data)
 
 
 
@@ -1530,19 +1536,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-zone = NULL # list[Zone] | 
+data = [bimdata_api_client.Zone()] # list[Zone] | 
 
 try:
-    api_response = api_instance.create_zone(cloud_pk, ifc_pk, project_pk, zone)
+    api_response = api_instance.create_zone(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone: %s\n" % e)
@@ -1555,7 +1561,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **zone** | [**list[Zone]**](list.md)|  | 
+ **data** | [**list[Zone]**](Zone.md)|  | 
 
 ### Return type
 
@@ -1573,7 +1579,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone_space**
-> ZoneSpace create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space)
+> ZoneSpace create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+
+
 
 
 
@@ -1587,9 +1595,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1597,10 +1605,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space)
+    api_response = api_instance.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->create_zone_space: %s\n" % e)
@@ -1614,7 +1622,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
@@ -1636,6 +1644,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 ```python
 from __future__ import print_function
@@ -1646,9 +1656,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1682,13 +1692,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc**
 > delete_ifc(cloud_pk, id, project_pk)
+
+
 
 
 
@@ -1702,9 +1714,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1736,13 +1748,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property**
 > delete_ifc_property(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -1756,9 +1770,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1792,13 +1806,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_property_definition**
 > delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -1812,9 +1828,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1848,13 +1864,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ifc_unit**
 > delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -1868,9 +1886,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1904,13 +1922,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_property_set**
 > delete_property_set(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -1924,9 +1944,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -1960,13 +1980,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_space**
 > delete_space(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -1980,9 +2002,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2016,13 +2038,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone**
 > delete_zone(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -2036,9 +2060,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2072,13 +2096,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone_space**
 > delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+
+
 
 
 
@@ -2092,9 +2118,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2130,13 +2156,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_element**
-> Element full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
+> Element full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
+
+
 
 
 
@@ -2150,9 +2178,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2160,10 +2188,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-element = bimdata_api_client.Element() # Element | 
+data = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
+    api_response = api_instance.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_element: %s\n" % e)
@@ -2177,7 +2205,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **element** | [**Element**](Element.md)|  | 
+ **data** | [**Element**](Element.md)|  | 
 
 ### Return type
 
@@ -2195,7 +2223,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc**
-> Ifc full_update_ifc(cloud_pk, id, project_pk, ifc)
+> Ifc full_update_ifc(cloud_pk, id, project_pk, data)
+
+
 
 
 
@@ -2209,19 +2239,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-ifc = bimdata_api_client.Ifc() # Ifc | 
+data = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.full_update_ifc(cloud_pk, id, project_pk, ifc)
+    api_response = api_instance.full_update_ifc(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc: %s\n" % e)
@@ -2234,7 +2264,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
- **ifc** | [**Ifc**](Ifc.md)|  | 
+ **data** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
 
@@ -2252,7 +2282,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property**
-> ModelProperty full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
+> ModelProperty full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2266,9 +2298,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2276,10 +2308,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
+    api_response = api_instance.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property: %s\n" % e)
@@ -2293,7 +2325,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
+ **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -2311,7 +2343,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_property_definition**
-> PropertyDefinition full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
+> PropertyDefinition full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2325,9 +2359,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2335,10 +2369,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
+    api_response = api_instance.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_property_definition: %s\n" % e)
@@ -2352,7 +2386,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -2370,7 +2404,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_ifc_unit**
-> Unit full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
+> Unit full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2384,9 +2420,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2394,10 +2430,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-unit = bimdata_api_client.Unit() # Unit | 
+data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
+    api_response = api_instance.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_ifc_unit: %s\n" % e)
@@ -2411,7 +2447,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **unit** | [**Unit**](Unit.md)|  | 
+ **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -2429,7 +2465,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_property_set**
-> PropertySet full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
+> PropertySet full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2443,9 +2481,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2453,10 +2491,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_set = bimdata_api_client.PropertySet() # PropertySet | 
+data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
+    api_response = api_instance.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_property_set: %s\n" % e)
@@ -2470,7 +2508,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_set** | [**PropertySet**](PropertySet.md)|  | 
+ **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -2488,7 +2526,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_space**
-> Space full_update_space(cloud_pk, id, ifc_pk, project_pk, space)
+> Space full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2502,9 +2542,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2512,10 +2552,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-space = bimdata_api_client.Space() # Space | 
+data = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.full_update_space(cloud_pk, id, ifc_pk, project_pk, space)
+    api_response = api_instance.full_update_space(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_space: %s\n" % e)
@@ -2529,7 +2569,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **space** | [**Space**](Space.md)|  | 
+ **data** | [**Space**](Space.md)|  | 
 
 ### Return type
 
@@ -2547,7 +2587,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone**
-> Zone full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
+> Zone full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -2561,9 +2603,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2571,10 +2613,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-zone = bimdata_api_client.Zone() # Zone | 
+data = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
+    api_response = api_instance.full_update_zone(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone: %s\n" % e)
@@ -2588,7 +2630,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **zone** | [**Zone**](Zone.md)|  | 
+ **data** | [**Zone**](Zone.md)|  | 
 
 ### Return type
 
@@ -2606,7 +2648,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_zone_space**
-> ZoneSpace full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
+> ZoneSpace full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+
+
 
 
 
@@ -2620,9 +2664,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2631,10 +2675,10 @@ id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
+    api_response = api_instance.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->full_update_zone_space: %s\n" % e)
@@ -2649,7 +2693,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
@@ -2671,6 +2715,8 @@ Name | Type | Description  | Notes
 
 
 
+
+
 ### Example
 ```python
 from __future__ import print_function
@@ -2681,9 +2727,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2718,13 +2764,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element**
 > Element get_element(cloud_pk, ifc_pk, project_pk, uuid)
+
+
 
 
 
@@ -2738,9 +2786,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2775,13 +2823,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set**
 > PropertySet get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -2795,9 +2845,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2834,13 +2884,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_properties**
 > list[ModelProperty] get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
+
+
 
 
 
@@ -2854,9 +2906,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2893,13 +2945,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property**
 > ModelProperty get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+
+
 
 
 
@@ -2913,9 +2967,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -2954,13 +3008,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition**
 > PropertyDefinition get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
+
+
 
 
 
@@ -2974,9 +3030,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3017,13 +3073,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_unit**
 > Unit get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+
 
 
 
@@ -3037,9 +3095,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3082,13 +3140,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definition_units**
 > list[Unit] get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+
 
 
 
@@ -3102,9 +3162,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3145,13 +3205,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_set_property_definitions**
 > list[PropertyDefinition] get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
+
+
 
 
 
@@ -3165,9 +3227,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3206,13 +3268,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_element_property_sets**
 > list[PropertySet] get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk)
+
+
 
 
 
@@ -3226,9 +3290,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3263,13 +3327,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements**
 > list[Element] get_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+
+
 
 
 
@@ -3283,9 +3349,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3324,13 +3390,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_elements_from_classification**
 > list[Element] get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -3344,9 +3412,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3381,13 +3449,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc**
 > Ifc get_ifc(cloud_pk, id, project_pk)
+
+
 
 
 
@@ -3401,9 +3471,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3436,7 +3506,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3458,9 +3528,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3492,13 +3562,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_classifications**
 > list[Classification] get_ifc_classifications(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -3512,9 +3584,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3547,7 +3619,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3569,9 +3641,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3603,8 +3675,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3625,9 +3697,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3659,13 +3731,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_properties**
 > list[ModelProperty] get_ifc_properties(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -3679,9 +3753,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3714,13 +3788,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property**
 > ModelProperty get_ifc_property(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -3734,9 +3810,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3771,13 +3847,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definition**
 > PropertyDefinition get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -3791,9 +3869,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3828,13 +3906,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_property_definitions**
 > list[PropertyDefinition] get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -3848,9 +3928,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3883,7 +3963,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -3905,9 +3985,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3939,8 +4019,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3961,9 +4041,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -3995,13 +4075,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_unit**
 > Unit get_ifc_unit(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -4015,9 +4097,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4052,13 +4134,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifc_units**
 > list[Unit] get_ifc_units(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -4072,9 +4156,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4107,13 +4191,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
 > list[Ifc] get_ifcs(cloud_pk, project_pk, status=status)
+
+
 
 
 
@@ -4127,9 +4213,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4162,13 +4248,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_set**
 > PropertySet get_property_set(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -4182,9 +4270,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4219,13 +4307,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_property_sets**
 > list[PropertySet] get_property_sets(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -4239,9 +4329,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4274,13 +4364,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_raw_elements**
-> get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+> RawElements get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 
 
@@ -4296,9 +4386,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4310,7 +4400,8 @@ classification = 'classification_example' # str | Filter the returned list by cl
 classification__notation = 'classification__notation_example' # str | Filter the returned list by classification__notation (optional)
 
 try:
-    api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+    api_response = api_instance.get_raw_elements(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_raw_elements: %s\n" % e)
 ```
@@ -4328,7 +4419,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**RawElements**](RawElements.md)
 
 ### Authorization
 
@@ -4336,13 +4427,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_space**
 > Space get_space(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -4356,9 +4449,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4393,13 +4486,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_spaces**
 > list[Space] get_spaces(cloud_pk, ifc_pk, project_pk)
+
+
 
 
 
@@ -4413,9 +4508,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4448,13 +4543,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone**
 > Zone get_zone(cloud_pk, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -4468,9 +4565,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4505,13 +4602,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_space**
 > ZoneSpace get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+
+
 
 
 
@@ -4525,9 +4624,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4564,13 +4663,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zone_spaces**
 > list[ZoneSpace] get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk)
+
+
 
 
 
@@ -4584,9 +4685,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4621,13 +4722,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_zones**
 > list[Zone] get_zones(cloud_pk, ifc_pk, project_pk, color=color)
+
+
 
 
 
@@ -4641,9 +4744,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4678,7 +4781,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -4700,9 +4803,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4735,13 +4838,15 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_classification_of_element**
 > remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+
+
 
 
 
@@ -4755,9 +4860,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4793,8 +4898,8 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4815,9 +4920,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4853,13 +4958,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property**
 > remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+
+
 
 
 
@@ -4873,9 +4980,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4913,13 +5020,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition**
 > remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
+
+
 
 
 
@@ -4933,9 +5042,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -4975,13 +5084,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition_unit**
 > remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+
 
 
 
@@ -4995,9 +5106,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5039,13 +5150,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_elements_from_classification**
 > remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid)
+
+
 
 
 
@@ -5059,9 +5172,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5097,13 +5210,15 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_element**
-> Element update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
+> Element update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
+
+
 
 
 
@@ -5117,9 +5232,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5127,10 +5242,10 @@ cloud_pk = 'cloud_pk_example' # str |
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-element = bimdata_api_client.Element() # Element | 
+data = bimdata_api_client.Element() # Element | 
 
 try:
-    api_response = api_instance.update_element(cloud_pk, ifc_pk, project_pk, uuid, element)
+    api_response = api_instance.update_element(cloud_pk, ifc_pk, project_pk, uuid, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_element: %s\n" % e)
@@ -5144,7 +5259,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **element** | [**Element**](Element.md)|  | 
+ **data** | [**Element**](Element.md)|  | 
 
 ### Return type
 
@@ -5162,7 +5277,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc**
-> Ifc update_ifc(cloud_pk, id, project_pk, ifc)
+> Ifc update_ifc(cloud_pk, id, project_pk, data)
+
+
 
 
 
@@ -5176,19 +5293,19 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-ifc = bimdata_api_client.Ifc() # Ifc | 
+data = bimdata_api_client.Ifc() # Ifc | 
 
 try:
-    api_response = api_instance.update_ifc(cloud_pk, id, project_pk, ifc)
+    api_response = api_instance.update_ifc(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc: %s\n" % e)
@@ -5201,7 +5318,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc. | 
  **project_pk** | **str**|  | 
- **ifc** | [**Ifc**](Ifc.md)|  | 
+ **data** | [**Ifc**](Ifc.md)|  | 
 
 ### Return type
 
@@ -5235,20 +5352,20 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
-structure_file = '/path/to/file' # file |  (optional)
-systems_file = '/path/to/file' # file |  (optional)
-map_file = '/path/to/file' # file |  (optional)
-gltf_file = '/path/to/file' # file |  (optional)
-bvh_tree_file = '/path/to/file' # file |  (optional)
+structure_file = '/path/to/file.txt' # file |  (optional)
+systems_file = '/path/to/file.txt' # file |  (optional)
+map_file = '/path/to/file.txt' # file |  (optional)
+gltf_file = '/path/to/file.txt' # file |  (optional)
+bvh_tree_file = '/path/to/file.txt' # file |  (optional)
 
 try:
     api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
@@ -5286,7 +5403,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property**
-> ModelProperty update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
+> ModelProperty update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5300,9 +5419,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5310,10 +5429,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-model_property = bimdata_api_client.ModelProperty() # ModelProperty | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
 try:
-    api_response = api_instance.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property)
+    api_response = api_instance.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property: %s\n" % e)
@@ -5327,7 +5446,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **model_property** | [**ModelProperty**](ModelProperty.md)|  | 
+ **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
 ### Return type
 
@@ -5345,7 +5464,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_property_definition**
-> PropertyDefinition update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
+> PropertyDefinition update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5359,9 +5480,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5369,10 +5490,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_definition = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
 try:
-    api_response = api_instance.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition)
+    api_response = api_instance.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_property_definition: %s\n" % e)
@@ -5386,7 +5507,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_definition** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
@@ -5404,7 +5525,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_unit**
-> Unit update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
+> Unit update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5418,9 +5541,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5428,10 +5551,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-unit = bimdata_api_client.Unit() # Unit | 
+data = bimdata_api_client.Unit() # Unit | 
 
 try:
-    api_response = api_instance.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit)
+    api_response = api_instance.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_unit: %s\n" % e)
@@ -5445,7 +5568,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **unit** | [**Unit**](Unit.md)|  | 
+ **data** | [**Unit**](Unit.md)|  | 
 
 ### Return type
 
@@ -5463,7 +5586,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_property_set**
-> PropertySet update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
+> PropertySet update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5477,9 +5602,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5487,10 +5612,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-property_set = bimdata_api_client.PropertySet() # PropertySet | 
+data = bimdata_api_client.PropertySet() # PropertySet | 
 
 try:
-    api_response = api_instance.update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set)
+    api_response = api_instance.update_property_set(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_property_set: %s\n" % e)
@@ -5504,7 +5629,7 @@ Name | Type | Description  | Notes
  **id** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **property_set** | [**PropertySet**](PropertySet.md)|  | 
+ **data** | [**PropertySet**](PropertySet.md)|  | 
 
 ### Return type
 
@@ -5522,7 +5647,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_space**
-> Space update_space(cloud_pk, id, ifc_pk, project_pk, space)
+> Space update_space(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5536,9 +5663,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5546,10 +5673,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-space = bimdata_api_client.Space() # Space | 
+data = bimdata_api_client.Space() # Space | 
 
 try:
-    api_response = api_instance.update_space(cloud_pk, id, ifc_pk, project_pk, space)
+    api_response = api_instance.update_space(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_space: %s\n" % e)
@@ -5563,7 +5690,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this space. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **space** | [**Space**](Space.md)|  | 
+ **data** | [**Space**](Space.md)|  | 
 
 ### Return type
 
@@ -5581,7 +5708,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone**
-> Zone update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
+> Zone update_zone(cloud_pk, id, ifc_pk, project_pk, data)
+
+
 
 
 
@@ -5595,9 +5724,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5605,10 +5734,10 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this zone.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-zone = bimdata_api_client.Zone() # Zone | 
+data = bimdata_api_client.Zone() # Zone | 
 
 try:
-    api_response = api_instance.update_zone(cloud_pk, id, ifc_pk, project_pk, zone)
+    api_response = api_instance.update_zone(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone: %s\n" % e)
@@ -5622,7 +5751,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this zone. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **zone** | [**Zone**](Zone.md)|  | 
+ **data** | [**Zone**](Zone.md)|  | 
 
 ### Return type
 
@@ -5640,7 +5769,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_zone_space**
-> ZoneSpace update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
+> ZoneSpace update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+
+
 
 
 
@@ -5654,9 +5785,9 @@ from pprint import pprint
 
 # Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
-configuration.api_key['access_token'] = 'YOUR_API_KEY'
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['access_token'] = 'Bearer'
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
@@ -5665,10 +5796,10 @@ id = 56 # int | A unique integer value identifying this space.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
-zone_space = bimdata_api_client.ZoneSpace() # ZoneSpace | 
+data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
 try:
-    api_response = api_instance.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space)
+    api_response = api_instance.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_zone_space: %s\n" % e)
@@ -5683,7 +5814,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
- **zone_space** | [**ZoneSpace**](ZoneSpace.md)|  | 
+ **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
 
 ### Return type
 
