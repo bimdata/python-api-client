@@ -1,6 +1,6 @@
 # bimdata_api_client.ProjectApi
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api-beta.bimdata.io/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 
 # **create_classification**
-> list[Classification] create_classification(cloud_pk, project_pk, data)
+> list[Classification] create_classification(cloud_pk, project_pk, classification)
 
 
 
@@ -62,10 +62,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Classification()] # list[Classification] | 
+classification = NULL # list[Classification] | 
 
 try:
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
+    api_response = api_instance.create_classification(cloud_pk, project_pk, classification)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_classification: %s\n" % e)
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**list[Classification]**](Classification.md)|  | 
+ **classification** | [**list[Classification]**](list.md)|  | 
 
 ### Return type
 
@@ -96,8 +96,6 @@ Name | Type | Description  | Notes
 
 # **create_document**
 > Document create_document(cloud_pk, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
-
-
 
 
 
@@ -127,7 +125,7 @@ creator = 56 # int |  (optional)
 project = 56 # int |  (optional)
 file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
-file = '/path/to/file.txt' # file |  (optional)
+file = '/path/to/file' # file |  (optional)
 size = 'size_example' # str |  (optional)
 created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
@@ -176,9 +174,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_folder**
-> Folder create_folder(cloud_pk, project_pk, data)
-
-
+> Folder create_folder(cloud_pk, project_pk, folder)
 
 
 
@@ -200,10 +196,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+folder = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.create_folder(cloud_pk, project_pk, data)
+    api_response = api_instance.create_folder(cloud_pk, project_pk, folder)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_folder: %s\n" % e)
@@ -215,7 +211,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **folder** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
@@ -233,9 +229,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_project**
-> Project create_project(cloud_pk, data)
-
-
+> Project create_project(cloud_pk, project)
 
 
 
@@ -256,10 +250,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.Project() # Project | 
+project = bimdata_api_client.Project() # Project | 
 
 try:
-    api_response = api_instance.create_project(cloud_pk, data)
+    api_response = api_instance.create_project(cloud_pk, project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_project: %s\n" % e)
@@ -270,7 +264,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **data** | [**Project**](Project.md)|  | 
+ **project** | [**Project**](Project.md)|  | 
 
 ### Return type
 
@@ -288,9 +282,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_project_user**
-> InviteUser create_project_user(cloud_pk, project_pk, data)
-
-
+> InviteUser create_project_user(cloud_pk, project_pk, invite_user)
 
 
 
@@ -312,10 +304,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.create_project_user(cloud_pk, project_pk, data)
+    api_response = api_instance.create_project_user(cloud_pk, project_pk, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_project_user: %s\n" % e)
@@ -327,7 +319,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -346,8 +338,6 @@ Name | Type | Description  | Notes
 
 # **delete_classification**
 > delete_classification(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -395,15 +385,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
 > Document delete_document(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -452,15 +440,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_folder**
 > delete_folder(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -508,15 +494,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project**
 > delete_project(cloud_pk, id)
-
-
 
 
 
@@ -562,15 +546,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project_user**
 > delete_project_user(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -618,15 +600,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_classification**
-> Classification full_update_classification(cloud_pk, id, project_pk, data)
-
-
+> Classification full_update_classification(cloud_pk, id, project_pk, classification)
 
 
 
@@ -649,10 +629,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+classification = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, classification)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_classification: %s\n" % e)
@@ -665,7 +645,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
- **data** | [**Classification**](Classification.md)|  | 
+ **classification** | [**Classification**](Classification.md)|  | 
 
 ### Return type
 
@@ -683,9 +663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> Document full_update_document(cloud_pk, id, project_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
-
-
+> Document full_update_document(cloud_pk, id2, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
 
 
 
@@ -706,24 +684,24 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this document.
+id2 = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | 
-id2 = 56 # int |  (optional)
+id = 56 # int |  (optional)
 parent = 56 # int |  (optional)
 parent_id = 56 # int |  (optional)
 creator = 56 # int |  (optional)
 project = 56 # int |  (optional)
 file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
-file = '/path/to/file.txt' # file |  (optional)
+file = '/path/to/file' # file |  (optional)
 size = 'size_example' # str |  (optional)
 created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, id2=id2, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.full_update_document(cloud_pk, id2, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_document: %s\n" % e)
@@ -734,10 +712,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this document. | 
+ **id2** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
  **name** | **str**|  | 
- **id2** | **int**|  | [optional] 
+ **id** | **int**|  | [optional] 
  **parent** | **int**|  | [optional] 
  **parent_id** | **int**|  | [optional] 
  **creator** | **int**|  | [optional] 
@@ -766,9 +744,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_folder**
-> Folder full_update_folder(cloud_pk, id, project_pk, data)
-
-
+> Folder full_update_folder(cloud_pk, id, project_pk, folder)
 
 
 
@@ -791,10 +767,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+folder = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, folder)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_folder: %s\n" % e)
@@ -807,7 +783,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **folder** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
@@ -825,9 +801,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_project**
-> Project full_update_project(cloud_pk, id, data)
-
-
+> Project full_update_project(cloud_pk, id, project)
 
 
 
@@ -849,10 +823,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.Project() # Project | 
+project = bimdata_api_client.Project() # Project | 
 
 try:
-    api_response = api_instance.full_update_project(cloud_pk, id, data)
+    api_response = api_instance.full_update_project(cloud_pk, id, project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project: %s\n" % e)
@@ -864,7 +838,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**Project**](Project.md)|  | 
+ **project** | [**Project**](Project.md)|  | 
 
 ### Return type
 
@@ -882,9 +856,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_project_user**
-> InviteUser full_update_project_user(cloud_pk, id, project_pk, data)
-
-
+> InviteUser full_update_project_user(cloud_pk, id, project_pk, invite_user)
 
 
 
@@ -907,10 +879,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
+    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project_user: %s\n" % e)
@@ -923,7 +895,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -942,8 +914,6 @@ Name | Type | Description  | Notes
 
 # **get_classification**
 > Classification get_classification(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -992,15 +962,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_classifications**
 > list[Classification] get_classifications(cloud_pk, project_pk)
-
-
 
 
 
@@ -1047,15 +1015,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_document**
 > Document get_document(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -1104,15 +1070,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_documents**
 > Document get_documents(cloud_pk, project_pk)
-
-
 
 
 
@@ -1159,15 +1123,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folder**
 > Folder get_folder(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -1216,15 +1178,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folders**
 > list[Folder] get_folders(cloud_pk, project_pk)
-
-
 
 
 
@@ -1271,15 +1231,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project**
 > Project get_project(cloud_pk, id)
-
-
 
 
 
@@ -1326,7 +1284,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -1381,15 +1339,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_user**
 > User get_project_user(cloud_pk, id, project_pk)
-
-
 
 
 
@@ -1438,15 +1394,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_users**
 > list[User] get_project_users(cloud_pk, project_pk)
-
-
 
 
 
@@ -1493,15 +1447,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_projects**
 > list[Project] get_projects(cloud_pk)
-
-
 
 
 
@@ -1546,15 +1498,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_classification**
-> Classification update_classification(cloud_pk, id, project_pk, data)
-
-
+> Classification update_classification(cloud_pk, id, project_pk, classification)
 
 
 
@@ -1577,10 +1527,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+classification = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_classification(cloud_pk, id, project_pk, classification)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_classification: %s\n" % e)
@@ -1593,7 +1543,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this classification. | 
  **project_pk** | **str**|  | 
- **data** | [**Classification**](Classification.md)|  | 
+ **classification** | [**Classification**](Classification.md)|  | 
 
 ### Return type
 
@@ -1611,9 +1561,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_document**
-> Document update_document(cloud_pk, id, project_pk, data)
-
-
+> Document update_document(cloud_pk, id, project_pk, document)
 
 
 
@@ -1636,10 +1584,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Document() # Document | 
+document = bimdata_api_client.Document() # Document | 
 
 try:
-    api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_document(cloud_pk, id, project_pk, document)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_document: %s\n" % e)
@@ -1652,7 +1600,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
- **data** | [**Document**](Document.md)|  | 
+ **document** | [**Document**](Document.md)|  | 
 
 ### Return type
 
@@ -1670,9 +1618,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_folder**
-> Folder update_folder(cloud_pk, id, project_pk, data)
-
-
+> Folder update_folder(cloud_pk, id, project_pk, folder)
 
 
 
@@ -1695,10 +1641,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+folder = bimdata_api_client.Folder() # Folder | 
 
 try:
-    api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_folder(cloud_pk, id, project_pk, folder)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_folder: %s\n" % e)
@@ -1711,7 +1657,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **folder** | [**Folder**](Folder.md)|  | 
 
 ### Return type
 
@@ -1729,9 +1675,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_project**
-> Project update_project(cloud_pk, id, data)
-
-
+> Project update_project(cloud_pk, id, project)
 
 
 
@@ -1753,10 +1697,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.Project() # Project | 
+project = bimdata_api_client.Project() # Project | 
 
 try:
-    api_response = api_instance.update_project(cloud_pk, id, data)
+    api_response = api_instance.update_project(cloud_pk, id, project)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_project: %s\n" % e)
@@ -1768,7 +1712,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**Project**](Project.md)|  | 
+ **project** | [**Project**](Project.md)|  | 
 
 ### Return type
 
@@ -1786,9 +1730,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_project_user**
-> InviteUser update_project_user(cloud_pk, id, project_pk, data)
-
-
+> InviteUser update_project_user(cloud_pk, id, project_pk, invite_user)
 
 
 
@@ -1811,10 +1753,10 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
+    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->update_project_user: %s\n" % e)
@@ -1827,7 +1769,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 

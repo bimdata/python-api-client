@@ -1,6 +1,6 @@
 # bimdata_api_client.CloudApi
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api-beta.bimdata.io/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -19,9 +19,7 @@ Method | HTTP request | Description
 
 
 # **create_cloud**
-> Cloud create_cloud(data)
-
-
+> Cloud create_cloud(cloud)
 
 
 
@@ -41,10 +39,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.Cloud() # Cloud | 
+cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.create_cloud(data)
+    api_response = api_instance.create_cloud(cloud)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->create_cloud: %s\n" % e)
@@ -54,7 +52,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**Cloud**](Cloud.md)|  | 
+ **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -72,9 +70,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_cloud_user**
-> InviteUser create_cloud_user(cloud_pk, data)
-
-
+> InviteUser create_cloud_user(cloud_pk, invite_user)
 
 
 
@@ -95,10 +91,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.create_cloud_user(cloud_pk, data)
+    api_response = api_instance.create_cloud_user(cloud_pk, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->create_cloud_user: %s\n" % e)
@@ -109,7 +105,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -128,8 +124,6 @@ Name | Type | Description  | Notes
 
 # **delete_cloud_user**
 > delete_cloud_user(cloud_pk, id)
-
-
 
 
 
@@ -175,15 +169,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_cloud**
-> Cloud full_update_cloud(id, data)
-
-
+> Cloud full_update_cloud(id, cloud)
 
 
 
@@ -204,10 +196,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.Cloud() # Cloud | 
+cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.full_update_cloud(id, data)
+    api_response = api_instance.full_update_cloud(id, cloud)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->full_update_cloud: %s\n" % e)
@@ -218,7 +210,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**Cloud**](Cloud.md)|  | 
+ **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -236,9 +228,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_cloud_user**
-> InviteUser full_update_cloud_user(cloud_pk, id, data)
-
-
+> InviteUser full_update_cloud_user(cloud_pk, id, invite_user)
 
 
 
@@ -260,10 +250,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
+    api_response = api_instance.full_update_cloud_user(cloud_pk, id, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->full_update_cloud_user: %s\n" % e)
@@ -275,7 +265,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
@@ -340,7 +330,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -393,15 +383,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_user**
 > User get_cloud_user(cloud_pk, id)
-
-
 
 
 
@@ -448,15 +436,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_users**
 > list[User] get_cloud_users(cloud_pk)
-
-
 
 
 
@@ -501,7 +487,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -550,15 +536,13 @@ This endpoint does not need any parameter.
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cloud**
-> Cloud update_cloud(id, data)
-
-
+> Cloud update_cloud(id, cloud)
 
 
 
@@ -579,10 +563,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-data = bimdata_api_client.Cloud() # Cloud | 
+cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.update_cloud(id, data)
+    api_response = api_instance.update_cloud(id, cloud)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->update_cloud: %s\n" % e)
@@ -593,7 +577,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **data** | [**Cloud**](Cloud.md)|  | 
+ **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -611,9 +595,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_cloud_user**
-> InviteUser update_cloud_user(cloud_pk, id, data)
-
-
+> InviteUser update_cloud_user(cloud_pk, id, invite_user)
 
 
 
@@ -635,10 +617,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = bimdata_api_client.InviteUser() # InviteUser | 
+invite_user = bimdata_api_client.InviteUser() # InviteUser | 
 
 try:
-    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
+    api_response = api_instance.update_cloud_user(cloud_pk, id, invite_user)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->update_cloud_user: %s\n" % e)
@@ -650,7 +632,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **str**|  | 
- **data** | [**InviteUser**](InviteUser.md)|  | 
+ **invite_user** | [**InviteUser**](InviteUser.md)|  | 
 
 ### Return type
 
