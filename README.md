@@ -74,7 +74,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-beta.bimdata.io/*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -283,6 +283,8 @@ Class | Method | HTTP request | Description
  - [ForgotPassword](docs/ForgotPassword.md)
  - [Ifc](docs/Ifc.md)
  - [IfcChecker](docs/IfcChecker.md)
+ - [IfcCheckerCheckplan](docs/IfcCheckerCheckplan.md)
+ - [IfcCheckerResults](docs/IfcCheckerResults.md)
  - [IfcFiles](docs/IfcFiles.md)
  - [InviteUser](docs/InviteUser.md)
  - [InvitedSignUpUser](docs/InvitedSignUpUser.md)

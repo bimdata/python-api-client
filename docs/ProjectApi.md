@@ -1,6 +1,6 @@
 # bimdata_api_client.ProjectApi
 
-All URIs are relative to *https://api-beta.bimdata.io/*
+All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -663,7 +663,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> Document full_update_document(cloud_pk, id2, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+> Document full_update_document(cloud_pk, id, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
 
 
 
@@ -684,7 +684,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id2 = 56 # int | A unique integer value identifying this document.
+id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | 
 id = 56 # int |  (optional)
@@ -701,7 +701,7 @@ updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.full_update_document(cloud_pk, id2, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_document: %s\n" % e)
@@ -712,7 +712,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id2** | **int**| A unique integer value identifying this document. | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
  **name** | **str**|  | 
  **id** | **int**|  | [optional] 

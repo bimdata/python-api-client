@@ -37,11 +37,11 @@ class CheckplanApi(object):
         """create_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker(cloud_pk, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checker(cloud_pk, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -51,7 +51,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
         else:
             (data) = self.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
@@ -61,11 +61,11 @@ class CheckplanApi(object):
         """create_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -78,7 +78,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'ifc_checker']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -149,7 +149,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='IfcChecker',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -159,11 +159,11 @@ class CheckplanApi(object):
         """create_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
@@ -174,7 +174,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
         else:
             (data) = self.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
@@ -184,11 +184,11 @@ class CheckplanApi(object):
         """create_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
@@ -202,7 +202,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'ifc_pk', 'project_pk', 'checker_result']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -279,7 +279,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckerResult',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -289,11 +289,11 @@ class CheckplanApi(object):
         """create_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checkplan(cloud_pk, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checkplan(cloud_pk, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param CheckPlan check_plan: (required)
@@ -302,7 +302,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_checkplan_with_http_info(cloud_pk, project_pk, check_plan, **kwargs)  # noqa: E501
         else:
             (data) = self.create_checkplan_with_http_info(cloud_pk, project_pk, check_plan, **kwargs)  # noqa: E501
@@ -312,11 +312,11 @@ class CheckplanApi(object):
         """create_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_checkplan_with_http_info(cloud_pk, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_checkplan_with_http_info(cloud_pk, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param CheckPlan check_plan: (required)
@@ -328,7 +328,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'check_plan']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -393,7 +393,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckPlan',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -403,11 +403,11 @@ class CheckplanApi(object):
         """create_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -418,7 +418,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_rule_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
         else:
             (data) = self.create_rule_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
@@ -428,11 +428,11 @@ class CheckplanApi(object):
         """create_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_rule_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -446,7 +446,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk', 'ruleset_pk', 'rule']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -523,7 +523,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Rule',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -533,11 +533,11 @@ class CheckplanApi(object):
         """create_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -549,7 +549,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_rule_component_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
         else:
             (data) = self.create_rule_component_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
@@ -559,11 +559,11 @@ class CheckplanApi(object):
         """create_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_rule_component_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_rule_component_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -578,7 +578,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk', 'rule_pk', 'ruleset_pk', 'rule_component']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -661,7 +661,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='RuleComponent',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -671,11 +671,11 @@ class CheckplanApi(object):
         """create_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ruleset(check_plan_pk, cloud_pk, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ruleset(check_plan_pk, cloud_pk, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -685,7 +685,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_ruleset_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset, **kwargs)  # noqa: E501
         else:
             (data) = self.create_ruleset_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset, **kwargs)  # noqa: E501
@@ -695,11 +695,11 @@ class CheckplanApi(object):
         """create_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ruleset_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ruleset_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -712,7 +712,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk', 'ruleset']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -783,7 +783,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Ruleset',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -793,11 +793,11 @@ class CheckplanApi(object):
         """delete_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checker(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -807,7 +807,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -817,11 +817,11 @@ class CheckplanApi(object):
         """delete_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -834,7 +834,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -897,7 +897,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -907,11 +907,11 @@ class CheckplanApi(object):
         """delete_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -922,7 +922,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -932,11 +932,11 @@ class CheckplanApi(object):
         """delete_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -950,7 +950,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1019,7 +1019,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1029,11 +1029,11 @@ class CheckplanApi(object):
         """delete_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checkplan(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checkplan(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -1042,7 +1042,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_checkplan_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_checkplan_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -1052,11 +1052,11 @@ class CheckplanApi(object):
         """delete_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_checkplan_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_checkplan_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -1068,7 +1068,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1125,7 +1125,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1135,11 +1135,11 @@ class CheckplanApi(object):
         """delete_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -1150,7 +1150,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -1160,11 +1160,11 @@ class CheckplanApi(object):
         """delete_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -1178,7 +1178,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1247,7 +1247,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1257,11 +1257,11 @@ class CheckplanApi(object):
         """delete_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -1273,7 +1273,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -1283,11 +1283,11 @@ class CheckplanApi(object):
         """delete_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -1302,7 +1302,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'rule_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1377,7 +1377,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1387,11 +1387,11 @@ class CheckplanApi(object):
         """delete_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -1401,7 +1401,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -1411,11 +1411,11 @@ class CheckplanApi(object):
         """delete_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -1428,7 +1428,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1491,7 +1491,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1501,11 +1501,11 @@ class CheckplanApi(object):
         """full_update_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checker(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -1516,7 +1516,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
@@ -1526,11 +1526,11 @@ class CheckplanApi(object):
         """full_update_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -1544,7 +1544,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'ifc_checker']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1621,7 +1621,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='IfcChecker',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1631,11 +1631,11 @@ class CheckplanApi(object):
         """full_update_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -1647,7 +1647,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
@@ -1657,11 +1657,11 @@ class CheckplanApi(object):
         """full_update_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -1676,7 +1676,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'id', 'ifc_pk', 'project_pk', 'checker_result']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1759,7 +1759,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckerResult',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1769,11 +1769,11 @@ class CheckplanApi(object):
         """full_update_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checkplan(cloud_pk, id, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checkplan(cloud_pk, id, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -1783,7 +1783,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, **kwargs)  # noqa: E501
@@ -1793,11 +1793,11 @@ class CheckplanApi(object):
         """full_update_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -1810,7 +1810,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'check_plan']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1881,7 +1881,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckPlan',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1891,11 +1891,11 @@ class CheckplanApi(object):
         """full_update_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -1907,7 +1907,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
@@ -1917,11 +1917,11 @@ class CheckplanApi(object):
         """full_update_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -1936,7 +1936,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset_pk', 'rule']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2019,7 +2019,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Rule',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2029,11 +2029,11 @@ class CheckplanApi(object):
         """full_update_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -2046,7 +2046,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
@@ -2056,11 +2056,11 @@ class CheckplanApi(object):
         """full_update_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -2076,7 +2076,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'rule_pk', 'ruleset_pk', 'rule_component']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2165,7 +2165,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='RuleComponent',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2175,11 +2175,11 @@ class CheckplanApi(object):
         """full_update_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -2190,7 +2190,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, **kwargs)  # noqa: E501
@@ -2200,11 +2200,11 @@ class CheckplanApi(object):
         """full_update_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -2218,7 +2218,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2295,7 +2295,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Ruleset',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2305,11 +2305,11 @@ class CheckplanApi(object):
         """get_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -2319,7 +2319,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -2329,11 +2329,11 @@ class CheckplanApi(object):
         """get_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -2346,7 +2346,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2413,7 +2413,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='IfcChecker',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2423,11 +2423,11 @@ class CheckplanApi(object):
         """get_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -2438,7 +2438,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -2448,11 +2448,11 @@ class CheckplanApi(object):
         """get_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -2466,7 +2466,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2539,7 +2539,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckerResult',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2549,11 +2549,11 @@ class CheckplanApi(object):
         """get_checker_results  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
@@ -2563,7 +2563,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -2573,11 +2573,11 @@ class CheckplanApi(object):
         """get_checker_results  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
@@ -2590,7 +2590,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2657,7 +2657,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[CheckerResult]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2667,11 +2667,11 @@ class CheckplanApi(object):
         """get_checkers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkers(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkers(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2680,7 +2680,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -2690,11 +2690,11 @@ class CheckplanApi(object):
         """get_checkers  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2706,7 +2706,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2767,7 +2767,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[IfcChecker]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2777,11 +2777,11 @@ class CheckplanApi(object):
         """get_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplan(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkplan(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -2790,7 +2790,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checkplan_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checkplan_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -2800,11 +2800,11 @@ class CheckplanApi(object):
         """get_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplan_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkplan_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -2816,7 +2816,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2877,7 +2877,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckPlan',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2887,11 +2887,11 @@ class CheckplanApi(object):
         """get_checkplans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplans(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkplans(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[CheckPlan]
@@ -2899,7 +2899,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_checkplans_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_checkplans_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -2909,11 +2909,11 @@ class CheckplanApi(object):
         """get_checkplans  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_checkplans_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_checkplans_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[CheckPlan]
@@ -2924,7 +2924,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2979,7 +2979,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[CheckPlan]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2989,11 +2989,11 @@ class CheckplanApi(object):
         """get_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -3004,7 +3004,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -3014,11 +3014,11 @@ class CheckplanApi(object):
         """get_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -3032,7 +3032,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3105,7 +3105,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Rule',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3115,11 +3115,11 @@ class CheckplanApi(object):
         """get_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -3131,7 +3131,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -3141,11 +3141,11 @@ class CheckplanApi(object):
         """get_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -3160,7 +3160,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'rule_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3239,7 +3239,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='RuleComponent',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3249,11 +3249,11 @@ class CheckplanApi(object):
         """get_rule_components  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3264,7 +3264,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_rule_components_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rule_components_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -3274,11 +3274,11 @@ class CheckplanApi(object):
         """get_rule_components  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rule_components_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rule_components_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3292,7 +3292,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk', 'rule_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3365,7 +3365,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[RuleComponent]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3375,11 +3375,11 @@ class CheckplanApi(object):
         """get_rules  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3389,7 +3389,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_rules_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rules_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, **kwargs)  # noqa: E501
@@ -3399,11 +3399,11 @@ class CheckplanApi(object):
         """get_rules  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rules_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rules_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3416,7 +3416,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk', 'ruleset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3483,7 +3483,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[Rule]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3493,11 +3493,11 @@ class CheckplanApi(object):
         """get_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ruleset(check_plan_pk, cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ruleset(check_plan_pk, cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -3507,7 +3507,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -3517,11 +3517,11 @@ class CheckplanApi(object):
         """get_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -3534,7 +3534,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3601,7 +3601,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Ruleset',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3611,11 +3611,11 @@ class CheckplanApi(object):
         """get_rulesets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rulesets(check_plan_pk, cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rulesets(check_plan_pk, cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3624,7 +3624,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_rulesets_with_http_info(check_plan_pk, cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_rulesets_with_http_info(check_plan_pk, cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -3634,11 +3634,11 @@ class CheckplanApi(object):
         """get_rulesets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_rulesets_with_http_info(check_plan_pk, cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_rulesets_with_http_info(check_plan_pk, cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param str project_pk: (required)
@@ -3650,7 +3650,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3711,7 +3711,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='list[Ruleset]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3722,11 +3722,11 @@ class CheckplanApi(object):
 
         Starts a new check in the checker  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.launch_new_check(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.launch_new_check(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -3737,7 +3737,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
         else:
             (data) = self.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
@@ -3748,11 +3748,11 @@ class CheckplanApi(object):
 
         Starts a new check in the checker  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -3766,7 +3766,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'ifc_checker']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3839,7 +3839,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3849,11 +3849,11 @@ class CheckplanApi(object):
         """update_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checker(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -3864,7 +3864,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
         else:
             (data) = self.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, **kwargs)  # noqa: E501
@@ -3874,11 +3874,11 @@ class CheckplanApi(object):
         """update_checker  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, ifc_checker, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
         :param str ifc_pk: (required)
@@ -3892,7 +3892,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'ifc_checker']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3969,7 +3969,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='IfcChecker',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3979,11 +3979,11 @@ class CheckplanApi(object):
         """update_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -3995,7 +3995,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
         else:
             (data) = self.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, **kwargs)  # noqa: E501
@@ -4005,11 +4005,11 @@ class CheckplanApi(object):
         """update_checker_result  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, checker_result, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
@@ -4024,7 +4024,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['checker_pk', 'cloud_pk', 'id', 'ifc_pk', 'project_pk', 'checker_result']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4107,7 +4107,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckerResult',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4117,11 +4117,11 @@ class CheckplanApi(object):
         """update_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checkplan(cloud_pk, id, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checkplan(cloud_pk, id, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -4131,7 +4131,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, **kwargs)  # noqa: E501
         else:
             (data) = self.update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, **kwargs)  # noqa: E501
@@ -4141,11 +4141,11 @@ class CheckplanApi(object):
         """update_checkplan  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_checkplan_with_http_info(cloud_pk, id, project_pk, check_plan, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this check plan. (required)
         :param str project_pk: (required)
@@ -4158,7 +4158,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'check_plan']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4229,7 +4229,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='CheckPlan',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4239,11 +4239,11 @@ class CheckplanApi(object):
         """update_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -4255,7 +4255,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
         else:
             (data) = self.update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, **kwargs)  # noqa: E501
@@ -4265,11 +4265,11 @@ class CheckplanApi(object):
         """update_rule  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_rule_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule. (required)
@@ -4284,7 +4284,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset_pk', 'rule']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4367,7 +4367,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Rule',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4377,11 +4377,11 @@ class CheckplanApi(object):
         """update_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -4394,7 +4394,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
         else:
             (data) = self.update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, **kwargs)  # noqa: E501
@@ -4404,11 +4404,11 @@ class CheckplanApi(object):
         """update_rule_component  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_rule_component_with_http_info(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this rule component. (required)
@@ -4424,7 +4424,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'rule_pk', 'ruleset_pk', 'rule_component']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4513,7 +4513,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='RuleComponent',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4523,11 +4523,11 @@ class CheckplanApi(object):
         """update_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -4538,7 +4538,7 @@ class CheckplanApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, **kwargs)  # noqa: E501
@@ -4548,11 +4548,11 @@ class CheckplanApi(object):
         """update_ruleset  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ruleset_with_http_info(check_plan_pk, cloud_pk, id, project_pk, ruleset, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str check_plan_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ruleset. (required)
@@ -4566,7 +4566,7 @@ class CheckplanApi(object):
         local_var_params = locals()
 
         all_params = ['check_plan_pk', 'cloud_pk', 'id', 'project_pk', 'ruleset']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4643,7 +4643,7 @@ class CheckplanApi(object):
             files=local_var_files,
             response_type='Ruleset',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),

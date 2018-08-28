@@ -37,18 +37,18 @@ class UserApi(object):
         """ask_reset_password_token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.ask_reset_password_token(forgot_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.ask_reset_password_token(forgot_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ForgotPassword forgot_password: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.ask_reset_password_token_with_http_info(forgot_password, **kwargs)  # noqa: E501
         else:
             (data) = self.ask_reset_password_token_with_http_info(forgot_password, **kwargs)  # noqa: E501
@@ -58,11 +58,11 @@ class UserApi(object):
         """ask_reset_password_token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.ask_reset_password_token_with_http_info(forgot_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.ask_reset_password_token_with_http_info(forgot_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ForgotPassword forgot_password: (required)
         :return: None
                  If the method is called asynchronously,
@@ -72,7 +72,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['forgot_password']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -121,7 +121,7 @@ class UserApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -131,11 +131,11 @@ class UserApi(object):
         """full_update_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_notification(id, notification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_notification(id, notification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :param Notification notification: (required)
         :return: Notification
@@ -143,7 +143,7 @@ class UserApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_notification_with_http_info(id, notification, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_notification_with_http_info(id, notification, **kwargs)  # noqa: E501
@@ -153,11 +153,11 @@ class UserApi(object):
         """full_update_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_notification_with_http_info(id, notification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_notification_with_http_info(id, notification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :param Notification notification: (required)
         :return: Notification
@@ -168,7 +168,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['id', 'notification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -227,7 +227,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='Notification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -237,18 +237,18 @@ class UserApi(object):
         """get_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_notification(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_notification(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :return: Notification
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_notification_with_http_info(id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_notification_with_http_info(id, **kwargs)  # noqa: E501
@@ -258,11 +258,11 @@ class UserApi(object):
         """get_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_notification_with_http_info(id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_notification_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :return: Notification
                  If the method is called asynchronously,
@@ -272,7 +272,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -321,7 +321,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='Notification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -331,17 +331,17 @@ class UserApi(object):
         """get_self_notifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_notifications(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_notifications(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: list[Notification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_self_notifications_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_self_notifications_with_http_info(**kwargs)  # noqa: E501
@@ -351,11 +351,11 @@ class UserApi(object):
         """get_self_notifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_notifications_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_notifications_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: list[Notification]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -364,7 +364,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -407,7 +407,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='list[Notification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -417,17 +417,17 @@ class UserApi(object):
         """get_self_projects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_projects(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_projects(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: list[Project]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_self_projects_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_self_projects_with_http_info(**kwargs)  # noqa: E501
@@ -437,11 +437,11 @@ class UserApi(object):
         """get_self_projects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_projects_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_projects_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: list[Project]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -450,7 +450,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -493,7 +493,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='list[Project]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -503,17 +503,17 @@ class UserApi(object):
         """get_self_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_user(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_user(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SelfUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_self_user_with_http_info(**kwargs)  # noqa: E501
         else:
             (data) = self.get_self_user_with_http_info(**kwargs)  # noqa: E501
@@ -523,11 +523,11 @@ class UserApi(object):
         """get_self_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_self_user_with_http_info(async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_self_user_with_http_info(async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :return: SelfUser
                  If the method is called asynchronously,
                  returns the request thread.
@@ -536,7 +536,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = []  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -579,7 +579,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='SelfUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -589,18 +589,18 @@ class UserApi(object):
         """reset_password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reset_password(reset_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reset_password(reset_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ResetPassword reset_password: (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.reset_password_with_http_info(reset_password, **kwargs)  # noqa: E501
         else:
             (data) = self.reset_password_with_http_info(reset_password, **kwargs)  # noqa: E501
@@ -610,11 +610,11 @@ class UserApi(object):
         """reset_password  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.reset_password_with_http_info(reset_password, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.reset_password_with_http_info(reset_password, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param ResetPassword reset_password: (required)
         :return: None
                  If the method is called asynchronously,
@@ -624,7 +624,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['reset_password']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -673,7 +673,7 @@ class UserApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -683,18 +683,18 @@ class UserApi(object):
         """sign_up  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up(sign_up_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sign_up(sign_up_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SignUpUser sign_up_user: (required)
         :return: SignUpUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sign_up_with_http_info(sign_up_user, **kwargs)  # noqa: E501
         else:
             (data) = self.sign_up_with_http_info(sign_up_user, **kwargs)  # noqa: E501
@@ -704,11 +704,11 @@ class UserApi(object):
         """sign_up  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up_with_http_info(sign_up_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sign_up_with_http_info(sign_up_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SignUpUser sign_up_user: (required)
         :return: SignUpUser
                  If the method is called asynchronously,
@@ -718,7 +718,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['sign_up_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -771,7 +771,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='SignUpUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -781,18 +781,18 @@ class UserApi(object):
         """sign_up_with_invitation_token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up_with_invitation_token(invited_sign_up_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sign_up_with_invitation_token(invited_sign_up_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param InvitedSignUpUser invited_sign_up_user: (required)
         :return: SignUpUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.sign_up_with_invitation_token_with_http_info(invited_sign_up_user, **kwargs)  # noqa: E501
         else:
             (data) = self.sign_up_with_invitation_token_with_http_info(invited_sign_up_user, **kwargs)  # noqa: E501
@@ -802,11 +802,11 @@ class UserApi(object):
         """sign_up_with_invitation_token  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.sign_up_with_invitation_token_with_http_info(invited_sign_up_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.sign_up_with_invitation_token_with_http_info(invited_sign_up_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param InvitedSignUpUser invited_sign_up_user: (required)
         :return: SignUpUser
                  If the method is called asynchronously,
@@ -816,7 +816,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['invited_sign_up_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -869,7 +869,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='SignUpUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -879,11 +879,11 @@ class UserApi(object):
         """update_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_notification(id, notification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_notification(id, notification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :param Notification notification: (required)
         :return: Notification
@@ -891,7 +891,7 @@ class UserApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_notification_with_http_info(id, notification, **kwargs)  # noqa: E501
         else:
             (data) = self.update_notification_with_http_info(id, notification, **kwargs)  # noqa: E501
@@ -901,11 +901,11 @@ class UserApi(object):
         """update_notification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_notification_with_http_info(id, notification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_notification_with_http_info(id, notification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str id: (required)
         :param Notification notification: (required)
         :return: Notification
@@ -916,7 +916,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['id', 'notification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -975,7 +975,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='Notification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -985,18 +985,18 @@ class UserApi(object):
         """update_self_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_self_user(self_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_self_user(self_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SelfUser self_user: (required)
         :return: SelfUser
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_self_user_with_http_info(self_user, **kwargs)  # noqa: E501
         else:
             (data) = self.update_self_user_with_http_info(self_user, **kwargs)  # noqa: E501
@@ -1006,11 +1006,11 @@ class UserApi(object):
         """update_self_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_self_user_with_http_info(self_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_self_user_with_http_info(self_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param SelfUser self_user: (required)
         :return: SelfUser
                  If the method is called asynchronously,
@@ -1020,7 +1020,7 @@ class UserApi(object):
         local_var_params = locals()
 
         all_params = ['self_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1073,7 +1073,7 @@ class UserApi(object):
             files=local_var_files,
             response_type='SelfUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),

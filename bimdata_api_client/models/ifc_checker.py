@@ -36,10 +36,10 @@ class IfcChecker(object):
         'creator': 'User',
         'name': 'str',
         'checkplan_id': 'int',
-        'results': 'list[object]',
+        'results': 'list[IfcCheckerResults]',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'checkplan': 'object'
+        'checkplan': 'IfcCheckerCheckplan'
     }
 
     attribute_map = {
@@ -175,7 +175,7 @@ class IfcChecker(object):
 
 
         :return: The results of this IfcChecker.  # noqa: E501
-        :rtype: list[object]
+        :rtype: list[IfcCheckerResults]
         """
         return self._results
 
@@ -185,7 +185,7 @@ class IfcChecker(object):
 
 
         :param results: The results of this IfcChecker.  # noqa: E501
-        :type: list[object]
+        :type: list[IfcCheckerResults]
         """
 
         self._results = results
@@ -238,7 +238,7 @@ class IfcChecker(object):
 
 
         :return: The checkplan of this IfcChecker.  # noqa: E501
-        :rtype: object
+        :rtype: IfcCheckerCheckplan
         """
         return self._checkplan
 
@@ -248,7 +248,7 @@ class IfcChecker(object):
 
 
         :param checkplan: The checkplan of this IfcChecker.  # noqa: E501
-        :type: object
+        :type: IfcCheckerCheckplan
         """
 
         self._checkplan = checkplan

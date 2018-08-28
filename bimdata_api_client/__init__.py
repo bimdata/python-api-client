@@ -42,6 +42,8 @@ from bimdata_api_client.models.folder import Folder
 from bimdata_api_client.models.forgot_password import ForgotPassword
 from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_checker import IfcChecker
+from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan
+from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
 from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.invite_user import InviteUser
 from bimdata_api_client.models.invited_sign_up_user import InvitedSignUpUser

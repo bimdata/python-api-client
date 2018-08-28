@@ -38,11 +38,11 @@ class IfcApi(object):
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all ifc's elements.             No classification will be deleted on this endpoint, only the relation between ifc's elements and their classification.           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_classifications(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_classifications(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -51,7 +51,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_delete_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_delete_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class IfcApi(object):
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all ifc's elements.             No classification will be deleted on this endpoint, only the relation between ifc's elements and their classification.           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -78,7 +78,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -135,7 +135,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -146,11 +146,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -159,7 +159,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -170,11 +170,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -186,7 +186,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -243,7 +243,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -254,11 +254,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -267,7 +267,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -278,11 +278,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -294,7 +294,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -351,7 +351,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -362,11 +362,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -375,7 +375,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -386,11 +386,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -402,7 +402,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -459,7 +459,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -470,11 +470,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -483,7 +483,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -494,11 +494,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -510,7 +510,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -567,7 +567,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -578,11 +578,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_full_update_elements(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -592,7 +592,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_full_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_full_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
@@ -603,11 +603,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_full_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_full_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -620,7 +620,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'element']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -691,7 +691,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Element]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -702,11 +702,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_full_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -716,7 +716,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_full_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_full_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
@@ -727,11 +727,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_full_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_full_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -744,7 +744,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'model_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -815,7 +815,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ModelProperty]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -826,11 +826,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -840,7 +840,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -851,11 +851,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -868,7 +868,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -931,7 +931,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -942,11 +942,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -956,7 +956,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -967,11 +967,11 @@ class IfcApi(object):
 
                  Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -984,7 +984,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_classification_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1047,7 +1047,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1058,11 +1058,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_update_elements(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_update_elements(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1072,7 +1072,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
@@ -1083,11 +1083,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_update_elements_with_http_info(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1100,7 +1100,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'element']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1171,7 +1171,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Element]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1182,11 +1182,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_update_ifc_property(cloud_pk, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1196,7 +1196,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.bulk_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
         else:
             (data) = self.bulk_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
@@ -1207,11 +1207,11 @@ class IfcApi(object):
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.bulk_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_update_ifc_property_with_http_info(cloud_pk, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1224,7 +1224,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'model_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1295,7 +1295,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ModelProperty]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1306,11 +1306,11 @@ class IfcApi(object):
 
                      create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, element_classification_relation, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1320,7 +1320,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_classification_relation, **kwargs)  # noqa: E501
         else:
             (data) = self.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_classification_relation, **kwargs)  # noqa: E501
@@ -1331,11 +1331,11 @@ class IfcApi(object):
 
                      create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_classification_relation, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_classification_relation, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1348,7 +1348,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'element_classification_relation']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1415,7 +1415,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1426,11 +1426,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1441,7 +1441,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, classification, **kwargs)  # noqa: E501
         else:
             (data) = self.create_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, classification, **kwargs)  # noqa: E501
@@ -1452,11 +1452,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1470,7 +1470,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'classification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1547,7 +1547,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1558,11 +1558,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1572,7 +1572,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_element_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
         else:
             (data) = self.create_element_with_http_info(cloud_pk, ifc_pk, project_pk, element, **kwargs)  # noqa: E501
@@ -1583,11 +1583,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_with_http_info(cloud_pk, ifc_pk, project_pk, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_with_http_info(cloud_pk, ifc_pk, project_pk, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -1600,7 +1600,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'element']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1671,7 +1671,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Element]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1682,11 +1682,11 @@ class IfcApi(object):
 
                  Create an property_set that will be automatically linked to the element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1697,7 +1697,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
         else:
             (data) = self.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
@@ -1708,11 +1708,11 @@ class IfcApi(object):
 
                  Create an property_set that will be automatically linked to the element       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1726,7 +1726,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'property_set']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1799,7 +1799,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1809,11 +1809,11 @@ class IfcApi(object):
         """create_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1825,7 +1825,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_element_property_set_property_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, **kwargs)  # noqa: E501
         else:
             (data) = self.create_element_property_set_property_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, **kwargs)  # noqa: E501
@@ -1835,11 +1835,11 @@ class IfcApi(object):
         """create_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1854,7 +1854,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'propertyset_pk', 'model_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1937,7 +1937,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ModelProperty',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1947,11 +1947,11 @@ class IfcApi(object):
         """create_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1964,7 +1964,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, **kwargs)  # noqa: E501
         else:
             (data) = self.create_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, **kwargs)  # noqa: E501
@@ -1974,11 +1974,11 @@ class IfcApi(object):
         """create_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -1994,7 +1994,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'property_pk', 'propertyset_pk', 'property_definition']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2083,7 +2083,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2093,11 +2093,11 @@ class IfcApi(object):
         """create_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -2111,7 +2111,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, **kwargs)  # noqa: E501
         else:
             (data) = self.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, **kwargs)  # noqa: E501
@@ -2121,11 +2121,11 @@ class IfcApi(object):
         """create_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -2142,7 +2142,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'property_pk', 'propertydefinition_pk', 'propertyset_pk', 'unit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2237,7 +2237,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2248,11 +2248,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2262,7 +2262,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
         else:
             (data) = self.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
@@ -2273,11 +2273,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2290,7 +2290,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'property_definition']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2361,7 +2361,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertyDefinition]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2372,11 +2372,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2386,7 +2386,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
         else:
             (data) = self.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
@@ -2397,11 +2397,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2414,7 +2414,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'unit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2485,7 +2485,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Unit]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2496,11 +2496,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set(cloud_pk, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_property_set(cloud_pk, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2510,7 +2510,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
         else:
             (data) = self.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
@@ -2521,11 +2521,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2538,7 +2538,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'property_set']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2609,7 +2609,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertySet]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2620,11 +2620,11 @@ class IfcApi(object):
 
                      create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, element_property_set_relation, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2634,7 +2634,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_property_set_relation, **kwargs)  # noqa: E501
         else:
             (data) = self.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_property_set_relation, **kwargs)  # noqa: E501
@@ -2645,11 +2645,11 @@ class IfcApi(object):
 
                      create association between existing classification and existing element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_property_set_relation, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, element_property_set_relation, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2662,7 +2662,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'element_property_set_relation']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2729,7 +2729,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2740,11 +2740,11 @@ class IfcApi(object):
 
                  You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_raw_elements(cloud_pk, ifc_pk, project_pk, raw_elements, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_raw_elements(cloud_pk, ifc_pk, project_pk, raw_elements, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2754,7 +2754,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, raw_elements, **kwargs)  # noqa: E501
         else:
             (data) = self.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, raw_elements, **kwargs)  # noqa: E501
@@ -2765,11 +2765,11 @@ class IfcApi(object):
 
                  You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, raw_elements, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, raw_elements, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2782,7 +2782,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'raw_elements']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2849,7 +2849,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2860,11 +2860,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_space(cloud_pk, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_space(cloud_pk, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2874,7 +2874,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_space_with_http_info(cloud_pk, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
         else:
             (data) = self.create_space_with_http_info(cloud_pk, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
@@ -2885,11 +2885,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_space_with_http_info(cloud_pk, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_space_with_http_info(cloud_pk, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2902,7 +2902,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2973,7 +2973,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Space]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2984,11 +2984,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone(cloud_pk, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_zone(cloud_pk, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -2998,7 +2998,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_zone_with_http_info(cloud_pk, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
         else:
             (data) = self.create_zone_with_http_info(cloud_pk, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
@@ -3009,11 +3009,11 @@ class IfcApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_with_http_info(cloud_pk, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_zone_with_http_info(cloud_pk, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -3026,7 +3026,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'zone']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3097,7 +3097,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Zone]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3107,11 +3107,11 @@ class IfcApi(object):
         """create_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -3122,7 +3122,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_zone_space_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
         else:
             (data) = self.create_zone_space_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
@@ -3132,11 +3132,11 @@ class IfcApi(object):
         """create_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_zone_space_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_zone_space_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -3150,7 +3150,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'zone_pk', 'zone_space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3227,7 +3227,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ZoneSpace',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3237,11 +3237,11 @@ class IfcApi(object):
         """delete_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_element(cloud_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_element(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -3251,7 +3251,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
@@ -3261,11 +3261,11 @@ class IfcApi(object):
         """delete_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -3278,7 +3278,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'uuid']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3341,7 +3341,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3351,11 +3351,11 @@ class IfcApi(object):
         """delete_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -3364,7 +3364,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_ifc_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_ifc_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -3374,11 +3374,11 @@ class IfcApi(object):
         """delete_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -3390,7 +3390,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3447,7 +3447,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3457,11 +3457,11 @@ class IfcApi(object):
         """delete_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_property(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3471,7 +3471,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -3481,11 +3481,11 @@ class IfcApi(object):
         """delete_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3498,7 +3498,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3561,7 +3561,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3571,11 +3571,11 @@ class IfcApi(object):
         """delete_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3585,7 +3585,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -3595,11 +3595,11 @@ class IfcApi(object):
         """delete_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3612,7 +3612,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3675,7 +3675,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3685,11 +3685,11 @@ class IfcApi(object):
         """delete_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_unit(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3699,7 +3699,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -3709,11 +3709,11 @@ class IfcApi(object):
         """delete_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3726,7 +3726,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3789,7 +3789,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3799,11 +3799,11 @@ class IfcApi(object):
         """delete_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_property_set(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_property_set(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3813,7 +3813,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -3823,11 +3823,11 @@ class IfcApi(object):
         """delete_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -3840,7 +3840,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3903,7 +3903,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3913,11 +3913,11 @@ class IfcApi(object):
         """delete_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_space(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_space(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -3927,7 +3927,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -3937,11 +3937,11 @@ class IfcApi(object):
         """delete_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -3954,7 +3954,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4017,7 +4017,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4027,11 +4027,11 @@ class IfcApi(object):
         """delete_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_zone(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -4041,7 +4041,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -4051,11 +4051,11 @@ class IfcApi(object):
         """delete_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -4068,7 +4068,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4131,7 +4131,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4141,11 +4141,11 @@ class IfcApi(object):
         """delete_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -4156,7 +4156,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
@@ -4166,11 +4166,11 @@ class IfcApi(object):
         """delete_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -4184,7 +4184,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4253,7 +4253,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4263,11 +4263,11 @@ class IfcApi(object):
         """full_update_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -4278,7 +4278,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, **kwargs)  # noqa: E501
@@ -4288,11 +4288,11 @@ class IfcApi(object):
         """full_update_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -4306,7 +4306,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'uuid', 'element']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4383,7 +4383,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Element',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4393,11 +4393,11 @@ class IfcApi(object):
         """full_update_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc(cloud_pk, id, project_pk, ifc, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc(cloud_pk, id, project_pk, ifc, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -4407,7 +4407,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, **kwargs)  # noqa: E501
@@ -4417,11 +4417,11 @@ class IfcApi(object):
         """full_update_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -4434,7 +4434,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'ifc']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4505,7 +4505,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Ifc',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4515,11 +4515,11 @@ class IfcApi(object):
         """full_update_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4530,7 +4530,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
@@ -4540,11 +4540,11 @@ class IfcApi(object):
         """full_update_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4558,7 +4558,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'model_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4635,7 +4635,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ModelProperty',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4645,11 +4645,11 @@ class IfcApi(object):
         """full_update_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4660,7 +4660,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
@@ -4670,11 +4670,11 @@ class IfcApi(object):
         """full_update_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4688,7 +4688,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'property_definition']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4765,7 +4765,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4775,11 +4775,11 @@ class IfcApi(object):
         """full_update_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4790,7 +4790,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
@@ -4800,11 +4800,11 @@ class IfcApi(object):
         """full_update_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4818,7 +4818,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'unit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -4895,7 +4895,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -4905,11 +4905,11 @@ class IfcApi(object):
         """full_update_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4920,7 +4920,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
@@ -4930,11 +4930,11 @@ class IfcApi(object):
         """full_update_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -4948,7 +4948,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'property_set']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5025,7 +5025,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertySet',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5035,11 +5035,11 @@ class IfcApi(object):
         """full_update_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_space(cloud_pk, id, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_space(cloud_pk, id, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -5050,7 +5050,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
@@ -5060,11 +5060,11 @@ class IfcApi(object):
         """full_update_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -5078,7 +5078,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5155,7 +5155,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Space',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5165,11 +5165,11 @@ class IfcApi(object):
         """full_update_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_zone(cloud_pk, id, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -5180,7 +5180,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
@@ -5190,11 +5190,11 @@ class IfcApi(object):
         """full_update_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -5208,7 +5208,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5285,7 +5285,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Zone',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5295,11 +5295,11 @@ class IfcApi(object):
         """full_update_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -5311,7 +5311,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
@@ -5321,11 +5321,11 @@ class IfcApi(object):
         """full_update_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -5340,7 +5340,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone_pk', 'zone_space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5423,7 +5423,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ZoneSpace',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5433,11 +5433,11 @@ class IfcApi(object):
         """get_classifications_of_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -5447,7 +5447,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -5457,11 +5457,11 @@ class IfcApi(object):
         """get_classifications_of_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -5474,7 +5474,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5541,7 +5541,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5551,11 +5551,11 @@ class IfcApi(object):
         """get_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element(cloud_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -5565,7 +5565,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
@@ -5575,11 +5575,11 @@ class IfcApi(object):
         """get_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -5592,7 +5592,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'uuid']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5659,7 +5659,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Element',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5669,11 +5669,11 @@ class IfcApi(object):
         """get_element_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property set. (required)
@@ -5684,7 +5684,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -5694,11 +5694,11 @@ class IfcApi(object):
         """get_element_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property set. (required)
@@ -5712,7 +5712,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5785,7 +5785,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertySet',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5795,11 +5795,11 @@ class IfcApi(object):
         """get_element_property_set_properties  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -5810,7 +5810,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_properties_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_properties_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -5820,11 +5820,11 @@ class IfcApi(object):
         """get_element_property_set_properties  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_properties_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_properties_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -5838,7 +5838,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -5911,7 +5911,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ModelProperty]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -5921,11 +5921,11 @@ class IfcApi(object):
         """get_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property. (required)
@@ -5937,7 +5937,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -5947,11 +5947,11 @@ class IfcApi(object):
         """get_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property. (required)
@@ -5966,7 +5966,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6045,7 +6045,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ModelProperty',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6055,11 +6055,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property definition. (required)
@@ -6072,7 +6072,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -6082,11 +6082,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property definition. (required)
@@ -6102,7 +6102,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'property_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6187,7 +6187,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6197,11 +6197,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this unit. (required)
@@ -6215,7 +6215,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -6225,11 +6225,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this unit. (required)
@@ -6246,7 +6246,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'property_pk', 'propertydefinition_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6337,7 +6337,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6347,11 +6347,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition_units  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6364,7 +6364,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_property_definition_units_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_property_definition_units_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -6374,11 +6374,11 @@ class IfcApi(object):
         """get_element_property_set_property_definition_units  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definition_units_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definition_units_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6394,7 +6394,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'property_pk', 'propertydefinition_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6479,7 +6479,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Unit]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6489,11 +6489,11 @@ class IfcApi(object):
         """get_element_property_set_property_definitions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6505,7 +6505,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_set_property_definitions_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_set_property_definitions_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -6515,11 +6515,11 @@ class IfcApi(object):
         """get_element_property_set_property_definitions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_set_property_definitions_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_set_property_definitions_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6534,7 +6534,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk', 'property_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6613,7 +6613,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertyDefinition]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6623,11 +6623,11 @@ class IfcApi(object):
         """get_element_property_sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6637,7 +6637,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_element_property_sets_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_element_property_sets_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -6647,11 +6647,11 @@ class IfcApi(object):
         """get_element_property_sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_element_property_sets_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_element_property_sets_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
@@ -6664,7 +6664,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6731,7 +6731,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertySet]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6741,11 +6741,11 @@ class IfcApi(object):
         """get_elements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -6757,7 +6757,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_elements_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_elements_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -6767,11 +6767,11 @@ class IfcApi(object):
         """get_elements  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -6786,7 +6786,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'type', 'classification', 'classification__notation']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6853,7 +6853,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Element]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6863,11 +6863,11 @@ class IfcApi(object):
         """get_elements_from_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -6877,7 +6877,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -6887,11 +6887,11 @@ class IfcApi(object):
         """get_elements_from_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -6904,7 +6904,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_classification_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -6971,7 +6971,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Element]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -6981,11 +6981,11 @@ class IfcApi(object):
         """get_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -6994,7 +6994,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -7004,11 +7004,11 @@ class IfcApi(object):
         """get_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7020,7 +7020,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7081,7 +7081,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Ifc',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7092,11 +7092,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the bvh file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_bvh(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_bvh(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7105,7 +7105,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_bvh_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_bvh_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -7116,11 +7116,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the bvh file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_bvh_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_bvh_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7132,7 +7132,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7189,7 +7189,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7199,11 +7199,11 @@ class IfcApi(object):
         """get_ifc_classifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_classifications(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_classifications(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7212,7 +7212,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -7222,11 +7222,11 @@ class IfcApi(object):
         """get_ifc_classifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7238,7 +7238,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7299,7 +7299,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7310,11 +7310,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the gltf file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_gltf(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_gltf(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7323,7 +7323,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_gltf_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_gltf_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -7334,11 +7334,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the gltf file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_gltf_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_gltf_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7350,7 +7350,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7407,7 +7407,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7418,11 +7418,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the map file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_map(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_map(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7431,7 +7431,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_map_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_map_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -7442,11 +7442,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the map file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_map_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_map_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7458,7 +7458,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7515,7 +7515,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7525,11 +7525,11 @@ class IfcApi(object):
         """get_ifc_properties  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_properties(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_properties(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7538,7 +7538,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -7548,11 +7548,11 @@ class IfcApi(object):
         """get_ifc_properties  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7564,7 +7564,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7625,7 +7625,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ModelProperty]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7635,11 +7635,11 @@ class IfcApi(object):
         """get_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -7649,7 +7649,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -7659,11 +7659,11 @@ class IfcApi(object):
         """get_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -7676,7 +7676,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7743,7 +7743,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ModelProperty',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7753,11 +7753,11 @@ class IfcApi(object):
         """get_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -7767,7 +7767,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -7777,11 +7777,11 @@ class IfcApi(object):
         """get_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -7794,7 +7794,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7861,7 +7861,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7871,11 +7871,11 @@ class IfcApi(object):
         """get_ifc_property_definitions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7884,7 +7884,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -7894,11 +7894,11 @@ class IfcApi(object):
         """get_ifc_property_definitions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -7910,7 +7910,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -7971,7 +7971,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertyDefinition]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -7982,11 +7982,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the structure file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_structure(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_structure(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -7995,7 +7995,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_structure_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_structure_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -8006,11 +8006,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the structure file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_structure_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_structure_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -8022,7 +8022,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8079,7 +8079,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8090,11 +8090,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the system file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_systems(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_systems(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -8103,7 +8103,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_systems_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_systems_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -8114,11 +8114,11 @@ class IfcApi(object):
 
                  DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the system file           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_systems_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_systems_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -8130,7 +8130,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8187,7 +8187,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8197,11 +8197,11 @@ class IfcApi(object):
         """get_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_unit(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_unit(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -8211,7 +8211,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8221,11 +8221,11 @@ class IfcApi(object):
         """get_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -8238,7 +8238,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8305,7 +8305,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8315,11 +8315,11 @@ class IfcApi(object):
         """get_ifc_units  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_units(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_units(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8328,7 +8328,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8338,11 +8338,11 @@ class IfcApi(object):
         """get_ifc_units  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8354,7 +8354,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8415,7 +8415,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Unit]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8425,11 +8425,11 @@ class IfcApi(object):
         """get_ifcs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifcs(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifcs(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
@@ -8438,7 +8438,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_ifcs_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_ifcs_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -8448,11 +8448,11 @@ class IfcApi(object):
         """get_ifcs  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
@@ -8464,7 +8464,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'status']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8521,7 +8521,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Ifc]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8531,11 +8531,11 @@ class IfcApi(object):
         """get_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_set(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_property_set(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -8545,7 +8545,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8555,11 +8555,11 @@ class IfcApi(object):
         """get_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -8572,7 +8572,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8639,7 +8639,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertySet',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8649,11 +8649,11 @@ class IfcApi(object):
         """get_property_sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_sets(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_property_sets(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8662,7 +8662,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_property_sets_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_property_sets_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8672,11 +8672,11 @@ class IfcApi(object):
         """get_property_sets  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_property_sets_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_property_sets_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8688,7 +8688,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8749,7 +8749,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[PropertySet]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8760,11 +8760,11 @@ class IfcApi(object):
 
                  Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_raw_elements(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_raw_elements(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8776,7 +8776,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8787,11 +8787,11 @@ class IfcApi(object):
 
                  Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -8806,7 +8806,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'type', 'classification', 'classification__notation']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8873,7 +8873,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='RawElements',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -8883,11 +8883,11 @@ class IfcApi(object):
         """get_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_space(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_space(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -8897,7 +8897,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -8907,11 +8907,11 @@ class IfcApi(object):
         """get_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -8924,7 +8924,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -8991,7 +8991,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Space',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9001,11 +9001,11 @@ class IfcApi(object):
         """get_spaces  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_spaces(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_spaces(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9014,7 +9014,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9024,11 +9024,11 @@ class IfcApi(object):
         """get_spaces  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9040,7 +9040,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9101,7 +9101,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Space]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9111,11 +9111,11 @@ class IfcApi(object):
         """get_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -9125,7 +9125,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9135,11 +9135,11 @@ class IfcApi(object):
         """get_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -9152,7 +9152,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9219,7 +9219,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Zone',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9229,11 +9229,11 @@ class IfcApi(object):
         """get_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -9244,7 +9244,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
@@ -9254,11 +9254,11 @@ class IfcApi(object):
         """get_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -9272,7 +9272,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9345,7 +9345,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ZoneSpace',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9355,11 +9355,11 @@ class IfcApi(object):
         """get_zone_spaces  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9369,7 +9369,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_zone_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_zone_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, **kwargs)  # noqa: E501
@@ -9379,11 +9379,11 @@ class IfcApi(object):
         """get_zone_spaces  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zone_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zone_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9396,7 +9396,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'zone_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9463,7 +9463,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ZoneSpace]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9473,11 +9473,11 @@ class IfcApi(object):
         """get_zones  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zones(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9487,7 +9487,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_zones_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_zones_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9497,11 +9497,11 @@ class IfcApi(object):
         """get_zones  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_zones_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_zones_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9514,7 +9514,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'color']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9577,7 +9577,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[Zone]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9588,11 +9588,11 @@ class IfcApi(object):
 
                      list association between classifications and elements           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_classification_element_relations(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_classification_element_relations(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9601,7 +9601,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9612,11 +9612,11 @@ class IfcApi(object):
 
                      list association between classifications and elements           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -9628,7 +9628,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9689,7 +9689,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='list[ElementClassificationRelation]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9699,11 +9699,11 @@ class IfcApi(object):
         """remove_classification_of_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this classification. (required)
@@ -9714,7 +9714,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_classification_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_classification_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9724,11 +9724,11 @@ class IfcApi(object):
         """remove_classification_of_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_classification_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_classification_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this classification. (required)
@@ -9742,7 +9742,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9811,7 +9811,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9822,11 +9822,11 @@ class IfcApi(object):
 
                  Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property set. (required)
@@ -9837,7 +9837,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
@@ -9848,11 +9848,11 @@ class IfcApi(object):
 
                  Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property set. (required)
@@ -9866,7 +9866,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -9935,7 +9935,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -9945,11 +9945,11 @@ class IfcApi(object):
         """remove_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property. (required)
@@ -9961,7 +9961,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -9971,11 +9971,11 @@ class IfcApi(object):
         """remove_element_property_set_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property. (required)
@@ -9990,7 +9990,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10065,7 +10065,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10075,11 +10075,11 @@ class IfcApi(object):
         """remove_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property definition. (required)
@@ -10092,7 +10092,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -10102,11 +10102,11 @@ class IfcApi(object):
         """remove_element_property_set_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this property definition. (required)
@@ -10122,7 +10122,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'property_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10203,7 +10203,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10213,11 +10213,11 @@ class IfcApi(object):
         """remove_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this unit. (required)
@@ -10231,7 +10231,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs)  # noqa: E501
@@ -10241,11 +10241,11 @@ class IfcApi(object):
         """remove_element_property_set_property_definition_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str element_uuid: (required)
         :param int id: A unique integer value identifying this unit. (required)
@@ -10262,7 +10262,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk', 'property_pk', 'propertydefinition_pk', 'propertyset_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10349,7 +10349,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10359,11 +10359,11 @@ class IfcApi(object):
         """remove_elements_from_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -10374,7 +10374,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
         else:
             (data) = self.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
@@ -10384,11 +10384,11 @@ class IfcApi(object):
         """remove_elements_from_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, uuid, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
@@ -10402,7 +10402,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_classification_pk', 'ifc_pk', 'project_pk', 'uuid']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10471,7 +10471,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10481,11 +10481,11 @@ class IfcApi(object):
         """update_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element(cloud_pk, ifc_pk, project_pk, uuid, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_element(cloud_pk, ifc_pk, project_pk, uuid, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -10496,7 +10496,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, **kwargs)  # noqa: E501
         else:
             (data) = self.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, **kwargs)  # noqa: E501
@@ -10506,11 +10506,11 @@ class IfcApi(object):
         """update_element  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, element, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
@@ -10524,7 +10524,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'uuid', 'element']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10601,7 +10601,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Element',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10611,11 +10611,11 @@ class IfcApi(object):
         """update_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc(cloud_pk, id, project_pk, ifc, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc(cloud_pk, id, project_pk, ifc, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -10625,7 +10625,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, **kwargs)  # noqa: E501
@@ -10635,11 +10635,11 @@ class IfcApi(object):
         """update_ifc  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -10652,7 +10652,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'ifc']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10723,7 +10723,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Ifc',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10734,11 +10734,11 @@ class IfcApi(object):
 
                  Patch ifc files (gltf, structure, svg, etc)           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_files(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_files(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -10752,7 +10752,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ifc_files_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ifc_files_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -10763,11 +10763,11 @@ class IfcApi(object):
 
                  Patch ifc files (gltf, structure, svg, etc)           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_files_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_files_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc. (required)
         :param str project_pk: (required)
@@ -10784,7 +10784,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'structure_file', 'systems_file', 'map_file', 'gltf_file', 'bvh_tree_file']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10859,7 +10859,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='IfcFiles',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10869,11 +10869,11 @@ class IfcApi(object):
         """update_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_property(cloud_pk, id, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -10884,7 +10884,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, **kwargs)  # noqa: E501
@@ -10894,11 +10894,11 @@ class IfcApi(object):
         """update_ifc_property  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_property_with_http_info(cloud_pk, id, ifc_pk, project_pk, model_property, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -10912,7 +10912,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'model_property']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -10989,7 +10989,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ModelProperty',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -10999,11 +10999,11 @@ class IfcApi(object):
         """update_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_property_definition(cloud_pk, id, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11014,7 +11014,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, **kwargs)  # noqa: E501
@@ -11024,11 +11024,11 @@ class IfcApi(object):
         """update_ifc_property_definition  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_property_definition_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_definition, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11042,7 +11042,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'property_definition']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11119,7 +11119,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -11129,11 +11129,11 @@ class IfcApi(object):
         """update_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_unit(cloud_pk, id, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11144,7 +11144,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
         else:
             (data) = self.update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, **kwargs)  # noqa: E501
@@ -11154,11 +11154,11 @@ class IfcApi(object):
         """update_ifc_unit  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_ifc_unit_with_http_info(cloud_pk, id, ifc_pk, project_pk, unit, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11172,7 +11172,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'unit']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11249,7 +11249,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -11259,11 +11259,11 @@ class IfcApi(object):
         """update_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_property_set(cloud_pk, id, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11274,7 +11274,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
         else:
             (data) = self.update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, **kwargs)  # noqa: E501
@@ -11284,11 +11284,11 @@ class IfcApi(object):
         """update_property_set  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_property_set_with_http_info(cloud_pk, id, ifc_pk, project_pk, property_set, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str ifc_pk: (required)
@@ -11302,7 +11302,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'property_set']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11379,7 +11379,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='PropertySet',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -11389,11 +11389,11 @@ class IfcApi(object):
         """update_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_space(cloud_pk, id, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_space(cloud_pk, id, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -11404,7 +11404,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
         else:
             (data) = self.update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, **kwargs)  # noqa: E501
@@ -11414,11 +11414,11 @@ class IfcApi(object):
         """update_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -11432,7 +11432,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11509,7 +11509,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Space',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -11519,11 +11519,11 @@ class IfcApi(object):
         """update_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone(cloud_pk, id, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_zone(cloud_pk, id, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -11534,7 +11534,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
         else:
             (data) = self.update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, **kwargs)  # noqa: E501
@@ -11544,11 +11544,11 @@ class IfcApi(object):
         """update_zone  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_zone_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this zone. (required)
         :param str ifc_pk: (required)
@@ -11562,7 +11562,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11639,7 +11639,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='Zone',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -11649,11 +11649,11 @@ class IfcApi(object):
         """update_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_zone_space(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -11665,7 +11665,7 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
         else:
             (data) = self.update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, **kwargs)  # noqa: E501
@@ -11675,11 +11675,11 @@ class IfcApi(object):
         """update_zone_space  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_zone_space_with_http_info(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this space. (required)
         :param str ifc_pk: (required)
@@ -11694,7 +11694,7 @@ class IfcApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'zone_pk', 'zone_space']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -11777,7 +11777,7 @@ class IfcApi(object):
             files=local_var_files,
             response_type='ZoneSpace',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),

@@ -38,11 +38,11 @@ class ProjectApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification(cloud_pk, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classification(cloud_pk, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param list[Classification] classification: (required)
@@ -51,7 +51,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_classification_with_http_info(cloud_pk, project_pk, classification, **kwargs)  # noqa: E501
         else:
             (data) = self.create_classification_with_http_info(cloud_pk, project_pk, classification, **kwargs)  # noqa: E501
@@ -62,11 +62,11 @@ class ProjectApi(object):
 
                  Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive       # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param list[Classification] classification: (required)
@@ -78,7 +78,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'classification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -143,7 +143,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -153,11 +153,11 @@ class ProjectApi(object):
         """create_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_document(cloud_pk, project_pk, name, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_document(cloud_pk, project_pk, name, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str name: (required)
@@ -178,7 +178,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_document_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
         else:
             (data) = self.create_document_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
@@ -188,11 +188,11 @@ class ProjectApi(object):
         """create_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str name: (required)
@@ -216,7 +216,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'name', 'id', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size', 'created_at', 'updated_at', 'ifc_id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -314,7 +314,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -324,11 +324,11 @@ class ProjectApi(object):
         """create_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_folder(cloud_pk, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_folder(cloud_pk, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param Folder folder: (required)
@@ -337,7 +337,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_folder_with_http_info(cloud_pk, project_pk, folder, **kwargs)  # noqa: E501
         else:
             (data) = self.create_folder_with_http_info(cloud_pk, project_pk, folder, **kwargs)  # noqa: E501
@@ -347,11 +347,11 @@ class ProjectApi(object):
         """create_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_folder_with_http_info(cloud_pk, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_folder_with_http_info(cloud_pk, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param Folder folder: (required)
@@ -363,7 +363,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'folder']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -428,7 +428,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -438,11 +438,11 @@ class ProjectApi(object):
         """create_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_project(cloud_pk, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project(cloud_pk, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param Project project: (required)
         :return: Project
@@ -450,7 +450,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_project_with_http_info(cloud_pk, project, **kwargs)  # noqa: E501
         else:
             (data) = self.create_project_with_http_info(cloud_pk, project, **kwargs)  # noqa: E501
@@ -460,11 +460,11 @@ class ProjectApi(object):
         """create_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_project_with_http_info(cloud_pk, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project_with_http_info(cloud_pk, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param Project project: (required)
         :return: Project
@@ -475,7 +475,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -534,7 +534,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -544,11 +544,11 @@ class ProjectApi(object):
         """create_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_project_user(cloud_pk, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project_user(cloud_pk, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param InviteUser invite_user: (required)
@@ -557,7 +557,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, **kwargs)  # noqa: E501
         else:
             (data) = self.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, **kwargs)  # noqa: E501
@@ -567,11 +567,11 @@ class ProjectApi(object):
         """create_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param InviteUser invite_user: (required)
@@ -583,7 +583,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -648,7 +648,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='InviteUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -658,11 +658,11 @@ class ProjectApi(object):
         """delete_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_classification(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_classification(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -671,7 +671,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_classification_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_classification_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -681,11 +681,11 @@ class ProjectApi(object):
         """delete_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_classification_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_classification_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -697,7 +697,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -754,7 +754,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -764,11 +764,11 @@ class ProjectApi(object):
         """delete_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_document(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -777,7 +777,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -787,11 +787,11 @@ class ProjectApi(object):
         """delete_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_document_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_document_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -803,7 +803,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -864,7 +864,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -874,11 +874,11 @@ class ProjectApi(object):
         """delete_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_folder(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_folder(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -887,7 +887,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_folder_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_folder_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -897,11 +897,11 @@ class ProjectApi(object):
         """delete_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_folder_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_folder_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -913,7 +913,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -970,7 +970,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -980,11 +980,11 @@ class ProjectApi(object):
         """delete_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: None
@@ -992,7 +992,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
@@ -1002,11 +1002,11 @@ class ProjectApi(object):
         """delete_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_with_http_info(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project_with_http_info(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: None
@@ -1017,7 +1017,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1068,7 +1068,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1078,11 +1078,11 @@ class ProjectApi(object):
         """delete_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_user(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project_user(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -1091,7 +1091,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.delete_project_user_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.delete_project_user_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -1101,11 +1101,11 @@ class ProjectApi(object):
         """delete_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.delete_project_user_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project_user_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -1117,7 +1117,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1174,7 +1174,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type=None,  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1184,11 +1184,11 @@ class ProjectApi(object):
         """full_update_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_classification(cloud_pk, id, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_classification(cloud_pk, id, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -1198,7 +1198,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_classification_with_http_info(cloud_pk, id, project_pk, classification, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_classification_with_http_info(cloud_pk, id, project_pk, classification, **kwargs)  # noqa: E501
@@ -1208,11 +1208,11 @@ class ProjectApi(object):
         """full_update_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_classification_with_http_info(cloud_pk, id, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_classification_with_http_info(cloud_pk, id, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -1225,7 +1225,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'classification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1296,23 +1296,23 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Classification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_document(self, cloud_pk, id2, project_pk, name, **kwargs):  # noqa: E501
+    def full_update_document(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
         """full_update_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document(cloud_pk, id2, project_pk, name, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_document(cloud_pk, id, project_pk, name, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
-        :param int id2: A unique integer value identifying this document. (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
         :param int id:
@@ -1332,23 +1332,23 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
-            return self.full_update_document_with_http_info(cloud_pk, id2, project_pk, name, **kwargs)  # noqa: E501
+        if kwargs.get('async_req'):
+            return self.full_update_document_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_document_with_http_info(cloud_pk, id2, project_pk, name, **kwargs)  # noqa: E501
+            (data) = self.full_update_document_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
             return data
 
-    def full_update_document_with_http_info(self, cloud_pk, id2, project_pk, name, **kwargs):  # noqa: E501
+    def full_update_document_with_http_info(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
         """full_update_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_document_with_http_info(cloud_pk, id2, project_pk, name, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_document_with_http_info(cloud_pk, id, project_pk, name, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
-        :param int id2: A unique integer value identifying this document. (required)
+        :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
         :param int id:
@@ -1370,8 +1370,8 @@ class ProjectApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'id2', 'project_pk', 'name', 'id', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size', 'created_at', 'updated_at', 'ifc_id']  # noqa: E501
-        all_params.append('async')
+        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'id', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size', 'created_at', 'updated_at', 'ifc_id']  # noqa: E501
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1388,10 +1388,10 @@ class ProjectApi(object):
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
             raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_document`")  # noqa: E501
-        # verify the required parameter 'id2' is set
-        if ('id2' not in local_var_params or
-                local_var_params['id2'] is None):
-            raise ValueError("Missing the required parameter `id2` when calling `full_update_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
@@ -1475,7 +1475,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1485,11 +1485,11 @@ class ProjectApi(object):
         """full_update_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_folder(cloud_pk, id, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_folder(cloud_pk, id, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -1499,7 +1499,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_folder_with_http_info(cloud_pk, id, project_pk, folder, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_folder_with_http_info(cloud_pk, id, project_pk, folder, **kwargs)  # noqa: E501
@@ -1509,11 +1509,11 @@ class ProjectApi(object):
         """full_update_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_folder_with_http_info(cloud_pk, id, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_folder_with_http_info(cloud_pk, id, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -1526,7 +1526,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'folder']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1597,7 +1597,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1607,11 +1607,11 @@ class ProjectApi(object):
         """full_update_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project(cloud_pk, id, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project(cloud_pk, id, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param Project project: (required)
@@ -1620,7 +1620,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_project_with_http_info(cloud_pk, id, project, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_project_with_http_info(cloud_pk, id, project, **kwargs)  # noqa: E501
@@ -1630,11 +1630,11 @@ class ProjectApi(object):
         """full_update_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_with_http_info(cloud_pk, id, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project_with_http_info(cloud_pk, id, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param Project project: (required)
@@ -1646,7 +1646,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1711,7 +1711,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1721,11 +1721,11 @@ class ProjectApi(object):
         """full_update_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_user(cloud_pk, id, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project_user(cloud_pk, id, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -1735,7 +1735,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
         else:
             (data) = self.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
@@ -1745,11 +1745,11 @@ class ProjectApi(object):
         """full_update_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -1762,7 +1762,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1833,7 +1833,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='InviteUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1843,11 +1843,11 @@ class ProjectApi(object):
         """get_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classification(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classification(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -1856,7 +1856,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_classification_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_classification_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -1866,11 +1866,11 @@ class ProjectApi(object):
         """get_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classification_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classification_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -1882,7 +1882,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -1943,7 +1943,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Classification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -1953,11 +1953,11 @@ class ProjectApi(object):
         """get_classifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classifications(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[Classification]
@@ -1965,7 +1965,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_classifications_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_classifications_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -1975,11 +1975,11 @@ class ProjectApi(object):
         """get_classifications  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_classifications_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_classifications_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[Classification]
@@ -1990,7 +1990,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2045,7 +2045,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2055,11 +2055,11 @@ class ProjectApi(object):
         """get_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -2068,7 +2068,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -2078,11 +2078,11 @@ class ProjectApi(object):
         """get_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_document_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -2094,7 +2094,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2155,7 +2155,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2165,11 +2165,11 @@ class ProjectApi(object):
         """get_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_documents(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_documents(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: Document
@@ -2177,7 +2177,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_documents_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_documents_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -2187,11 +2187,11 @@ class ProjectApi(object):
         """get_documents  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_documents_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_documents_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: Document
@@ -2202,7 +2202,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2257,7 +2257,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2267,11 +2267,11 @@ class ProjectApi(object):
         """get_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folder(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_folder(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -2280,7 +2280,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_folder_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_folder_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -2290,11 +2290,11 @@ class ProjectApi(object):
         """get_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folder_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_folder_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -2306,7 +2306,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2367,7 +2367,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2377,11 +2377,11 @@ class ProjectApi(object):
         """get_folders  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folders(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_folders(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[Folder]
@@ -2389,7 +2389,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_folders_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_folders_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -2399,11 +2399,11 @@ class ProjectApi(object):
         """get_folders  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_folders_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_folders_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[Folder]
@@ -2414,7 +2414,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2469,7 +2469,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='list[Folder]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2479,11 +2479,11 @@ class ProjectApi(object):
         """get_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: Project
@@ -2491,7 +2491,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
@@ -2501,11 +2501,11 @@ class ProjectApi(object):
         """get_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_with_http_info(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_with_http_info(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: Project
@@ -2516,7 +2516,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2571,7 +2571,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2582,11 +2582,11 @@ class ProjectApi(object):
 
         Returns the document tree from root folder  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_tree(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_tree(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: Folder
@@ -2594,7 +2594,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_project_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
         else:
             (data) = self.get_project_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
@@ -2605,11 +2605,11 @@ class ProjectApi(object):
 
         Returns the document tree from root folder  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_tree_with_http_info(cloud_pk, id, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_tree_with_http_info(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :return: Folder
@@ -2620,7 +2620,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2675,7 +2675,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2685,11 +2685,11 @@ class ProjectApi(object):
         """get_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_user(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_user(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -2698,7 +2698,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_project_user_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_project_user_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
@@ -2708,11 +2708,11 @@ class ProjectApi(object):
         """get_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_user_with_http_info(cloud_pk, id, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_user_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -2724,7 +2724,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2785,7 +2785,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='User',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2795,11 +2795,11 @@ class ProjectApi(object):
         """get_project_users  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_users(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_users(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[User]
@@ -2807,7 +2807,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_project_users_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_project_users_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
@@ -2817,11 +2817,11 @@ class ProjectApi(object):
         """get_project_users  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_project_users_with_http_info(cloud_pk, project_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_users_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :return: list[User]
@@ -2832,7 +2832,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'project_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2887,7 +2887,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='list[User]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2897,18 +2897,18 @@ class ProjectApi(object):
         """get_projects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_projects(cloud_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_projects(cloud_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :return: list[Project]
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.get_projects_with_http_info(cloud_pk, **kwargs)  # noqa: E501
         else:
             (data) = self.get_projects_with_http_info(cloud_pk, **kwargs)  # noqa: E501
@@ -2918,11 +2918,11 @@ class ProjectApi(object):
         """get_projects  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.get_projects_with_http_info(cloud_pk, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_projects_with_http_info(cloud_pk, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :return: list[Project]
                  If the method is called asynchronously,
@@ -2932,7 +2932,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -2981,7 +2981,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='list[Project]',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -2991,11 +2991,11 @@ class ProjectApi(object):
         """update_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_classification(cloud_pk, id, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_classification(cloud_pk, id, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -3005,7 +3005,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_classification_with_http_info(cloud_pk, id, project_pk, classification, **kwargs)  # noqa: E501
         else:
             (data) = self.update_classification_with_http_info(cloud_pk, id, project_pk, classification, **kwargs)  # noqa: E501
@@ -3015,11 +3015,11 @@ class ProjectApi(object):
         """update_classification  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_classification_with_http_info(cloud_pk, id, project_pk, classification, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_classification_with_http_info(cloud_pk, id, project_pk, classification, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this classification. (required)
         :param str project_pk: (required)
@@ -3032,7 +3032,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'classification']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3103,7 +3103,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Classification',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3113,11 +3113,11 @@ class ProjectApi(object):
         """update_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document(cloud_pk, id, project_pk, document, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_document(cloud_pk, id, project_pk, document, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -3127,7 +3127,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_document_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
         else:
             (data) = self.update_document_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
@@ -3137,11 +3137,11 @@ class ProjectApi(object):
         """update_document  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_document_with_http_info(cloud_pk, id, project_pk, document, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_document_with_http_info(cloud_pk, id, project_pk, document, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
@@ -3154,7 +3154,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'document']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3225,7 +3225,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Document',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3235,11 +3235,11 @@ class ProjectApi(object):
         """update_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_folder(cloud_pk, id, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_folder(cloud_pk, id, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -3249,7 +3249,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_folder_with_http_info(cloud_pk, id, project_pk, folder, **kwargs)  # noqa: E501
         else:
             (data) = self.update_folder_with_http_info(cloud_pk, id, project_pk, folder, **kwargs)  # noqa: E501
@@ -3259,11 +3259,11 @@ class ProjectApi(object):
         """update_folder  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_folder_with_http_info(cloud_pk, id, project_pk, folder, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_folder_with_http_info(cloud_pk, id, project_pk, folder, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
@@ -3276,7 +3276,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'folder']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3347,7 +3347,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3357,11 +3357,11 @@ class ProjectApi(object):
         """update_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project(cloud_pk, id, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project(cloud_pk, id, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param Project project: (required)
@@ -3370,7 +3370,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_project_with_http_info(cloud_pk, id, project, **kwargs)  # noqa: E501
         else:
             (data) = self.update_project_with_http_info(cloud_pk, id, project, **kwargs)  # noqa: E501
@@ -3380,11 +3380,11 @@ class ProjectApi(object):
         """update_project  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_with_http_info(cloud_pk, id, project, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project_with_http_info(cloud_pk, id, project, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param Project project: (required)
@@ -3396,7 +3396,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3461,7 +3461,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
@@ -3471,11 +3471,11 @@ class ProjectApi(object):
         """update_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_user(cloud_pk, id, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project_user(cloud_pk, id, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -3485,7 +3485,7 @@ class ProjectApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        if kwargs.get('async'):
+        if kwargs.get('async_req'):
             return self.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
         else:
             (data) = self.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
@@ -3495,11 +3495,11 @@ class ProjectApi(object):
         """update_project_user  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async=True
-        >>> thread = api.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async=True)
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async_req=True)
         >>> result = thread.get()
 
-        :param async bool
+        :param async_req bool
         :param str cloud_pk: (required)
         :param str id: (required)
         :param str project_pk: (required)
@@ -3512,7 +3512,7 @@ class ProjectApi(object):
         local_var_params = locals()
 
         all_params = ['cloud_pk', 'id', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async')
+        all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
         all_params.append('_request_timeout')
@@ -3583,7 +3583,7 @@ class ProjectApi(object):
             files=local_var_files,
             response_type='InviteUser',  # noqa: E501
             auth_settings=auth_settings,
-            async=local_var_params.get('async'),
+            async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
             _preload_content=local_var_params.get('_preload_content', True),
             _request_timeout=local_var_params.get('_request_timeout'),
