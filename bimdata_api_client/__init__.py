@@ -18,6 +18,7 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
+from bimdata_api_client.api.application_api import ApplicationApi
 from bimdata_api_client.api.checkplan_api import CheckplanApi
 from bimdata_api_client.api.cloud_api import CloudApi
 from bimdata_api_client.api.ifc_api import IfcApi
@@ -68,5 +69,6 @@ from bimdata_api_client.models.sign_up_user import SignUpUser
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.unit import Unit
 from bimdata_api_client.models.user import User
+from bimdata_api_client.models.web_hook import WebHook
 from bimdata_api_client.models.zone import Zone
 from bimdata_api_client.models.zone_space import ZoneSpace

@@ -55,5 +55,6 @@ from bimdata_api_client.models.sign_up_user import SignUpUser
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.unit import Unit
 from bimdata_api_client.models.user import User
+from bimdata_api_client.models.web_hook import WebHook
 from bimdata_api_client.models.zone import Zone
 from bimdata_api_client.models.zone_space import ZoneSpace

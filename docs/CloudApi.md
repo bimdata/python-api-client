@@ -287,8 +287,6 @@ Name | Type | Description  | Notes
 
 
 
-Returns user and his cloud role
-
 ### Example
 ```python
 from __future__ import print_function

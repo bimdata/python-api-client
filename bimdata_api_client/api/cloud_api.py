@@ -558,7 +558,6 @@ class CloudApi(object):
     def get_cloud(self, id, **kwargs):  # noqa: E501
         """get_cloud  # noqa: E501
 
-        Returns user and his cloud role  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud(id, async_req=True)
@@ -580,7 +579,6 @@ class CloudApi(object):
     def get_cloud_with_http_info(self, id, **kwargs):  # noqa: E501
         """get_cloud  # noqa: E501
 
-        Returns user and his cloud role  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_with_http_info(id, async_req=True)

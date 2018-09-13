@@ -58,17 +58,15 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
 
 # create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-ifc_checker = bimdata_api_client.IfcChecker() # IfcChecker | 
+web_hook = bimdata_api_client.WebHook() # WebHook | 
 
 try:
-    api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, ifc_checker)
+    api_response = api_instance.create_web_hook(cloud_pk, web_hook)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker: %s\n" % e)
+    print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
 
 ```
 
@@ -78,6 +76,12 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ApplicationApi* | [**create_web_hook**](docs/ApplicationApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | 
+*ApplicationApi* | [**delete_web_hook**](docs/ApplicationApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | 
+*ApplicationApi* | [**full_update_web_hook**](docs/ApplicationApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | 
+*ApplicationApi* | [**get_web_hook**](docs/ApplicationApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | 
+*ApplicationApi* | [**get_web_hooks**](docs/ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | 
+*ApplicationApi* | [**update_web_hook**](docs/ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | 
 *CheckplanApi* | [**create_checker**](docs/CheckplanApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | 
 *CheckplanApi* | [**create_checker_result**](docs/CheckplanApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | 
 *CheckplanApi* | [**create_checkplan**](docs/CheckplanApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | 
@@ -309,6 +313,7 @@ Class | Method | HTTP request | Description
  - [Space](docs/Space.md)
  - [Unit](docs/Unit.md)
  - [User](docs/User.md)
+ - [WebHook](docs/WebHook.md)
  - [Zone](docs/Zone.md)
  - [ZoneSpace](docs/ZoneSpace.md)
 
