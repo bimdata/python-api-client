@@ -41,7 +41,7 @@ class Document(object):
         'file_name': 'str',
         'description': 'str',
         'file': 'str',
-        'size': 'str',
+        'size': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'ifc_id': 'str'
@@ -310,7 +310,7 @@ class Document(object):
 
 
         :return: The size of this Document.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._size
 
@@ -320,8 +320,12 @@ class Document(object):
 
 
         :param size: The size of this Document.  # noqa: E501
-        :type: str
+        :type: int
         """
+        if size is not None and size > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for `size`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if size is not None and size < 0:  # noqa: E501
+            raise ValueError("Invalid value for `size`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._size = size
 

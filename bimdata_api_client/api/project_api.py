@@ -169,7 +169,7 @@ class ProjectApi(object):
         :param str file_name:
         :param str description:
         :param file file:
-        :param str size:
+        :param int size:
         :param datetime created_at:
         :param datetime updated_at:
         :param str ifc_id:
@@ -204,7 +204,7 @@ class ProjectApi(object):
         :param str file_name:
         :param str description:
         :param file file:
-        :param str size:
+        :param int size:
         :param datetime created_at:
         :param datetime updated_at:
         :param str ifc_id:
@@ -251,6 +251,10 @@ class ProjectApi(object):
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
             raise ValueError("Invalid value for parameter `file_name` when calling `create_document`, length must be less than or equal to `512`")  # noqa: E501
+        if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `create_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `create_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1323,7 +1327,7 @@ class ProjectApi(object):
         :param str file_name:
         :param str description:
         :param file file:
-        :param str size:
+        :param int size:
         :param datetime created_at:
         :param datetime updated_at:
         :param str ifc_id:
@@ -1359,7 +1363,7 @@ class ProjectApi(object):
         :param str file_name:
         :param str description:
         :param file file:
-        :param str size:
+        :param int size:
         :param datetime created_at:
         :param datetime updated_at:
         :param str ifc_id:
@@ -1410,6 +1414,10 @@ class ProjectApi(object):
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
             raise ValueError("Invalid value for parameter `file_name` when calling `full_update_document`, length must be less than or equal to `512`")  # noqa: E501
+        if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}

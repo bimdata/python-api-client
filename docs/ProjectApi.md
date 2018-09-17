@@ -126,7 +126,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 file = '/path/to/file' # file |  (optional)
-size = 'size_example' # str |  (optional)
+size = 56 # int |  (optional)
 created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**|  | [optional] 
  **description** | **str**|  | [optional] 
  **file** | **file**|  | [optional] 
- **size** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] 
  **created_at** | **datetime**|  | [optional] 
  **updated_at** | **datetime**|  | [optional] 
  **ifc_id** | **str**|  | [optional] 
@@ -695,7 +695,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 file = '/path/to/file' # file |  (optional)
-size = 'size_example' # str |  (optional)
+size = 56 # int |  (optional)
 created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
 ifc_id = 'ifc_id_example' # str |  (optional)
@@ -723,7 +723,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**|  | [optional] 
  **description** | **str**|  | [optional] 
  **file** | **file**|  | [optional] 
- **size** | **str**|  | [optional] 
+ **size** | **int**|  | [optional] 
  **created_at** | **datetime**|  | [optional] 
  **updated_at** | **datetime**|  | [optional] 
  **ifc_id** | **str**|  | [optional] 

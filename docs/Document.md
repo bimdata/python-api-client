@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **file_name** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **file** | **str** |  | [optional] 
-**size** | **str** |  | [optional] 
+**size** | **int** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **ifc_id** | **str** |  | [optional] 
