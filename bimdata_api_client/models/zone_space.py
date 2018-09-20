@@ -36,7 +36,7 @@ class ZoneSpace(object):
         'name': 'str',
         'longname': 'str',
         'uuid': 'str',
-        'zone_set': 'list[str]',
+        'zone_set': 'list[int]',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -177,7 +177,7 @@ class ZoneSpace(object):
 
 
         :return: The zone_set of this ZoneSpace.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[int]
         """
         return self._zone_set
 
@@ -187,7 +187,7 @@ class ZoneSpace(object):
 
 
         :param zone_set: The zone_set of this ZoneSpace.  # noqa: E501
-        :type: list[str]
+        :type: list[int]
         """
 
         self._zone_set = zone_set

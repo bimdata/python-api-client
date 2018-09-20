@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **longname** | **str** |  | [optional] 
 **uuid** | **str** |  | 
-**zone_set** | **list[str]** |  | [optional] 
+**zone_set** | **list[int]** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 

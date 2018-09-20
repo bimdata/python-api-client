@@ -124,7 +124,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_demo**
-> Project create_demo(id, cloud)
+> Project create_demo(id)
 
 
 
@@ -147,10 +147,9 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 id = 'id_example' # str | 
-cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
-    api_response = api_instance.create_demo(id, cloud)
+    api_response = api_instance.create_demo(id)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CloudApi->create_demo: %s\n" % e)
@@ -161,7 +160,6 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **str**|  | 
- **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
 
@@ -173,7 +171,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)

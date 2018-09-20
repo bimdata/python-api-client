@@ -237,41 +237,39 @@ class CloudApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_demo(self, id, cloud, **kwargs):  # noqa: E501
+    def create_demo(self, id, **kwargs):  # noqa: E501
         """create_demo  # noqa: E501
 
         Create a demo project with a pre-populated IFC and its data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_demo(id, cloud, async_req=True)
+        >>> thread = api.create_demo(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: (required)
-        :param Cloud cloud: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_demo_with_http_info(id, cloud, **kwargs)  # noqa: E501
+            return self.create_demo_with_http_info(id, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_demo_with_http_info(id, cloud, **kwargs)  # noqa: E501
+            (data) = self.create_demo_with_http_info(id, **kwargs)  # noqa: E501
             return data
 
-    def create_demo_with_http_info(self, id, cloud, **kwargs):  # noqa: E501
+    def create_demo_with_http_info(self, id, **kwargs):  # noqa: E501
         """create_demo  # noqa: E501
 
         Create a demo project with a pre-populated IFC and its data  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_demo_with_http_info(id, cloud, async_req=True)
+        >>> thread = api.create_demo_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str id: (required)
-        :param Cloud cloud: (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -279,7 +277,7 @@ class CloudApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id', 'cloud']  # noqa: E501
+        all_params = ['id']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -297,10 +295,6 @@ class CloudApi(object):
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
             raise ValueError("Missing the required parameter `id` when calling `create_demo`")  # noqa: E501
-        # verify the required parameter 'cloud' is set
-        if ('cloud' not in local_var_params or
-                local_var_params['cloud'] is None):
-            raise ValueError("Missing the required parameter `cloud` when calling `create_demo`")  # noqa: E501
 
         collection_formats = {}
 
@@ -316,14 +310,8 @@ class CloudApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'cloud' in local_var_params:
-            body_params = local_var_params['cloud']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
