@@ -1,10 +1,10 @@
-# ProjectRole
+# LineSeriaizer
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**project** | **int** |  | 
-**role** | **int** |  | [optional] 
+**end_point** | [**Point**](Point.md) |  | 
+**start_point** | [**Point**](Point.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

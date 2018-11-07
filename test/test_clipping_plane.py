@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.cloud_role import CloudRole  # noqa: E501
+from bimdata_api_client.models.clipping_plane import ClippingPlane  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestCloudRole(unittest.TestCase):
-    """CloudRole unit test stubs"""
+class TestClippingPlane(unittest.TestCase):
+    """ClippingPlane unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestCloudRole(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testCloudRole(self):
-        """Test CloudRole"""
+    def testClippingPlane(self):
+        """Test ClippingPlane"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.cloud_role.CloudRole()  # noqa: E501
+        # model = bimdata_api_client.models.clipping_plane.ClippingPlane()  # noqa: E501
         pass
 
 

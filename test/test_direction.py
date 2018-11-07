@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.project_role import ProjectRole  # noqa: E501
+from bimdata_api_client.models.direction import Direction  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestProjectRole(unittest.TestCase):
-    """ProjectRole unit test stubs"""
+class TestDirection(unittest.TestCase):
+    """Direction unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestProjectRole(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testProjectRole(self):
-        """Test ProjectRole"""
+    def testDirection(self):
+        """Test Direction"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.project_role.ProjectRole()  # noqa: E501
+        # model = bimdata_api_client.models.direction.Direction()  # noqa: E501
         pass
 
 

@@ -29,6 +29,12 @@ class TestApplicationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_cloud_webhook_ping(self):
+        """Test case for cloud_webhook_ping
+
+        """
+        pass
+
     def test_create_web_hook(self):
         """Test case for create_web_hook
 

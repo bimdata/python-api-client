@@ -60,13 +60,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
 web_hook = bimdata_api_client.WebHook() # WebHook | 
 
 try:
-    api_response = api_instance.create_web_hook(cloud_pk, web_hook)
+    api_response = api_instance.cloud_webhook_ping(cloud_pk, id, web_hook)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
+    print("Exception when calling ApplicationApi->cloud_webhook_ping: %s\n" % e)
 
 ```
 
@@ -76,12 +77,61 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*ApplicationApi* | [**cloud_webhook_ping**](docs/ApplicationApi.md#cloud_webhook_ping) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | 
 *ApplicationApi* | [**create_web_hook**](docs/ApplicationApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | 
 *ApplicationApi* | [**delete_web_hook**](docs/ApplicationApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | 
 *ApplicationApi* | [**full_update_web_hook**](docs/ApplicationApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | 
 *ApplicationApi* | [**get_web_hook**](docs/ApplicationApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | 
 *ApplicationApi* | [**get_web_hooks**](docs/ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | 
 *ApplicationApi* | [**update_web_hook**](docs/ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | 
+*BcfApi* | [**create_coloring**](docs/BcfApi.md#create_coloring) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring | 
+*BcfApi* | [**create_comment**](docs/BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | 
+*BcfApi* | [**create_full_topic**](docs/BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | 
+*BcfApi* | [**create_selection**](docs/BcfApi.md#create_selection) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection | 
+*BcfApi* | [**create_topic**](docs/BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | 
+*BcfApi* | [**create_viewpoint**](docs/BcfApi.md#create_viewpoint) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints | 
+*BcfApi* | [**create_visibility**](docs/BcfApi.md#create_visibility) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility | 
+*BcfApi* | [**delete_coloring**](docs/BcfApi.md#delete_coloring) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
+*BcfApi* | [**delete_comment**](docs/BcfApi.md#delete_comment) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+*BcfApi* | [**delete_selection**](docs/BcfApi.md#delete_selection) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
+*BcfApi* | [**delete_topic**](docs/BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+*BcfApi* | [**delete_viewpoint**](docs/BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
+*BcfApi* | [**delete_visibility**](docs/BcfApi.md#delete_visibility) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility/{id} | 
+*BcfApi* | [**full_update_bcf_project**](docs/BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | 
+*BcfApi* | [**full_update_coloring**](docs/BcfApi.md#full_update_coloring) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
+*BcfApi* | [**full_update_comment**](docs/BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+*BcfApi* | [**full_update_full_topic**](docs/BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
+*BcfApi* | [**full_update_selection**](docs/BcfApi.md#full_update_selection) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
+*BcfApi* | [**full_update_topic**](docs/BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+*BcfApi* | [**full_update_viewpoint**](docs/BcfApi.md#full_update_viewpoint) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
+*BcfApi* | [**full_update_visibility**](docs/BcfApi.md#full_update_visibility) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility/{id} | 
+*BcfApi* | [**get_bcf_project**](docs/BcfApi.md#get_bcf_project) | **GET** /bcf/2.1/projects/{id} | 
+*BcfApi* | [**get_bcf_projects**](docs/BcfApi.md#get_bcf_projects) | **GET** /bcf/2.1/projects | 
+*BcfApi* | [**get_coloring**](docs/BcfApi.md#get_coloring) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
+*BcfApi* | [**get_colorings**](docs/BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring | 
+*BcfApi* | [**get_comment**](docs/BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+*BcfApi* | [**get_comments**](docs/BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | 
+*BcfApi* | [**get_extension**](docs/BcfApi.md#get_extension) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | 
+*BcfApi* | [**get_full_topic**](docs/BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
+*BcfApi* | [**get_full_topics**](docs/BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | 
+*BcfApi* | [**get_selection**](docs/BcfApi.md#get_selection) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
+*BcfApi* | [**get_selections**](docs/BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection | 
+*BcfApi* | [**get_snapshots**](docs/BcfApi.md#get_snapshots) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/snapshot | 
+*BcfApi* | [**get_topic**](docs/BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+*BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | 
+*BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | 
+*BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
+*BcfApi* | [**get_viewpoints**](docs/BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints | 
+*BcfApi* | [**get_visibilities**](docs/BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility | 
+*BcfApi* | [**get_visibility**](docs/BcfApi.md#get_visibility) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility/{id} | 
+*BcfApi* | [**update_bcf_project**](docs/BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | 
+*BcfApi* | [**update_coloring**](docs/BcfApi.md#update_coloring) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
+*BcfApi* | [**update_comment**](docs/BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+*BcfApi* | [**update_full_topic**](docs/BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
+*BcfApi* | [**update_selection**](docs/BcfApi.md#update_selection) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
+*BcfApi* | [**update_topic**](docs/BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+*BcfApi* | [**update_viewpoint**](docs/BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
+*BcfApi* | [**update_visibility**](docs/BcfApi.md#update_visibility) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility/{id} | 
 *CheckplanApi* | [**create_checker**](docs/CheckplanApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | 
 *CheckplanApi* | [**create_checker_result**](docs/CheckplanApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | 
 *CheckplanApi* | [**create_checkplan**](docs/CheckplanApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | 
@@ -274,15 +324,22 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [BcfProject](docs/BcfProject.md)
  - [CheckPlan](docs/CheckPlan.md)
  - [CheckerResult](docs/CheckerResult.md)
  - [Classification](docs/Classification.md)
+ - [ClippingPlane](docs/ClippingPlane.md)
  - [Cloud](docs/Cloud.md)
- - [CloudRole](docs/CloudRole.md)
+ - [Coloring](docs/Coloring.md)
+ - [Comment](docs/Comment.md)
+ - [Component](docs/Component.md)
+ - [ComponentsParent](docs/ComponentsParent.md)
+ - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)
  - [ElementPropertySetRelation](docs/ElementPropertySetRelation.md)
+ - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
  - [ForgotPassword](docs/ForgotPassword.md)
@@ -293,10 +350,13 @@ Class | Method | HTTP request | Description
  - [IfcFiles](docs/IfcFiles.md)
  - [InviteUser](docs/InviteUser.md)
  - [InvitedSignUpUser](docs/InvitedSignUpUser.md)
+ - [LineSeriaizer](docs/LineSeriaizer.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [Notification](docs/Notification.md)
+ - [OrthogonalCamera](docs/OrthogonalCamera.md)
+ - [PerspectiveCamera](docs/PerspectiveCamera.md)
+ - [Point](docs/Point.md)
  - [Project](docs/Project.md)
- - [ProjectRole](docs/ProjectRole.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
  - [RawDefinition](docs/RawDefinition.md)
@@ -311,9 +371,15 @@ Class | Method | HTTP request | Description
  - [Ruleset](docs/Ruleset.md)
  - [SelfUser](docs/SelfUser.md)
  - [SignUpUser](docs/SignUpUser.md)
+ - [SingleJsonTopic](docs/SingleJsonTopic.md)
+ - [Snapshot](docs/Snapshot.md)
  - [Space](docs/Space.md)
+ - [Topic](docs/Topic.md)
  - [Unit](docs/Unit.md)
  - [User](docs/User.md)
+ - [ViewSetupHints](docs/ViewSetupHints.md)
+ - [Viewpoint](docs/Viewpoint.md)
+ - [Visibility](docs/Visibility.md)
  - [WebHook](docs/WebHook.md)
  - [Zone](docs/Zone.md)
  - [ZoneSpace](docs/ZoneSpace.md)

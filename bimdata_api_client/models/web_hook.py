@@ -58,8 +58,7 @@ class WebHook(object):
             self.id = id
         self.events = events
         self.url = url
-        if secret is not None:
-            self.secret = secret
+        self.secret = secret
 
     @property
     def id(self):
@@ -150,6 +149,10 @@ class WebHook(object):
         :param secret: The secret of this WebHook.  # noqa: E501
         :type: str
         """
+        if secret is None:
+            raise ValueError("Invalid value for `secret`, must not be `None`")  # noqa: E501
+        if secret is not None and len(secret) > 256:
+            raise ValueError("Invalid value for `secret`, length must be less than or equal to `256`")  # noqa: E501
         if secret is not None and len(secret) < 1:
             raise ValueError("Invalid value for `secret`, length must be greater than or equal to `1`")  # noqa: E501
 

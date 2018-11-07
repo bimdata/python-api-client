@@ -1,12 +1,11 @@
-# WebHook
+# Point
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**events** | **list[str]** |  | 
-**url** | **str** |  | 
-**secret** | **str** |  | 
+**x** | **float** |  | 
+**y** | **float** |  | 
+**z** | **float** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
