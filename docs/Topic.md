@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **description** | **str** |  | [optional] 
 **due_date** | **datetime** |  | [optional] 
 **ifcs** | **list[int]** |  | [optional] 
-**topic_format** | **str** |  | [optional] 
+**format** | **str** |  | [optional] 
 **index** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

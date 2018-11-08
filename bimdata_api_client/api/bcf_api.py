@@ -3285,6 +3285,8 @@ class BcfApi(object):
 
         :param async_req bool
         :param str projects_pk: (required)
+        :param str ifcs: Filter the returned list by ifcs
+        :param str format: Filter the returned list by format
         :return: list[SingleJsonTopic]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3306,6 +3308,8 @@ class BcfApi(object):
 
         :param async_req bool
         :param str projects_pk: (required)
+        :param str ifcs: Filter the returned list by ifcs
+        :param str format: Filter the returned list by format
         :return: list[SingleJsonTopic]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3313,7 +3317,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk']  # noqa: E501
+        all_params = ['projects_pk', 'ifcs', 'format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3339,6 +3343,10 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'ifcs' in local_var_params:
+            query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
+        if 'format' in local_var_params:
+            query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
 
@@ -3820,6 +3828,7 @@ class BcfApi(object):
         :param async_req bool
         :param str projects_pk: (required)
         :param str ifcs: Filter the returned list by ifcs
+        :param str format: Filter the returned list by format
         :return: list[Topic]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3842,6 +3851,7 @@ class BcfApi(object):
         :param async_req bool
         :param str projects_pk: (required)
         :param str ifcs: Filter the returned list by ifcs
+        :param str format: Filter the returned list by format
         :return: list[Topic]
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3849,7 +3859,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'ifcs']  # noqa: E501
+        all_params = ['projects_pk', 'ifcs', 'format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3877,6 +3887,8 @@ class BcfApi(object):
         query_params = []
         if 'ifcs' in local_var_params:
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
+        if 'format' in local_var_params:
+            query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
 

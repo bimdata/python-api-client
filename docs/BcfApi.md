@@ -1646,7 +1646,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_full_topics**
-> list[SingleJsonTopic] get_full_topics(projects_pk)
+> list[SingleJsonTopic] get_full_topics(projects_pk, ifcs=ifcs, format=format)
 
 
 
@@ -1667,9 +1667,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
+ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
+format = 'format_example' # str | Filter the returned list by format (optional)
 
 try:
-    api_response = api_instance.get_full_topics(projects_pk)
+    api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -1680,6 +1682,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
+ **ifcs** | **str**| Filter the returned list by ifcs | [optional] 
+ **format** | **str**| Filter the returned list by format | [optional] 
 
 ### Return type
 
@@ -1917,7 +1921,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topics**
-> list[Topic] get_topics(projects_pk, ifcs=ifcs)
+> list[Topic] get_topics(projects_pk, ifcs=ifcs, format=format)
 
 
 
@@ -1939,9 +1943,10 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
+format = 'format_example' # str | Filter the returned list by format (optional)
 
 try:
-    api_response = api_instance.get_topics(projects_pk, ifcs=ifcs)
+    api_response = api_instance.get_topics(projects_pk, ifcs=ifcs, format=format)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->get_topics: %s\n" % e)
@@ -1953,6 +1958,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **ifcs** | **str**| Filter the returned list by ifcs | [optional] 
+ **format** | **str**| Filter the returned list by format | [optional] 
 
 ### Return type
 

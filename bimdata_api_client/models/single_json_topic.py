@@ -48,6 +48,7 @@ class SingleJsonTopic(object):
         'priority': 'str',
         'index': 'int',
         'assigned_to': 'str',
+        'format': 'str',
         'comments': 'list[Comment]',
         'viewpoints': 'list[Viewpoint]'
     }
@@ -69,11 +70,12 @@ class SingleJsonTopic(object):
         'priority': 'priority',
         'index': 'index',
         'assigned_to': 'assigned_to',
+        'format': 'format',
         'comments': 'comments',
         'viewpoints': 'viewpoints'
     }
 
-    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, comments=None, viewpoints=None):  # noqa: E501
+    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, comments=None, viewpoints=None):  # noqa: E501
         """SingleJsonTopic - a model defined in OpenAPI"""  # noqa: E501
 
         self._guid = None
@@ -92,6 +94,7 @@ class SingleJsonTopic(object):
         self._priority = None
         self._index = None
         self._assigned_to = None
+        self._format = None
         self._comments = None
         self._viewpoints = None
         self.discriminator = None
@@ -127,6 +130,8 @@ class SingleJsonTopic(object):
             self.index = index
         if assigned_to is not None:
             self.assigned_to = assigned_to
+        if format is not None:
+            self.format = format
         if comments is not None:
             self.comments = comments
         if viewpoints is not None:
@@ -475,6 +480,31 @@ class SingleJsonTopic(object):
         """
 
         self._assigned_to = assigned_to
+
+    @property
+    def format(self):
+        """Gets the format of this SingleJsonTopic.  # noqa: E501
+
+
+        :return: The format of this SingleJsonTopic.  # noqa: E501
+        :rtype: str
+        """
+        return self._format
+
+    @format.setter
+    def format(self, format):
+        """Sets the format of this SingleJsonTopic.
+
+
+        :param format: The format of this SingleJsonTopic.  # noqa: E501
+        :type: str
+        """
+        if format is not None and len(format) > 64:
+            raise ValueError("Invalid value for `format`, length must be less than or equal to `64`")  # noqa: E501
+        if format is not None and len(format) < 1:
+            raise ValueError("Invalid value for `format`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._format = format
 
     @property
     def comments(self):

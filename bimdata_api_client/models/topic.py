@@ -48,7 +48,7 @@ class Topic(object):
         'description': 'str',
         'due_date': 'datetime',
         'ifcs': 'list[int]',
-        'topic_format': 'str',
+        'format': 'str',
         'index': 'int'
     }
 
@@ -69,11 +69,11 @@ class Topic(object):
         'description': 'description',
         'due_date': 'due_date',
         'ifcs': 'ifcs',
-        'topic_format': 'topic_format',
+        'format': 'format',
         'index': 'index'
     }
 
-    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, topic_format=None, index=None):  # noqa: E501
+    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, format=None, index=None):  # noqa: E501
         """Topic - a model defined in OpenAPI"""  # noqa: E501
 
         self._guid = None
@@ -92,7 +92,7 @@ class Topic(object):
         self._description = None
         self._due_date = None
         self._ifcs = None
-        self._topic_format = None
+        self._format = None
         self._index = None
         self.discriminator = None
 
@@ -127,8 +127,8 @@ class Topic(object):
             self.due_date = due_date
         if ifcs is not None:
             self.ifcs = ifcs
-        if topic_format is not None:
-            self.topic_format = topic_format
+        if format is not None:
+            self.format = format
         if index is not None:
             self.index = index
 
@@ -477,29 +477,29 @@ class Topic(object):
         self._ifcs = ifcs
 
     @property
-    def topic_format(self):
-        """Gets the topic_format of this Topic.  # noqa: E501
+    def format(self):
+        """Gets the format of this Topic.  # noqa: E501
 
 
-        :return: The topic_format of this Topic.  # noqa: E501
+        :return: The format of this Topic.  # noqa: E501
         :rtype: str
         """
-        return self._topic_format
+        return self._format
 
-    @topic_format.setter
-    def topic_format(self, topic_format):
-        """Sets the topic_format of this Topic.
+    @format.setter
+    def format(self, format):
+        """Sets the format of this Topic.
 
 
-        :param topic_format: The topic_format of this Topic.  # noqa: E501
+        :param format: The format of this Topic.  # noqa: E501
         :type: str
         """
-        if topic_format is not None and len(topic_format) > 64:
-            raise ValueError("Invalid value for `topic_format`, length must be less than or equal to `64`")  # noqa: E501
-        if topic_format is not None and len(topic_format) < 1:
-            raise ValueError("Invalid value for `topic_format`, length must be greater than or equal to `1`")  # noqa: E501
+        if format is not None and len(format) > 64:
+            raise ValueError("Invalid value for `format`, length must be less than or equal to `64`")  # noqa: E501
+        if format is not None and len(format) < 1:
+            raise ValueError("Invalid value for `format`, length must be greater than or equal to `1`")  # noqa: E501
 
-        self._topic_format = topic_format
+        self._format = format
 
     @property
     def index(self):
