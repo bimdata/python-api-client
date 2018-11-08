@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **index** | **int** |  | [optional] 
 **assigned_to** | **str** |  | [optional] 
 **format** | **str** |  | [optional] 
+**due_date** | **datetime** |  | [optional] 
 **comments** | [**list[Comment]**](Comment.md) |  | [optional] 
 **viewpoints** | [**list[Viewpoint]**](Viewpoint.md) |  | [optional] 
 

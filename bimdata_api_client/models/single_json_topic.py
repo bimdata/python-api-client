@@ -49,6 +49,7 @@ class SingleJsonTopic(object):
         'index': 'int',
         'assigned_to': 'str',
         'format': 'str',
+        'due_date': 'datetime',
         'comments': 'list[Comment]',
         'viewpoints': 'list[Viewpoint]'
     }
@@ -71,11 +72,12 @@ class SingleJsonTopic(object):
         'index': 'index',
         'assigned_to': 'assigned_to',
         'format': 'format',
+        'due_date': 'due_date',
         'comments': 'comments',
         'viewpoints': 'viewpoints'
     }
 
-    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, comments=None, viewpoints=None):  # noqa: E501
+    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, due_date=None, comments=None, viewpoints=None):  # noqa: E501
         """SingleJsonTopic - a model defined in OpenAPI"""  # noqa: E501
 
         self._guid = None
@@ -95,6 +97,7 @@ class SingleJsonTopic(object):
         self._index = None
         self._assigned_to = None
         self._format = None
+        self._due_date = None
         self._comments = None
         self._viewpoints = None
         self.discriminator = None
@@ -132,6 +135,8 @@ class SingleJsonTopic(object):
             self.assigned_to = assigned_to
         if format is not None:
             self.format = format
+        if due_date is not None:
+            self.due_date = due_date
         if comments is not None:
             self.comments = comments
         if viewpoints is not None:
@@ -505,6 +510,27 @@ class SingleJsonTopic(object):
             raise ValueError("Invalid value for `format`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._format = format
+
+    @property
+    def due_date(self):
+        """Gets the due_date of this SingleJsonTopic.  # noqa: E501
+
+
+        :return: The due_date of this SingleJsonTopic.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._due_date
+
+    @due_date.setter
+    def due_date(self, due_date):
+        """Sets the due_date of this SingleJsonTopic.
+
+
+        :param due_date: The due_date of this SingleJsonTopic.  # noqa: E501
+        :type: datetime
+        """
+
+        self._due_date = due_date
 
     @property
     def comments(self):
