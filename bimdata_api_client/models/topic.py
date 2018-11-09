@@ -429,8 +429,6 @@ class Topic(object):
         :param description: The description of this Topic.  # noqa: E501
         :type: str
         """
-        if description is not None and len(description) > 255:
-            raise ValueError("Invalid value for `description`, length must be less than or equal to `255`")  # noqa: E501
 
         self._description = description
 

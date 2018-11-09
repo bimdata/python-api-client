@@ -36,7 +36,7 @@ Method | HTTP request | Description
 [**get_full_topics**](BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | 
 [**get_selection**](BcfApi.md#get_selection) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
 [**get_selections**](BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection | 
-[**get_snapshots**](BcfApi.md#get_snapshots) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/snapshot | 
+[**get_snapshot**](BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/snapshot | 
 [**get_topic**](BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
 [**get_topics**](BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | 
 [**get_user**](BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | 
@@ -1812,10 +1812,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_snapshots**
-> list[Snapshot] get_snapshots(projects_pk, topics_pk, viewpoints_pk)
+# **get_snapshot**
+> file get_snapshot(projects_pk, topics_pk, viewpoints_pk)
 
 
+
+Retrieve the viewpoint' snapshot
 
 ### Example
 ```python
@@ -1838,10 +1840,10 @@ topics_pk = 'topics_pk_example' # str |
 viewpoints_pk = 'viewpoints_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_snapshots(projects_pk, topics_pk, viewpoints_pk)
+    api_response = api_instance.get_snapshot(projects_pk, topics_pk, viewpoints_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling BcfApi->get_snapshots: %s\n" % e)
+    print("Exception when calling BcfApi->get_snapshot: %s\n" % e)
 ```
 
 ### Parameters
@@ -1854,7 +1856,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Snapshot]**](Snapshot.md)
+**file**
 
 ### Authorization
 

@@ -3605,42 +3605,44 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_snapshots(self, projects_pk, topics_pk, viewpoints_pk, **kwargs):  # noqa: E501
-        """get_snapshots  # noqa: E501
+    def get_snapshot(self, projects_pk, topics_pk, viewpoints_pk, **kwargs):  # noqa: E501
+        """get_snapshot  # noqa: E501
 
+        Retrieve the viewpoint' snapshot  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_snapshots(projects_pk, topics_pk, viewpoints_pk, async_req=True)
+        >>> thread = api.get_snapshot(projects_pk, topics_pk, viewpoints_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str projects_pk: (required)
         :param str topics_pk: (required)
         :param str viewpoints_pk: (required)
-        :return: list[Snapshot]
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_snapshots_with_http_info(projects_pk, topics_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            return self.get_snapshot_with_http_info(projects_pk, topics_pk, viewpoints_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_snapshots_with_http_info(projects_pk, topics_pk, viewpoints_pk, **kwargs)  # noqa: E501
+            (data) = self.get_snapshot_with_http_info(projects_pk, topics_pk, viewpoints_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_snapshots_with_http_info(self, projects_pk, topics_pk, viewpoints_pk, **kwargs):  # noqa: E501
-        """get_snapshots  # noqa: E501
+    def get_snapshot_with_http_info(self, projects_pk, topics_pk, viewpoints_pk, **kwargs):  # noqa: E501
+        """get_snapshot  # noqa: E501
 
+        Retrieve the viewpoint' snapshot  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_snapshots_with_http_info(projects_pk, topics_pk, viewpoints_pk, async_req=True)
+        >>> thread = api.get_snapshot_with_http_info(projects_pk, topics_pk, viewpoints_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str projects_pk: (required)
         :param str topics_pk: (required)
         :param str viewpoints_pk: (required)
-        :return: list[Snapshot]
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3657,22 +3659,22 @@ class BcfApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_snapshots" % key
+                    " to method get_snapshot" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snapshots`")  # noqa: E501
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_snapshot`")  # noqa: E501
         # verify the required parameter 'topics_pk' is set
         if ('topics_pk' not in local_var_params or
                 local_var_params['topics_pk'] is None):
-            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snapshots`")  # noqa: E501
+            raise ValueError("Missing the required parameter `topics_pk` when calling `get_snapshot`")  # noqa: E501
         # verify the required parameter 'viewpoints_pk' is set
         if ('viewpoints_pk' not in local_var_params or
                 local_var_params['viewpoints_pk'] is None):
-            raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_snapshots`")  # noqa: E501
+            raise ValueError("Missing the required parameter `viewpoints_pk` when calling `get_snapshot`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3707,7 +3709,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Snapshot]',  # noqa: E501
+            response_type='file',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

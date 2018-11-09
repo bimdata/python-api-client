@@ -221,8 +221,8 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
-    def test_get_snapshots(self):
-        """Test case for get_snapshots
+    def test_get_snapshot(self):
+        """Test case for get_snapshot
 
         """
         pass
