@@ -191,8 +191,8 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
-    def test_get_extension(self):
-        """Test case for get_extension
+    def test_get_extensions(self):
+        """Test case for get_extensions
 
         """
         pass

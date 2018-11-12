@@ -111,7 +111,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_colorings**](docs/BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring | 
 *BcfApi* | [**get_comment**](docs/BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
 *BcfApi* | [**get_comments**](docs/BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | 
-*BcfApi* | [**get_extension**](docs/BcfApi.md#get_extension) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | 
+*BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | 
 *BcfApi* | [**get_full_topic**](docs/BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
 *BcfApi* | [**get_full_topics**](docs/BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | 
 *BcfApi* | [**get_selection**](docs/BcfApi.md#get_selection) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 

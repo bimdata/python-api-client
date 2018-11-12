@@ -31,7 +31,7 @@ Method | HTTP request | Description
 [**get_colorings**](BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring | 
 [**get_comment**](BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
 [**get_comments**](BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | 
-[**get_extension**](BcfApi.md#get_extension) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | 
+[**get_extensions**](BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | 
 [**get_full_topic**](BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
 [**get_full_topics**](BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | 
 [**get_selection**](BcfApi.md#get_selection) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
@@ -1541,8 +1541,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_extension**
-> Extensions get_extension(projects_pk)
+# **get_extensions**
+> Extensions get_extensions(projects_pk)
 
 
 
@@ -1565,10 +1565,10 @@ api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configurat
 projects_pk = 'projects_pk_example' # str | 
 
 try:
-    api_response = api_instance.get_extension(projects_pk)
+    api_response = api_instance.get_extensions(projects_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling BcfApi->get_extension: %s\n" % e)
+    print("Exception when calling BcfApi->get_extensions: %s\n" % e)
 ```
 
 ### Parameters

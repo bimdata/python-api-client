@@ -3079,12 +3079,12 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_extension(self, projects_pk, **kwargs):  # noqa: E501
-        """get_extension  # noqa: E501
+    def get_extensions(self, projects_pk, **kwargs):  # noqa: E501
+        """get_extensions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_extension(projects_pk, async_req=True)
+        >>> thread = api.get_extensions(projects_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3095,17 +3095,17 @@ class BcfApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_extension_with_http_info(projects_pk, **kwargs)  # noqa: E501
+            return self.get_extensions_with_http_info(projects_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_extension_with_http_info(projects_pk, **kwargs)  # noqa: E501
+            (data) = self.get_extensions_with_http_info(projects_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_extension_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
-        """get_extension  # noqa: E501
+    def get_extensions_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
+        """get_extensions  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_extension_with_http_info(projects_pk, async_req=True)
+        >>> thread = api.get_extensions_with_http_info(projects_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3127,14 +3127,14 @@ class BcfApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_extension" % key
+                    " to method get_extensions" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
-            raise ValueError("Missing the required parameter `projects_pk` when calling `get_extension`")  # noqa: E501
+            raise ValueError("Missing the required parameter `projects_pk` when calling `get_extensions`")  # noqa: E501
 
         collection_formats = {}
 
