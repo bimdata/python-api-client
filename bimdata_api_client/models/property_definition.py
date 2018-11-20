@@ -64,14 +64,10 @@ class PropertyDefinition(object):
             self.id = id
         if unit is not None:
             self.unit = unit
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if type is not None:
-            self.type = type
-        if value_type is not None:
-            self.value_type = value_type
+        self.name = name
+        self.description = description
+        self.type = type
+        self.value_type = value_type
 
     @property
     def id(self):

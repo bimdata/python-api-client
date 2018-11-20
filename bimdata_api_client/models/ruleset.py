@@ -65,8 +65,7 @@ class Ruleset(object):
         if parent_ruleset_id is not None:
             self.parent_ruleset_id = parent_ruleset_id
         self.name = name
-        if description is not None:
-            self.description = description
+        self.description = description
         if rules is not None:
             self.rules = rules
         if rulesets is not None:

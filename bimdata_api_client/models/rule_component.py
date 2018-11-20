@@ -65,18 +65,12 @@ class RuleComponent(object):
 
         if id is not None:
             self.id = id
-        if type is not None:
-            self.type = type
-        if value is not None:
-            self.value = value
-        if operator is not None:
-            self.operator = operator
-        if params is not None:
-            self.params = params
-        if condition is not None:
-            self.condition = condition
-        if rule_components is not None:
-            self.rule_components = rule_components
+        self.type = type
+        self.value = value
+        self.operator = operator
+        self.params = params
+        self.condition = condition
+        self.rule_components = rule_components
 
     @property
     def id(self):

@@ -72,20 +72,14 @@ class Unit(object):
         if id is not None:
             self.id = id
         self.type = type
-        if name is not None:
-            self.name = name
-        if unit_type is not None:
-            self.unit_type = unit_type
-        if prefix is not None:
-            self.prefix = prefix
-        if dimensions is not None:
-            self.dimensions = dimensions
-        if conversion_factor is not None:
-            self.conversion_factor = conversion_factor
+        self.name = name
+        self.unit_type = unit_type
+        self.prefix = prefix
+        self.dimensions = dimensions
+        self.conversion_factor = conversion_factor
         if conversion_baseunit is not None:
             self.conversion_baseunit = conversion_baseunit
-        if elements is not None:
-            self.elements = elements
+        self.elements = elements
 
     @property
     def id(self):

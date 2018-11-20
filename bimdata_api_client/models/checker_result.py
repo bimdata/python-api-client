@@ -67,10 +67,8 @@ class CheckerResult(object):
             self.id = id
         if status is not None:
             self.status = status
-        if result is not None:
-            self.result = result
-        if collisions is not None:
-            self.collisions = collisions
+        self.result = result
+        self.collisions = collisions
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:

@@ -56,12 +56,9 @@ class Classification(object):
 
         if id is not None:
             self.id = id
-        if name is not None:
-            self.name = name
-        if notation is not None:
-            self.notation = notation
-        if title is not None:
-            self.title = title
+        self.name = name
+        self.notation = notation
+        self.title = title
 
     @property
     def id(self):

@@ -66,21 +66,14 @@ class RawUnit(object):
         self._conversion_baseunit_index = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        self.name = name
         self.type = type
-        if unit_type is not None:
-            self.unit_type = unit_type
-        if prefix is not None:
-            self.prefix = prefix
-        if elements is not None:
-            self.elements = elements
-        if conversion_factor is not None:
-            self.conversion_factor = conversion_factor
-        if dimensions is not None:
-            self.dimensions = dimensions
-        if conversion_baseunit_index is not None:
-            self.conversion_baseunit_index = conversion_baseunit_index
+        self.unit_type = unit_type
+        self.prefix = prefix
+        self.elements = elements
+        self.conversion_factor = conversion_factor
+        self.dimensions = dimensions
+        self.conversion_baseunit_index = conversion_baseunit_index
 
     @property
     def name(self):

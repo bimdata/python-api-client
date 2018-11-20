@@ -59,8 +59,7 @@ class Rule(object):
 
         if id is not None:
             self.id = id
-        if name is not None:
-            self.name = name
+        self.name = name
         self.condition = condition
         if rule_components is not None:
             self.rule_components = rule_components

@@ -57,14 +57,10 @@ class RawElements(object):
         self._elements = None
         self.discriminator = None
 
-        if units is not None:
-            self.units = units
-        if definitions is not None:
-            self.definitions = definitions
-        if property_sets is not None:
-            self.property_sets = property_sets
-        if classifications is not None:
-            self.classifications = classifications
+        self.units = units
+        self.definitions = definitions
+        self.property_sets = property_sets
+        self.classifications = classifications
         self.elements = elements
 
     @property

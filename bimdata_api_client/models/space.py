@@ -65,10 +65,8 @@ class Space(object):
 
         if id is not None:
             self.id = id
-        if name is not None:
-            self.name = name
-        if longname is not None:
-            self.longname = longname
+        self.name = name
+        self.longname = longname
         self.uuid = uuid
         if zone_set is not None:
             self.zone_set = zone_set

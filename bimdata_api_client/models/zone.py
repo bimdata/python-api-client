@@ -83,8 +83,7 @@ class Zone(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if color is not None:
-            self.color = color
+        self.color = color
 
     @property
     def id(self):

@@ -57,16 +57,11 @@ class IfcFiles(object):
         self._bvh_tree_file = None
         self.discriminator = None
 
-        if structure_file is not None:
-            self.structure_file = structure_file
-        if systems_file is not None:
-            self.systems_file = systems_file
-        if map_file is not None:
-            self.map_file = map_file
-        if gltf_file is not None:
-            self.gltf_file = gltf_file
-        if bvh_tree_file is not None:
-            self.bvh_tree_file = bvh_tree_file
+        self.structure_file = structure_file
+        self.systems_file = systems_file
+        self.map_file = map_file
+        self.gltf_file = gltf_file
+        self.bvh_tree_file = bvh_tree_file
 
     @property
     def structure_file(self):

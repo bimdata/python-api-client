@@ -67,14 +67,11 @@ class IfcCheckerCheckplan(object):
             self.updated_at = updated_at
         if protected is not None:
             self.protected = protected
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
+        self.name = name
+        self.description = description
         if created_at is not None:
             self.created_at = created_at
-        if project is not None:
-            self.project = project
+        self.project = project
         if id is not None:
             self.id = id
 
@@ -138,6 +135,8 @@ class IfcCheckerCheckplan(object):
         :param name: The name of this IfcCheckerCheckplan.  # noqa: E501
         :type: str
         """
+        if name is None:
+            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if name is not None and len(name) < 1:
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
@@ -203,6 +202,8 @@ class IfcCheckerCheckplan(object):
         :param project: The project of this IfcCheckerCheckplan.  # noqa: E501
         :type: int
         """
+        if project is None:
+            raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
 
         self._project = project
 

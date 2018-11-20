@@ -71,8 +71,7 @@ class Project(object):
 
         if id is not None:
             self.id = id
-        if logo is not None:
-            self.logo = logo
+        self.logo = logo
         if cloud is not None:
             self.cloud = cloud
         self.name = name

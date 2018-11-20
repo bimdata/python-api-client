@@ -70,8 +70,7 @@ class IfcChecker(object):
             self.id = id
         if creator is not None:
             self.creator = creator
-        if name is not None:
-            self.name = name
+        self.name = name
         if checkplan_id is not None:
             self.checkplan_id = checkplan_id
         if results is not None:

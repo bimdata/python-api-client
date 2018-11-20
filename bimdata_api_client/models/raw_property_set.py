@@ -54,12 +54,9 @@ class RawPropertySet(object):
         self._properties = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
-        if name is not None:
-            self.name = name
-        if type is not None:
-            self.type = type
+        self.description = description
+        self.name = name
+        self.type = type
         self.properties = properties
 
     @property

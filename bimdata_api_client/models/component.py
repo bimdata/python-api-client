@@ -51,12 +51,9 @@ class Component(object):
         self._authoring_tool_id = None
         self.discriminator = None
 
-        if ifc_guid is not None:
-            self.ifc_guid = ifc_guid
-        if originating_system is not None:
-            self.originating_system = originating_system
-        if authoring_tool_id is not None:
-            self.authoring_tool_id = authoring_tool_id
+        self.ifc_guid = ifc_guid
+        self.originating_system = originating_system
+        self.authoring_tool_id = authoring_tool_id
 
     @property
     def ifc_guid(self):

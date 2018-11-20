@@ -83,23 +83,16 @@ class Document(object):
 
         if id is not None:
             self.id = id
-        if parent is not None:
-            self.parent = parent
+        self.parent = parent
         if parent_id is not None:
             self.parent_id = parent_id
-        if creator is not None:
-            self.creator = creator
-        if project is not None:
-            self.project = project
+        self.creator = creator
+        self.project = project
         self.name = name
-        if file_name is not None:
-            self.file_name = file_name
-        if description is not None:
-            self.description = description
-        if file is not None:
-            self.file = file
-        if size is not None:
-            self.size = size
+        self.file_name = file_name
+        self.description = description
+        self.file = file
+        self.size = size
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:

@@ -54,8 +54,7 @@ class ModelProperty(object):
         if id is not None:
             self.id = id
         self.definition = definition
-        if value is not None:
-            self.value = value
+        self.value = value
 
     @property
     def id(self):

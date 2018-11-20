@@ -66,8 +66,7 @@ class CheckPlan(object):
         if id is not None:
             self.id = id
         self.name = name
-        if description is not None:
-            self.description = description
+        self.description = description
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:

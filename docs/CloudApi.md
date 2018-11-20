@@ -25,6 +25,8 @@ Method | HTTP request | Description
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -76,6 +78,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -131,6 +135,8 @@ Name | Type | Description  | Notes
 Create a demo project with a pre-populated IFC and its data
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -182,6 +188,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -234,6 +242,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -287,6 +297,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -342,6 +354,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -395,6 +409,8 @@ Name | Type | Description  | Notes
 Returns the size of the cloud in Bytes
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -446,6 +462,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -499,6 +517,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -552,6 +572,8 @@ Name | Type | Description  | Notes
 Returns user's cloud only
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -599,6 +621,8 @@ This endpoint does not need any parameter.
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -652,6 +676,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time

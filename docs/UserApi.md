@@ -23,6 +23,8 @@ Method | HTTP request | Description
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -73,6 +75,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -126,6 +130,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -177,6 +183,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -224,6 +232,8 @@ This endpoint does not need any parameter.
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -271,6 +281,8 @@ This endpoint does not need any parameter.
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -318,6 +330,8 @@ This endpoint does not need any parameter.
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -368,6 +382,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -419,6 +435,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -470,6 +488,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -523,6 +543,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time

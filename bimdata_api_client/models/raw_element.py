@@ -59,12 +59,9 @@ class RawElement(object):
 
         self.uuid = uuid
         self.type = type
-        if attributes is not None:
-            self.attributes = attributes
-        if psets is not None:
-            self.psets = psets
-        if classifications is not None:
-            self.classifications = classifications
+        self.attributes = attributes
+        self.psets = psets
+        self.classifications = classifications
 
     @property
     def uuid(self):

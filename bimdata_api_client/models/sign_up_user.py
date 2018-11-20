@@ -69,8 +69,7 @@ class SignUpUser(object):
         if id is not None:
             self.id = id
         self.email = email
-        if company is not None:
-            self.company = company
+        self.company = company
         self.firstname = firstname
         self.lastname = lastname
         self.password = password

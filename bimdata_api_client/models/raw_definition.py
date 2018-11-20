@@ -57,16 +57,11 @@ class RawDefinition(object):
         self._unit_id = None
         self.discriminator = None
 
-        if description is not None:
-            self.description = description
-        if name is not None:
-            self.name = name
-        if type is not None:
-            self.type = type
-        if value_type is not None:
-            self.value_type = value_type
-        if unit_id is not None:
-            self.unit_id = unit_id
+        self.description = description
+        self.name = name
+        self.type = type
+        self.value_type = value_type
+        self.unit_id = unit_id
 
     @property
     def description(self):

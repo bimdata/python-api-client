@@ -66,20 +66,16 @@ class IfcCheckerResults(object):
         self._status = None
         self.discriminator = None
 
-        if result is not None:
-            self.result = result
-        if collisions is not None:
-            self.collisions = collisions
+        self.result = result
+        self.collisions = collisions
         if updated_at is not None:
             self.updated_at = updated_at
-        if error_detail is not None:
-            self.error_detail = error_detail
+        self.error_detail = error_detail
         if created_at is not None:
             self.created_at = created_at
         if id is not None:
             self.id = id
-        if checker is not None:
-            self.checker = checker
+        self.checker = checker
         if status is not None:
             self.status = status
 
@@ -227,6 +223,8 @@ class IfcCheckerResults(object):
         :param checker: The checker of this IfcCheckerResults.  # noqa: E501
         :type: int
         """
+        if checker is None:
+            raise ValueError("Invalid value for `checker`, must not be `None`")  # noqa: E501
 
         self._checker = checker
 

@@ -110,6 +110,8 @@ Method | HTTP request | Description
              Delete relation between filtered classifications (eg. /classifications?name=untec) and all ifc's elements.             No classification will be deleted on this endpoint, only the relation between ifc's elements and their classification.         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -166,6 +168,8 @@ void (empty response body)
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -222,6 +226,8 @@ void (empty response body)
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -278,6 +284,8 @@ void (empty response body)
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -334,6 +342,8 @@ void (empty response body)
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -390,6 +400,8 @@ void (empty response body)
          Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -449,6 +461,8 @@ Name | Type | Description  | Notes
          Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -508,6 +522,8 @@ Name | Type | Description  | Notes
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -566,6 +582,8 @@ void (empty response body)
          Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -624,6 +642,8 @@ void (empty response body)
          Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -683,6 +703,8 @@ Name | Type | Description  | Notes
          Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -742,6 +764,8 @@ Name | Type | Description  | Notes
              create association between existing classification and existing element         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -800,6 +824,8 @@ void (empty response body)
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -861,6 +887,8 @@ Name | Type | Description  | Notes
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -920,6 +948,8 @@ Name | Type | Description  | Notes
          Create an property_set that will be automatically linked to the element     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -978,6 +1008,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1039,6 +1071,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1102,6 +1136,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1169,6 +1205,8 @@ Name | Type | Description  | Notes
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1228,6 +1266,8 @@ Name | Type | Description  | Notes
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1287,6 +1327,8 @@ Name | Type | Description  | Notes
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1346,6 +1388,8 @@ Name | Type | Description  | Notes
              create association between existing classification and existing element         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1404,6 +1448,8 @@ void (empty response body)
          You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1462,6 +1508,8 @@ void (empty response body)
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1521,6 +1569,8 @@ Name | Type | Description  | Notes
          Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1578,6 +1628,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1637,6 +1689,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1693,6 +1747,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1747,6 +1803,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1803,6 +1861,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1859,6 +1919,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1915,6 +1977,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -1971,6 +2035,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2027,6 +2093,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2083,6 +2151,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2141,6 +2211,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2200,6 +2272,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2257,6 +2331,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2316,6 +2392,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2375,6 +2453,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2434,6 +2514,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2493,6 +2575,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2552,6 +2636,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2611,6 +2697,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2672,6 +2760,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2729,6 +2819,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2786,6 +2878,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2845,6 +2939,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2904,6 +3000,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -2965,6 +3063,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3028,6 +3128,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3093,6 +3195,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3156,6 +3260,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3217,6 +3323,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3274,6 +3382,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3335,6 +3445,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3392,6 +3504,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3449,6 +3563,8 @@ Name | Type | Description  | Notes
          DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the bvh file         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3503,6 +3619,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3560,6 +3678,8 @@ Name | Type | Description  | Notes
          DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the gltf file         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3616,6 +3736,8 @@ void (empty response body)
          DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the map file         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3670,6 +3792,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3725,6 +3849,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3782,6 +3908,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3839,6 +3967,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3896,6 +4026,8 @@ Name | Type | Description  | Notes
          DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the structure file         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -3952,6 +4084,8 @@ void (empty response body)
          DEPRECATED: Now, retrieve the file url in the ifc object itself         Returns the system file         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4006,6 +4140,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4063,6 +4199,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4118,6 +4256,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4173,6 +4313,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4230,6 +4372,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4287,6 +4431,8 @@ Name | Type | Description  | Notes
          Returns elements ,property_sets, properties, definitions and units in a optimized structure         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4348,6 +4494,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4405,6 +4553,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4460,6 +4610,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4517,6 +4669,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4576,6 +4730,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4633,6 +4789,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4692,6 +4850,8 @@ Name | Type | Description  | Notes
              list association between classifications and elements         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4747,6 +4907,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4807,6 +4969,8 @@ void (empty response body)
          Delete the relation between the element and the property set. Does not delete any object     
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4865,6 +5029,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4925,6 +5091,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -4987,6 +5155,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5051,6 +5221,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5109,6 +5281,8 @@ void (empty response body)
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5168,6 +5342,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5227,6 +5403,8 @@ Name | Type | Description  | Notes
          Patch ifc files (gltf, structure, svg, etc)         
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5292,6 +5470,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5351,6 +5531,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5410,6 +5592,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5469,6 +5653,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5528,6 +5714,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5587,6 +5775,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time
@@ -5646,6 +5836,8 @@ Name | Type | Description  | Notes
 
 
 ### Example
+
+* Api Key Authentication (Bearer): 
 ```python
 from __future__ import print_function
 import time

@@ -59,12 +59,9 @@ class PropertySet(object):
 
         if id is not None:
             self.id = id
-        if name is not None:
-            self.name = name
-        if description is not None:
-            self.description = description
-        if type is not None:
-            self.type = type
+        self.name = name
+        self.description = description
+        self.type = type
         if properties is not None:
             self.properties = properties
 

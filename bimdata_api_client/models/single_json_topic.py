@@ -113,14 +113,11 @@ class SingleJsonTopic(object):
         if modified_author is not None:
             self.modified_author = modified_author
         self.title = title
-        if description is not None:
-            self.description = description
-        if reference_links is not None:
-            self.reference_links = reference_links
+        self.description = description
+        self.reference_links = reference_links
         if ifcs is not None:
             self.ifcs = ifcs
-        if labels is not None:
-            self.labels = labels
+        self.labels = labels
         if topic_type is not None:
             self.topic_type = topic_type
         if topic_status is not None:
@@ -135,8 +132,7 @@ class SingleJsonTopic(object):
             self.assigned_to = assigned_to
         if format is not None:
             self.format = format
-        if due_date is not None:
-            self.due_date = due_date
+        self.due_date = due_date
         if comments is not None:
             self.comments = comments
         if viewpoints is not None:
