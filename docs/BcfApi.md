@@ -38,6 +38,7 @@ Method | HTTP request | Description
 [**get_selections**](BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection | 
 [**get_snapshot**](BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/snapshot | 
 [**get_topic**](BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+[**get_topic_viewpoints**](BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints | 
 [**get_topics**](BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | 
 [**get_user**](BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | 
 [**get_viewpoint**](BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
@@ -1978,6 +1979,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Topic**](Topic.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_topic_viewpoints**
+> list[Viewpoint] get_topic_viewpoints(projects_pk, topics_pk)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+projects_pk = 'projects_pk_example' # str | 
+topics_pk = 'topics_pk_example' # str | 
+
+try:
+    api_response = api_instance.get_topic_viewpoints(projects_pk, topics_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **topics_pk** | **str**|  | 
+
+### Return type
+
+[**list[Viewpoint]**](Viewpoint.md)
 
 ### Authorization
 

@@ -233,6 +233,12 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_topic_viewpoints(self):
+        """Test case for get_topic_viewpoints
+
+        """
+        pass
+
     def test_get_topics(self):
         """Test case for get_topics
 

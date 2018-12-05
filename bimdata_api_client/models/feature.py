@@ -32,20 +32,24 @@ class Feature(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str'
+        'name': 'str',
+        'viewer_url': 'str'
     }
 
     attribute_map = {
-        'name': 'name'
+        'name': 'name',
+        'viewer_url': 'viewer_url'
     }
 
-    def __init__(self, name=None):  # noqa: E501
+    def __init__(self, name=None, viewer_url=None):  # noqa: E501
         """Feature - a model defined in OpenAPI"""  # noqa: E501
 
         self._name = None
+        self._viewer_url = None
         self.discriminator = None
 
         self.name = name
+        self.viewer_url = viewer_url
 
     @property
     def name(self):
@@ -73,6 +77,29 @@ class Feature(object):
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
+
+    @property
+    def viewer_url(self):
+        """Gets the viewer_url of this Feature.  # noqa: E501
+
+
+        :return: The viewer_url of this Feature.  # noqa: E501
+        :rtype: str
+        """
+        return self._viewer_url
+
+    @viewer_url.setter
+    def viewer_url(self, viewer_url):
+        """Sets the viewer_url of this Feature.
+
+
+        :param viewer_url: The viewer_url of this Feature.  # noqa: E501
+        :type: str
+        """
+        if viewer_url is not None and len(viewer_url) > 512:
+            raise ValueError("Invalid value for `viewer_url`, length must be less than or equal to `512`")  # noqa: E501
+
+        self._viewer_url = viewer_url
 
     def to_dict(self):
         """Returns the model properties as a dict"""

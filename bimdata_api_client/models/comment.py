@@ -79,10 +79,8 @@ class Comment(object):
         if author is not None:
             self.author = author
         self.comment = comment
-        if viewpoint_guid is not None:
-            self.viewpoint_guid = viewpoint_guid
-        if reply_to_comment_guid is not None:
-            self.reply_to_comment_guid = reply_to_comment_guid
+        self.viewpoint_guid = viewpoint_guid
+        self.reply_to_comment_guid = reply_to_comment_guid
         if topic_guid is not None:
             self.topic_guid = topic_guid
         if modified_author is not None:

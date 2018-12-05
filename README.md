@@ -118,6 +118,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_selections**](docs/BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection | 
 *BcfApi* | [**get_snapshot**](docs/BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/snapshot | 
 *BcfApi* | [**get_topic**](docs/BcfApi.md#get_topic) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
+*BcfApi* | [**get_topic_viewpoints**](docs/BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints | 
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | 
 *BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | 
 *BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
