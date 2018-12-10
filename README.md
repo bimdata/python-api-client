@@ -128,6 +128,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**update_bcf_project**](docs/BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | 
 *BcfApi* | [**update_coloring**](docs/BcfApi.md#update_coloring) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
 *BcfApi* | [**update_comment**](docs/BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+*BcfApi* | [**update_extensions**](docs/BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | 
 *BcfApi* | [**update_full_topic**](docs/BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
 *BcfApi* | [**update_selection**](docs/BcfApi.md#update_selection) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
 *BcfApi* | [**update_topic**](docs/BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 

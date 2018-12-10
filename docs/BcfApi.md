@@ -48,6 +48,7 @@ Method | HTTP request | Description
 [**update_bcf_project**](BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | 
 [**update_coloring**](BcfApi.md#update_coloring) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
 [**update_comment**](BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 
+[**update_extensions**](BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | 
 [**update_full_topic**](BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | 
 [**update_selection**](BcfApi.md#update_selection) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/selection/{id} | 
 [**update_topic**](BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
@@ -2543,6 +2544,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Comment**](Comment.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_extensions**
+> Extensions update_extensions(projects_pk, extensions)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+projects_pk = 'projects_pk_example' # str | 
+extensions = bimdata_api_client.Extensions() # Extensions | 
+
+try:
+    api_response = api_instance.update_extensions(projects_pk, extensions)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling BcfApi->update_extensions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **extensions** | [**Extensions**](Extensions.md)|  | 
+
+### Return type
+
+[**Extensions**](Extensions.md)
 
 ### Authorization
 

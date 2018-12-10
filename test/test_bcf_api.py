@@ -293,6 +293,12 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_update_extensions(self):
+        """Test case for update_extensions
+
+        """
+        pass
+
     def test_update_full_topic(self):
         """Test case for update_full_topic
 

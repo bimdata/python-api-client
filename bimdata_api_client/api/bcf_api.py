@@ -4907,6 +4907,112 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def update_extensions(self, projects_pk, extensions, **kwargs):  # noqa: E501
+        """update_extensions  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extensions(projects_pk, extensions, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str projects_pk: (required)
+        :param Extensions extensions: (required)
+        :return: Extensions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_extensions_with_http_info(projects_pk, extensions, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_extensions_with_http_info(projects_pk, extensions, **kwargs)  # noqa: E501
+            return data
+
+    def update_extensions_with_http_info(self, projects_pk, extensions, **kwargs):  # noqa: E501
+        """update_extensions  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extensions_with_http_info(projects_pk, extensions, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str projects_pk: (required)
+        :param Extensions extensions: (required)
+        :return: Extensions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['projects_pk', 'extensions']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_extensions" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if ('projects_pk' not in local_var_params or
+                local_var_params['projects_pk'] is None):
+            raise ValueError("Missing the required parameter `projects_pk` when calling `update_extensions`")  # noqa: E501
+        # verify the required parameter 'extensions' is set
+        if ('extensions' not in local_var_params or
+                local_var_params['extensions'] is None):
+            raise ValueError("Missing the required parameter `extensions` when calling `update_extensions`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'extensions' in local_var_params:
+            body_params = local_var_params['extensions']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extensions', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Extensions',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_full_topic(self, guid, projects_pk, single_json_topic, **kwargs):  # noqa: E501
         """update_full_topic  # noqa: E501
 

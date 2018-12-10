@@ -60,18 +60,13 @@ class Extensions(object):
         self._stage = None
         self.discriminator = None
 
-        if topic_type is not None:
-            self.topic_type = topic_type
-        if topic_status is not None:
-            self.topic_status = topic_status
-        if topic_label is not None:
-            self.topic_label = topic_label
-        if priority is not None:
-            self.priority = priority
+        self.topic_type = topic_type
+        self.topic_status = topic_status
+        self.topic_label = topic_label
+        self.priority = priority
         if user_id_type is not None:
             self.user_id_type = user_id_type
-        if stage is not None:
-            self.stage = stage
+        self.stage = stage
 
     @property
     def topic_type(self):
@@ -91,6 +86,8 @@ class Extensions(object):
         :param topic_type: The topic_type of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if topic_type is None:
+            raise ValueError("Invalid value for `topic_type`, must not be `None`")  # noqa: E501
 
         self._topic_type = topic_type
 
@@ -112,6 +109,8 @@ class Extensions(object):
         :param topic_status: The topic_status of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if topic_status is None:
+            raise ValueError("Invalid value for `topic_status`, must not be `None`")  # noqa: E501
 
         self._topic_status = topic_status
 
@@ -133,6 +132,8 @@ class Extensions(object):
         :param topic_label: The topic_label of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if topic_label is None:
+            raise ValueError("Invalid value for `topic_label`, must not be `None`")  # noqa: E501
 
         self._topic_label = topic_label
 
@@ -154,6 +155,8 @@ class Extensions(object):
         :param priority: The priority of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if priority is None:
+            raise ValueError("Invalid value for `priority`, must not be `None`")  # noqa: E501
 
         self._priority = priority
 
@@ -196,6 +199,8 @@ class Extensions(object):
         :param stage: The stage of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if stage is None:
+            raise ValueError("Invalid value for `stage`, must not be `None`")  # noqa: E501
 
         self._stage = stage
 
