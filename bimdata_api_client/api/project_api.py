@@ -161,7 +161,6 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str name: (required)
-        :param int id:
         :param int parent:
         :param int parent_id:
         :param int creator:
@@ -170,9 +169,6 @@ class ProjectApi(object):
         :param str description:
         :param file file:
         :param int size:
-        :param datetime created_at:
-        :param datetime updated_at:
-        :param str ifc_id:
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
@@ -196,7 +192,6 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str name: (required)
-        :param int id:
         :param int parent:
         :param int parent_id:
         :param int creator:
@@ -205,9 +200,6 @@ class ProjectApi(object):
         :param str description:
         :param file file:
         :param int size:
-        :param datetime created_at:
-        :param datetime updated_at:
-        :param str ifc_id:
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
@@ -215,7 +207,7 @@ class ProjectApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'project_pk', 'name', 'id', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size', 'created_at', 'updated_at', 'ifc_id']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'name', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -269,8 +261,6 @@ class ProjectApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'id' in local_var_params:
-            form_params.append(('id', local_var_params['id']))  # noqa: E501
         if 'parent' in local_var_params:
             form_params.append(('parent', local_var_params['parent']))  # noqa: E501
         if 'parent_id' in local_var_params:
@@ -289,12 +279,6 @@ class ProjectApi(object):
             local_var_files['file'] = local_var_params['file']  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
-        if 'created_at' in local_var_params:
-            form_params.append(('created_at', local_var_params['created_at']))  # noqa: E501
-        if 'updated_at' in local_var_params:
-            form_params.append(('updated_at', local_var_params['updated_at']))  # noqa: E501
-        if 'ifc_id' in local_var_params:
-            form_params.append(('ifc_id', local_var_params['ifc_id']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -1319,7 +1303,6 @@ class ProjectApi(object):
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
-        :param int id:
         :param int parent:
         :param int parent_id:
         :param int creator:
@@ -1328,9 +1311,6 @@ class ProjectApi(object):
         :param str description:
         :param file file:
         :param int size:
-        :param datetime created_at:
-        :param datetime updated_at:
-        :param str ifc_id:
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1355,7 +1335,6 @@ class ProjectApi(object):
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
         :param str name: (required)
-        :param int id:
         :param int parent:
         :param int parent_id:
         :param int creator:
@@ -1364,9 +1343,6 @@ class ProjectApi(object):
         :param str description:
         :param file file:
         :param int size:
-        :param datetime created_at:
-        :param datetime updated_at:
-        :param str ifc_id:
         :return: Document
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1374,7 +1350,7 @@ class ProjectApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'id', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size', 'created_at', 'updated_at', 'ifc_id']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'parent', 'parent_id', 'creator', 'project', 'file_name', 'description', 'file', 'size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1434,8 +1410,6 @@ class ProjectApi(object):
 
         form_params = []
         local_var_files = {}
-        if 'id' in local_var_params:
-            form_params.append(('id', local_var_params['id']))  # noqa: E501
         if 'parent' in local_var_params:
             form_params.append(('parent', local_var_params['parent']))  # noqa: E501
         if 'parent_id' in local_var_params:
@@ -1454,12 +1428,6 @@ class ProjectApi(object):
             local_var_files['file'] = local_var_params['file']  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
-        if 'created_at' in local_var_params:
-            form_params.append(('created_at', local_var_params['created_at']))  # noqa: E501
-        if 'updated_at' in local_var_params:
-            form_params.append(('updated_at', local_var_params['updated_at']))  # noqa: E501
-        if 'ifc_id' in local_var_params:
-            form_params.append(('ifc_id', local_var_params['ifc_id']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

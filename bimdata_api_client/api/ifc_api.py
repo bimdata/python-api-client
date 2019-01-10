@@ -1680,7 +1680,7 @@ class IfcApi(object):
     def create_element_property_set(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_set, **kwargs):  # noqa: E501
         """create_element_property_set  # noqa: E501
 
-                 Create an property_set that will be automatically linked to the element       # noqa: E501
+                 Create an property_set that will be automatically linked to the element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async_req=True)
@@ -1706,7 +1706,7 @@ class IfcApi(object):
     def create_element_property_set_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_set, **kwargs):  # noqa: E501
         """create_element_property_set  # noqa: E501
 
-                 Create an property_set that will be automatically linked to the element       # noqa: E501
+                 Create an property_set that will be automatically linked to the element           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_set, async_req=True)
@@ -2246,7 +2246,7 @@ class IfcApi(object):
     def create_ifc_property_definition(self, cloud_pk, ifc_pk, project_pk, property_definition, **kwargs):  # noqa: E501
         """create_ifc_property_definition  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, property_definition, async_req=True)
@@ -2271,7 +2271,7 @@ class IfcApi(object):
     def create_ifc_property_definition_with_http_info(self, cloud_pk, ifc_pk, project_pk, property_definition, **kwargs):  # noqa: E501
         """create_ifc_property_definition  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, property_definition, async_req=True)
@@ -2370,7 +2370,7 @@ class IfcApi(object):
     def create_ifc_unit(self, cloud_pk, ifc_pk, project_pk, unit, **kwargs):  # noqa: E501
         """create_ifc_unit  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_unit(cloud_pk, ifc_pk, project_pk, unit, async_req=True)
@@ -2395,7 +2395,7 @@ class IfcApi(object):
     def create_ifc_unit_with_http_info(self, cloud_pk, ifc_pk, project_pk, unit, **kwargs):  # noqa: E501
         """create_ifc_unit  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, unit, async_req=True)
@@ -2494,7 +2494,7 @@ class IfcApi(object):
     def create_property_set(self, cloud_pk, ifc_pk, project_pk, property_set, **kwargs):  # noqa: E501
         """create_property_set  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_property_set(cloud_pk, ifc_pk, project_pk, property_set, async_req=True)
@@ -2519,7 +2519,7 @@ class IfcApi(object):
     def create_property_set_with_http_info(self, cloud_pk, ifc_pk, project_pk, property_set, **kwargs):  # noqa: E501
         """create_property_set  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated       # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, property_set, async_req=True)
@@ -2738,7 +2738,7 @@ class IfcApi(object):
     def create_raw_elements(self, cloud_pk, ifc_pk, project_pk, raw_elements, **kwargs):  # noqa: E501
         """create_raw_elements  # noqa: E501
 
-                 You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
+                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination may be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_raw_elements(cloud_pk, ifc_pk, project_pk, raw_elements, async_req=True)
@@ -2763,7 +2763,7 @@ class IfcApi(object):
     def create_raw_elements_with_http_info(self, cloud_pk, ifc_pk, project_pk, raw_elements, **kwargs):  # noqa: E501
         """create_raw_elements  # noqa: E501
 
-                 You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned           # noqa: E501
+                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination may be returned           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, raw_elements, async_req=True)
@@ -3350,6 +3350,7 @@ class IfcApi(object):
     def delete_ifc(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """delete_ifc  # noqa: E501
 
+        Delete IFC. Will also delete all properties and generated files. If the IFC is heavy, it can take several seconds.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_ifc(cloud_pk, id, project_pk, async_req=True)
@@ -3373,6 +3374,7 @@ class IfcApi(object):
     def delete_ifc_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """delete_ifc  # noqa: E501
 
+        Delete IFC. Will also delete all properties and generated files. If the IFC is heavy, it can take several seconds.  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_ifc_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -4392,6 +4394,7 @@ class IfcApi(object):
     def full_update_ifc(self, cloud_pk, id, project_pk, ifc, **kwargs):  # noqa: E501
         """full_update_ifc  # noqa: E501
 
+        Update all IFC attributes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_ifc(cloud_pk, id, project_pk, ifc, async_req=True)
@@ -4416,6 +4419,7 @@ class IfcApi(object):
     def full_update_ifc_with_http_info(self, cloud_pk, id, project_pk, ifc, **kwargs):  # noqa: E501
         """full_update_ifc  # noqa: E501
 
+        Update all IFC attributes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async_req=True)
@@ -6980,6 +6984,7 @@ class IfcApi(object):
     def get_ifc(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """get_ifc  # noqa: E501
 
+        Get one IFC details  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc(cloud_pk, id, project_pk, async_req=True)
@@ -7003,6 +7008,7 @@ class IfcApi(object):
     def get_ifc_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """get_ifc  # noqa: E501
 
+        Get one IFC details  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -8424,6 +8430,7 @@ class IfcApi(object):
     def get_ifcs(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_ifcs  # noqa: E501
 
+        Returns all IFCs of the project  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs(cloud_pk, project_pk, async_req=True)
@@ -8447,6 +8454,7 @@ class IfcApi(object):
     def get_ifcs_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """get_ifcs  # noqa: E501
 
+        Returns all IFCs of the project  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -8758,7 +8766,7 @@ class IfcApi(object):
     def get_raw_elements(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """get_raw_elements  # noqa: E501
 
-                 Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
+                 Returns elements, property_sets, properties, definitions and units in a JSON optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_raw_elements(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -8785,7 +8793,7 @@ class IfcApi(object):
     def get_raw_elements_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """get_raw_elements  # noqa: E501
 
-                 Returns elements ,property_sets, properties, definitions and units in a optimized structure           # noqa: E501
+                 Returns elements, property_sets, properties, definitions and units in a JSON optimized structure           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -9820,7 +9828,7 @@ class IfcApi(object):
     def remove_element_property_set(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """remove_element_property_set  # noqa: E501
 
-                 Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
+                 Delete the relation between the element and the property set. Does not delete any object           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.remove_element_property_set(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
@@ -9846,7 +9854,7 @@ class IfcApi(object):
     def remove_element_property_set_with_http_info(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """remove_element_property_set  # noqa: E501
 
-                 Delete the relation between the element and the property set. Does not delete any object       # noqa: E501
+                 Delete the relation between the element and the property set. Does not delete any object           # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.remove_element_property_set_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
@@ -10610,6 +10618,7 @@ class IfcApi(object):
     def update_ifc(self, cloud_pk, id, project_pk, ifc, **kwargs):  # noqa: E501
         """update_ifc  # noqa: E501
 
+        Update some IFC attributes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_ifc(cloud_pk, id, project_pk, ifc, async_req=True)
@@ -10634,6 +10643,7 @@ class IfcApi(object):
     def update_ifc_with_http_info(self, cloud_pk, id, project_pk, ifc, **kwargs):  # noqa: E501
         """update_ifc  # noqa: E501
 
+        Update some IFC attributes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_ifc_with_http_info(cloud_pk, id, project_pk, ifc, async_req=True)
@@ -10747,6 +10757,7 @@ class IfcApi(object):
         :param file map_file:
         :param file gltf_file:
         :param file bvh_tree_file:
+        :param file viewer_360_file:
         :return: IfcFiles
                  If the method is called asynchronously,
                  returns the request thread.
@@ -10776,6 +10787,7 @@ class IfcApi(object):
         :param file map_file:
         :param file gltf_file:
         :param file bvh_tree_file:
+        :param file viewer_360_file:
         :return: IfcFiles
                  If the method is called asynchronously,
                  returns the request thread.
@@ -10783,7 +10795,7 @@ class IfcApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'id', 'project_pk', 'structure_file', 'systems_file', 'map_file', 'gltf_file', 'bvh_tree_file']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'project_pk', 'structure_file', 'systems_file', 'map_file', 'gltf_file', 'bvh_tree_file', 'viewer_360_file']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -10836,6 +10848,8 @@ class IfcApi(object):
             local_var_files['gltf_file'] = local_var_params['gltf_file']  # noqa: E501
         if 'bvh_tree_file' in local_var_params:
             local_var_files['bvh_tree_file'] = local_var_params['bvh_tree_file']  # noqa: E501
+        if 'viewer_360_file' in local_var_params:
+            local_var_files['viewer_360_file'] = local_var_params['viewer_360_file']  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

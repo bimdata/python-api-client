@@ -945,7 +945,7 @@ Name | Type | Description  | Notes
 
 
 
-         Create an property_set that will be automatically linked to the element     
+         Create an property_set that will be automatically linked to the element         
 
 ### Example
 
@@ -1202,7 +1202,7 @@ Name | Type | Description  | Notes
 
 
 
-         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated         
 
 ### Example
 
@@ -1263,7 +1263,7 @@ Name | Type | Description  | Notes
 
 
 
-         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated         
 
 ### Example
 
@@ -1324,7 +1324,7 @@ Name | Type | Description  | Notes
 
 
 
-         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated     
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors              If classification created already exists, it will just be added to item's classifications and will not be duplicated         
 
 ### Example
 
@@ -1445,7 +1445,7 @@ void (empty response body)
 
 
 
-         You can use the same optimized structure to post multiple elements ,property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination will be returned         
+         You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination may be returned         
 
 ### Example
 
@@ -1745,6 +1745,8 @@ void (empty response body)
 > delete_ifc(cloud_pk, id, project_pk)
 
 
+
+Delete IFC. Will also delete all properties and generated files. If the IFC is heavy, it can take several seconds.
 
 ### Example
 
@@ -2270,6 +2272,8 @@ Name | Type | Description  | Notes
 > Ifc full_update_ifc(cloud_pk, id, project_pk, ifc)
 
 
+
+Update all IFC attributes
 
 ### Example
 
@@ -3503,6 +3507,8 @@ Name | Type | Description  | Notes
 
 
 
+Get one IFC details
+
 ### Example
 
 * Api Key Authentication (Bearer): 
@@ -4255,6 +4261,8 @@ Name | Type | Description  | Notes
 
 
 
+Returns all IFCs of the project
+
 ### Example
 
 * Api Key Authentication (Bearer): 
@@ -4428,7 +4436,7 @@ Name | Type | Description  | Notes
 
 
 
-         Returns elements ,property_sets, properties, definitions and units in a optimized structure         
+         Returns elements, property_sets, properties, definitions and units in a JSON optimized structure         
 
 ### Example
 
@@ -4966,7 +4974,7 @@ void (empty response body)
 
 
 
-         Delete the relation between the element and the property set. Does not delete any object     
+         Delete the relation between the element and the property set. Does not delete any object         
 
 ### Example
 
@@ -5341,6 +5349,8 @@ Name | Type | Description  | Notes
 
 
 
+Update some IFC attributes
+
 ### Example
 
 * Api Key Authentication (Bearer): 
@@ -5396,7 +5406,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_files**
-> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
+> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
 
 
 
@@ -5428,9 +5438,10 @@ systems_file = '/path/to/file' # file |  (optional)
 map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
+viewer_360_file = '/path/to/file' # file |  (optional)
 
 try:
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -5448,6 +5459,7 @@ Name | Type | Description  | Notes
  **map_file** | **file**|  | [optional] 
  **gltf_file** | **file**|  | [optional] 
  **bvh_tree_file** | **file**|  | [optional] 
+ **viewer_360_file** | **file**|  | [optional] 
 
 ### Return type
 

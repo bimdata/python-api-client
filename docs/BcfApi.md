@@ -820,7 +820,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this project.
+id = 'id_example' # str | 
 bcf_project = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
@@ -834,7 +834,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this project. | 
+ **id** | **str**|  | 
  **bcf_project** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type
@@ -1290,7 +1290,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this project.
+id = 'id_example' # str | 
 
 try:
     api_response = api_instance.get_bcf_project(id)
@@ -1303,7 +1303,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this project. | 
+ **id** | **str**|  | 
 
 ### Return type
 
@@ -2404,7 +2404,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this project.
+id = 'id_example' # str | 
 bcf_project = bimdata_api_client.BcfProject() # BcfProject | 
 
 try:
@@ -2418,7 +2418,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| A unique integer value identifying this project. | 
+ **id** | **str**|  | 
  **bcf_project** | [**BcfProject**](BcfProject.md)|  | 
 
 ### Return type

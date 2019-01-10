@@ -97,7 +97,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> Document create_document(cloud_pk, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+> Document create_document(cloud_pk, project_pk, name, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size)
 
 
 
@@ -122,7 +122,6 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | 
-id = 56 # int |  (optional)
 parent = 56 # int |  (optional)
 parent_id = 56 # int |  (optional)
 creator = 56 # int |  (optional)
@@ -131,12 +130,9 @@ file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 file = '/path/to/file' # file |  (optional)
 size = 56 # int |  (optional)
-created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->create_document: %s\n" % e)
@@ -149,7 +145,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **name** | **str**|  | 
- **id** | **int**|  | [optional] 
  **parent** | **int**|  | [optional] 
  **parent_id** | **int**|  | [optional] 
  **creator** | **int**|  | [optional] 
@@ -158,9 +153,6 @@ Name | Type | Description  | Notes
  **description** | **str**|  | [optional] 
  **file** | **file**|  | [optional] 
  **size** | **int**|  | [optional] 
- **created_at** | **datetime**|  | [optional] 
- **updated_at** | **datetime**|  | [optional] 
- **ifc_id** | **str**|  | [optional] 
 
 ### Return type
 
@@ -685,7 +677,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> Document full_update_document(cloud_pk, id, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+> Document full_update_document(cloud_pk, id, project_pk, name, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size)
 
 
 
@@ -711,7 +703,6 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | 
-id = 56 # int |  (optional)
 parent = 56 # int |  (optional)
 parent_id = 56 # int |  (optional)
 creator = 56 # int |  (optional)
@@ -720,12 +711,9 @@ file_name = 'file_name_example' # str |  (optional)
 description = 'description_example' # str |  (optional)
 file = '/path/to/file' # file |  (optional)
 size = 56 # int |  (optional)
-created_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-updated_at = '2013-10-20T19:20:30+01:00' # datetime |  (optional)
-ifc_id = 'ifc_id_example' # str |  (optional)
 
 try:
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, id=id, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size, created_at=created_at, updated_at=updated_at, ifc_id=ifc_id)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ProjectApi->full_update_document: %s\n" % e)
@@ -739,7 +727,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
  **name** | **str**|  | 
- **id** | **int**|  | [optional] 
  **parent** | **int**|  | [optional] 
  **parent_id** | **int**|  | [optional] 
  **creator** | **int**|  | [optional] 
@@ -748,9 +735,6 @@ Name | Type | Description  | Notes
  **description** | **str**|  | [optional] 
  **file** | **file**|  | [optional] 
  **size** | **int**|  | [optional] 
- **created_at** | **datetime**|  | [optional] 
- **updated_at** | **datetime**|  | [optional] 
- **ifc_id** | **str**|  | [optional] 
 
 ### Return type
 

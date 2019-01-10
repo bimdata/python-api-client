@@ -36,7 +36,8 @@ class IfcFiles(object):
         'systems_file': 'str',
         'map_file': 'str',
         'gltf_file': 'str',
-        'bvh_tree_file': 'str'
+        'bvh_tree_file': 'str',
+        'viewer_360_file': 'str'
     }
 
     attribute_map = {
@@ -44,10 +45,11 @@ class IfcFiles(object):
         'systems_file': 'systems_file',
         'map_file': 'map_file',
         'gltf_file': 'gltf_file',
-        'bvh_tree_file': 'bvh_tree_file'
+        'bvh_tree_file': 'bvh_tree_file',
+        'viewer_360_file': 'viewer_360_file'
     }
 
-    def __init__(self, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None):  # noqa: E501
+    def __init__(self, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None):  # noqa: E501
         """IfcFiles - a model defined in OpenAPI"""  # noqa: E501
 
         self._structure_file = None
@@ -55,6 +57,7 @@ class IfcFiles(object):
         self._map_file = None
         self._gltf_file = None
         self._bvh_tree_file = None
+        self._viewer_360_file = None
         self.discriminator = None
 
         self.structure_file = structure_file
@@ -62,6 +65,7 @@ class IfcFiles(object):
         self.map_file = map_file
         self.gltf_file = gltf_file
         self.bvh_tree_file = bvh_tree_file
+        self.viewer_360_file = viewer_360_file
 
     @property
     def structure_file(self):
@@ -167,6 +171,27 @@ class IfcFiles(object):
         """
 
         self._bvh_tree_file = bvh_tree_file
+
+    @property
+    def viewer_360_file(self):
+        """Gets the viewer_360_file of this IfcFiles.  # noqa: E501
+
+
+        :return: The viewer_360_file of this IfcFiles.  # noqa: E501
+        :rtype: str
+        """
+        return self._viewer_360_file
+
+    @viewer_360_file.setter
+    def viewer_360_file(self, viewer_360_file):
+        """Sets the viewer_360_file of this IfcFiles.
+
+
+        :param viewer_360_file: The viewer_360_file of this IfcFiles.  # noqa: E501
+        :type: str
+        """
+
+        self._viewer_360_file = viewer_360_file
 
     def to_dict(self):
         """Returns the model properties as a dict"""

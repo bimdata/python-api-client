@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **map_file** | **str** |  | [optional] 
 **gltf_file** | **str** |  | [optional] 
 **bvh_tree_file** | **str** |  | [optional] 
+**viewer_360_file** | **str** |  | [optional] 
 **error_detail** | **str** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 

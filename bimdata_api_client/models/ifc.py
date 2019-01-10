@@ -45,6 +45,7 @@ class Ifc(object):
         'map_file': 'str',
         'gltf_file': 'str',
         'bvh_tree_file': 'str',
+        'viewer_360_file': 'str',
         'error_detail': 'str',
         'project_id': 'str'
     }
@@ -63,11 +64,12 @@ class Ifc(object):
         'map_file': 'map_file',
         'gltf_file': 'gltf_file',
         'bvh_tree_file': 'bvh_tree_file',
+        'viewer_360_file': 'viewer_360_file',
         'error_detail': 'error_detail',
         'project_id': 'project_id'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, error_detail=None, project_id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, error_detail=None, project_id=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -83,6 +85,7 @@ class Ifc(object):
         self._map_file = None
         self._gltf_file = None
         self._bvh_tree_file = None
+        self._viewer_360_file = None
         self._error_detail = None
         self._project_id = None
         self.discriminator = None
@@ -113,6 +116,8 @@ class Ifc(object):
             self.gltf_file = gltf_file
         if bvh_tree_file is not None:
             self.bvh_tree_file = bvh_tree_file
+        if viewer_360_file is not None:
+            self.viewer_360_file = viewer_360_file
         if error_detail is not None:
             self.error_detail = error_detail
         if project_id is not None:
@@ -396,6 +401,27 @@ class Ifc(object):
         """
 
         self._bvh_tree_file = bvh_tree_file
+
+    @property
+    def viewer_360_file(self):
+        """Gets the viewer_360_file of this Ifc.  # noqa: E501
+
+
+        :return: The viewer_360_file of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._viewer_360_file
+
+    @viewer_360_file.setter
+    def viewer_360_file(self, viewer_360_file):
+        """Sets the viewer_360_file of this Ifc.
+
+
+        :param viewer_360_file: The viewer_360_file of this Ifc.  # noqa: E501
+        :type: str
+        """
+
+        self._viewer_360_file = viewer_360_file
 
     @property
     def error_detail(self):
