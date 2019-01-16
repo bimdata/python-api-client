@@ -974,7 +974,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -996,7 +996,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1589,7 +1589,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param Project project: (required)
         :return: Project
                  If the method is called asynchronously,
@@ -1612,7 +1612,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param Project project: (required)
         :return: Project
                  If the method is called asynchronously,
@@ -2461,7 +2461,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2483,7 +2483,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2564,7 +2564,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2587,7 +2587,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
@@ -3339,7 +3339,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param Project project: (required)
         :return: Project
                  If the method is called asynchronously,
@@ -3362,7 +3362,7 @@ class ProjectApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param Project project: (required)
         :return: Project
                  If the method is called asynchronously,

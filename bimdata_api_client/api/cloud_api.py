@@ -247,7 +247,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -269,7 +269,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: Project
                  If the method is called asynchronously,
                  returns the request thread.
@@ -440,7 +440,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :param Cloud cloud: (required)
         :return: Cloud
                  If the method is called asynchronously,
@@ -462,7 +462,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :param Cloud cloud: (required)
         :return: Cloud
                  If the method is called asynchronously,
@@ -660,7 +660,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: Cloud
                  If the method is called asynchronously,
                  returns the request thread.
@@ -681,7 +681,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: Cloud
                  If the method is called asynchronously,
                  returns the request thread.
@@ -755,7 +755,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -777,7 +777,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :return: int
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1134,7 +1134,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :param Cloud cloud: (required)
         :return: Cloud
                  If the method is called asynchronously,
@@ -1156,7 +1156,7 @@ class CloudApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this cloud. (required)
         :param Cloud cloud: (required)
         :return: Cloud
                  If the method is called asynchronously,

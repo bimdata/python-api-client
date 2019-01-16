@@ -1500,7 +1500,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param BcfProject bcf_project: (required)
         :return: BcfProject
                  If the method is called asynchronously,
@@ -1522,7 +1522,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param BcfProject bcf_project: (required)
         :return: BcfProject
                  If the method is called asynchronously,
@@ -2468,7 +2468,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: BcfProject
                  If the method is called asynchronously,
                  returns the request thread.
@@ -2489,7 +2489,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :return: BcfProject
                  If the method is called asynchronously,
                  returns the request thread.
@@ -4558,7 +4558,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param BcfProject bcf_project: (required)
         :return: BcfProject
                  If the method is called asynchronously,
@@ -4580,7 +4580,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool
-        :param str id: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param BcfProject bcf_project: (required)
         :return: BcfProject
                  If the method is called asynchronously,

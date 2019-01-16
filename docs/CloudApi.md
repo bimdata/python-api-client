@@ -152,7 +152,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this cloud.
 
 try:
     api_response = api_instance.create_demo(id)
@@ -165,7 +165,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this cloud. | 
 
 ### Return type
 
@@ -259,7 +259,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this cloud.
 cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
@@ -273,7 +273,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this cloud. | 
  **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type
@@ -371,7 +371,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this cloud.
 
 try:
     api_response = api_instance.get_cloud(id)
@@ -384,7 +384,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this cloud. | 
 
 ### Return type
 
@@ -426,7 +426,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this cloud.
 
 try:
     api_response = api_instance.get_cloud_size(id)
@@ -439,7 +439,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this cloud. | 
 
 ### Return type
 
@@ -638,7 +638,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this cloud.
 cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
@@ -652,7 +652,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this cloud. | 
  **cloud** | [**Cloud**](Cloud.md)|  | 
 
 ### Return type

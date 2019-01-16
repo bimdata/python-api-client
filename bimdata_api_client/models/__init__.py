@@ -16,6 +16,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from bimdata_api_client.models.bcf_project import BcfProject
+from bimdata_api_client.models.bcf_user import BcfUser
 from bimdata_api_client.models.check_plan import CheckPlan
 from bimdata_api_client.models.checker_result import CheckerResult
 from bimdata_api_client.models.classification import Classification
@@ -41,12 +42,14 @@ from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
 from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.invite_user import InviteUser
 from bimdata_api_client.models.invited_sign_up_user import InvitedSignUpUser
+from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.line_seriaizer import LineSeriaizer
 from bimdata_api_client.models.model_property import ModelProperty
 from bimdata_api_client.models.notification import Notification
 from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.models.perspective_camera import PerspectiveCamera
 from bimdata_api_client.models.point import Point
+from bimdata_api_client.models.priority import Priority
 from bimdata_api_client.models.project import Project
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
@@ -65,7 +68,10 @@ from bimdata_api_client.models.sign_up_user import SignUpUser
 from bimdata_api_client.models.single_json_topic import SingleJsonTopic
 from bimdata_api_client.models.snapshot import Snapshot
 from bimdata_api_client.models.space import Space
+from bimdata_api_client.models.stage import Stage
 from bimdata_api_client.models.topic import Topic
+from bimdata_api_client.models.topic_status import TopicStatus
+from bimdata_api_client.models.topic_type import TopicType
 from bimdata_api_client.models.unit import Unit
 from bimdata_api_client.models.user import User
 from bimdata_api_client.models.view_setup_hints import ViewSetupHints

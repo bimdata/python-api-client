@@ -98,13 +98,10 @@ class Topic(object):
 
         if guid is not None:
             self.guid = guid
-        if topic_type is not None:
-            self.topic_type = topic_type
-        if topic_status is not None:
-            self.topic_status = topic_status
+        self.topic_type = topic_type
+        self.topic_status = topic_status
         self.title = title
-        if priority is not None:
-            self.priority = priority
+        self.priority = priority
         self.labels = labels
         if creation_date is not None:
             self.creation_date = creation_date
@@ -114,11 +111,9 @@ class Topic(object):
             self.modified_date = modified_date
         if modified_author is not None:
             self.modified_author = modified_author
-        if assigned_to is not None:
-            self.assigned_to = assigned_to
+        self.assigned_to = assigned_to
         self.reference_links = reference_links
-        if stage is not None:
-            self.stage = stage
+        self.stage = stage
         self.description = description
         self.due_date = due_date
         if ifcs is not None:

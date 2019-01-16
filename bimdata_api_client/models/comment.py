@@ -76,15 +76,13 @@ class Comment(object):
             self.guid = guid
         if date is not None:
             self.date = date
-        if author is not None:
-            self.author = author
+        self.author = author
         self.comment = comment
         self.viewpoint_guid = viewpoint_guid
         self.reply_to_comment_guid = reply_to_comment_guid
         if topic_guid is not None:
             self.topic_guid = topic_guid
-        if modified_author is not None:
-            self.modified_author = modified_author
+        self.modified_author = modified_author
         if modified_date is not None:
             self.modified_date = modified_date
         if viewpoint_temp_id is not None:

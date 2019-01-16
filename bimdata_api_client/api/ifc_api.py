@@ -3465,7 +3465,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3489,7 +3489,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3579,7 +3579,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3603,7 +3603,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3693,7 +3693,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3717,7 +3717,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3807,7 +3807,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -3831,7 +3831,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: None
@@ -4525,7 +4525,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param ModelProperty model_property: (required)
@@ -4550,7 +4550,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param ModelProperty model_property: (required)
@@ -4655,7 +4655,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertyDefinition property_definition: (required)
@@ -4680,7 +4680,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertyDefinition property_definition: (required)
@@ -4785,7 +4785,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Unit unit: (required)
@@ -4810,7 +4810,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Unit unit: (required)
@@ -4915,7 +4915,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertySet property_set: (required)
@@ -4940,7 +4940,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertySet property_set: (required)
@@ -7647,7 +7647,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: ModelProperty
@@ -7671,7 +7671,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: ModelProperty
@@ -7765,7 +7765,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertyDefinition
@@ -7789,7 +7789,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertyDefinition
@@ -8209,7 +8209,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Unit
@@ -8233,7 +8233,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: Unit
@@ -8545,7 +8545,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertySet
@@ -8569,7 +8569,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :return: PropertySet
@@ -10376,7 +10376,7 @@ class IfcApi(object):
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -10401,7 +10401,7 @@ class IfcApi(object):
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param str uuid: (required)
+        :param str uuid: IFC element or element type UUID (required)
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -10889,7 +10889,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param ModelProperty model_property: (required)
@@ -10914,7 +10914,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param ModelProperty model_property: (required)
@@ -11019,7 +11019,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertyDefinition property_definition: (required)
@@ -11044,7 +11044,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertyDefinition property_definition: (required)
@@ -11149,7 +11149,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Unit unit: (required)
@@ -11174,7 +11174,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this unit. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param Unit unit: (required)
@@ -11279,7 +11279,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertySet property_set: (required)
@@ -11304,7 +11304,7 @@ class IfcApi(object):
 
         :param async_req bool
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this property set. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param PropertySet property_set: (required)

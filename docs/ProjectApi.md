@@ -531,7 +531,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
 
 try:
     api_instance.delete_project(cloud_pk, id)
@@ -544,7 +544,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
 
 ### Return type
 
@@ -834,7 +834,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
 project = bimdata_api_client.Project() # Project | 
 
 try:
@@ -849,7 +849,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
  **project** | [**Project**](Project.md)|  | 
 
 ### Return type
@@ -1286,7 +1286,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
 
 try:
     api_response = api_instance.get_project(cloud_pk, id)
@@ -1300,7 +1300,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
 
 ### Return type
 
@@ -1343,7 +1343,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
 
 try:
     api_response = api_instance.get_project_tree(cloud_pk, id)
@@ -1357,7 +1357,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
 
 ### Return type
 
@@ -1740,7 +1740,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
 project = bimdata_api_client.Project() # Project | 
 
 try:
@@ -1755,7 +1755,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
  **project** | [**Project**](Project.md)|  | 
 
 ### Return type

@@ -34,20 +34,20 @@ class SingleJsonTopic(object):
     openapi_types = {
         'guid': 'str',
         'creation_date': 'datetime',
-        'creation_author': 'str',
+        'creation_author': 'BcfUser',
         'modified_date': 'datetime',
-        'modified_author': 'str',
+        'modified_author': 'BcfUser',
         'title': 'str',
         'description': 'str',
         'reference_links': 'list[str]',
         'ifcs': 'list[int]',
-        'labels': 'list[str]',
-        'topic_type': 'str',
-        'topic_status': 'str',
-        'stage': 'str',
-        'priority': 'str',
+        'labels': 'list[Label]',
+        'topic_type': 'TopicType',
+        'topic_status': 'TopicStatus',
+        'stage': 'Stage',
+        'priority': 'Priority',
         'index': 'int',
-        'assigned_to': 'str',
+        'assigned_to': 'BcfUser',
         'format': 'str',
         'due_date': 'datetime',
         'comments': 'list[Comment]',
@@ -186,7 +186,7 @@ class SingleJsonTopic(object):
 
 
         :return: The creation_author of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: BcfUser
         """
         return self._creation_author
 
@@ -196,7 +196,7 @@ class SingleJsonTopic(object):
 
 
         :param creation_author: The creation_author of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: BcfUser
         """
 
         self._creation_author = creation_author
@@ -228,7 +228,7 @@ class SingleJsonTopic(object):
 
 
         :return: The modified_author of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: BcfUser
         """
         return self._modified_author
 
@@ -238,7 +238,7 @@ class SingleJsonTopic(object):
 
 
         :param modified_author: The modified_author of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: BcfUser
         """
 
         self._modified_author = modified_author
@@ -339,7 +339,7 @@ class SingleJsonTopic(object):
 
 
         :return: The labels of this SingleJsonTopic.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[Label]
         """
         return self._labels
 
@@ -349,7 +349,7 @@ class SingleJsonTopic(object):
 
 
         :param labels: The labels of this SingleJsonTopic.  # noqa: E501
-        :type: list[str]
+        :type: list[Label]
         """
 
         self._labels = labels
@@ -360,7 +360,7 @@ class SingleJsonTopic(object):
 
 
         :return: The topic_type of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: TopicType
         """
         return self._topic_type
 
@@ -370,7 +370,7 @@ class SingleJsonTopic(object):
 
 
         :param topic_type: The topic_type of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: TopicType
         """
 
         self._topic_type = topic_type
@@ -381,7 +381,7 @@ class SingleJsonTopic(object):
 
 
         :return: The topic_status of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: TopicStatus
         """
         return self._topic_status
 
@@ -391,7 +391,7 @@ class SingleJsonTopic(object):
 
 
         :param topic_status: The topic_status of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: TopicStatus
         """
 
         self._topic_status = topic_status
@@ -402,7 +402,7 @@ class SingleJsonTopic(object):
 
 
         :return: The stage of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: Stage
         """
         return self._stage
 
@@ -412,7 +412,7 @@ class SingleJsonTopic(object):
 
 
         :param stage: The stage of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: Stage
         """
 
         self._stage = stage
@@ -423,7 +423,7 @@ class SingleJsonTopic(object):
 
 
         :return: The priority of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: Priority
         """
         return self._priority
 
@@ -433,7 +433,7 @@ class SingleJsonTopic(object):
 
 
         :param priority: The priority of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: Priority
         """
 
         self._priority = priority
@@ -465,7 +465,7 @@ class SingleJsonTopic(object):
 
 
         :return: The assigned_to of this SingleJsonTopic.  # noqa: E501
-        :rtype: str
+        :rtype: BcfUser
         """
         return self._assigned_to
 
@@ -475,7 +475,7 @@ class SingleJsonTopic(object):
 
 
         :param assigned_to: The assigned_to of this SingleJsonTopic.  # noqa: E501
-        :type: str
+        :type: BcfUser
         """
 
         self._assigned_to = assigned_to
