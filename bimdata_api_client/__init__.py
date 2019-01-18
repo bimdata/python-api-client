@@ -37,6 +37,7 @@ from bimdata_api_client.models.checker_result import CheckerResult
 from bimdata_api_client.models.classification import Classification
 from bimdata_api_client.models.clipping_plane import ClippingPlane
 from bimdata_api_client.models.cloud import Cloud
+from bimdata_api_client.models.cloud_role import CloudRole
 from bimdata_api_client.models.coloring import Coloring
 from bimdata_api_client.models.comment import Comment
 from bimdata_api_client.models.component import Component
@@ -66,6 +67,7 @@ from bimdata_api_client.models.perspective_camera import PerspectiveCamera
 from bimdata_api_client.models.point import Point
 from bimdata_api_client.models.priority import Priority
 from bimdata_api_client.models.project import Project
+from bimdata_api_client.models.project_role import ProjectRole
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
 from bimdata_api_client.models.raw_definition import RawDefinition
@@ -78,6 +80,7 @@ from bimdata_api_client.models.reset_password import ResetPassword
 from bimdata_api_client.models.rule import Rule
 from bimdata_api_client.models.rule_component import RuleComponent
 from bimdata_api_client.models.ruleset import Ruleset
+from bimdata_api_client.models.self_bcf_user import SelfBcfUser
 from bimdata_api_client.models.self_user import SelfUser
 from bimdata_api_client.models.sign_up_user import SignUpUser
 from bimdata_api_client.models.single_json_topic import SingleJsonTopic

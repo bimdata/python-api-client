@@ -2105,7 +2105,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user**
-> SelfUser get_user()
+> SelfBcfUser get_user()
 
 
 
@@ -2140,7 +2140,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**SelfUser**](SelfUser.md)
+[**SelfBcfUser**](SelfBcfUser.md)
 
 ### Authorization
 
