@@ -97,6 +97,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**delete_topic**](docs/BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | 
 *BcfApi* | [**delete_viewpoint**](docs/BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | 
 *BcfApi* | [**delete_visibility**](docs/BcfApi.md#delete_visibility) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/visibility/{id} | 
+*BcfApi* | [**download_bcf_export**](docs/BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | 
 *BcfApi* | [**full_update_bcf_project**](docs/BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | 
 *BcfApi* | [**full_update_coloring**](docs/BcfApi.md#full_update_coloring) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{viewpoints_pk}/coloring/{id} | 
 *BcfApi* | [**full_update_comment**](docs/BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid} | 

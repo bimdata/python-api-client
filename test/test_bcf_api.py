@@ -107,6 +107,12 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_download_bcf_export(self):
+        """Test case for download_bcf_export
+
+        """
+        pass
+
     def test_full_update_bcf_project(self):
         """Test case for full_update_bcf_project
 
