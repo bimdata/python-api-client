@@ -17,6 +17,7 @@ Method | HTTP request | Description
 [**full_update_document**](ProjectApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**full_update_folder**](ProjectApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**full_update_project**](ProjectApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | 
+[**full_update_project_user**](ProjectApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 [**get_classification**](ProjectApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 [**get_classifications**](ProjectApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | 
 [**get_document**](ProjectApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
@@ -33,6 +34,7 @@ Method | HTTP request | Description
 [**update_document**](ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**update_folder**](ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**update_project**](ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | 
+[**update_project_user**](ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 
 
 # **create_classification**
@@ -796,6 +798,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Project**](Project.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **full_update_project_user**
+> User full_update_project_user(cloud_pk, id, project_pk, user_project_update)
+
+
+
+Change the user role in the cloud
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+user_project_update = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
+
+try:
+    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, user_project_update)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->full_update_project_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **user_project_update** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
+
+### Return type
+
+[**User**](User.md)
 
 ### Authorization
 
@@ -1701,6 +1764,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Project**](Project.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_project_user**
+> User update_project_user(cloud_pk, id, project_pk, user_project_update)
+
+
+
+Change the user role in the cloud
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+project_pk = 'project_pk_example' # str | 
+user_project_update = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
+
+try:
+    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, user_project_update)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->update_project_user: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **user_project_update** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
+
+### Return type
+
+[**User**](User.md)
 
 ### Authorization
 

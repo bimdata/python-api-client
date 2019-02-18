@@ -799,7 +799,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **download_bcf_export**
-> download_bcf_export(id)
+> download_bcf_export(id, topics=topics, format=format)
 
 
 
@@ -824,9 +824,11 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this project.
+topics = 'topics_example' # str | topic guids to export, comma separated. Default = all (optional)
+format = 'format_example' # str | topic format to export, comma separated. Default = all (optional)
 
 try:
-    api_instance.download_bcf_export(id)
+    api_instance.download_bcf_export(id, topics=topics, format=format)
 except ApiException as e:
     print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 ```
@@ -836,6 +838,8 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this project. | 
+ **topics** | **str**| topic guids to export, comma separated. Default &#x3D; all | [optional] 
+ **format** | **str**| topic format to export, comma separated. Default &#x3D; all | [optional] 
 
 ### Return type
 

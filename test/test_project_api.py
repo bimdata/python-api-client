@@ -3,7 +3,7 @@
 """
     BIMData API
 
-    BIMData API documentation  # noqa: E501
+    BIMData API is a tool to interact with your models stored on BIMData’s servers.     Through the API, you can manage your projects, the clouds, upload your IFC files and manage them through endpoints.  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@bimdata.io
@@ -107,6 +107,12 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
+    def test_full_update_project_user(self):
+        """Test case for full_update_project_user
+
+        """
+        pass
+
     def test_get_classification(self):
         """Test case for get_classification
 
@@ -199,6 +205,12 @@ class TestProjectApi(unittest.TestCase):
 
     def test_update_project(self):
         """Test case for update_project
+
+        """
+        pass
+
+    def test_update_project_user(self):
+        """Test case for update_project_user
 
         """
         pass

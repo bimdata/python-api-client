@@ -3,7 +3,7 @@
 """
     BIMData API
 
-    BIMData API documentation  # noqa: E501
+    BIMData API is a tool to interact with your models stored on BIMData’s servers.     Through the API, you can manage your projects, the clouds, upload your IFC files and manage them through endpoints.  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@bimdata.io
@@ -1502,6 +1502,8 @@ class BcfApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this project. (required)
+        :param str topics: topic guids to export, comma separated. Default = all
+        :param str format: topic format to export, comma separated. Default = all
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1524,6 +1526,8 @@ class BcfApi(object):
 
         :param async_req bool
         :param int id: A unique integer value identifying this project. (required)
+        :param str topics: topic guids to export, comma separated. Default = all
+        :param str format: topic format to export, comma separated. Default = all
         :return: None
                  If the method is called asynchronously,
                  returns the request thread.
@@ -1531,7 +1535,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['id']  # noqa: E501
+        all_params = ['id', 'topics', 'format']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1557,6 +1561,10 @@ class BcfApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
+        if 'topics' in local_var_params:
+            query_params.append(('topics', local_var_params['topics']))  # noqa: E501
+        if 'format' in local_var_params:
+            query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
 

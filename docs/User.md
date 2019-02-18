@@ -10,7 +10,8 @@ Name | Type | Description | Notes
 **lastname** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
-**last_login** | **datetime** |  | [optional] 
+**cloud_role** | **int** |  | [optional] 
+**project_role** | **int** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

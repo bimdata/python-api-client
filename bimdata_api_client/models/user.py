@@ -3,7 +3,7 @@
 """
     BIMData API
 
-    BIMData API documentation  # noqa: E501
+    BIMData API is a tool to interact with your models stored on BIMData’s servers.     Through the API, you can manage your projects, the clouds, upload your IFC files and manage them through endpoints.  # noqa: E501
 
     OpenAPI spec version: v1
     Contact: contact@bimdata.io
@@ -39,7 +39,8 @@ class User(object):
         'lastname': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'last_login': 'datetime'
+        'cloud_role': 'int',
+        'project_role': 'int'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class User(object):
         'lastname': 'lastname',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
-        'last_login': 'last_login'
+        'cloud_role': 'cloud_role',
+        'project_role': 'project_role'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, last_login=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, cloud_role=None, project_role=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -63,7 +65,8 @@ class User(object):
         self._lastname = None
         self._created_at = None
         self._updated_at = None
-        self._last_login = None
+        self._cloud_role = None
+        self._project_role = None
         self.discriminator = None
 
         if id is not None:
@@ -80,8 +83,10 @@ class User(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
-        if last_login is not None:
-            self.last_login = last_login
+        if cloud_role is not None:
+            self.cloud_role = cloud_role
+        if project_role is not None:
+            self.project_role = project_role
 
     @property
     def id(self):
@@ -237,25 +242,46 @@ class User(object):
         self._updated_at = updated_at
 
     @property
-    def last_login(self):
-        """Gets the last_login of this User.  # noqa: E501
+    def cloud_role(self):
+        """Gets the cloud_role of this User.  # noqa: E501
 
 
-        :return: The last_login of this User.  # noqa: E501
-        :rtype: datetime
+        :return: The cloud_role of this User.  # noqa: E501
+        :rtype: int
         """
-        return self._last_login
+        return self._cloud_role
 
-    @last_login.setter
-    def last_login(self, last_login):
-        """Sets the last_login of this User.
+    @cloud_role.setter
+    def cloud_role(self, cloud_role):
+        """Sets the cloud_role of this User.
 
 
-        :param last_login: The last_login of this User.  # noqa: E501
-        :type: datetime
+        :param cloud_role: The cloud_role of this User.  # noqa: E501
+        :type: int
         """
 
-        self._last_login = last_login
+        self._cloud_role = cloud_role
+
+    @property
+    def project_role(self):
+        """Gets the project_role of this User.  # noqa: E501
+
+
+        :return: The project_role of this User.  # noqa: E501
+        :rtype: int
+        """
+        return self._project_role
+
+    @project_role.setter
+    def project_role(self, project_role):
+        """Sets the project_role of this User.
+
+
+        :param project_role: The project_role of this User.  # noqa: E501
+        :type: int
+        """
+
+        self._project_role = project_role
 
     def to_dict(self):
         """Returns the model properties as a dict"""

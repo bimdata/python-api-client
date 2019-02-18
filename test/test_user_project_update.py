@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.topic import Topic  # noqa: E501
+from bimdata_api_client.models.user_project_update import UserProjectUpdate  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestTopic(unittest.TestCase):
-    """Topic unit test stubs"""
+class TestUserProjectUpdate(unittest.TestCase):
+    """UserProjectUpdate unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestTopic(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testTopic(self):
-        """Test Topic"""
+    def testUserProjectUpdate(self):
+        """Test UserProjectUpdate"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.topic.Topic()  # noqa: E501
+        # model = bimdata_api_client.models.user_project_update.UserProjectUpdate()  # noqa: E501
         pass
 
 
