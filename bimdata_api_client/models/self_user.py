@@ -37,14 +37,10 @@ class SelfUser(object):
         'company': 'str',
         'firstname': 'str',
         'lastname': 'str',
-        'password': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'clouds': 'list[CloudRole]',
         'projects': 'list[ProjectRole]',
-        'last_login': 'datetime',
-        'default_cloud_id': 'str',
-        'default_project_id': 'str',
         'oidc_sub': 'str'
     }
 
@@ -54,18 +50,14 @@ class SelfUser(object):
         'company': 'company',
         'firstname': 'firstname',
         'lastname': 'lastname',
-        'password': 'password',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'clouds': 'clouds',
         'projects': 'projects',
-        'last_login': 'last_login',
-        'default_cloud_id': 'default_cloud_id',
-        'default_project_id': 'default_project_id',
         'oidc_sub': 'oidc_sub'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, password=None, created_at=None, updated_at=None, clouds=None, projects=None, last_login=None, default_cloud_id=None, default_project_id=None, oidc_sub=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, clouds=None, projects=None, oidc_sub=None):  # noqa: E501
         """SelfUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -73,14 +65,10 @@ class SelfUser(object):
         self._company = None
         self._firstname = None
         self._lastname = None
-        self._password = None
         self._created_at = None
         self._updated_at = None
         self._clouds = None
         self._projects = None
-        self._last_login = None
-        self._default_cloud_id = None
-        self._default_project_id = None
         self._oidc_sub = None
         self.discriminator = None
 
@@ -90,7 +78,6 @@ class SelfUser(object):
         self.company = company
         self.firstname = firstname
         self.lastname = lastname
-        self.password = password
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -99,12 +86,6 @@ class SelfUser(object):
             self.clouds = clouds
         if projects is not None:
             self.projects = projects
-        if last_login is not None:
-            self.last_login = last_login
-        if default_cloud_id is not None:
-            self.default_cloud_id = default_cloud_id
-        if default_project_id is not None:
-            self.default_project_id = default_project_id
         self.oidc_sub = oidc_sub
 
     @property
@@ -227,31 +208,6 @@ class SelfUser(object):
         self._lastname = lastname
 
     @property
-    def password(self):
-        """Gets the password of this SelfUser.  # noqa: E501
-
-
-        :return: The password of this SelfUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._password
-
-    @password.setter
-    def password(self, password):
-        """Sets the password of this SelfUser.
-
-
-        :param password: The password of this SelfUser.  # noqa: E501
-        :type: str
-        """
-        if password is None:
-            raise ValueError("Invalid value for `password`, must not be `None`")  # noqa: E501
-        if password is not None and len(password) < 1:
-            raise ValueError("Invalid value for `password`, length must be greater than or equal to `1`")  # noqa: E501
-
-        self._password = password
-
-    @property
     def created_at(self):
         """Gets the created_at of this SelfUser.  # noqa: E501
 
@@ -334,69 +290,6 @@ class SelfUser(object):
         """
 
         self._projects = projects
-
-    @property
-    def last_login(self):
-        """Gets the last_login of this SelfUser.  # noqa: E501
-
-
-        :return: The last_login of this SelfUser.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._last_login
-
-    @last_login.setter
-    def last_login(self, last_login):
-        """Sets the last_login of this SelfUser.
-
-
-        :param last_login: The last_login of this SelfUser.  # noqa: E501
-        :type: datetime
-        """
-
-        self._last_login = last_login
-
-    @property
-    def default_cloud_id(self):
-        """Gets the default_cloud_id of this SelfUser.  # noqa: E501
-
-
-        :return: The default_cloud_id of this SelfUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_cloud_id
-
-    @default_cloud_id.setter
-    def default_cloud_id(self, default_cloud_id):
-        """Sets the default_cloud_id of this SelfUser.
-
-
-        :param default_cloud_id: The default_cloud_id of this SelfUser.  # noqa: E501
-        :type: str
-        """
-
-        self._default_cloud_id = default_cloud_id
-
-    @property
-    def default_project_id(self):
-        """Gets the default_project_id of this SelfUser.  # noqa: E501
-
-
-        :return: The default_project_id of this SelfUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._default_project_id
-
-    @default_project_id.setter
-    def default_project_id(self, default_project_id):
-        """Sets the default_project_id of this SelfUser.
-
-
-        :param default_project_id: The default_project_id of this SelfUser.  # noqa: E501
-        :type: str
-        """
-
-        self._default_project_id = default_project_id
 
     @property
     def oidc_sub(self):

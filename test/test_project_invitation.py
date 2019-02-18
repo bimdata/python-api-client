@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.reset_password import ResetPassword  # noqa: E501
+from bimdata_api_client.models.project_invitation import ProjectInvitation  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestResetPassword(unittest.TestCase):
-    """ResetPassword unit test stubs"""
+class TestProjectInvitation(unittest.TestCase):
+    """ProjectInvitation unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestResetPassword(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testResetPassword(self):
-        """Test ResetPassword"""
+    def testProjectInvitation(self):
+        """Test ProjectInvitation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.reset_password.ResetPassword()  # noqa: E501
+        # model = bimdata_api_client.models.project_invitation.ProjectInvitation()  # noqa: E501
         pass
 
 

@@ -8,7 +8,6 @@ Method | HTTP request | Description
 [**create_document**](ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | 
 [**create_folder**](ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | 
 [**create_project**](ProjectApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | 
-[**create_project_user**](ProjectApi.md#create_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/user | 
 [**delete_classification**](ProjectApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 [**delete_document**](ProjectApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**delete_folder**](ProjectApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
@@ -18,7 +17,6 @@ Method | HTTP request | Description
 [**full_update_document**](ProjectApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**full_update_folder**](ProjectApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**full_update_project**](ProjectApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | 
-[**full_update_project_user**](ProjectApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 [**get_classification**](ProjectApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 [**get_classifications**](ProjectApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | 
 [**get_document**](ProjectApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
@@ -30,11 +28,11 @@ Method | HTTP request | Description
 [**get_project_user**](ProjectApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 [**get_project_users**](ProjectApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | 
 [**get_projects**](ProjectApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | 
+[**project_invite**](ProjectApi.md#project_invite) | **POST** /cloud/{cloud_pk}/project/{id}/invite | 
 [**update_classification**](ProjectApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 [**update_document**](ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**update_folder**](ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**update_project**](ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | 
-[**update_project_user**](ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 
 
 # **create_classification**
@@ -269,63 +267,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Project**](Project.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_project_user**
-> InviteUser create_project_user(cloud_pk, project_pk, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.create_project_user(cloud_pk, project_pk, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->create_project_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 
@@ -855,65 +796,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Project**](Project.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **full_update_project_user**
-> InviteUser full_update_project_user(cloud_pk, id, project_pk, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
-project_pk = 'project_pk_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->full_update_project_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
- **project_pk** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 
@@ -1539,6 +1421,64 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **project_invite**
+> project_invite(cloud_pk, id, project_invitation)
+
+
+
+Invite a user to collaborate in the project. The cloud role will be USER
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
+project_invitation = bimdata_api_client.ProjectInvitation() # ProjectInvitation | 
+
+try:
+    api_instance.project_invite(cloud_pk, id, project_invitation)
+except ApiException as e:
+    print("Exception when calling ProjectApi->project_invite: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
+ **project_invitation** | [**ProjectInvitation**](ProjectInvitation.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **update_classification**
 > Classification update_classification(cloud_pk, id, project_pk, classification)
 
@@ -1761,65 +1701,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Project**](Project.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_project_user**
-> InviteUser update_project_user(cloud_pk, id, project_pk, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
-project_pk = 'project_pk_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->update_project_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
- **project_pk** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 

@@ -4,20 +4,74 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cloud_invite**](CloudApi.md#cloud_invite) | **POST** /cloud/{id}/invite | 
 [**create_cloud**](CloudApi.md#create_cloud) | **POST** /cloud | 
-[**create_cloud_user**](CloudApi.md#create_cloud_user) | **POST** /cloud/{cloud_pk}/user | 
 [**create_demo**](CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | 
 [**delete_cloud_user**](CloudApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | 
 [**full_update_cloud**](CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | 
-[**full_update_cloud_user**](CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | 
 [**get_cloud**](CloudApi.md#get_cloud) | **GET** /cloud/{id} | 
 [**get_cloud_size**](CloudApi.md#get_cloud_size) | **GET** /cloud/{id}/size | 
 [**get_cloud_user**](CloudApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | 
 [**get_cloud_users**](CloudApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | 
 [**get_clouds**](CloudApi.md#get_clouds) | **GET** /cloud | 
 [**update_cloud**](CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | 
-[**update_cloud_user**](CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | 
 
+
+# **cloud_invite**
+> cloud_invite(id, cloud_invitation)
+
+
+
+Invite a cloud administrator. They will have the ADMIN role on the cloud and on each project of the cloud
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this cloud.
+cloud_invitation = bimdata_api_client.CloudInvitation() # CloudInvitation | 
+
+try:
+    api_instance.cloud_invite(id, cloud_invitation)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_invite: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this cloud. | 
+ **cloud_invitation** | [**CloudInvitation**](CloudInvitation.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_cloud**
 > Cloud create_cloud(cloud)
@@ -60,61 +114,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cloud**](Cloud.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_cloud_user**
-> InviteUser create_cloud_user(cloud_pk, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.create_cloud_user(cloud_pk, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->create_cloud_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 
@@ -279,63 +278,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cloud**](Cloud.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **full_update_cloud_user**
-> InviteUser full_update_cloud_user(cloud_pk, id, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->full_update_cloud_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 
@@ -658,63 +600,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Cloud**](Cloud.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_cloud_user**
-> InviteUser update_cloud_user(cloud_pk, id, invite_user)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
-invite_user = bimdata_api_client.InviteUser() # InviteUser | 
-
-try:
-    api_response = api_instance.update_cloud_user(cloud_pk, id, invite_user)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->update_cloud_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
- **invite_user** | [**InviteUser**](InviteUser.md)|  | 
-
-### Return type
-
-[**InviteUser**](InviteUser.md)
 
 ### Authorization
 

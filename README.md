@@ -172,19 +172,17 @@ Class | Method | HTTP request | Description
 *CheckplanApi* | [**update_rule**](docs/CheckplanApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | 
 *CheckplanApi* | [**update_rule_component**](docs/CheckplanApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | 
 *CheckplanApi* | [**update_ruleset**](docs/CheckplanApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | 
+*CloudApi* | [**cloud_invite**](docs/CloudApi.md#cloud_invite) | **POST** /cloud/{id}/invite | 
 *CloudApi* | [**create_cloud**](docs/CloudApi.md#create_cloud) | **POST** /cloud | 
-*CloudApi* | [**create_cloud_user**](docs/CloudApi.md#create_cloud_user) | **POST** /cloud/{cloud_pk}/user | 
 *CloudApi* | [**create_demo**](docs/CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | 
 *CloudApi* | [**delete_cloud_user**](docs/CloudApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**full_update_cloud**](docs/CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | 
-*CloudApi* | [**full_update_cloud_user**](docs/CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**get_cloud**](docs/CloudApi.md#get_cloud) | **GET** /cloud/{id} | 
 *CloudApi* | [**get_cloud_size**](docs/CloudApi.md#get_cloud_size) | **GET** /cloud/{id}/size | 
 *CloudApi* | [**get_cloud_user**](docs/CloudApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**get_cloud_users**](docs/CloudApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | 
 *CloudApi* | [**get_clouds**](docs/CloudApi.md#get_clouds) | **GET** /cloud | 
 *CloudApi* | [**update_cloud**](docs/CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | 
-*CloudApi* | [**update_cloud_user**](docs/CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | 
 *IfcApi* | [**bulk_delete_ifc_classifications**](docs/IfcApi.md#bulk_delete_ifc_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | 
 *IfcApi* | [**bulk_delete_ifc_properties**](docs/IfcApi.md#bulk_delete_ifc_properties) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_destroy | 
 *IfcApi* | [**bulk_delete_ifc_property_definitions**](docs/IfcApi.md#bulk_delete_ifc_property_definitions) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/bulk_destroy | 
@@ -285,7 +283,6 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**create_document**](docs/ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | 
 *ProjectApi* | [**create_folder**](docs/ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | 
 *ProjectApi* | [**create_project**](docs/ProjectApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | 
-*ProjectApi* | [**create_project_user**](docs/ProjectApi.md#create_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/user | 
 *ProjectApi* | [**delete_classification**](docs/ProjectApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 *ProjectApi* | [**delete_document**](docs/ProjectApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 *ProjectApi* | [**delete_folder**](docs/ProjectApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
@@ -295,7 +292,6 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**full_update_document**](docs/ProjectApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 *ProjectApi* | [**full_update_folder**](docs/ProjectApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 *ProjectApi* | [**full_update_project**](docs/ProjectApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | 
-*ProjectApi* | [**full_update_project_user**](docs/ProjectApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 *ProjectApi* | [**get_classification**](docs/ProjectApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 *ProjectApi* | [**get_classifications**](docs/ProjectApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | 
 *ProjectApi* | [**get_document**](docs/ProjectApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
@@ -307,21 +303,13 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**get_project_user**](docs/ProjectApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 *ProjectApi* | [**get_project_users**](docs/ProjectApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | 
 *ProjectApi* | [**get_projects**](docs/ProjectApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | 
+*ProjectApi* | [**project_invite**](docs/ProjectApi.md#project_invite) | **POST** /cloud/{cloud_pk}/project/{id}/invite | 
 *ProjectApi* | [**update_classification**](docs/ProjectApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 *ProjectApi* | [**update_document**](docs/ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 *ProjectApi* | [**update_folder**](docs/ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 *ProjectApi* | [**update_project**](docs/ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | 
-*ProjectApi* | [**update_project_user**](docs/ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
-*UserApi* | [**ask_reset_password_token**](docs/UserApi.md#ask_reset_password_token) | **POST** /user/forgot-password | 
-*UserApi* | [**full_update_notification**](docs/UserApi.md#full_update_notification) | **PUT** /user/notification/{id} | 
-*UserApi* | [**get_notification**](docs/UserApi.md#get_notification) | **GET** /user/notification/{id} | 
-*UserApi* | [**get_self_notifications**](docs/UserApi.md#get_self_notifications) | **GET** /user/notification | 
 *UserApi* | [**get_self_projects**](docs/UserApi.md#get_self_projects) | **GET** /user/projects | 
 *UserApi* | [**get_self_user**](docs/UserApi.md#get_self_user) | **GET** /user | 
-*UserApi* | [**reset_password**](docs/UserApi.md#reset_password) | **POST** /user/reset-password | 
-*UserApi* | [**sign_up**](docs/UserApi.md#sign_up) | **POST** /user/signup | 
-*UserApi* | [**sign_up_with_invitation_token**](docs/UserApi.md#sign_up_with_invitation_token) | **POST** /user/invited-signup | 
-*UserApi* | [**update_notification**](docs/UserApi.md#update_notification) | **PATCH** /user/notification/{id} | 
 *UserApi* | [**update_self_user**](docs/UserApi.md#update_self_user) | **PATCH** /user | 
 
 
@@ -334,6 +322,7 @@ Class | Method | HTTP request | Description
  - [Classification](docs/Classification.md)
  - [ClippingPlane](docs/ClippingPlane.md)
  - [Cloud](docs/Cloud.md)
+ - [CloudInvitation](docs/CloudInvitation.md)
  - [CloudRole](docs/CloudRole.md)
  - [Coloring](docs/Coloring.md)
  - [Comment](docs/Comment.md)
@@ -347,23 +336,20 @@ Class | Method | HTTP request | Description
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
- - [ForgotPassword](docs/ForgotPassword.md)
  - [Ifc](docs/Ifc.md)
  - [IfcChecker](docs/IfcChecker.md)
  - [IfcCheckerCheckplan](docs/IfcCheckerCheckplan.md)
  - [IfcCheckerResults](docs/IfcCheckerResults.md)
  - [IfcFiles](docs/IfcFiles.md)
- - [InviteUser](docs/InviteUser.md)
- - [InvitedSignUpUser](docs/InvitedSignUpUser.md)
  - [Label](docs/Label.md)
  - [LineSeriaizer](docs/LineSeriaizer.md)
  - [ModelProperty](docs/ModelProperty.md)
- - [Notification](docs/Notification.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [PerspectiveCamera](docs/PerspectiveCamera.md)
  - [Point](docs/Point.md)
  - [Priority](docs/Priority.md)
  - [Project](docs/Project.md)
+ - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectRole](docs/ProjectRole.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
@@ -373,13 +359,11 @@ Class | Method | HTTP request | Description
  - [RawProperty](docs/RawProperty.md)
  - [RawPropertySet](docs/RawPropertySet.md)
  - [RawUnit](docs/RawUnit.md)
- - [ResetPassword](docs/ResetPassword.md)
  - [Rule](docs/Rule.md)
  - [RuleComponent](docs/RuleComponent.md)
  - [Ruleset](docs/Ruleset.md)
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
- - [SignUpUser](docs/SignUpUser.md)
  - [SingleJsonTopic](docs/SingleJsonTopic.md)
  - [Snapshot](docs/Snapshot.md)
  - [Space](docs/Space.md)

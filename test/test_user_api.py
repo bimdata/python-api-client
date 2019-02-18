@@ -29,30 +29,6 @@ class TestUserApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_ask_reset_password_token(self):
-        """Test case for ask_reset_password_token
-
-        """
-        pass
-
-    def test_full_update_notification(self):
-        """Test case for full_update_notification
-
-        """
-        pass
-
-    def test_get_notification(self):
-        """Test case for get_notification
-
-        """
-        pass
-
-    def test_get_self_notifications(self):
-        """Test case for get_self_notifications
-
-        """
-        pass
-
     def test_get_self_projects(self):
         """Test case for get_self_projects
 
@@ -61,30 +37,6 @@ class TestUserApi(unittest.TestCase):
 
     def test_get_self_user(self):
         """Test case for get_self_user
-
-        """
-        pass
-
-    def test_reset_password(self):
-        """Test case for reset_password
-
-        """
-        pass
-
-    def test_sign_up(self):
-        """Test case for sign_up
-
-        """
-        pass
-
-    def test_sign_up_with_invitation_token(self):
-        """Test case for sign_up_with_invitation_token
-
-        """
-        pass
-
-    def test_update_notification(self):
-        """Test case for update_notification
 
         """
         pass

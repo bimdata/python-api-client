@@ -528,120 +528,6 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_project_user(self, cloud_pk, project_pk, invite_user, **kwargs):  # noqa: E501
-        """create_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_project_user(cloud_pk, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, **kwargs)  # noqa: E501
-        else:
-            (data) = self.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, **kwargs)  # noqa: E501
-            return data
-
-    def create_project_user_with_http_info(self, cloud_pk, project_pk, invite_user, **kwargs):  # noqa: E501
-        """create_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_project_user_with_http_info(cloud_pk, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_project_user" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_project_user`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_project_user`")  # noqa: E501
-        # verify the required parameter 'invite_user' is set
-        if ('invite_user' not in local_var_params or
-                local_var_params['invite_user'] is None):
-            raise ValueError("Missing the required parameter `invite_user` when calling `create_project_user`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'invite_user' in local_var_params:
-            body_params = local_var_params['invite_user']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='InviteUser',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def delete_classification(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """delete_classification  # noqa: E501
 
@@ -1686,128 +1572,6 @@ class ProjectApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Project',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def full_update_project_user(self, cloud_pk, id, project_pk, invite_user, **kwargs):  # noqa: E501
-        """full_update_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_project_user(cloud_pk, id, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str id: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
-        else:
-            (data) = self.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
-            return data
-
-    def full_update_project_user_with_http_info(self, cloud_pk, id, project_pk, invite_user, **kwargs):  # noqa: E501
-        """full_update_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str id: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'id', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method full_update_project_user" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'invite_user' is set
-        if ('invite_user' not in local_var_params or
-                local_var_params['invite_user'] is None):
-            raise ValueError("Missing the required parameter `invite_user` when calling `full_update_project_user`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'invite_user' in local_var_params:
-            body_params = local_var_params['invite_user']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'PUT',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='InviteUser',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2963,6 +2727,118 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def project_invite(self, cloud_pk, id, project_invitation, **kwargs):  # noqa: E501
+        """project_invite  # noqa: E501
+
+        Invite a user to collaborate in the project. The cloud role will be USER  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.project_invite(cloud_pk, id, project_invitation, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param ProjectInvitation project_invitation: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.project_invite_with_http_info(cloud_pk, id, project_invitation, **kwargs)  # noqa: E501
+        else:
+            (data) = self.project_invite_with_http_info(cloud_pk, id, project_invitation, **kwargs)  # noqa: E501
+            return data
+
+    def project_invite_with_http_info(self, cloud_pk, id, project_invitation, **kwargs):  # noqa: E501
+        """project_invite  # noqa: E501
+
+        Invite a user to collaborate in the project. The cloud role will be USER  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.project_invite_with_http_info(cloud_pk, id, project_invitation, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param ProjectInvitation project_invitation: (required)
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'project_invitation']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method project_invite" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `project_invite`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `project_invite`")  # noqa: E501
+        # verify the required parameter 'project_invitation' is set
+        if ('project_invitation' not in local_var_params or
+                local_var_params['project_invitation'] is None):
+            raise ValueError("Missing the required parameter `project_invitation` when calling `project_invite`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'project_invitation' in local_var_params:
+            body_params = local_var_params['project_invitation']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}/invite', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_classification(self, cloud_pk, id, project_pk, classification, **kwargs):  # noqa: E501
         """update_classification  # noqa: E501
 
@@ -3436,128 +3312,6 @@ class ProjectApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Project',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def update_project_user(self, cloud_pk, id, project_pk, invite_user, **kwargs):  # noqa: E501
-        """update_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_project_user(cloud_pk, id, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str id: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
-        else:
-            (data) = self.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, **kwargs)  # noqa: E501
-            return data
-
-    def update_project_user_with_http_info(self, cloud_pk, id, project_pk, invite_user, **kwargs):  # noqa: E501
-        """update_project_user  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_project_user_with_http_info(cloud_pk, id, project_pk, invite_user, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param str id: (required)
-        :param str project_pk: (required)
-        :param InviteUser invite_user: (required)
-        :return: InviteUser
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'id', 'project_pk', 'invite_user']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_project_user" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_project_user`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_project_user`")  # noqa: E501
-        # verify the required parameter 'invite_user' is set
-        if ('invite_user' not in local_var_params or
-                local_var_params['invite_user'] is None):
-            raise ValueError("Missing the required parameter `invite_user` when calling `update_project_user`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'invite_user' in local_var_params:
-            body_params = local_var_params['invite_user']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'PATCH',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='InviteUser',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

@@ -53,12 +53,6 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_create_project_user(self):
-        """Test case for create_project_user
-
-        """
-        pass
-
     def test_delete_classification(self):
         """Test case for delete_classification
 
@@ -109,12 +103,6 @@ class TestProjectApi(unittest.TestCase):
 
     def test_full_update_project(self):
         """Test case for full_update_project
-
-        """
-        pass
-
-    def test_full_update_project_user(self):
-        """Test case for full_update_project_user
 
         """
         pass
@@ -185,6 +173,12 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
+    def test_project_invite(self):
+        """Test case for project_invite
+
+        """
+        pass
+
     def test_update_classification(self):
         """Test case for update_classification
 
@@ -205,12 +199,6 @@ class TestProjectApi(unittest.TestCase):
 
     def test_update_project(self):
         """Test case for update_project
-
-        """
-        pass
-
-    def test_update_project_user(self):
-        """Test case for update_project_user
 
         """
         pass

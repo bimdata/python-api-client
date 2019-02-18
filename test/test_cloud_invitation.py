@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.sign_up_user import SignUpUser  # noqa: E501
+from bimdata_api_client.models.cloud_invitation import CloudInvitation  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestSignUpUser(unittest.TestCase):
-    """SignUpUser unit test stubs"""
+class TestCloudInvitation(unittest.TestCase):
+    """CloudInvitation unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestSignUpUser(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testSignUpUser(self):
-        """Test SignUpUser"""
+    def testCloudInvitation(self):
+        """Test CloudInvitation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.sign_up_user.SignUpUser()  # noqa: E501
+        # model = bimdata_api_client.models.cloud_invitation.CloudInvitation()  # noqa: E501
         pass
 
 
