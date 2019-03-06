@@ -175,6 +175,7 @@ Class | Method | HTTP request | Description
 *CloudApi* | [**cloud_invite**](docs/CloudApi.md#cloud_invite) | **POST** /cloud/{id}/invite | 
 *CloudApi* | [**create_cloud**](docs/CloudApi.md#create_cloud) | **POST** /cloud | 
 *CloudApi* | [**create_demo**](docs/CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | 
+*CloudApi* | [**delete_cloud**](docs/CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | 
 *CloudApi* | [**delete_cloud_user**](docs/CloudApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**full_update_cloud**](docs/CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | 
 *CloudApi* | [**full_update_cloud_user**](docs/CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | 
