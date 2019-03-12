@@ -32,12 +32,12 @@ class Extensions(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'topic_type': 'list[TopicType]',
-        'topic_status': 'list[TopicStatus]',
-        'topic_label': 'list[Label]',
-        'priority': 'list[Priority]',
+        'topic_type': 'list[str]',
+        'topic_status': 'list[str]',
+        'topic_label': 'list[str]',
+        'priority': 'list[str]',
         'user_id_type': 'list[str]',
-        'stage': 'list[Stage]'
+        'stage': 'list[str]'
     }
 
     attribute_map = {
@@ -74,7 +74,7 @@ class Extensions(object):
 
 
         :return: The topic_type of this Extensions.  # noqa: E501
-        :rtype: list[TopicType]
+        :rtype: list[str]
         """
         return self._topic_type
 
@@ -84,10 +84,8 @@ class Extensions(object):
 
 
         :param topic_type: The topic_type of this Extensions.  # noqa: E501
-        :type: list[TopicType]
+        :type: list[str]
         """
-        if topic_type is None:
-            raise ValueError("Invalid value for `topic_type`, must not be `None`")  # noqa: E501
 
         self._topic_type = topic_type
 
@@ -97,7 +95,7 @@ class Extensions(object):
 
 
         :return: The topic_status of this Extensions.  # noqa: E501
-        :rtype: list[TopicStatus]
+        :rtype: list[str]
         """
         return self._topic_status
 
@@ -107,10 +105,8 @@ class Extensions(object):
 
 
         :param topic_status: The topic_status of this Extensions.  # noqa: E501
-        :type: list[TopicStatus]
+        :type: list[str]
         """
-        if topic_status is None:
-            raise ValueError("Invalid value for `topic_status`, must not be `None`")  # noqa: E501
 
         self._topic_status = topic_status
 
@@ -120,7 +116,7 @@ class Extensions(object):
 
 
         :return: The topic_label of this Extensions.  # noqa: E501
-        :rtype: list[Label]
+        :rtype: list[str]
         """
         return self._topic_label
 
@@ -130,10 +126,8 @@ class Extensions(object):
 
 
         :param topic_label: The topic_label of this Extensions.  # noqa: E501
-        :type: list[Label]
+        :type: list[str]
         """
-        if topic_label is None:
-            raise ValueError("Invalid value for `topic_label`, must not be `None`")  # noqa: E501
 
         self._topic_label = topic_label
 
@@ -143,7 +137,7 @@ class Extensions(object):
 
 
         :return: The priority of this Extensions.  # noqa: E501
-        :rtype: list[Priority]
+        :rtype: list[str]
         """
         return self._priority
 
@@ -153,10 +147,8 @@ class Extensions(object):
 
 
         :param priority: The priority of this Extensions.  # noqa: E501
-        :type: list[Priority]
+        :type: list[str]
         """
-        if priority is None:
-            raise ValueError("Invalid value for `priority`, must not be `None`")  # noqa: E501
 
         self._priority = priority
 
@@ -187,7 +179,7 @@ class Extensions(object):
 
 
         :return: The stage of this Extensions.  # noqa: E501
-        :rtype: list[Stage]
+        :rtype: list[str]
         """
         return self._stage
 
@@ -197,10 +189,8 @@ class Extensions(object):
 
 
         :param stage: The stage of this Extensions.  # noqa: E501
-        :type: list[Stage]
+        :type: list[str]
         """
-        if stage is None:
-            raise ValueError("Invalid value for `stage`, must not be `None`")  # noqa: E501
 
         self._stage = stage
 

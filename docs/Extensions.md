@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**topic_type** | [**list[TopicType]**](TopicType.md) |  | 
-**topic_status** | [**list[TopicStatus]**](TopicStatus.md) |  | 
-**topic_label** | [**list[Label]**](Label.md) |  | 
-**priority** | [**list[Priority]**](Priority.md) |  | 
+**topic_type** | **list[str]** |  | 
+**topic_status** | **list[str]** |  | 
+**topic_label** | **list[str]** |  | 
+**priority** | **list[str]** |  | 
 **user_id_type** | **list[str]** |  | [optional] 
-**stage** | [**list[Stage]**](Stage.md) |  | 
+**stage** | **list[str]** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
