@@ -45,7 +45,8 @@ class UserCloudUpdate(object):
         self._role = None
         self.discriminator = None
 
-        self.role = role
+        if role is not None:
+            self.role = role
 
     @property
     def role(self):
@@ -65,8 +66,6 @@ class UserCloudUpdate(object):
         :param role: The role of this UserCloudUpdate.  # noqa: E501
         :type: int
         """
-        if role is None:
-            raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
 
         self._role = role
 

@@ -172,7 +172,7 @@ Class | Method | HTTP request | Description
 *CheckplanApi* | [**update_rule**](docs/CheckplanApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | 
 *CheckplanApi* | [**update_rule_component**](docs/CheckplanApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | 
 *CheckplanApi* | [**update_ruleset**](docs/CheckplanApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | 
-*CloudApi* | [**cloud_invite**](docs/CloudApi.md#cloud_invite) | **POST** /cloud/{id}/invite | 
+*CloudApi* | [**cancel_cloud_user_invitation**](docs/CloudApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | 
 *CloudApi* | [**create_cloud**](docs/CloudApi.md#create_cloud) | **POST** /cloud | 
 *CloudApi* | [**create_demo**](docs/CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | 
 *CloudApi* | [**delete_cloud**](docs/CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | 
@@ -180,10 +180,12 @@ Class | Method | HTTP request | Description
 *CloudApi* | [**full_update_cloud**](docs/CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | 
 *CloudApi* | [**full_update_cloud_user**](docs/CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**get_cloud**](docs/CloudApi.md#get_cloud) | **GET** /cloud/{id} | 
+*CloudApi* | [**get_cloud_invitations**](docs/CloudApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | 
 *CloudApi* | [**get_cloud_size**](docs/CloudApi.md#get_cloud_size) | **GET** /cloud/{id}/size | 
 *CloudApi* | [**get_cloud_user**](docs/CloudApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | 
 *CloudApi* | [**get_cloud_users**](docs/CloudApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | 
 *CloudApi* | [**get_clouds**](docs/CloudApi.md#get_clouds) | **GET** /cloud | 
+*CloudApi* | [**invite_cloud_user**](docs/CloudApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | 
 *CloudApi* | [**update_cloud**](docs/CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | 
 *CloudApi* | [**update_cloud_user**](docs/CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | 
 *IfcApi* | [**bulk_delete_ifc_classifications**](docs/IfcApi.md#bulk_delete_ifc_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | 
@@ -282,6 +284,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_space**](docs/IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | 
 *IfcApi* | [**update_zone**](docs/IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | 
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | 
+*ProjectApi* | [**cancel_project_user_invitation**](docs/ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | 
 *ProjectApi* | [**create_classification**](docs/ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | 
 *ProjectApi* | [**create_document**](docs/ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | 
 *ProjectApi* | [**create_folder**](docs/ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | 
@@ -303,11 +306,12 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**get_folder**](docs/ProjectApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 *ProjectApi* | [**get_folders**](docs/ProjectApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | 
 *ProjectApi* | [**get_project**](docs/ProjectApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | 
+*ProjectApi* | [**get_project_invitations**](docs/ProjectApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | 
 *ProjectApi* | [**get_project_tree**](docs/ProjectApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | 
 *ProjectApi* | [**get_project_user**](docs/ProjectApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 *ProjectApi* | [**get_project_users**](docs/ProjectApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | 
 *ProjectApi* | [**get_projects**](docs/ProjectApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | 
-*ProjectApi* | [**project_invite**](docs/ProjectApi.md#project_invite) | **POST** /cloud/{cloud_pk}/project/{id}/invite | 
+*ProjectApi* | [**invite_project_user**](docs/ProjectApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | 
 *ProjectApi* | [**update_classification**](docs/ProjectApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 *ProjectApi* | [**update_document**](docs/ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 *ProjectApi* | [**update_folder**](docs/ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 

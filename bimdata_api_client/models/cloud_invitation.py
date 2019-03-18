@@ -71,6 +71,8 @@ class CloudInvitation(object):
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
+        if email is not None and len(email) > 256:
+            raise ValueError("Invalid value for `email`, length must be less than or equal to `256`")  # noqa: E501
         if email is not None and len(email) < 1:
             raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
@@ -80,7 +82,7 @@ class CloudInvitation(object):
     def redirect_uri(self):
         """Gets the redirect_uri of this CloudInvitation.  # noqa: E501
 
-        User will be redirected to this uri when he accepts the invitation  # noqa: E501
+        User will be redirected to this uri when they accept the invitation  # noqa: E501
 
         :return: The redirect_uri of this CloudInvitation.  # noqa: E501
         :rtype: str
@@ -91,13 +93,15 @@ class CloudInvitation(object):
     def redirect_uri(self, redirect_uri):
         """Sets the redirect_uri of this CloudInvitation.
 
-        User will be redirected to this uri when he accepts the invitation  # noqa: E501
+        User will be redirected to this uri when they accept the invitation  # noqa: E501
 
         :param redirect_uri: The redirect_uri of this CloudInvitation.  # noqa: E501
         :type: str
         """
         if redirect_uri is None:
             raise ValueError("Invalid value for `redirect_uri`, must not be `None`")  # noqa: E501
+        if redirect_uri is not None and len(redirect_uri) > 512:
+            raise ValueError("Invalid value for `redirect_uri`, length must be less than or equal to `512`")  # noqa: E501
         if redirect_uri is not None and len(redirect_uri) < 1:
             raise ValueError("Invalid value for `redirect_uri`, length must be greater than or equal to `1`")  # noqa: E501
 

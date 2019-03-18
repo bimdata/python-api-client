@@ -4,6 +4,7 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**cancel_project_user_invitation**](ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | 
 [**create_classification**](ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | 
 [**create_document**](ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | 
 [**create_folder**](ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | 
@@ -25,17 +26,74 @@ Method | HTTP request | Description
 [**get_folder**](ProjectApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**get_folders**](ProjectApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | 
 [**get_project**](ProjectApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | 
+[**get_project_invitations**](ProjectApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | 
 [**get_project_tree**](ProjectApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | 
 [**get_project_user**](ProjectApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 [**get_project_users**](ProjectApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | 
 [**get_projects**](ProjectApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | 
-[**project_invite**](ProjectApi.md#project_invite) | **POST** /cloud/{cloud_pk}/project/{id}/invite | 
+[**invite_project_user**](ProjectApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | 
 [**update_classification**](ProjectApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | 
 [**update_document**](ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | 
 [**update_folder**](ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | 
 [**update_project**](ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | 
 [**update_project_user**](ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | 
 
+
+# **cancel_project_user_invitation**
+> cancel_project_user_invitation(cloud_pk, id, project_pk)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this invitation.
+project_pk = 'project_pk_example' # str | 
+
+try:
+    api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
+except ApiException as e:
+    print("Exception when calling ProjectApi->cancel_project_user_invitation: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this invitation. | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification**
 > list[Classification] create_classification(cloud_pk, project_pk, classification)
@@ -1262,6 +1320,61 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_project_invitations**
+> list[ProjectInvitation] get_project_invitations(cloud_pk, project_pk)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->get_project_invitations: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**list[ProjectInvitation]**](ProjectInvitation.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_project_tree**
 > Folder get_project_tree(cloud_pk, id)
 
@@ -1484,12 +1597,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **project_invite**
-> project_invite(cloud_pk, id, project_invitation)
+# **invite_project_user**
+> ProjectInvitation invite_project_user(cloud_pk, project_pk, project_invitation)
 
 
 
-Invite a user to collaborate in the project. The cloud role will be USER
+             When inviting someone already having a pending invitation, it will not update the invitation but simply send the user a new invitation mail         
 
 ### Example
 
@@ -1510,13 +1623,14 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this project.
+project_pk = 'project_pk_example' # str | 
 project_invitation = bimdata_api_client.ProjectInvitation() # ProjectInvitation | 
 
 try:
-    api_instance.project_invite(cloud_pk, id, project_invitation)
+    api_response = api_instance.invite_project_user(cloud_pk, project_pk, project_invitation)
+    pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProjectApi->project_invite: %s\n" % e)
+    print("Exception when calling ProjectApi->invite_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -1524,12 +1638,12 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this project. | 
+ **project_pk** | **str**|  | 
  **project_invitation** | [**ProjectInvitation**](ProjectInvitation.md)|  | 
 
 ### Return type
 
-void (empty response body)
+[**ProjectInvitation**](ProjectInvitation.md)
 
 ### Authorization
 
@@ -1538,7 +1652,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

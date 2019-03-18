@@ -29,8 +29,8 @@ class TestCloudApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_cloud_invite(self):
-        """Test case for cloud_invite
+    def test_cancel_cloud_user_invitation(self):
+        """Test case for cancel_cloud_user_invitation
 
         """
         pass
@@ -77,6 +77,12 @@ class TestCloudApi(unittest.TestCase):
         """
         pass
 
+    def test_get_cloud_invitations(self):
+        """Test case for get_cloud_invitations
+
+        """
+        pass
+
     def test_get_cloud_size(self):
         """Test case for get_cloud_size
 
@@ -97,6 +103,12 @@ class TestCloudApi(unittest.TestCase):
 
     def test_get_clouds(self):
         """Test case for get_clouds
+
+        """
+        pass
+
+    def test_invite_cloud_user(self):
+        """Test case for invite_cloud_user
 
         """
         pass

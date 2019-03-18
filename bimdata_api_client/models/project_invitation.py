@@ -33,27 +33,27 @@ class ProjectInvitation(object):
     """
     openapi_types = {
         'email': 'str',
-        'role': 'int',
-        'redirect_uri': 'str'
+        'redirect_uri': 'str',
+        'role': 'int'
     }
 
     attribute_map = {
         'email': 'email',
-        'role': 'role',
-        'redirect_uri': 'redirect_uri'
+        'redirect_uri': 'redirect_uri',
+        'role': 'role'
     }
 
-    def __init__(self, email=None, role=None, redirect_uri=None):  # noqa: E501
+    def __init__(self, email=None, redirect_uri=None, role=None):  # noqa: E501
         """ProjectInvitation - a model defined in OpenAPI"""  # noqa: E501
 
         self._email = None
-        self._role = None
         self._redirect_uri = None
+        self._role = None
         self.discriminator = None
 
         self.email = email
-        self.role = role
         self.redirect_uri = redirect_uri
+        self.role = role
 
     @property
     def email(self):
@@ -75,10 +75,41 @@ class ProjectInvitation(object):
         """
         if email is None:
             raise ValueError("Invalid value for `email`, must not be `None`")  # noqa: E501
+        if email is not None and len(email) > 256:
+            raise ValueError("Invalid value for `email`, length must be less than or equal to `256`")  # noqa: E501
         if email is not None and len(email) < 1:
             raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
+
+    @property
+    def redirect_uri(self):
+        """Gets the redirect_uri of this ProjectInvitation.  # noqa: E501
+
+        User will be redirected to this uri when they accept the invitation  # noqa: E501
+
+        :return: The redirect_uri of this ProjectInvitation.  # noqa: E501
+        :rtype: str
+        """
+        return self._redirect_uri
+
+    @redirect_uri.setter
+    def redirect_uri(self, redirect_uri):
+        """Sets the redirect_uri of this ProjectInvitation.
+
+        User will be redirected to this uri when they accept the invitation  # noqa: E501
+
+        :param redirect_uri: The redirect_uri of this ProjectInvitation.  # noqa: E501
+        :type: str
+        """
+        if redirect_uri is None:
+            raise ValueError("Invalid value for `redirect_uri`, must not be `None`")  # noqa: E501
+        if redirect_uri is not None and len(redirect_uri) > 512:
+            raise ValueError("Invalid value for `redirect_uri`, length must be less than or equal to `512`")  # noqa: E501
+        if redirect_uri is not None and len(redirect_uri) < 1:
+            raise ValueError("Invalid value for `redirect_uri`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._redirect_uri = redirect_uri
 
     @property
     def role(self):
@@ -102,33 +133,6 @@ class ProjectInvitation(object):
             raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
 
         self._role = role
-
-    @property
-    def redirect_uri(self):
-        """Gets the redirect_uri of this ProjectInvitation.  # noqa: E501
-
-        User will be redirected to this uri when he accepts the invitation  # noqa: E501
-
-        :return: The redirect_uri of this ProjectInvitation.  # noqa: E501
-        :rtype: str
-        """
-        return self._redirect_uri
-
-    @redirect_uri.setter
-    def redirect_uri(self, redirect_uri):
-        """Sets the redirect_uri of this ProjectInvitation.
-
-        User will be redirected to this uri when he accepts the invitation  # noqa: E501
-
-        :param redirect_uri: The redirect_uri of this ProjectInvitation.  # noqa: E501
-        :type: str
-        """
-        if redirect_uri is None:
-            raise ValueError("Invalid value for `redirect_uri`, must not be `None`")  # noqa: E501
-        if redirect_uri is not None and len(redirect_uri) < 1:
-            raise ValueError("Invalid value for `redirect_uri`, length must be greater than or equal to `1`")  # noqa: E501
-
-        self._redirect_uri = redirect_uri
 
     def to_dict(self):
         """Returns the model properties as a dict"""

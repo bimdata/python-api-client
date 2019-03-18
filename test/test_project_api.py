@@ -29,6 +29,12 @@ class TestProjectApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_cancel_project_user_invitation(self):
+        """Test case for cancel_project_user_invitation
+
+        """
+        pass
+
     def test_create_classification(self):
         """Test case for create_classification
 
@@ -155,6 +161,12 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
+    def test_get_project_invitations(self):
+        """Test case for get_project_invitations
+
+        """
+        pass
+
     def test_get_project_tree(self):
         """Test case for get_project_tree
 
@@ -179,8 +191,8 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_project_invite(self):
-        """Test case for project_invite
+    def test_invite_project_user(self):
+        """Test case for invite_project_user
 
         """
         pass
