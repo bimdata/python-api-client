@@ -33,23 +33,28 @@ class CloudInvitation(object):
     """
     openapi_types = {
         'email': 'str',
-        'redirect_uri': 'str'
+        'redirect_uri': 'str',
+        'role': 'str'
     }
 
     attribute_map = {
         'email': 'email',
-        'redirect_uri': 'redirect_uri'
+        'redirect_uri': 'redirect_uri',
+        'role': 'role'
     }
 
-    def __init__(self, email=None, redirect_uri=None):  # noqa: E501
+    def __init__(self, email=None, redirect_uri=None, role=None):  # noqa: E501
         """CloudInvitation - a model defined in OpenAPI"""  # noqa: E501
 
         self._email = None
         self._redirect_uri = None
+        self._role = None
         self.discriminator = None
 
         self.email = email
         self.redirect_uri = redirect_uri
+        if role is not None:
+            self.role = role
 
     @property
     def email(self):
@@ -106,6 +111,33 @@ class CloudInvitation(object):
             raise ValueError("Invalid value for `redirect_uri`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._redirect_uri = redirect_uri
+
+    @property
+    def role(self):
+        """Gets the role of this CloudInvitation.  # noqa: E501
+
+
+        :return: The role of this CloudInvitation.  # noqa: E501
+        :rtype: str
+        """
+        return self._role
+
+    @role.setter
+    def role(self, role):
+        """Sets the role of this CloudInvitation.
+
+
+        :param role: The role of this CloudInvitation.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["100", "50"]  # noqa: E501
+        if role not in allowed_values:
+            raise ValueError(
+                "Invalid value for `role` ({0}), must be one of {1}"  # noqa: E501
+                .format(role, allowed_values)
+            )
+
+        self._role = role
 
     def to_dict(self):
         """Returns the model properties as a dict"""
