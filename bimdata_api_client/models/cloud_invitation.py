@@ -34,7 +34,7 @@ class CloudInvitation(object):
     openapi_types = {
         'email': 'str',
         'redirect_uri': 'str',
-        'role': 'str'
+        'role': 'int'
     }
 
     attribute_map = {
@@ -118,7 +118,7 @@ class CloudInvitation(object):
 
 
         :return: The role of this CloudInvitation.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._role
 
@@ -128,14 +128,8 @@ class CloudInvitation(object):
 
 
         :param role: The role of this CloudInvitation.  # noqa: E501
-        :type: str
+        :type: int
         """
-        allowed_values = ["100", "50"]  # noqa: E501
-        if role not in allowed_values:
-            raise ValueError(
-                "Invalid value for `role` ({0}), must be one of {1}"  # noqa: E501
-                .format(role, allowed_values)
-            )
 
         self._role = role
 
