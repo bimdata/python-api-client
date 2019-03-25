@@ -35,7 +35,7 @@ class RawElements(object):
         'units': 'list[RawUnit]',
         'definitions': 'list[RawDefinition]',
         'property_sets': 'list[RawPropertySet]',
-        'classifications': 'list[Classification]',
+        'classifications': 'list[RawClassification]',
         'elements': 'list[RawElement]'
     }
 
@@ -132,7 +132,7 @@ class RawElements(object):
 
 
         :return: The classifications of this RawElements.  # noqa: E501
-        :rtype: list[Classification]
+        :rtype: list[RawClassification]
         """
         return self._classifications
 
@@ -142,7 +142,7 @@ class RawElements(object):
 
 
         :param classifications: The classifications of this RawElements.  # noqa: E501
-        :type: list[Classification]
+        :type: list[RawClassification]
         """
 
         self._classifications = classifications

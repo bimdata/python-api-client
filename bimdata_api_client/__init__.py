@@ -68,6 +68,7 @@ from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
+from bimdata_api_client.models.raw_classification import RawClassification
 from bimdata_api_client.models.raw_definition import RawDefinition
 from bimdata_api_client.models.raw_element import RawElement
 from bimdata_api_client.models.raw_elements import RawElements

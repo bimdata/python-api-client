@@ -33,6 +33,7 @@ class IfcChecker(object):
     """
     openapi_types = {
         'id': 'int',
+        'ifc': 'Ifc',
         'creator': 'User',
         'name': 'str',
         'checkplan_id': 'int',
@@ -44,6 +45,7 @@ class IfcChecker(object):
 
     attribute_map = {
         'id': 'id',
+        'ifc': 'ifc',
         'creator': 'creator',
         'name': 'name',
         'checkplan_id': 'checkplan_id',
@@ -53,10 +55,11 @@ class IfcChecker(object):
         'checkplan': 'checkplan'
     }
 
-    def __init__(self, id=None, creator=None, name=None, checkplan_id=None, results=None, created_at=None, updated_at=None, checkplan=None):  # noqa: E501
+    def __init__(self, id=None, ifc=None, creator=None, name=None, checkplan_id=None, results=None, created_at=None, updated_at=None, checkplan=None):  # noqa: E501
         """IfcChecker - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
+        self._ifc = None
         self._creator = None
         self._name = None
         self._checkplan_id = None
@@ -68,6 +71,8 @@ class IfcChecker(object):
 
         if id is not None:
             self.id = id
+        if ifc is not None:
+            self.ifc = ifc
         if creator is not None:
             self.creator = creator
         self.name = name
@@ -102,6 +107,27 @@ class IfcChecker(object):
         """
 
         self._id = id
+
+    @property
+    def ifc(self):
+        """Gets the ifc of this IfcChecker.  # noqa: E501
+
+
+        :return: The ifc of this IfcChecker.  # noqa: E501
+        :rtype: Ifc
+        """
+        return self._ifc
+
+    @ifc.setter
+    def ifc(self, ifc):
+        """Sets the ifc of this IfcChecker.
+
+
+        :param ifc: The ifc of this IfcChecker.  # noqa: E501
+        :type: Ifc
+        """
+
+        self._ifc = ifc
 
     @property
     def creator(self):

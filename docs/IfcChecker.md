@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
+**ifc** | [**Ifc**](Ifc.md) |  | [optional] 
 **creator** | [**User**](User.md) |  | [optional] 
 **name** | **str** |  | [optional] 
 **checkplan_id** | **int** |  | [optional] 

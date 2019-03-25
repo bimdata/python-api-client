@@ -362,6 +362,7 @@ Class | Method | HTTP request | Description
  - [ProjectRole](docs/ProjectRole.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
+ - [RawClassification](docs/RawClassification.md)
  - [RawDefinition](docs/RawDefinition.md)
  - [RawElement](docs/RawElement.md)
  - [RawElements](docs/RawElements.md)
