@@ -35,29 +35,34 @@ class PerspectiveCamera(object):
         'field_of_view': 'float',
         'camera_direction': 'Direction',
         'camera_up_vector': 'Direction',
-        'camera_view_point': 'Point'
+        'camera_view_point': 'Point',
+        'bimdata_camera_direction': 'Direction'
     }
 
     attribute_map = {
         'field_of_view': 'field_of_view',
         'camera_direction': 'camera_direction',
         'camera_up_vector': 'camera_up_vector',
-        'camera_view_point': 'camera_view_point'
+        'camera_view_point': 'camera_view_point',
+        'bimdata_camera_direction': 'bimdata_camera_direction'
     }
 
-    def __init__(self, field_of_view=None, camera_direction=None, camera_up_vector=None, camera_view_point=None):  # noqa: E501
+    def __init__(self, field_of_view=None, camera_direction=None, camera_up_vector=None, camera_view_point=None, bimdata_camera_direction=None):  # noqa: E501
         """PerspectiveCamera - a model defined in OpenAPI"""  # noqa: E501
 
         self._field_of_view = None
         self._camera_direction = None
         self._camera_up_vector = None
         self._camera_view_point = None
+        self._bimdata_camera_direction = None
         self.discriminator = None
 
         self.field_of_view = field_of_view
         self.camera_direction = camera_direction
         self.camera_up_vector = camera_up_vector
         self.camera_view_point = camera_view_point
+        if bimdata_camera_direction is not None:
+            self.bimdata_camera_direction = bimdata_camera_direction
 
     @property
     def field_of_view(self):
@@ -150,6 +155,27 @@ class PerspectiveCamera(object):
             raise ValueError("Invalid value for `camera_view_point`, must not be `None`")  # noqa: E501
 
         self._camera_view_point = camera_view_point
+
+    @property
+    def bimdata_camera_direction(self):
+        """Gets the bimdata_camera_direction of this PerspectiveCamera.  # noqa: E501
+
+
+        :return: The bimdata_camera_direction of this PerspectiveCamera.  # noqa: E501
+        :rtype: Direction
+        """
+        return self._bimdata_camera_direction
+
+    @bimdata_camera_direction.setter
+    def bimdata_camera_direction(self, bimdata_camera_direction):
+        """Sets the bimdata_camera_direction of this PerspectiveCamera.
+
+
+        :param bimdata_camera_direction: The bimdata_camera_direction of this PerspectiveCamera.  # noqa: E501
+        :type: Direction
+        """
+
+        self._bimdata_camera_direction = bimdata_camera_direction
 
     def to_dict(self):
         """Returns the model properties as a dict"""
