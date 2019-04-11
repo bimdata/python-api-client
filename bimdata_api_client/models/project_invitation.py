@@ -32,28 +32,54 @@ class ProjectInvitation(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'id': 'int',
         'email': 'str',
         'redirect_uri': 'str',
         'role': 'int'
     }
 
     attribute_map = {
+        'id': 'id',
         'email': 'email',
         'redirect_uri': 'redirect_uri',
         'role': 'role'
     }
 
-    def __init__(self, email=None, redirect_uri=None, role=None):  # noqa: E501
+    def __init__(self, id=None, email=None, redirect_uri=None, role=None):  # noqa: E501
         """ProjectInvitation - a model defined in OpenAPI"""  # noqa: E501
 
+        self._id = None
         self._email = None
         self._redirect_uri = None
         self._role = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         self.email = email
         self.redirect_uri = redirect_uri
         self.role = role
+
+    @property
+    def id(self):
+        """Gets the id of this ProjectInvitation.  # noqa: E501
+
+
+        :return: The id of this ProjectInvitation.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this ProjectInvitation.
+
+
+        :param id: The id of this ProjectInvitation.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def email(self):
