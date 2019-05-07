@@ -79,6 +79,7 @@ class CloudRole(object):
     def role(self):
         """Gets the role of this CloudRole.  # noqa: E501
 
+        Role of the user in the cloud  # noqa: E501
 
         :return: The role of this CloudRole.  # noqa: E501
         :rtype: int
@@ -89,6 +90,7 @@ class CloudRole(object):
     def role(self, role):
         """Sets the role of this CloudRole.
 
+        Role of the user in the cloud  # noqa: E501
 
         :param role: The role of this CloudRole.  # noqa: E501
         :type: int

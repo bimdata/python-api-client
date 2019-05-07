@@ -85,6 +85,7 @@ class Classification(object):
     def name(self):
         """Gets the name of this Classification.  # noqa: E501
 
+        Name of the clasification (uniformat, Untec, custom, etc)  # noqa: E501
 
         :return: The name of this Classification.  # noqa: E501
         :rtype: str
@@ -95,6 +96,7 @@ class Classification(object):
     def name(self, name):
         """Sets the name of this Classification.
 
+        Name of the clasification (uniformat, Untec, custom, etc)  # noqa: E501
 
         :param name: The name of this Classification.  # noqa: E501
         :type: str
@@ -106,6 +108,7 @@ class Classification(object):
     def notation(self):
         """Gets the notation of this Classification.  # noqa: E501
 
+        Code of the classification  # noqa: E501
 
         :return: The notation of this Classification.  # noqa: E501
         :rtype: str
@@ -116,6 +119,7 @@ class Classification(object):
     def notation(self, notation):
         """Sets the notation of this Classification.
 
+        Code of the classification  # noqa: E501
 
         :param notation: The notation of this Classification.  # noqa: E501
         :type: str
@@ -127,6 +131,7 @@ class Classification(object):
     def title(self):
         """Gets the title of this Classification.  # noqa: E501
 
+        Full title of the classification  # noqa: E501
 
         :return: The title of this Classification.  # noqa: E501
         :rtype: str
@@ -137,6 +142,7 @@ class Classification(object):
     def title(self, title):
         """Sets the title of this Classification.
 
+        Full title of the classification  # noqa: E501
 
         :param title: The title of this Classification.  # noqa: E501
         :type: str

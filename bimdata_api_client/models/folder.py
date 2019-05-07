@@ -151,6 +151,7 @@ class Folder(object):
     def name(self):
         """Gets the name of this Folder.  # noqa: E501
 
+        Name of the folder  # noqa: E501
 
         :return: The name of this Folder.  # noqa: E501
         :rtype: str
@@ -161,6 +162,7 @@ class Folder(object):
     def name(self, name):
         """Sets the name of this Folder.
 
+        Name of the folder  # noqa: E501
 
         :param name: The name of this Folder.  # noqa: E501
         :type: str
@@ -178,6 +180,7 @@ class Folder(object):
     def created_at(self):
         """Gets the created_at of this Folder.  # noqa: E501
 
+        Creation date  # noqa: E501
 
         :return: The created_at of this Folder.  # noqa: E501
         :rtype: datetime
@@ -188,6 +191,7 @@ class Folder(object):
     def created_at(self, created_at):
         """Sets the created_at of this Folder.
 
+        Creation date  # noqa: E501
 
         :param created_at: The created_at of this Folder.  # noqa: E501
         :type: datetime
@@ -199,6 +203,7 @@ class Folder(object):
     def updated_at(self):
         """Gets the updated_at of this Folder.  # noqa: E501
 
+        Date of the last update  # noqa: E501
 
         :return: The updated_at of this Folder.  # noqa: E501
         :rtype: datetime
@@ -209,6 +214,7 @@ class Folder(object):
     def updated_at(self, updated_at):
         """Sets the updated_at of this Folder.
 
+        Date of the last update  # noqa: E501
 
         :param updated_at: The updated_at of this Folder.  # noqa: E501
         :type: datetime

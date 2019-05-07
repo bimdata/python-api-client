@@ -85,6 +85,7 @@ class ProjectInvitation(object):
     def email(self):
         """Gets the email of this ProjectInvitation.  # noqa: E501
 
+        email of the user to invite  # noqa: E501
 
         :return: The email of this ProjectInvitation.  # noqa: E501
         :rtype: str
@@ -95,6 +96,7 @@ class ProjectInvitation(object):
     def email(self, email):
         """Sets the email of this ProjectInvitation.
 
+        email of the user to invite  # noqa: E501
 
         :param email: The email of this ProjectInvitation.  # noqa: E501
         :type: str

@@ -32,96 +32,112 @@ class TestCloudApi(unittest.TestCase):
     def test_cancel_cloud_user_invitation(self):
         """Test case for cancel_cloud_user_invitation
 
+        Cancel a pending invitation  # noqa: E501
         """
         pass
 
     def test_create_cloud(self):
         """Test case for create_cloud
 
+        Create a cloud  # noqa: E501
         """
         pass
 
     def test_create_demo(self):
         """Test case for create_demo
 
+        Create a Demo project in a cloud  # noqa: E501
         """
         pass
 
     def test_delete_cloud(self):
         """Test case for delete_cloud
 
+        Delete a cloud  # noqa: E501
         """
         pass
 
     def test_delete_cloud_user(self):
         """Test case for delete_cloud_user
 
+        Remove a user from a cloud  # noqa: E501
         """
         pass
 
     def test_full_update_cloud(self):
         """Test case for full_update_cloud
 
+        Update all fields of a cloud  # noqa: E501
         """
         pass
 
     def test_full_update_cloud_user(self):
         """Test case for full_update_cloud_user
 
+        Update all fields of a cloud user  # noqa: E501
         """
         pass
 
     def test_get_cloud(self):
         """Test case for get_cloud
 
+        Retrieve one cloud  # noqa: E501
         """
         pass
 
     def test_get_cloud_invitations(self):
         """Test case for get_cloud_invitations
 
+        Retrieve all pending invitations in the cloud  # noqa: E501
         """
         pass
 
     def test_get_cloud_size(self):
         """Test case for get_cloud_size
 
+        Get size of all files in the cloud  # noqa: E501
         """
         pass
 
     def test_get_cloud_user(self):
         """Test case for get_cloud_user
 
+        Retrieve a user in a cloud  # noqa: E501
         """
         pass
 
     def test_get_cloud_users(self):
         """Test case for get_cloud_users
 
+        Retrieve all users in a cloud  # noqa: E501
         """
         pass
 
     def test_get_clouds(self):
         """Test case for get_clouds
 
+        Retrieve all clouds  # noqa: E501
         """
         pass
 
     def test_invite_cloud_user(self):
         """Test case for invite_cloud_user
 
+        Invite a cloud administrator  # noqa: E501
         """
         pass
 
     def test_update_cloud(self):
         """Test case for update_cloud
 
+        Update some fields of a cloud  # noqa: E501
         """
         pass
 
     def test_update_cloud_user(self):
         """Test case for update_cloud_user
 
+        Update some fields of a cloud user  # noqa: E501
         """
         pass
 

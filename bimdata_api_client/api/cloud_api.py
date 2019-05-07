@@ -34,8 +34,9 @@ class CloudApi(object):
         self.api_client = api_client
 
     def cancel_cloud_user_invitation(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """cancel_cloud_user_invitation  # noqa: E501
+        """Cancel a pending invitation  # noqa: E501
 
+        Cancel a pending invitation Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.cancel_cloud_user_invitation(cloud_pk, id, async_req=True)
@@ -56,8 +57,9 @@ class CloudApi(object):
             return data
 
     def cancel_cloud_user_invitation_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """cancel_cloud_user_invitation  # noqa: E501
+        """Cancel a pending invitation  # noqa: E501
 
+        Cancel a pending invitation Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.cancel_cloud_user_invitation_with_http_info(cloud_pk, id, async_req=True)
@@ -132,8 +134,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def create_cloud(self, cloud, **kwargs):  # noqa: E501
-        """create_cloud  # noqa: E501
+        """Create a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_cloud(cloud, async_req=True)
@@ -153,8 +156,9 @@ class CloudApi(object):
             return data
 
     def create_cloud_with_http_info(self, cloud, **kwargs):  # noqa: E501
-        """create_cloud  # noqa: E501
+        """Create a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_cloud_with_http_info(cloud, async_req=True)
@@ -230,9 +234,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def create_demo(self, id, **kwargs):  # noqa: E501
-        """create_demo  # noqa: E501
+        """Create a Demo project in a cloud  # noqa: E501
 
-        Create a demo project with a pre-populated IFC and its data  # noqa: E501
+        Create a demo project with a pre-populated IFC and its data Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_demo(id, async_req=True)
@@ -252,9 +256,9 @@ class CloudApi(object):
             return data
 
     def create_demo_with_http_info(self, id, **kwargs):  # noqa: E501
-        """create_demo  # noqa: E501
+        """Create a Demo project in a cloud  # noqa: E501
 
-        Create a demo project with a pre-populated IFC and its data  # noqa: E501
+        Create a demo project with a pre-populated IFC and its data Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_demo_with_http_info(id, async_req=True)
@@ -326,8 +330,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def delete_cloud(self, id, **kwargs):  # noqa: E501
-        """delete_cloud  # noqa: E501
+        """Delete a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_cloud(id, async_req=True)
@@ -347,8 +352,9 @@ class CloudApi(object):
             return data
 
     def delete_cloud_with_http_info(self, id, **kwargs):  # noqa: E501
-        """delete_cloud  # noqa: E501
+        """Delete a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_cloud_with_http_info(id, async_req=True)
@@ -416,8 +422,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def delete_cloud_user(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """delete_cloud_user  # noqa: E501
+        """Remove a user from a cloud  # noqa: E501
 
+        The user will also be removed from all the projects of the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_cloud_user(cloud_pk, id, async_req=True)
@@ -438,8 +445,9 @@ class CloudApi(object):
             return data
 
     def delete_cloud_user_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """delete_cloud_user  # noqa: E501
+        """Remove a user from a cloud  # noqa: E501
 
+        The user will also be removed from all the projects of the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_cloud_user_with_http_info(cloud_pk, id, async_req=True)
@@ -514,8 +522,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def full_update_cloud(self, id, cloud, **kwargs):  # noqa: E501
-        """full_update_cloud  # noqa: E501
+        """Update all fields of a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_cloud(id, cloud, async_req=True)
@@ -536,8 +545,9 @@ class CloudApi(object):
             return data
 
     def full_update_cloud_with_http_info(self, id, cloud, **kwargs):  # noqa: E501
-        """full_update_cloud  # noqa: E501
+        """Update all fields of a cloud  # noqa: E501
 
+         Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_cloud_with_http_info(id, cloud, async_req=True)
@@ -620,9 +630,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def full_update_cloud_user(self, cloud_pk, id, user_cloud_update, **kwargs):  # noqa: E501
-        """full_update_cloud_user  # noqa: E501
+        """Update all fields of a cloud user  # noqa: E501
 
-        Change the user role in the cloud  # noqa: E501
+        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_cloud_user(cloud_pk, id, user_cloud_update, async_req=True)
@@ -644,9 +654,9 @@ class CloudApi(object):
             return data
 
     def full_update_cloud_user_with_http_info(self, cloud_pk, id, user_cloud_update, **kwargs):  # noqa: E501
-        """full_update_cloud_user  # noqa: E501
+        """Update all fields of a cloud user  # noqa: E501
 
-        Change the user role in the cloud  # noqa: E501
+        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_cloud_user_with_http_info(cloud_pk, id, user_cloud_update, async_req=True)
@@ -736,7 +746,7 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_cloud(self, id, **kwargs):  # noqa: E501
-        """get_cloud  # noqa: E501
+        """Retrieve one cloud  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -757,7 +767,7 @@ class CloudApi(object):
             return data
 
     def get_cloud_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get_cloud  # noqa: E501
+        """Retrieve one cloud  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
@@ -830,8 +840,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_invitations(self, cloud_pk, **kwargs):  # noqa: E501
-        """get_cloud_invitations  # noqa: E501
+        """Retrieve all pending invitations in the cloud  # noqa: E501
 
+        Returns app's invitations only Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_invitations(cloud_pk, async_req=True)
@@ -851,8 +862,9 @@ class CloudApi(object):
             return data
 
     def get_cloud_invitations_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
-        """get_cloud_invitations  # noqa: E501
+        """Retrieve all pending invitations in the cloud  # noqa: E501
 
+        Returns app's invitations only Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_invitations_with_http_info(cloud_pk, async_req=True)
@@ -924,7 +936,7 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_size(self, id, **kwargs):  # noqa: E501
-        """get_cloud_size  # noqa: E501
+        """Get size of all files in the cloud  # noqa: E501
 
         Returns the size of the cloud in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -946,7 +958,7 @@ class CloudApi(object):
             return data
 
     def get_cloud_size_with_http_info(self, id, **kwargs):  # noqa: E501
-        """get_cloud_size  # noqa: E501
+        """Get size of all files in the cloud  # noqa: E501
 
         Returns the size of the cloud in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -1020,8 +1032,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_user(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """get_cloud_user  # noqa: E501
+        """Retrieve a user in a cloud  # noqa: E501
 
+        Only administrators can see a cloud member Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_user(cloud_pk, id, async_req=True)
@@ -1042,8 +1055,9 @@ class CloudApi(object):
             return data
 
     def get_cloud_user_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """get_cloud_user  # noqa: E501
+        """Retrieve a user in a cloud  # noqa: E501
 
+        Only administrators can see a cloud member Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_user_with_http_info(cloud_pk, id, async_req=True)
@@ -1122,8 +1136,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_users(self, cloud_pk, **kwargs):  # noqa: E501
-        """get_cloud_users  # noqa: E501
+        """Retrieve all users in a cloud  # noqa: E501
 
+        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users(cloud_pk, async_req=True)
@@ -1143,8 +1158,9 @@ class CloudApi(object):
             return data
 
     def get_cloud_users_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
-        """get_cloud_users  # noqa: E501
+        """Retrieve all users in a cloud  # noqa: E501
 
+        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users_with_http_info(cloud_pk, async_req=True)
@@ -1216,9 +1232,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def get_clouds(self, **kwargs):  # noqa: E501
-        """get_clouds  # noqa: E501
+        """Retrieve all clouds  # noqa: E501
 
-        Returns user's cloud only  # noqa: E501
+        Returns user's (or app's) clouds only  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_clouds(async_req=True)
@@ -1237,9 +1253,9 @@ class CloudApi(object):
             return data
 
     def get_clouds_with_http_info(self, **kwargs):  # noqa: E501
-        """get_clouds  # noqa: E501
+        """Retrieve all clouds  # noqa: E501
 
-        Returns user's cloud only  # noqa: E501
+        Returns user's (or app's) clouds only  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_clouds_with_http_info(async_req=True)
@@ -1304,9 +1320,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def invite_cloud_user(self, cloud_pk, cloud_invitation, **kwargs):  # noqa: E501
-        """invite_cloud_user  # noqa: E501
+        """Invite a cloud administrator  # noqa: E501
 
-                     When inviting someone already having a pending invitation, it will not update the invitation but simply send the user a new invitation mail           # noqa: E501
+        Invite cloud administrators only. To invite in a project, see inviteProjectUser. You can't invite a user already in the cloud. Create multiple invitations of the same email in the same cloud will generate multiple invitation emails but not multiple invitation object Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invite_cloud_user(cloud_pk, cloud_invitation, async_req=True)
@@ -1327,9 +1343,9 @@ class CloudApi(object):
             return data
 
     def invite_cloud_user_with_http_info(self, cloud_pk, cloud_invitation, **kwargs):  # noqa: E501
-        """invite_cloud_user  # noqa: E501
+        """Invite a cloud administrator  # noqa: E501
 
-                     When inviting someone already having a pending invitation, it will not update the invitation but simply send the user a new invitation mail           # noqa: E501
+        Invite cloud administrators only. To invite in a project, see inviteProjectUser. You can't invite a user already in the cloud. Create multiple invitations of the same email in the same cloud will generate multiple invitation emails but not multiple invitation object Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.invite_cloud_user_with_http_info(cloud_pk, cloud_invitation, async_req=True)
@@ -1412,8 +1428,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def update_cloud(self, id, cloud, **kwargs):  # noqa: E501
-        """update_cloud  # noqa: E501
+        """Update some fields of a cloud  # noqa: E501
 
+        Update some fields of a cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_cloud(id, cloud, async_req=True)
@@ -1434,8 +1451,9 @@ class CloudApi(object):
             return data
 
     def update_cloud_with_http_info(self, id, cloud, **kwargs):  # noqa: E501
-        """update_cloud  # noqa: E501
+        """Update some fields of a cloud  # noqa: E501
 
+        Update some fields of a cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_cloud_with_http_info(id, cloud, async_req=True)
@@ -1518,9 +1536,9 @@ class CloudApi(object):
             collection_formats=collection_formats)
 
     def update_cloud_user(self, cloud_pk, id, user_cloud_update, **kwargs):  # noqa: E501
-        """update_cloud_user  # noqa: E501
+        """Update some fields of a cloud user  # noqa: E501
 
-        Change the user role in the cloud  # noqa: E501
+        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_cloud_user(cloud_pk, id, user_cloud_update, async_req=True)
@@ -1542,9 +1560,9 @@ class CloudApi(object):
             return data
 
     def update_cloud_user_with_http_info(self, cloud_pk, id, user_cloud_update, **kwargs):  # noqa: E501
-        """update_cloud_user  # noqa: E501
+        """Update some fields of a cloud user  # noqa: E501
 
-        Change the user role in the cloud  # noqa: E501
+        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_cloud_user_with_http_info(cloud_pk, id, user_cloud_update, async_req=True)

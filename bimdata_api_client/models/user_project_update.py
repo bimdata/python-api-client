@@ -52,6 +52,7 @@ class UserProjectUpdate(object):
     def role(self):
         """Gets the role of this UserProjectUpdate.  # noqa: E501
 
+        User's role in the project  # noqa: E501
 
         :return: The role of this UserProjectUpdate.  # noqa: E501
         :rtype: int
@@ -62,6 +63,7 @@ class UserProjectUpdate(object):
     def role(self, role):
         """Sets the role of this UserProjectUpdate.
 
+        User's role in the project  # noqa: E501
 
         :param role: The role of this UserProjectUpdate.  # noqa: E501
         :type: int

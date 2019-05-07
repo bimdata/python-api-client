@@ -77,6 +77,7 @@ class BcfProject(object):
     def name(self):
         """Gets the name of this BcfProject.  # noqa: E501
 
+        Name of the project  # noqa: E501
 
         :return: The name of this BcfProject.  # noqa: E501
         :rtype: str
@@ -87,6 +88,7 @@ class BcfProject(object):
     def name(self, name):
         """Sets the name of this BcfProject.
 
+        Name of the project  # noqa: E501
 
         :param name: The name of this BcfProject.  # noqa: E501
         :type: str

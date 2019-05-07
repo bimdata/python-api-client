@@ -55,6 +55,7 @@ class Feature(object):
     def name(self):
         """Gets the name of this Feature.  # noqa: E501
 
+        Name of the feature  # noqa: E501
 
         :return: The name of this Feature.  # noqa: E501
         :rtype: str
@@ -65,6 +66,7 @@ class Feature(object):
     def name(self, name):
         """Sets the name of this Feature.
 
+        Name of the feature  # noqa: E501
 
         :param name: The name of this Feature.  # noqa: E501
         :type: str
@@ -82,6 +84,7 @@ class Feature(object):
     def viewer_url(self):
         """Gets the viewer_url of this Feature.  # noqa: E501
 
+        Viewer's url to load instead of standard's one  # noqa: E501
 
         :return: The viewer_url of this Feature.  # noqa: E501
         :rtype: str
@@ -92,6 +95,7 @@ class Feature(object):
     def viewer_url(self, viewer_url):
         """Sets the viewer_url of this Feature.
 
+        Viewer's url to load instead of standard's one  # noqa: E501
 
         :param viewer_url: The viewer_url of this Feature.  # noqa: E501
         :type: str

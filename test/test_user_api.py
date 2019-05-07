@@ -29,12 +29,6 @@ class TestUserApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_get_self_projects(self):
-        """Test case for get_self_projects
-
-        """
-        pass
-
     def test_get_self_user(self):
         """Test case for get_self_user
 
@@ -43,6 +37,12 @@ class TestUserApi(unittest.TestCase):
 
     def test_update_self_user(self):
         """Test case for update_self_user
+
+        """
+        pass
+
+    def test_user_projects_list(self):
+        """Test case for user_projects_list
 
         """
         pass

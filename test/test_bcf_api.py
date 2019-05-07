@@ -29,309 +29,255 @@ class TestBcfApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_create_coloring(self):
-        """Test case for create_coloring
-
-        """
-        pass
-
     def test_create_comment(self):
         """Test case for create_comment
 
+        Create a comment  # noqa: E501
         """
         pass
 
     def test_create_full_topic(self):
         """Test case for create_full_topic
 
-        """
-        pass
-
-    def test_create_selection(self):
-        """Test case for create_selection
-
+        Create a Topic with viewpoints and comments  # noqa: E501
         """
         pass
 
     def test_create_topic(self):
         """Test case for create_topic
 
+        Create a topic  # noqa: E501
         """
         pass
 
     def test_create_viewpoint(self):
         """Test case for create_viewpoint
 
-        """
-        pass
-
-    def test_create_visibility(self):
-        """Test case for create_visibility
-
-        """
-        pass
-
-    def test_delete_coloring(self):
-        """Test case for delete_coloring
-
+        Create a Viewpoint  # noqa: E501
         """
         pass
 
     def test_delete_comment(self):
         """Test case for delete_comment
 
-        """
-        pass
-
-    def test_delete_selection(self):
-        """Test case for delete_selection
-
+        Delete a comment  # noqa: E501
         """
         pass
 
     def test_delete_topic(self):
         """Test case for delete_topic
 
+        Delete a topic  # noqa: E501
         """
         pass
 
     def test_delete_viewpoint(self):
         """Test case for delete_viewpoint
 
-        """
-        pass
-
-    def test_delete_visibility(self):
-        """Test case for delete_visibility
-
+        Delete a Viewpoint  # noqa: E501
         """
         pass
 
     def test_download_bcf_export(self):
         """Test case for download_bcf_export
 
+        Export project's topics in bcf-xml format  # noqa: E501
         """
         pass
 
     def test_full_update_bcf_project(self):
         """Test case for full_update_bcf_project
 
-        """
-        pass
-
-    def test_full_update_coloring(self):
-        """Test case for full_update_coloring
-
+        Update all fields of a BCF project  # noqa: E501
         """
         pass
 
     def test_full_update_comment(self):
         """Test case for full_update_comment
 
+        Update all fields of a comment  # noqa: E501
         """
         pass
 
     def test_full_update_full_topic(self):
         """Test case for full_update_full_topic
 
-        """
-        pass
-
-    def test_full_update_selection(self):
-        """Test case for full_update_selection
-
+        Update all fields of a topic  # noqa: E501
         """
         pass
 
     def test_full_update_topic(self):
         """Test case for full_update_topic
 
+        Update all fields of a topic  # noqa: E501
         """
         pass
 
     def test_full_update_viewpoint(self):
         """Test case for full_update_viewpoint
 
-        """
-        pass
-
-    def test_full_update_visibility(self):
-        """Test case for full_update_visibility
-
+        Update all fields of a Viewpoint  # noqa: E501
         """
         pass
 
     def test_get_bcf_project(self):
         """Test case for get_bcf_project
 
+        Retrieve a BCF project  # noqa: E501
         """
         pass
 
     def test_get_bcf_projects(self):
         """Test case for get_bcf_projects
 
-        """
-        pass
-
-    def test_get_coloring(self):
-        """Test case for get_coloring
-
+        Retrieve all BCF projects  # noqa: E501
         """
         pass
 
     def test_get_colorings(self):
         """Test case for get_colorings
 
+        Retrieve all colorings of a viewpoint  # noqa: E501
         """
         pass
 
     def test_get_comment(self):
         """Test case for get_comment
 
+        Retrieve a comment  # noqa: E501
         """
         pass
 
     def test_get_comments(self):
         """Test case for get_comments
 
+        Retrieve all comments  # noqa: E501
         """
         pass
 
     def test_get_extensions(self):
         """Test case for get_extensions
 
+        Retrieve project extensions  # noqa: E501
         """
         pass
 
     def test_get_full_topic(self):
         """Test case for get_full_topic
 
+        Retrieve a full topic  # noqa: E501
         """
         pass
 
     def test_get_full_topics(self):
         """Test case for get_full_topics
 
-        """
-        pass
-
-    def test_get_selection(self):
-        """Test case for get_selection
-
+        Retrieve all full topics  # noqa: E501
         """
         pass
 
     def test_get_selections(self):
         """Test case for get_selections
 
+        Retrieve all selections of a viewpoint  # noqa: E501
         """
         pass
 
     def test_get_snapshot(self):
         """Test case for get_snapshot
 
+        Retrieve the viewpoint' snapshot  # noqa: E501
         """
         pass
 
     def test_get_topic(self):
         """Test case for get_topic
 
+        Retrieve a topic  # noqa: E501
         """
         pass
 
     def test_get_topic_viewpoints(self):
         """Test case for get_topic_viewpoints
 
+        Retrieve all viewpoints attached to the topic  # noqa: E501
         """
         pass
 
     def test_get_topics(self):
         """Test case for get_topics
 
+        Retrieve all topics  # noqa: E501
         """
         pass
 
     def test_get_user(self):
         """Test case for get_user
 
+        Get current user info  # noqa: E501
         """
         pass
 
     def test_get_viewpoint(self):
         """Test case for get_viewpoint
 
+        Retrieve a Viewpoint  # noqa: E501
         """
         pass
 
     def test_get_viewpoints(self):
         """Test case for get_viewpoints
 
+        Retrieve all Viewpoints of a topic  # noqa: E501
         """
         pass
 
     def test_get_visibilities(self):
         """Test case for get_visibilities
 
-        """
-        pass
-
-    def test_get_visibility(self):
-        """Test case for get_visibility
-
+        Retrieve all visibilities of a viewpoint  # noqa: E501
         """
         pass
 
     def test_update_bcf_project(self):
         """Test case for update_bcf_project
 
-        """
-        pass
-
-    def test_update_coloring(self):
-        """Test case for update_coloring
-
+        Update some fields of a BCF project  # noqa: E501
         """
         pass
 
     def test_update_comment(self):
         """Test case for update_comment
 
+        Update some fields of a comment  # noqa: E501
         """
         pass
 
     def test_update_extensions(self):
         """Test case for update_extensions
 
+        Update project extensions  # noqa: E501
         """
         pass
 
     def test_update_full_topic(self):
         """Test case for update_full_topic
 
-        """
-        pass
-
-    def test_update_selection(self):
-        """Test case for update_selection
-
+        Update some fields of a topic  # noqa: E501
         """
         pass
 
     def test_update_topic(self):
         """Test case for update_topic
 
+        Update some fields of a topic  # noqa: E501
         """
         pass
 
     def test_update_viewpoint(self):
         """Test case for update_viewpoint
 
-        """
-        pass
-
-    def test_update_visibility(self):
-        """Test case for update_visibility
-
+        Update some fields of a Viewpoint  # noqa: E501
         """
         pass
 

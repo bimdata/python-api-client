@@ -52,6 +52,7 @@ class UserCloudUpdate(object):
     def role(self):
         """Gets the role of this UserCloudUpdate.  # noqa: E501
 
+        Role of the user in the cloud  # noqa: E501
 
         :return: The role of this UserCloudUpdate.  # noqa: E501
         :rtype: int
@@ -62,6 +63,7 @@ class UserCloudUpdate(object):
     def role(self, role):
         """Sets the role of this UserCloudUpdate.
 
+        Role of the user in the cloud  # noqa: E501
 
         :param role: The role of this UserCloudUpdate.  # noqa: E501
         :type: int

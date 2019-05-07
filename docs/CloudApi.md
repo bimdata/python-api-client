@@ -4,28 +4,30 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cancel_cloud_user_invitation**](CloudApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | 
-[**create_cloud**](CloudApi.md#create_cloud) | **POST** /cloud | 
-[**create_demo**](CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | 
-[**delete_cloud**](CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | 
-[**delete_cloud_user**](CloudApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | 
-[**full_update_cloud**](CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | 
-[**full_update_cloud_user**](CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | 
-[**get_cloud**](CloudApi.md#get_cloud) | **GET** /cloud/{id} | 
-[**get_cloud_invitations**](CloudApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | 
-[**get_cloud_size**](CloudApi.md#get_cloud_size) | **GET** /cloud/{id}/size | 
-[**get_cloud_user**](CloudApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | 
-[**get_cloud_users**](CloudApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | 
-[**get_clouds**](CloudApi.md#get_clouds) | **GET** /cloud | 
-[**invite_cloud_user**](CloudApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | 
-[**update_cloud**](CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | 
-[**update_cloud_user**](CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | 
+[**cancel_cloud_user_invitation**](CloudApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
+[**create_cloud**](CloudApi.md#create_cloud) | **POST** /cloud | Create a cloud
+[**create_demo**](CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
+[**delete_cloud**](CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
+[**delete_cloud_user**](CloudApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
+[**full_update_cloud**](CloudApi.md#full_update_cloud) | **PUT** /cloud/{id} | Update all fields of a cloud
+[**full_update_cloud_user**](CloudApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | Update all fields of a cloud user
+[**get_cloud**](CloudApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
+[**get_cloud_invitations**](CloudApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
+[**get_cloud_size**](CloudApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all files in the cloud
+[**get_cloud_user**](CloudApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
+[**get_cloud_users**](CloudApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud
+[**get_clouds**](CloudApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
+[**invite_cloud_user**](CloudApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
+[**update_cloud**](CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
+[**update_cloud_user**](CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Update some fields of a cloud user
 
 
 # **cancel_cloud_user_invitation**
 > cancel_cloud_user_invitation(cloud_pk, id)
 
+Cancel a pending invitation
 
+Cancel a pending invitation Required scopes: org:manage
 
 ### Example
 
@@ -49,6 +51,7 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
+    # Cancel a pending invitation
     api_instance.cancel_cloud_user_invitation(cloud_pk, id)
 except ApiException as e:
     print("Exception when calling CloudApi->cancel_cloud_user_invitation: %s\n" % e)
@@ -79,7 +82,9 @@ void (empty response body)
 # **create_cloud**
 > Cloud create_cloud(cloud)
 
+Create a cloud
 
+ Required scopes: cloud:manage
 
 ### Example
 
@@ -102,6 +107,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
+    # Create a cloud
     api_response = api_instance.create_cloud(cloud)
     pprint(api_response)
 except ApiException as e:
@@ -132,9 +138,9 @@ Name | Type | Description  | Notes
 # **create_demo**
 > Project create_demo(id)
 
+Create a Demo project in a cloud
 
-
-Create a demo project with a pre-populated IFC and its data
+Create a demo project with a pre-populated IFC and its data Required scopes: cloud:manage
 
 ### Example
 
@@ -157,6 +163,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
+    # Create a Demo project in a cloud
     api_response = api_instance.create_demo(id)
     pprint(api_response)
 except ApiException as e:
@@ -187,7 +194,9 @@ Name | Type | Description  | Notes
 # **delete_cloud**
 > delete_cloud(id)
 
+Delete a cloud
 
+ Required scopes: cloud:manage
 
 ### Example
 
@@ -210,6 +219,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
+    # Delete a cloud
     api_instance.delete_cloud(id)
 except ApiException as e:
     print("Exception when calling CloudApi->delete_cloud: %s\n" % e)
@@ -239,7 +249,9 @@ void (empty response body)
 # **delete_cloud_user**
 > delete_cloud_user(cloud_pk, id)
 
+Remove a user from a cloud
 
+The user will also be removed from all the projects of the cloud Required scopes: cloud:manage
 
 ### Example
 
@@ -263,6 +275,7 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 
 try:
+    # Remove a user from a cloud
     api_instance.delete_cloud_user(cloud_pk, id)
 except ApiException as e:
     print("Exception when calling CloudApi->delete_cloud_user: %s\n" % e)
@@ -293,7 +306,9 @@ void (empty response body)
 # **full_update_cloud**
 > Cloud full_update_cloud(id, cloud)
 
+Update all fields of a cloud
 
+ Required scopes: cloud:manage
 
 ### Example
 
@@ -317,6 +332,7 @@ id = 56 # int | A unique integer value identifying this cloud.
 cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
+    # Update all fields of a cloud
     api_response = api_instance.full_update_cloud(id, cloud)
     pprint(api_response)
 except ApiException as e:
@@ -348,9 +364,9 @@ Name | Type | Description  | Notes
 # **full_update_cloud_user**
 > User full_update_cloud_user(cloud_pk, id, user_cloud_update)
 
+Update all fields of a cloud user
 
-
-Change the user role in the cloud
+Change the user role in the cloud Required scopes: cloud:manage
 
 ### Example
 
@@ -375,6 +391,7 @@ id = 'id_example' # str |
 user_cloud_update = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
 try:
+    # Update all fields of a cloud user
     api_response = api_instance.full_update_cloud_user(cloud_pk, id, user_cloud_update)
     pprint(api_response)
 except ApiException as e:
@@ -407,7 +424,7 @@ Name | Type | Description  | Notes
 # **get_cloud**
 > Cloud get_cloud(id)
 
-
+Retrieve one cloud
 
 ### Example
 
@@ -430,6 +447,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
+    # Retrieve one cloud
     api_response = api_instance.get_cloud(id)
     pprint(api_response)
 except ApiException as e:
@@ -460,7 +478,9 @@ Name | Type | Description  | Notes
 # **get_cloud_invitations**
 > list[CloudInvitation] get_cloud_invitations(cloud_pk)
 
+Retrieve all pending invitations in the cloud
 
+Returns app's invitations only Required scopes: org:manage
 
 ### Example
 
@@ -483,6 +503,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
+    # Retrieve all pending invitations in the cloud
     api_response = api_instance.get_cloud_invitations(cloud_pk)
     pprint(api_response)
 except ApiException as e:
@@ -513,7 +534,7 @@ Name | Type | Description  | Notes
 # **get_cloud_size**
 > int get_cloud_size(id)
 
-
+Get size of all files in the cloud
 
 Returns the size of the cloud in Bytes
 
@@ -538,6 +559,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
+    # Get size of all files in the cloud
     api_response = api_instance.get_cloud_size(id)
     pprint(api_response)
 except ApiException as e:
@@ -568,7 +590,9 @@ Name | Type | Description  | Notes
 # **get_cloud_user**
 > User get_cloud_user(cloud_pk, id)
 
+Retrieve a user in a cloud
 
+Only administrators can see a cloud member Required scopes: cloud:read
 
 ### Example
 
@@ -592,6 +616,7 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 
 try:
+    # Retrieve a user in a cloud
     api_response = api_instance.get_cloud_user(cloud_pk, id)
     pprint(api_response)
 except ApiException as e:
@@ -623,7 +648,9 @@ Name | Type | Description  | Notes
 # **get_cloud_users**
 > list[User] get_cloud_users(cloud_pk)
 
+Retrieve all users in a cloud
 
+Only administrators can see all cloud members Required scopes: cloud:read
 
 ### Example
 
@@ -646,6 +673,7 @@ api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configur
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
+    # Retrieve all users in a cloud
     api_response = api_instance.get_cloud_users(cloud_pk)
     pprint(api_response)
 except ApiException as e:
@@ -676,9 +704,9 @@ Name | Type | Description  | Notes
 # **get_clouds**
 > list[Cloud] get_clouds()
 
+Retrieve all clouds
 
-
-Returns user's cloud only
+Returns user's (or app's) clouds only
 
 ### Example
 
@@ -700,6 +728,7 @@ configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
 
 try:
+    # Retrieve all clouds
     api_response = api_instance.get_clouds()
     pprint(api_response)
 except ApiException as e:
@@ -727,9 +756,9 @@ This endpoint does not need any parameter.
 # **invite_cloud_user**
 > CloudInvitation invite_cloud_user(cloud_pk, cloud_invitation)
 
+Invite a cloud administrator
 
-
-             When inviting someone already having a pending invitation, it will not update the invitation but simply send the user a new invitation mail         
+Invite cloud administrators only. To invite in a project, see inviteProjectUser. You can't invite a user already in the cloud. Create multiple invitations of the same email in the same cloud will generate multiple invitation emails but not multiple invitation object Required scopes: org:manage
 
 ### Example
 
@@ -753,6 +782,7 @@ cloud_pk = 'cloud_pk_example' # str |
 cloud_invitation = bimdata_api_client.CloudInvitation() # CloudInvitation | 
 
 try:
+    # Invite a cloud administrator
     api_response = api_instance.invite_cloud_user(cloud_pk, cloud_invitation)
     pprint(api_response)
 except ApiException as e:
@@ -784,7 +814,9 @@ Name | Type | Description  | Notes
 # **update_cloud**
 > Cloud update_cloud(id, cloud)
 
+Update some fields of a cloud
 
+Update some fields of a cloud Required scopes: cloud:manage
 
 ### Example
 
@@ -808,6 +840,7 @@ id = 56 # int | A unique integer value identifying this cloud.
 cloud = bimdata_api_client.Cloud() # Cloud | 
 
 try:
+    # Update some fields of a cloud
     api_response = api_instance.update_cloud(id, cloud)
     pprint(api_response)
 except ApiException as e:
@@ -839,9 +872,9 @@ Name | Type | Description  | Notes
 # **update_cloud_user**
 > User update_cloud_user(cloud_pk, id, user_cloud_update)
 
+Update some fields of a cloud user
 
-
-Change the user role in the cloud
+Change the user role in the cloud Required scopes: cloud:manage
 
 ### Example
 
@@ -866,6 +899,7 @@ id = 'id_example' # str |
 user_cloud_update = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
 try:
+    # Update some fields of a cloud user
     api_response = api_instance.update_cloud_user(cloud_pk, id, user_cloud_update)
     pprint(api_response)
 except ApiException as e:

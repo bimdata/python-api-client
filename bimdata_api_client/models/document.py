@@ -209,6 +209,7 @@ class Document(object):
     def name(self):
         """Gets the name of this Document.  # noqa: E501
 
+        Shown name of the file  # noqa: E501
 
         :return: The name of this Document.  # noqa: E501
         :rtype: str
@@ -219,6 +220,7 @@ class Document(object):
     def name(self, name):
         """Sets the name of this Document.
 
+        Shown name of the file  # noqa: E501
 
         :param name: The name of this Document.  # noqa: E501
         :type: str
@@ -236,6 +238,7 @@ class Document(object):
     def file_name(self):
         """Gets the file_name of this Document.  # noqa: E501
 
+        Full name of the file  # noqa: E501
 
         :return: The file_name of this Document.  # noqa: E501
         :rtype: str
@@ -246,6 +249,7 @@ class Document(object):
     def file_name(self, file_name):
         """Sets the file_name of this Document.
 
+        Full name of the file  # noqa: E501
 
         :param file_name: The file_name of this Document.  # noqa: E501
         :type: str
@@ -259,6 +263,7 @@ class Document(object):
     def description(self):
         """Gets the description of this Document.  # noqa: E501
 
+        Description of the file  # noqa: E501
 
         :return: The description of this Document.  # noqa: E501
         :rtype: str
@@ -269,6 +274,7 @@ class Document(object):
     def description(self, description):
         """Sets the description of this Document.
 
+        Description of the file  # noqa: E501
 
         :param description: The description of this Document.  # noqa: E501
         :type: str
@@ -301,6 +307,7 @@ class Document(object):
     def size(self):
         """Gets the size of this Document.  # noqa: E501
 
+        Size of the file. The file may be compressed and show a smaller size  # noqa: E501
 
         :return: The size of this Document.  # noqa: E501
         :rtype: int
@@ -311,6 +318,7 @@ class Document(object):
     def size(self, size):
         """Sets the size of this Document.
 
+        Size of the file. The file may be compressed and show a smaller size  # noqa: E501
 
         :param size: The size of this Document.  # noqa: E501
         :type: int
@@ -326,6 +334,7 @@ class Document(object):
     def created_at(self):
         """Gets the created_at of this Document.  # noqa: E501
 
+        Creation date  # noqa: E501
 
         :return: The created_at of this Document.  # noqa: E501
         :rtype: datetime
@@ -336,6 +345,7 @@ class Document(object):
     def created_at(self, created_at):
         """Sets the created_at of this Document.
 
+        Creation date  # noqa: E501
 
         :param created_at: The created_at of this Document.  # noqa: E501
         :type: datetime
@@ -347,6 +357,7 @@ class Document(object):
     def updated_at(self):
         """Gets the updated_at of this Document.  # noqa: E501
 
+        Date of the last update  # noqa: E501
 
         :return: The updated_at of this Document.  # noqa: E501
         :rtype: datetime
@@ -357,6 +368,7 @@ class Document(object):
     def updated_at(self, updated_at):
         """Sets the updated_at of this Document.
 
+        Date of the last update  # noqa: E501
 
         :param updated_at: The updated_at of this Document.  # noqa: E501
         :type: datetime

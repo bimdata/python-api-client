@@ -6,10 +6,10 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **logo** | **str** |  | [optional] 
 **cloud** | [**Cloud**](Cloud.md) |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** | Name of the project | 
 **status** | **str** |  | [optional] 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
+**created_at** | **datetime** | Creation date | [optional] 
+**updated_at** | **datetime** | Date of the last update | [optional] 
 **root_folder_id** | **str** |  | [optional] 
 **property_permissions_enabled** | **bool** |  | [optional] 
 

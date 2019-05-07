@@ -4,76 +4,21 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cloud_webhook_ping**](ApplicationApi.md#cloud_webhook_ping) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | 
-[**create_web_hook**](ApplicationApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | 
-[**delete_web_hook**](ApplicationApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | 
-[**full_update_web_hook**](ApplicationApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | 
-[**get_web_hook**](ApplicationApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | 
-[**get_web_hooks**](ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | 
-[**update_web_hook**](ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | 
+[**create_web_hook**](ApplicationApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | Create a new Webhook
+[**delete_web_hook**](ApplicationApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | Delete a webhook
+[**full_update_web_hook**](ApplicationApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | Update all field of a webhook
+[**get_web_hook**](ApplicationApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | Retrieve one configured webhook
+[**get_web_hooks**](ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | Retrieve all configured webhooks
+[**ping_web_hook**](ApplicationApi.md#ping_web_hook) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | Test a webhook
+[**update_web_hook**](ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | Update some field of a webhook
 
-
-# **cloud_webhook_ping**
-> WebHook cloud_webhook_ping(cloud_pk, id, web_hook)
-
-
-
-### Example
-
-* Api Key Authentication (Bearer): 
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration()
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
-web_hook = bimdata_api_client.WebHook() # WebHook | 
-
-try:
-    api_response = api_instance.cloud_webhook_ping(cloud_pk, id, web_hook)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ApplicationApi->cloud_webhook_ping: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
- **web_hook** | [**WebHook**](WebHook.md)|  | 
-
-### Return type
-
-[**WebHook**](WebHook.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_web_hook**
 > WebHook create_web_hook(cloud_pk, web_hook)
 
+Create a new Webhook
 
+Create a new Webhook Required scopes: webhook:manage
 
 ### Example
 
@@ -97,6 +42,7 @@ cloud_pk = 'cloud_pk_example' # str |
 web_hook = bimdata_api_client.WebHook() # WebHook | 
 
 try:
+    # Create a new Webhook
     api_response = api_instance.create_web_hook(cloud_pk, web_hook)
     pprint(api_response)
 except ApiException as e:
@@ -128,7 +74,9 @@ Name | Type | Description  | Notes
 # **delete_web_hook**
 > delete_web_hook(cloud_pk, id)
 
+Delete a webhook
 
+Delete a webhook Required scopes: webhook:manage
 
 ### Example
 
@@ -152,6 +100,7 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 
 try:
+    # Delete a webhook
     api_instance.delete_web_hook(cloud_pk, id)
 except ApiException as e:
     print("Exception when calling ApplicationApi->delete_web_hook: %s\n" % e)
@@ -182,7 +131,9 @@ void (empty response body)
 # **full_update_web_hook**
 > WebHook full_update_web_hook(cloud_pk, id, web_hook)
 
+Update all field of a webhook
 
+Update all field of a webhook Required scopes: webhook:manage
 
 ### Example
 
@@ -207,6 +158,7 @@ id = 'id_example' # str |
 web_hook = bimdata_api_client.WebHook() # WebHook | 
 
 try:
+    # Update all field of a webhook
     api_response = api_instance.full_update_web_hook(cloud_pk, id, web_hook)
     pprint(api_response)
 except ApiException as e:
@@ -239,7 +191,9 @@ Name | Type | Description  | Notes
 # **get_web_hook**
 > WebHook get_web_hook(cloud_pk, id)
 
+Retrieve one configured webhook
 
+Retrieve one configured webhook Required scopes: webhook:manage
 
 ### Example
 
@@ -263,6 +217,7 @@ cloud_pk = 'cloud_pk_example' # str |
 id = 'id_example' # str | 
 
 try:
+    # Retrieve one configured webhook
     api_response = api_instance.get_web_hook(cloud_pk, id)
     pprint(api_response)
 except ApiException as e:
@@ -294,7 +249,9 @@ Name | Type | Description  | Notes
 # **get_web_hooks**
 > list[WebHook] get_web_hooks(cloud_pk)
 
+Retrieve all configured webhooks
 
+Retrieve all configured webhooks Required scopes: webhook:manage
 
 ### Example
 
@@ -317,6 +274,7 @@ api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(co
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
+    # Retrieve all configured webhooks
     api_response = api_instance.get_web_hooks(cloud_pk)
     pprint(api_response)
 except ApiException as e:
@@ -344,10 +302,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_web_hook**
-> WebHook update_web_hook(cloud_pk, id, web_hook)
+# **ping_web_hook**
+> WebHook ping_web_hook(cloud_pk, id, web_hook)
 
+Test a webhook
 
+Trigger a Ping Event sending {\"ok\": true} to the webhook URL. Useful to test your app Required scopes: webhook:manage
 
 ### Example
 
@@ -372,6 +332,67 @@ id = 'id_example' # str |
 web_hook = bimdata_api_client.WebHook() # WebHook | 
 
 try:
+    # Test a webhook
+    api_response = api_instance.ping_web_hook(cloud_pk, id, web_hook)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ApplicationApi->ping_web_hook: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **web_hook** | [**WebHook**](WebHook.md)|  | 
+
+### Return type
+
+[**WebHook**](WebHook.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_web_hook**
+> WebHook update_web_hook(cloud_pk, id, web_hook)
+
+Update some field of a webhook
+
+Update some field of a webhook Required scopes: webhook:manage
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+web_hook = bimdata_api_client.WebHook() # WebHook | 
+
+try:
+    # Update some field of a webhook
     api_response = api_instance.update_web_hook(cloud_pk, id, web_hook)
     pprint(api_response)
 except ApiException as e:

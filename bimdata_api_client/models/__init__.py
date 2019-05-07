@@ -36,6 +36,7 @@ from bimdata_api_client.models.element_property_set_relation import ElementPrope
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder
+from bimdata_api_client.models.full_topic import FullTopic
 from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_checker import IfcChecker
 from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan
@@ -65,7 +66,6 @@ from bimdata_api_client.models.rule_component import RuleComponent
 from bimdata_api_client.models.ruleset import Ruleset
 from bimdata_api_client.models.self_bcf_user import SelfBcfUser
 from bimdata_api_client.models.self_user import SelfUser
-from bimdata_api_client.models.single_json_topic import SingleJsonTopic
 from bimdata_api_client.models.snapshot import Snapshot
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.stage import Stage

@@ -1,4 +1,4 @@
-# SingleJsonTopic
+# FullTopic
 
 ## Properties
 Name | Type | Description | Notes

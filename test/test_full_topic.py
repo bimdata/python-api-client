@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.single_json_topic import SingleJsonTopic  # noqa: E501
+from bimdata_api_client.models.full_topic import FullTopic  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestSingleJsonTopic(unittest.TestCase):
-    """SingleJsonTopic unit test stubs"""
+class TestFullTopic(unittest.TestCase):
+    """FullTopic unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestSingleJsonTopic(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testSingleJsonTopic(self):
-        """Test SingleJsonTopic"""
+    def testFullTopic(self):
+        """Test FullTopic"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.single_json_topic.SingleJsonTopic()  # noqa: E501
+        # model = bimdata_api_client.models.full_topic.FullTopic()  # noqa: E501
         pass
 
 

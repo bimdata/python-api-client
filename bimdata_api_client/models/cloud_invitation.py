@@ -86,6 +86,7 @@ class CloudInvitation(object):
     def email(self):
         """Gets the email of this CloudInvitation.  # noqa: E501
 
+        email of the user to invite  # noqa: E501
 
         :return: The email of this CloudInvitation.  # noqa: E501
         :rtype: str
@@ -96,6 +97,7 @@ class CloudInvitation(object):
     def email(self, email):
         """Sets the email of this CloudInvitation.
 
+        email of the user to invite  # noqa: E501
 
         :param email: The email of this CloudInvitation.  # noqa: E501
         :type: str

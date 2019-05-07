@@ -6,9 +6,9 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **parent_id** | **int** |  | [optional] 
 **type** | **str** | Value is \&quot;Folder\&quot;. It is usefull to parse the tree and discriminate folders and files | [optional] 
-**name** | **str** |  | 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
+**name** | **str** | Name of the folder | 
+**created_at** | **datetime** | Creation date | [optional] 
+**updated_at** | **datetime** | Date of the last update | [optional] 
 **children** | [**list[Folder]**](Folder.md) |  | [optional] 
 **created_by** | [**User**](User.md) |  | [optional] 
 

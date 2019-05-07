@@ -29,45 +29,52 @@ class TestApplicationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_cloud_webhook_ping(self):
-        """Test case for cloud_webhook_ping
-
-        """
-        pass
-
     def test_create_web_hook(self):
         """Test case for create_web_hook
 
+        Create a new Webhook  # noqa: E501
         """
         pass
 
     def test_delete_web_hook(self):
         """Test case for delete_web_hook
 
+        Delete a webhook  # noqa: E501
         """
         pass
 
     def test_full_update_web_hook(self):
         """Test case for full_update_web_hook
 
+        Update all field of a webhook  # noqa: E501
         """
         pass
 
     def test_get_web_hook(self):
         """Test case for get_web_hook
 
+        Retrieve one configured webhook  # noqa: E501
         """
         pass
 
     def test_get_web_hooks(self):
         """Test case for get_web_hooks
 
+        Retrieve all configured webhooks  # noqa: E501
+        """
+        pass
+
+    def test_ping_web_hook(self):
+        """Test case for ping_web_hook
+
+        Test a webhook  # noqa: E501
         """
         pass
 
     def test_update_web_hook(self):
         """Test case for update_web_hook
 
+        Update some field of a webhook  # noqa: E501
         """
         pass
 
