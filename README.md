@@ -271,23 +271,23 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *ProjectApi* | [**cancel_project_user_invitation**](docs/ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
 *ProjectApi* | [**create_classification**](docs/ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
-*ProjectApi* | [**create_classification_0**](docs/ProjectApi.md#create_classification_0) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a classification
+*ProjectApi* | [**create_document**](docs/ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *ProjectApi* | [**create_folder**](docs/ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
 *ProjectApi* | [**create_project**](docs/ProjectApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
 *ProjectApi* | [**delete_classification**](docs/ProjectApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
-*ProjectApi* | [**delete_classification_0**](docs/ProjectApi.md#delete_classification_0) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete a classification
+*ProjectApi* | [**delete_document**](docs/ProjectApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
 *ProjectApi* | [**delete_folder**](docs/ProjectApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
 *ProjectApi* | [**delete_project**](docs/ProjectApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
 *ProjectApi* | [**delete_project_user**](docs/ProjectApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
 *ProjectApi* | [**full_update_classification**](docs/ProjectApi.md#full_update_classification) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update all fields of a classification
-*ProjectApi* | [**full_update_classification_0**](docs/ProjectApi.md#full_update_classification_0) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update all fields of a classification
+*ProjectApi* | [**full_update_document**](docs/ProjectApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update all fields of the document
 *ProjectApi* | [**full_update_folder**](docs/ProjectApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update all fields of a folder
 *ProjectApi* | [**full_update_project**](docs/ProjectApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | Update all fields of a project
 *ProjectApi* | [**full_update_project_user**](docs/ProjectApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update all fields of a project user
 *ProjectApi* | [**get_classification**](docs/ProjectApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
-*ProjectApi* | [**get_classification_0**](docs/ProjectApi.md#get_classification_0) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a classification
 *ProjectApi* | [**get_classifications**](docs/ProjectApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
-*ProjectApi* | [**get_classifications_0**](docs/ProjectApi.md#get_classifications_0) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all classifications
+*ProjectApi* | [**get_document**](docs/ProjectApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
+*ProjectApi* | [**get_documents**](docs/ProjectApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 *ProjectApi* | [**get_folder**](docs/ProjectApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 *ProjectApi* | [**get_folders**](docs/ProjectApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 *ProjectApi* | [**get_project**](docs/ProjectApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
@@ -298,7 +298,7 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**get_projects**](docs/ProjectApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 *ProjectApi* | [**invite_project_user**](docs/ProjectApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
 *ProjectApi* | [**update_classification**](docs/ProjectApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update some fields of a classification
-*ProjectApi* | [**update_classification_0**](docs/ProjectApi.md#update_classification_0) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of a classification
+*ProjectApi* | [**update_document**](docs/ProjectApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
 *ProjectApi* | [**update_folder**](docs/ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *ProjectApi* | [**update_project**](docs/ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *ProjectApi* | [**update_project_user**](docs/ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user

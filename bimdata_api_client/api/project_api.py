@@ -257,13 +257,13 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_classification_0(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
-        """Create a classification  # noqa: E501
+    def create_document(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
+        """Create a document  # noqa: E501
 
-         Required scopes: document:write  # noqa: E501
+        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_classification_0(cloud_pk, project_pk, name, async_req=True)
+        >>> thread = api.create_document(cloud_pk, project_pk, name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -284,18 +284,18 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.create_classification_0_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
+            return self.create_document_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
         else:
-            (data) = self.create_classification_0_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
+            (data) = self.create_document_with_http_info(cloud_pk, project_pk, name, **kwargs)  # noqa: E501
             return data
 
-    def create_classification_0_with_http_info(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
-        """Create a classification  # noqa: E501
+    def create_document_with_http_info(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
+        """Create a document  # noqa: E501
 
-         Required scopes: document:write  # noqa: E501
+        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_classification_0_with_http_info(cloud_pk, project_pk, name, async_req=True)
+        >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -327,36 +327,36 @@ class ProjectApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method create_classification_0" % key
+                    " to method create_document" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `create_document`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `create_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `project_pk` when calling `create_document`")  # noqa: E501
         # verify the required parameter 'name' is set
         if ('name' not in local_var_params or
                 local_var_params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `create_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `name` when calling `create_document`")  # noqa: E501
 
         if ('name' in local_var_params and
                 len(local_var_params['name']) > 512):
-            raise ValueError("Invalid value for parameter `name` when calling `create_classification_0`, length must be less than or equal to `512`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `name` when calling `create_document`, length must be less than or equal to `512`")  # noqa: E501
         if ('name' in local_var_params and
                 len(local_var_params['name']) < 1):
-            raise ValueError("Invalid value for parameter `name` when calling `create_classification_0`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `name` when calling `create_document`, length must be greater than or equal to `1`")  # noqa: E501
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
-            raise ValueError("Invalid value for parameter `file_name` when calling `create_classification_0`, length must be less than or equal to `512`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `file_name` when calling `create_document`, length must be less than or equal to `512`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
-            raise ValueError("Invalid value for parameter `size` when calling `create_classification_0`, must be a value less than or equal to `2147483647`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `create_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `size` when calling `create_classification_0`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `create_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -750,13 +750,13 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_classification_0(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Delete a classification  # noqa: E501
+    def delete_document(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
+        """Delete the document  # noqa: E501
 
-        All elements having this classification will lose it Required scopes: document:write  # noqa: E501
+        Delete the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_classification_0(cloud_pk, id, project_pk, async_req=True)
+        >>> thread = api.delete_document(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -769,18 +769,18 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.delete_classification_0_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
+            return self.delete_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.delete_classification_0_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
+            (data) = self.delete_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def delete_classification_0_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Delete a classification  # noqa: E501
+    def delete_document_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
+        """Delete the document  # noqa: E501
 
-        All elements having this classification will lose it Required scopes: document:write  # noqa: E501
+        Delete the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_classification_0_with_http_info(cloud_pk, id, project_pk, async_req=True)
+        >>> thread = api.delete_document_with_http_info(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -804,22 +804,22 @@ class ProjectApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method delete_classification_0" % key
+                    " to method delete_document" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `delete_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `delete_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `delete_document`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `delete_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `project_pk` when calling `delete_document`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1298,13 +1298,13 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_classification_0(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
-        """Update all fields of a classification  # noqa: E501
+    def full_update_document(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
+        """Update all fields of the document  # noqa: E501
 
-        Update all fields of a classification Required scopes: document:write  # noqa: E501
+        Update all fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_classification_0(cloud_pk, id, project_pk, name, async_req=True)
+        >>> thread = api.full_update_document(cloud_pk, id, project_pk, name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1326,18 +1326,18 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.full_update_classification_0_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
+            return self.full_update_document_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
         else:
-            (data) = self.full_update_classification_0_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
+            (data) = self.full_update_document_with_http_info(cloud_pk, id, project_pk, name, **kwargs)  # noqa: E501
             return data
 
-    def full_update_classification_0_with_http_info(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
-        """Update all fields of a classification  # noqa: E501
+    def full_update_document_with_http_info(self, cloud_pk, id, project_pk, name, **kwargs):  # noqa: E501
+        """Update all fields of the document  # noqa: E501
 
-        Update all fields of a classification Required scopes: document:write  # noqa: E501
+        Update all fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_classification_0_with_http_info(cloud_pk, id, project_pk, name, async_req=True)
+        >>> thread = api.full_update_document_with_http_info(cloud_pk, id, project_pk, name, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -1370,40 +1370,40 @@ class ProjectApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method full_update_classification_0" % key
+                    " to method full_update_document" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `full_update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `project_pk` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'name' is set
         if ('name' not in local_var_params or
                 local_var_params['name'] is None):
-            raise ValueError("Missing the required parameter `name` when calling `full_update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `name` when calling `full_update_document`")  # noqa: E501
 
         if ('name' in local_var_params and
                 len(local_var_params['name']) > 512):
-            raise ValueError("Invalid value for parameter `name` when calling `full_update_classification_0`, length must be less than or equal to `512`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `name` when calling `full_update_document`, length must be less than or equal to `512`")  # noqa: E501
         if ('name' in local_var_params and
                 len(local_var_params['name']) < 1):
-            raise ValueError("Invalid value for parameter `name` when calling `full_update_classification_0`, length must be greater than or equal to `1`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `name` when calling `full_update_document`, length must be greater than or equal to `1`")  # noqa: E501
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
-            raise ValueError("Invalid value for parameter `file_name` when calling `full_update_classification_0`, length must be less than or equal to `512`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `file_name` when calling `full_update_document`, length must be less than or equal to `512`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
-            raise ValueError("Invalid value for parameter `size` when calling `full_update_classification_0`, must be a value less than or equal to `2147483647`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
-            raise ValueError("Invalid value for parameter `size` when calling `full_update_classification_0`, must be a value greater than or equal to `0`")  # noqa: E501
+            raise ValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
 
         path_params = {}
@@ -1943,118 +1943,6 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_classification_0(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a classification  # noqa: E501
-
-        Retrieve a classification Required scopes: document:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_classification_0(cloud_pk, id, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this document. (required)
-        :param str project_pk: (required)
-        :return: Document
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('async_req'):
-            return self.get_classification_0_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
-        else:
-            (data) = self.get_classification_0_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
-            return data
-
-    def get_classification_0_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a classification  # noqa: E501
-
-        Retrieve a classification Required scopes: document:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_classification_0_with_http_info(cloud_pk, id, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this document. (required)
-        :param str project_pk: (required)
-        :return: Document
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_classification_0" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_classification_0`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `get_classification_0`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_classification_0`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Document',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def get_classifications(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
@@ -2159,13 +2047,125 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_classifications_0(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all classifications  # noqa: E501
+    def get_document(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a document  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: document:read  # noqa: E501
+        Retrieve a document in the project Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_classifications_0(cloud_pk, project_pk, async_req=True)
+        >>> thread = api.get_document(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this document. (required)
+        :param str project_pk: (required)
+        :return: Document
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_document_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
+            return data
+
+    def get_document_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a document  # noqa: E501
+
+        Retrieve a document in the project Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_document_with_http_info(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this document. (required)
+        :param str project_pk: (required)
+        :return: Document
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_document" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_document`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_document`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_document`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Document',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_documents(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all documents  # noqa: E501
+
+        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_documents(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2177,18 +2177,18 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.get_classifications_0_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
+            return self.get_documents_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
         else:
-            (data) = self.get_classifications_0_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
+            (data) = self.get_documents_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
             return data
 
-    def get_classifications_0_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all classifications  # noqa: E501
+    def get_documents_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all documents  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: document:read  # noqa: E501
+        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_classifications_0_with_http_info(cloud_pk, project_pk, async_req=True)
+        >>> thread = api.get_documents_with_http_info(cloud_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -2211,18 +2211,18 @@ class ProjectApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method get_classifications_0" % key
+                    " to method get_documents" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_classifications_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_documents`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `get_classifications_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_documents`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3343,13 +3343,13 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_classification_0(self, cloud_pk, id, project_pk, document, **kwargs):  # noqa: E501
-        """Update some fields of a classification  # noqa: E501
+    def update_document(self, cloud_pk, id, project_pk, document, **kwargs):  # noqa: E501
+        """Update some fields of the document  # noqa: E501
 
-        Update some fields of a classification Required scopes: document:write  # noqa: E501
+        Update some fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_classification_0(cloud_pk, id, project_pk, document, async_req=True)
+        >>> thread = api.update_document(cloud_pk, id, project_pk, document, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3363,18 +3363,18 @@ class ProjectApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.update_classification_0_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
+            return self.update_document_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
         else:
-            (data) = self.update_classification_0_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
+            (data) = self.update_document_with_http_info(cloud_pk, id, project_pk, document, **kwargs)  # noqa: E501
             return data
 
-    def update_classification_0_with_http_info(self, cloud_pk, id, project_pk, document, **kwargs):  # noqa: E501
-        """Update some fields of a classification  # noqa: E501
+    def update_document_with_http_info(self, cloud_pk, id, project_pk, document, **kwargs):  # noqa: E501
+        """Update some fields of the document  # noqa: E501
 
-        Update some fields of a classification Required scopes: document:write  # noqa: E501
+        Update some fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_classification_0_with_http_info(cloud_pk, id, project_pk, document, async_req=True)
+        >>> thread = api.update_document_with_http_info(cloud_pk, id, project_pk, document, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -3399,26 +3399,26 @@ class ProjectApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_classification_0" % key
+                    " to method update_document" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if ('cloud_pk' not in local_var_params or
                 local_var_params['cloud_pk'] is None):
-            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_document`")  # noqa: E501
         # verify the required parameter 'id' is set
         if ('id' not in local_var_params or
                 local_var_params['id'] is None):
-            raise ValueError("Missing the required parameter `id` when calling `update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `id` when calling `update_document`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if ('project_pk' not in local_var_params or
                 local_var_params['project_pk'] is None):
-            raise ValueError("Missing the required parameter `project_pk` when calling `update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_document`")  # noqa: E501
         # verify the required parameter 'document' is set
         if ('document' not in local_var_params or
                 local_var_params['document'] is None):
-            raise ValueError("Missing the required parameter `document` when calling `update_classification_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `document` when calling `update_document`")  # noqa: E501
 
         collection_formats = {}
 

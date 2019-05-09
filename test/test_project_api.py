@@ -43,10 +43,10 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_create_classification_0(self):
-        """Test case for create_classification_0
+    def test_create_document(self):
+        """Test case for create_document
 
-        Create a classification  # noqa: E501
+        Create a document  # noqa: E501
         """
         pass
 
@@ -71,10 +71,10 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_classification_0(self):
-        """Test case for delete_classification_0
+    def test_delete_document(self):
+        """Test case for delete_document
 
-        Delete a classification  # noqa: E501
+        Delete the document  # noqa: E501
         """
         pass
 
@@ -106,10 +106,10 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_classification_0(self):
-        """Test case for full_update_classification_0
+    def test_full_update_document(self):
+        """Test case for full_update_document
 
-        Update all fields of a classification  # noqa: E501
+        Update all fields of the document  # noqa: E501
         """
         pass
 
@@ -141,13 +141,6 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_get_classification_0(self):
-        """Test case for get_classification_0
-
-        Retrieve a classification  # noqa: E501
-        """
-        pass
-
     def test_get_classifications(self):
         """Test case for get_classifications
 
@@ -155,10 +148,17 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_get_classifications_0(self):
-        """Test case for get_classifications_0
+    def test_get_document(self):
+        """Test case for get_document
 
-        Retrieve all classifications  # noqa: E501
+        Retrieve a document  # noqa: E501
+        """
+        pass
+
+    def test_get_documents(self):
+        """Test case for get_documents
+
+        Retrieve all documents  # noqa: E501
         """
         pass
 
@@ -232,10 +232,10 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_update_classification_0(self):
-        """Test case for update_classification_0
+    def test_update_document(self):
+        """Test case for update_document
 
-        Update some fields of a classification  # noqa: E501
+        Update some fields of the document  # noqa: E501
         """
         pass
 
