@@ -2491,7 +2491,7 @@ class ProjectApi(object):
         :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this project. (required)
-        :return: Project
+        :return: ProjectWithChildren
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2514,7 +2514,7 @@ class ProjectApi(object):
         :param async_req bool
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this project. (required)
-        :return: Project
+        :return: ProjectWithChildren
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2575,7 +2575,111 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Project',  # noqa: E501
+            response_type='ProjectWithChildren',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project_dms_tree(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project)  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_dms_tree(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :return: Folder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_project_dms_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_project_dms_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+            return data
+
+    def get_project_dms_tree_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project)  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_dms_tree_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :return: Folder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_dms_tree" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_project_dms_tree`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_project_dms_tree`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}/dms-tree', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2687,10 +2791,106 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_project_sub_tree(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve the complete projects tree of the cloud  # noqa: E501
+
+        Retrieve the complete projects tree of the cloud  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_sub_tree(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :return: list[ProjectWithChildren]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_project_sub_tree_with_http_info(cloud_pk, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_project_sub_tree_with_http_info(cloud_pk, **kwargs)  # noqa: E501
+            return data
+
+    def get_project_sub_tree_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve the complete projects tree of the cloud  # noqa: E501
+
+        Retrieve the complete projects tree of the cloud  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_sub_tree_with_http_info(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :return: list[ProjectWithChildren]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_sub_tree" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_project_sub_tree`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/subtree', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ProjectWithChildren]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_project_tree(self, cloud_pk, id, **kwargs):  # noqa: E501
         """Retrieve the complete DMS tree  # noqa: E501
 
-        Returns the document tree from root folder  # noqa: E501
+        Retrieve the complete DMS tree (all folders and all documents in the project). DEPRECATED: renamed to getProjectDMSTree  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_tree(cloud_pk, id, async_req=True)
@@ -2713,7 +2913,7 @@ class ProjectApi(object):
     def get_project_tree_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
         """Retrieve the complete DMS tree  # noqa: E501
 
-        Returns the document tree from root folder  # noqa: E501
+        Retrieve the complete DMS tree (all folders and all documents in the project). DEPRECATED: renamed to getProjectDMSTree  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_tree_with_http_info(cloud_pk, id, async_req=True)
@@ -3010,7 +3210,7 @@ class ProjectApi(object):
     def get_projects(self, cloud_pk, **kwargs):  # noqa: E501
         """Retrieve all projects  # noqa: E501
 
-        Retrieve all projects of the cloud  # noqa: E501
+        Retrieve all projects of the cloud. All project are shown at the same level. see #getProjectSubTree  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_projects(cloud_pk, async_req=True)
@@ -3032,7 +3232,7 @@ class ProjectApi(object):
     def get_projects_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
         """Retrieve all projects  # noqa: E501
 
-        Retrieve all projects of the cloud  # noqa: E501
+        Retrieve all projects of the cloud. All project are shown at the same level. see #getProjectSubTree  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_projects_with_http_info(cloud_pk, async_req=True)

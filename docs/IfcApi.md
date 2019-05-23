@@ -15,6 +15,7 @@ Method | HTTP request | Description
 [**bulk_remove_elements_from_classification**](IfcApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
 [**bulk_update_elements**](IfcApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 [**bulk_update_ifc_property**](IfcApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
+[**cloud_project_ifc_processorhandler_partial_update**](IfcApi.md#cloud_project_ifc_processorhandler_partial_update) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | 
 [**create_classification_element_relations**](IfcApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 [**create_classifications_of_element**](IfcApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
 [**create_element**](IfcApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
@@ -39,6 +40,7 @@ Method | HTTP request | Description
 [**delete_space**](IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
 [**delete_zone**](IfcApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 [**delete_zone_space**](IfcApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
+[**export_ifc**](IfcApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
 [**full_update_element**](IfcApi.md#full_update_element) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
 [**full_update_ifc**](IfcApi.md#full_update_ifc) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Update all fields of a model
 [**full_update_ifc_property**](IfcApi.md#full_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
@@ -74,6 +76,8 @@ Method | HTTP request | Description
 [**get_ifc_unit**](IfcApi.md#get_ifc_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Retrieve a Unit of a model
 [**get_ifc_units**](IfcApi.md#get_ifc_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Retrieve all Units of a model
 [**get_ifcs**](IfcApi.md#get_ifcs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc | Retrieve all models
+[**get_processor_handler**](IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
+[**get_processor_handlers**](IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 [**get_property_set**](IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
 [**get_property_sets**](IfcApi.md#get_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Retrieve all PropertySets of a model
 [**get_raw_elements**](IfcApi.md#get_raw_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Retrieve all elements in a optimized format
@@ -96,6 +100,7 @@ Method | HTTP request | Description
 [**update_ifc_property**](IfcApi.md#update_ifc_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
 [**update_ifc_property_definition**](IfcApi.md#update_ifc_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
 [**update_ifc_unit**](IfcApi.md#update_ifc_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
+[**update_processor_handler**](IfcApi.md#update_processor_handler) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 [**update_property_set**](IfcApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 [**update_space**](IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
 [**update_zone**](IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
@@ -755,6 +760,69 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[ModelProperty]**](ModelProperty.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_ifc_processorhandler_partial_update**
+> ProcessorHandler cloud_project_ifc_processorhandler_partial_update(cloud_pk, id, ifc_pk, project_pk, processor_handler)
+
+
+
+ Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this processor handler.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+processor_handler = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_processorhandler_partial_update(cloud_pk, id, ifc_pk, project_pk, processor_handler)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_processorhandler_partial_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this processor handler. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **processor_handler** | [**ProcessorHandler**](ProcessorHandler.md)|  | 
+
+### Return type
+
+[**ProcessorHandler**](ProcessorHandler.md)
 
 ### Authorization
 
@@ -2264,6 +2332,68 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **export_ifc**
+> IfcExport export_ifc(cloud_pk, id, project_pk, ifc_export)
+
+Export IFC
+
+Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
+project_pk = 'project_pk_example' # str | 
+ifc_export = bimdata_api_client.IfcExport() # IfcExport | 
+
+try:
+    # Export IFC
+    api_response = api_instance.export_ifc(cloud_pk, id, project_pk, ifc_export)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->export_ifc: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
+ **project_pk** | **str**|  | 
+ **ifc_export** | [**IfcExport**](IfcExport.md)|  | 
+
+### Return type
+
+[**IfcExport**](IfcExport.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -4464,6 +4594,128 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_processor_handler**
+> ProcessorHandler get_processor_handler(cloud_pk, id, ifc_pk, project_pk)
+
+Retrieve a processor handler
+
+ Required scopes: ifc:read
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this processor handler.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    # Retrieve a processor handler
+    api_response = api_instance.get_processor_handler(cloud_pk, id, ifc_pk, project_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->get_processor_handler: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this processor handler. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**ProcessorHandler**](ProcessorHandler.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_processor_handlers**
+> list[ProcessorHandler] get_processor_handlers(cloud_pk, ifc_pk, project_pk)
+
+Get all processor handlers
+
+ Required scopes: ifc:read
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    # Get all processor handlers
+    api_response = api_instance.get_processor_handlers(cloud_pk, ifc_pk, project_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->get_processor_handlers: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**list[ProcessorHandler]**](ProcessorHandler.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_property_set**
 > PropertySet get_property_set(cloud_pk, id, ifc_pk, project_pk)
 
@@ -5852,6 +6104,70 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Unit**](Unit.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_processor_handler**
+> ProcessorHandler update_processor_handler(cloud_pk, id, ifc_pk, project_pk, processor_handler)
+
+Update the status of a processor handler
+
+ Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this processor handler.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+processor_handler = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
+
+try:
+    # Update the status of a processor handler
+    api_response = api_instance.update_processor_handler(cloud_pk, id, ifc_pk, project_pk, processor_handler)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->update_processor_handler: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this processor handler. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **processor_handler** | [**ProcessorHandler**](ProcessorHandler.md)|  | 
+
+### Return type
+
+[**ProcessorHandler**](ProcessorHandler.md)
 
 ### Authorization
 

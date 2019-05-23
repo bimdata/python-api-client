@@ -1301,6 +1301,138 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def cloud_project_ifc_processorhandler_partial_update(self, cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs):  # noqa: E501
+        """cloud_project_ifc_processorhandler_partial_update  # noqa: E501
+
+         Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cloud_project_ifc_processorhandler_partial_update(cloud_pk, id, ifc_pk, project_pk, processor_handler, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param ProcessorHandler processor_handler: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.cloud_project_ifc_processorhandler_partial_update_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs)  # noqa: E501
+        else:
+            (data) = self.cloud_project_ifc_processorhandler_partial_update_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs)  # noqa: E501
+            return data
+
+    def cloud_project_ifc_processorhandler_partial_update_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs):  # noqa: E501
+        """cloud_project_ifc_processorhandler_partial_update  # noqa: E501
+
+         Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cloud_project_ifc_processorhandler_partial_update_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param ProcessorHandler processor_handler: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'processor_handler']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cloud_project_ifc_processorhandler_partial_update" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_processorhandler_partial_update`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `cloud_project_ifc_processorhandler_partial_update`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in local_var_params or
+                local_var_params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `cloud_project_ifc_processorhandler_partial_update`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_processorhandler_partial_update`")  # noqa: E501
+        # verify the required parameter 'processor_handler' is set
+        if ('processor_handler' not in local_var_params or
+                local_var_params['processor_handler'] is None):
+            raise ValueError("Missing the required parameter `processor_handler` when calling `cloud_project_ifc_processorhandler_partial_update`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'processor_handler' in local_var_params:
+            body_params = local_var_params['processor_handler']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ProcessorHandler',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def create_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, element_classification_relation, **kwargs):  # noqa: E501
         """Create association between existing classification and existing element  # noqa: E501
 
@@ -4282,6 +4414,130 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def export_ifc(self, cloud_pk, id, project_pk, ifc_export, **kwargs):  # noqa: E501
+        """Export IFC  # noqa: E501
+
+        Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export_ifc(cloud_pk, id, project_pk, ifc_export, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
+        :param str project_pk: (required)
+        :param IfcExport ifc_export: (required)
+        :return: IfcExport
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.export_ifc_with_http_info(cloud_pk, id, project_pk, ifc_export, **kwargs)  # noqa: E501
+        else:
+            (data) = self.export_ifc_with_http_info(cloud_pk, id, project_pk, ifc_export, **kwargs)  # noqa: E501
+            return data
+
+    def export_ifc_with_http_info(self, cloud_pk, id, project_pk, ifc_export, **kwargs):  # noqa: E501
+        """Export IFC  # noqa: E501
+
+        Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.export_ifc_with_http_info(cloud_pk, id, project_pk, ifc_export, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this ifc. (required)
+        :param str project_pk: (required)
+        :param IfcExport ifc_export: (required)
+        :return: IfcExport
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'project_pk', 'ifc_export']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method export_ifc" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `export_ifc`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `export_ifc`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `export_ifc`")  # noqa: E501
+        # verify the required parameter 'ifc_export' is set
+        if ('ifc_export' not in local_var_params or
+                local_var_params['ifc_export'] is None):
+            raise ValueError("Missing the required parameter `ifc_export` when calling `export_ifc`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'ifc_export' in local_var_params:
+            body_params = local_var_params['ifc_export']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='IfcExport',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -8617,6 +8873,238 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_processor_handler(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a processor handler  # noqa: E501
+
+         Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_processor_handler(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return data
+
+    def get_processor_handler_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a processor handler  # noqa: E501
+
+         Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_processor_handler" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_processor_handler`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `get_processor_handler`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in local_var_params or
+                local_var_params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_processor_handler`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_processor_handler`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ProcessorHandler',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_processor_handlers(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Get all processor handlers  # noqa: E501
+
+         Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_processor_handlers(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: list[ProcessorHandler]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.get_processor_handlers_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        else:
+            (data) = self.get_processor_handlers_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+            return data
+
+    def get_processor_handlers_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Get all processor handlers  # noqa: E501
+
+         Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_processor_handlers_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :return: list[ProcessorHandler]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_processor_handlers" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `get_processor_handlers`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in local_var_params or
+                local_var_params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `get_processor_handlers`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `get_processor_handlers`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ProcessorHandler]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_property_set(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve a PropertySet of a model  # noqa: E501
 
@@ -11378,6 +11866,138 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Unit',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_processor_handler(self, cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs):  # noqa: E501
+        """Update the status of a processor handler  # noqa: E501
+
+         Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_processor_handler(cloud_pk, id, ifc_pk, project_pk, processor_handler, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param ProcessorHandler processor_handler: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('async_req'):
+            return self.update_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs)  # noqa: E501
+        else:
+            (data) = self.update_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs)  # noqa: E501
+            return data
+
+    def update_processor_handler_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, processor_handler, **kwargs):  # noqa: E501
+        """Update the status of a processor handler  # noqa: E501
+
+         Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_processor_handler_with_http_info(cloud_pk, id, ifc_pk, project_pk, processor_handler, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this processor handler. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param ProcessorHandler processor_handler: (required)
+        :return: ProcessorHandler
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk', 'processor_handler']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_processor_handler" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ValueError("Missing the required parameter `cloud_pk` when calling `update_processor_handler`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if ('id' not in local_var_params or
+                local_var_params['id'] is None):
+            raise ValueError("Missing the required parameter `id` when calling `update_processor_handler`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if ('ifc_pk' not in local_var_params or
+                local_var_params['ifc_pk'] is None):
+            raise ValueError("Missing the required parameter `ifc_pk` when calling `update_processor_handler`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if ('project_pk' not in local_var_params or
+                local_var_params['project_pk'] is None):
+            raise ValueError("Missing the required parameter `project_pk` when calling `update_processor_handler`")  # noqa: E501
+        # verify the required parameter 'processor_handler' is set
+        if ('processor_handler' not in local_var_params or
+                local_var_params['processor_handler'] is None):
+            raise ValueError("Missing the required parameter `processor_handler` when calling `update_processor_handler`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'processor_handler' in local_var_params:
+            body_params = local_var_params['processor_handler']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ProcessorHandler',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

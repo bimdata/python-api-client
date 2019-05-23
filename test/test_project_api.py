@@ -183,10 +183,24 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
+    def test_get_project_dms_tree(self):
+        """Test case for get_project_dms_tree
+
+        Retrieve the complete DMS tree  # noqa: E501
+        """
+        pass
+
     def test_get_project_invitations(self):
         """Test case for get_project_invitations
 
         Retrieve all pending invitations in the project  # noqa: E501
+        """
+        pass
+
+    def test_get_project_sub_tree(self):
+        """Test case for get_project_sub_tree
+
+        Retrieve the complete projects tree of the cloud  # noqa: E501
         """
         pass
 

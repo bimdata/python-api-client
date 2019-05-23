@@ -5,6 +5,12 @@ All URIs are relative to *https://api-beta.bimdata.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel_cloud_user_invitation**](CloudApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
+[**cloud_processor_create**](CloudApi.md#cloud_processor_create) | **POST** /cloud/{cloud_pk}/processor | 
+[**cloud_processor_delete**](CloudApi.md#cloud_processor_delete) | **DELETE** /cloud/{cloud_pk}/processor/{id} | 
+[**cloud_processor_list**](CloudApi.md#cloud_processor_list) | **GET** /cloud/{cloud_pk}/processor | 
+[**cloud_processor_partial_update**](CloudApi.md#cloud_processor_partial_update) | **PATCH** /cloud/{cloud_pk}/processor/{id} | 
+[**cloud_processor_read**](CloudApi.md#cloud_processor_read) | **GET** /cloud/{cloud_pk}/processor/{id} | 
+[**cloud_processor_update**](CloudApi.md#cloud_processor_update) | **PUT** /cloud/{cloud_pk}/processor/{id} | 
 [**create_cloud**](CloudApi.md#create_cloud) | **POST** /cloud | Create a cloud
 [**create_demo**](CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
 [**delete_cloud**](CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
@@ -76,6 +82,337 @@ void (empty response body)
 
  - **Content-Type**: Not defined
  - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_create**
+> Processor cloud_processor_create(cloud_pk, processor)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+processor = bimdata_api_client.Processor() # Processor | 
+
+try:
+    api_response = api_instance.cloud_processor_create(cloud_pk, processor)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **processor** | [**Processor**](Processor.md)|  | 
+
+### Return type
+
+[**Processor**](Processor.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_delete**
+> cloud_processor_delete(cloud_pk, id)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+
+try:
+    api_instance.cloud_processor_delete(cloud_pk, id)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_delete: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_list**
+> list[Processor] cloud_processor_list(cloud_pk)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+
+try:
+    api_response = api_instance.cloud_processor_list(cloud_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+
+### Return type
+
+[**list[Processor]**](Processor.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_partial_update**
+> Processor cloud_processor_partial_update(cloud_pk, id, processor)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+processor = bimdata_api_client.Processor() # Processor | 
+
+try:
+    api_response = api_instance.cloud_processor_partial_update(cloud_pk, id, processor)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_partial_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **processor** | [**Processor**](Processor.md)|  | 
+
+### Return type
+
+[**Processor**](Processor.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_read**
+> Processor cloud_processor_read(cloud_pk, id)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+
+try:
+    api_response = api_instance.cloud_processor_read(cloud_pk, id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_read: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+
+### Return type
+
+[**Processor**](Processor.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_processor_update**
+> Processor cloud_processor_update(cloud_pk, id, processor)
+
+
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 'id_example' # str | 
+processor = bimdata_api_client.Processor() # Processor | 
+
+try:
+    api_response = api_instance.cloud_processor_update(cloud_pk, id, processor)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling CloudApi->cloud_processor_update: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **str**|  | 
+ **processor** | [**Processor**](Processor.md)|  | 
+
+### Return type
+
+[**Processor**](Processor.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

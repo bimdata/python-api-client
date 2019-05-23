@@ -26,7 +26,9 @@ Method | HTTP request | Description
 [**get_folder**](ProjectApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 [**get_folders**](ProjectApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 [**get_project**](ProjectApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
+[**get_project_dms_tree**](ProjectApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
 [**get_project_invitations**](ProjectApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
+[**get_project_sub_tree**](ProjectApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 [**get_project_tree**](ProjectApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 [**get_project_user**](ProjectApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
 [**get_project_users**](ProjectApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project
@@ -1324,7 +1326,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project**
-> Project get_project(cloud_pk, id)
+> ProjectWithChildren get_project(cloud_pk, id)
 
 Retrieve a project
 
@@ -1368,7 +1370,65 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Project**](Project.md)
+[**ProjectWithChildren**](ProjectWithChildren.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_project_dms_tree**
+> Folder get_project_dms_tree(cloud_pk, id)
+
+Retrieve the complete DMS tree
+
+Retrieve the complete DMS tree (all folders and all documents in the project)
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
+
+try:
+    # Retrieve the complete DMS tree
+    api_response = api_instance.get_project_dms_tree(cloud_pk, id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->get_project_dms_tree: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
+
+### Return type
+
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -1439,12 +1499,68 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_project_sub_tree**
+> list[ProjectWithChildren] get_project_sub_tree(cloud_pk)
+
+Retrieve the complete projects tree of the cloud
+
+Retrieve the complete projects tree of the cloud
+
+### Example
+
+* Api Key Authentication (Bearer): 
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration()
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+
+try:
+    # Retrieve the complete projects tree of the cloud
+    api_response = api_instance.get_project_sub_tree(cloud_pk)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->get_project_sub_tree: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+
+### Return type
+
+[**list[ProjectWithChildren]**](ProjectWithChildren.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_project_tree**
 > Folder get_project_tree(cloud_pk, id)
 
 Retrieve the complete DMS tree
 
-Returns the document tree from root folder
+Retrieve the complete DMS tree (all folders and all documents in the project). DEPRECATED: renamed to getProjectDMSTree
 
 ### Example
 
@@ -1620,7 +1736,7 @@ Name | Type | Description  | Notes
 
 Retrieve all projects
 
-Retrieve all projects of the cloud
+Retrieve all projects of the cloud. All project are shown at the same level. see #getProjectSubTree
 
 ### Example
 

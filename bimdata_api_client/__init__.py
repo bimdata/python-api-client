@@ -56,6 +56,7 @@ from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_checker import IfcChecker
 from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan
 from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
+from bimdata_api_client.models.ifc_export import IfcExport
 from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.line_seriaizer import LineSeriaizer
@@ -64,9 +65,12 @@ from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.models.perspective_camera import PerspectiveCamera
 from bimdata_api_client.models.point import Point
 from bimdata_api_client.models.priority import Priority
+from bimdata_api_client.models.processor import Processor
+from bimdata_api_client.models.processor_handler import ProcessorHandler
 from bimdata_api_client.models.project import Project
 from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
+from bimdata_api_client.models.project_with_children import ProjectWithChildren
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
 from bimdata_api_client.models.raw_classification import RawClassification

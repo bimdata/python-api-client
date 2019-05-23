@@ -106,6 +106,12 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_cloud_project_ifc_processorhandler_partial_update(self):
+        """Test case for cloud_project_ifc_processorhandler_partial_update
+
+        """
+        pass
+
     def test_create_classification_element_relations(self):
         """Test case for create_classification_element_relations
 
@@ -271,6 +277,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for delete_zone_space
 
         Delete a space of a zone  # noqa: E501
+        """
+        pass
+
+    def test_export_ifc(self):
+        """Test case for export_ifc
+
+        Export IFC  # noqa: E501
         """
         pass
 
@@ -519,6 +532,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_processor_handler(self):
+        """Test case for get_processor_handler
+
+        Retrieve a processor handler  # noqa: E501
+        """
+        pass
+
+    def test_get_processor_handlers(self):
+        """Test case for get_processor_handlers
+
+        Get all processor handlers  # noqa: E501
+        """
+        pass
+
     def test_get_property_set(self):
         """Test case for get_property_set
 
@@ -670,6 +697,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_ifc_unit
 
         Update some fields of a Unit of a model  # noqa: E501
+        """
+        pass
+
+    def test_update_processor_handler(self):
+        """Test case for update_processor_handler
+
+        Update the status of a processor handler  # noqa: E501
         """
         pass
 
