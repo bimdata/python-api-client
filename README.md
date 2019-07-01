@@ -51,20 +51,26 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 
-# Configure API key authorization: Bearer
 configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-web_hook = bimdata_api_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Create a new Webhook
-    api_response = api_instance.create_web_hook(cloud_pk, web_hook)
+    api_response = api_instance.create_web_hook(cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
@@ -398,11 +404,27 @@ Class | Method | HTTP request | Description
 ## Documentation For Authorization
 
 
+## BIMDataConnect
+
+- **Type**: OAuth
+- **Flow**: implicit
+- **Authorization URL**: http://localhost:8081/authorize
+- **Scopes**: N/A
+
+
 ## Bearer
 
 - **Type**: API key
 - **API key parameter name**: Authorization
 - **Location**: HTTP header
+
+
+## client_credentials
+
+- **Type**: OAuth
+- **Flow**: application
+- **Authorization URL**: 
+- **Scopes**: N/A
 
 
 ## Author
