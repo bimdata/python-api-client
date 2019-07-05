@@ -5,6 +5,7 @@ All URIs are relative to *https://api-beta.bimdata.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel_project_user_invitation**](ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
+[**cloud_project_user_create**](ProjectApi.md#cloud_project_user_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/user | 
 [**create_classification**](ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 [**create_document**](ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 [**create_folder**](ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
@@ -171,6 +172,137 @@ void (empty response body)
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **204** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_user_create**
+> User cloud_project_user_create(cloud_pk, project_pk, data)
+
+
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.User() # User | 
+
+try:
+    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.User() # User | 
+
+try:
+    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.User() # User | 
+
+try:
+    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**User**](User.md)|  | 
+
+### Return type
+
+[**User**](User.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -1306,7 +1438,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1338,7 +1470,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1370,7 +1502,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -1385,7 +1517,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this fos user. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -2027,7 +2159,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -2061,7 +2193,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -2095,7 +2227,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -2112,7 +2244,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this fos user. | 
  **project_pk** | **str**|  | 
  **data** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
 
@@ -3627,7 +3759,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3660,7 +3792,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3693,7 +3825,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
 try:
@@ -3709,7 +3841,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this fos user. | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -4715,7 +4847,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -4749,7 +4881,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -4783,7 +4915,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # create an instance of the API class
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-id = 'id_example' # str | 
+id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
@@ -4800,7 +4932,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this fos user. | 
  **project_pk** | **str**|  | 
  **data** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
 

@@ -38,7 +38,7 @@ class Folder(object):
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
-        'children': 'list[Folder]',
+        'children': 'list[FolderChildren]',
         'created_by': 'User'
     }
 
@@ -68,8 +68,7 @@ class Folder(object):
 
         if id is not None:
             self.id = id
-        if parent_id is not None:
-            self.parent_id = parent_id
+        self.parent_id = parent_id
         if type is not None:
             self.type = type
         self.name = name
@@ -228,7 +227,7 @@ class Folder(object):
 
 
         :return: The children of this Folder.  # noqa: E501
-        :rtype: list[Folder]
+        :rtype: list[FolderChildren]
         """
         return self._children
 
@@ -238,7 +237,7 @@ class Folder(object):
 
 
         :param children: The children of this Folder.  # noqa: E501
-        :type: list[Folder]
+        :type: list[FolderChildren]
         """
 
         self._children = children

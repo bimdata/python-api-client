@@ -849,6 +849,124 @@ class CloudApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def cloud_user_create(self, cloud_pk, data, **kwargs):  # noqa: E501
+        """cloud_user_create  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cloud_user_create(cloud_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param User data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: User
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.cloud_user_create_with_http_info(cloud_pk, data, **kwargs)  # noqa: E501
+
+    def cloud_user_create_with_http_info(self, cloud_pk, data, **kwargs):  # noqa: E501
+        """cloud_user_create  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.cloud_user_create_with_http_info(cloud_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param User data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(User, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method cloud_user_create" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if ('cloud_pk' not in local_var_params or
+                local_var_params['cloud_pk'] is None):
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_user_create`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if ('data' not in local_var_params or
+                local_var_params['data'] is None):
+            raise ApiValueError("Missing the required parameter `data` when calling `cloud_user_create`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/user', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='User',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def create_cloud(self, data, **kwargs):  # noqa: E501
         """Create a cloud  # noqa: E501
 
@@ -1184,7 +1302,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1210,7 +1328,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1416,7 +1534,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param UserCloudUpdate data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1443,7 +1561,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param UserCloudUpdate data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1866,7 +1984,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1892,7 +2010,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2430,7 +2548,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param UserCloudUpdate data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2457,7 +2575,7 @@ class CloudApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str id: (required)
+        :param int id: A unique integer value identifying this fos user. (required)
         :param UserCloudUpdate data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers

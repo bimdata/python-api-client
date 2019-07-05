@@ -84,8 +84,7 @@ class Document(object):
         if id is not None:
             self.id = id
         self.parent = parent
-        if parent_id is not None:
-            self.parent_id = parent_id
+        self.parent_id = parent_id
         self.creator = creator
         self.project = project
         self.name = name

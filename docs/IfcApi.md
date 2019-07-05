@@ -15,7 +15,12 @@ Method | HTTP request | Description
 [**bulk_remove_elements_from_classification**](IfcApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
 [**bulk_update_elements**](IfcApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 [**bulk_update_ifc_property**](IfcApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
+[**cloud_project_ifc_classification_create**](IfcApi.md#cloud_project_ifc_classification_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification | 
+[**cloud_project_ifc_classification_element_create**](IfcApi.md#cloud_project_ifc_classification_element_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element | 
+[**cloud_project_ifc_create**](IfcApi.md#cloud_project_ifc_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc | 
+[**cloud_project_ifc_processorhandler_create**](IfcApi.md#cloud_project_ifc_processorhandler_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | 
 [**cloud_project_ifc_processorhandler_partial_update**](IfcApi.md#cloud_project_ifc_processorhandler_partial_update) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | 
+[**cloud_project_ifc_property_create**](IfcApi.md#cloud_project_ifc_property_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property | 
 [**create_classification_element_relations**](IfcApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 [**create_classifications_of_element**](IfcApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
 [**create_element**](IfcApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
@@ -86,7 +91,7 @@ Method | HTTP request | Description
 [**get_zone**](IfcApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Retrieve one zone of a model
 [**get_zone_space**](IfcApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 [**get_zone_spaces**](IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
-[**get_zones**](IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve all zones of a model
+[**get_zones**](IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
 [**list_classification_element_relations**](IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
 [**remove_classification_of_element**](IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 [**remove_element_property_set**](IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
@@ -1610,6 +1615,548 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **cloud_project_ifc_classification_create**
+> Classification cloud_project_ifc_classification_create(cloud_pk, ifc_pk, project_pk, data)
+
+
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Classification() # Classification | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Classification() # Classification | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Classification() # Classification | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**Classification**](Classification.md)|  | 
+
+### Return type
+
+[**Classification**](Classification.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_ifc_classification_element_create**
+> Element cloud_project_ifc_classification_element_create(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
+
+
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_classification_pk = 'ifc_classification_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Element() # Element | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_element_create(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_element_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_classification_pk = 'ifc_classification_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Element() # Element | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_element_create(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_element_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_classification_pk = 'ifc_classification_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Element() # Element | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_classification_element_create(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_classification_element_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_classification_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**Element**](Element.md)|  | 
+
+### Return type
+
+[**Element**](Element.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_ifc_create**
+> Ifc cloud_project_ifc_create(cloud_pk, project_pk, data)
+
+
+
+ Required scopes: ifc:write
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Ifc() # Ifc | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Ifc() # Ifc | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Ifc() # Ifc | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_create(cloud_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**Ifc**](Ifc.md)|  | 
+
+### Return type
+
+[**Ifc**](Ifc.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_ifc_processorhandler_create**
+> ProcessorHandler cloud_project_ifc_processorhandler_create(cloud_pk, ifc_pk, project_pk, data)
+
+
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_processorhandler_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_processorhandler_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_processorhandler_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_processorhandler_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_processorhandler_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_processorhandler_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**ProcessorHandler**](ProcessorHandler.md)|  | 
+
+### Return type
+
+[**ProcessorHandler**](ProcessorHandler.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **cloud_project_ifc_processorhandler_partial_update**
 > ProcessorHandler cloud_project_ifc_processorhandler_partial_update(cloud_pk, id, ifc_pk, project_pk, data)
 
@@ -1748,6 +2295,141 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **cloud_project_ifc_property_create**
+> ModelProperty cloud_project_ifc_property_create(cloud_pk, ifc_pk, project_pk, data)
+
+
+
+### Example
+
+* OAuth Authentication (BIMDataConnect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_property_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_property_create: %s\n" % e)
+```
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_property_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_property_create: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: BIMDataConnect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.ModelProperty() # ModelProperty | 
+
+try:
+    api_response = api_instance.cloud_project_ifc_property_create(cloud_pk, ifc_pk, project_pk, data)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IfcApi->cloud_project_ifc_property_create: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**ModelProperty**](ModelProperty.md)|  | 
+
+### Return type
+
+[**ModelProperty**](ModelProperty.md)
+
+### Authorization
+
+[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -11622,9 +12304,9 @@ Name | Type | Description  | Notes
 # **get_zones**
 > list[Zone] get_zones(cloud_pk, ifc_pk, project_pk, color=color)
 
-Retrieve all zones of a model
+Retrieve zones of a model
 
-Retrieve all zones of a model Required scopes: ifc:read
+Retrieve parent zones of a model. Children zones we'll be in the 'zones' field Required scopes: ifc:read
 
 ### Example
 
@@ -11655,7 +12337,7 @@ project_pk = 'project_pk_example' # str |
 color = 'color_example' # str | Filter the returned list by color (optional)
 
 try:
-    # Retrieve all zones of a model
+    # Retrieve zones of a model
     api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk, color=color)
     pprint(api_response)
 except ApiException as e:
@@ -11689,7 +12371,7 @@ project_pk = 'project_pk_example' # str |
 color = 'color_example' # str | Filter the returned list by color (optional)
 
 try:
-    # Retrieve all zones of a model
+    # Retrieve zones of a model
     api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk, color=color)
     pprint(api_response)
 except ApiException as e:
@@ -11723,7 +12405,7 @@ project_pk = 'project_pk_example' # str |
 color = 'color_example' # str | Filter the returned list by color (optional)
 
 try:
-    # Retrieve all zones of a model
+    # Retrieve zones of a model
     api_response = api_instance.get_zones(cloud_pk, ifc_pk, project_pk, color=color)
     pprint(api_response)
 except ApiException as e:

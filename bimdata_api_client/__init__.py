@@ -56,6 +56,7 @@ from bimdata_api_client.models.element_property_set_relation import ElementPrope
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder
+from bimdata_api_client.models.folder_children import FolderChildren
 from bimdata_api_client.models.full_topic import FullTopic
 from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_checker import IfcChecker
