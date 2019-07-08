@@ -45,7 +45,7 @@ class FolderChildren(object):
         'size': 'int',
         'ifc_id': 'int',
         'file': 'str',
-        'children': 'list[dict(str, str)]'
+        'children': 'list[FolderChildren]'
     }
 
     attribute_map = {
@@ -103,8 +103,7 @@ class FolderChildren(object):
             self.ifc_id = ifc_id
         if file is not None:
             self.file = file
-        if children is not None:
-            self.children = children
+        self.children = children
 
     @property
     def id(self):
@@ -413,7 +412,7 @@ class FolderChildren(object):
 
 
         :return: The children of this FolderChildren.  # noqa: E501
-        :rtype: list[dict(str, str)]
+        :rtype: list[FolderChildren]
         """
         return self._children
 
@@ -423,8 +422,10 @@ class FolderChildren(object):
 
 
         :param children: The children of this FolderChildren.  # noqa: E501
-        :type: list[dict(str, str)]
+        :type: list[FolderChildren]
         """
+        if children is None:
+            raise ValueError("Invalid value for `children`, must not be `None`")  # noqa: E501
 
         self._children = children
 
