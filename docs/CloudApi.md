@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**cloud_processor_partial_update**](CloudApi.md#cloud_processor_partial_update) | **PATCH** /cloud/{cloud_pk}/processor/{id} | 
 [**cloud_processor_read**](CloudApi.md#cloud_processor_read) | **GET** /cloud/{cloud_pk}/processor/{id} | 
 [**cloud_processor_update**](CloudApi.md#cloud_processor_update) | **PUT** /cloud/{cloud_pk}/processor/{id} | 
-[**cloud_user_create**](CloudApi.md#cloud_user_create) | **POST** /cloud/{cloud_pk}/user | 
 [**create_cloud**](CloudApi.md#create_cloud) | **POST** /cloud | Create a cloud
 [**create_demo**](CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
 [**delete_cloud**](CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
@@ -918,133 +917,6 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **cloud_user_create**
-> User cloud_user_create(cloud_pk, data)
-
-
-
-### Example
-
-* OAuth Authentication (BIMDataConnect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
-
-try:
-    api_response = api_instance.cloud_user_create(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->cloud_user_create: %s\n" % e)
-```
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
-
-try:
-    api_response = api_instance.cloud_user_create(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->cloud_user_create: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.CloudApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
-
-try:
-    api_response = api_instance.cloud_user_create(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CloudApi->cloud_user_create: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **data** | [**User**](User.md)|  | 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2345,7 +2217,7 @@ Name | Type | Description  | Notes
 
 Retrieve all users in a cloud
 
-Only administrators can see all cloud members Required scopes: cloud:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read
 
 ### Example
 

@@ -5,7 +5,6 @@ All URIs are relative to *https://api-beta.bimdata.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**cancel_project_user_invitation**](ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
-[**cloud_project_user_create**](ProjectApi.md#cloud_project_user_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/user | 
 [**create_classification**](ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 [**create_document**](ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 [**create_folder**](ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
@@ -175,10 +174,12 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cloud_project_user_create**
-> User cloud_project_user_create(cloud_pk, project_pk, data)
+# **create_classification**
+> Classification create_classification(cloud_pk, project_pk, data)
 
+Create a classification
 
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write
 
 ### Example
 
@@ -205,13 +206,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
+data = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    # Create a classification
+    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
 ```
 
 * Api Key Authentication (Bearer):
@@ -237,13 +239,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
+data = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    # Create a classification
+    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -269,13 +272,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.User() # User | 
+data = bimdata_api_client.Classification() # Classification | 
 
 try:
-    api_response = api_instance.cloud_project_user_create(cloud_pk, project_pk, data)
+    # Create a classification
+    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ProjectApi->cloud_project_user_create: %s\n" % e)
+    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -284,11 +288,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**User**](User.md)|  | 
+ **data** | [**Classification**](Classification.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**Classification**](Classification.md)
 
 ### Authorization
 
@@ -306,149 +310,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_classification**
-> list[Classification] create_classification(cloud_pk, project_pk, data)
-
-Create a classification
-
-         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write
-
-### Example
-
-* OAuth Authentication (BIMDataConnect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Classification()] # list[Classification] | 
-
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
-```
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Classification()] # list[Classification] | 
-
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = [bimdata_api_client.Classification()] # list[Classification] | 
-
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling ProjectApi->create_classification: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**list[Classification]**](Classification.md)|  | 
-
-### Return type
-
-[**list[Classification]**](Classification.md)
-
-### Authorization
-
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | All creates failed: list of errors |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **create_document**
 > Document create_document(cloud_pk, project_pk, name, parent=parent, parent_id=parent_id, creator=creator, project=project, file_name=file_name, description=description, file=file, size=size)
 
 Create a document
 
-RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write
 
 ### Example
 
@@ -616,7 +483,7 @@ Name | Type | Description  | Notes
 
 Create a folder
 
-If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write
 
 ### Example
 
@@ -2409,7 +2276,7 @@ Name | Type | Description  | Notes
 
 Retrieve all classifications
 
-Retrieve all classifications of all models in the project Required scopes: ifc:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read
 
 ### Example
 
@@ -2677,7 +2544,7 @@ Name | Type | Description  | Notes
 
 Retrieve all documents
 
-Retrieve all documents in the project Required scopes: document:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read
 
 ### Example
 
@@ -2945,7 +2812,7 @@ Name | Type | Description  | Notes
 
 Retrieve all folders
 
-Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read
 
 ### Example
 
@@ -3869,7 +3736,7 @@ Name | Type | Description  | Notes
 
 Retrieve all users in a project
 
-Each member of a project can see other members of the project Required scopes: cloud:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read
 
 ### Example
 

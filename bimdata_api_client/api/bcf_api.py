@@ -37,136 +37,10 @@ class BcfApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def bcf2_1_projects_topics_topic_viewpoints_create(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
-        """bcf2_1_projects_topics_topic_viewpoints_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bcf2_1_projects_topics_topic_viewpoints_create(projects_pk, topics_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str projects_pk: (required)
-        :param str topics_pk: (required)
-        :param Viewpoint data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Viewpoint
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.bcf2_1_projects_topics_topic_viewpoints_create_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
-
-    def bcf2_1_projects_topics_topic_viewpoints_create_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
-        """bcf2_1_projects_topics_topic_viewpoints_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bcf2_1_projects_topics_topic_viewpoints_create_with_http_info(projects_pk, topics_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str projects_pk: (required)
-        :param str topics_pk: (required)
-        :param Viewpoint data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Viewpoint, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method bcf2_1_projects_topics_topic_viewpoints_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
-            raise ApiValueError("Missing the required parameter `projects_pk` when calling `bcf2_1_projects_topics_topic_viewpoints_create`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `bcf2_1_projects_topics_topic_viewpoints_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `bcf2_1_projects_topics_topic_viewpoints_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'projects_pk' in local_var_params:
-            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Viewpoint',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def create_comment(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """Create a comment  # noqa: E501
 
-        Create a comment Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_comment(projects_pk, topics_pk, data, async_req=True)
@@ -193,7 +67,7 @@ class BcfApi(object):
     def create_comment_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """Create a comment  # noqa: E501
 
-        Create a comment Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_comment_with_http_info(projects_pk, topics_pk, data, async_req=True)
@@ -294,7 +168,7 @@ class BcfApi(object):
     def create_full_topic(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a Topic with viewpoints and comments  # noqa: E501
 
-        This is not a standard route. You can send a topic, viewpoints and comments in a single call Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_full_topic(projects_pk, data, async_req=True)
@@ -320,7 +194,7 @@ class BcfApi(object):
     def create_full_topic_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a Topic with viewpoints and comments  # noqa: E501
 
-        This is not a standard route. You can send a topic, viewpoints and comments in a single call Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_full_topic_with_http_info(projects_pk, data, async_req=True)
@@ -414,7 +288,7 @@ class BcfApi(object):
     def create_topic(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a topic  # noqa: E501
 
-        Create a topic Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_topic(projects_pk, data, async_req=True)
@@ -440,7 +314,7 @@ class BcfApi(object):
     def create_topic_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a topic  # noqa: E501
 
-        Create a topic Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_topic_with_http_info(projects_pk, data, async_req=True)
@@ -534,7 +408,7 @@ class BcfApi(object):
     def create_viewpoint(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """Create a Viewpoint  # noqa: E501
 
-        Create a Viewpoint Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_viewpoint(projects_pk, topics_pk, data, async_req=True)
@@ -561,7 +435,7 @@ class BcfApi(object):
     def create_viewpoint_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
         """Create a Viewpoint  # noqa: E501
 
-        Create a Viewpoint Required scopes: bcf:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_viewpoint_with_http_info(projects_pk, topics_pk, data, async_req=True)
@@ -2230,7 +2104,7 @@ class BcfApi(object):
     def get_comments(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all comments  # noqa: E501
 
-        Retrieve all comments Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_comments(projects_pk, topics_pk, async_req=True)
@@ -2256,7 +2130,7 @@ class BcfApi(object):
     def get_comments_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all comments  # noqa: E501
 
-        Retrieve all comments Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_comments_with_http_info(projects_pk, topics_pk, async_req=True)
@@ -2570,7 +2444,7 @@ class BcfApi(object):
     def get_full_topics(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all full topics  # noqa: E501
 
-        This is not a standard route. It responds with all topics, their viewpoints and their comments Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_full_topics(projects_pk, async_req=True)
@@ -2597,7 +2471,7 @@ class BcfApi(object):
     def get_full_topics_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all full topics  # noqa: E501
 
-        This is not a standard route. It responds with all topics, their viewpoints and their comments Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_full_topics_with_http_info(projects_pk, async_req=True)
@@ -3050,7 +2924,7 @@ class BcfApi(object):
     def get_topic_viewpoints(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all viewpoints attached to the topic  # noqa: E501
 
-        This is not a standard route. It returns all viewpoints of the topic that are not attached to a comment. Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topic_viewpoints(projects_pk, topics_pk, async_req=True)
@@ -3076,7 +2950,7 @@ class BcfApi(object):
     def get_topic_viewpoints_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all viewpoints attached to the topic  # noqa: E501
 
-        This is not a standard route. It returns all viewpoints of the topic that are not attached to a comment. Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topic_viewpoints_with_http_info(projects_pk, topics_pk, async_req=True)
@@ -3166,7 +3040,7 @@ class BcfApi(object):
     def get_topics(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all topics  # noqa: E501
 
-        Retrieve all topics Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topics(projects_pk, async_req=True)
@@ -3193,7 +3067,7 @@ class BcfApi(object):
     def get_topics_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all topics  # noqa: E501
 
-        Retrieve all topics Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topics_with_http_info(projects_pk, async_req=True)
@@ -3506,7 +3380,7 @@ class BcfApi(object):
     def get_viewpoints(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all Viewpoints of a topic  # noqa: E501
 
-        Retrieve all Viewpoints of a topic Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_viewpoints(projects_pk, topics_pk, async_req=True)
@@ -3532,7 +3406,7 @@ class BcfApi(object):
     def get_viewpoints_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
         """Retrieve all Viewpoints of a topic  # noqa: E501
 
-        Retrieve all Viewpoints of a topic Required scopes: bcf:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_viewpoints_with_http_info(projects_pk, topics_pk, async_req=True)

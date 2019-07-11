@@ -29,12 +29,6 @@ class TestBcfApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_bcf2_1_projects_topics_topic_viewpoints_create(self):
-        """Test case for bcf2_1_projects_topics_topic_viewpoints_create
-
-        """
-        pass
-
     def test_create_comment(self):
         """Test case for create_comment
 

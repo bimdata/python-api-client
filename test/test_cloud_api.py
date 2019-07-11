@@ -72,12 +72,6 @@ class TestCloudApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_user_create(self):
-        """Test case for cloud_user_create
-
-        """
-        pass
-
     def test_create_cloud(self):
         """Test case for create_cloud
 

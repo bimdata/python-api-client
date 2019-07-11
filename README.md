@@ -90,7 +90,6 @@ Class | Method | HTTP request | Description
 *ApplicationApi* | [**get_web_hooks**](docs/ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | Retrieve all configured webhooks
 *ApplicationApi* | [**ping_web_hook**](docs/ApplicationApi.md#ping_web_hook) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | Test a webhook
 *ApplicationApi* | [**update_web_hook**](docs/ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | Update some field of a webhook
-*BcfApi* | [**bcf2_1_projects_topics_topic_viewpoints_create**](docs/BcfApi.md#bcf2_1_projects_topics_topic_viewpoints_create) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints | 
 *BcfApi* | [**create_comment**](docs/BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | Create a comment
 *BcfApi* | [**create_full_topic**](docs/BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
 *BcfApi* | [**create_topic**](docs/BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
@@ -171,7 +170,6 @@ Class | Method | HTTP request | Description
 *CloudApi* | [**cloud_processor_partial_update**](docs/CloudApi.md#cloud_processor_partial_update) | **PATCH** /cloud/{cloud_pk}/processor/{id} | 
 *CloudApi* | [**cloud_processor_read**](docs/CloudApi.md#cloud_processor_read) | **GET** /cloud/{cloud_pk}/processor/{id} | 
 *CloudApi* | [**cloud_processor_update**](docs/CloudApi.md#cloud_processor_update) | **PUT** /cloud/{cloud_pk}/processor/{id} | 
-*CloudApi* | [**cloud_user_create**](docs/CloudApi.md#cloud_user_create) | **POST** /cloud/{cloud_pk}/user | 
 *CloudApi* | [**create_cloud**](docs/CloudApi.md#create_cloud) | **POST** /cloud | Create a cloud
 *CloudApi* | [**create_demo**](docs/CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
 *CloudApi* | [**delete_cloud**](docs/CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
@@ -198,12 +196,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**bulk_remove_elements_from_classification**](docs/IfcApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
 *IfcApi* | [**bulk_update_elements**](docs/IfcApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 *IfcApi* | [**bulk_update_ifc_property**](docs/IfcApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
-*IfcApi* | [**cloud_project_ifc_classification_create**](docs/IfcApi.md#cloud_project_ifc_classification_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification | 
-*IfcApi* | [**cloud_project_ifc_classification_element_create**](docs/IfcApi.md#cloud_project_ifc_classification_element_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element | 
-*IfcApi* | [**cloud_project_ifc_create**](docs/IfcApi.md#cloud_project_ifc_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc | 
-*IfcApi* | [**cloud_project_ifc_processorhandler_create**](docs/IfcApi.md#cloud_project_ifc_processorhandler_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | 
 *IfcApi* | [**cloud_project_ifc_processorhandler_partial_update**](docs/IfcApi.md#cloud_project_ifc_processorhandler_partial_update) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | 
-*IfcApi* | [**cloud_project_ifc_property_create**](docs/IfcApi.md#cloud_project_ifc_property_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property | 
 *IfcApi* | [**create_classification_element_relations**](docs/IfcApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 *IfcApi* | [**create_classifications_of_element**](docs/IfcApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
 *IfcApi* | [**create_element**](docs/IfcApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
@@ -294,7 +287,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_zone**](docs/IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *ProjectApi* | [**cancel_project_user_invitation**](docs/ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
-*ProjectApi* | [**cloud_project_user_create**](docs/ProjectApi.md#cloud_project_user_create) | **POST** /cloud/{cloud_pk}/project/{project_pk}/user | 
 *ProjectApi* | [**create_classification**](docs/ProjectApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 *ProjectApi* | [**create_document**](docs/ProjectApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *ProjectApi* | [**create_folder**](docs/ProjectApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder

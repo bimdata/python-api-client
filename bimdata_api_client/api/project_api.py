@@ -157,136 +157,10 @@ class ProjectApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def cloud_project_user_create(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_user_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_user_create(cloud_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param User data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: User
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_user_create_with_http_info(cloud_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_user_create_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_user_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_user_create_with_http_info(cloud_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param User data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(User, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_user_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_user_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_user_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_user_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='User',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def create_classification(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification(cloud_pk, project_pk, data, async_req=True)
@@ -295,7 +169,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param list[Classification] data: (required)
+        :param Classification data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -303,7 +177,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Classification]
+        :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -313,7 +187,7 @@ class ProjectApi(object):
     def create_classification_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -322,7 +196,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param list[Classification] data: (required)
+        :param Classification data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -332,7 +206,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Classification], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Classification, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -403,7 +277,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Classification]',  # noqa: E501
+            response_type='Classification',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -414,7 +288,7 @@ class ProjectApi(object):
     def create_document(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
-        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_document(cloud_pk, project_pk, name, async_req=True)
@@ -449,7 +323,7 @@ class ProjectApi(object):
     def create_document_with_http_info(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
-        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, async_req=True)
@@ -587,7 +461,7 @@ class ProjectApi(object):
     def create_folder(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a folder  # noqa: E501
 
-        If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_folder(cloud_pk, project_pk, data, async_req=True)
@@ -614,7 +488,7 @@ class ProjectApi(object):
     def create_folder_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a folder  # noqa: E501
 
-        If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_folder_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -2268,7 +2142,7 @@ class ProjectApi(object):
     def get_classifications(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications(cloud_pk, project_pk, async_req=True)
@@ -2294,7 +2168,7 @@ class ProjectApi(object):
     def get_classifications_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -2508,7 +2382,7 @@ class ProjectApi(object):
     def get_documents(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all documents  # noqa: E501
 
-        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_documents(cloud_pk, project_pk, async_req=True)
@@ -2534,7 +2408,7 @@ class ProjectApi(object):
     def get_documents_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all documents  # noqa: E501
 
-        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_documents_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -2748,7 +2622,7 @@ class ProjectApi(object):
     def get_folders(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all folders  # noqa: E501
 
-        Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_folders(cloud_pk, project_pk, async_req=True)
@@ -2774,7 +2648,7 @@ class ProjectApi(object):
     def get_folders_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all folders  # noqa: E501
 
-        Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_folders_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -3560,7 +3434,7 @@ class ProjectApi(object):
     def get_project_users(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users(cloud_pk, project_pk, async_req=True)
@@ -3586,7 +3460,7 @@ class ProjectApi(object):
     def get_project_users_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users_with_http_info(cloud_pk, project_pk, async_req=True)

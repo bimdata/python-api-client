@@ -106,38 +106,8 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_project_ifc_classification_create(self):
-        """Test case for cloud_project_ifc_classification_create
-
-        """
-        pass
-
-    def test_cloud_project_ifc_classification_element_create(self):
-        """Test case for cloud_project_ifc_classification_element_create
-
-        """
-        pass
-
-    def test_cloud_project_ifc_create(self):
-        """Test case for cloud_project_ifc_create
-
-        """
-        pass
-
-    def test_cloud_project_ifc_processorhandler_create(self):
-        """Test case for cloud_project_ifc_processorhandler_create
-
-        """
-        pass
-
     def test_cloud_project_ifc_processorhandler_partial_update(self):
         """Test case for cloud_project_ifc_processorhandler_partial_update
-
-        """
-        pass
-
-    def test_cloud_project_ifc_property_create(self):
-        """Test case for cloud_project_ifc_property_create
 
         """
         pass

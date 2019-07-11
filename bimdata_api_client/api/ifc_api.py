@@ -1437,544 +1437,6 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def cloud_project_ifc_classification_create(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_classification_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_classification_create(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param Classification data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Classification
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_ifc_classification_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_ifc_classification_create_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_classification_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_classification_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param Classification data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Classification, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_ifc_classification_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_classification_create`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `cloud_project_ifc_classification_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_classification_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_ifc_classification_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Classification',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def cloud_project_ifc_classification_element_create(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_classification_element_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_classification_element_create(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_classification_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param Element data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Element
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_ifc_classification_element_create_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_ifc_classification_element_create_with_http_info(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_classification_element_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_classification_element_create_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_classification_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param Element data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Element, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'ifc_classification_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_ifc_classification_element_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_classification_element_create`")  # noqa: E501
-        # verify the required parameter 'ifc_classification_pk' is set
-        if ('ifc_classification_pk' not in local_var_params or
-                local_var_params['ifc_classification_pk'] is None):
-            raise ApiValueError("Missing the required parameter `ifc_classification_pk` when calling `cloud_project_ifc_classification_element_create`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `cloud_project_ifc_classification_element_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_classification_element_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_ifc_classification_element_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_classification_pk' in local_var_params:
-            path_params['ifc_classification_pk'] = local_var_params['ifc_classification_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Element',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def cloud_project_ifc_create(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_create  # noqa: E501
-
-         Required scopes: ifc:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_create(cloud_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param Ifc data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Ifc
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_ifc_create_with_http_info(cloud_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_ifc_create_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_create  # noqa: E501
-
-         Required scopes: ifc:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_create_with_http_info(cloud_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str project_pk: (required)
-        :param Ifc data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Ifc, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_ifc_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_ifc_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Ifc',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def cloud_project_ifc_processorhandler_create(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_processorhandler_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_processorhandler_create(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param ProcessorHandler data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: ProcessorHandler
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_ifc_processorhandler_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_ifc_processorhandler_create_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_processorhandler_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_processorhandler_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param ProcessorHandler data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(ProcessorHandler, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_ifc_processorhandler_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_processorhandler_create`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `cloud_project_ifc_processorhandler_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_processorhandler_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_ifc_processorhandler_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ProcessorHandler',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def cloud_project_ifc_processorhandler_partial_update(self, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """cloud_project_ifc_processorhandler_partial_update  # noqa: E501
 
@@ -2119,140 +1581,6 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def cloud_project_ifc_property_create(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_property_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_property_create(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param ModelProperty data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: ModelProperty
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.cloud_project_ifc_property_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def cloud_project_ifc_property_create_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
-        """cloud_project_ifc_property_create  # noqa: E501
-
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.cloud_project_ifc_property_create_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
-        :param str project_pk: (required)
-        :param ModelProperty data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(ModelProperty, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = ['cloud_pk', 'ifc_pk', 'project_pk', 'data']  # noqa: E501
-        all_params.append('async_req')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method cloud_project_ifc_property_create" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `cloud_project_ifc_property_create`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `cloud_project_ifc_property_create`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `cloud_project_ifc_property_create`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
-            raise ApiValueError("Missing the required parameter `data` when calling `cloud_project_ifc_property_create`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ModelProperty',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def create_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create association between existing classification and existing element  # noqa: E501
 
@@ -2388,7 +1716,7 @@ class IfcApi(object):
     def create_classifications_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create one or many classifications to an element  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
@@ -2399,7 +1727,7 @@ class IfcApi(object):
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Classification] data: (required)
+        :param Classification data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2407,7 +1735,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Classification]
+        :return: Classification
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2417,7 +1745,7 @@ class IfcApi(object):
     def create_classifications_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create one or many classifications to an element  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
@@ -2428,7 +1756,7 @@ class IfcApi(object):
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Classification] data: (required)
+        :param Classification data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2438,7 +1766,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Classification], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Classification, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2521,7 +1849,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Classification]',  # noqa: E501
+            response_type='Classification',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2532,7 +1860,7 @@ class IfcApi(object):
     def create_element(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create an element in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -2542,7 +1870,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Element] data: (required)
+        :param Element data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2550,7 +1878,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Element]
+        :return: Element
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2560,7 +1888,7 @@ class IfcApi(object):
     def create_element_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create an element in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -2570,7 +1898,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Element] data: (required)
+        :param Element data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2580,7 +1908,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Element], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Element, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2657,7 +1985,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Element]',  # noqa: E501
+            response_type='Element',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2668,7 +1996,7 @@ class IfcApi(object):
     def create_element_property_set(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertySets to an element  # noqa: E501
 
-        Create a PropertySets that will be automatically linked to the element Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
@@ -2697,7 +2025,7 @@ class IfcApi(object):
     def create_element_property_set_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertySets to an element  # noqa: E501
 
-        Create a PropertySets that will be automatically linked to the element Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
@@ -2812,7 +2140,7 @@ class IfcApi(object):
     def create_element_property_set_property(self, cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a property to a PropertySet  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data, async_req=True)
@@ -2842,7 +2170,7 @@ class IfcApi(object):
     def create_element_property_set_property_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a property to a PropertySet  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data, async_req=True)
@@ -2964,7 +2292,7 @@ class IfcApi(object):
     def create_element_property_set_property_definition(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a Definition to a Property  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property_definition(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data, async_req=True)
@@ -2995,7 +2323,7 @@ class IfcApi(object):
     def create_element_property_set_property_definition_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a Definition to a Property  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property_definition_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data, async_req=True)
@@ -3124,7 +2452,7 @@ class IfcApi(object):
     def create_element_property_set_property_definition_unit(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a Unit to a Definition  # noqa: E501
 
-        Create a Unit to a Definition Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data, async_req=True)
@@ -3156,7 +2484,7 @@ class IfcApi(object):
     def create_element_property_set_property_definition_unit_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data, **kwargs):  # noqa: E501
         """Create a Unit to a Definition  # noqa: E501
 
-        Create a Unit to a Definition Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_element_property_set_property_definition_unit_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data, async_req=True)
@@ -3292,7 +2620,7 @@ class IfcApi(object):
     def create_ifc_property_definition(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertyDefinition on the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3302,7 +2630,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[PropertyDefinition] data: (required)
+        :param PropertyDefinition data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3310,7 +2638,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[PropertyDefinition]
+        :return: PropertyDefinition
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3320,7 +2648,7 @@ class IfcApi(object):
     def create_ifc_property_definition_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertyDefinition on the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3330,7 +2658,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[PropertyDefinition] data: (required)
+        :param PropertyDefinition data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3340,7 +2668,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[PropertyDefinition], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(PropertyDefinition, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3417,7 +2745,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[PropertyDefinition]',  # noqa: E501
+            response_type='PropertyDefinition',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3428,7 +2756,7 @@ class IfcApi(object):
     def create_ifc_unit(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Unit on a model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_unit(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3438,7 +2766,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Unit] data: (required)
+        :param Unit data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3446,7 +2774,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Unit]
+        :return: Unit
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3456,7 +2784,7 @@ class IfcApi(object):
     def create_ifc_unit_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Unit on a model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3466,7 +2794,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Unit] data: (required)
+        :param Unit data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3476,7 +2804,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Unit], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Unit, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3553,7 +2881,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Unit]',  # noqa: E501
+            response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3564,7 +2892,7 @@ class IfcApi(object):
     def create_property_set(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertySet  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_property_set(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3574,7 +2902,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[PropertySet] data: (required)
+        :param PropertySet data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3582,7 +2910,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[PropertySet]
+        :return: PropertySet
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3592,7 +2920,7 @@ class IfcApi(object):
     def create_property_set_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a PropertySet  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3602,7 +2930,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[PropertySet] data: (required)
+        :param PropertySet data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3612,7 +2940,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[PropertySet], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(PropertySet, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3689,7 +3017,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[PropertySet]',  # noqa: E501
+            response_type='PropertySet',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3964,7 +3292,7 @@ class IfcApi(object):
     def create_space(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a space in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_space(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3974,7 +3302,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Space] data: (required)
+        :param Space data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3982,7 +3310,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Space]
+        :return: Space
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3992,7 +3320,7 @@ class IfcApi(object):
     def create_space_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a space in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_space_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -4002,7 +3330,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Space] data: (required)
+        :param Space data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4012,7 +3340,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Space], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Space, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4089,7 +3417,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Space]',  # noqa: E501
+            response_type='Space',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -4100,7 +3428,7 @@ class IfcApi(object):
     def create_zone(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a zone in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_zone(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -4110,7 +3438,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Zone] data: (required)
+        :param Zone data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4118,7 +3446,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[Zone]
+        :return: Zone
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4128,7 +3456,7 @@ class IfcApi(object):
     def create_zone_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a zone in the model  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_zone_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -4138,7 +3466,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
-        :param list[Zone] data: (required)
+        :param Zone data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4148,7 +3476,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[Zone], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Zone, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4225,7 +3553,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[Zone]',  # noqa: E501
+            response_type='Zone',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -4236,7 +3564,7 @@ class IfcApi(object):
     def create_zone_space(self, cloud_pk, ifc_pk, project_pk, zone_pk, data, **kwargs):  # noqa: E501
         """Create a space in a zone  # noqa: E501
 
-        The IFC file will not be updated. The created space will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_zone_space(cloud_pk, ifc_pk, project_pk, zone_pk, data, async_req=True)
@@ -4265,7 +3593,7 @@ class IfcApi(object):
     def create_zone_space_with_http_info(self, cloud_pk, ifc_pk, project_pk, zone_pk, data, **kwargs):  # noqa: E501
         """Create a space in a zone  # noqa: E501
 
-        The IFC file will not be updated. The created space will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_zone_space_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, data, async_req=True)
@@ -6964,7 +6292,7 @@ class IfcApi(object):
     def get_classifications_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications of an element  # noqa: E501
 
-        Retrieve all classifications of an element Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
@@ -6992,7 +6320,7 @@ class IfcApi(object):
     def get_classifications_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications of an element  # noqa: E501
 
-        Retrieve all classifications of an element Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
@@ -7368,7 +6696,7 @@ class IfcApi(object):
     def get_element_property_set_properties(self, cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Properties of a PropertySet  # noqa: E501
 
-        Retrieve all Properties of a PropertySet Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_properties(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async_req=True)
@@ -7397,7 +6725,7 @@ class IfcApi(object):
     def get_element_property_set_properties_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Properties of a PropertySet  # noqa: E501
 
-        Retrieve all Properties of a PropertySet Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_properties_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, async_req=True)
@@ -7976,7 +7304,7 @@ class IfcApi(object):
     def get_element_property_set_property_definition_units(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Units of a Definition  # noqa: E501
 
-        Retrieve all Units of a Definition Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_property_definition_units(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
@@ -8007,7 +7335,7 @@ class IfcApi(object):
     def get_element_property_set_property_definition_units_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Units of a Definition  # noqa: E501
 
-        Retrieve all Units of a Definition Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_property_definition_units_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
@@ -8132,7 +7460,7 @@ class IfcApi(object):
     def get_element_property_set_property_definitions(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Definitions of a PropertySet  # noqa: E501
 
-        Retrieve all Definitions of a PropertySet Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_property_definitions(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
@@ -8162,7 +7490,7 @@ class IfcApi(object):
     def get_element_property_set_property_definitions_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, **kwargs):  # noqa: E501
         """Retrieve all Definitions of a PropertySet  # noqa: E501
 
-        Retrieve all Definitions of a PropertySet Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_set_property_definitions_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, async_req=True)
@@ -8280,7 +7608,7 @@ class IfcApi(object):
     def get_element_property_sets(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertySets of an element  # noqa: E501
 
-        Retrieve all PropertySets of an element Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_sets(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
@@ -8308,7 +7636,7 @@ class IfcApi(object):
     def get_element_property_sets_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertySets of an element  # noqa: E501
 
-        Retrieve all PropertySets of an element Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_element_property_sets_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
@@ -8412,7 +7740,7 @@ class IfcApi(object):
     def get_elements(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all elements of a model  # noqa: E501
 
-        Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see getRawElements Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_elements(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -8442,7 +7770,7 @@ class IfcApi(object):
     def get_elements_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all elements of a model  # noqa: E501
 
-        Retrieve all elements of a model. If not filtered, the json may be very large. To efficently retrieve all elements and their data, see getRawElements Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_elements_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -8548,7 +7876,7 @@ class IfcApi(object):
     def get_elements_from_classification(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all elements with the classification  # noqa: E501
 
-        Retrieve all elements with the classification Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
@@ -8576,7 +7904,7 @@ class IfcApi(object):
     def get_elements_from_classification_with_http_info(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all elements with the classification  # noqa: E501
 
-        Retrieve all elements with the classification Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
@@ -8924,7 +8252,7 @@ class IfcApi(object):
     def get_ifc_classifications(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications in a model  # noqa: E501
 
-        Retrieve all classifications in a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_classifications(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -8951,7 +8279,7 @@ class IfcApi(object):
     def get_ifc_classifications_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications in a model  # noqa: E501
 
-        Retrieve all classifications in a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_classifications_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -9288,7 +8616,7 @@ class IfcApi(object):
     def get_ifc_properties(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Properties of a model  # noqa: E501
 
-        Retrieve all PropertySets of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_properties(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -9315,7 +8643,7 @@ class IfcApi(object):
     def get_ifc_properties_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Properties of a model  # noqa: E501
 
-        Retrieve all PropertySets of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -9676,7 +9004,7 @@ class IfcApi(object):
     def get_ifc_property_definitions(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertyDefinitions of a model  # noqa: E501
 
-        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -9703,7 +9031,7 @@ class IfcApi(object):
     def get_ifc_property_definitions_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertyDefinitions of a model  # noqa: E501
 
-        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10172,7 +9500,7 @@ class IfcApi(object):
     def get_ifc_units(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Units of a model  # noqa: E501
 
-        Retrieve all Units of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_units(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10199,7 +9527,7 @@ class IfcApi(object):
     def get_ifc_units_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Units of a model  # noqa: E501
 
-        Retrieve all Units of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10296,7 +9624,7 @@ class IfcApi(object):
     def get_ifcs(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all models  # noqa: E501
 
-        Retrieve all models Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs(cloud_pk, project_pk, async_req=True)
@@ -10323,7 +9651,7 @@ class IfcApi(object):
     def get_ifcs_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all models  # noqa: E501
 
-        Retrieve all models Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -10548,7 +9876,7 @@ class IfcApi(object):
     def get_processor_handlers(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Get all processor handlers  # noqa: E501
 
-         Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_processor_handlers(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10575,7 +9903,7 @@ class IfcApi(object):
     def get_processor_handlers_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Get all processor handlers  # noqa: E501
 
-         Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_processor_handlers_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10804,7 +10132,7 @@ class IfcApi(object):
     def get_property_sets(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertySets of a model  # noqa: E501
 
-        Retrieve all PropertySets of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_sets(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -10831,7 +10159,7 @@ class IfcApi(object):
     def get_property_sets_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all PropertySets of a model  # noqa: E501
 
-        Retrieve all PropertySets of a model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_property_sets_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -11196,7 +10524,7 @@ class IfcApi(object):
     def get_spaces(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all spaces of the model  # noqa: E501
 
-        Retrieve all spaces of the model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_spaces(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -11223,7 +10551,7 @@ class IfcApi(object):
     def get_spaces_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all spaces of the model  # noqa: E501
 
-        Retrieve all spaces of the model Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -11592,7 +10920,7 @@ class IfcApi(object):
     def get_zone_spaces(self, cloud_pk, ifc_pk, project_pk, zone_pk, **kwargs):  # noqa: E501
         """Retrieve all spaces of a zone  # noqa: E501
 
-        Retrieve all spaces of a zone Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zone_spaces(cloud_pk, ifc_pk, project_pk, zone_pk, async_req=True)
@@ -11620,7 +10948,7 @@ class IfcApi(object):
     def get_zone_spaces_with_http_info(self, cloud_pk, ifc_pk, project_pk, zone_pk, **kwargs):  # noqa: E501
         """Retrieve all spaces of a zone  # noqa: E501
 
-        Retrieve all spaces of a zone Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zone_spaces_with_http_info(cloud_pk, ifc_pk, project_pk, zone_pk, async_req=True)
@@ -11724,7 +11052,7 @@ class IfcApi(object):
     def get_zones(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve zones of a model  # noqa: E501
 
-        Retrieve parent zones of a model. Children zones we'll be in the 'zones' field Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zones(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -11752,7 +11080,7 @@ class IfcApi(object):
     def get_zones_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve zones of a model  # noqa: E501
 
-        Retrieve parent zones of a model. Children zones we'll be in the 'zones' field Required scopes: ifc:read  # noqa: E501
+        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_zones_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)

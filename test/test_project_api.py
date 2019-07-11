@@ -36,12 +36,6 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_project_user_create(self):
-        """Test case for cloud_project_user_create
-
-        """
-        pass
-
     def test_create_classification(self):
         """Test case for create_classification
 

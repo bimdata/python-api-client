@@ -4,7 +4,6 @@ All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**bcf2_1_projects_topics_topic_viewpoints_create**](BcfApi.md#bcf2_1_projects_topics_topic_viewpoints_create) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints | 
 [**create_comment**](BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments | Create a comment
 [**create_full_topic**](BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
 [**create_topic**](BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
@@ -43,143 +42,12 @@ Method | HTTP request | Description
 [**update_viewpoint**](BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid} | Update some fields of a Viewpoint
 
 
-# **bcf2_1_projects_topics_topic_viewpoints_create**
-> Viewpoint bcf2_1_projects_topics_topic_viewpoints_create(projects_pk, topics_pk, data)
-
-
-
-### Example
-
-* OAuth Authentication (BIMDataConnect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
-topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
-
-try:
-    api_response = api_instance.bcf2_1_projects_topics_topic_viewpoints_create(projects_pk, topics_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling BcfApi->bcf2_1_projects_topics_topic_viewpoints_create: %s\n" % e)
-```
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
-topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
-
-try:
-    api_response = api_instance.bcf2_1_projects_topics_topic_viewpoints_create(projects_pk, topics_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling BcfApi->bcf2_1_projects_topics_topic_viewpoints_create: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# create an instance of the API class
-api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
-projects_pk = 'projects_pk_example' # str | 
-topics_pk = 'topics_pk_example' # str | 
-data = bimdata_api_client.Viewpoint() # Viewpoint | 
-
-try:
-    api_response = api_instance.bcf2_1_projects_topics_topic_viewpoints_create(projects_pk, topics_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling BcfApi->bcf2_1_projects_topics_topic_viewpoints_create: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
- **topics_pk** | **str**|  | 
- **data** | [**Viewpoint**](Viewpoint.md)|  | 
-
-### Return type
-
-[**Viewpoint**](Viewpoint.md)
-
-### Authorization
-
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **create_comment**
 > Comment create_comment(projects_pk, topics_pk, data)
 
 Create a comment
 
-Create a comment Required scopes: bcf:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write
 
 ### Example
 
@@ -315,7 +183,7 @@ Name | Type | Description  | Notes
 
 Create a Topic with viewpoints and comments
 
-This is not a standard route. You can send a topic, viewpoints and comments in a single call Required scopes: bcf:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write
 
 ### Example
 
@@ -447,7 +315,7 @@ Name | Type | Description  | Notes
 
 Create a topic
 
-Create a topic Required scopes: bcf:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write
 
 ### Example
 
@@ -579,7 +447,7 @@ Name | Type | Description  | Notes
 
 Create a Viewpoint
 
-Create a Viewpoint Required scopes: bcf:write
+Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write
 
 ### Example
 
@@ -2449,7 +2317,7 @@ Name | Type | Description  | Notes
 
 Retrieve all comments
 
-Retrieve all comments Required scopes: bcf:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read
 
 ### Example
 
@@ -2841,7 +2709,7 @@ Name | Type | Description  | Notes
 
 Retrieve all full topics
 
-This is not a standard route. It responds with all topics, their viewpoints and their comments Required scopes: bcf:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read
 
 ### Example
 
@@ -3381,7 +3249,7 @@ Name | Type | Description  | Notes
 
 Retrieve all viewpoints attached to the topic
 
-This is not a standard route. It returns all viewpoints of the topic that are not attached to a comment. Required scopes: bcf:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read
 
 ### Example
 
@@ -3513,7 +3381,7 @@ Name | Type | Description  | Notes
 
 Retrieve all topics
 
-Retrieve all topics Required scopes: bcf:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read
 
 ### Example
 
@@ -3907,7 +3775,7 @@ Name | Type | Description  | Notes
 
 Retrieve all Viewpoints of a topic
 
-Retrieve all Viewpoints of a topic Required scopes: bcf:read
+Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read
 
 ### Example
 
