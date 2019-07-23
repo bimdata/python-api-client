@@ -35,8 +35,6 @@ from bimdata_api_client.models.element_classification_relation import ElementCla
 from bimdata_api_client.models.element_property_set_relation import ElementPropertySetRelation
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
-from bimdata_api_client.models.folder import Folder
-from bimdata_api_client.models.folder_children import FolderChildren
 from bimdata_api_client.models.full_topic import FullTopic
 from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_checker import IfcChecker
@@ -51,12 +49,12 @@ from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.models.perspective_camera import PerspectiveCamera
 from bimdata_api_client.models.point import Point
 from bimdata_api_client.models.priority import Priority
-from bimdata_api_client.models.processor import Processor
 from bimdata_api_client.models.processor_handler import ProcessorHandler
 from bimdata_api_client.models.project import Project
 from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
 from bimdata_api_client.models.project_with_children import ProjectWithChildren
+from bimdata_api_client.models.project_with_cloud import ProjectWithCloud
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
 from bimdata_api_client.models.raw_classification import RawClassification
@@ -66,6 +64,8 @@ from bimdata_api_client.models.raw_elements import RawElements
 from bimdata_api_client.models.raw_property import RawProperty
 from bimdata_api_client.models.raw_property_set import RawPropertySet
 from bimdata_api_client.models.raw_unit import RawUnit
+from bimdata_api_client.models.recursive_folder import RecursiveFolder
+from bimdata_api_client.models.recursive_folder_children import RecursiveFolderChildren
 from bimdata_api_client.models.rule import Rule
 from bimdata_api_client.models.rule_component import RuleComponent
 from bimdata_api_client.models.ruleset import Ruleset

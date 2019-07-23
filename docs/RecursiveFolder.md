@@ -1,4 +1,4 @@
-# Folder
+# RecursiveFolder
 
 ## Properties
 Name | Type | Description | Notes
@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **name** | **str** | Name of the folder | 
 **created_at** | **datetime** | Creation date | [optional] 
 **updated_at** | **datetime** | Date of the last update | [optional] 
-**children** | [**list[FolderChildren]**](FolderChildren.md) |  | [optional] 
 **created_by** | [**User**](User.md) |  | [optional] 
+**children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -164,12 +164,6 @@ Class | Method | HTTP request | Description
 *CheckplanApi* | [**update_rule_component**](docs/CheckplanApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
 *CheckplanApi* | [**update_ruleset**](docs/CheckplanApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
 *CloudApi* | [**cancel_cloud_user_invitation**](docs/CloudApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
-*CloudApi* | [**cloud_processor_create**](docs/CloudApi.md#cloud_processor_create) | **POST** /cloud/{cloud_pk}/processor | 
-*CloudApi* | [**cloud_processor_delete**](docs/CloudApi.md#cloud_processor_delete) | **DELETE** /cloud/{cloud_pk}/processor/{id} | 
-*CloudApi* | [**cloud_processor_list**](docs/CloudApi.md#cloud_processor_list) | **GET** /cloud/{cloud_pk}/processor | 
-*CloudApi* | [**cloud_processor_partial_update**](docs/CloudApi.md#cloud_processor_partial_update) | **PATCH** /cloud/{cloud_pk}/processor/{id} | 
-*CloudApi* | [**cloud_processor_read**](docs/CloudApi.md#cloud_processor_read) | **GET** /cloud/{cloud_pk}/processor/{id} | 
-*CloudApi* | [**cloud_processor_update**](docs/CloudApi.md#cloud_processor_update) | **PUT** /cloud/{cloud_pk}/processor/{id} | 
 *CloudApi* | [**create_cloud**](docs/CloudApi.md#create_cloud) | **POST** /cloud | Create a cloud
 *CloudApi* | [**create_demo**](docs/CloudApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
 *CloudApi* | [**delete_cloud**](docs/CloudApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
@@ -348,8 +342,6 @@ Class | Method | HTTP request | Description
  - [ElementPropertySetRelation](docs/ElementPropertySetRelation.md)
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
- - [Folder](docs/Folder.md)
- - [FolderChildren](docs/FolderChildren.md)
  - [FullTopic](docs/FullTopic.md)
  - [Ifc](docs/Ifc.md)
  - [IfcChecker](docs/IfcChecker.md)
@@ -364,12 +356,12 @@ Class | Method | HTTP request | Description
  - [PerspectiveCamera](docs/PerspectiveCamera.md)
  - [Point](docs/Point.md)
  - [Priority](docs/Priority.md)
- - [Processor](docs/Processor.md)
  - [ProcessorHandler](docs/ProcessorHandler.md)
  - [Project](docs/Project.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectRole](docs/ProjectRole.md)
  - [ProjectWithChildren](docs/ProjectWithChildren.md)
+ - [ProjectWithCloud](docs/ProjectWithCloud.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
  - [RawClassification](docs/RawClassification.md)
@@ -379,6 +371,8 @@ Class | Method | HTTP request | Description
  - [RawProperty](docs/RawProperty.md)
  - [RawPropertySet](docs/RawPropertySet.md)
  - [RawUnit](docs/RawUnit.md)
+ - [RecursiveFolder](docs/RecursiveFolder.md)
+ - [RecursiveFolderChildren](docs/RecursiveFolderChildren.md)
  - [Rule](docs/Rule.md)
  - [RuleComponent](docs/RuleComponent.md)
  - [Ruleset](docs/Ruleset.md)

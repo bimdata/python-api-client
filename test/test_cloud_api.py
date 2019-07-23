@@ -36,42 +36,6 @@ class TestCloudApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_processor_create(self):
-        """Test case for cloud_processor_create
-
-        """
-        pass
-
-    def test_cloud_processor_delete(self):
-        """Test case for cloud_processor_delete
-
-        """
-        pass
-
-    def test_cloud_processor_list(self):
-        """Test case for cloud_processor_list
-
-        """
-        pass
-
-    def test_cloud_processor_partial_update(self):
-        """Test case for cloud_processor_partial_update
-
-        """
-        pass
-
-    def test_cloud_processor_read(self):
-        """Test case for cloud_processor_read
-
-        """
-        pass
-
-    def test_cloud_processor_update(self):
-        """Test case for cloud_processor_update
-
-        """
-        pass
-
     def test_create_cloud(self):
         """Test case for create_cloud
 

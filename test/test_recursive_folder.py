@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.folder import Folder  # noqa: E501
+from bimdata_api_client.models.recursive_folder import RecursiveFolder  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestFolder(unittest.TestCase):
-    """Folder unit test stubs"""
+class TestRecursiveFolder(unittest.TestCase):
+    """RecursiveFolder unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestFolder(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testFolder(self):
-        """Test Folder"""
+    def testRecursiveFolder(self):
+        """Test RecursiveFolder"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.folder.Folder()  # noqa: E501
+        # model = bimdata_api_client.models.recursive_folder.RecursiveFolder()  # noqa: E501
         pass
 
 

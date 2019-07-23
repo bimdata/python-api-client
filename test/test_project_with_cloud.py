@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.processor import Processor  # noqa: E501
+from bimdata_api_client.models.project_with_cloud import ProjectWithCloud  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestProcessor(unittest.TestCase):
-    """Processor unit test stubs"""
+class TestProjectWithCloud(unittest.TestCase):
+    """ProjectWithCloud unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestProcessor(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testProcessor(self):
-        """Test Processor"""
+    def testProjectWithCloud(self):
+        """Test ProjectWithCloud"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.processor.Processor()  # noqa: E501
+        # model = bimdata_api_client.models.project_with_cloud.ProjectWithCloud()  # noqa: E501
         pass
 
 

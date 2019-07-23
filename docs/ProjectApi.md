@@ -479,7 +479,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_folder**
-> Folder create_folder(cloud_pk, project_pk, data)
+> RecursiveFolder create_folder(cloud_pk, project_pk, data)
 
 Create a folder
 
@@ -510,7 +510,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Create a folder
@@ -543,7 +543,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Create a folder
@@ -576,7 +576,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Create a folder
@@ -592,11 +592,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **data** | [**RecursiveFolder**](RecursiveFolder.md)|  | 
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -1720,7 +1720,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_folder**
-> Folder full_update_folder(cloud_pk, id, project_pk, data)
+> RecursiveFolder full_update_folder(cloud_pk, id, project_pk, data)
 
 Update all fields of a folder
 
@@ -1752,7 +1752,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update all fields of a folder
@@ -1786,7 +1786,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update all fields of a folder
@@ -1820,7 +1820,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update all fields of a folder
@@ -1837,11 +1837,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **data** | [**RecursiveFolder**](RecursiveFolder.md)|  | 
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -2672,7 +2672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folder**
-> Folder get_folder(cloud_pk, id, project_pk)
+> RecursiveFolder get_folder(cloud_pk, id, project_pk)
 
 Retrieve a folder
 
@@ -2789,7 +2789,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -2808,7 +2808,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_folders**
-> list[Folder] get_folders(cloud_pk, project_pk)
+> list[RecursiveFolder] get_folders(cloud_pk, project_pk)
 
 Retrieve all folders
 
@@ -2921,7 +2921,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[Folder]**](Folder.md)
+[**list[RecursiveFolder]**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -3072,7 +3072,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_dms_tree**
-> Folder get_project_dms_tree(cloud_pk, id)
+> RecursiveFolder get_project_dms_tree(cloud_pk, id)
 
 Retrieve the complete DMS tree
 
@@ -3185,7 +3185,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -3464,7 +3464,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_tree**
-> Folder get_project_tree(cloud_pk, id)
+> RecursiveFolder get_project_tree(cloud_pk, id)
 
 Retrieve the complete DMS tree
 
@@ -3577,7 +3577,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 
@@ -4408,7 +4408,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_folder**
-> Folder update_folder(cloud_pk, id, project_pk, data)
+> RecursiveFolder update_folder(cloud_pk, id, project_pk, data)
 
 Update some fields of a folder
 
@@ -4440,7 +4440,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update some fields of a folder
@@ -4474,7 +4474,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update some fields of a folder
@@ -4508,7 +4508,7 @@ api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(config
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Folder() # Folder | 
+data = bimdata_api_client.RecursiveFolder() # RecursiveFolder | 
 
 try:
     # Update some fields of a folder
@@ -4525,11 +4525,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this folder. | 
  **project_pk** | **str**|  | 
- **data** | [**Folder**](Folder.md)|  | 
+ **data** | [**RecursiveFolder**](RecursiveFolder.md)|  | 
 
 ### Return type
 
-[**Folder**](Folder.md)
+[**RecursiveFolder**](RecursiveFolder.md)
 
 ### Authorization
 

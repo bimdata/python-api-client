@@ -1,4 +1,4 @@
-# FolderChildren
+# RecursiveFolderChildren
 
 ## Properties
 Name | Type | Description | Notes
@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **size** | **int** |  | [optional] 
 **ifc_id** | **int** |  | [optional] 
 **file** | **str** |  | [optional] 
-**children** | [**list[FolderChildren]**](FolderChildren.md) |  | 
+**children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

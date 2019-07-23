@@ -250,7 +250,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **user_projects_list**
-> list[Project] user_projects_list()
+> list[ProjectWithCloud] user_projects_list()
 
 
 
@@ -348,7 +348,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**list[Project]**](Project.md)
+[**list[ProjectWithCloud]**](ProjectWithCloud.md)
 
 ### Authorization
 
