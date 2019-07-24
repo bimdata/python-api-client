@@ -361,7 +361,6 @@ Class | Method | HTTP request | Description
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectRole](docs/ProjectRole.md)
  - [ProjectWithChildren](docs/ProjectWithChildren.md)
- - [ProjectWithCloud](docs/ProjectWithCloud.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
  - [RawClassification](docs/RawClassification.md)

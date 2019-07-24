@@ -74,7 +74,6 @@ from bimdata_api_client.models.project import Project
 from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
 from bimdata_api_client.models.project_with_children import ProjectWithChildren
-from bimdata_api_client.models.project_with_cloud import ProjectWithCloud
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
 from bimdata_api_client.models.raw_classification import RawClassification

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **logo** | **str** |  | [optional] 
 **name** | **str** | Name of the project | 
-**cloud_id** | **str** |  | [optional] 
+**cloud** | [**Cloud**](Cloud.md) |  | [optional] 
 **status** | **str** |  | [optional] 
 **created_at** | **datetime** | Creation date | [optional] 
 **updated_at** | **datetime** | Date of the last update | [optional] 

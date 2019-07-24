@@ -35,7 +35,7 @@ class Project(object):
         'id': 'int',
         'logo': 'str',
         'name': 'str',
-        'cloud_id': 'str',
+        'cloud': 'Cloud',
         'status': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -47,7 +47,7 @@ class Project(object):
         'id': 'id',
         'logo': 'logo',
         'name': 'name',
-        'cloud_id': 'cloud_id',
+        'cloud': 'cloud',
         'status': 'status',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
@@ -55,13 +55,13 @@ class Project(object):
         'root_folder_id': 'root_folder_id'
     }
 
-    def __init__(self, id=None, logo=None, name=None, cloud_id=None, status=None, created_at=None, updated_at=None, parent_id=None, root_folder_id=None):  # noqa: E501
+    def __init__(self, id=None, logo=None, name=None, cloud=None, status=None, created_at=None, updated_at=None, parent_id=None, root_folder_id=None):  # noqa: E501
         """Project - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._logo = None
         self._name = None
-        self._cloud_id = None
+        self._cloud = None
         self._status = None
         self._created_at = None
         self._updated_at = None
@@ -73,8 +73,8 @@ class Project(object):
             self.id = id
         self.logo = logo
         self.name = name
-        if cloud_id is not None:
-            self.cloud_id = cloud_id
+        if cloud is not None:
+            self.cloud = cloud
         if status is not None:
             self.status = status
         if created_at is not None:
@@ -157,25 +157,25 @@ class Project(object):
         self._name = name
 
     @property
-    def cloud_id(self):
-        """Gets the cloud_id of this Project.  # noqa: E501
+    def cloud(self):
+        """Gets the cloud of this Project.  # noqa: E501
 
 
-        :return: The cloud_id of this Project.  # noqa: E501
-        :rtype: str
+        :return: The cloud of this Project.  # noqa: E501
+        :rtype: Cloud
         """
-        return self._cloud_id
+        return self._cloud
 
-    @cloud_id.setter
-    def cloud_id(self, cloud_id):
-        """Sets the cloud_id of this Project.
+    @cloud.setter
+    def cloud(self, cloud):
+        """Sets the cloud of this Project.
 
 
-        :param cloud_id: The cloud_id of this Project.  # noqa: E501
-        :type: str
+        :param cloud: The cloud of this Project.  # noqa: E501
+        :type: Cloud
         """
 
-        self._cloud_id = cloud_id
+        self._cloud = cloud
 
     @property
     def status(self):
