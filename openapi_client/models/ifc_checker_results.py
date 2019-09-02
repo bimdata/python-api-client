@@ -32,52 +32,121 @@ class IfcCheckerResults(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'id': 'int',
+        'error_detail': 'str',
+        'status': 'str',
         'result': 'str',
         'collisions': 'str',
-        'updated_at': 'datetime',
-        'error_detail': 'str',
         'created_at': 'datetime',
-        'id': 'int',
-        'checker': 'int',
-        'status': 'str'
+        'updated_at': 'datetime',
+        'checker': 'int'
     }
 
     attribute_map = {
+        'id': 'id',
+        'error_detail': 'error_detail',
+        'status': 'status',
         'result': 'result',
         'collisions': 'collisions',
-        'updated_at': 'updated_at',
-        'error_detail': 'error_detail',
         'created_at': 'created_at',
-        'id': 'id',
-        'checker': 'checker',
-        'status': 'status'
+        'updated_at': 'updated_at',
+        'checker': 'checker'
     }
 
-    def __init__(self, result=None, collisions=None, updated_at=None, error_detail=None, created_at=None, id=None, checker=None, status=None):  # noqa: E501
+    def __init__(self, id=None, error_detail=None, status=None, result=None, collisions=None, created_at=None, updated_at=None, checker=None):  # noqa: E501
         """IfcCheckerResults - a model defined in OpenAPI"""  # noqa: E501
 
+        self._id = None
+        self._error_detail = None
+        self._status = None
         self._result = None
         self._collisions = None
-        self._updated_at = None
-        self._error_detail = None
         self._created_at = None
-        self._id = None
+        self._updated_at = None
         self._checker = None
-        self._status = None
         self.discriminator = None
 
-        self.result = result
-        self.collisions = collisions
-        if updated_at is not None:
-            self.updated_at = updated_at
-        self.error_detail = error_detail
-        if created_at is not None:
-            self.created_at = created_at
         if id is not None:
             self.id = id
-        self.checker = checker
+        self.error_detail = error_detail
         if status is not None:
             self.status = status
+        self.result = result
+        self.collisions = collisions
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.checker = checker
+
+    @property
+    def id(self):
+        """Gets the id of this IfcCheckerResults.  # noqa: E501
+
+
+        :return: The id of this IfcCheckerResults.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this IfcCheckerResults.
+
+
+        :param id: The id of this IfcCheckerResults.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def error_detail(self):
+        """Gets the error_detail of this IfcCheckerResults.  # noqa: E501
+
+
+        :return: The error_detail of this IfcCheckerResults.  # noqa: E501
+        :rtype: str
+        """
+        return self._error_detail
+
+    @error_detail.setter
+    def error_detail(self, error_detail):
+        """Sets the error_detail of this IfcCheckerResults.
+
+
+        :param error_detail: The error_detail of this IfcCheckerResults.  # noqa: E501
+        :type: str
+        """
+
+        self._error_detail = error_detail
+
+    @property
+    def status(self):
+        """Gets the status of this IfcCheckerResults.  # noqa: E501
+
+
+        :return: The status of this IfcCheckerResults.  # noqa: E501
+        :rtype: str
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this IfcCheckerResults.
+
+
+        :param status: The status of this IfcCheckerResults.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["C", "P", "E"]  # noqa: E501
+        if status not in allowed_values:
+            raise ValueError(
+                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
+                .format(status, allowed_values)
+            )
+
+        self._status = status
 
     @property
     def result(self):
@@ -122,48 +191,6 @@ class IfcCheckerResults(object):
         self._collisions = collisions
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this IfcCheckerResults.  # noqa: E501
-
-
-        :return: The updated_at of this IfcCheckerResults.  # noqa: E501
-        :rtype: datetime
-        """
-        return self._updated_at
-
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this IfcCheckerResults.
-
-
-        :param updated_at: The updated_at of this IfcCheckerResults.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
-
-    @property
-    def error_detail(self):
-        """Gets the error_detail of this IfcCheckerResults.  # noqa: E501
-
-
-        :return: The error_detail of this IfcCheckerResults.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_detail
-
-    @error_detail.setter
-    def error_detail(self, error_detail):
-        """Sets the error_detail of this IfcCheckerResults.
-
-
-        :param error_detail: The error_detail of this IfcCheckerResults.  # noqa: E501
-        :type: str
-        """
-
-        self._error_detail = error_detail
-
-    @property
     def created_at(self):
         """Gets the created_at of this IfcCheckerResults.  # noqa: E501
 
@@ -185,25 +212,25 @@ class IfcCheckerResults(object):
         self._created_at = created_at
 
     @property
-    def id(self):
-        """Gets the id of this IfcCheckerResults.  # noqa: E501
+    def updated_at(self):
+        """Gets the updated_at of this IfcCheckerResults.  # noqa: E501
 
 
-        :return: The id of this IfcCheckerResults.  # noqa: E501
-        :rtype: int
+        :return: The updated_at of this IfcCheckerResults.  # noqa: E501
+        :rtype: datetime
         """
-        return self._id
+        return self._updated_at
 
-    @id.setter
-    def id(self, id):
-        """Sets the id of this IfcCheckerResults.
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this IfcCheckerResults.
 
 
-        :param id: The id of this IfcCheckerResults.  # noqa: E501
-        :type: int
+        :param updated_at: The updated_at of this IfcCheckerResults.  # noqa: E501
+        :type: datetime
         """
 
-        self._id = id
+        self._updated_at = updated_at
 
     @property
     def checker(self):
@@ -227,33 +254,6 @@ class IfcCheckerResults(object):
             raise ValueError("Invalid value for `checker`, must not be `None`")  # noqa: E501
 
         self._checker = checker
-
-    @property
-    def status(self):
-        """Gets the status of this IfcCheckerResults.  # noqa: E501
-
-
-        :return: The status of this IfcCheckerResults.  # noqa: E501
-        :rtype: str
-        """
-        return self._status
-
-    @status.setter
-    def status(self, status):
-        """Sets the status of this IfcCheckerResults.
-
-
-        :param status: The status of this IfcCheckerResults.  # noqa: E501
-        :type: str
-        """
-        allowed_values = ["C", "P", "E"]  # noqa: E501
-        if status not in allowed_values:
-            raise ValueError(
-                "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501
-                .format(status, allowed_values)
-            )
-
-        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""

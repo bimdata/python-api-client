@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.models.cloud_invitation import CloudInvitation  # noqa: E501
-from bimdata_api_client.rest import ApiException
+import openapi_client
+from openapi_client.models.cloud_invitation import CloudInvitation  # noqa: E501
+from openapi_client.rest import ApiException
 
 
 class TestCloudInvitation(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestCloudInvitation(unittest.TestCase):
     def testCloudInvitation(self):
         """Test CloudInvitation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.cloud_invitation.CloudInvitation()  # noqa: E501
+        # model = openapi_client.models.cloud_invitation.CloudInvitation()  # noqa: E501
         pass
 
 

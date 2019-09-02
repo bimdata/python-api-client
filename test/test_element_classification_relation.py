@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.models.element_classification_relation import ElementClassificationRelation  # noqa: E501
-from bimdata_api_client.rest import ApiException
+import openapi_client
+from openapi_client.models.element_classification_relation import ElementClassificationRelation  # noqa: E501
+from openapi_client.rest import ApiException
 
 
 class TestElementClassificationRelation(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestElementClassificationRelation(unittest.TestCase):
     def testElementClassificationRelation(self):
         """Test ElementClassificationRelation"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.element_classification_relation.ElementClassificationRelation()  # noqa: E501
+        # model = openapi_client.models.element_classification_relation.ElementClassificationRelation()  # noqa: E501
         pass
 
 

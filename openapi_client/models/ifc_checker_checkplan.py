@@ -32,90 +32,69 @@ class IfcCheckerCheckplan(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'updated_at': 'datetime',
-        'protected': 'bool',
+        'id': 'int',
         'name': 'str',
         'description': 'str',
         'created_at': 'datetime',
-        'project': 'int',
-        'id': 'int'
+        'updated_at': 'datetime',
+        'protected': 'bool',
+        'project': 'int'
     }
 
     attribute_map = {
-        'updated_at': 'updated_at',
-        'protected': 'protected',
+        'id': 'id',
         'name': 'name',
         'description': 'description',
         'created_at': 'created_at',
-        'project': 'project',
-        'id': 'id'
+        'updated_at': 'updated_at',
+        'protected': 'protected',
+        'project': 'project'
     }
 
-    def __init__(self, updated_at=None, protected=None, name=None, description=None, created_at=None, project=None, id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, created_at=None, updated_at=None, protected=None, project=None):  # noqa: E501
         """IfcCheckerCheckplan - a model defined in OpenAPI"""  # noqa: E501
 
-        self._updated_at = None
-        self._protected = None
+        self._id = None
         self._name = None
         self._description = None
         self._created_at = None
+        self._updated_at = None
+        self._protected = None
         self._project = None
-        self._id = None
         self.discriminator = None
 
-        if updated_at is not None:
-            self.updated_at = updated_at
-        if protected is not None:
-            self.protected = protected
+        if id is not None:
+            self.id = id
         self.name = name
         self.description = description
         if created_at is not None:
             self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        if protected is not None:
+            self.protected = protected
         self.project = project
-        if id is not None:
-            self.id = id
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this IfcCheckerCheckplan.  # noqa: E501
+    def id(self):
+        """Gets the id of this IfcCheckerCheckplan.  # noqa: E501
 
 
-        :return: The updated_at of this IfcCheckerCheckplan.  # noqa: E501
-        :rtype: datetime
+        :return: The id of this IfcCheckerCheckplan.  # noqa: E501
+        :rtype: int
         """
-        return self._updated_at
+        return self._id
 
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this IfcCheckerCheckplan.
-
-
-        :param updated_at: The updated_at of this IfcCheckerCheckplan.  # noqa: E501
-        :type: datetime
-        """
-
-        self._updated_at = updated_at
-
-    @property
-    def protected(self):
-        """Gets the protected of this IfcCheckerCheckplan.  # noqa: E501
+    @id.setter
+    def id(self, id):
+        """Sets the id of this IfcCheckerCheckplan.
 
 
-        :return: The protected of this IfcCheckerCheckplan.  # noqa: E501
-        :rtype: bool
-        """
-        return self._protected
-
-    @protected.setter
-    def protected(self, protected):
-        """Sets the protected of this IfcCheckerCheckplan.
-
-
-        :param protected: The protected of this IfcCheckerCheckplan.  # noqa: E501
-        :type: bool
+        :param id: The id of this IfcCheckerCheckplan.  # noqa: E501
+        :type: int
         """
 
-        self._protected = protected
+        self._id = id
 
     @property
     def name(self):
@@ -185,6 +164,48 @@ class IfcCheckerCheckplan(object):
         self._created_at = created_at
 
     @property
+    def updated_at(self):
+        """Gets the updated_at of this IfcCheckerCheckplan.  # noqa: E501
+
+
+        :return: The updated_at of this IfcCheckerCheckplan.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this IfcCheckerCheckplan.
+
+
+        :param updated_at: The updated_at of this IfcCheckerCheckplan.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def protected(self):
+        """Gets the protected of this IfcCheckerCheckplan.  # noqa: E501
+
+
+        :return: The protected of this IfcCheckerCheckplan.  # noqa: E501
+        :rtype: bool
+        """
+        return self._protected
+
+    @protected.setter
+    def protected(self, protected):
+        """Sets the protected of this IfcCheckerCheckplan.
+
+
+        :param protected: The protected of this IfcCheckerCheckplan.  # noqa: E501
+        :type: bool
+        """
+
+        self._protected = protected
+
+    @property
     def project(self):
         """Gets the project of this IfcCheckerCheckplan.  # noqa: E501
 
@@ -206,27 +227,6 @@ class IfcCheckerCheckplan(object):
             raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
 
         self._project = project
-
-    @property
-    def id(self):
-        """Gets the id of this IfcCheckerCheckplan.  # noqa: E501
-
-
-        :return: The id of this IfcCheckerCheckplan.  # noqa: E501
-        :rtype: int
-        """
-        return self._id
-
-    @id.setter
-    def id(self, id):
-        """Sets the id of this IfcCheckerCheckplan.
-
-
-        :param id: The id of this IfcCheckerCheckplan.  # noqa: E501
-        :type: int
-        """
-
-        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -18,8 +18,8 @@ import re  # noqa: F401
 # python 2 and python 3 compatibility library
 import six
 
-from bimdata_api_client.api_client import ApiClient
-from bimdata_api_client.exceptions import (
+from openapi_client.api_client import ApiClient
+from openapi_client.exceptions import (
     ApiTypeError,
     ApiValueError
 )
@@ -470,7 +470,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -478,7 +478,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -497,7 +497,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -507,7 +507,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -578,7 +578,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -1628,7 +1628,7 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1636,7 +1636,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1656,7 +1656,7 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1666,7 +1666,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -1743,7 +1743,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2515,7 +2515,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2544,7 +2544,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2611,7 +2611,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2638,7 +2638,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[RecursiveFolder]
+        :return: list[Folder]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2666,7 +2666,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[RecursiveFolder], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(list[Folder], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2727,7 +2727,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[RecursiveFolder]',  # noqa: E501
+            response_type='list[Folder]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2870,7 +2870,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2898,7 +2898,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2959,7 +2959,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3210,7 +3210,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3238,7 +3238,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -3299,7 +3299,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -4068,7 +4068,7 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4076,7 +4076,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: RecursiveFolder
+        :return: Folder
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4096,7 +4096,7 @@ class ProjectApi(object):
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this folder. (required)
         :param str project_pk: (required)
-        :param RecursiveFolder data: (required)
+        :param Folder data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4106,7 +4106,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(RecursiveFolder, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4183,7 +4183,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='RecursiveFolder',  # noqa: E501
+            response_type='Folder',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

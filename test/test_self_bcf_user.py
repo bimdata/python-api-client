@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.models.self_bcf_user import SelfBcfUser  # noqa: E501
-from bimdata_api_client.rest import ApiException
+import openapi_client
+from openapi_client.models.self_bcf_user import SelfBcfUser  # noqa: E501
+from openapi_client.rest import ApiException
 
 
 class TestSelfBcfUser(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestSelfBcfUser(unittest.TestCase):
     def testSelfBcfUser(self):
         """Test SelfBcfUser"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.self_bcf_user.SelfBcfUser()  # noqa: E501
+        # model = openapi_client.models.self_bcf_user.SelfBcfUser()  # noqa: E501
         pass
 
 

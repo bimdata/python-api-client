@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import bimdata_api_client
-from bimdata_api_client.api.bcf_api import BcfApi  # noqa: E501
-from bimdata_api_client.rest import ApiException
+import openapi_client
+from openapi_client.api.bcf_api import BcfApi  # noqa: E501
+from openapi_client.rest import ApiException
 
 
 class TestBcfApi(unittest.TestCase):
     """BcfApi unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.bcf_api.BcfApi()  # noqa: E501
+        self.api = openapi_client.api.bcf_api.BcfApi()  # noqa: E501
 
     def tearDown(self):
         pass
