@@ -160,7 +160,7 @@ class ProjectApi(object):
     def create_classification(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
+         Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification(cloud_pk, project_pk, data, async_req=True)
@@ -187,7 +187,7 @@ class ProjectApi(object):
     def create_classification_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write  # noqa: E501
+         Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -288,7 +288,7 @@ class ProjectApi(object):
     def create_document(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
+        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_document(cloud_pk, project_pk, name, async_req=True)
@@ -323,7 +323,7 @@ class ProjectApi(object):
     def create_document_with_http_info(self, cloud_pk, project_pk, name, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
+        RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, async_req=True)
@@ -461,7 +461,7 @@ class ProjectApi(object):
     def create_folder(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a folder  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
+        If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_folder(cloud_pk, project_pk, data, async_req=True)
@@ -488,7 +488,7 @@ class ProjectApi(object):
     def create_folder_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a folder  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write  # noqa: E501
+        If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_folder_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -2142,7 +2142,7 @@ class ProjectApi(object):
     def get_classifications(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
+        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications(cloud_pk, project_pk, async_req=True)
@@ -2168,7 +2168,7 @@ class ProjectApi(object):
     def get_classifications_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read  # noqa: E501
+        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -2382,7 +2382,7 @@ class ProjectApi(object):
     def get_documents(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all documents  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
+        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_documents(cloud_pk, project_pk, async_req=True)
@@ -2408,7 +2408,7 @@ class ProjectApi(object):
     def get_documents_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all documents  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
+        Retrieve all documents in the project Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_documents_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -2622,7 +2622,7 @@ class ProjectApi(object):
     def get_folders(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all folders  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
+        Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_folders(cloud_pk, project_pk, async_req=True)
@@ -2648,7 +2648,7 @@ class ProjectApi(object):
     def get_folders_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all folders  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read  # noqa: E501
+        Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_folders_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -3434,7 +3434,7 @@ class ProjectApi(object):
     def get_project_users(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users(cloud_pk, project_pk, async_req=True)
@@ -3460,7 +3460,7 @@ class ProjectApi(object):
     def get_project_users_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users_with_http_info(cloud_pk, project_pk, async_req=True)

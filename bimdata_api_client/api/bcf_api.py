@@ -37,18 +37,18 @@ class BcfApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_comment(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def create_comment(self, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Create a comment  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_comment(projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.create_comment(projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -62,20 +62,20 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_comment_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.create_comment_with_http_info(projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def create_comment_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def create_comment_with_http_info(self, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Create a comment  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_comment_with_http_info(projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.create_comment_with_http_info(projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -93,7 +93,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -111,10 +111,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_comment`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `create_comment`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `create_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -125,8 +125,8 @@ class BcfApi(object):
         path_params = {}
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -150,7 +150,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments', 'POST',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments', 'POST',
             path_params,
             query_params,
             header_params,
@@ -168,7 +168,7 @@ class BcfApi(object):
     def create_full_topic(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a Topic with viewpoints and comments  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        This is not a standard route. You can send a topic, viewpoints and comments in a single call Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_full_topic(projects_pk, data, async_req=True)
@@ -194,7 +194,7 @@ class BcfApi(object):
     def create_full_topic_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a Topic with viewpoints and comments  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        This is not a standard route. You can send a topic, viewpoints and comments in a single call Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_full_topic_with_http_info(projects_pk, data, async_req=True)
@@ -288,7 +288,7 @@ class BcfApi(object):
     def create_topic(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a topic  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a topic Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_topic(projects_pk, data, async_req=True)
@@ -314,7 +314,7 @@ class BcfApi(object):
     def create_topic_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a topic  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a topic Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_topic_with_http_info(projects_pk, data, async_req=True)
@@ -405,18 +405,18 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_viewpoint(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def create_viewpoint(self, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Create a Viewpoint  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_viewpoint(projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.create_viewpoint(projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -430,20 +430,20 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_viewpoint_with_http_info(projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.create_viewpoint_with_http_info(projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def create_viewpoint_with_http_info(self, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def create_viewpoint_with_http_info(self, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Create a Viewpoint  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: bcf:write  # noqa: E501
+        Create a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_viewpoint_with_http_info(projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.create_viewpoint_with_http_info(projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -461,7 +461,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -479,10 +479,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_viewpoint`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `create_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `create_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -493,8 +493,8 @@ class BcfApi(object):
         path_params = {}
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -518,7 +518,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints', 'POST',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints', 'POST',
             path_params,
             query_params,
             header_params,
@@ -533,19 +533,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_comment(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def delete_comment(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Delete a comment  # noqa: E501
 
         Delete a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_comment(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.delete_comment(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -558,21 +558,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_comment_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.delete_comment_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def delete_comment_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def delete_comment_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Delete a comment  # noqa: E501
 
         Delete a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_comment_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.delete_comment_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -589,7 +589,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -611,10 +611,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_comment`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `delete_comment`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `delete_comment`")  # noqa: E501
 
         collection_formats = {}
 
@@ -623,8 +623,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -638,7 +638,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid}', 'DELETE',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -663,7 +663,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -689,7 +689,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -765,19 +765,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_viewpoint(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def delete_viewpoint(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Delete a Viewpoint  # noqa: E501
 
         This is not a standard route. Delete a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_viewpoint(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.delete_viewpoint(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -790,21 +790,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_viewpoint_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.delete_viewpoint_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def delete_viewpoint_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def delete_viewpoint_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Delete a Viewpoint  # noqa: E501
 
         This is not a standard route. Delete a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_viewpoint_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.delete_viewpoint_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -821,7 +821,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -843,10 +843,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_viewpoint`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `delete_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `delete_viewpoint`")  # noqa: E501
 
         collection_formats = {}
 
@@ -855,8 +855,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -870,7 +870,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}', 'DELETE',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -1117,19 +1117,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_comment(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def full_update_comment(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update all fields of a comment  # noqa: E501
 
         Update all fields of a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_comment(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.full_update_comment(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1143,21 +1143,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.full_update_comment_with_http_info(guid, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.full_update_comment_with_http_info(guid, projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def full_update_comment_with_http_info(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def full_update_comment_with_http_info(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update all fields of a comment  # noqa: E501
 
         Update all fields of a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_comment_with_http_info(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.full_update_comment_with_http_info(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1175,7 +1175,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1197,10 +1197,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_comment`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `full_update_comment`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -1213,8 +1213,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -1238,7 +1238,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid}', 'PUT',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -1263,7 +1263,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1290,7 +1290,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
         :param _return_http_data_only: response data without head status code
@@ -1391,7 +1391,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param Topic data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1418,7 +1418,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param Topic data: (required)
         :param _return_http_data_only: response data without head status code
@@ -1509,19 +1509,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_viewpoint(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def full_update_viewpoint(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update all fields of a Viewpoint  # noqa: E501
 
         This is not a standard route. Update all fields of a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_viewpoint(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.full_update_viewpoint(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1535,21 +1535,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.full_update_viewpoint_with_http_info(guid, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.full_update_viewpoint_with_http_info(guid, projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def full_update_viewpoint_with_http_info(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def full_update_viewpoint_with_http_info(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update all fields of a Viewpoint  # noqa: E501
 
         This is not a standard route. Update all fields of a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_viewpoint_with_http_info(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.full_update_viewpoint_with_http_info(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1567,7 +1567,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1589,10 +1589,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_viewpoint`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `full_update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -1605,8 +1605,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -1630,7 +1630,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}', 'PUT',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'PUT',
             path_params,
             query_params,
             header_params,
@@ -1853,19 +1853,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_colorings(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_colorings(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all colorings of a viewpoint  # noqa: E501
 
         Retrieve all colorings of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_colorings(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_colorings(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1878,21 +1878,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_colorings_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_colorings_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_colorings_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_colorings_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all colorings of a viewpoint  # noqa: E501
 
         Retrieve all colorings of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_colorings_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_colorings_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1909,7 +1909,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -1931,10 +1931,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_colorings`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_colorings`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_colorings`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1943,8 +1943,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -1962,7 +1962,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}/coloring', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1977,19 +1977,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comment(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_comment(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve a comment  # noqa: E501
 
         Retrieve a comment Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_comment(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_comment(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2002,21 +2002,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_comment_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_comment_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_comment_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_comment_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve a comment  # noqa: E501
 
         Retrieve a comment Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_comment_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_comment_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2033,7 +2033,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2055,10 +2055,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_comment`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_comment`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_comment`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2067,8 +2067,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -2086,7 +2086,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid}', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2101,18 +2101,18 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_comments(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_comments(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all comments  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all comments Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_comments(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_comments(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2125,20 +2125,20 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_comments_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_comments_with_http_info(projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_comments_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_comments_with_http_info(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all comments  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all comments Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_comments_with_http_info(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_comments_with_http_info(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2155,7 +2155,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2173,18 +2173,18 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_comments`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_comments`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_comments`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -2202,7 +2202,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2335,7 +2335,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2361,7 +2361,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -2444,7 +2444,7 @@ class BcfApi(object):
     def get_full_topics(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all full topics  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. It responds with all topics, their viewpoints and their comments Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_full_topics(projects_pk, async_req=True)
@@ -2471,7 +2471,7 @@ class BcfApi(object):
     def get_full_topics_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all full topics  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. It responds with all topics, their viewpoints and their comments Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_full_topics_with_http_info(projects_pk, async_req=True)
@@ -2557,19 +2557,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_selections(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_selections(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all selections of a viewpoint  # noqa: E501
 
         Retrieve all selections of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_selections(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_selections(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2582,21 +2582,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_selections_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_selections_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_selections_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_selections_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all selections of a viewpoint  # noqa: E501
 
         Retrieve all selections of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_selections_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_selections_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2613,7 +2613,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2635,10 +2635,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_selections`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_selections`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_selections`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2647,8 +2647,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -2666,7 +2666,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}/selection', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2681,19 +2681,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_snapshot(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_snapshot(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve the viewpoint' snapshot  # noqa: E501
 
         Retrieve the viewpoint' snapshot Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_snapshot(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_snapshot(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2706,21 +2706,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_snapshot_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_snapshot_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_snapshot_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_snapshot_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve the viewpoint' snapshot  # noqa: E501
 
         Retrieve the viewpoint' snapshot Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_snapshot_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_snapshot_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2737,7 +2737,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2759,10 +2759,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_snapshot`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_snapshot`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_snapshot`")  # noqa: E501
 
         collection_formats = {}
 
@@ -2771,8 +2771,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -2790,7 +2790,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}/snapshot', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2815,7 +2815,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2841,7 +2841,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -2921,18 +2921,18 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_topic_viewpoints(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_topic_viewpoints(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all viewpoints attached to the topic  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. It returns all viewpoints of the topic that are not attached to a comment. Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_topic_viewpoints(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_topic_viewpoints(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2945,20 +2945,20 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_topic_viewpoints_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_topic_viewpoints_with_http_info(projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_topic_viewpoints_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_topic_viewpoints_with_http_info(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all viewpoints attached to the topic  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. It returns all viewpoints of the topic that are not attached to a comment. Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_topic_viewpoints_with_http_info(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_topic_viewpoints_with_http_info(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2975,7 +2975,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2993,18 +2993,18 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_topic_viewpoints`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_topic_viewpoints`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_topic_viewpoints`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -3022,7 +3022,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/topic-viewpoints', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3040,7 +3040,7 @@ class BcfApi(object):
     def get_topics(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all topics  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all topics Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topics(projects_pk, async_req=True)
@@ -3067,7 +3067,7 @@ class BcfApi(object):
     def get_topics_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
         """Retrieve all topics  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all topics Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_topics_with_http_info(projects_pk, async_req=True)
@@ -3253,19 +3253,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_viewpoint(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_viewpoint(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve a Viewpoint  # noqa: E501
 
         Retrieve a Viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_viewpoint(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_viewpoint(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3278,21 +3278,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_viewpoint_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_viewpoint_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_viewpoint_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_viewpoint_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve a Viewpoint  # noqa: E501
 
         Retrieve a Viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_viewpoint_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_viewpoint_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3309,7 +3309,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3331,10 +3331,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_viewpoint`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_viewpoint`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3343,8 +3343,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -3362,7 +3362,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3377,18 +3377,18 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_viewpoints(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_viewpoints(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all Viewpoints of a topic  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all Viewpoints of a topic Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_viewpoints(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_viewpoints(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3401,20 +3401,20 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_viewpoints_with_http_info(projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_viewpoints_with_http_info(projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_viewpoints_with_http_info(self, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_viewpoints_with_http_info(self, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all Viewpoints of a topic  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: bcf:read  # noqa: E501
+        Retrieve all Viewpoints of a topic Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_viewpoints_with_http_info(projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_viewpoints_with_http_info(projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3431,7 +3431,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3449,18 +3449,18 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_viewpoints`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_viewpoints`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_viewpoints`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -3478,7 +3478,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3493,19 +3493,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_visibilities(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_visibilities(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all visibilities of a viewpoint  # noqa: E501
 
         Retrieve all visibilities of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_visibilities(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_visibilities(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3518,21 +3518,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_visibilities_with_http_info(guid, projects_pk, topics_pk, **kwargs)  # noqa: E501
+        return self.get_visibilities_with_http_info(guid, projects_pk, topics_guid, **kwargs)  # noqa: E501
 
-    def get_visibilities_with_http_info(self, guid, projects_pk, topics_pk, **kwargs):  # noqa: E501
+    def get_visibilities_with_http_info(self, guid, projects_pk, topics_guid, **kwargs):  # noqa: E501
         """Retrieve all visibilities of a viewpoint  # noqa: E501
 
         Retrieve all visibilities of a viewpoint Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_visibilities_with_http_info(guid, projects_pk, topics_pk, async_req=True)
+        >>> thread = api.get_visibilities_with_http_info(guid, projects_pk, topics_guid, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3549,7 +3549,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3571,10 +3571,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_visibilities`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `get_visibilities`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_visibilities`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3583,8 +3583,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -3602,7 +3602,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}/visibility', 'GET',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3737,19 +3737,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_comment(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def update_comment(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update some fields of a comment  # noqa: E501
 
         Update some fields of a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_comment(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.update_comment(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -3763,21 +3763,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_comment_with_http_info(guid, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.update_comment_with_http_info(guid, projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def update_comment_with_http_info(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def update_comment_with_http_info(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update some fields of a comment  # noqa: E501
 
         Update some fields of a comment Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_comment_with_http_info(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.update_comment_with_http_info(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this comment. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Comment data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -3795,7 +3795,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3817,10 +3817,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_comment`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `update_comment`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -3833,8 +3833,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -3858,7 +3858,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/comments/{guid}', 'PATCH',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -4003,7 +4003,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4030,7 +4030,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
         :param _return_http_data_only: response data without head status code
@@ -4131,7 +4131,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param Topic data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4158,7 +4158,7 @@ class BcfApi(object):
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this topic. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
         :param Topic data: (required)
         :param _return_http_data_only: response data without head status code
@@ -4249,19 +4249,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_viewpoint(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def update_viewpoint(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update some fields of a Viewpoint  # noqa: E501
 
         This is not a standard route. Update some fields of a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_viewpoint(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.update_viewpoint(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -4275,21 +4275,21 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_viewpoint_with_http_info(guid, projects_pk, topics_pk, data, **kwargs)  # noqa: E501
+        return self.update_viewpoint_with_http_info(guid, projects_pk, topics_guid, data, **kwargs)  # noqa: E501
 
-    def update_viewpoint_with_http_info(self, guid, projects_pk, topics_pk, data, **kwargs):  # noqa: E501
+    def update_viewpoint_with_http_info(self, guid, projects_pk, topics_guid, data, **kwargs):  # noqa: E501
         """Update some fields of a Viewpoint  # noqa: E501
 
         This is not a standard route. Update some fields of a Viewpoint Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_viewpoint_with_http_info(guid, projects_pk, topics_pk, data, async_req=True)
+        >>> thread = api.update_viewpoint_with_http_info(guid, projects_pk, topics_guid, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str guid: A UUID string identifying this viewpoint. (required)
+        :param str guid: (required)
         :param str projects_pk: (required)
-        :param str topics_pk: (required)
+        :param str topics_guid: (required)
         :param Viewpoint data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -4307,7 +4307,7 @@ class BcfApi(object):
 
         local_var_params = locals()
 
-        all_params = ['guid', 'projects_pk', 'topics_pk', 'data']  # noqa: E501
+        all_params = ['guid', 'projects_pk', 'topics_guid', 'data']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4329,10 +4329,10 @@ class BcfApi(object):
         if ('projects_pk' not in local_var_params or
                 local_var_params['projects_pk'] is None):
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_viewpoint`")  # noqa: E501
-        # verify the required parameter 'topics_pk' is set
-        if ('topics_pk' not in local_var_params or
-                local_var_params['topics_pk'] is None):
-            raise ApiValueError("Missing the required parameter `topics_pk` when calling `update_viewpoint`")  # noqa: E501
+        # verify the required parameter 'topics_guid' is set
+        if ('topics_guid' not in local_var_params or
+                local_var_params['topics_guid'] is None):
+            raise ApiValueError("Missing the required parameter `topics_guid` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
         if ('data' not in local_var_params or
                 local_var_params['data'] is None):
@@ -4345,8 +4345,8 @@ class BcfApi(object):
             path_params['guid'] = local_var_params['guid']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
-        if 'topics_pk' in local_var_params:
-            path_params['topics_pk'] = local_var_params['topics_pk']  # noqa: E501
+        if 'topics_guid' in local_var_params:
+            path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
 
@@ -4370,7 +4370,7 @@ class BcfApi(object):
         auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/topics/{topics_pk}/viewpoints/{guid}', 'PATCH',
+            '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'PATCH',
             path_params,
             query_params,
             header_params,

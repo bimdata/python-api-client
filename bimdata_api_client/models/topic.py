@@ -120,8 +120,7 @@ class Topic(object):
             self.ifcs = ifcs
         if format is not None:
             self.format = format
-        if index is not None:
-            self.index = index
+        self.index = index
 
     @property
     def guid(self):
@@ -508,6 +507,10 @@ class Topic(object):
         :param index: The index of this Topic.  # noqa: E501
         :type: int
         """
+        if index is not None and index > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if index is not None and index < 0:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._index = index
 

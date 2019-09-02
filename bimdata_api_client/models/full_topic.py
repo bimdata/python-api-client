@@ -122,8 +122,7 @@ class FullTopic(object):
         self.topic_status = topic_status
         self.stage = stage
         self.priority = priority
-        if index is not None:
-            self.index = index
+        self.index = index
         self.assigned_to = assigned_to
         if format is not None:
             self.format = format
@@ -451,6 +450,10 @@ class FullTopic(object):
         :param index: The index of this FullTopic.  # noqa: E501
         :type: int
         """
+        if index is not None and index > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if index is not None and index < 0:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._index = index
 

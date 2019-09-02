@@ -179,7 +179,7 @@ void (empty response body)
 
 Create a classification
 
-Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: ifc:write
+ Required scopes: ifc:write
 
 ### Example
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write
+RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write
 
 ### Example
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 Create a folder
 
-Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: document:write
+If the created folder have no parent, it will be put as a child of the default root folder of the project Required scopes: document:write
 
 ### Example
 
@@ -2276,7 +2276,7 @@ Name | Type | Description  | Notes
 
 Retrieve all classifications
 
-Verify parent existence before listing to send a 404 instead of an empty list Required scopes: ifc:read
+Retrieve all classifications of all models in the project Required scopes: ifc:read
 
 ### Example
 
@@ -2544,7 +2544,7 @@ Name | Type | Description  | Notes
 
 Retrieve all documents
 
-Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read
+Retrieve all documents in the project Required scopes: document:read
 
 ### Example
 
@@ -2812,7 +2812,7 @@ Name | Type | Description  | Notes
 
 Retrieve all folders
 
-Verify parent existence before listing to send a 404 instead of an empty list Required scopes: document:read
+Retrieve all folders in the project. This is an array of folder. If you want to get the tree of all folders, see getProjectTree Required scopes: document:read
 
 ### Example
 
@@ -3736,7 +3736,7 @@ Name | Type | Description  | Notes
 
 Retrieve all users in a project
 
-Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read
+Each member of a project can see other members of the project Required scopes: cloud:read
 
 ### Example
 

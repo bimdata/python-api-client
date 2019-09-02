@@ -40,7 +40,7 @@ class CheckplanApi(object):
     def create_checker(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a checker to a model  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write, ifc:read  # noqa: E501
+        A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checker(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -68,7 +68,7 @@ class CheckplanApi(object):
     def create_checker_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a checker to a model  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write, ifc:read  # noqa: E501
+        A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -176,7 +176,7 @@ class CheckplanApi(object):
     def create_checker_result(self, checker_pk, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a CheckerResult  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -205,7 +205,7 @@ class CheckplanApi(object):
     def create_checker_result_with_http_info(self, checker_pk, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a CheckerResult  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -320,7 +320,7 @@ class CheckplanApi(object):
     def create_checkplan(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Checkplan  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Checkplan Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checkplan(cloud_pk, project_pk, data, async_req=True)
@@ -347,7 +347,7 @@ class CheckplanApi(object):
     def create_checkplan_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Checkplan  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Checkplan Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_checkplan_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -448,7 +448,7 @@ class CheckplanApi(object):
     def create_rule(self, check_plan_pk, cloud_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
         """Create a Rule  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Rule Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data, async_req=True)
@@ -477,7 +477,7 @@ class CheckplanApi(object):
     def create_rule_with_http_info(self, check_plan_pk, cloud_pk, project_pk, ruleset_pk, data, **kwargs):  # noqa: E501
         """Create a Rule  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Rule Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_rule_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data, async_req=True)
@@ -592,7 +592,7 @@ class CheckplanApi(object):
     def create_rule_component(self, check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data, **kwargs):  # noqa: E501
         """Create a RuleComponent  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a RuleComponent Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data, async_req=True)
@@ -622,7 +622,7 @@ class CheckplanApi(object):
     def create_rule_component_with_http_info(self, check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data, **kwargs):  # noqa: E501
         """Create a RuleComponent  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a RuleComponent Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_rule_component_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data, async_req=True)
@@ -744,7 +744,7 @@ class CheckplanApi(object):
     def create_ruleset(self, check_plan_pk, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Ruleset  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Ruleset Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ruleset(check_plan_pk, cloud_pk, project_pk, data, async_req=True)
@@ -772,7 +772,7 @@ class CheckplanApi(object):
     def create_ruleset_with_http_info(self, check_plan_pk, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a Ruleset  # noqa: E501
 
-        Verify parent existence before creating to avoid applications of creating objects in a project they don't own Required scopes: check:write  # noqa: E501
+        TCreate a Ruleset Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ruleset_with_http_info(check_plan_pk, cloud_pk, project_pk, data, async_req=True)
@@ -2832,7 +2832,7 @@ class CheckplanApi(object):
     def get_checker_results(self, checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all CheckerResults  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all CheckerResults Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -2860,7 +2860,7 @@ class CheckplanApi(object):
     def get_checker_results_with_http_info(self, checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all CheckerResults  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all CheckerResults Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -2964,7 +2964,7 @@ class CheckplanApi(object):
     def get_checkers(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all checkers of a model  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read, ifc:read  # noqa: E501
+        A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checkers(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -2991,7 +2991,7 @@ class CheckplanApi(object):
     def get_checkers_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all checkers of a model  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read, ifc:read  # noqa: E501
+        A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -3212,7 +3212,7 @@ class CheckplanApi(object):
     def get_checkplans(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Checkplans  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Checkplans Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checkplans(cloud_pk, project_pk, async_req=True)
@@ -3238,7 +3238,7 @@ class CheckplanApi(object):
     def get_checkplans_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Checkplans  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Checkplans Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_checkplans_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -3616,7 +3616,7 @@ class CheckplanApi(object):
     def get_rule_components(self, check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, **kwargs):  # noqa: E501
         """Retrieve all RuleComponents  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all RuleComponents Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async_req=True)
@@ -3645,7 +3645,7 @@ class CheckplanApi(object):
     def get_rule_components_with_http_info(self, check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, **kwargs):  # noqa: E501
         """Retrieve all RuleComponents  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all RuleComponents Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rule_components_with_http_info(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, async_req=True)
@@ -3756,7 +3756,7 @@ class CheckplanApi(object):
     def get_rules(self, check_plan_pk, cloud_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
         """Retrieve all Rules  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Rules Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async_req=True)
@@ -3784,7 +3784,7 @@ class CheckplanApi(object):
     def get_rules_with_http_info(self, check_plan_pk, cloud_pk, project_pk, ruleset_pk, **kwargs):  # noqa: E501
         """Retrieve all Rules  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Rules Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rules_with_http_info(check_plan_pk, cloud_pk, project_pk, ruleset_pk, async_req=True)
@@ -4020,7 +4020,7 @@ class CheckplanApi(object):
     def get_rulesets(self, check_plan_pk, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Rulesets  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Rulesets Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rulesets(check_plan_pk, cloud_pk, project_pk, async_req=True)
@@ -4047,7 +4047,7 @@ class CheckplanApi(object):
     def get_rulesets_with_http_info(self, check_plan_pk, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Rulesets  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: check:read  # noqa: E501
+        Retrieve all Rulesets Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_rulesets_with_http_info(check_plan_pk, cloud_pk, project_pk, async_req=True)

@@ -1274,7 +1274,7 @@ class CloudApi(object):
     def get_cloud_users(self, cloud_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a cloud  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
+        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users(cloud_pk, async_req=True)
@@ -1299,7 +1299,7 @@ class CloudApi(object):
     def get_cloud_users_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a cloud  # noqa: E501
 
-        Verify parent existence before listing to send a 404 instead of an empty list Required scopes: cloud:read  # noqa: E501
+        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users_with_http_info(cloud_pk, async_req=True)
