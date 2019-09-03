@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **gltf_file** | **str** |  | [optional] 
 **bvh_tree_file** | **str** |  | [optional] 
 **viewer_360_file** | **str** |  | [optional] 
+**xkt_file** | **str** |  | [optional] 
 **project_id** | **str** |  | [optional] 
 **world_position** | **list[float]** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
 

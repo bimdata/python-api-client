@@ -46,6 +46,7 @@ class Ifc(object):
         'gltf_file': 'str',
         'bvh_tree_file': 'str',
         'viewer_360_file': 'str',
+        'xkt_file': 'str',
         'project_id': 'str',
         'world_position': 'list[float]'
     }
@@ -65,11 +66,12 @@ class Ifc(object):
         'gltf_file': 'gltf_file',
         'bvh_tree_file': 'bvh_tree_file',
         'viewer_360_file': 'viewer_360_file',
+        'xkt_file': 'xkt_file',
         'project_id': 'project_id',
         'world_position': 'world_position'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, project_id=None, world_position=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -86,6 +88,7 @@ class Ifc(object):
         self._gltf_file = None
         self._bvh_tree_file = None
         self._viewer_360_file = None
+        self._xkt_file = None
         self._project_id = None
         self._world_position = None
         self.discriminator = None
@@ -118,6 +121,8 @@ class Ifc(object):
             self.bvh_tree_file = bvh_tree_file
         if viewer_360_file is not None:
             self.viewer_360_file = viewer_360_file
+        if xkt_file is not None:
+            self.xkt_file = xkt_file
         if project_id is not None:
             self.project_id = project_id
         self.world_position = world_position
@@ -415,6 +420,27 @@ class Ifc(object):
         """
 
         self._viewer_360_file = viewer_360_file
+
+    @property
+    def xkt_file(self):
+        """Gets the xkt_file of this Ifc.  # noqa: E501
+
+
+        :return: The xkt_file of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._xkt_file
+
+    @xkt_file.setter
+    def xkt_file(self, xkt_file):
+        """Sets the xkt_file of this Ifc.
+
+
+        :param xkt_file: The xkt_file of this Ifc.  # noqa: E501
+        :type: str
+        """
+
+        self._xkt_file = xkt_file
 
     @property
     def project_id(self):
