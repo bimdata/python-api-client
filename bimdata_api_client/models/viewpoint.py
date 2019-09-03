@@ -69,8 +69,7 @@ class Viewpoint(object):
         self._temp_id = None
         self.discriminator = None
 
-        if index is not None:
-            self.index = index
+        self.index = index
         if guid is not None:
             self.guid = guid
         if orthogonal_camera is not None:
@@ -106,6 +105,10 @@ class Viewpoint(object):
         :param index: The index of this Viewpoint.  # noqa: E501
         :type: int
         """
+        if index is not None and index > 2147483647:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if index is not None and index < 0:  # noqa: E501
+            raise ValueError("Invalid value for `index`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._index = index
 
