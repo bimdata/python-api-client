@@ -181,11 +181,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification**
-> Classification create_classification(cloud_pk, project_pk, data)
+> list[Classification] create_classification(cloud_pk, project_pk, data)
 
 Create a classification
 
- Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write
 
 ### Example
 
@@ -214,7 +214,7 @@ configuration.host = "https://api-beta.bimdata.io"
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create a classification
@@ -249,7 +249,7 @@ configuration.host = "https://api-beta.bimdata.io"
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create a classification
@@ -284,7 +284,7 @@ configuration.host = "https://api-beta.bimdata.io"
 api_instance = bimdata_api_client.ProjectApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create a classification
@@ -300,11 +300,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Classification**](Classification.md)|  | 
+ **data** | [**list[Classification]**](Classification.md)|  | 
 
 ### Return type
 
-[**Classification**](Classification.md)
+[**list[Classification]**](Classification.md)
 
 ### Authorization
 
@@ -318,7 +318,8 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

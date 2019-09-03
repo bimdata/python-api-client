@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **gltf_file** | **str** |  | [optional] 
 **bvh_tree_file** | **str** |  | [optional] 
 **viewer_360_file** | **str** |  | [optional] 
+**xkt_file** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

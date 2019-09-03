@@ -1967,11 +1967,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classifications_of_element**
-> Classification create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 Create one or many classifications to an element
 
- Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If classification created already exists, it will just be added to item's classifications and will not be duplicated      Required scopes: ifc:write
 
 ### Example
 
@@ -2002,7 +2002,7 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create one or many classifications to an element
@@ -2039,7 +2039,7 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create one or many classifications to an element
@@ -2076,7 +2076,7 @@ cloud_pk = 'cloud_pk_example' # str |
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Classification() # Classification | 
+data = [bimdata_api_client.Classification()] # list[Classification] | 
 
 try:
     # Create one or many classifications to an element
@@ -2094,11 +2094,11 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Classification**](Classification.md)|  | 
+ **data** | [**list[Classification]**](Classification.md)|  | 
 
 ### Return type
 
-[**Classification**](Classification.md)
+[**list[Classification]**](Classification.md)
 
 ### Authorization
 
@@ -2112,16 +2112,17 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_element**
-> Element create_element(cloud_pk, ifc_pk, project_pk, data)
+> list[Element] create_element(cloud_pk, ifc_pk, project_pk, data)
 
 Create an element in the model
 
-The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write
 
 ### Example
 
@@ -2151,7 +2152,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Element() # Element | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
     # Create an element in the model
@@ -2187,7 +2188,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Element() # Element | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
     # Create an element in the model
@@ -2223,7 +2224,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Element() # Element | 
+data = [bimdata_api_client.Element()] # list[Element] | 
 
 try:
     # Create an element in the model
@@ -2240,11 +2241,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Element**](Element.md)|  | 
+ **data** | [**list[Element]**](Element.md)|  | 
 
 ### Return type
 
-[**Element**](Element.md)
+[**list[Element]**](Element.md)
 
 ### Authorization
 
@@ -2258,7 +2259,8 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | If all creates fail: a list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -2887,11 +2889,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_property_definition**
-> PropertyDefinition create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
+> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, ifc_pk, project_pk, data)
 
 Create a PropertyDefinition on the model
 
- Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write
 
 ### Example
 
@@ -2921,7 +2923,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
 try:
     # Create a PropertyDefinition on the model
@@ -2957,7 +2959,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
 try:
     # Create a PropertyDefinition on the model
@@ -2993,7 +2995,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
 try:
     # Create a PropertyDefinition on the model
@@ -3010,11 +3012,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+ **data** | [**list[PropertyDefinition]**](PropertyDefinition.md)|  | 
 
 ### Return type
 
-[**PropertyDefinition**](PropertyDefinition.md)
+[**list[PropertyDefinition]**](PropertyDefinition.md)
 
 ### Authorization
 
@@ -3028,16 +3030,17 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_ifc_unit**
-> Unit create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
+> list[Unit] create_ifc_unit(cloud_pk, ifc_pk, project_pk, data)
 
 Create a Unit on a model
 
- Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write
 
 ### Example
 
@@ -3067,7 +3070,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+data = [bimdata_api_client.Unit()] # list[Unit] | 
 
 try:
     # Create a Unit on a model
@@ -3103,7 +3106,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+data = [bimdata_api_client.Unit()] # list[Unit] | 
 
 try:
     # Create a Unit on a model
@@ -3139,7 +3142,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
+data = [bimdata_api_client.Unit()] # list[Unit] | 
 
 try:
     # Create a Unit on a model
@@ -3156,11 +3159,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Unit**](Unit.md)|  | 
+ **data** | [**list[Unit]**](Unit.md)|  | 
 
 ### Return type
 
-[**Unit**](Unit.md)
+[**list[Unit]**](Unit.md)
 
 ### Authorization
 
@@ -3174,16 +3177,17 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set**
-> PropertySet create_property_set(cloud_pk, ifc_pk, project_pk, data)
+> list[PropertySet] create_property_set(cloud_pk, ifc_pk, project_pk, data)
 
 Create a PropertySet
 
-Create a PropertySet Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write
 
 ### Example
 
@@ -3213,7 +3217,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
 try:
     # Create a PropertySet
@@ -3249,7 +3253,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
 try:
     # Create a PropertySet
@@ -3285,7 +3289,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertySet() # PropertySet | 
+data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
 try:
     # Create a PropertySet
@@ -3302,11 +3306,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**PropertySet**](PropertySet.md)|  | 
+ **data** | [**list[PropertySet]**](PropertySet.md)|  | 
 
 ### Return type
 
-[**PropertySet**](PropertySet.md)
+[**list[PropertySet]**](PropertySet.md)
 
 ### Authorization
 
@@ -3320,7 +3324,8 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -3611,11 +3616,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_space**
-> Space create_space(cloud_pk, ifc_pk, project_pk, data)
+> list[Space] create_space(cloud_pk, ifc_pk, project_pk, data)
 
 Create a space in the model
 
-The IFC file will not be updated. The created space will be accessible over the API and when exporting an IFC file Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      Required scopes: ifc:write
 
 ### Example
 
@@ -3645,7 +3650,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
+data = [bimdata_api_client.Space()] # list[Space] | 
 
 try:
     # Create a space in the model
@@ -3681,7 +3686,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
+data = [bimdata_api_client.Space()] # list[Space] | 
 
 try:
     # Create a space in the model
@@ -3717,7 +3722,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Space() # Space | 
+data = [bimdata_api_client.Space()] # list[Space] | 
 
 try:
     # Create a space in the model
@@ -3734,11 +3739,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Space**](Space.md)|  | 
+ **data** | [**list[Space]**](Space.md)|  | 
 
 ### Return type
 
-[**Space**](Space.md)
+[**list[Space]**](Space.md)
 
 ### Authorization
 
@@ -3752,16 +3757,17 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | All creates failed: list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_zone**
-> Zone create_zone(cloud_pk, ifc_pk, project_pk, data)
+> list[Zone] create_zone(cloud_pk, ifc_pk, project_pk, data)
 
 Create a zone in the model
 
-The IFC file will not be updated. The created zone will be accessible over the API and when exporting an IFC file Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      The IFC file will not be updated. The created zone will be accessible over the API and when exporting an IFC file Required scopes: ifc:write
 
 ### Example
 
@@ -3791,7 +3797,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Zone() # Zone | 
+data = [bimdata_api_client.Zone()] # list[Zone] | 
 
 try:
     # Create a zone in the model
@@ -3827,7 +3833,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Zone() # Zone | 
+data = [bimdata_api_client.Zone()] # list[Zone] | 
 
 try:
     # Create a zone in the model
@@ -3863,7 +3869,7 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Zone() # Zone | 
+data = [bimdata_api_client.Zone()] # list[Zone] | 
 
 try:
     # Create a zone in the model
@@ -3880,11 +3886,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Zone**](Zone.md)|  | 
+ **data** | [**list[Zone]**](Zone.md)|  | 
 
 ### Return type
 
-[**Zone**](Zone.md)
+[**list[Zone]**](Zone.md)
 
 ### Authorization
 
@@ -3898,7 +3904,8 @@ Name | Type | Description  | Notes
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**200** |  |  -  |
+**400** | If all creates fail: a list of errors |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -13595,7 +13602,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_files**
-> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
+> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
 
 Update models file (gltf, svg, structure, etc)
 
@@ -13635,10 +13642,11 @@ map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -13676,10 +13684,11 @@ map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -13717,10 +13726,11 @@ map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -13739,6 +13749,7 @@ Name | Type | Description  | Notes
  **gltf_file** | **file**|  | [optional] 
  **bvh_tree_file** | **file**|  | [optional] 
  **viewer_360_file** | **file**|  | [optional] 
+ **xkt_file** | **file**|  | [optional] 
 
 ### Return type
 

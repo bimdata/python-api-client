@@ -46,8 +46,8 @@ class Ifc(object):
         'gltf_file': 'str',
         'bvh_tree_file': 'str',
         'viewer_360_file': 'str',
-        'error_detail': 'str',
-        'project_id': 'str'
+        'project_id': 'str',
+        'world_position': 'list[float]'
     }
 
     attribute_map = {
@@ -65,11 +65,11 @@ class Ifc(object):
         'gltf_file': 'gltf_file',
         'bvh_tree_file': 'bvh_tree_file',
         'viewer_360_file': 'viewer_360_file',
-        'error_detail': 'error_detail',
-        'project_id': 'project_id'
+        'project_id': 'project_id',
+        'world_position': 'world_position'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, error_detail=None, project_id=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, project_id=None, world_position=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -86,8 +86,8 @@ class Ifc(object):
         self._gltf_file = None
         self._bvh_tree_file = None
         self._viewer_360_file = None
-        self._error_detail = None
         self._project_id = None
+        self._world_position = None
         self.discriminator = None
 
         if id is not None:
@@ -118,10 +118,9 @@ class Ifc(object):
             self.bvh_tree_file = bvh_tree_file
         if viewer_360_file is not None:
             self.viewer_360_file = viewer_360_file
-        if error_detail is not None:
-            self.error_detail = error_detail
         if project_id is not None:
             self.project_id = project_id
+        self.world_position = world_position
 
     @property
     def id(self):
@@ -418,29 +417,6 @@ class Ifc(object):
         self._viewer_360_file = viewer_360_file
 
     @property
-    def error_detail(self):
-        """Gets the error_detail of this Ifc.  # noqa: E501
-
-
-        :return: The error_detail of this Ifc.  # noqa: E501
-        :rtype: str
-        """
-        return self._error_detail
-
-    @error_detail.setter
-    def error_detail(self, error_detail):
-        """Sets the error_detail of this Ifc.
-
-
-        :param error_detail: The error_detail of this Ifc.  # noqa: E501
-        :type: str
-        """
-        if error_detail is not None and len(error_detail) < 1:
-            raise ValueError("Invalid value for `error_detail`, length must be greater than or equal to `1`")  # noqa: E501
-
-        self._error_detail = error_detail
-
-    @property
     def project_id(self):
         """Gets the project_id of this Ifc.  # noqa: E501
 
@@ -460,6 +436,29 @@ class Ifc(object):
         """
 
         self._project_id = project_id
+
+    @property
+    def world_position(self):
+        """Gets the world_position of this Ifc.  # noqa: E501
+
+        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
+
+        :return: The world_position of this Ifc.  # noqa: E501
+        :rtype: list[float]
+        """
+        return self._world_position
+
+    @world_position.setter
+    def world_position(self, world_position):
+        """Sets the world_position of this Ifc.
+
+        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
+
+        :param world_position: The world_position of this Ifc.  # noqa: E501
+        :type: list[float]
+        """
+
+        self._world_position = world_position
 
     def to_dict(self):
         """Returns the model properties as a dict"""

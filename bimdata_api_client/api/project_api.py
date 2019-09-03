@@ -160,7 +160,7 @@ class ProjectApi(object):
     def create_classification(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification(cloud_pk, project_pk, data, async_req=True)
@@ -169,7 +169,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param Classification data: (required)
+        :param list[Classification] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -177,7 +177,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Classification
+        :return: list[Classification]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -187,7 +187,7 @@ class ProjectApi(object):
     def create_classification_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors          If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive      Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -196,7 +196,7 @@ class ProjectApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param Classification data: (required)
+        :param list[Classification] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -206,7 +206,7 @@ class ProjectApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Classification, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(list[Classification], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -277,7 +277,7 @@ class ProjectApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Classification',  # noqa: E501
+            response_type='list[Classification]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

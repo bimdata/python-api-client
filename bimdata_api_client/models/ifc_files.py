@@ -37,7 +37,8 @@ class IfcFiles(object):
         'map_file': 'str',
         'gltf_file': 'str',
         'bvh_tree_file': 'str',
-        'viewer_360_file': 'str'
+        'viewer_360_file': 'str',
+        'xkt_file': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class IfcFiles(object):
         'map_file': 'map_file',
         'gltf_file': 'gltf_file',
         'bvh_tree_file': 'bvh_tree_file',
-        'viewer_360_file': 'viewer_360_file'
+        'viewer_360_file': 'viewer_360_file',
+        'xkt_file': 'xkt_file'
     }
 
-    def __init__(self, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None):  # noqa: E501
+    def __init__(self, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None):  # noqa: E501
         """IfcFiles - a model defined in OpenAPI"""  # noqa: E501
 
         self._structure_file = None
@@ -58,6 +60,7 @@ class IfcFiles(object):
         self._gltf_file = None
         self._bvh_tree_file = None
         self._viewer_360_file = None
+        self._xkt_file = None
         self.discriminator = None
 
         self.structure_file = structure_file
@@ -66,6 +69,7 @@ class IfcFiles(object):
         self.gltf_file = gltf_file
         self.bvh_tree_file = bvh_tree_file
         self.viewer_360_file = viewer_360_file
+        self.xkt_file = xkt_file
 
     @property
     def structure_file(self):
@@ -192,6 +196,27 @@ class IfcFiles(object):
         """
 
         self._viewer_360_file = viewer_360_file
+
+    @property
+    def xkt_file(self):
+        """Gets the xkt_file of this IfcFiles.  # noqa: E501
+
+
+        :return: The xkt_file of this IfcFiles.  # noqa: E501
+        :rtype: str
+        """
+        return self._xkt_file
+
+    @xkt_file.setter
+    def xkt_file(self, xkt_file):
+        """Sets the xkt_file of this IfcFiles.
+
+
+        :param xkt_file: The xkt_file of this IfcFiles.  # noqa: E501
+        :type: str
+        """
+
+        self._xkt_file = xkt_file
 
     def to_dict(self):
         """Returns the model properties as a dict"""
