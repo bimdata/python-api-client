@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.folder import Folder  # noqa: E501
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.models.folder import Folder  # noqa: E501
+from bimdata_api_client.rest import ApiException
 
 
 class TestFolder(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestFolder(unittest.TestCase):
     def testFolder(self):
         """Test Folder"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.folder.Folder()  # noqa: E501
+        # model = bimdata_api_client.models.folder.Folder()  # noqa: E501
         pass
 
 

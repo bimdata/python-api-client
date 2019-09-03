@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.rule_component import RuleComponent  # noqa: E501
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.models.rule_component import RuleComponent  # noqa: E501
+from bimdata_api_client.rest import ApiException
 
 
 class TestRuleComponent(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestRuleComponent(unittest.TestCase):
     def testRuleComponent(self):
         """Test RuleComponent"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.rule_component.RuleComponent()  # noqa: E501
+        # model = bimdata_api_client.models.rule_component.RuleComponent()  # noqa: E501
         pass
 
 

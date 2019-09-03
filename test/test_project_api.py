@@ -15,16 +15,16 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.api.project_api import ProjectApi  # noqa: E501
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.api.project_api import ProjectApi  # noqa: E501
+from bimdata_api_client.rest import ApiException
 
 
 class TestProjectApi(unittest.TestCase):
     """ProjectApi unit test stubs"""
 
     def setUp(self):
-        self.api = openapi_client.api.project_api.ProjectApi()  # noqa: E501
+        self.api = bimdata_api_client.api.project_api.ProjectApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -1,4 +1,4 @@
-# openapi_client.ApplicationApi
+# bimdata_api_client.ApplicationApi
 
 All URIs are relative to *https://api-beta.bimdata.io*
 
@@ -26,27 +26,27 @@ Create a new Webhook Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Create a new Webhook
@@ -60,27 +60,27 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Create a new Webhook
@@ -94,27 +94,27 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Create a new Webhook
@@ -164,25 +164,25 @@ Delete a webhook Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -197,25 +197,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -230,25 +230,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -299,28 +299,28 @@ Update all field of a webhook Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update all field of a webhook
@@ -334,28 +334,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update all field of a webhook
@@ -369,28 +369,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update all field of a webhook
@@ -441,25 +441,25 @@ Retrieve one configured webhook Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -475,25 +475,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -509,25 +509,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -579,25 +579,25 @@ Retrieve all configured webhooks Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -612,25 +612,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -645,25 +645,25 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -713,28 +713,28 @@ Trigger a Ping Event sending {\"ok\": true} to the webhook URL. Useful to test y
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Test a webhook
@@ -748,28 +748,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Test a webhook
@@ -783,28 +783,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Test a webhook
@@ -855,28 +855,28 @@ Update some field of a webhook Required scopes: webhook:manage
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update some field of a webhook
@@ -890,28 +890,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update some field of a webhook
@@ -925,28 +925,28 @@ except ApiException as e:
 ```python
 from __future__ import print_function
 import time
-import openapi_client
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: BIMDataConnect
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = openapi_client.Configuration()
+configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = openapi_client.ApplicationApi(openapi_client.ApiClient(configuration))
+api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
-data = openapi_client.WebHook() # WebHook | 
+data = bimdata_api_client.WebHook() # WebHook | 
 
 try:
     # Update some field of a webhook

@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.direction import Direction  # noqa: E501
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.models.direction import Direction  # noqa: E501
+from bimdata_api_client.rest import ApiException
 
 
 class TestDirection(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestDirection(unittest.TestCase):
     def testDirection(self):
         """Test Direction"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.direction.Direction()  # noqa: E501
+        # model = bimdata_api_client.models.direction.Direction()  # noqa: E501
         pass
 
 

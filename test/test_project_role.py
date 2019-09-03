@@ -15,9 +15,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import openapi_client
-from openapi_client.models.project_role import ProjectRole  # noqa: E501
-from openapi_client.rest import ApiException
+import bimdata_api_client
+from bimdata_api_client.models.project_role import ProjectRole  # noqa: E501
+from bimdata_api_client.rest import ApiException
 
 
 class TestProjectRole(unittest.TestCase):
@@ -32,7 +32,7 @@ class TestProjectRole(unittest.TestCase):
     def testProjectRole(self):
         """Test ProjectRole"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = openapi_client.models.project_role.ProjectRole()  # noqa: E501
+        # model = bimdata_api_client.models.project_role.ProjectRole()  # noqa: E501
         pass
 
 
