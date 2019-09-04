@@ -422,8 +422,6 @@ class RecursiveFolderChildren(object):
         :param children: The children of this RecursiveFolderChildren.  # noqa: E501
         :type: list[RecursiveFolderChildren]
         """
-        if children is None:
-            raise ValueError("Invalid value for `children`, must not be `None`")  # noqa: E501
 
         self._children = children
 

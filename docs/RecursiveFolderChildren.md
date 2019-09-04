@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **size** | **int** |  | [optional] 
 **ifc_id** | **int** |  | [optional] 
 **file** | **str** |  | [optional] 
-**children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | 
+**children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
