@@ -86,8 +86,10 @@ class RecursiveFolderChildren(object):
 
         self.id = id
         self.parent_id = parent_id
-        self.created_by = created_by
-        self.creator = creator
+        if created_by is not None:
+            self.created_by = created_by
+        if creator is not None:
+            self.creator = creator
         if type is not None:
             self.type = type
         self.name = name
@@ -169,8 +171,6 @@ class RecursiveFolderChildren(object):
         :param created_by: The created_by of this RecursiveFolderChildren.  # noqa: E501
         :type: User
         """
-        if created_by is None:
-            raise ValueError("Invalid value for `created_by`, must not be `None`")  # noqa: E501
 
         self._created_by = created_by
 
@@ -192,8 +192,6 @@ class RecursiveFolderChildren(object):
         :param creator: The creator of this RecursiveFolderChildren.  # noqa: E501
         :type: User
         """
-        if creator is None:
-            raise ValueError("Invalid value for `creator`, must not be `None`")  # noqa: E501
 
         self._creator = creator
 

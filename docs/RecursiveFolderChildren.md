@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
 **parent_id** | **int** |  | 
-**created_by** | [**User**](User.md) |  | 
-**creator** | [**User**](User.md) |  | 
+**created_by** | [**User**](User.md) |  | [optional] 
+**creator** | [**User**](User.md) |  | [optional] 
 **type** | **str** | Values can be &#39;Folder&#39;, &#39;Document&#39; or &#39;Ifc&#39;. It is usefull to parse the tree and discriminate folders and files | [optional] 
 **name** | **str** |  | 
 **created_at** | **datetime** |  | 
