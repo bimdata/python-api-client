@@ -256,19 +256,19 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         :return: The Auth Settings information dict.
         """
         return {
-            'BIMDataConnect':
-                {
-                    'type': 'oauth2',
-                    'in': 'header',
-                    'key': 'Authorization',
-                    'value': 'Bearer ' + self.access_token
-                },
             'Bearer':
                 {
                     'type': 'api_key',
                     'in': 'header',
                     'key': 'Authorization',
                     'value': self.get_api_key_with_prefix('Authorization')
+                },
+            'bimdata_connect':
+                {
+                    'type': 'oauth2',
+                    'in': 'header',
+                    'key': 'Authorization',
+                    'value': 'Bearer ' + self.access_token
                 },
             'client_credentials':
                 {

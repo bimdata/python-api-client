@@ -12,7 +12,8 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **clouds** | [**list[CloudRole]**](CloudRole.md) |  | [optional] 
 **projects** | [**list[ProjectRole]**](ProjectRole.md) |  | [optional] 
-**oidc_sub** | **str** |  | [optional] 
+**provider_sub** | **str** | sub from original identity provider | [optional] 
+**sub** | **str** | sub from Keycloak | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

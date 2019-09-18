@@ -155,7 +155,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker', 'POST',
@@ -299,7 +299,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result', 'POST',
@@ -427,7 +427,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan', 'POST',
@@ -571,7 +571,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule', 'POST',
@@ -723,7 +723,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent', 'POST',
@@ -859,7 +859,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset', 'POST',
@@ -987,7 +987,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'DELETE',
@@ -1123,7 +1123,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'DELETE',
@@ -1243,7 +1243,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{id}', 'DELETE',
@@ -1379,7 +1379,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id}', 'DELETE',
@@ -1523,7 +1523,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id}', 'DELETE',
@@ -1651,7 +1651,7 @@ class CheckplanApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id}', 'DELETE',
@@ -1795,7 +1795,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'PUT',
@@ -1947,7 +1947,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'PUT',
@@ -2083,7 +2083,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{id}', 'PUT',
@@ -2235,7 +2235,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id}', 'PUT',
@@ -2395,7 +2395,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id}', 'PUT',
@@ -2539,7 +2539,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id}', 'PUT',
@@ -2671,7 +2671,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'GET',
@@ -2811,7 +2811,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'GET',
@@ -2943,7 +2943,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result', 'GET',
@@ -3067,7 +3067,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker', 'GET',
@@ -3191,7 +3191,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{id}', 'GET',
@@ -3307,7 +3307,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan', 'GET',
@@ -3447,7 +3447,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id}', 'GET',
@@ -3595,7 +3595,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id}', 'GET',
@@ -3735,7 +3735,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent', 'GET',
@@ -3867,7 +3867,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule', 'GET',
@@ -3999,7 +3999,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id}', 'GET',
@@ -4123,7 +4123,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset', 'GET',
@@ -4263,7 +4263,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check', 'POST',
@@ -4407,7 +4407,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'PATCH',
@@ -4559,7 +4559,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'PATCH',
@@ -4695,7 +4695,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{id}', 'PATCH',
@@ -4847,7 +4847,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id}', 'PATCH',
@@ -5007,7 +5007,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id}', 'PATCH',
@@ -5151,7 +5151,7 @@ class CheckplanApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id}', 'PATCH',

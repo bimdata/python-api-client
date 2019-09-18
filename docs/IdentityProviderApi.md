@@ -1,18 +1,21 @@
-# bimdata_api_client.UserApi
+# bimdata_api_client.IdentityProviderApi
 
 All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**get_self_user**](UserApi.md#get_self_user) | **GET** /user | 
-[**update_self_user**](UserApi.md#update_self_user) | **PATCH** /user | 
-[**user_projects_list**](UserApi.md#user_projects_list) | **GET** /user/projects | 
+[**accept_invitation**](IdentityProviderApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
+[**deny_invitation**](IdentityProviderApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
+[**get_invitation**](IdentityProviderApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
+[**get_invitations**](IdentityProviderApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
 
 
-# **get_self_user**
-> SelfUser get_self_user()
+# **accept_invitation**
+> accept_invitation(id)
 
+Accept an invitation
 
+If the user already exists, s·he is added to the cloud and projet. If not, we wait their first connection to add them. Required scopes: org:manage
 
 ### Example
 
@@ -38,13 +41,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
 
 try:
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
+    # Accept an invitation
+    api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling UserApi->get_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -69,13 +73,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
 
 try:
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
+    # Accept an invitation
+    api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling UserApi->get_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -100,21 +105,290 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
 
 try:
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
+    # Accept an invitation
+    api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling UserApi->get_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this invitation. | 
 
 ### Return type
 
-[**SelfUser**](SelfUser.md)
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | empty |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **deny_invitation**
+> deny_invitation(id)
+
+Deny an invitation
+
+The invitation status change to DENIED and the user is not added to the cloud. You can accept an invitation previously denied Required scopes: org:manage
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Deny an invitation
+    api_instance.deny_invitation(id)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Deny an invitation
+    api_instance.deny_invitation(id)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Deny an invitation
+    api_instance.deny_invitation(id)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this invitation. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | empty |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_invitation**
+> Invitation get_invitation(id)
+
+Retrieve an invitation
+
+Retrieve all invitations of your identity provider Required scopes: org:manage
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Retrieve an invitation
+    api_response = api_instance.get_invitation(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Retrieve an invitation
+    api_response = api_instance.get_invitation(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api-beta.bimdata.io
+configuration.host = "https://api-beta.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this invitation.
+
+try:
+    # Retrieve an invitation
+    api_response = api_instance.get_invitation(id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this invitation. | 
+
+### Return type
+
+[**Invitation**](Invitation.md)
 
 ### Authorization
 
@@ -132,10 +406,12 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_self_user**
-> SelfUser update_self_user(data)
+# **get_invitations**
+> list[Invitation] get_invitations(status=status)
 
+Retrieve all invitations
 
+Retrieve all invitations of your identity provider Required scopes: org:manage
 
 ### Example
 
@@ -161,14 +437,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
-    api_response = api_instance.update_self_user(data)
+    # Retrieve all invitations
+    api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->update_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -193,14 +470,15 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
-    api_response = api_instance.update_self_user(data)
+    # Retrieve all invitations
+    api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->update_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -225,148 +503,26 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
-    api_response = api_instance.update_self_user(data)
+    # Retrieve all invitations
+    api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling UserApi->update_self_user: %s\n" % e)
+    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **data** | [**SelfUser**](SelfUser.md)|  | 
+ **status** | **str**| Filter the returned list by status | [optional] 
 
 ### Return type
 
-[**SelfUser**](SelfUser.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **user_projects_list**
-> list[Project] user_projects_list()
-
-
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    api_response = api_instance.user_projects_list()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling UserApi->user_projects_list: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    api_response = api_instance.user_projects_list()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling UserApi->user_projects_list: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-configuration = bimdata_api_client.Configuration()
-# Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.UserApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    api_response = api_instance.user_projects_list()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling UserApi->user_projects_list: %s\n" % e)
-```
-
-### Parameters
-This endpoint does not need any parameter.
-
-### Return type
-
-[**list[Project]**](Project.md)
+[**list[Invitation]**](Invitation.md)
 
 ### Authorization
 

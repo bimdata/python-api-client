@@ -50,7 +50,7 @@ Cancel a pending invitation
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -58,13 +58,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -84,7 +84,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->cancel_project_user_invitation: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -92,13 +92,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -126,13 +126,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -166,7 +166,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -189,7 +189,7 @@ Create a classification
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -197,13 +197,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -224,7 +224,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->create_classification: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -232,13 +232,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -267,13 +267,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -308,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -332,7 +332,7 @@ RCreate a document. If the document is an IFC, an IFC model will be created and 
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -340,13 +340,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -375,7 +375,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->create_document: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -383,13 +383,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -426,13 +426,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -506,7 +506,7 @@ If the created folder have no parent, it will be put as a child of the default r
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -514,13 +514,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -541,7 +541,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->create_folder: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -549,13 +549,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -584,13 +584,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -625,7 +625,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -648,7 +648,7 @@ Create a project Required scopes: org:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -656,13 +656,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -682,7 +682,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->create_project: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -690,13 +690,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -724,13 +724,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -763,7 +763,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -786,7 +786,7 @@ All elements having this classification will lose it Required scopes: ifc:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -794,13 +794,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -820,7 +820,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->delete_classification: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -828,13 +828,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -862,13 +862,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -902,7 +902,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -925,7 +925,7 @@ Delete the document Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -933,13 +933,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -959,7 +959,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->delete_document: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -967,13 +967,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1001,13 +1001,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1041,7 +1041,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1064,7 +1064,7 @@ All files and subfolders will be deleted too Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1072,13 +1072,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1098,7 +1098,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->delete_folder: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1106,13 +1106,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1140,13 +1140,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1180,7 +1180,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1203,7 +1203,7 @@ It can take a long time to respond because we may need to delete all properties 
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1211,13 +1211,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1236,7 +1236,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->delete_project: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1244,13 +1244,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1277,13 +1277,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1315,7 +1315,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1338,7 +1338,7 @@ Remove a user from a project Required scopes: cloud:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1346,13 +1346,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1372,7 +1372,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->delete_project_user: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1380,13 +1380,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1414,13 +1414,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1454,7 +1454,7 @@ void (empty response body)
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1477,7 +1477,7 @@ Update all fields of a classification Required scopes: ifc:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1485,13 +1485,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1513,7 +1513,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->full_update_classification: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1521,13 +1521,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1557,13 +1557,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1600,7 +1600,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1623,7 +1623,7 @@ Update all fields of the document Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1631,13 +1631,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1667,7 +1667,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->full_update_document: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1675,13 +1675,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1719,13 +1719,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1778,7 +1778,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1801,7 +1801,7 @@ Update all fields of a folder Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1809,13 +1809,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1837,7 +1837,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->full_update_folder: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1845,13 +1845,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1881,13 +1881,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1924,7 +1924,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -1947,7 +1947,7 @@ Update all fields of a project Required scopes: org:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -1955,13 +1955,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -1982,7 +1982,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -1990,13 +1990,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2025,13 +2025,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2066,7 +2066,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2089,7 +2089,7 @@ Change the user role in the cloud Required scopes: cloud:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2097,13 +2097,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2125,7 +2125,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->full_update_project_user: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2133,13 +2133,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2169,13 +2169,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2212,7 +2212,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2235,7 +2235,7 @@ Retrieve a classification Required scopes: ifc:read
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2243,13 +2243,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2270,7 +2270,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_classification: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2278,13 +2278,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2313,13 +2313,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2354,7 +2354,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2377,7 +2377,7 @@ Retrieve all classifications of all models in the project Required scopes: ifc:r
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2385,13 +2385,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2411,7 +2411,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_classifications: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2419,13 +2419,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2453,13 +2453,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2492,7 +2492,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2515,7 +2515,7 @@ Retrieve a document in the project Required scopes: document:read
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2523,13 +2523,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2550,7 +2550,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_document: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2558,13 +2558,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2593,13 +2593,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2634,7 +2634,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2657,7 +2657,7 @@ Retrieve all documents in the project Required scopes: document:read
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2665,13 +2665,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2691,7 +2691,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_documents: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2699,13 +2699,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2733,13 +2733,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2772,7 +2772,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2795,7 +2795,7 @@ Retrieve a folder Required scopes: document:read
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2803,13 +2803,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2830,7 +2830,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_folder: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2838,13 +2838,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2873,13 +2873,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2914,7 +2914,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -2937,7 +2937,7 @@ Retrieve all folders in the project. This is an array of folder. If you want to 
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -2945,13 +2945,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -2971,7 +2971,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_folders: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -2979,13 +2979,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3013,13 +3013,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3052,7 +3052,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3075,7 +3075,7 @@ Retrieve a project
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3083,13 +3083,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3109,7 +3109,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3117,13 +3117,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3151,13 +3151,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3190,7 +3190,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3213,7 +3213,7 @@ Retrieve the complete DMS tree (all folders and all documents in the project)
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3221,13 +3221,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3247,7 +3247,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_dms_tree: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3255,13 +3255,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3289,13 +3289,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3328,7 +3328,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3351,7 +3351,7 @@ Returns app's invitations only Required scopes: org:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3359,13 +3359,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3385,7 +3385,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_invitations: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3393,13 +3393,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3427,13 +3427,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3466,7 +3466,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3489,7 +3489,7 @@ Retrieve the complete projects tree of the cloud
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3497,13 +3497,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3522,7 +3522,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_sub_tree: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3530,13 +3530,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3563,13 +3563,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3600,7 +3600,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3623,7 +3623,7 @@ Retrieve the complete DMS tree (all folders and all documents in the project). D
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3631,13 +3631,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3657,7 +3657,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_tree: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3665,13 +3665,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3699,13 +3699,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3738,7 +3738,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3761,7 +3761,7 @@ Each member of a project can see other members of the project Required scopes: c
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3769,13 +3769,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3796,7 +3796,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_user: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3804,13 +3804,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3839,13 +3839,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3880,7 +3880,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -3903,7 +3903,7 @@ Each member of a project can see other members of the project Required scopes: c
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -3911,13 +3911,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3937,7 +3937,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_project_users: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -3945,13 +3945,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -3979,13 +3979,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4018,7 +4018,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4041,7 +4041,7 @@ Retrieve all projects of the cloud. All project are shown at the same level. see
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4049,13 +4049,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4074,7 +4074,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->get_projects: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4082,13 +4082,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4115,13 +4115,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4152,7 +4152,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4175,7 +4175,7 @@ Invite a project member. If the user is not already a cloud member, they will al
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4183,13 +4183,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4210,7 +4210,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->invite_project_user: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4218,13 +4218,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4253,13 +4253,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4294,7 +4294,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4317,7 +4317,7 @@ Update some fields of a classification Required scopes: ifc:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4325,13 +4325,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4353,7 +4353,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->update_classification: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4361,13 +4361,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4397,13 +4397,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4440,7 +4440,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4463,7 +4463,7 @@ Update some fields of the document Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4471,13 +4471,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4499,7 +4499,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->update_document: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4507,13 +4507,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4543,13 +4543,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4586,7 +4586,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4609,7 +4609,7 @@ Update some fields of a folder Required scopes: document:write
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4617,13 +4617,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4645,7 +4645,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->update_folder: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4653,13 +4653,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4689,13 +4689,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4732,7 +4732,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4755,7 +4755,7 @@ Update some fields of a project Required scopes: org:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4763,13 +4763,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4790,7 +4790,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->update_project: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4798,13 +4798,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4833,13 +4833,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4874,7 +4874,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 
@@ -4897,7 +4897,7 @@ Change the user role in the cloud Required scopes: cloud:manage
 
 ### Example
 
-* OAuth Authentication (BIMDataConnect):
+* Api Key Authentication (Bearer):
 ```python
 from __future__ import print_function
 import time
@@ -4905,13 +4905,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4933,7 +4933,7 @@ except ApiException as e:
     print("Exception when calling ProjectApi->update_project_user: %s\n" % e)
 ```
 
-* Api Key Authentication (Bearer):
+* OAuth Authentication (bimdata_connect):
 ```python
 from __future__ import print_function
 import time
@@ -4941,13 +4941,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -4977,13 +4977,13 @@ import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
 configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: BIMDataConnect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
 # Configure API key authorization: Bearer
 configuration.api_key['Authorization'] = 'YOUR_API_KEY'
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
 configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
@@ -5020,7 +5020,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BIMDataConnect](../README.md#BIMDataConnect), [Bearer](../README.md#Bearer), [client_credentials](../README.md#client_credentials)
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
 
 ### HTTP request headers
 

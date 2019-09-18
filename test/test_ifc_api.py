@@ -112,6 +112,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_access_token(self):
+        """Test case for create_access_token
+
+        Create a token for this model  # noqa: E501
+        """
+        pass
+
     def test_create_classification_element_relations(self):
         """Test case for create_classification_element_relations
 
@@ -217,6 +224,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_access_token(self):
+        """Test case for delete_access_token
+
+        Delete a token  # noqa: E501
+        """
+        pass
+
     def test_delete_element(self):
         """Test case for delete_element
 
@@ -287,6 +301,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_full_update_access_token(self):
+        """Test case for full_update_access_token
+
+        Update all fields of a token  # noqa: E501
+        """
+        pass
+
     def test_full_update_element(self):
         """Test case for full_update_element
 
@@ -347,6 +368,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for full_update_zone_space
 
         Update all fields of a space  # noqa: E501
+        """
+        pass
+
+    def test_get_access_token(self):
+        """Test case for get_access_token
+
+        Retrieve one token created for this model  # noqa: E501
+        """
+        pass
+
+    def test_get_access_tokens(self):
+        """Test case for get_access_tokens
+
+        Retrieve all tokens created for this model  # noqa: E501
         """
         pass
 
@@ -655,6 +690,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for remove_elements_from_classification
 
         Remove the classification from all elements  # noqa: E501
+        """
+        pass
+
+    def test_update_access_token(self):
+        """Test case for update_access_token
+
+        Update some fields of a token  # noqa: E501
         """
         pass
 

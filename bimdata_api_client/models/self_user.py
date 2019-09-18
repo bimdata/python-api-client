@@ -41,7 +41,8 @@ class SelfUser(object):
         'updated_at': 'datetime',
         'clouds': 'list[CloudRole]',
         'projects': 'list[ProjectRole]',
-        'oidc_sub': 'str'
+        'provider_sub': 'str',
+        'sub': 'str'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class SelfUser(object):
         'updated_at': 'updated_at',
         'clouds': 'clouds',
         'projects': 'projects',
-        'oidc_sub': 'oidc_sub'
+        'provider_sub': 'provider_sub',
+        'sub': 'sub'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, clouds=None, projects=None, oidc_sub=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, clouds=None, projects=None, provider_sub=None, sub=None):  # noqa: E501
         """SelfUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -69,7 +71,8 @@ class SelfUser(object):
         self._updated_at = None
         self._clouds = None
         self._projects = None
-        self._oidc_sub = None
+        self._provider_sub = None
+        self._sub = None
         self.discriminator = None
 
         if id is not None:
@@ -86,7 +89,8 @@ class SelfUser(object):
             self.clouds = clouds
         if projects is not None:
             self.projects = projects
-        self.oidc_sub = oidc_sub
+        self.provider_sub = provider_sub
+        self.sub = sub
 
     @property
     def id(self):
@@ -292,27 +296,54 @@ class SelfUser(object):
         self._projects = projects
 
     @property
-    def oidc_sub(self):
-        """Gets the oidc_sub of this SelfUser.  # noqa: E501
+    def provider_sub(self):
+        """Gets the provider_sub of this SelfUser.  # noqa: E501
 
+        sub from original identity provider  # noqa: E501
 
-        :return: The oidc_sub of this SelfUser.  # noqa: E501
+        :return: The provider_sub of this SelfUser.  # noqa: E501
         :rtype: str
         """
-        return self._oidc_sub
+        return self._provider_sub
 
-    @oidc_sub.setter
-    def oidc_sub(self, oidc_sub):
-        """Sets the oidc_sub of this SelfUser.
+    @provider_sub.setter
+    def provider_sub(self, provider_sub):
+        """Sets the provider_sub of this SelfUser.
 
+        sub from original identity provider  # noqa: E501
 
-        :param oidc_sub: The oidc_sub of this SelfUser.  # noqa: E501
+        :param provider_sub: The provider_sub of this SelfUser.  # noqa: E501
         :type: str
         """
-        if oidc_sub is not None and len(oidc_sub) > 255:
-            raise ValueError("Invalid value for `oidc_sub`, length must be less than or equal to `255`")  # noqa: E501
+        if provider_sub is not None and len(provider_sub) > 255:
+            raise ValueError("Invalid value for `provider_sub`, length must be less than or equal to `255`")  # noqa: E501
 
-        self._oidc_sub = oidc_sub
+        self._provider_sub = provider_sub
+
+    @property
+    def sub(self):
+        """Gets the sub of this SelfUser.  # noqa: E501
+
+        sub from Keycloak  # noqa: E501
+
+        :return: The sub of this SelfUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._sub
+
+    @sub.setter
+    def sub(self, sub):
+        """Sets the sub of this SelfUser.
+
+        sub from Keycloak  # noqa: E501
+
+        :param sub: The sub of this SelfUser.  # noqa: E501
+        :type: str
+        """
+        if sub is not None and len(sub) > 255:
+            raise ValueError("Invalid value for `sub`, length must be less than or equal to `255`")  # noqa: E501
+
+        self._sub = sub
 
     def to_dict(self):
         """Returns the model properties as a dict"""

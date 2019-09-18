@@ -139,7 +139,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/invitation/{id}', 'DELETE',
@@ -267,7 +267,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification', 'POST',
@@ -440,7 +440,7 @@ class ProjectApi(object):
             ['multipart/form-data', 'application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document', 'POST',
@@ -568,7 +568,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder', 'POST',
@@ -688,7 +688,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project', 'POST',
@@ -808,7 +808,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}', 'DELETE',
@@ -928,7 +928,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'DELETE',
@@ -1048,7 +1048,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}', 'DELETE',
@@ -1160,7 +1160,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}', 'DELETE',
@@ -1280,7 +1280,7 @@ class ProjectApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'DELETE',
@@ -1416,7 +1416,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}', 'PUT',
@@ -1597,7 +1597,7 @@ class ProjectApi(object):
             ['multipart/form-data', 'application/x-www-form-urlencoded'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'PUT',
@@ -1733,7 +1733,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}', 'PUT',
@@ -1861,7 +1861,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}', 'PUT',
@@ -1997,7 +1997,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'PUT',
@@ -2121,7 +2121,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}', 'GET',
@@ -2237,7 +2237,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification', 'GET',
@@ -2361,7 +2361,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'GET',
@@ -2477,7 +2477,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document', 'GET',
@@ -2601,7 +2601,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}', 'GET',
@@ -2717,7 +2717,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder', 'GET',
@@ -2833,7 +2833,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}', 'GET',
@@ -2949,7 +2949,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}/dms-tree', 'GET',
@@ -3065,7 +3065,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/invitation', 'GET',
@@ -3173,7 +3173,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/subtree', 'GET',
@@ -3289,7 +3289,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}/tree', 'GET',
@@ -3413,7 +3413,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'GET',
@@ -3529,7 +3529,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/user', 'GET',
@@ -3637,7 +3637,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project', 'GET',
@@ -3765,7 +3765,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/invitation', 'POST',
@@ -3901,7 +3901,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/classification/{id}', 'PATCH',
@@ -4037,7 +4037,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/document/{id}', 'PATCH',
@@ -4173,7 +4173,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/folder/{id}', 'PATCH',
@@ -4301,7 +4301,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{id}', 'PATCH',
@@ -4437,7 +4437,7 @@ class ProjectApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'PATCH',

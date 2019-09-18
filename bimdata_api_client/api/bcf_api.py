@@ -147,7 +147,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments', 'POST',
@@ -267,7 +267,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/full-topic', 'POST',
@@ -387,7 +387,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics', 'POST',
@@ -515,7 +515,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints', 'POST',
@@ -635,7 +635,7 @@ class BcfApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'DELETE',
@@ -747,7 +747,7 @@ class BcfApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{guid}', 'DELETE',
@@ -867,7 +867,7 @@ class BcfApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'DELETE',
@@ -979,7 +979,7 @@ class BcfApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{id}/export', 'GET',
@@ -1099,7 +1099,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{id}', 'PUT',
@@ -1235,7 +1235,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'PUT',
@@ -1363,7 +1363,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}', 'PUT',
@@ -1491,7 +1491,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{guid}', 'PUT',
@@ -1627,7 +1627,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'PUT',
@@ -1735,7 +1735,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{id}', 'GET',
@@ -1835,7 +1835,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects', 'GET',
@@ -1959,7 +1959,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring', 'GET',
@@ -2083,7 +2083,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'GET',
@@ -2199,7 +2199,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments', 'GET',
@@ -2307,7 +2307,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/extensions', 'GET',
@@ -2423,7 +2423,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}', 'GET',
@@ -2539,7 +2539,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/full-topic', 'GET',
@@ -2663,7 +2663,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection', 'GET',
@@ -2787,7 +2787,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot', 'GET',
@@ -2903,7 +2903,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{guid}', 'GET',
@@ -3019,7 +3019,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints', 'GET',
@@ -3135,7 +3135,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics', 'GET',
@@ -3235,7 +3235,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/current-user', 'GET',
@@ -3359,7 +3359,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'GET',
@@ -3475,7 +3475,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints', 'GET',
@@ -3599,7 +3599,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility', 'GET',
@@ -3719,7 +3719,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{id}', 'PATCH',
@@ -3855,7 +3855,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid}', 'PATCH',
@@ -3975,7 +3975,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/extensions', 'PATCH',
@@ -4103,7 +4103,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/full-topic/{guid}', 'PATCH',
@@ -4231,7 +4231,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{guid}', 'PATCH',
@@ -4367,7 +4367,7 @@ class BcfApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}', 'PATCH',

@@ -139,7 +139,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook', 'POST',
@@ -251,7 +251,7 @@ class ApplicationApi(object):
 
         body_params = None
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook/{id}', 'DELETE',
@@ -379,7 +379,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook/{id}', 'PUT',
@@ -495,7 +495,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook/{id}', 'GET',
@@ -603,7 +603,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook', 'GET',
@@ -731,7 +731,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook/{id}/ping', 'POST',
@@ -859,7 +859,7 @@ class ApplicationApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = ['BIMDataConnect', 'Bearer', 'client_credentials']  # noqa: E501
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/webhook/{id}', 'PATCH',
