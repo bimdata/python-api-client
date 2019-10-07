@@ -38,6 +38,7 @@ class Cloud(object):
         'creator': 'User',
         'is_default': 'bool',
         'created_at': 'datetime',
+        'image': 'str',
         'updated_at': 'datetime'
     }
 
@@ -48,10 +49,11 @@ class Cloud(object):
         'creator': 'creator',
         'is_default': 'is_default',
         'created_at': 'created_at',
+        'image': 'image',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, features=None, creator=None, is_default=None, created_at=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, name=None, features=None, creator=None, is_default=None, created_at=None, image=None, updated_at=None):  # noqa: E501
         """Cloud - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -60,6 +62,7 @@ class Cloud(object):
         self._creator = None
         self._is_default = None
         self._created_at = None
+        self._image = None
         self._updated_at = None
         self.discriminator = None
 
@@ -74,6 +77,7 @@ class Cloud(object):
             self.is_default = is_default
         if created_at is not None:
             self.created_at = created_at
+        self.image = image
         if updated_at is not None:
             self.updated_at = updated_at
 
@@ -212,6 +216,27 @@ class Cloud(object):
         """
 
         self._created_at = created_at
+
+    @property
+    def image(self):
+        """Gets the image of this Cloud.  # noqa: E501
+
+
+        :return: The image of this Cloud.  # noqa: E501
+        :rtype: str
+        """
+        return self._image
+
+    @image.setter
+    def image(self, image):
+        """Sets the image of this Cloud.
+
+
+        :param image: The image of this Cloud.  # noqa: E501
+        :type: str
+        """
+
+        self._image = image
 
     @property
     def updated_at(self):

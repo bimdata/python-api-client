@@ -79,12 +79,14 @@ class Invitation(object):
         self.redirect_uri = redirect_uri
         self.cloud_name = cloud_name
         self.cloud_role = cloud_role
-        self.project_name = project_name
+        if project_name is not None:
+            self.project_name = project_name
         self.project_role = project_role
         self.email = email
         if status is not None:
             self.status = status
-        self.sender_provider_sub = sender_provider_sub
+        if sender_provider_sub is not None:
+            self.sender_provider_sub = sender_provider_sub
 
     @property
     def id(self):
@@ -225,8 +227,6 @@ class Invitation(object):
         :param project_name: The project_name of this Invitation.  # noqa: E501
         :type: str
         """
-        if project_name is None:
-            raise ValueError("Invalid value for `project_name`, must not be `None`")  # noqa: E501
         if project_name is not None and len(project_name) < 1:
             raise ValueError("Invalid value for `project_name`, length must be greater than or equal to `1`")  # noqa: E501
 
@@ -333,8 +333,6 @@ class Invitation(object):
         :param sender_provider_sub: The sender_provider_sub of this Invitation.  # noqa: E501
         :type: str
         """
-        if sender_provider_sub is None:
-            raise ValueError("Invalid value for `sender_provider_sub`, must not be `None`")  # noqa: E501
         if sender_provider_sub is not None and len(sender_provider_sub) < 1:
             raise ValueError("Invalid value for `sender_provider_sub`, length must be greater than or equal to `1`")  # noqa: E501
 
