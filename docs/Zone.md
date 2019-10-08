@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] 
-**name** | **str** |  | 
+**name** | **str** |  | [optional] 
 **uuid** | **str** |  | 
 **zones** | [**list[Zone]**](Zone.md) |  | [optional] 
 **parent_id** | **int** |  | [optional] 
