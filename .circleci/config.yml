@@ -56,6 +56,13 @@ jobs:
           command: |
             . venv/bin/activate
             tox
+
+      - run:
+          name: check Readme syntax
+          command: |
+            . venv/bin/activate
+            python setup.py sdist
+            twine check dist/*
   release:
     <<: *container_config
     steps:

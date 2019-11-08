@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/bimdata/python-api-client.svg?style=svg)](https://circleci.com/gh/bimdata/python-api-client)
+
 # bimdata-api-client
 BIMData API is a tool to interact with your models stored on BIMData’s servers.     Through the API, you can manage your projects, the clouds, upload your IFC files and manage them through endpoints.
 
