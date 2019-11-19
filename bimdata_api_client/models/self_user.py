@@ -41,6 +41,7 @@ class SelfUser(object):
         'updated_at': 'datetime',
         'clouds': 'list[CloudRole]',
         'projects': 'list[ProjectRole]',
+        'provider': 'str',
         'provider_sub': 'str',
         'sub': 'str'
     }
@@ -55,11 +56,12 @@ class SelfUser(object):
         'updated_at': 'updated_at',
         'clouds': 'clouds',
         'projects': 'projects',
+        'provider': 'provider',
         'provider_sub': 'provider_sub',
         'sub': 'sub'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, clouds=None, projects=None, provider_sub=None, sub=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, clouds=None, projects=None, provider=None, provider_sub=None, sub=None):  # noqa: E501
         """SelfUser - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -71,6 +73,7 @@ class SelfUser(object):
         self._updated_at = None
         self._clouds = None
         self._projects = None
+        self._provider = None
         self._provider_sub = None
         self._sub = None
         self.discriminator = None
@@ -89,6 +92,8 @@ class SelfUser(object):
             self.clouds = clouds
         if projects is not None:
             self.projects = projects
+        if provider is not None:
+            self.provider = provider
         self.provider_sub = provider_sub
         self.sub = sub
 
@@ -294,6 +299,29 @@ class SelfUser(object):
         """
 
         self._projects = projects
+
+    @property
+    def provider(self):
+        """Gets the provider of this SelfUser.  # noqa: E501
+
+
+        :return: The provider of this SelfUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._provider
+
+    @provider.setter
+    def provider(self, provider):
+        """Sets the provider of this SelfUser.
+
+
+        :param provider: The provider of this SelfUser.  # noqa: E501
+        :type: str
+        """
+        if provider is not None and len(provider) < 1:
+            raise ValueError("Invalid value for `provider`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._provider = provider
 
     @property
     def provider_sub(self):

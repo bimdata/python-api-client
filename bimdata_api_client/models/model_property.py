@@ -34,7 +34,7 @@ class ModelProperty(object):
     openapi_types = {
         'id': 'int',
         'definition': 'PropertyDefinition',
-        'value': 'str'
+        'value': 'object'
     }
 
     attribute_map = {
@@ -106,7 +106,7 @@ class ModelProperty(object):
 
 
         :return: The value of this ModelProperty.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._value
 
@@ -116,7 +116,7 @@ class ModelProperty(object):
 
 
         :param value: The value of this ModelProperty.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._value = value

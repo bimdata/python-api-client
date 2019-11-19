@@ -36,7 +36,7 @@ class RawUnit(object):
         'type': 'str',
         'unit_type': 'str',
         'prefix': 'str',
-        'elements': 'str',
+        'elements': 'object',
         'conversion_factor': 'float',
         'dimensions': 'list[float]',
         'conversion_baseunit_index': 'int'
@@ -169,7 +169,7 @@ class RawUnit(object):
 
 
         :return: The elements of this RawUnit.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._elements
 
@@ -179,7 +179,7 @@ class RawUnit(object):
 
 
         :param elements: The elements of this RawUnit.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._elements = elements

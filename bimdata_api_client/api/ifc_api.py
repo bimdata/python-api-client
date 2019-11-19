@@ -3296,7 +3296,7 @@ class IfcApi(object):
     def create_raw_elements(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create elements in an optimized format  # noqa: E501
 
-                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination may be returned          Required scopes: ifc:write  # noqa: E501
+                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         For performance reasons, we do not check the validity of the json. If the json is malformed, an error 500 without more explaination may be returned instead of a 400.          Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_raw_elements(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -3324,7 +3324,7 @@ class IfcApi(object):
     def create_raw_elements_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create elements in an optimized format  # noqa: E501
 
-                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         If the structure is malformed, an error 500 without more explaination may be returned          Required scopes: ifc:write  # noqa: E501
+                 You can use the same optimized structure to post multiple elements, property_sets, properties, definitions and units at once.         For performance reasons, we do not check the validity of the json. If the json is malformed, an error 500 without more explaination may be returned instead of a 400.          Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_raw_elements_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)

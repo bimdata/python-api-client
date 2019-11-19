@@ -306,7 +306,7 @@ class Document(object):
     def size(self):
         """Gets the size of this Document.  # noqa: E501
 
-        Size of the file. The file may be compressed and show a smaller size  # noqa: E501
+        Size of the file.  # noqa: E501
 
         :return: The size of this Document.  # noqa: E501
         :rtype: int
@@ -317,7 +317,7 @@ class Document(object):
     def size(self, size):
         """Sets the size of this Document.
 
-        Size of the file. The file may be compressed and show a smaller size  # noqa: E501
+        Size of the file.  # noqa: E501
 
         :param size: The size of this Document.  # noqa: E501
         :type: int

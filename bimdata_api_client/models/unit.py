@@ -40,7 +40,7 @@ class Unit(object):
         'dimensions': 'list[float]',
         'conversion_factor': 'float',
         'conversion_baseunit': 'Unit',
-        'elements': 'str'
+        'elements': 'object'
     }
 
     attribute_map = {
@@ -272,7 +272,7 @@ class Unit(object):
         List of constitutive unit elements by id with corresponding exponent (ex: [meterID/1, secondID/-1] for velocity)  # noqa: E501
 
         :return: The elements of this Unit.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._elements
 
@@ -283,7 +283,7 @@ class Unit(object):
         List of constitutive unit elements by id with corresponding exponent (ex: [meterID/1, secondID/-1] for velocity)  # noqa: E501
 
         :param elements: The elements of this Unit.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._elements = elements

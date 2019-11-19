@@ -305,7 +305,7 @@ class ProjectApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param file file:
-        :param int size: Size of the file. The file may be compressed and show a smaller size
+        :param int size: Size of the file.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -340,7 +340,7 @@ class ProjectApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param file file:
-        :param int size: Size of the file. The file may be compressed and show a smaller size
+        :param int size: Size of the file.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -949,7 +949,7 @@ class ProjectApi(object):
     def delete_folder(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a folder  # noqa: E501
 
-        All files and subfolders will be deleted too Required scopes: document:write  # noqa: E501
+        All files and subfolders will be deleted too. If folder is a project's root folder, only children are deleted Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_folder(cloud_pk, id, project_pk, async_req=True)
@@ -976,7 +976,7 @@ class ProjectApi(object):
     def delete_folder_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a folder  # noqa: E501
 
-        All files and subfolders will be deleted too Required scopes: document:write  # noqa: E501
+        All files and subfolders will be deleted too. If folder is a project's root folder, only children are deleted Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_folder_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -1455,7 +1455,7 @@ class ProjectApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param file file:
-        :param int size: Size of the file. The file may be compressed and show a smaller size
+        :param int size: Size of the file.
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1491,7 +1491,7 @@ class ProjectApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param file file:
-        :param int size: Size of the file. The file may be compressed and show a smaller size
+        :param int size: Size of the file.
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will

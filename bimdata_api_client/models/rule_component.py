@@ -34,11 +34,11 @@ class RuleComponent(object):
     openapi_types = {
         'id': 'int',
         'type': 'str',
-        'value': 'str',
+        'value': 'object',
         'operator': 'str',
-        'params': 'str',
+        'params': 'object',
         'condition': 'str',
-        'rule_components': 'str'
+        'rule_components': 'object'
     }
 
     attribute_map = {
@@ -120,7 +120,7 @@ class RuleComponent(object):
 
 
         :return: The value of this RuleComponent.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._value
 
@@ -130,7 +130,7 @@ class RuleComponent(object):
 
 
         :param value: The value of this RuleComponent.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._value = value
@@ -162,7 +162,7 @@ class RuleComponent(object):
 
 
         :return: The params of this RuleComponent.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._params
 
@@ -172,7 +172,7 @@ class RuleComponent(object):
 
 
         :param params: The params of this RuleComponent.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._params = params
@@ -204,7 +204,7 @@ class RuleComponent(object):
 
 
         :return: The rule_components of this RuleComponent.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._rule_components
 
@@ -214,7 +214,7 @@ class RuleComponent(object):
 
 
         :param rule_components: The rule_components of this RuleComponent.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._rule_components = rule_components

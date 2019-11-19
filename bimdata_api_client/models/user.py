@@ -40,7 +40,8 @@ class User(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'cloud_role': 'int',
-        'project_role': 'int'
+        'project_role': 'int',
+        'provider': 'str'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class User(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'cloud_role': 'cloud_role',
-        'project_role': 'project_role'
+        'project_role': 'project_role',
+        'provider': 'provider'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, cloud_role=None, project_role=None):  # noqa: E501
+    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, cloud_role=None, project_role=None, provider=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -67,6 +69,7 @@ class User(object):
         self._updated_at = None
         self._cloud_role = None
         self._project_role = None
+        self._provider = None
         self.discriminator = None
 
         if id is not None:
@@ -87,6 +90,8 @@ class User(object):
             self.cloud_role = cloud_role
         if project_role is not None:
             self.project_role = project_role
+        if provider is not None:
+            self.provider = provider
 
     @property
     def id(self):
@@ -282,6 +287,29 @@ class User(object):
         """
 
         self._project_role = project_role
+
+    @property
+    def provider(self):
+        """Gets the provider of this User.  # noqa: E501
+
+
+        :return: The provider of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._provider
+
+    @provider.setter
+    def provider(self, provider):
+        """Sets the provider of this User.
+
+
+        :param provider: The provider of this User.  # noqa: E501
+        :type: str
+        """
+        if provider is not None and len(provider) < 1:
+            raise ValueError("Invalid value for `provider`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._provider = provider
 
     def to_dict(self):
         """Returns the model properties as a dict"""

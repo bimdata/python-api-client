@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | [optional] 
 **clouds** | [**list[CloudRole]**](CloudRole.md) |  | [optional] 
 **projects** | [**list[ProjectRole]**](ProjectRole.md) |  | [optional] 
+**provider** | **str** |  | [optional] 
 **provider_sub** | **str** | sub from original identity provider | [optional] 
 **sub** | **str** | sub from Keycloak | [optional] 
 

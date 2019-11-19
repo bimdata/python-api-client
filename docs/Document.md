@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str** | Description of the file | [optional] 
 **file** | **str** |  | [optional] 
-**size** | **int** | Size of the file. The file may be compressed and show a smaller size | [optional] 
+**size** | **int** | Size of the file. | [optional] 
 **created_at** | **datetime** | Creation date | [optional] 
 **updated_at** | **datetime** | Date of the last update | [optional] 
 **ifc_id** | **str** |  | [optional] 

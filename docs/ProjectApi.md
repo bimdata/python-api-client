@@ -374,7 +374,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
@@ -417,7 +417,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
@@ -460,7 +460,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
@@ -484,7 +484,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional] 
  **description** | **str**| Description of the file | [optional] 
  **file** | **file**|  | [optional] 
- **size** | **int**| Size of the file. The file may be compressed and show a smaller size | [optional] 
+ **size** | **int**| Size of the file. | [optional] 
 
 ### Return type
 
@@ -1094,7 +1094,7 @@ void (empty response body)
 
 Delete a folder
 
-All files and subfolders will be deleted too Required scopes: document:write
+All files and subfolders will be deleted too. If folder is a project's root folder, only children are deleted Required scopes: document:write
 
 ### Example
 
@@ -1711,7 +1711,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
@@ -1755,7 +1755,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
@@ -1799,7 +1799,7 @@ project = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 file = '/path/to/file' # file |  (optional)
-size = 56 # int | Size of the file. The file may be compressed and show a smaller size (optional)
+size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
@@ -1824,7 +1824,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional] 
  **description** | **str**| Description of the file | [optional] 
  **file** | **file**|  | [optional] 
- **size** | **int**| Size of the file. The file may be compressed and show a smaller size | [optional] 
+ **size** | **int**| Size of the file. | [optional] 
 
 ### Return type
 

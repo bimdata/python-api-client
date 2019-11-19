@@ -32,7 +32,7 @@ class RawProperty(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'value': 'str',
+        'value': 'object',
         'def_id': 'int'
     }
 
@@ -57,7 +57,7 @@ class RawProperty(object):
 
 
         :return: The value of this RawProperty.  # noqa: E501
-        :rtype: str
+        :rtype: object
         """
         return self._value
 
@@ -67,7 +67,7 @@ class RawProperty(object):
 
 
         :param value: The value of this RawProperty.  # noqa: E501
-        :type: str
+        :type: object
         """
 
         self._value = value

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **type** | **str** |  | 
 **unit_type** | **str** |  | [optional] 
 **prefix** | **str** |  | [optional] 
-**elements** | **str** |  | [optional] 
+**elements** | [**object**](.md) |  | [optional] 
 **conversion_factor** | **float** |  | [optional] 
 **dimensions** | **list[float]** |  | [optional] 
 **conversion_baseunit_index** | **int** |  | [optional] 

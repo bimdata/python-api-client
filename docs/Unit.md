@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **dimensions** | **list[float]** | List of 7 units dimensions | [optional] 
 **conversion_factor** | **float** | Factor of conversion and base unit id (ex: DEGREE from RADIAN with factor 0.0174532925199433) | [optional] 
 **conversion_baseunit** | [**Unit**](Unit.md) |  | [optional] 
-**elements** | **str** | List of constitutive unit elements by id with corresponding exponent (ex: [meterID/1, secondID/-1] for velocity) | [optional] 
+**elements** | [**object**](.md) | List of constitutive unit elements by id with corresponding exponent (ex: [meterID/1, secondID/-1] for velocity) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
