@@ -49,7 +49,8 @@ class Topic(object):
         'due_date': 'datetime',
         'ifcs': 'list[int]',
         'format': 'str',
-        'index': 'int'
+        'index': 'int',
+        'project': 'int'
     }
 
     attribute_map = {
@@ -70,10 +71,11 @@ class Topic(object):
         'due_date': 'due_date',
         'ifcs': 'ifcs',
         'format': 'format',
-        'index': 'index'
+        'index': 'index',
+        'project': 'project'
     }
 
-    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, format=None, index=None):  # noqa: E501
+    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, format=None, index=None, project=None):  # noqa: E501
         """Topic - a model defined in OpenAPI"""  # noqa: E501
 
         self._guid = None
@@ -94,6 +96,7 @@ class Topic(object):
         self._ifcs = None
         self._format = None
         self._index = None
+        self._project = None
         self.discriminator = None
 
         if guid is not None:
@@ -121,6 +124,7 @@ class Topic(object):
         if format is not None:
             self.format = format
         self.index = index
+        self.project = project
 
     @property
     def guid(self):
@@ -513,6 +517,29 @@ class Topic(object):
             raise ValueError("Invalid value for `index`, must be a value greater than or equal to `0`")  # noqa: E501
 
         self._index = index
+
+    @property
+    def project(self):
+        """Gets the project of this Topic.  # noqa: E501
+
+
+        :return: The project of this Topic.  # noqa: E501
+        :rtype: int
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this Topic.
+
+
+        :param project: The project of this Topic.  # noqa: E501
+        :type: int
+        """
+        if project is None:
+            raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
+
+        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

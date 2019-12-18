@@ -29,6 +29,13 @@ class TestIfcApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_ifc_errors(self):
+        """Test case for add_ifc_errors
+
+        Add errors to IFC  # noqa: E501
+        """
+        pass
+
     def test_bulk_delete_ifc_classifications(self):
         """Test case for bulk_delete_ifc_classifications
 
@@ -106,12 +113,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_cloud_project_ifc_processorhandler_partial_update(self):
-        """Test case for cloud_project_ifc_processorhandler_partial_update
-
-        """
-        pass
-
     def test_create_access_token(self):
         """Test case for create_access_token
 
@@ -182,6 +183,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_layer(self):
+        """Test case for create_layer
+
+        Create a layer in the model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set(self):
         """Test case for create_property_set
 
@@ -207,6 +215,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for create_space
 
         Create a space in the model  # noqa: E501
+        """
+        pass
+
+    def test_create_system(self):
+        """Test case for create_system
+
+        Create a system in the model  # noqa: E501
         """
         pass
 
@@ -266,6 +281,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_layer(self):
+        """Test case for delete_layer
+
+        Delete a layer of a model  # noqa: E501
+        """
+        pass
+
     def test_delete_property_set(self):
         """Test case for delete_property_set
 
@@ -277,6 +299,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for delete_space
 
         Delete a space  # noqa: E501
+        """
+        pass
+
+    def test_delete_system(self):
+        """Test case for delete_system
+
+        Delete a system of a model  # noqa: E501
         """
         pass
 
@@ -343,6 +372,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_full_update_layer(self):
+        """Test case for full_update_layer
+
+        Update all fields of a layer  # noqa: E501
+        """
+        pass
+
+    def test_full_update_processor_handler(self):
+        """Test case for full_update_processor_handler
+
+        Update the status of a processor handler  # noqa: E501
+        """
+        pass
+
     def test_full_update_property_set(self):
         """Test case for full_update_property_set
 
@@ -354,6 +397,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for full_update_space
 
         Update all fields of a space  # noqa: E501
+        """
+        pass
+
+    def test_full_update_system(self):
+        """Test case for full_update_system
+
+        Update all fields of a system  # noqa: E501
         """
         pass
 
@@ -567,6 +617,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_layer(self):
+        """Test case for get_layer
+
+        Retrieve a layer of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_layers(self):
+        """Test case for get_layers
+
+        Retrieve all layers of a model  # noqa: E501
+        """
+        pass
+
     def test_get_processor_handler(self):
         """Test case for get_processor_handler
 
@@ -602,6 +666,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_simple_element(self):
+        """Test case for get_simple_element
+
+        Retrieve an element of a model with a simple value representation  # noqa: E501
+        """
+        pass
+
+    def test_get_simple_elements(self):
+        """Test case for get_simple_elements
+
+        Retrieve all elements of a model with a simple value representation  # noqa: E501
+        """
+        pass
+
     def test_get_space(self):
         """Test case for get_space
 
@@ -613,6 +691,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_spaces
 
         Retrieve all spaces of the model  # noqa: E501
+        """
+        pass
+
+    def test_get_system(self):
+        """Test case for get_system
+
+        Retrieve a system of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_systems(self):
+        """Test case for get_systems
+
+        Retrieve all systems of a model  # noqa: E501
         """
         pass
 
@@ -742,6 +834,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_update_layer(self):
+        """Test case for update_layer
+
+        Update some fields of a layer  # noqa: E501
+        """
+        pass
+
     def test_update_processor_handler(self):
         """Test case for update_processor_handler
 
@@ -760,6 +859,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_space
 
         Update some fields of a space  # noqa: E501
+        """
+        pass
+
+    def test_update_system(self):
+        """Test case for update_system
+
+        Update some fields of a system  # noqa: E501
         """
         pass
 

@@ -51,7 +51,8 @@ class FullTopic(object):
         'format': 'str',
         'due_date': 'datetime',
         'comments': 'list[Comment]',
-        'viewpoints': 'list[Viewpoint]'
+        'viewpoints': 'list[Viewpoint]',
+        'project': 'int'
     }
 
     attribute_map = {
@@ -74,10 +75,11 @@ class FullTopic(object):
         'format': 'format',
         'due_date': 'due_date',
         'comments': 'comments',
-        'viewpoints': 'viewpoints'
+        'viewpoints': 'viewpoints',
+        'project': 'project'
     }
 
-    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, due_date=None, comments=None, viewpoints=None):  # noqa: E501
+    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, due_date=None, comments=None, viewpoints=None, project=None):  # noqa: E501
         """FullTopic - a model defined in OpenAPI"""  # noqa: E501
 
         self._guid = None
@@ -100,6 +102,7 @@ class FullTopic(object):
         self._due_date = None
         self._comments = None
         self._viewpoints = None
+        self._project = None
         self.discriminator = None
 
         if guid is not None:
@@ -131,6 +134,7 @@ class FullTopic(object):
             self.comments = comments
         if viewpoints is not None:
             self.viewpoints = viewpoints
+        self.project = project
 
     @property
     def guid(self):
@@ -565,6 +569,29 @@ class FullTopic(object):
         """
 
         self._viewpoints = viewpoints
+
+    @property
+    def project(self):
+        """Gets the project of this FullTopic.  # noqa: E501
+
+
+        :return: The project of this FullTopic.  # noqa: E501
+        :rtype: int
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this FullTopic.
+
+
+        :param project: The project of this FullTopic.  # noqa: E501
+        :type: int
+        """
+        if project is None:
+            raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
+
+        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

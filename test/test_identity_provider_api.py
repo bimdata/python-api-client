@@ -36,6 +36,13 @@ class TestIdentityProviderApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_user(self):
+        """Test case for delete_user
+
+        Delete user form BIMData  # noqa: E501
+        """
+        pass
+
     def test_deny_invitation(self):
         """Test case for deny_invitation
 

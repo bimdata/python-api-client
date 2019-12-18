@@ -16,36 +16,23 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.api.user_api import UserApi  # noqa: E501
+from bimdata_api_client.models.layer_element import LayerElement  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestUserApi(unittest.TestCase):
-    """UserApi unit test stubs"""
+class TestLayerElement(unittest.TestCase):
+    """LayerElement unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.user_api.UserApi()  # noqa: E501
+        pass
 
     def tearDown(self):
         pass
 
-    def test_get_self_projects(self):
-        """Test case for get_self_projects
-
-        List user's projects  # noqa: E501
-        """
-        pass
-
-    def test_get_self_user(self):
-        """Test case for get_self_user
-
-        """
-        pass
-
-    def test_update_self_user(self):
-        """Test case for update_self_user
-
-        """
+    def testLayerElement(self):
+        """Test LayerElement"""
+        # FIXME: construct object with mandatory attributes with example values
+        # model = bimdata_api_client.models.layer_element.LayerElement()  # noqa: E501
         pass
 
 

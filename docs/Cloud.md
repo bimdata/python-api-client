@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** | Name of the cloud | 
 **features** | [**list[Feature]**](Feature.md) |  | [optional] 
 **creator** | [**User**](User.md) |  | [optional] 
+**creator_app** | [**ClientUser**](ClientUser.md) |  | [optional] 
 **is_default** | **bool** |  | [optional] 
 **created_at** | **datetime** | Creation date | [optional] 
 **image** | **str** |  | [optional] 

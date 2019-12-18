@@ -48,7 +48,8 @@ class Ifc(object):
         'viewer_360_file': 'str',
         'xkt_file': 'str',
         'project_id': 'str',
-        'world_position': 'list[float]'
+        'world_position': 'list[float]',
+        'errors': 'list[str]'
     }
 
     attribute_map = {
@@ -68,10 +69,11 @@ class Ifc(object):
         'viewer_360_file': 'viewer_360_file',
         'xkt_file': 'xkt_file',
         'project_id': 'project_id',
-        'world_position': 'world_position'
+        'world_position': 'world_position',
+        'errors': 'errors'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -91,6 +93,7 @@ class Ifc(object):
         self._xkt_file = None
         self._project_id = None
         self._world_position = None
+        self._errors = None
         self.discriminator = None
 
         if id is not None:
@@ -126,6 +129,8 @@ class Ifc(object):
         if project_id is not None:
             self.project_id = project_id
         self.world_position = world_position
+        if errors is not None:
+            self.errors = errors
 
     @property
     def id(self):
@@ -485,6 +490,29 @@ class Ifc(object):
         """
 
         self._world_position = world_position
+
+    @property
+    def errors(self):
+        """Gets the errors of this Ifc.  # noqa: E501
+
+        List for warnings and errors that happened during IFC processing  # noqa: E501
+
+        :return: The errors of this Ifc.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._errors
+
+    @errors.setter
+    def errors(self, errors):
+        """Sets the errors of this Ifc.
+
+        List for warnings and errors that happened during IFC processing  # noqa: E501
+
+        :param errors: The errors of this Ifc.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._errors = errors
 
     def to_dict(self):
         """Returns the model properties as a dict"""

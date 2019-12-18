@@ -36,7 +36,9 @@ class RawElement(object):
         'type': 'str',
         'attributes': 'int',
         'psets': 'list[int]',
-        'classifications': 'list[int]'
+        'classifications': 'list[int]',
+        'layers': 'list[int]',
+        'systems': 'list[int]'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class RawElement(object):
         'type': 'type',
         'attributes': 'attributes',
         'psets': 'psets',
-        'classifications': 'classifications'
+        'classifications': 'classifications',
+        'layers': 'layers',
+        'systems': 'systems'
     }
 
-    def __init__(self, uuid=None, type=None, attributes=None, psets=None, classifications=None):  # noqa: E501
+    def __init__(self, uuid=None, type=None, attributes=None, psets=None, classifications=None, layers=None, systems=None):  # noqa: E501
         """RawElement - a model defined in OpenAPI"""  # noqa: E501
 
         self._uuid = None
@@ -55,6 +59,8 @@ class RawElement(object):
         self._attributes = None
         self._psets = None
         self._classifications = None
+        self._layers = None
+        self._systems = None
         self.discriminator = None
 
         self.uuid = uuid
@@ -62,6 +68,8 @@ class RawElement(object):
         self.attributes = attributes
         self.psets = psets
         self.classifications = classifications
+        self.layers = layers
+        self.systems = systems
 
     @property
     def uuid(self):
@@ -175,6 +183,48 @@ class RawElement(object):
         """
 
         self._classifications = classifications
+
+    @property
+    def layers(self):
+        """Gets the layers of this RawElement.  # noqa: E501
+
+
+        :return: The layers of this RawElement.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._layers
+
+    @layers.setter
+    def layers(self, layers):
+        """Sets the layers of this RawElement.
+
+
+        :param layers: The layers of this RawElement.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._layers = layers
+
+    @property
+    def systems(self):
+        """Gets the systems of this RawElement.  # noqa: E501
+
+
+        :return: The systems of this RawElement.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._systems
+
+    @systems.setter
+    def systems(self, systems):
+        """Sets the systems of this RawElement.
+
+
+        :param systems: The systems of this RawElement.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._systems = systems
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,6 +36,7 @@ class Cloud(object):
         'name': 'str',
         'features': 'list[Feature]',
         'creator': 'User',
+        'creator_app': 'ClientUser',
         'is_default': 'bool',
         'created_at': 'datetime',
         'image': 'str',
@@ -47,19 +48,21 @@ class Cloud(object):
         'name': 'name',
         'features': 'features',
         'creator': 'creator',
+        'creator_app': 'creator_app',
         'is_default': 'is_default',
         'created_at': 'created_at',
         'image': 'image',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, features=None, creator=None, is_default=None, created_at=None, image=None, updated_at=None):  # noqa: E501
+    def __init__(self, id=None, name=None, features=None, creator=None, creator_app=None, is_default=None, created_at=None, image=None, updated_at=None):  # noqa: E501
         """Cloud - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._features = None
         self._creator = None
+        self._creator_app = None
         self._is_default = None
         self._created_at = None
         self._image = None
@@ -73,6 +76,8 @@ class Cloud(object):
             self.features = features
         if creator is not None:
             self.creator = creator
+        if creator_app is not None:
+            self.creator_app = creator_app
         if is_default is not None:
             self.is_default = is_default
         if created_at is not None:
@@ -172,6 +177,27 @@ class Cloud(object):
         """
 
         self._creator = creator
+
+    @property
+    def creator_app(self):
+        """Gets the creator_app of this Cloud.  # noqa: E501
+
+
+        :return: The creator_app of this Cloud.  # noqa: E501
+        :rtype: ClientUser
+        """
+        return self._creator_app
+
+    @creator_app.setter
+    def creator_app(self, creator_app):
+        """Sets the creator_app of this Cloud.
+
+
+        :param creator_app: The creator_app of this Cloud.  # noqa: E501
+        :type: ClientUser
+        """
+
+        self._creator_app = creator_app
 
     @property
     def is_default(self):

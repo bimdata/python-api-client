@@ -182,9 +182,11 @@ Class | Method | HTTP request | Description
 *CloudApi* | [**update_cloud**](docs/CloudApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 *CloudApi* | [**update_cloud_user**](docs/CloudApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Update some fields of a cloud user
 *IdentityProviderApi* | [**accept_invitation**](docs/IdentityProviderApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
+*IdentityProviderApi* | [**delete_user**](docs/IdentityProviderApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user form BIMData
 *IdentityProviderApi* | [**deny_invitation**](docs/IdentityProviderApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
 *IdentityProviderApi* | [**get_invitation**](docs/IdentityProviderApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
 *IdentityProviderApi* | [**get_invitations**](docs/IdentityProviderApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
+*IfcApi* | [**add_ifc_errors**](docs/IfcApi.md#add_ifc_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to IFC
 *IfcApi* | [**bulk_delete_ifc_classifications**](docs/IfcApi.md#bulk_delete_ifc_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
 *IfcApi* | [**bulk_delete_ifc_properties**](docs/IfcApi.md#bulk_delete_ifc_properties) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_destroy | Delete many Property of a model
 *IfcApi* | [**bulk_delete_ifc_property_definitions**](docs/IfcApi.md#bulk_delete_ifc_property_definitions) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
@@ -196,7 +198,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**bulk_remove_elements_from_classification**](docs/IfcApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
 *IfcApi* | [**bulk_update_elements**](docs/IfcApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 *IfcApi* | [**bulk_update_ifc_property**](docs/IfcApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
-*IfcApi* | [**cloud_project_ifc_processorhandler_partial_update**](docs/IfcApi.md#cloud_project_ifc_processorhandler_partial_update) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | 
 *IfcApi* | [**create_access_token**](docs/IfcApi.md#create_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Create a token for this model
 *IfcApi* | [**create_classification_element_relations**](docs/IfcApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 *IfcApi* | [**create_classifications_of_element**](docs/IfcApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
@@ -207,10 +208,12 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_element_property_set_property_definition_unit**](docs/IfcApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
 *IfcApi* | [**create_ifc_property_definition**](docs/IfcApi.md#create_ifc_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition | Create a PropertyDefinition on the model
 *IfcApi* | [**create_ifc_unit**](docs/IfcApi.md#create_ifc_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
+*IfcApi* | [**create_layer**](docs/IfcApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
 *IfcApi* | [**create_property_set**](docs/IfcApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create a PropertySet
 *IfcApi* | [**create_property_set_element_relations**](docs/IfcApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements**](docs/IfcApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
 *IfcApi* | [**create_space**](docs/IfcApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
+*IfcApi* | [**create_system**](docs/IfcApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 *IfcApi* | [**create_zone**](docs/IfcApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space**](docs/IfcApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
 *IfcApi* | [**delete_access_token**](docs/IfcApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
@@ -219,8 +222,10 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_ifc_property**](docs/IfcApi.md#delete_ifc_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Delete a Property of a model
 *IfcApi* | [**delete_ifc_property_definition**](docs/IfcApi.md#delete_ifc_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
 *IfcApi* | [**delete_ifc_unit**](docs/IfcApi.md#delete_ifc_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Delete a Unit of a model
+*IfcApi* | [**delete_layer**](docs/IfcApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Delete a layer of a model
 *IfcApi* | [**delete_property_set**](docs/IfcApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 *IfcApi* | [**delete_space**](docs/IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
+*IfcApi* | [**delete_system**](docs/IfcApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 *IfcApi* | [**delete_zone**](docs/IfcApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 *IfcApi* | [**delete_zone_space**](docs/IfcApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
 *IfcApi* | [**export_ifc**](docs/IfcApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
@@ -230,8 +235,11 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**full_update_ifc_property**](docs/IfcApi.md#full_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
 *IfcApi* | [**full_update_ifc_property_definition**](docs/IfcApi.md#full_update_ifc_property_definition) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update all fields of many PropertyDefinitions of a model
 *IfcApi* | [**full_update_ifc_unit**](docs/IfcApi.md#full_update_ifc_unit) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update all fields of a Unit of a model
+*IfcApi* | [**full_update_layer**](docs/IfcApi.md#full_update_layer) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update all fields of a layer
+*IfcApi* | [**full_update_processor_handler**](docs/IfcApi.md#full_update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 *IfcApi* | [**full_update_property_set**](docs/IfcApi.md#full_update_property_set) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update all fields of a PropertySet
 *IfcApi* | [**full_update_space**](docs/IfcApi.md#full_update_space) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update all fields of a space
+*IfcApi* | [**full_update_system**](docs/IfcApi.md#full_update_system) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Update all fields of a system
 *IfcApi* | [**full_update_zone**](docs/IfcApi.md#full_update_zone) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update all fields of a zone
 *IfcApi* | [**full_update_zone_space**](docs/IfcApi.md#full_update_zone_space) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update all fields of a space
 *IfcApi* | [**get_access_token**](docs/IfcApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
@@ -262,13 +270,19 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_ifc_unit**](docs/IfcApi.md#get_ifc_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Retrieve a Unit of a model
 *IfcApi* | [**get_ifc_units**](docs/IfcApi.md#get_ifc_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Retrieve all Units of a model
 *IfcApi* | [**get_ifcs**](docs/IfcApi.md#get_ifcs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc | Retrieve all models
+*IfcApi* | [**get_layer**](docs/IfcApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Retrieve a layer of a model
+*IfcApi* | [**get_layers**](docs/IfcApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Retrieve all layers of a model
 *IfcApi* | [**get_processor_handler**](docs/IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 *IfcApi* | [**get_processor_handlers**](docs/IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 *IfcApi* | [**get_property_set**](docs/IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
 *IfcApi* | [**get_property_sets**](docs/IfcApi.md#get_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Retrieve all PropertySets of a model
 *IfcApi* | [**get_raw_elements**](docs/IfcApi.md#get_raw_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Retrieve all elements in a optimized format
+*IfcApi* | [**get_simple_element**](docs/IfcApi.md#get_simple_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid}/simple | Retrieve an element of a model with a simple value representation
+*IfcApi* | [**get_simple_elements**](docs/IfcApi.md#get_simple_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/simple | Retrieve all elements of a model with a simple value representation
 *IfcApi* | [**get_space**](docs/IfcApi.md#get_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Retrieve one space of the model
 *IfcApi* | [**get_spaces**](docs/IfcApi.md#get_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Retrieve all spaces of the model
+*IfcApi* | [**get_system**](docs/IfcApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Retrieve a system of a model
+*IfcApi* | [**get_systems**](docs/IfcApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Retrieve all systems of a model
 *IfcApi* | [**get_zone**](docs/IfcApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Retrieve one zone of a model
 *IfcApi* | [**get_zone_space**](docs/IfcApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 *IfcApi* | [**get_zone_spaces**](docs/IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
@@ -287,9 +301,11 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_ifc_property**](docs/IfcApi.md#update_ifc_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
 *IfcApi* | [**update_ifc_property_definition**](docs/IfcApi.md#update_ifc_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
 *IfcApi* | [**update_ifc_unit**](docs/IfcApi.md#update_ifc_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
+*IfcApi* | [**update_layer**](docs/IfcApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update some fields of a layer
 *IfcApi* | [**update_processor_handler**](docs/IfcApi.md#update_processor_handler) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 *IfcApi* | [**update_property_set**](docs/IfcApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 *IfcApi* | [**update_space**](docs/IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
+*IfcApi* | [**update_system**](docs/IfcApi.md#update_system) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Update some fields of a system
 *IfcApi* | [**update_zone**](docs/IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *ProjectApi* | [**cancel_project_user_invitation**](docs/ProjectApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
@@ -327,9 +343,9 @@ Class | Method | HTTP request | Description
 *ProjectApi* | [**update_folder**](docs/ProjectApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *ProjectApi* | [**update_project**](docs/ProjectApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *ProjectApi* | [**update_project_user**](docs/ProjectApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user
+*UserApi* | [**get_self_projects**](docs/UserApi.md#get_self_projects) | **GET** /user/projects | List user&#39;s projects
 *UserApi* | [**get_self_user**](docs/UserApi.md#get_self_user) | **GET** /user | 
 *UserApi* | [**update_self_user**](docs/UserApi.md#update_self_user) | **PATCH** /user | 
-*UserApi* | [**user_projects_list**](docs/UserApi.md#user_projects_list) | **GET** /user/projects | 
 
 
 ## Documentation For Models
@@ -339,6 +355,7 @@ Class | Method | HTTP request | Description
  - [CheckPlan](docs/CheckPlan.md)
  - [CheckerResult](docs/CheckerResult.md)
  - [Classification](docs/Classification.md)
+ - [ClientUser](docs/ClientUser.md)
  - [ClippingPlane](docs/ClippingPlane.md)
  - [Cloud](docs/Cloud.md)
  - [CloudInvitation](docs/CloudInvitation.md)
@@ -361,10 +378,13 @@ Class | Method | HTTP request | Description
  - [IfcChecker](docs/IfcChecker.md)
  - [IfcCheckerCheckplan](docs/IfcCheckerCheckplan.md)
  - [IfcCheckerResults](docs/IfcCheckerResults.md)
+ - [IfcErrors](docs/IfcErrors.md)
  - [IfcExport](docs/IfcExport.md)
  - [IfcFiles](docs/IfcFiles.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
+ - [Layer](docs/Layer.md)
+ - [LayerElement](docs/LayerElement.md)
  - [LineSeriaizer](docs/LineSeriaizer.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
@@ -382,18 +402,23 @@ Class | Method | HTTP request | Description
  - [RawDefinition](docs/RawDefinition.md)
  - [RawElement](docs/RawElement.md)
  - [RawElements](docs/RawElements.md)
+ - [RawLayer](docs/RawLayer.md)
  - [RawProperty](docs/RawProperty.md)
  - [RawPropertySet](docs/RawPropertySet.md)
+ - [RawSystem](docs/RawSystem.md)
  - [RawUnit](docs/RawUnit.md)
  - [RecursiveFolderChildren](docs/RecursiveFolderChildren.md)
  - [Rule](docs/Rule.md)
  - [RuleComponent](docs/RuleComponent.md)
  - [Ruleset](docs/Ruleset.md)
+ - [SelectUser](docs/SelectUser.md)
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
+ - [SimpleElement](docs/SimpleElement.md)
  - [Snapshot](docs/Snapshot.md)
  - [Space](docs/Space.md)
  - [Stage](docs/Stage.md)
+ - [System](docs/System.md)
  - [Topic](docs/Topic.md)
  - [TopicStatus](docs/TopicStatus.md)
  - [TopicType](docs/TopicType.md)
@@ -423,7 +448,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: http://localhost:8080/auth/realms/bimdata/authorize
+- **Authorization URL**: http://localhost:8080/auth/realms/bimdata/protocol/openid-connect/auth
 - **Scopes**: N/A
 
 

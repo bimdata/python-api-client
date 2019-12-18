@@ -37,7 +37,8 @@ class Element(object):
         'type': 'str',
         'attributes': 'PropertySet',
         'property_sets': 'list[PropertySet]',
-        'classifications': 'list[Classification]'
+        'classifications': 'list[Classification]',
+        'layers': 'list[LayerElement]'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class Element(object):
         'type': 'type',
         'attributes': 'attributes',
         'property_sets': 'property_sets',
-        'classifications': 'classifications'
+        'classifications': 'classifications',
+        'layers': 'layers'
     }
 
-    def __init__(self, id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None):  # noqa: E501
+    def __init__(self, id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None, layers=None):  # noqa: E501
         """Element - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
@@ -58,6 +60,7 @@ class Element(object):
         self._attributes = None
         self._property_sets = None
         self._classifications = None
+        self._layers = None
         self.discriminator = None
 
         if id is not None:
@@ -71,6 +74,8 @@ class Element(object):
             self.property_sets = property_sets
         if classifications is not None:
             self.classifications = classifications
+        if layers is not None:
+            self.layers = layers
 
     @property
     def id(self):
@@ -209,6 +214,27 @@ class Element(object):
         """
 
         self._classifications = classifications
+
+    @property
+    def layers(self):
+        """Gets the layers of this Element.  # noqa: E501
+
+
+        :return: The layers of this Element.  # noqa: E501
+        :rtype: list[LayerElement]
+        """
+        return self._layers
+
+    @layers.setter
+    def layers(self, layers):
+        """Sets the layers of this Element.
+
+
+        :param layers: The layers of this Element.  # noqa: E501
+        :type: list[LayerElement]
+        """
+
+        self._layers = layers
 
     def to_dict(self):
         """Returns the model properties as a dict"""

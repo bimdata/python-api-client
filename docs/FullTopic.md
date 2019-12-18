@@ -23,6 +23,7 @@ Name | Type | Description | Notes
 **due_date** | **datetime** |  | [optional] 
 **comments** | [**list[Comment]**](Comment.md) |  | [optional] 
 **viewpoints** | [**list[Viewpoint]**](Viewpoint.md) |  | [optional] 
+**project** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

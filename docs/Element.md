@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **attributes** | [**PropertySet**](PropertySet.md) |  | [optional] 
 **property_sets** | [**list[PropertySet]**](PropertySet.md) |  | [optional] 
 **classifications** | [**list[Classification]**](Classification.md) |  | [optional] 
+**layers** | [**list[LayerElement]**](LayerElement.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
