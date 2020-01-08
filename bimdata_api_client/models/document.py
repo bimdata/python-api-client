@@ -88,7 +88,8 @@ class Document(object):
         self.creator = creator
         self.project = project
         self.name = name
-        self.file_name = file_name
+        if file_name is not None:
+            self.file_name = file_name
         self.description = description
         self.file = file
         self.size = size
@@ -255,6 +256,8 @@ class Document(object):
         """
         if file_name is not None and len(file_name) > 512:
             raise ValueError("Invalid value for `file_name`, length must be less than or equal to `512`")  # noqa: E501
+        if file_name is not None and len(file_name) < 1:
+            raise ValueError("Invalid value for `file_name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._file_name = file_name
 

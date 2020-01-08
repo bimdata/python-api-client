@@ -393,6 +393,9 @@ class ProjectApi(object):
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
             raise ApiValueError("Invalid value for parameter `file_name` when calling `create_document`, length must be less than or equal to `512`")  # noqa: E501
+        if ('file_name' in local_var_params and
+                len(local_var_params['file_name']) < 1):
+            raise ApiValueError("Invalid value for parameter `file_name` when calling `create_document`, length must be greater than or equal to `1`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `size` when calling `create_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
@@ -1548,6 +1551,9 @@ class ProjectApi(object):
         if ('file_name' in local_var_params and
                 len(local_var_params['file_name']) > 512):
             raise ApiValueError("Invalid value for parameter `file_name` when calling `full_update_document`, length must be less than or equal to `512`")  # noqa: E501
+        if ('file_name' in local_var_params and
+                len(local_var_params['file_name']) < 1):
+            raise ApiValueError("Invalid value for parameter `file_name` when calling `full_update_document`, length must be greater than or equal to `1`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
         if 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501

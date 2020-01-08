@@ -32,26 +32,30 @@ class IfcErrors(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'errors': 'list[str]'
+        'errors': 'list[str]',
+        'warnings': 'list[str]'
     }
 
     attribute_map = {
-        'errors': 'errors'
+        'errors': 'errors',
+        'warnings': 'warnings'
     }
 
-    def __init__(self, errors=None):  # noqa: E501
+    def __init__(self, errors=None, warnings=None):  # noqa: E501
         """IfcErrors - a model defined in OpenAPI"""  # noqa: E501
 
         self._errors = None
+        self._warnings = None
         self.discriminator = None
 
         self.errors = errors
+        self.warnings = warnings
 
     @property
     def errors(self):
         """Gets the errors of this IfcErrors.  # noqa: E501
 
-        List for warnings and errors that happened during IFC processing  # noqa: E501
+        List of errors that happened during IFC processing  # noqa: E501
 
         :return: The errors of this IfcErrors.  # noqa: E501
         :rtype: list[str]
@@ -62,13 +66,36 @@ class IfcErrors(object):
     def errors(self, errors):
         """Sets the errors of this IfcErrors.
 
-        List for warnings and errors that happened during IFC processing  # noqa: E501
+        List of errors that happened during IFC processing  # noqa: E501
 
         :param errors: The errors of this IfcErrors.  # noqa: E501
         :type: list[str]
         """
 
         self._errors = errors
+
+    @property
+    def warnings(self):
+        """Gets the warnings of this IfcErrors.  # noqa: E501
+
+        List of warnings that happened during IFC processing  # noqa: E501
+
+        :return: The warnings of this IfcErrors.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._warnings
+
+    @warnings.setter
+    def warnings(self, warnings):
+        """Sets the warnings of this IfcErrors.
+
+        List of warnings that happened during IFC processing  # noqa: E501
+
+        :param warnings: The warnings of this IfcErrors.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._warnings = warnings
 
     def to_dict(self):
         """Returns the model properties as a dict"""
