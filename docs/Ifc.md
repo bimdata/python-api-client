@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | [optional] 
 **creator** | [**User**](User.md) |  | [optional] 
 **status** | **str** |  | [optional] 
+**source** | **str** |  | [optional] 
 **created_at** | **datetime** |  | [optional] 
 **updated_at** | **datetime** |  | [optional] 
 **document_id** | **str** |  | [optional] 

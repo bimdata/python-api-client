@@ -5644,7 +5644,7 @@ class IfcApi(object):
     def export_ifc(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Export IFC  # noqa: E501
 
-        Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.export_ifc(cloud_pk, id, project_pk, data, async_req=True)
@@ -5672,7 +5672,7 @@ class IfcApi(object):
     def export_ifc_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Export IFC  # noqa: E501
 
-        Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.export_ifc_with_http_info(cloud_pk, id, project_pk, data, async_req=True)
@@ -11250,6 +11250,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
+        :param str source: Filter the returned list by source
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -11277,6 +11278,7 @@ class IfcApi(object):
         :param str cloud_pk: (required)
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
+        :param str source: Filter the returned list by source
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -11293,7 +11295,7 @@ class IfcApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'project_pk', 'status']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'status', 'source']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -11327,6 +11329,8 @@ class IfcApi(object):
         query_params = []
         if 'status' in local_var_params:
             query_params.append(('status', local_var_params['status']))  # noqa: E501
+        if 'source' in local_var_params:
+            query_params.append(('source', local_var_params['source']))  # noqa: E501
 
         header_params = {}
 

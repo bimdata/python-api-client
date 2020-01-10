@@ -6437,7 +6437,7 @@ void (empty response body)
 
 Export IFC
 
-Export IFC as requested in parameters. This call doesn't return the IFC. When the export is finished, a new IFC file with '_export_DD_MM_YYYY' suffix will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write
+Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write
 
 ### Example
 
@@ -12689,7 +12689,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
-> list[Ifc] get_ifcs(cloud_pk, project_pk, status=status)
+> list[Ifc] get_ifcs(cloud_pk, project_pk, status=status, source=source)
 
 Retrieve all models
 
@@ -12723,10 +12723,11 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
 
 try:
     # Retrieve all models
-    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status)
+    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -12758,10 +12759,11 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
 
 try:
     # Retrieve all models
-    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status)
+    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -12793,10 +12795,11 @@ api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configurat
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
 
 try:
     # Retrieve all models
-    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status)
+    api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -12809,6 +12812,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **status** | **str**| Filter the returned list by status | [optional] 
+ **source** | **str**| Filter the returned list by source | [optional] 
 
 ### Return type
 

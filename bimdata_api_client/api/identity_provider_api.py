@@ -144,7 +144,7 @@ class IdentityProviderApi(object):
     def delete_user(self, data, **kwargs):  # noqa: E501
         """Delete user form BIMData  # noqa: E501
 
-        Delete the user and all clouds where the user is alone  # noqa: E501
+        NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_user(data, async_req=True)
@@ -169,7 +169,7 @@ class IdentityProviderApi(object):
     def delete_user_with_http_info(self, data, **kwargs):  # noqa: E501
         """Delete user form BIMData  # noqa: E501
 
-        Delete the user and all clouds where the user is alone  # noqa: E501
+        NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_user_with_http_info(data, async_req=True)

@@ -152,7 +152,7 @@ void (empty response body)
 
 Delete user form BIMData
 
-Delete the user and all clouds where the user is alone
+NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak
 
 ### Example
 

@@ -36,6 +36,7 @@ class Ifc(object):
         'name': 'str',
         'creator': 'User',
         'status': 'str',
+        'source': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'document_id': 'str',
@@ -58,6 +59,7 @@ class Ifc(object):
         'name': 'name',
         'creator': 'creator',
         'status': 'status',
+        'source': 'source',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'document_id': 'document_id',
@@ -75,13 +77,14 @@ class Ifc(object):
         'warnings': 'warnings'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
 
         self._id = None
         self._name = None
         self._creator = None
         self._status = None
+        self._source = None
         self._created_at = None
         self._updated_at = None
         self._document_id = None
@@ -107,6 +110,8 @@ class Ifc(object):
             self.creator = creator
         if status is not None:
             self.status = status
+        if source is not None:
+            self.source = source
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -220,6 +225,33 @@ class Ifc(object):
         """
 
         self._status = status
+
+    @property
+    def source(self):
+        """Gets the source of this Ifc.  # noqa: E501
+
+
+        :return: The source of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._source
+
+    @source.setter
+    def source(self, source):
+        """Sets the source of this Ifc.
+
+
+        :param source: The source of this Ifc.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["UPLOAD", "SPLIT", "MERGE", "EXPORT"]  # noqa: E501
+        if source not in allowed_values:
+            raise ValueError(
+                "Invalid value for `source` ({0}), must be one of {1}"  # noqa: E501
+                .format(source, allowed_values)
+            )
+
+        self._source = source
 
     @property
     def created_at(self):
