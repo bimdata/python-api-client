@@ -16,15 +16,15 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.api.checkplan_api import CheckplanApi  # noqa: E501
+from bimdata_api_client.api.checker_api import CheckerApi  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestCheckplanApi(unittest.TestCase):
-    """CheckplanApi unit test stubs"""
+class TestCheckerApi(unittest.TestCase):
+    """CheckerApi unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.checkplan_api.CheckplanApi()  # noqa: E501
+        self.api = bimdata_api_client.api.checker_api.CheckerApi()  # noqa: E501
 
     def tearDown(self):
         pass

@@ -108,16 +108,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_comment`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `create_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_comment`")  # noqa: E501
 
         collection_formats = {}
@@ -234,12 +234,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_full_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_full_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -354,12 +354,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -476,16 +476,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_viewpoint`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `create_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_viewpoint`")  # noqa: E501
 
         collection_formats = {}
@@ -604,16 +604,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `delete_comment`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_comment`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `delete_comment`")  # noqa: E501
 
         collection_formats = {}
@@ -722,12 +722,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `delete_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -836,16 +836,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `delete_viewpoint`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_viewpoint`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `delete_viewpoint`")  # noqa: E501
 
         collection_formats = {}
@@ -956,8 +956,8 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `download_bcf_export`")  # noqa: E501
 
         collection_formats = {}
@@ -967,9 +967,9 @@ class BcfApi(object):
             path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
-        if 'topics' in local_var_params:
+        if 'topics' in local_var_params and local_var_params['topics'] is not None:  # noqa: E501
             query_params.append(('topics', local_var_params['topics']))  # noqa: E501
-        if 'format' in local_var_params:
+        if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501
             query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
@@ -1066,12 +1066,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_bcf_project`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_bcf_project`")  # noqa: E501
 
         collection_formats = {}
@@ -1190,20 +1190,20 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `full_update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_comment`")  # noqa: E501
 
         collection_formats = {}
@@ -1324,16 +1324,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `full_update_full_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_full_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_full_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -1452,16 +1452,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `full_update_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -1582,20 +1582,20 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `full_update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_viewpoint`")  # noqa: E501
 
         collection_formats = {}
@@ -1712,8 +1712,8 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_bcf_project`")  # noqa: E501
 
         collection_formats = {}
@@ -1924,16 +1924,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_colorings`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_colorings`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_colorings`")  # noqa: E501
 
         collection_formats = {}
@@ -2048,16 +2048,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_comment`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_comment`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_comment`")  # noqa: E501
 
         collection_formats = {}
@@ -2170,12 +2170,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_comments`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_comments`")  # noqa: E501
 
         collection_formats = {}
@@ -2284,8 +2284,8 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_extensions`")  # noqa: E501
 
         collection_formats = {}
@@ -2394,12 +2394,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_full_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_full_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -2512,8 +2512,8 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_full_topics`")  # noqa: E501
 
         collection_formats = {}
@@ -2523,9 +2523,9 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
-        if 'ifcs' in local_var_params:
+        if 'ifcs' in local_var_params and local_var_params['ifcs'] is not None:  # noqa: E501
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
-        if 'format' in local_var_params:
+        if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501
             query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
@@ -2628,16 +2628,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_selections`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_selections`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_selections`")  # noqa: E501
 
         collection_formats = {}
@@ -2752,16 +2752,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_snapshot`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_snapshot`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_snapshot`")  # noqa: E501
 
         collection_formats = {}
@@ -2874,12 +2874,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -2990,12 +2990,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_topic_viewpoints`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_topic_viewpoints`")  # noqa: E501
 
         collection_formats = {}
@@ -3108,8 +3108,8 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_topics`")  # noqa: E501
 
         collection_formats = {}
@@ -3119,9 +3119,9 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
-        if 'ifcs' in local_var_params:
+        if 'ifcs' in local_var_params and local_var_params['ifcs'] is not None:  # noqa: E501
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
-        if 'format' in local_var_params:
+        if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501
             query_params.append(('format', local_var_params['format']))  # noqa: E501
 
         header_params = {}
@@ -3324,16 +3324,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_viewpoint`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_viewpoint`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_viewpoint`")  # noqa: E501
 
         collection_formats = {}
@@ -3446,12 +3446,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_viewpoints`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_viewpoints`")  # noqa: E501
 
         collection_formats = {}
@@ -3564,16 +3564,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `get_visibilities`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_visibilities`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `get_visibilities`")  # noqa: E501
 
         collection_formats = {}
@@ -3686,12 +3686,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_bcf_project`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_bcf_project`")  # noqa: E501
 
         collection_formats = {}
@@ -3810,20 +3810,20 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `update_comment`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_comment`")  # noqa: E501
 
         collection_formats = {}
@@ -3942,12 +3942,12 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extensions`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_extensions`")  # noqa: E501
 
         collection_formats = {}
@@ -4064,16 +4064,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `update_full_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_full_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_full_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -4192,16 +4192,16 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `update_topic`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_topic`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_topic`")  # noqa: E501
 
         collection_formats = {}
@@ -4322,20 +4322,20 @@ class BcfApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'guid' is set
-        if ('guid' not in local_var_params or
-                local_var_params['guid'] is None):
+        if self.api_client.client_side_validation and ('guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `guid` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
-        if ('projects_pk' not in local_var_params or
-                local_var_params['projects_pk'] is None):
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'topics_guid' is set
-        if ('topics_guid' not in local_var_params or
-                local_var_params['topics_guid'] is None):
+        if self.api_client.client_side_validation and ('topics_guid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['topics_guid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `topics_guid` when calling `update_viewpoint`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_viewpoint`")  # noqa: E501
 
         collection_formats = {}

@@ -3,16 +3,16 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **email** | **str** |  | 
 **company** | **str** |  | [optional] 
 **firstname** | **str** |  | 
 **lastname** | **str** |  | 
-**created_at** | **datetime** |  | [optional] 
-**updated_at** | **datetime** |  | [optional] 
-**clouds** | [**list[CloudRole]**](CloudRole.md) |  | [optional] 
-**projects** | [**list[ProjectRole]**](ProjectRole.md) |  | [optional] 
-**provider** | **str** |  | [optional] 
+**created_at** | **datetime** |  | [optional] [readonly] 
+**updated_at** | **datetime** |  | [optional] [readonly] 
+**clouds** | [**list[CloudRole]**](CloudRole.md) |  | [optional] [readonly] 
+**projects** | [**list[ProjectRole]**](ProjectRole.md) |  | [optional] [readonly] 
+**provider** | **str** |  | [optional] [readonly] 
 **provider_sub** | **str** | sub from original identity provider | [optional] 
 **sub** | **str** | sub from Keycloak | [optional] 
 

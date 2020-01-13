@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **uuid** | **str** |  | [optional] 
 **type** | **str** | IFC type for the element | 
 **attributes** | [**PropertySet**](PropertySet.md) |  | [optional] 

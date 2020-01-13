@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**client_id** | **str** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
+**client_id** | **str** |  | [optional] [readonly] 
 **redirect_uri** | **str** | User will be redirected to this uri when they accept the invitation | 
 **cloud_name** | **str** |  | 
 **cloud_role** | **int** | Role the user will have when they accept the invitation | 

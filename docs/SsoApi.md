@@ -1,14 +1,14 @@
-# bimdata_api_client.IdentityProviderApi
+# bimdata_api_client.SsoApi
 
 All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**accept_invitation**](IdentityProviderApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
-[**delete_user**](IdentityProviderApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user form BIMData
-[**deny_invitation**](IdentityProviderApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
-[**get_invitation**](IdentityProviderApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
-[**get_invitations**](IdentityProviderApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
+[**accept_invitation**](SsoApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
+[**delete_user**](SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user form BIMData
+[**deny_invitation**](SsoApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
+[**get_invitation**](SsoApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
+[**get_invitations**](SsoApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
 
 
 # **accept_invitation**
@@ -42,14 +42,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Accept an invitation
     api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->accept_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -74,14 +74,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Accept an invitation
     api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->accept_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -106,14 +106,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Accept an invitation
     api_instance.accept_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->accept_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->accept_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -178,14 +178,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
     # Delete user form BIMData
     api_instance.delete_user(data)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->delete_user: %s\n" % e)
+    print("Exception when calling SsoApi->delete_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -210,14 +210,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
     # Delete user form BIMData
     api_instance.delete_user(data)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->delete_user: %s\n" % e)
+    print("Exception when calling SsoApi->delete_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -242,14 +242,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
     # Delete user form BIMData
     api_instance.delete_user(data)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->delete_user: %s\n" % e)
+    print("Exception when calling SsoApi->delete_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -314,14 +314,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Deny an invitation
     api_instance.deny_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->deny_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -346,14 +346,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Deny an invitation
     api_instance.deny_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->deny_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -378,14 +378,14 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
     # Deny an invitation
     api_instance.deny_invitation(id)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->deny_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->deny_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -450,7 +450,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
@@ -458,7 +458,7 @@ try:
     api_response = api_instance.get_invitation(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -483,7 +483,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
@@ -491,7 +491,7 @@ try:
     api_response = api_instance.get_invitation(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -516,7 +516,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
 
 try:
@@ -524,7 +524,7 @@ try:
     api_response = api_instance.get_invitation(id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitation: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -589,7 +589,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
@@ -597,7 +597,7 @@ try:
     api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -622,7 +622,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
@@ -630,7 +630,7 @@ try:
     api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -655,7 +655,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.IdentityProviderApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)
 
 try:
@@ -663,7 +663,7 @@ try:
     api_response = api_instance.get_invitations(status=status)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling IdentityProviderApi->get_invitations: %s\n" % e)
+    print("Exception when calling SsoApi->get_invitations: %s\n" % e)
 ```
 
 ### Parameters

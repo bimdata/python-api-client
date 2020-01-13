@@ -16,15 +16,15 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.api.identity_provider_api import IdentityProviderApi  # noqa: E501
+from bimdata_api_client.api.sso_api import SsoApi  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestIdentityProviderApi(unittest.TestCase):
-    """IdentityProviderApi unit test stubs"""
+class TestSsoApi(unittest.TestCase):
+    """SsoApi unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.identity_provider_api.IdentityProviderApi()  # noqa: E501
+        self.api = bimdata_api_client.api.sso_api.SsoApi()  # noqa: E501
 
     def tearDown(self):
         pass

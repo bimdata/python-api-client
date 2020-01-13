@@ -16,15 +16,15 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.api.application_api import ApplicationApi  # noqa: E501
+from bimdata_api_client.api.webhook_api import WebhookApi  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestApplicationApi(unittest.TestCase):
-    """ApplicationApi unit test stubs"""
+class TestWebhookApi(unittest.TestCase):
+    """WebhookApi unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.application_api.ApplicationApi()  # noqa: E501
+        self.api = bimdata_api_client.api.webhook_api.WebhookApi()  # noqa: E501
 
     def tearDown(self):
         pass

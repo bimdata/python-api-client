@@ -18,14 +18,12 @@ from __future__ import absolute_import
 __version__ = "1.0.0"
 
 # import apis into sdk package
-from bimdata_api_client.api.application_api import ApplicationApi
 from bimdata_api_client.api.bcf_api import BcfApi
-from bimdata_api_client.api.checkplan_api import CheckplanApi
-from bimdata_api_client.api.cloud_api import CloudApi
-from bimdata_api_client.api.identity_provider_api import IdentityProviderApi
+from bimdata_api_client.api.checker_api import CheckerApi
+from bimdata_api_client.api.collaboration_api import CollaborationApi
 from bimdata_api_client.api.ifc_api import IfcApi
-from bimdata_api_client.api.project_api import ProjectApi
-from bimdata_api_client.api.user_api import UserApi
+from bimdata_api_client.api.sso_api import SsoApi
+from bimdata_api_client.api.webhook_api import WebhookApi
 
 # import ApiClient
 from bimdata_api_client.api_client import ApiClient

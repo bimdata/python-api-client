@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **definition** | [**PropertyDefinition**](PropertyDefinition.md) |  | 
 **value** | [**object**](.md) |  | [optional] 
 

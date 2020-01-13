@@ -3,8 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
-**processor** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
+**processor** | **int** |  | [optional] [readonly] 
 **status** | **str** |  | [optional] 
 **detail_message** | **str** |  | [optional] 
 

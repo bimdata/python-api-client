@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**token** | **str** |  | [optional] 
+**token** | **str** |  | [optional] [readonly] 
 **read_only** | **bool** |  | [optional] 
 **expires_at** | **datetime** |  | [optional] 
 

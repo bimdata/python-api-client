@@ -1,46 +1,46 @@
-# bimdata_api_client.CheckplanApi
+# bimdata_api_client.CheckerApi
 
 All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_checker**](CheckplanApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
-[**create_checker_result**](CheckplanApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
-[**create_checkplan**](CheckplanApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Create a Checkplan
-[**create_rule**](CheckplanApi.md#create_rule) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Create a Rule
-[**create_rule_component**](CheckplanApi.md#create_rule_component) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Create a RuleComponent
-[**create_ruleset**](CheckplanApi.md#create_ruleset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Create a Ruleset
-[**delete_checker**](CheckplanApi.md#delete_checker) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
-[**delete_checker_result**](CheckplanApi.md#delete_checker_result) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
-[**delete_checkplan**](CheckplanApi.md#delete_checkplan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Delete a Checkplan
-[**delete_rule**](CheckplanApi.md#delete_rule) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Delete a Rule
-[**delete_rule_component**](CheckplanApi.md#delete_rule_component) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Delete a RuleComponent
-[**delete_ruleset**](CheckplanApi.md#delete_ruleset) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Delete a Ruleset
-[**full_update_checker**](CheckplanApi.md#full_update_checker) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update all fields of a checker of a model
-[**full_update_checker_result**](CheckplanApi.md#full_update_checker_result) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update all fields of a CheckerResult
-[**full_update_checkplan**](CheckplanApi.md#full_update_checkplan) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update all fields of a Checkplan
-[**full_update_rule**](CheckplanApi.md#full_update_rule) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update all fields of a Rule
-[**full_update_rule_component**](CheckplanApi.md#full_update_rule_component) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update all fields of a RuleComponent
-[**full_update_ruleset**](CheckplanApi.md#full_update_ruleset) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update all fields of a Ruleset
-[**get_checker**](CheckplanApi.md#get_checker) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
-[**get_checker_result**](CheckplanApi.md#get_checker_result) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
-[**get_checker_results**](CheckplanApi.md#get_checker_results) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
-[**get_checkers**](CheckplanApi.md#get_checkers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Retrieve all checkers of a model
-[**get_checkplan**](CheckplanApi.md#get_checkplan) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Retrieve one Checkplan
-[**get_checkplans**](CheckplanApi.md#get_checkplans) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Retrieve all Checkplans
-[**get_rule**](CheckplanApi.md#get_rule) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Retrieve one Rule
-[**get_rule_component**](CheckplanApi.md#get_rule_component) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Retrieve one RuleComponent
-[**get_rule_components**](CheckplanApi.md#get_rule_components) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Retrieve all RuleComponents
-[**get_rules**](CheckplanApi.md#get_rules) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Retrieve all Rules
-[**get_ruleset**](CheckplanApi.md#get_ruleset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Retrieve one Ruleset
-[**get_rulesets**](CheckplanApi.md#get_rulesets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Retrieve all Rulesets
-[**launch_new_check**](CheckplanApi.md#launch_new_check) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check | Launch a new check on the model
-[**update_checker**](CheckplanApi.md#update_checker) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
-[**update_checker_result**](CheckplanApi.md#update_checker_result) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
-[**update_checkplan**](CheckplanApi.md#update_checkplan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update some fields of a Checkplan
-[**update_rule**](CheckplanApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
-[**update_rule_component**](CheckplanApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
-[**update_ruleset**](CheckplanApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
+[**create_checker**](CheckerApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
+[**create_checker_result**](CheckerApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
+[**create_checkplan**](CheckerApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Create a Checkplan
+[**create_rule**](CheckerApi.md#create_rule) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Create a Rule
+[**create_rule_component**](CheckerApi.md#create_rule_component) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Create a RuleComponent
+[**create_ruleset**](CheckerApi.md#create_ruleset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Create a Ruleset
+[**delete_checker**](CheckerApi.md#delete_checker) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
+[**delete_checker_result**](CheckerApi.md#delete_checker_result) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
+[**delete_checkplan**](CheckerApi.md#delete_checkplan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Delete a Checkplan
+[**delete_rule**](CheckerApi.md#delete_rule) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Delete a Rule
+[**delete_rule_component**](CheckerApi.md#delete_rule_component) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Delete a RuleComponent
+[**delete_ruleset**](CheckerApi.md#delete_ruleset) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Delete a Ruleset
+[**full_update_checker**](CheckerApi.md#full_update_checker) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update all fields of a checker of a model
+[**full_update_checker_result**](CheckerApi.md#full_update_checker_result) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update all fields of a CheckerResult
+[**full_update_checkplan**](CheckerApi.md#full_update_checkplan) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update all fields of a Checkplan
+[**full_update_rule**](CheckerApi.md#full_update_rule) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update all fields of a Rule
+[**full_update_rule_component**](CheckerApi.md#full_update_rule_component) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update all fields of a RuleComponent
+[**full_update_ruleset**](CheckerApi.md#full_update_ruleset) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update all fields of a Ruleset
+[**get_checker**](CheckerApi.md#get_checker) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
+[**get_checker_result**](CheckerApi.md#get_checker_result) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
+[**get_checker_results**](CheckerApi.md#get_checker_results) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
+[**get_checkers**](CheckerApi.md#get_checkers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Retrieve all checkers of a model
+[**get_checkplan**](CheckerApi.md#get_checkplan) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Retrieve one Checkplan
+[**get_checkplans**](CheckerApi.md#get_checkplans) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Retrieve all Checkplans
+[**get_rule**](CheckerApi.md#get_rule) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Retrieve one Rule
+[**get_rule_component**](CheckerApi.md#get_rule_component) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Retrieve one RuleComponent
+[**get_rule_components**](CheckerApi.md#get_rule_components) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Retrieve all RuleComponents
+[**get_rules**](CheckerApi.md#get_rules) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Retrieve all Rules
+[**get_ruleset**](CheckerApi.md#get_ruleset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Retrieve one Ruleset
+[**get_rulesets**](CheckerApi.md#get_rulesets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Retrieve all Rulesets
+[**launch_new_check**](CheckerApi.md#launch_new_check) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check | Launch a new check on the model
+[**update_checker**](CheckerApi.md#update_checker) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
+[**update_checker_result**](CheckerApi.md#update_checker_result) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
+[**update_checkplan**](CheckerApi.md#update_checkplan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update some fields of a Checkplan
+[**update_rule**](CheckerApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
+[**update_rule_component**](CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
+[**update_ruleset**](CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
 
 
 # **create_checker**
@@ -74,7 +74,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -85,7 +85,7 @@ try:
     api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -110,7 +110,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -121,7 +121,7 @@ try:
     api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -146,7 +146,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -157,7 +157,7 @@ try:
     api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -225,7 +225,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -237,7 +237,7 @@ try:
     api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -262,7 +262,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -274,7 +274,7 @@ try:
     api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -299,7 +299,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -311,7 +311,7 @@ try:
     api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -380,7 +380,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
@@ -390,7 +390,7 @@ try:
     api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -415,7 +415,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
@@ -425,7 +425,7 @@ try:
     api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -450,7 +450,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
@@ -460,7 +460,7 @@ try:
     api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -527,7 +527,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -539,7 +539,7 @@ try:
     api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -564,7 +564,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -576,7 +576,7 @@ try:
     api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -601,7 +601,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -613,7 +613,7 @@ try:
     api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -682,7 +682,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -695,7 +695,7 @@ try:
     api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -720,7 +720,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -733,7 +733,7 @@ try:
     api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -758,7 +758,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -771,7 +771,7 @@ try:
     api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -841,7 +841,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -852,7 +852,7 @@ try:
     api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -877,7 +877,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -888,7 +888,7 @@ try:
     api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -913,7 +913,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -924,7 +924,7 @@ try:
     api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->create_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -992,7 +992,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1002,7 +1002,7 @@ try:
     # Delete a checker of a model
     api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1027,7 +1027,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1037,7 +1037,7 @@ try:
     # Delete a checker of a model
     api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1062,7 +1062,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1072,7 +1072,7 @@ try:
     # Delete a checker of a model
     api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -1140,7 +1140,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -1151,7 +1151,7 @@ try:
     # Delete a CheckerResult
     api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1176,7 +1176,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -1187,7 +1187,7 @@ try:
     # Delete a CheckerResult
     api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1212,7 +1212,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -1223,7 +1223,7 @@ try:
     # Delete a CheckerResult
     api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -1292,7 +1292,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -1301,7 +1301,7 @@ try:
     # Delete a Checkplan
     api_instance.delete_checkplan(cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1326,7 +1326,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -1335,7 +1335,7 @@ try:
     # Delete a Checkplan
     api_instance.delete_checkplan(cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1360,7 +1360,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -1369,7 +1369,7 @@ try:
     # Delete a Checkplan
     api_instance.delete_checkplan(cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -1436,7 +1436,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -1447,7 +1447,7 @@ try:
     # Delete a Rule
     api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1472,7 +1472,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -1483,7 +1483,7 @@ try:
     # Delete a Rule
     api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1508,7 +1508,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -1519,7 +1519,7 @@ try:
     # Delete a Rule
     api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -1588,7 +1588,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -1600,7 +1600,7 @@ try:
     # Delete a RuleComponent
     api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1625,7 +1625,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -1637,7 +1637,7 @@ try:
     # Delete a RuleComponent
     api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1662,7 +1662,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -1674,7 +1674,7 @@ try:
     # Delete a RuleComponent
     api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -1744,7 +1744,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -1754,7 +1754,7 @@ try:
     # Delete a Ruleset
     api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1779,7 +1779,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -1789,7 +1789,7 @@ try:
     # Delete a Ruleset
     api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1814,7 +1814,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -1824,7 +1824,7 @@ try:
     # Delete a Ruleset
     api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->delete_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1892,7 +1892,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1904,7 +1904,7 @@ try:
     api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1929,7 +1929,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1941,7 +1941,7 @@ try:
     api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1966,7 +1966,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -1978,7 +1978,7 @@ try:
     api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -2047,7 +2047,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -2060,7 +2060,7 @@ try:
     api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2085,7 +2085,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -2098,7 +2098,7 @@ try:
     api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2123,7 +2123,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -2136,7 +2136,7 @@ try:
     api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -2206,7 +2206,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -2217,7 +2217,7 @@ try:
     api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2242,7 +2242,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -2253,7 +2253,7 @@ try:
     api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2278,7 +2278,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -2289,7 +2289,7 @@ try:
     api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -2357,7 +2357,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -2370,7 +2370,7 @@ try:
     api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2395,7 +2395,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -2408,7 +2408,7 @@ try:
     api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2433,7 +2433,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -2446,7 +2446,7 @@ try:
     api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -2516,7 +2516,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -2530,7 +2530,7 @@ try:
     api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2555,7 +2555,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -2569,7 +2569,7 @@ try:
     api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2594,7 +2594,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -2608,7 +2608,7 @@ try:
     api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -2679,7 +2679,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -2691,7 +2691,7 @@ try:
     api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2716,7 +2716,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -2728,7 +2728,7 @@ try:
     api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2753,7 +2753,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -2765,7 +2765,7 @@ try:
     api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->full_update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -2834,7 +2834,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -2845,7 +2845,7 @@ try:
     api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2870,7 +2870,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -2881,7 +2881,7 @@ try:
     api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2906,7 +2906,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -2917,7 +2917,7 @@ try:
     api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -2985,7 +2985,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -2997,7 +2997,7 @@ try:
     api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3022,7 +3022,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -3034,7 +3034,7 @@ try:
     api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3059,7 +3059,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -3071,7 +3071,7 @@ try:
     api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -3140,7 +3140,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -3151,7 +3151,7 @@ try:
     api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_results: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3176,7 +3176,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -3187,7 +3187,7 @@ try:
     api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_results: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3212,7 +3212,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
@@ -3223,7 +3223,7 @@ try:
     api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checker_results: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 ### Parameters
@@ -3291,7 +3291,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -3301,7 +3301,7 @@ try:
     api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkers: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3326,7 +3326,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -3336,7 +3336,7 @@ try:
     api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkers: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3361,7 +3361,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -3371,7 +3371,7 @@ try:
     api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkers: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 ### Parameters
@@ -3438,7 +3438,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -3448,7 +3448,7 @@ try:
     api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3473,7 +3473,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -3483,7 +3483,7 @@ try:
     api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3508,7 +3508,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -3518,7 +3518,7 @@ try:
     api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -3585,7 +3585,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -3594,7 +3594,7 @@ try:
     api_response = api_instance.get_checkplans(cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplans: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3619,7 +3619,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -3628,7 +3628,7 @@ try:
     api_response = api_instance.get_checkplans(cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplans: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3653,7 +3653,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
@@ -3662,7 +3662,7 @@ try:
     api_response = api_instance.get_checkplans(cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_checkplans: %s\n" % e)
+    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 ### Parameters
@@ -3728,7 +3728,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -3740,7 +3740,7 @@ try:
     api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3765,7 +3765,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -3777,7 +3777,7 @@ try:
     api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3802,7 +3802,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -3814,7 +3814,7 @@ try:
     api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -3883,7 +3883,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -3896,7 +3896,7 @@ try:
     api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3921,7 +3921,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -3934,7 +3934,7 @@ try:
     api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3959,7 +3959,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -3972,7 +3972,7 @@ try:
     api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -4042,7 +4042,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4054,7 +4054,7 @@ try:
     api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_components: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4079,7 +4079,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4091,7 +4091,7 @@ try:
     api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_components: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4116,7 +4116,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4128,7 +4128,7 @@ try:
     api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rule_components: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 ### Parameters
@@ -4197,7 +4197,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4208,7 +4208,7 @@ try:
     api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rules: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4233,7 +4233,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4244,7 +4244,7 @@ try:
     api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rules: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4269,7 +4269,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4280,7 +4280,7 @@ try:
     api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rules: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -4348,7 +4348,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -4359,7 +4359,7 @@ try:
     api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4384,7 +4384,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -4395,7 +4395,7 @@ try:
     api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4420,7 +4420,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -4431,7 +4431,7 @@ try:
     api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -4499,7 +4499,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4509,7 +4509,7 @@ try:
     api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rulesets: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4534,7 +4534,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4544,7 +4544,7 @@ try:
     api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rulesets: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4569,7 +4569,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
@@ -4579,7 +4579,7 @@ try:
     api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->get_rulesets: %s\n" % e)
+    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 ### Parameters
@@ -4646,7 +4646,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4657,7 +4657,7 @@ try:
     # Launch a new check on the model
     api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->launch_new_check: %s\n" % e)
+    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4682,7 +4682,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4693,7 +4693,7 @@ try:
     # Launch a new check on the model
     api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->launch_new_check: %s\n" % e)
+    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4718,7 +4718,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4729,7 +4729,7 @@ try:
     # Launch a new check on the model
     api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->launch_new_check: %s\n" % e)
+    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 ### Parameters
@@ -4798,7 +4798,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4810,7 +4810,7 @@ try:
     api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4835,7 +4835,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4847,7 +4847,7 @@ try:
     api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4872,7 +4872,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
@@ -4884,7 +4884,7 @@ try:
     api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -4953,7 +4953,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -4966,7 +4966,7 @@ try:
     api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4991,7 +4991,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -5004,7 +5004,7 @@ try:
     api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5029,7 +5029,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
@@ -5042,7 +5042,7 @@ try:
     api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checker_result: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -5112,7 +5112,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -5123,7 +5123,7 @@ try:
     api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5148,7 +5148,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -5159,7 +5159,7 @@ try:
     api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5184,7 +5184,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
@@ -5195,7 +5195,7 @@ try:
     api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_checkplan: %s\n" % e)
+    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -5263,7 +5263,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -5276,7 +5276,7 @@ try:
     api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5301,7 +5301,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -5314,7 +5314,7 @@ try:
     api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5339,7 +5339,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
@@ -5352,7 +5352,7 @@ try:
     api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -5422,7 +5422,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -5436,7 +5436,7 @@ try:
     api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5461,7 +5461,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -5475,7 +5475,7 @@ try:
     api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5500,7 +5500,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
@@ -5514,7 +5514,7 @@ try:
     api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_rule_component: %s\n" % e)
+    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -5585,7 +5585,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -5597,7 +5597,7 @@ try:
     api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5622,7 +5622,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -5634,7 +5634,7 @@ try:
     api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5659,7 +5659,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.CheckplanApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
 check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
@@ -5671,7 +5671,7 @@ try:
     api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling CheckplanApi->update_ruleset: %s\n" % e)
+    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 ### Parameters

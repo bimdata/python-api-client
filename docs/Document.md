@@ -3,19 +3,19 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **parent** | **int** |  | [optional] 
 **parent_id** | **int** |  | [optional] 
 **creator** | **int** |  | [optional] 
-**project** | **int** |  | [optional] 
+**project** | **int** |  | 
 **name** | **str** | Shown name of the file | 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str** | Description of the file | [optional] 
-**file** | **str** |  | [optional] 
+**file** | **str** |  | [optional] [readonly] 
 **size** | **int** | Size of the file. | [optional] 
-**created_at** | **datetime** | Creation date | [optional] 
-**updated_at** | **datetime** | Date of the last update | [optional] 
-**ifc_id** | **str** |  | [optional] 
+**created_at** | **datetime** | Creation date | [optional] [readonly] 
+**updated_at** | **datetime** | Date of the last update | [optional] [readonly] 
+**ifc_id** | **str** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

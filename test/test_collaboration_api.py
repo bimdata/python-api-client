@@ -16,17 +16,24 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.api.project_api import ProjectApi  # noqa: E501
+from bimdata_api_client.api.collaboration_api import CollaborationApi  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestProjectApi(unittest.TestCase):
-    """ProjectApi unit test stubs"""
+class TestCollaborationApi(unittest.TestCase):
+    """CollaborationApi unit test stubs"""
 
     def setUp(self):
-        self.api = bimdata_api_client.api.project_api.ProjectApi()  # noqa: E501
+        self.api = bimdata_api_client.api.collaboration_api.CollaborationApi()  # noqa: E501
 
     def tearDown(self):
+        pass
+
+    def test_cancel_cloud_user_invitation(self):
+        """Test case for cancel_cloud_user_invitation
+
+        Cancel a pending invitation  # noqa: E501
+        """
         pass
 
     def test_cancel_project_user_invitation(self):
@@ -40,6 +47,20 @@ class TestProjectApi(unittest.TestCase):
         """Test case for create_classification
 
         Create a classification  # noqa: E501
+        """
+        pass
+
+    def test_create_cloud(self):
+        """Test case for create_cloud
+
+        Create a cloud  # noqa: E501
+        """
+        pass
+
+    def test_create_demo(self):
+        """Test case for create_demo
+
+        Create a Demo project in a cloud  # noqa: E501
         """
         pass
 
@@ -68,6 +89,20 @@ class TestProjectApi(unittest.TestCase):
         """Test case for delete_classification
 
         Delete a classification  # noqa: E501
+        """
+        pass
+
+    def test_delete_cloud(self):
+        """Test case for delete_cloud
+
+        Delete a cloud  # noqa: E501
+        """
+        pass
+
+    def test_delete_cloud_user(self):
+        """Test case for delete_cloud_user
+
+        Remove a user from a cloud  # noqa: E501
         """
         pass
 
@@ -103,6 +138,20 @@ class TestProjectApi(unittest.TestCase):
         """Test case for full_update_classification
 
         Update all fields of a classification  # noqa: E501
+        """
+        pass
+
+    def test_full_update_cloud(self):
+        """Test case for full_update_cloud
+
+        Update all fields of a cloud  # noqa: E501
+        """
+        pass
+
+    def test_full_update_cloud_user(self):
+        """Test case for full_update_cloud_user
+
+        Update all fields of a cloud user  # noqa: E501
         """
         pass
 
@@ -145,6 +194,48 @@ class TestProjectApi(unittest.TestCase):
         """Test case for get_classifications
 
         Retrieve all classifications  # noqa: E501
+        """
+        pass
+
+    def test_get_cloud(self):
+        """Test case for get_cloud
+
+        Retrieve one cloud  # noqa: E501
+        """
+        pass
+
+    def test_get_cloud_invitations(self):
+        """Test case for get_cloud_invitations
+
+        Retrieve all pending invitations in the cloud  # noqa: E501
+        """
+        pass
+
+    def test_get_cloud_size(self):
+        """Test case for get_cloud_size
+
+        Get size of all files in the cloud  # noqa: E501
+        """
+        pass
+
+    def test_get_cloud_user(self):
+        """Test case for get_cloud_user
+
+        Retrieve a user in a cloud  # noqa: E501
+        """
+        pass
+
+    def test_get_cloud_users(self):
+        """Test case for get_cloud_users
+
+        Retrieve all users in a cloud  # noqa: E501
+        """
+        pass
+
+    def test_get_clouds(self):
+        """Test case for get_clouds
+
+        Retrieve all clouds  # noqa: E501
         """
         pass
 
@@ -232,6 +323,27 @@ class TestProjectApi(unittest.TestCase):
         """
         pass
 
+    def test_get_self_projects(self):
+        """Test case for get_self_projects
+
+        List current user's projects  # noqa: E501
+        """
+        pass
+
+    def test_get_self_user(self):
+        """Test case for get_self_user
+
+        Get info about the current user  # noqa: E501
+        """
+        pass
+
+    def test_invite_cloud_user(self):
+        """Test case for invite_cloud_user
+
+        Invite a cloud administrator  # noqa: E501
+        """
+        pass
+
     def test_invite_project_user(self):
         """Test case for invite_project_user
 
@@ -243,6 +355,20 @@ class TestProjectApi(unittest.TestCase):
         """Test case for update_classification
 
         Update some fields of a classification  # noqa: E501
+        """
+        pass
+
+    def test_update_cloud(self):
+        """Test case for update_cloud
+
+        Update some fields of a cloud  # noqa: E501
+        """
+        pass
+
+    def test_update_cloud_user(self):
+        """Test case for update_cloud_user
+
+        Update some fields of a cloud user  # noqa: E501
         """
         pass
 
@@ -271,6 +397,13 @@ class TestProjectApi(unittest.TestCase):
         """Test case for update_project_user
 
         Update some fields of a project user  # noqa: E501
+        """
+        pass
+
+    def test_update_self_user(self):
+        """Test case for update_self_user
+
+        Update info of the current user  # noqa: E501
         """
         pass
 

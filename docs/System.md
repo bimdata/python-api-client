@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** |  | [optional] 
+**id** | **int** |  | [optional] [readonly] 
 **uuid** | **str** |  | [optional] 
 **name** | **str** | Name of the system | [optional] 
 **object_type** | **str** |  | [optional] 

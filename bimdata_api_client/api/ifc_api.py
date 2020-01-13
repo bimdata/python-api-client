@@ -110,20 +110,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `add_ifc_errors`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `add_ifc_errors`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `add_ifc_errors`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `add_ifc_errors`")  # noqa: E501
 
         collection_formats = {}
@@ -244,16 +244,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
 
         collection_formats = {}
@@ -364,16 +364,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
 
         collection_formats = {}
@@ -484,16 +484,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
 
         collection_formats = {}
@@ -604,16 +604,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
 
         collection_formats = {}
@@ -724,16 +724,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_delete_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -846,20 +846,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_full_update_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_full_update_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_full_update_elements`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `bulk_full_update_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -982,20 +982,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `bulk_full_update_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -1118,20 +1118,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
 
         collection_formats = {}
@@ -1246,20 +1246,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
-        if ('ifc_classification_pk' not in local_var_params or
-                local_var_params['ifc_classification_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_classification_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_classification_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_classification_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
 
         collection_formats = {}
@@ -1374,20 +1374,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_update_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_update_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_update_elements`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `bulk_update_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -1510,20 +1510,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `bulk_update_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -1646,20 +1646,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_access_token`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_access_token`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_access_token`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_access_token`")  # noqa: E501
 
         collection_formats = {}
@@ -1782,20 +1782,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_classification_element_relations`")  # noqa: E501
 
         collection_formats = {}
@@ -1916,24 +1916,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_classifications_of_element`")  # noqa: E501
 
         collection_formats = {}
@@ -1978,6 +1978,226 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_cloud(self, data, **kwargs):  # noqa: E501
+        """Create a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_cloud(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param Cloud data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_cloud_with_http_info(data, **kwargs)  # noqa: E501
+
+    def create_cloud_with_http_info(self, data, **kwargs):  # noqa: E501
+        """Create a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_cloud_with_http_info(data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param Cloud data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Cloud, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_cloud" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_demo(self, id, **kwargs):  # noqa: E501
+        """Create a Demo project in a cloud  # noqa: E501
+
+        Create a demo project with a pre-populated IFC and its data Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_demo(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Project
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_demo_with_http_info(id, **kwargs)  # noqa: E501
+
+    def create_demo_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Create a Demo project in a cloud  # noqa: E501
+
+        Create a demo project with a pre-populated IFC and its data Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_demo_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Project, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_demo" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `create_demo`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}/create-demo', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2058,20 +2278,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_element`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_element`")  # noqa: E501
 
         collection_formats = {}
@@ -2196,24 +2416,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_element_property_set`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_element_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -2342,28 +2562,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_element_property_set_property`")  # noqa: E501
 
         collection_formats = {}
@@ -2496,32 +2716,32 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_element_property_set_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -2658,36 +2878,36 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in local_var_params or
-                local_var_params['propertydefinition_pk'] is None):
+        if self.api_client.client_side_validation and ('propertydefinition_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertydefinition_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertydefinition_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_element_property_set_property_definition_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -2818,20 +3038,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_ifc_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -2954,20 +3174,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_ifc_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_ifc_unit`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_ifc_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -3090,20 +3310,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_layer`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_layer`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_layer`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_layer`")  # noqa: E501
 
         collection_formats = {}
@@ -3146,6 +3366,126 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Layer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_project(self, cloud_pk, data, **kwargs):  # noqa: E501
+        """Create a project  # noqa: E501
+
+        Create a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project(cloud_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param Project data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Project
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_project_with_http_info(cloud_pk, data, **kwargs)  # noqa: E501
+
+    def create_project_with_http_info(self, cloud_pk, data, **kwargs):  # noqa: E501
+        """Create a project  # noqa: E501
+
+        Create a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_project_with_http_info(cloud_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param Project data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Project, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_project" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_project`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_project`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3226,20 +3566,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_property_set`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -3362,20 +3702,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_property_set_element_relations`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_property_set_element_relations`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_property_set_element_relations`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_property_set_element_relations`")  # noqa: E501
 
         collection_formats = {}
@@ -3494,20 +3834,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_raw_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_raw_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_raw_elements`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_raw_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -3626,20 +3966,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_space`")  # noqa: E501
 
         collection_formats = {}
@@ -3762,20 +4102,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_system`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_system`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_system`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_system`")  # noqa: E501
 
         collection_formats = {}
@@ -3898,20 +4238,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_zone`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_zone`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_zone`")  # noqa: E501
 
         collection_formats = {}
@@ -4036,24 +4376,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `create_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `create_zone_space`")  # noqa: E501
 
         collection_formats = {}
@@ -4178,20 +4518,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_access_token`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_access_token`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_access_token`")  # noqa: E501
         # verify the required parameter 'token' is set
-        if ('token' not in local_var_params or
-                local_var_params['token'] is None):
+        if self.api_client.client_side_validation and ('token' not in local_var_params or  # noqa: E501
+                                                        local_var_params['token'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `token` when calling `delete_access_token`")  # noqa: E501
 
         collection_formats = {}
@@ -4219,6 +4559,110 @@ class IfcApi(object):
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_cloud(self, id, **kwargs):  # noqa: E501
+        """Delete a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_cloud(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_cloud_with_http_info(id, **kwargs)  # noqa: E501
+
+    def delete_cloud_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Delete a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_cloud_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_cloud" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -4306,20 +4750,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `delete_element`")  # noqa: E501
 
         collection_formats = {}
@@ -4432,16 +4876,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc`")  # noqa: E501
 
         collection_formats = {}
@@ -4554,20 +4998,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -4682,20 +5126,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -4810,20 +5254,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_ifc_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -4938,20 +5382,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_layer`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_layer`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_layer`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_layer`")  # noqa: E501
 
         collection_formats = {}
@@ -4979,6 +5423,118 @@ class IfcApi(object):
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_project(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Delete a project  # noqa: E501
+
+        It can take a long time to respond because we may need to delete all properties of all elements of all models in the project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+
+    def delete_project_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Delete a project  # noqa: E501
+
+        It can take a long time to respond because we may need to delete all properties of all elements of all models in the project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_project_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_project" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_project`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -5066,20 +5622,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -5194,20 +5750,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_space`")  # noqa: E501
 
         collection_formats = {}
@@ -5322,20 +5878,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_system`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_system`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_system`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `delete_system`")  # noqa: E501
 
         collection_formats = {}
@@ -5450,20 +6006,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_zone`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_zone`")  # noqa: E501
 
         collection_formats = {}
@@ -5580,24 +6136,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `delete_zone_space`")  # noqa: E501
 
         collection_formats = {}
@@ -5714,20 +6270,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `export_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `export_ifc`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `export_ifc`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `export_ifc`")  # noqa: E501
 
         collection_formats = {}
@@ -5852,24 +6408,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_access_token`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_access_token`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_access_token`")  # noqa: E501
         # verify the required parameter 'token' is set
-        if ('token' not in local_var_params or
-                local_var_params['token'] is None):
+        if self.api_client.client_side_validation and ('token' not in local_var_params or  # noqa: E501
+                                                        local_var_params['token'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `token` when calling `full_update_access_token`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_access_token`")  # noqa: E501
 
         collection_formats = {}
@@ -5914,6 +6470,126 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='IfcAccessToken',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def full_update_cloud(self, id, data, **kwargs):  # noqa: E501
+        """Update all fields of a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_cloud(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param Cloud data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.full_update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+
+    def full_update_cloud_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """Update all fields of a cloud  # noqa: E501
+
+         Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_cloud_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param Cloud data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Cloud, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method full_update_cloud" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `full_update_cloud`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `full_update_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -5996,24 +6672,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `full_update_element`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_element`")  # noqa: E501
 
         collection_formats = {}
@@ -6138,20 +6814,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_ifc`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_ifc`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_ifc`")  # noqa: E501
 
         collection_formats = {}
@@ -6276,24 +6952,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -6420,24 +7096,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_ifc_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -6564,24 +7240,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_ifc_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -6708,24 +7384,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_layer`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_layer`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_layer`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_layer`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_layer`")  # noqa: E501
 
         collection_formats = {}
@@ -6852,24 +7528,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_processor_handler`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_processor_handler`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_processor_handler`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_processor_handler`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_processor_handler`")  # noqa: E501
 
         collection_formats = {}
@@ -6914,6 +7590,134 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ProcessorHandler',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def full_update_project(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+        """Update all fields of a project  # noqa: E501
+
+        Update all fields of a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project(cloud_pk, id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param Project data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Project
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.full_update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+
+    def full_update_project_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+        """Update all fields of a project  # noqa: E501
+
+        Update all fields of a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.full_update_project_with_http_info(cloud_pk, id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param Project data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Project, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method full_update_project" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `full_update_project`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `full_update_project`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}', 'PUT',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -6996,24 +7800,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_property_set`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -7140,24 +7944,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_space`")  # noqa: E501
 
         collection_formats = {}
@@ -7284,24 +8088,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_system`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_system`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_system`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `full_update_system`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_system`")  # noqa: E501
 
         collection_formats = {}
@@ -7428,24 +8232,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_zone`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_zone`")  # noqa: E501
 
         collection_formats = {}
@@ -7574,28 +8378,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `full_update_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `full_update_zone_space`")  # noqa: E501
 
         collection_formats = {}
@@ -7722,20 +8526,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_access_token`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_access_token`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_access_token`")  # noqa: E501
         # verify the required parameter 'token' is set
-        if ('token' not in local_var_params or
-                local_var_params['token'] is None):
+        if self.api_client.client_side_validation and ('token' not in local_var_params or  # noqa: E501
+                                                        local_var_params['token'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `token` when calling `get_access_token`")  # noqa: E501
 
         collection_formats = {}
@@ -7852,16 +8656,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_access_tokens`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_access_tokens`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_access_tokens`")  # noqa: E501
 
         collection_formats = {}
@@ -7978,20 +8782,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_classifications_of_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_classifications_of_element`")  # noqa: E501
 
         collection_formats = {}
@@ -8030,6 +8834,320 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_cloud(self, id, **kwargs):  # noqa: E501
+        """Retrieve one cloud  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_cloud(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_cloud_with_http_info(id, **kwargs)  # noqa: E501
+
+    def get_cloud_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Retrieve one cloud  # noqa: E501
+
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_cloud_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Cloud, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_cloud" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_cloud_size(self, id, **kwargs):  # noqa: E501
+        """Get size of all files in the cloud  # noqa: E501
+
+        Returns the size of the cloud in Bytes  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_cloud_size(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: int
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_cloud_size_with_http_info(id, **kwargs)  # noqa: E501
+
+    def get_cloud_size_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Get size of all files in the cloud  # noqa: E501
+
+        Returns the size of the cloud in Bytes  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_cloud_size_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(int, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_cloud_size" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_cloud_size`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}/size', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='int',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_clouds(self, **kwargs):  # noqa: E501
+        """Retrieve all clouds  # noqa: E501
+
+        Returns user's (or app's) clouds only  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_clouds(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Cloud]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_clouds_with_http_info(**kwargs)  # noqa: E501
+
+    def get_clouds_with_http_info(self, **kwargs):  # noqa: E501
+        """Retrieve all clouds  # noqa: E501
+
+        Returns user's (or app's) clouds only  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_clouds_with_http_info(async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Cloud], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = []  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_clouds" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+
+        collection_formats = {}
+
+        path_params = {}
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Cloud]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -8110,20 +9228,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `get_element`")  # noqa: E501
 
         collection_formats = {}
@@ -8244,24 +9362,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -8384,24 +9502,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_properties`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_properties`")  # noqa: E501
 
         collection_formats = {}
@@ -8526,28 +9644,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property`")  # noqa: E501
 
         collection_formats = {}
@@ -8676,32 +9794,32 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -8834,36 +9952,36 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in local_var_params or
-                local_var_params['propertydefinition_pk'] is None):
+        if self.api_client.client_side_validation and ('propertydefinition_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertydefinition_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertydefinition_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -8996,32 +10114,32 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in local_var_params or
-                local_var_params['propertydefinition_pk'] is None):
+        if self.api_client.client_side_validation and ('propertydefinition_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertydefinition_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertydefinition_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definition_units`")  # noqa: E501
 
         collection_formats = {}
@@ -9150,28 +10268,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `get_element_property_set_property_definitions`")  # noqa: E501
 
         collection_formats = {}
@@ -9294,20 +10412,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_element_property_sets`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_element_property_sets`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_element_property_sets`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_element_property_sets`")  # noqa: E501
 
         collection_formats = {}
@@ -9430,16 +10548,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -9453,11 +10571,11 @@ class IfcApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
-        if 'type' in local_var_params:
+        if 'type' in local_var_params and local_var_params['type'] is not None:  # noqa: E501
             query_params.append(('type', local_var_params['type']))  # noqa: E501
-        if 'classification' in local_var_params:
+        if 'classification' in local_var_params and local_var_params['classification'] is not None:  # noqa: E501
             query_params.append(('classification', local_var_params['classification']))  # noqa: E501
-        if 'classification__notation' in local_var_params:
+        if 'classification__notation' in local_var_params and local_var_params['classification__notation'] is not None:  # noqa: E501
             query_params.append(('classification__notation', local_var_params['classification__notation']))  # noqa: E501
 
         header_params = {}
@@ -9562,20 +10680,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
-        if ('ifc_classification_pk' not in local_var_params or
-                local_var_params['ifc_classification_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_classification_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_classification_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_classification_pk` when calling `get_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_elements_from_classification`")  # noqa: E501
 
         collection_formats = {}
@@ -9692,16 +10810,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc`")  # noqa: E501
 
         collection_formats = {}
@@ -9816,16 +10934,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_bvh`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_bvh`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_bvh`")  # noqa: E501
 
         collection_formats = {}
@@ -9936,16 +11054,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_classifications`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_classifications`")  # noqa: E501
 
         collection_formats = {}
@@ -10060,16 +11178,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_gltf`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_gltf`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_gltf`")  # noqa: E501
 
         collection_formats = {}
@@ -10180,16 +11298,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_map`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_map`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_map`")  # noqa: E501
 
         collection_formats = {}
@@ -10300,16 +11418,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_properties`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_properties`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_properties`")  # noqa: E501
 
         collection_formats = {}
@@ -10426,20 +11544,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -10558,20 +11676,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -10688,16 +11806,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
 
         collection_formats = {}
@@ -10812,16 +11930,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_structure`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_structure`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_structure`")  # noqa: E501
 
         collection_formats = {}
@@ -10932,16 +12050,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_systems`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_systems`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_systems`")  # noqa: E501
 
         collection_formats = {}
@@ -11054,20 +12172,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -11184,16 +12302,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_units`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_units`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_units`")  # noqa: E501
 
         collection_formats = {}
@@ -11310,12 +12428,12 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifcs`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifcs`")  # noqa: E501
 
         collection_formats = {}
@@ -11327,9 +12445,9 @@ class IfcApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
-        if 'status' in local_var_params:
+        if 'status' in local_var_params and local_var_params['status'] is not None:  # noqa: E501
             query_params.append(('status', local_var_params['status']))  # noqa: E501
-        if 'source' in local_var_params:
+        if 'source' in local_var_params and local_var_params['source'] is not None:  # noqa: E501
             query_params.append(('source', local_var_params['source']))  # noqa: E501
 
         header_params = {}
@@ -11434,20 +12552,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_layer`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_layer`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_layer`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_layer`")  # noqa: E501
 
         collection_formats = {}
@@ -11564,16 +12682,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_layers`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_layers`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_layers`")  # noqa: E501
 
         collection_formats = {}
@@ -11690,20 +12808,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_processor_handler`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_processor_handler`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_processor_handler`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_processor_handler`")  # noqa: E501
 
         collection_formats = {}
@@ -11820,16 +12938,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_processor_handlers`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_processor_handlers`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_processor_handlers`")  # noqa: E501
 
         collection_formats = {}
@@ -11866,6 +12984,570 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[ProcessorHandler]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve a project  # noqa: E501
+
+        Retrieve a project  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: ProjectWithChildren
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_project_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+
+    def get_project_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve a project  # noqa: E501
+
+        Retrieve a project  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(ProjectWithChildren, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_project`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ProjectWithChildren',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project_dms_tree(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project)  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_dms_tree(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Folder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_project_dms_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+
+    def get_project_dms_tree_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project)  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_dms_tree_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_dms_tree" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project_dms_tree`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_project_dms_tree`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}/dms-tree', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Folder',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project_sub_tree(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve the complete projects tree of the cloud  # noqa: E501
+
+        Retrieve the complete projects tree of the cloud  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_sub_tree(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[ProjectWithChildren]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_project_sub_tree_with_http_info(cloud_pk, **kwargs)  # noqa: E501
+
+    def get_project_sub_tree_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve the complete projects tree of the cloud  # noqa: E501
+
+        Retrieve the complete projects tree of the cloud  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_sub_tree_with_http_info(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[ProjectWithChildren], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_sub_tree" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project_sub_tree`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/subtree', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ProjectWithChildren]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project_tree(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project). DEPRECATED: renamed to getProjectDMSTree  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_tree(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Folder
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_project_tree_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+
+    def get_project_tree_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Retrieve the complete DMS tree  # noqa: E501
+
+        Retrieve the complete DMS tree (all folders and all documents in the project). DEPRECATED: renamed to getProjectDMSTree  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_tree_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Folder, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_tree" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project_tree`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_project_tree`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}/tree', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Folder',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_projects(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve all projects  # noqa: E501
+
+        Retrieve all projects of the cloud. All project are shown at the same level. see #getProjectSubTree  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_projects(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Project]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_projects_with_http_info(cloud_pk, **kwargs)  # noqa: E501
+
+    def get_projects_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
+        """Retrieve all projects  # noqa: E501
+
+        Retrieve all projects of the cloud. All project are shown at the same level. see #getProjectSubTree  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_projects_with_http_info(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Project], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_projects" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_projects`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Project]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -11946,20 +13628,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -12076,16 +13758,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_property_sets`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_property_sets`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_property_sets`")  # noqa: E501
 
         collection_formats = {}
@@ -12206,16 +13888,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_raw_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_raw_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_raw_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -12229,11 +13911,11 @@ class IfcApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
-        if 'type' in local_var_params:
+        if 'type' in local_var_params and local_var_params['type'] is not None:  # noqa: E501
             query_params.append(('type', local_var_params['type']))  # noqa: E501
-        if 'classification' in local_var_params:
+        if 'classification' in local_var_params and local_var_params['classification'] is not None:  # noqa: E501
             query_params.append(('classification', local_var_params['classification']))  # noqa: E501
-        if 'classification__notation' in local_var_params:
+        if 'classification__notation' in local_var_params and local_var_params['classification__notation'] is not None:  # noqa: E501
             query_params.append(('classification__notation', local_var_params['classification__notation']))  # noqa: E501
 
         header_params = {}
@@ -12338,20 +14020,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_simple_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_simple_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_simple_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `get_simple_element`")  # noqa: E501
 
         collection_formats = {}
@@ -12474,16 +14156,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_simple_elements`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_simple_elements`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_simple_elements`")  # noqa: E501
 
         collection_formats = {}
@@ -12497,11 +14179,11 @@ class IfcApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
-        if 'type' in local_var_params:
+        if 'type' in local_var_params and local_var_params['type'] is not None:  # noqa: E501
             query_params.append(('type', local_var_params['type']))  # noqa: E501
-        if 'classification' in local_var_params:
+        if 'classification' in local_var_params and local_var_params['classification'] is not None:  # noqa: E501
             query_params.append(('classification', local_var_params['classification']))  # noqa: E501
-        if 'classification__notation' in local_var_params:
+        if 'classification__notation' in local_var_params and local_var_params['classification__notation'] is not None:  # noqa: E501
             query_params.append(('classification__notation', local_var_params['classification__notation']))  # noqa: E501
 
         header_params = {}
@@ -12606,20 +14288,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_space`")  # noqa: E501
 
         collection_formats = {}
@@ -12736,16 +14418,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_spaces`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_spaces`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_spaces`")  # noqa: E501
 
         collection_formats = {}
@@ -12862,20 +14544,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_system`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_system`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_system`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `get_system`")  # noqa: E501
 
         collection_formats = {}
@@ -12992,16 +14674,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_systems`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_systems`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_systems`")  # noqa: E501
 
         collection_formats = {}
@@ -13118,20 +14800,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_zone`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_zone`")  # noqa: E501
 
         collection_formats = {}
@@ -13252,24 +14934,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `get_zone_space`")  # noqa: E501
 
         collection_formats = {}
@@ -13390,20 +15072,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_zone_spaces`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_zone_spaces`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_zone_spaces`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `get_zone_spaces`")  # noqa: E501
 
         collection_formats = {}
@@ -13522,16 +15204,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_zones`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_zones`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `get_zones`")  # noqa: E501
 
         collection_formats = {}
@@ -13545,7 +15227,7 @@ class IfcApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
-        if 'color' in local_var_params:
+        if 'color' in local_var_params and local_var_params['color'] is not None:  # noqa: E501
             query_params.append(('color', local_var_params['color']))  # noqa: E501
 
         header_params = {}
@@ -13648,16 +15330,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `list_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `list_classification_element_relations`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `list_classification_element_relations`")  # noqa: E501
 
         collection_formats = {}
@@ -13776,24 +15458,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_classification_of_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_classification_of_element`")  # noqa: E501
 
         collection_formats = {}
@@ -13912,24 +15594,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -14050,28 +15732,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property`")  # noqa: E501
 
         collection_formats = {}
@@ -14196,32 +15878,32 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -14350,36 +16032,36 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'element_uuid' is set
-        if ('element_uuid' not in local_var_params or
-                local_var_params['element_uuid'] is None):
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'property_pk' is set
-        if ('property_pk' not in local_var_params or
-                local_var_params['property_pk'] is None):
+        if self.api_client.client_side_validation and ('property_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['property_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `property_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertydefinition_pk' is set
-        if ('propertydefinition_pk' not in local_var_params or
-                local_var_params['propertydefinition_pk'] is None):
+        if self.api_client.client_side_validation and ('propertydefinition_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertydefinition_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertydefinition_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
         # verify the required parameter 'propertyset_pk' is set
-        if ('propertyset_pk' not in local_var_params or
-                local_var_params['propertyset_pk'] is None):
+        if self.api_client.client_side_validation and ('propertyset_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['propertyset_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `propertyset_pk` when calling `remove_element_property_set_property_definition_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -14504,24 +16186,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_classification_pk' is set
-        if ('ifc_classification_pk' not in local_var_params or
-                local_var_params['ifc_classification_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_classification_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_classification_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_classification_pk` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_elements_from_classification`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `remove_elements_from_classification`")  # noqa: E501
 
         collection_formats = {}
@@ -14640,24 +16322,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_access_token`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_access_token`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_access_token`")  # noqa: E501
         # verify the required parameter 'token' is set
-        if ('token' not in local_var_params or
-                local_var_params['token'] is None):
+        if self.api_client.client_side_validation and ('token' not in local_var_params or  # noqa: E501
+                                                        local_var_params['token'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `token` when calling `update_access_token`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_access_token`")  # noqa: E501
 
         collection_formats = {}
@@ -14702,6 +16384,126 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='IfcAccessToken',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_cloud(self, id, data, **kwargs):  # noqa: E501
+        """Update some fields of a cloud  # noqa: E501
+
+        Update some fields of a cloud Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_cloud(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param Cloud data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Cloud
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_cloud_with_http_info(id, data, **kwargs)  # noqa: E501
+
+    def update_cloud_with_http_info(self, id, data, **kwargs):  # noqa: E501
+        """Update some fields of a cloud  # noqa: E501
+
+        Update some fields of a cloud Required scopes: cloud:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_cloud_with_http_info(id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this cloud. (required)
+        :param Cloud data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Cloud, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_cloud" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_cloud`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_cloud`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Cloud',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -14784,24 +16586,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `update_element`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_element`")  # noqa: E501
 
         collection_formats = {}
@@ -14926,20 +16728,20 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_ifc`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_ifc`")  # noqa: E501
 
         collection_formats = {}
@@ -15074,16 +16876,16 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_files`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_files`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_files`")  # noqa: E501
 
         collection_formats = {}
@@ -15220,24 +17022,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_property`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_property`")  # noqa: E501
 
         collection_formats = {}
@@ -15364,24 +17166,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_definition`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_property_definition`")  # noqa: E501
 
         collection_formats = {}
@@ -15508,24 +17310,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_unit`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_unit`")  # noqa: E501
 
         collection_formats = {}
@@ -15652,24 +17454,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_layer`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_layer`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_layer`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_layer`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_layer`")  # noqa: E501
 
         collection_formats = {}
@@ -15796,24 +17598,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_processor_handler`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_processor_handler`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_processor_handler`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_processor_handler`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_processor_handler`")  # noqa: E501
 
         collection_formats = {}
@@ -15858,6 +17660,134 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ProcessorHandler',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_project(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+        """Update some fields of a project  # noqa: E501
+
+        Update some fields of a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project(cloud_pk, id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param Project data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Project
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_project_with_http_info(cloud_pk, id, data, **kwargs)  # noqa: E501
+
+    def update_project_with_http_info(self, cloud_pk, id, data, **kwargs):  # noqa: E501
+        """Update some fields of a project  # noqa: E501
+
+        Update some fields of a project Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_project_with_http_info(cloud_pk, id, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param Project data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Project, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'data']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_project" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_project`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_project`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_project`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Project',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -15940,24 +17870,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_property_set`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_property_set`")  # noqa: E501
 
         collection_formats = {}
@@ -16084,24 +18014,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_space`")  # noqa: E501
 
         collection_formats = {}
@@ -16228,24 +18158,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_system`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_system`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_system`")  # noqa: E501
         # verify the required parameter 'uuid' is set
-        if ('uuid' not in local_var_params or
-                local_var_params['uuid'] is None):
+        if self.api_client.client_side_validation and ('uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['uuid'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `uuid` when calling `update_system`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_system`")  # noqa: E501
 
         collection_formats = {}
@@ -16372,24 +18302,24 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_zone`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_zone`")  # noqa: E501
 
         collection_formats = {}
@@ -16518,28 +18448,28 @@ class IfcApi(object):
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
-        if ('cloud_pk' not in local_var_params or
-                local_var_params['cloud_pk'] is None):
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'id' is set
-        if ('id' not in local_var_params or
-                local_var_params['id'] is None):
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
-        if ('ifc_pk' not in local_var_params or
-                local_var_params['ifc_pk'] is None):
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
-        if ('project_pk' not in local_var_params or
-                local_var_params['project_pk'] is None):
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'zone_pk' is set
-        if ('zone_pk' not in local_var_params or
-                local_var_params['zone_pk'] is None):
+        if self.api_client.client_side_validation and ('zone_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['zone_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `zone_pk` when calling `update_zone_space`")  # noqa: E501
         # verify the required parameter 'data' is set
-        if ('data' not in local_var_params or
-                local_var_params['data'] is None):
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `data` when calling `update_zone_space`")  # noqa: E501
 
         collection_formats = {}

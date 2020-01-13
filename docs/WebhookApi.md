@@ -1,16 +1,16 @@
-# bimdata_api_client.ApplicationApi
+# bimdata_api_client.WebhookApi
 
 All URIs are relative to *https://api-beta.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_web_hook**](ApplicationApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | Create a new Webhook
-[**delete_web_hook**](ApplicationApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | Delete a webhook
-[**full_update_web_hook**](ApplicationApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | Update all field of a webhook
-[**get_web_hook**](ApplicationApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | Retrieve one configured webhook
-[**get_web_hooks**](ApplicationApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | Retrieve all configured webhooks
-[**ping_web_hook**](ApplicationApi.md#ping_web_hook) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | Test a webhook
-[**update_web_hook**](ApplicationApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | Update some field of a webhook
+[**create_web_hook**](WebhookApi.md#create_web_hook) | **POST** /cloud/{cloud_pk}/webhook | Create a new Webhook
+[**delete_web_hook**](WebhookApi.md#delete_web_hook) | **DELETE** /cloud/{cloud_pk}/webhook/{id} | Delete a webhook
+[**full_update_web_hook**](WebhookApi.md#full_update_web_hook) | **PUT** /cloud/{cloud_pk}/webhook/{id} | Update all field of a webhook
+[**get_web_hook**](WebhookApi.md#get_web_hook) | **GET** /cloud/{cloud_pk}/webhook/{id} | Retrieve one configured webhook
+[**get_web_hooks**](WebhookApi.md#get_web_hooks) | **GET** /cloud/{cloud_pk}/webhook | Retrieve all configured webhooks
+[**ping_web_hook**](WebhookApi.md#ping_web_hook) | **POST** /cloud/{cloud_pk}/webhook/{id}/ping | Test a webhook
+[**update_web_hook**](WebhookApi.md#update_web_hook) | **PATCH** /cloud/{cloud_pk}/webhook/{id} | Update some field of a webhook
 
 
 # **create_web_hook**
@@ -44,7 +44,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
 
@@ -53,7 +53,7 @@ try:
     api_response = api_instance.create_web_hook(cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->create_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -78,7 +78,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
 
@@ -87,7 +87,7 @@ try:
     api_response = api_instance.create_web_hook(cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->create_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -112,7 +112,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
 
@@ -121,7 +121,7 @@ try:
     api_response = api_instance.create_web_hook(cloud_pk, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->create_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->create_web_hook: %s\n" % e)
 ```
 
 ### Parameters
@@ -187,7 +187,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -195,7 +195,7 @@ try:
     # Delete a webhook
     api_instance.delete_web_hook(cloud_pk, id)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->delete_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->delete_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -220,7 +220,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -228,7 +228,7 @@ try:
     # Delete a webhook
     api_instance.delete_web_hook(cloud_pk, id)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->delete_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->delete_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -253,7 +253,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -261,7 +261,7 @@ try:
     # Delete a webhook
     api_instance.delete_web_hook(cloud_pk, id)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->delete_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->delete_web_hook: %s\n" % e)
 ```
 
 ### Parameters
@@ -327,7 +327,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -337,7 +337,7 @@ try:
     api_response = api_instance.full_update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->full_update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->full_update_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -362,7 +362,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -372,7 +372,7 @@ try:
     api_response = api_instance.full_update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->full_update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->full_update_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -397,7 +397,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -407,7 +407,7 @@ try:
     api_response = api_instance.full_update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->full_update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->full_update_web_hook: %s\n" % e)
 ```
 
 ### Parameters
@@ -474,7 +474,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -483,7 +483,7 @@ try:
     api_response = api_instance.get_web_hook(cloud_pk, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -508,7 +508,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -517,7 +517,7 @@ try:
     api_response = api_instance.get_web_hook(cloud_pk, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -542,7 +542,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 
@@ -551,7 +551,7 @@ try:
     api_response = api_instance.get_web_hook(cloud_pk, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hook: %s\n" % e)
 ```
 
 ### Parameters
@@ -617,7 +617,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -625,7 +625,7 @@ try:
     api_response = api_instance.get_web_hooks(cloud_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hooks: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hooks: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -650,7 +650,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -658,7 +658,7 @@ try:
     api_response = api_instance.get_web_hooks(cloud_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hooks: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hooks: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -683,7 +683,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 
 try:
@@ -691,7 +691,7 @@ try:
     api_response = api_instance.get_web_hooks(cloud_pk)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->get_web_hooks: %s\n" % e)
+    print("Exception when calling WebhookApi->get_web_hooks: %s\n" % e)
 ```
 
 ### Parameters
@@ -756,7 +756,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -766,7 +766,7 @@ try:
     api_response = api_instance.ping_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->ping_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->ping_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -791,7 +791,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -801,7 +801,7 @@ try:
     api_response = api_instance.ping_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->ping_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->ping_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -826,7 +826,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -836,7 +836,7 @@ try:
     api_response = api_instance.ping_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->ping_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->ping_web_hook: %s\n" % e)
 ```
 
 ### Parameters
@@ -903,7 +903,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -913,7 +913,7 @@ try:
     api_response = api_instance.update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->update_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -938,7 +938,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -948,7 +948,7 @@ try:
     api_response = api_instance.update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->update_web_hook: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -973,7 +973,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Defining host is optional and default to https://api-beta.bimdata.io
 configuration.host = "https://api-beta.bimdata.io"
 # Create an instance of the API class
-api_instance = bimdata_api_client.ApplicationApi(bimdata_api_client.ApiClient(configuration))
+api_instance = bimdata_api_client.WebhookApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 id = 'id_example' # str | 
 data = bimdata_api_client.WebHook() # WebHook | 
@@ -983,7 +983,7 @@ try:
     api_response = api_instance.update_web_hook(cloud_pk, id, data)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling ApplicationApi->update_web_hook: %s\n" % e)
+    print("Exception when calling WebhookApi->update_web_hook: %s\n" % e)
 ```
 
 ### Parameters
