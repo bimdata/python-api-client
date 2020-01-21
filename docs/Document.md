@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **parent** | **int** |  | [optional] 
 **parent_id** | **int** |  | [optional] 
 **creator** | **int** |  | [optional] 
-**project** | **int** |  | 
+**project** | **int** |  | [optional] [readonly] 
 **name** | **str** | Shown name of the file | 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str** | Description of the file | [optional] 

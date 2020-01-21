@@ -91,7 +91,8 @@ class Document(object):
         self.parent = parent
         self.parent_id = parent_id
         self.creator = creator
-        self.project = project
+        if project is not None:
+            self.project = project
         self.name = name
         if file_name is not None:
             self.file_name = file_name
@@ -208,8 +209,6 @@ class Document(object):
         :param project: The project of this Document.  # noqa: E501
         :type: int
         """
-        if self.local_vars_configuration.client_side_validation and project is None:  # noqa: E501
-            raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
 
         self._project = project
 

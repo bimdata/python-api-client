@@ -617,19 +617,18 @@ class CollaborationApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_document(self, cloud_pk, project_pk, project, name, file, **kwargs):  # noqa: E501
+    def create_document(self, cloud_pk, project_pk, name, file, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
         RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_document(cloud_pk, project_pk, project, name, file, async_req=True)
+        >>> thread = api.create_document(cloud_pk, project_pk, name, file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param int project: (required)
         :param str name: Shown name of the file (required)
         :param file file: (required)
         :param int parent:
@@ -650,21 +649,20 @@ class CollaborationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_document_with_http_info(cloud_pk, project_pk, project, name, file, **kwargs)  # noqa: E501
+        return self.create_document_with_http_info(cloud_pk, project_pk, name, file, **kwargs)  # noqa: E501
 
-    def create_document_with_http_info(self, cloud_pk, project_pk, project, name, file, **kwargs):  # noqa: E501
+    def create_document_with_http_info(self, cloud_pk, project_pk, name, file, **kwargs):  # noqa: E501
         """Create a document  # noqa: E501
 
         RCreate a document. If the document is an IFC, an IFC model will be created and attached to this document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, project, name, file, async_req=True)
+        >>> thread = api.create_document_with_http_info(cloud_pk, project_pk, name, file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
-        :param int project: (required)
         :param str name: Shown name of the file (required)
         :param file file: (required)
         :param int parent:
@@ -689,7 +687,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'project_pk', 'project', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -711,10 +709,6 @@ class CollaborationApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_document`")  # noqa: E501
-        # verify the required parameter 'project' is set
-        if self.api_client.client_side_validation and ('project' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project` when calling `create_document`")  # noqa: E501
         # verify the required parameter 'name' is set
         if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
                                                         local_var_params['name'] is None):  # noqa: E501
@@ -760,8 +754,6 @@ class CollaborationApi(object):
             form_params.append(('parent_id', local_var_params['parent_id']))  # noqa: E501
         if 'creator' in local_var_params:
             form_params.append(('creator', local_var_params['creator']))  # noqa: E501
-        if 'project' in local_var_params:
-            form_params.append(('project', local_var_params['project']))  # noqa: E501
         if 'name' in local_var_params:
             form_params.append(('name', local_var_params['name']))  # noqa: E501
         if 'file_name' in local_var_params:
@@ -2241,20 +2233,19 @@ class CollaborationApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def full_update_document(self, cloud_pk, id, project_pk, project, name, file, **kwargs):  # noqa: E501
+    def full_update_document(self, cloud_pk, id, project_pk, name, file, **kwargs):  # noqa: E501
         """Update all fields of the document  # noqa: E501
 
         Update all fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_document(cloud_pk, id, project_pk, project, name, file, async_req=True)
+        >>> thread = api.full_update_document(cloud_pk, id, project_pk, name, file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
-        :param int project: (required)
         :param str name: Shown name of the file (required)
         :param file file: (required)
         :param int parent:
@@ -2275,22 +2266,21 @@ class CollaborationApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.full_update_document_with_http_info(cloud_pk, id, project_pk, project, name, file, **kwargs)  # noqa: E501
+        return self.full_update_document_with_http_info(cloud_pk, id, project_pk, name, file, **kwargs)  # noqa: E501
 
-    def full_update_document_with_http_info(self, cloud_pk, id, project_pk, project, name, file, **kwargs):  # noqa: E501
+    def full_update_document_with_http_info(self, cloud_pk, id, project_pk, name, file, **kwargs):  # noqa: E501
         """Update all fields of the document  # noqa: E501
 
         Update all fields of the document Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_document_with_http_info(cloud_pk, id, project_pk, project, name, file, async_req=True)
+        >>> thread = api.full_update_document_with_http_info(cloud_pk, id, project_pk, name, file, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this document. (required)
         :param str project_pk: (required)
-        :param int project: (required)
         :param str name: Shown name of the file (required)
         :param file file: (required)
         :param int parent:
@@ -2315,7 +2305,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'id', 'project_pk', 'project', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2341,10 +2331,6 @@ class CollaborationApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_document`")  # noqa: E501
-        # verify the required parameter 'project' is set
-        if self.api_client.client_side_validation and ('project' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project` when calling `full_update_document`")  # noqa: E501
         # verify the required parameter 'name' is set
         if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
                                                         local_var_params['name'] is None):  # noqa: E501
@@ -2392,8 +2378,6 @@ class CollaborationApi(object):
             form_params.append(('parent_id', local_var_params['parent_id']))  # noqa: E501
         if 'creator' in local_var_params:
             form_params.append(('creator', local_var_params['creator']))  # noqa: E501
-        if 'project' in local_var_params:
-            form_params.append(('project', local_var_params['project']))  # noqa: E501
         if 'name' in local_var_params:
             form_params.append(('name', local_var_params['name']))  # noqa: E501
         if 'file_name' in local_var_params:

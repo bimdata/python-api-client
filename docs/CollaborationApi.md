@@ -770,7 +770,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> Document create_document(cloud_pk, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+> Document create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
 
 Create a document
 
@@ -803,7 +803,6 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -815,7 +814,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -846,7 +845,6 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -858,7 +856,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -889,7 +887,6 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -901,7 +898,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -913,7 +910,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **project** | **int**|  | 
  **name** | **str**| Shown name of the file | 
  **file** | **file**|  | 
  **parent** | **int**|  | [optional] 
@@ -2672,7 +2668,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> Document full_update_document(cloud_pk, id, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+> Document full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
 
 Update all fields of the document
 
@@ -2706,7 +2702,6 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -2718,7 +2713,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2750,7 +2745,6 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -2762,7 +2756,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2794,7 +2788,6 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
-project = 56 # int | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
 parent = 56 # int |  (optional)
@@ -2806,7 +2799,7 @@ size = 56 # int | Size of the file. (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, project, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2819,7 +2812,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this document. | 
  **project_pk** | **str**|  | 
- **project** | **int**|  | 
  **name** | **str**| Shown name of the file | 
  **file** | **file**|  | 
  **parent** | **int**|  | [optional] 
