@@ -104,11 +104,6 @@ class RawLayer(object):
         :param description: The description of this RawLayer.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and description is None:  # noqa: E501
-            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                description is not None and len(description) < 1):
-            raise ValueError("Invalid value for `description`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._description = description
 
@@ -130,11 +125,6 @@ class RawLayer(object):
         :param identifier: The identifier of this RawLayer.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and identifier is None:  # noqa: E501
-            raise ValueError("Invalid value for `identifier`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                identifier is not None and len(identifier) < 1):
-            raise ValueError("Invalid value for `identifier`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._identifier = identifier
 

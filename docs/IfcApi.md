@@ -1,6 +1,6 @@
 # bimdata_api_client.IfcApi
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -173,8 +173,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -209,8 +209,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -245,8 +245,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -324,8 +324,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -358,8 +358,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -392,8 +392,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -468,8 +468,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -502,8 +502,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -536,8 +536,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -612,8 +612,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -646,8 +646,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -680,8 +680,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -756,8 +756,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -790,8 +790,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -824,8 +824,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -900,8 +900,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -934,8 +934,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -968,8 +968,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1044,8 +1044,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1080,8 +1080,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1116,8 +1116,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1195,8 +1195,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1231,8 +1231,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1267,8 +1267,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1346,8 +1346,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1381,8 +1381,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1416,8 +1416,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1494,8 +1494,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1529,8 +1529,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1564,8 +1564,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1642,8 +1642,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1678,8 +1678,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1714,8 +1714,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1793,8 +1793,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1829,8 +1829,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1865,8 +1865,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1944,8 +1944,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -1980,8 +1980,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2016,8 +2016,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2095,8 +2095,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2130,8 +2130,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2165,8 +2165,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2243,8 +2243,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2280,8 +2280,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2317,8 +2317,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2398,8 +2398,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.Cloud() # Cloud | 
@@ -2431,8 +2431,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.Cloud() # Cloud | 
@@ -2464,8 +2464,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.Cloud() # Cloud | 
@@ -2537,8 +2537,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -2570,8 +2570,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -2603,8 +2603,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -2676,8 +2676,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2712,8 +2712,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2748,8 +2748,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2827,8 +2827,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2864,8 +2864,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2901,8 +2901,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -2982,8 +2982,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3020,8 +3020,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3058,8 +3058,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3141,8 +3141,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3180,8 +3180,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3219,8 +3219,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3304,8 +3304,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3344,8 +3344,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3384,8 +3384,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3471,8 +3471,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3507,8 +3507,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3543,8 +3543,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3622,8 +3622,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3658,8 +3658,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3694,8 +3694,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3773,8 +3773,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3809,8 +3809,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3845,8 +3845,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3924,8 +3924,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3958,8 +3958,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -3992,8 +3992,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4067,8 +4067,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4103,8 +4103,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4139,8 +4139,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4218,8 +4218,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4253,8 +4253,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4288,8 +4288,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4366,8 +4366,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4401,8 +4401,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4436,8 +4436,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4514,8 +4514,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4550,8 +4550,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4586,8 +4586,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4665,8 +4665,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4701,8 +4701,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4737,8 +4737,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4816,8 +4816,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4852,8 +4852,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4888,8 +4888,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -4967,8 +4967,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5004,8 +5004,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5041,8 +5041,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5122,8 +5122,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5157,8 +5157,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5192,8 +5192,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5270,8 +5270,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -5302,8 +5302,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -5334,8 +5334,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -5406,8 +5406,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5441,8 +5441,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5476,8 +5476,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5554,8 +5554,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5588,8 +5588,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5622,8 +5622,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5698,8 +5698,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5733,8 +5733,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5768,8 +5768,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5846,8 +5846,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5881,8 +5881,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5916,8 +5916,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -5994,8 +5994,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6029,8 +6029,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6064,8 +6064,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6142,8 +6142,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6177,8 +6177,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6212,8 +6212,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6290,8 +6290,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6323,8 +6323,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6356,8 +6356,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6430,8 +6430,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6465,8 +6465,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6500,8 +6500,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6578,8 +6578,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6613,8 +6613,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6648,8 +6648,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6726,8 +6726,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6761,8 +6761,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6796,8 +6796,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6874,8 +6874,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6909,8 +6909,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -6944,8 +6944,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7022,8 +7022,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7058,8 +7058,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7094,8 +7094,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7174,8 +7174,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7210,8 +7210,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7246,8 +7246,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7325,8 +7325,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7362,8 +7362,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7399,8 +7399,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7480,8 +7480,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -7514,8 +7514,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -7548,8 +7548,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -7623,8 +7623,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7660,8 +7660,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7697,8 +7697,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7778,8 +7778,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7814,8 +7814,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7850,8 +7850,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7929,8 +7929,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -7966,8 +7966,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8003,8 +8003,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8084,8 +8084,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8121,8 +8121,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8158,8 +8158,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8239,8 +8239,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8276,8 +8276,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8313,8 +8313,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8394,8 +8394,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8431,8 +8431,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8468,8 +8468,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8549,8 +8549,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8586,8 +8586,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8623,8 +8623,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8704,8 +8704,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8739,8 +8739,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8774,8 +8774,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8851,8 +8851,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8888,8 +8888,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -8925,8 +8925,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9006,8 +9006,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9043,8 +9043,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9080,8 +9080,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9161,8 +9161,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9198,8 +9198,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9235,8 +9235,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9316,8 +9316,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9353,8 +9353,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9390,8 +9390,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9471,8 +9471,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9509,8 +9509,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9547,8 +9547,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9630,8 +9630,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9666,8 +9666,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9702,8 +9702,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9781,8 +9781,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9816,8 +9816,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9851,8 +9851,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9928,8 +9928,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -9964,8 +9964,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10000,8 +10000,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10077,8 +10077,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10110,8 +10110,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10143,8 +10143,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10216,8 +10216,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10249,8 +10249,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10282,8 +10282,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -10355,8 +10355,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 
@@ -10387,8 +10387,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 
@@ -10419,8 +10419,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 
@@ -10488,8 +10488,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10524,8 +10524,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10560,8 +10560,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10639,8 +10639,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10676,8 +10676,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10713,8 +10713,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10794,8 +10794,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10831,8 +10831,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10868,8 +10868,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10949,8 +10949,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -10987,8 +10987,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11025,8 +11025,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11108,8 +11108,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11147,8 +11147,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11186,8 +11186,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11271,8 +11271,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11311,8 +11311,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11351,8 +11351,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11438,8 +11438,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11477,8 +11477,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11516,8 +11516,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11601,8 +11601,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11639,8 +11639,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11677,8 +11677,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11760,8 +11760,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11796,8 +11796,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11832,8 +11832,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11911,8 +11911,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11949,8 +11949,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -11987,8 +11987,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12070,8 +12070,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12106,8 +12106,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12142,8 +12142,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12221,8 +12221,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12256,8 +12256,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12291,8 +12291,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12368,8 +12368,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12402,8 +12402,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12436,8 +12436,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12512,8 +12512,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12547,8 +12547,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12582,8 +12582,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12659,8 +12659,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12693,8 +12693,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12727,8 +12727,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12803,8 +12803,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12837,8 +12837,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12871,8 +12871,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12947,8 +12947,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -12982,8 +12982,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13017,8 +13017,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13094,8 +13094,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13130,8 +13130,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13166,8 +13166,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13245,8 +13245,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13281,8 +13281,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13317,8 +13317,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13396,8 +13396,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13431,8 +13431,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13466,8 +13466,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13543,8 +13543,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13577,8 +13577,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13611,8 +13611,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13687,8 +13687,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13721,8 +13721,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13755,8 +13755,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13831,8 +13831,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13867,8 +13867,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13903,8 +13903,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -13982,8 +13982,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14017,8 +14017,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14052,8 +14052,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14129,8 +14129,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14165,8 +14165,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14201,8 +14201,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14280,8 +14280,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14316,8 +14316,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14352,8 +14352,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14431,8 +14431,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14466,8 +14466,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14501,8 +14501,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14578,8 +14578,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14614,8 +14614,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14650,8 +14650,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14729,8 +14729,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14764,8 +14764,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14799,8 +14799,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14876,8 +14876,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14910,8 +14910,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -14944,8 +14944,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15019,8 +15019,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15053,8 +15053,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15087,8 +15087,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15162,8 +15162,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15195,8 +15195,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15228,8 +15228,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15301,8 +15301,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15335,8 +15335,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15369,8 +15369,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15444,8 +15444,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15477,8 +15477,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15510,8 +15510,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15583,8 +15583,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15619,8 +15619,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15655,8 +15655,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15734,8 +15734,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15769,8 +15769,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15804,8 +15804,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15881,8 +15881,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15919,8 +15919,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -15957,8 +15957,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16040,8 +16040,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16076,8 +16076,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16112,8 +16112,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16191,8 +16191,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16229,8 +16229,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16267,8 +16267,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16350,8 +16350,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16386,8 +16386,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16422,8 +16422,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16501,8 +16501,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16536,8 +16536,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16571,8 +16571,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16648,8 +16648,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16684,8 +16684,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16720,8 +16720,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16799,8 +16799,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16834,8 +16834,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16869,8 +16869,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16946,8 +16946,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -16982,8 +16982,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17018,8 +17018,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17097,8 +17097,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17134,8 +17134,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17171,8 +17171,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17252,8 +17252,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17288,8 +17288,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17324,8 +17324,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17403,8 +17403,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17439,8 +17439,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17475,8 +17475,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17554,8 +17554,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17589,8 +17589,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17624,8 +17624,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17701,8 +17701,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17737,8 +17737,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17773,8 +17773,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17853,8 +17853,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17889,8 +17889,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -17925,8 +17925,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18005,8 +18005,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18042,8 +18042,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18079,8 +18079,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18161,8 +18161,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18199,8 +18199,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18237,8 +18237,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18321,8 +18321,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18360,8 +18360,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18399,8 +18399,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18485,8 +18485,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18521,8 +18521,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18557,8 +18557,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18637,8 +18637,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18674,8 +18674,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18711,8 +18711,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18792,8 +18792,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -18826,8 +18826,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -18860,8 +18860,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this cloud.
@@ -18935,8 +18935,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -18972,8 +18972,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19009,8 +19009,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19090,8 +19090,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19126,8 +19126,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19162,8 +19162,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19241,8 +19241,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19283,8 +19283,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19325,8 +19325,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19416,8 +19416,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19453,8 +19453,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19490,8 +19490,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19571,8 +19571,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19608,8 +19608,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19645,8 +19645,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19726,8 +19726,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19763,8 +19763,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19800,8 +19800,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19881,8 +19881,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19918,8 +19918,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -19955,8 +19955,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20036,8 +20036,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20073,8 +20073,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20110,8 +20110,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20191,8 +20191,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20226,8 +20226,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20261,8 +20261,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20338,8 +20338,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20375,8 +20375,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20412,8 +20412,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20493,8 +20493,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20530,8 +20530,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20567,8 +20567,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20648,8 +20648,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20685,8 +20685,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20722,8 +20722,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20803,8 +20803,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20840,8 +20840,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20877,8 +20877,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20958,8 +20958,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -20996,8 +20996,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
@@ -21034,8 +21034,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 

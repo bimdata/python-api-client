@@ -63,8 +63,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
 projects_pk = 'projects_pk_example' # str | 
@@ -82,7 +82,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api.bimdata.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------

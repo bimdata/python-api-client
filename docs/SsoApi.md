@@ -1,6 +1,6 @@
 # bimdata_api_client.SsoApi
 
-All URIs are relative to *https://api-beta.bimdata.io*
+All URIs are relative to *https://api.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -39,8 +39,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -71,8 +71,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -103,8 +103,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -175,8 +175,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
@@ -207,8 +207,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
@@ -239,8 +239,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 data = bimdata_api_client.SelectUser() # SelectUser | 
@@ -311,8 +311,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -343,8 +343,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -375,8 +375,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -447,8 +447,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -480,8 +480,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -513,8 +513,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 id = 56 # int | A unique integer value identifying this invitation.
@@ -586,8 +586,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)
@@ -619,8 +619,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)
@@ -652,8 +652,8 @@ configuration = bimdata_api_client.Configuration()
 # Configure OAuth2 access token for authorization: client_credentials
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api-beta.bimdata.io
-configuration.host = "https://api-beta.bimdata.io"
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configuration))
 status = 'status_example' # str | Filter the returned list by status (optional)

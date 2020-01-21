@@ -108,11 +108,6 @@ class RawSystem(object):
         :param name: The name of this RawSystem.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                name is not None and len(name) < 1):
-            raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._name = name
 
@@ -134,11 +129,6 @@ class RawSystem(object):
         :param description: The description of this RawSystem.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and description is None:  # noqa: E501
-            raise ValueError("Invalid value for `description`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                description is not None and len(description) < 1):
-            raise ValueError("Invalid value for `description`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._description = description
 
@@ -160,11 +150,6 @@ class RawSystem(object):
         :param object_type: The object_type of this RawSystem.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and object_type is None:  # noqa: E501
-            raise ValueError("Invalid value for `object_type`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                object_type is not None and len(object_type) < 1):
-            raise ValueError("Invalid value for `object_type`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._object_type = object_type
 

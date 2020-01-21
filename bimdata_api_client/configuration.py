@@ -35,7 +35,7 @@ class Configuration(object):
     :param password: Password for HTTP basic authentication
     """
 
-    def __init__(self, host="https://api-beta.bimdata.io",
+    def __init__(self, host="https://api.bimdata.io",
                  api_key=None, api_key_prefix=None,
                  username="", password=""):
         """Constructor
@@ -289,7 +289,7 @@ class Configuration(object):
         """
         return [
             {
-                'url': "https://api-beta.bimdata.io/",
+                'url': "https://api.bimdata.io/",
                 'description': "No description provided",
             }
         ]
