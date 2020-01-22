@@ -637,6 +637,7 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
+        :param str ifc_source: Define the ifc.source field if the upload is an IFC
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -671,6 +672,7 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
+        :param str ifc_source: Define the ifc.source field if the upload is an IFC
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -687,7 +689,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size', 'ifc_source']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -764,6 +766,8 @@ class CollaborationApi(object):
             local_var_files['file'] = local_var_params['file']  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
+        if 'ifc_source' in local_var_params:
+            form_params.append(('ifc_source', local_var_params['ifc_source']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
@@ -2254,6 +2258,7 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
+        :param str ifc_source: Define the ifc.source field if the upload is an IFC
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2289,6 +2294,7 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
+        :param str ifc_source: Define the ifc.source field if the upload is an IFC
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2305,7 +2311,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size']  # noqa: E501
+        all_params = ['cloud_pk', 'id', 'project_pk', 'name', 'file', 'parent', 'parent_id', 'creator', 'file_name', 'description', 'size', 'ifc_source']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -2388,6 +2394,8 @@ class CollaborationApi(object):
             local_var_files['file'] = local_var_params['file']  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
+        if 'ifc_source' in local_var_params:
+            form_params.append(('ifc_source', local_var_params['ifc_source']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

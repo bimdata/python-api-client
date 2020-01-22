@@ -46,6 +46,7 @@ class Document(object):
         'size': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'ifc_source': 'str',
         'ifc_id': 'str'
     }
 
@@ -62,10 +63,11 @@ class Document(object):
         'size': 'size',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
+        'ifc_source': 'ifc_source',
         'ifc_id': 'ifc_id'
     }
 
-    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_source=None, ifc_id=None, local_vars_configuration=None):  # noqa: E501
         """Document - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -83,6 +85,7 @@ class Document(object):
         self._size = None
         self._created_at = None
         self._updated_at = None
+        self._ifc_source = None
         self._ifc_id = None
         self.discriminator = None
 
@@ -104,6 +107,8 @@ class Document(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if ifc_source is not None:
+            self.ifc_source = ifc_source
         if ifc_id is not None:
             self.ifc_id = ifc_id
 
@@ -390,6 +395,35 @@ class Document(object):
         """
 
         self._updated_at = updated_at
+
+    @property
+    def ifc_source(self):
+        """Gets the ifc_source of this Document.  # noqa: E501
+
+        Define the ifc.source field if the upload is an IFC  # noqa: E501
+
+        :return: The ifc_source of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._ifc_source
+
+    @ifc_source.setter
+    def ifc_source(self, ifc_source):
+        """Sets the ifc_source of this Document.
+
+        Define the ifc.source field if the upload is an IFC  # noqa: E501
+
+        :param ifc_source: The ifc_source of this Document.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["UPLOAD", "SPLIT", "MERGE", "EXPORT"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and ifc_source not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `ifc_source` ({0}), must be one of {1}"  # noqa: E501
+                .format(ifc_source, allowed_values)
+            )
+
+        self._ifc_source = ifc_source
 
     @property
     def ifc_id(self):

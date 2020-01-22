@@ -770,7 +770,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> Document create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+> Document create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
 
 Create a document
 
@@ -811,10 +811,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -853,10 +854,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -895,10 +897,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -918,6 +921,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional] 
  **description** | **str**| Description of the file | [optional] 
  **size** | **int**| Size of the file. | [optional] 
+ **ifc_source** | **str**| Define the ifc.source field if the upload is an IFC | [optional] 
 
 ### Return type
 
@@ -2668,7 +2672,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_document**
-> Document full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+> Document full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
 
 Update all fields of the document
 
@@ -2710,10 +2714,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2753,10 +2758,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2796,10 +2802,11 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
+ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
 try:
     # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size)
+    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
@@ -2820,6 +2827,7 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional] 
  **description** | **str**| Description of the file | [optional] 
  **size** | **int**| Size of the file. | [optional] 
+ **ifc_source** | **str**| Define the ifc.source field if the upload is an IFC | [optional] 
 
 ### Return type
 
