@@ -134,20 +134,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_create_cloud(self):
-        """Test case for create_cloud
-
-        Create a cloud  # noqa: E501
-        """
-        pass
-
-    def test_create_demo(self):
-        """Test case for create_demo
-
-        Create a Demo project in a cloud  # noqa: E501
-        """
-        pass
-
     def test_create_element(self):
         """Test case for create_element
 
@@ -201,13 +187,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for create_layer
 
         Create a layer in the model  # noqa: E501
-        """
-        pass
-
-    def test_create_project(self):
-        """Test case for create_project
-
-        Create a project  # noqa: E501
         """
         pass
 
@@ -267,13 +246,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_cloud(self):
-        """Test case for delete_cloud
-
-        Delete a cloud  # noqa: E501
-        """
-        pass
-
     def test_delete_element(self):
         """Test case for delete_element
 
@@ -313,13 +285,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for delete_layer
 
         Delete a layer of a model  # noqa: E501
-        """
-        pass
-
-    def test_delete_project(self):
-        """Test case for delete_project
-
-        Delete a project  # noqa: E501
         """
         pass
 
@@ -372,13 +337,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_cloud(self):
-        """Test case for full_update_cloud
-
-        Update all fields of a cloud  # noqa: E501
-        """
-        pass
-
     def test_full_update_element(self):
         """Test case for full_update_element
 
@@ -425,13 +383,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for full_update_processor_handler
 
         Update the status of a processor handler  # noqa: E501
-        """
-        pass
-
-    def test_full_update_project(self):
-        """Test case for full_update_project
-
-        Update all fields of a project  # noqa: E501
         """
         pass
 
@@ -488,27 +439,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_classifications_of_element
 
         Retrieve all classifications of an element  # noqa: E501
-        """
-        pass
-
-    def test_get_cloud(self):
-        """Test case for get_cloud
-
-        Retrieve one cloud  # noqa: E501
-        """
-        pass
-
-    def test_get_cloud_size(self):
-        """Test case for get_cloud_size
-
-        Get size of all files in the cloud  # noqa: E501
-        """
-        pass
-
-    def test_get_clouds(self):
-        """Test case for get_clouds
-
-        Retrieve all clouds  # noqa: E501
         """
         pass
 
@@ -715,41 +645,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_get_project(self):
-        """Test case for get_project
-
-        Retrieve a project  # noqa: E501
-        """
-        pass
-
-    def test_get_project_dms_tree(self):
-        """Test case for get_project_dms_tree
-
-        Retrieve the complete DMS tree  # noqa: E501
-        """
-        pass
-
-    def test_get_project_sub_tree(self):
-        """Test case for get_project_sub_tree
-
-        Retrieve the complete projects tree of the cloud  # noqa: E501
-        """
-        pass
-
-    def test_get_project_tree(self):
-        """Test case for get_project_tree
-
-        Retrieve the complete DMS tree  # noqa: E501
-        """
-        pass
-
-    def test_get_projects(self):
-        """Test case for get_projects
-
-        Retrieve all projects  # noqa: E501
-        """
-        pass
-
     def test_get_property_set(self):
         """Test case for get_property_set
 
@@ -897,13 +792,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_update_cloud(self):
-        """Test case for update_cloud
-
-        Update some fields of a cloud  # noqa: E501
-        """
-        pass
-
     def test_update_element(self):
         """Test case for update_element
 
@@ -957,13 +845,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_processor_handler
 
         Update the status of a processor handler  # noqa: E501
-        """
-        pass
-
-    def test_update_project(self):
-        """Test case for update_project
-
-        Update some fields of a project  # noqa: E501
         """
         pass
 

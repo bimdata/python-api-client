@@ -90,7 +90,7 @@ class Classification(object):
     def name(self):
         """Gets the name of this Classification.  # noqa: E501
 
-        Name of the clasification (uniformat, Untec, custom, etc)  # noqa: E501
+        Name of the classification (uniformat, Untec, custom, etc)  # noqa: E501
 
         :return: The name of this Classification.  # noqa: E501
         :rtype: str
@@ -101,7 +101,7 @@ class Classification(object):
     def name(self, name):
         """Sets the name of this Classification.
 
-        Name of the clasification (uniformat, Untec, custom, etc)  # noqa: E501
+        Name of the classification (uniformat, Untec, custom, etc)  # noqa: E501
 
         :param name: The name of this Classification.  # noqa: E501
         :type: str

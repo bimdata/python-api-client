@@ -42,7 +42,8 @@ class Unit(object):
         'dimensions': 'list[float]',
         'conversion_factor': 'float',
         'conversion_baseunit': 'Unit',
-        'elements': 'object'
+        'elements': 'object',
+        'is_default': 'bool'
     }
 
     attribute_map = {
@@ -54,10 +55,11 @@ class Unit(object):
         'dimensions': 'dimensions',
         'conversion_factor': 'conversion_factor',
         'conversion_baseunit': 'conversion_baseunit',
-        'elements': 'elements'
+        'elements': 'elements',
+        'is_default': 'is_default'
     }
 
-    def __init__(self, id=None, type=None, name=None, unit_type=None, prefix=None, dimensions=None, conversion_factor=None, conversion_baseunit=None, elements=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, type=None, name=None, unit_type=None, prefix=None, dimensions=None, conversion_factor=None, conversion_baseunit=None, elements=None, is_default=None, local_vars_configuration=None):  # noqa: E501
         """Unit - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,6 +74,7 @@ class Unit(object):
         self._conversion_factor = None
         self._conversion_baseunit = None
         self._elements = None
+        self._is_default = None
         self.discriminator = None
 
         if id is not None:
@@ -85,6 +88,8 @@ class Unit(object):
         if conversion_baseunit is not None:
             self.conversion_baseunit = conversion_baseunit
         self.elements = elements
+        if is_default is not None:
+            self.is_default = is_default
 
     @property
     def id(self):
@@ -293,6 +298,27 @@ class Unit(object):
         """
 
         self._elements = elements
+
+    @property
+    def is_default(self):
+        """Gets the is_default of this Unit.  # noqa: E501
+
+
+        :return: The is_default of this Unit.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_default
+
+    @is_default.setter
+    def is_default(self, is_default):
+        """Sets the is_default of this Unit.
+
+
+        :param is_default: The is_default of this Unit.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_default = is_default
 
     def to_dict(self):
         """Returns the model properties as a dict"""

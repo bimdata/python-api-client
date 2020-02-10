@@ -41,7 +41,8 @@ class RawUnit(object):
         'elements': 'object',
         'conversion_factor': 'float',
         'dimensions': 'list[float]',
-        'conversion_baseunit_index': 'int'
+        'conversion_baseunit_index': 'int',
+        'is_default': 'bool'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class RawUnit(object):
         'elements': 'elements',
         'conversion_factor': 'conversion_factor',
         'dimensions': 'dimensions',
-        'conversion_baseunit_index': 'conversion_baseunit_index'
+        'conversion_baseunit_index': 'conversion_baseunit_index',
+        'is_default': 'is_default'
     }
 
-    def __init__(self, name=None, type=None, unit_type=None, prefix=None, elements=None, conversion_factor=None, dimensions=None, conversion_baseunit_index=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, name=None, type=None, unit_type=None, prefix=None, elements=None, conversion_factor=None, dimensions=None, conversion_baseunit_index=None, is_default=None, local_vars_configuration=None):  # noqa: E501
         """RawUnit - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,6 +71,7 @@ class RawUnit(object):
         self._conversion_factor = None
         self._dimensions = None
         self._conversion_baseunit_index = None
+        self._is_default = None
         self.discriminator = None
 
         self.name = name
@@ -79,6 +82,7 @@ class RawUnit(object):
         self.conversion_factor = conversion_factor
         self.dimensions = dimensions
         self.conversion_baseunit_index = conversion_baseunit_index
+        self.is_default = is_default
 
     @property
     def name(self):
@@ -252,6 +256,27 @@ class RawUnit(object):
         """
 
         self._conversion_baseunit_index = conversion_baseunit_index
+
+    @property
+    def is_default(self):
+        """Gets the is_default of this RawUnit.  # noqa: E501
+
+
+        :return: The is_default of this RawUnit.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_default
+
+    @is_default.setter
+    def is_default(self, is_default):
+        """Sets the is_default of this RawUnit.
+
+
+        :param is_default: The is_default of this RawUnit.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_default = is_default
 
     def to_dict(self):
         """Returns the model properties as a dict"""
