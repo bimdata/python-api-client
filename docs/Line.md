@@ -1,4 +1,4 @@
-# LineSeriaizer
+# Line
 
 ## Properties
 Name | Type | Description | Notes

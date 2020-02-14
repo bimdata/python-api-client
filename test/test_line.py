@@ -16,12 +16,12 @@ from __future__ import absolute_import
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.models.line_seriaizer import LineSeriaizer  # noqa: E501
+from bimdata_api_client.models.line import Line  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
 
-class TestLineSeriaizer(unittest.TestCase):
-    """LineSeriaizer unit test stubs"""
+class TestLine(unittest.TestCase):
+    """Line unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +29,10 @@ class TestLineSeriaizer(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testLineSeriaizer(self):
-        """Test LineSeriaizer"""
+    def testLine(self):
+        """Test Line"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.line_seriaizer.LineSeriaizer()  # noqa: E501
+        # model = bimdata_api_client.models.line.Line()  # noqa: E501
         pass
 
 

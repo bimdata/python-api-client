@@ -38,7 +38,7 @@ class Viewpoint(object):
         'guid': 'str',
         'orthogonal_camera': 'OrthogonalCamera',
         'perspective_camera': 'PerspectiveCamera',
-        'lines': 'list[LineSeriaizer]',
+        'lines': 'list[Line]',
         'clipping_planes': 'list[ClippingPlane]',
         'snapshot': 'Snapshot',
         'components': 'ComponentsParent',
@@ -188,7 +188,7 @@ class Viewpoint(object):
 
 
         :return: The lines of this Viewpoint.  # noqa: E501
-        :rtype: list[LineSeriaizer]
+        :rtype: list[Line]
         """
         return self._lines
 
@@ -198,7 +198,7 @@ class Viewpoint(object):
 
 
         :param lines: The lines of this Viewpoint.  # noqa: E501
-        :type: list[LineSeriaizer]
+        :type: list[Line]
         """
 
         self._lines = lines

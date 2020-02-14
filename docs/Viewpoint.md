@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **guid** | **str** |  | [optional] 
 **orthogonal_camera** | [**OrthogonalCamera**](OrthogonalCamera.md) |  | [optional] 
 **perspective_camera** | [**PerspectiveCamera**](PerspectiveCamera.md) |  | [optional] 
-**lines** | [**list[LineSeriaizer]**](LineSeriaizer.md) |  | [optional] 
+**lines** | [**list[Line]**](Line.md) |  | [optional] 
 **clipping_planes** | [**list[ClippingPlane]**](ClippingPlane.md) |  | [optional] 
 **snapshot** | [**Snapshot**](Snapshot.md) |  | [optional] 
 **components** | [**ComponentsParent**](ComponentsParent.md) |  | [optional] 

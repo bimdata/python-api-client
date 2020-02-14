@@ -386,7 +386,7 @@ Class | Method | HTTP request | Description
  - [Label](docs/Label.md)
  - [Layer](docs/Layer.md)
  - [LayerElement](docs/LayerElement.md)
- - [LineSeriaizer](docs/LineSeriaizer.md)
+ - [Line](docs/Line.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [PerspectiveCamera](docs/PerspectiveCamera.md)

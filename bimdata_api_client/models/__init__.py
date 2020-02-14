@@ -50,7 +50,7 @@ from bimdata_api_client.models.invitation import Invitation
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.layer import Layer
 from bimdata_api_client.models.layer_element import LayerElement
-from bimdata_api_client.models.line_seriaizer import LineSeriaizer
+from bimdata_api_client.models.line import Line
 from bimdata_api_client.models.model_property import ModelProperty
 from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.models.perspective_camera import PerspectiveCamera
