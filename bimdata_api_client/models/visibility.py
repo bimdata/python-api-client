@@ -100,8 +100,6 @@ class Visibility(object):
         :param exceptions: The exceptions of this Visibility.  # noqa: E501
         :type: list[Component]
         """
-        if self.local_vars_configuration.client_side_validation and exceptions is None:  # noqa: E501
-            raise ValueError("Invalid value for `exceptions`, must not be `None`")  # noqa: E501
 
         self._exceptions = exceptions
 

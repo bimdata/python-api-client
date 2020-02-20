@@ -58,7 +58,8 @@ class ComponentsParent(object):
 
         if coloring is not None:
             self.coloring = coloring
-        self.visibility = visibility
+        if visibility is not None:
+            self.visibility = visibility
         if selection is not None:
             self.selection = selection
 
@@ -101,8 +102,6 @@ class ComponentsParent(object):
         :param visibility: The visibility of this ComponentsParent.  # noqa: E501
         :type: Visibility
         """
-        if self.local_vars_configuration.client_side_validation and visibility is None:  # noqa: E501
-            raise ValueError("Invalid value for `visibility`, must not be `None`")  # noqa: E501
 
         self._visibility = visibility
 

@@ -3617,6 +3617,128 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def import_bcf(self, id, name, **kwargs):  # noqa: E501
+        """Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported  # noqa: E501
+
+        Import bcf-xml format into this project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_bcf(id, name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this project. (required)
+        :param str name: Name of the project (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.import_bcf_with_http_info(id, name, **kwargs)  # noqa: E501
+
+    def import_bcf_with_http_info(self, id, name, **kwargs):  # noqa: E501
+        """Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported  # noqa: E501
+
+        Import bcf-xml format into this project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.import_bcf_with_http_info(id, name, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this project. (required)
+        :param str name: Name of the project (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['id', 'name']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method import_bcf" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `import_bcf`")  # noqa: E501
+        # verify the required parameter 'name' is set
+        if self.api_client.client_side_validation and ('name' not in local_var_params or  # noqa: E501
+                                                        local_var_params['name'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `name` when calling `import_bcf`")  # noqa: E501
+
+        if self.api_client.client_side_validation and ('name' in local_var_params and  # noqa: E501
+                                                        len(local_var_params['name']) > 256):  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `name` when calling `import_bcf`, length must be less than or equal to `256`")  # noqa: E501
+        if self.api_client.client_side_validation and ('name' in local_var_params and  # noqa: E501
+                                                        len(local_var_params['name']) < 1):  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `name` when calling `import_bcf`, length must be greater than or equal to `1`")  # noqa: E501
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+        if 'name' in local_var_params:
+            form_params.append(('name', local_var_params['name']))  # noqa: E501
+
+        body_params = None
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['multipart/form-data', 'application/x-www-form-urlencoded'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{id}/import', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def update_bcf_project(self, id, data, **kwargs):  # noqa: E501
         """Update some fields of a BCF project  # noqa: E501
 

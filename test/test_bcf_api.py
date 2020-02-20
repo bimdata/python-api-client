@@ -239,6 +239,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_import_bcf(self):
+        """Test case for import_bcf
+
+        Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported  # noqa: E501
+        """
+        pass
+
     def test_update_bcf_project(self):
         """Test case for update_bcf_project
 

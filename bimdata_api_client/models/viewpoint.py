@@ -81,16 +81,12 @@ class Viewpoint(object):
             self.orthogonal_camera = orthogonal_camera
         if perspective_camera is not None:
             self.perspective_camera = perspective_camera
-        if lines is not None:
-            self.lines = lines
-        if clipping_planes is not None:
-            self.clipping_planes = clipping_planes
+        self.lines = lines
+        self.clipping_planes = clipping_planes
         if snapshot is not None:
             self.snapshot = snapshot
-        if components is not None:
-            self.components = components
-        if temp_id is not None:
-            self.temp_id = temp_id
+        self.components = components
+        self.temp_id = temp_id
 
     @property
     def index(self):

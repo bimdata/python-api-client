@@ -116,6 +116,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 *BcfApi* | [**get_viewpoints**](docs/BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 *BcfApi* | [**get_visibilities**](docs/BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
+*BcfApi* | [**import_bcf**](docs/BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
 *BcfApi* | [**update_bcf_project**](docs/BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 *BcfApi* | [**update_comment**](docs/BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
 *BcfApi* | [**update_extensions**](docs/BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions

@@ -299,7 +299,7 @@ class Invitation(object):
     def status(self):
         """Gets the status of this Invitation.  # noqa: E501
 
-                 A: Accepted         D: Denied         P: Pending         W: Accepted but waiting for user first login to finish the process           # noqa: E501
+         A: Accepted D: Denied P: Pending W: Accepted but waiting for user first login to finish the process   # noqa: E501
 
         :return: The status of this Invitation.  # noqa: E501
         :rtype: str
@@ -310,7 +310,7 @@ class Invitation(object):
     def status(self, status):
         """Sets the status of this Invitation.
 
-                 A: Accepted         D: Denied         P: Pending         W: Accepted but waiting for user first login to finish the process           # noqa: E501
+         A: Accepted D: Denied P: Pending W: Accepted but waiting for user first login to finish the process   # noqa: E501
 
         :param status: The status of this Invitation.  # noqa: E501
         :type: str

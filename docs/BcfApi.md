@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**get_viewpoint**](BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 [**get_viewpoints**](BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 [**get_visibilities**](BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
+[**import_bcf**](BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
 [**update_bcf_project**](BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 [**update_comment**](BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
 [**update_extensions**](BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions
@@ -4360,6 +4361,146 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **import_bcf**
+> import_bcf(id, name)
+
+Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+
+Import bcf-xml format into this project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this project.
+name = 'name_example' # str | Name of the project
+
+try:
+    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    api_instance.import_bcf(id, name)
+except ApiException as e:
+    print("Exception when calling BcfApi->import_bcf: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this project.
+name = 'name_example' # str | Name of the project
+
+try:
+    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    api_instance.import_bcf(id, name)
+except ApiException as e:
+    print("Exception when calling BcfApi->import_bcf: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.BcfApi(bimdata_api_client.ApiClient(configuration))
+id = 56 # int | A unique integer value identifying this project.
+name = 'name_example' # str | Name of the project
+
+try:
+    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    api_instance.import_bcf(id, name)
+except ApiException as e:
+    print("Exception when calling BcfApi->import_bcf: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this project. | 
+ **name** | **str**| Name of the project | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
