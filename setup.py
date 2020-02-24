@@ -20,7 +20,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 NAME = "bimdata-api-client"
-VERSION = '5.2.0'
+VERSION = '5.3.0'
 # To install the library, run the following
 #
 # python setup.py install
