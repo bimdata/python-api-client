@@ -344,6 +344,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_full_update_element_property_set_property(self):
+        """Test case for full_update_element_property_set_property
+
+        Update a property from an element  # noqa: E501
+        """
+        pass
+
     def test_full_update_ifc(self):
         """Test case for full_update_ifc
 
@@ -785,6 +792,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_reprocess_ifc(self):
+        """Test case for reprocess_ifc
+
+        reprocess IFC file  # noqa: E501
+        """
+        pass
+
     def test_update_access_token(self):
         """Test case for update_access_token
 
@@ -796,6 +810,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_element
 
         Update some fields of a zone  # noqa: E501
+        """
+        pass
+
+    def test_update_element_property_set_property(self):
+        """Test case for update_element_property_set_property
+
+        Update a property from an element  # noqa: E501
         """
         pass
 
