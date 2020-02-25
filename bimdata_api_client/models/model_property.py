@@ -36,16 +36,18 @@ class ModelProperty(object):
     openapi_types = {
         'id': 'int',
         'definition': 'PropertyDefinition',
-        'value': 'object'
+        'value': 'object',
+        'property_set_id': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'definition': 'definition',
-        'value': 'value'
+        'value': 'value',
+        'property_set_id': 'property_set_id'
     }
 
-    def __init__(self, id=None, definition=None, value=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, definition=None, value=None, property_set_id=None, local_vars_configuration=None):  # noqa: E501
         """ModelProperty - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,12 +56,15 @@ class ModelProperty(object):
         self._id = None
         self._definition = None
         self._value = None
+        self._property_set_id = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         self.definition = definition
         self.value = value
+        if property_set_id is not None:
+            self.property_set_id = property_set_id
 
     @property
     def id(self):
@@ -125,6 +130,29 @@ class ModelProperty(object):
         """
 
         self._value = value
+
+    @property
+    def property_set_id(self):
+        """Gets the property_set_id of this ModelProperty.  # noqa: E501
+
+        This field is useful when you update a property and the  API is rebuilding a new property set to avoid an update on many elements. It gives you the new pset id  # noqa: E501
+
+        :return: The property_set_id of this ModelProperty.  # noqa: E501
+        :rtype: str
+        """
+        return self._property_set_id
+
+    @property_set_id.setter
+    def property_set_id(self, property_set_id):
+        """Sets the property_set_id of this ModelProperty.
+
+        This field is useful when you update a property and the  API is rebuilding a new property set to avoid an update on many elements. It gives you the new pset id  # noqa: E501
+
+        :param property_set_id: The property_set_id of this ModelProperty.  # noqa: E501
+        :type: str
+        """
+
+        self._property_set_id = property_set_id
 
     def to_dict(self):
         """Returns the model properties as a dict"""
