@@ -750,6 +750,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_merge_ifcs(self):
+        """Test case for merge_ifcs
+
+        merge IFC files  # noqa: E501
+        """
+        pass
+
     def test_remove_classification_of_element(self):
         """Test case for remove_classification_of_element
 

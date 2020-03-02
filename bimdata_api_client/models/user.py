@@ -182,9 +182,6 @@ class User(object):
         :param firstname: The firstname of this User.  # noqa: E501
         :type: str
         """
-        if (self.local_vars_configuration.client_side_validation and
-                firstname is not None and len(firstname) < 1):
-            raise ValueError("Invalid value for `firstname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._firstname = firstname
 
@@ -206,9 +203,6 @@ class User(object):
         :param lastname: The lastname of this User.  # noqa: E501
         :type: str
         """
-        if (self.local_vars_configuration.client_side_validation and
-                lastname is not None and len(lastname) < 1):
-            raise ValueError("Invalid value for `lastname`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._lastname = lastname
 

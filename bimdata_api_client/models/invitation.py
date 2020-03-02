@@ -299,7 +299,7 @@ class Invitation(object):
     def status(self):
         """Gets the status of this Invitation.  # noqa: E501
 
-         A: Accepted D: Denied P: Pending W: Accepted but waiting for user first login to finish the process   # noqa: E501
+         A: Accepted D: Denied P: Pending   # noqa: E501
 
         :return: The status of this Invitation.  # noqa: E501
         :rtype: str
@@ -310,12 +310,12 @@ class Invitation(object):
     def status(self, status):
         """Sets the status of this Invitation.
 
-         A: Accepted D: Denied P: Pending W: Accepted but waiting for user first login to finish the process   # noqa: E501
+         A: Accepted D: Denied P: Pending   # noqa: E501
 
         :param status: The status of this Invitation.  # noqa: E501
         :type: str
         """
-        allowed_values = ["A", "D", "P", "W"]  # noqa: E501
+        allowed_values = ["A", "D", "P"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and status not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `status` ({0}), must be one of {1}"  # noqa: E501

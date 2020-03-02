@@ -65,6 +65,7 @@ from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
 from bimdata_api_client.models.ifc_errors import IfcErrors
 from bimdata_api_client.models.ifc_export import IfcExport
 from bimdata_api_client.models.ifc_files import IfcFiles
+from bimdata_api_client.models.ifc_merge import IfcMerge
 from bimdata_api_client.models.invitation import Invitation
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.layer import Layer

@@ -3618,9 +3618,9 @@ class BcfApi(object):
             collection_formats=collection_formats)
 
     def import_bcf(self, id, name, **kwargs):  # noqa: E501
-        """Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported  # noqa: E501
+        """Import bcf-xml format into this project  # noqa: E501
 
-        Import bcf-xml format into this project Required scopes: bcf:write  # noqa: E501
+        Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_bcf(id, name, async_req=True)
@@ -3644,9 +3644,9 @@ class BcfApi(object):
         return self.import_bcf_with_http_info(id, name, **kwargs)  # noqa: E501
 
     def import_bcf_with_http_info(self, id, name, **kwargs):  # noqa: E501
-        """Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported  # noqa: E501
+        """Import bcf-xml format into this project  # noqa: E501
 
-        Import bcf-xml format into this project Required scopes: bcf:write  # noqa: E501
+        Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_bcf_with_http_info(id, name, async_req=True)

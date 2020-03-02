@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**get_viewpoint**](BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 [**get_viewpoints**](BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 [**get_visibilities**](BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
-[**import_bcf**](BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+[**import_bcf**](BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project
 [**update_bcf_project**](BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 [**update_comment**](BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
 [**update_extensions**](BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions
@@ -4372,9 +4372,9 @@ Name | Type | Description  | Notes
 # **import_bcf**
 > import_bcf(id, name)
 
-Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+Import bcf-xml format into this project
 
-Import bcf-xml format into this project Required scopes: bcf:write
+Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write
 
 ### Example
 
@@ -4405,7 +4405,7 @@ id = 56 # int | A unique integer value identifying this project.
 name = 'name_example' # str | Name of the project
 
 try:
-    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    # Import bcf-xml format into this project
     api_instance.import_bcf(id, name)
 except ApiException as e:
     print("Exception when calling BcfApi->import_bcf: %s\n" % e)
@@ -4438,7 +4438,7 @@ id = 56 # int | A unique integer value identifying this project.
 name = 'name_example' # str | Name of the project
 
 try:
-    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    # Import bcf-xml format into this project
     api_instance.import_bcf(id, name)
 except ApiException as e:
     print("Exception when calling BcfApi->import_bcf: %s\n" % e)
@@ -4471,7 +4471,7 @@ id = 56 # int | A unique integer value identifying this project.
 name = 'name_example' # str | Name of the project
 
 try:
-    # Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+    # Import bcf-xml format into this project
     api_instance.import_bcf(id, name)
 except ApiException as e:
     print("Exception when calling BcfApi->import_bcf: %s\n" % e)

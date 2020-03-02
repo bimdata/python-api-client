@@ -116,7 +116,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 *BcfApi* | [**get_viewpoints**](docs/BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 *BcfApi* | [**get_visibilities**](docs/BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
-*BcfApi* | [**import_bcf**](docs/BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported
+*BcfApi* | [**import_bcf**](docs/BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project
 *BcfApi* | [**update_bcf_project**](docs/BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 *BcfApi* | [**update_comment**](docs/BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
 *BcfApi* | [**update_extensions**](docs/BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions
@@ -317,6 +317,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_zone_spaces**](docs/IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 *IfcApi* | [**get_zones**](docs/IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
 *IfcApi* | [**list_classification_element_relations**](docs/IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
+*IfcApi* | [**merge_ifcs**](docs/IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | merge IFC files
 *IfcApi* | [**remove_classification_of_element**](docs/IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 *IfcApi* | [**remove_element_property_set**](docs/IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 *IfcApi* | [**remove_element_property_set_property**](docs/IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
@@ -386,6 +387,7 @@ Class | Method | HTTP request | Description
  - [IfcErrors](docs/IfcErrors.md)
  - [IfcExport](docs/IfcExport.md)
  - [IfcFiles](docs/IfcFiles.md)
+ - [IfcMerge](docs/IfcMerge.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
  - [Layer](docs/Layer.md)
