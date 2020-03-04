@@ -228,7 +228,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_get_cloud_users(self):
         """Test case for get_cloud_users
 
-        Retrieve all users in a cloud  # noqa: E501
+        Retrieve all users in a cloud, or a list with a filter by email  # noqa: E501
         """
         pass
 
@@ -312,7 +312,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_get_project_users(self):
         """Test case for get_project_users
 
-        Retrieve all users in a project  # noqa: E501
+        Retrieve all users in a project, or a list with a filter by email  # noqa: E501
         """
         pass
 

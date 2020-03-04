@@ -5,7 +5,7 @@ All URIs are relative to *https://api.bimdata.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**accept_invitation**](SsoApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
-[**delete_user**](SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user form BIMData
+[**delete_user**](SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user from BIMData
 [**deny_invitation**](SsoApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
 [**get_invitation**](SsoApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
 [**get_invitations**](SsoApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
@@ -150,7 +150,7 @@ void (empty response body)
 # **delete_user**
 > delete_user(data)
 
-Delete user form BIMData
+Delete user from BIMData
 
 NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak
 
@@ -182,7 +182,7 @@ api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configurat
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
-    # Delete user form BIMData
+    # Delete user from BIMData
     api_instance.delete_user(data)
 except ApiException as e:
     print("Exception when calling SsoApi->delete_user: %s\n" % e)
@@ -214,7 +214,7 @@ api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configurat
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
-    # Delete user form BIMData
+    # Delete user from BIMData
     api_instance.delete_user(data)
 except ApiException as e:
     print("Exception when calling SsoApi->delete_user: %s\n" % e)
@@ -246,7 +246,7 @@ api_instance = bimdata_api_client.SsoApi(bimdata_api_client.ApiClient(configurat
 data = bimdata_api_client.SelectUser() # SelectUser | 
 
 try:
-    # Delete user form BIMData
+    # Delete user from BIMData
     api_instance.delete_user(data)
 except ApiException as e:
     print("Exception when calling SsoApi->delete_user: %s\n" % e)

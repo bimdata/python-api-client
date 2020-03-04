@@ -142,7 +142,7 @@ class SsoApi(object):
             collection_formats=collection_formats)
 
     def delete_user(self, data, **kwargs):  # noqa: E501
-        """Delete user form BIMData  # noqa: E501
+        """Delete user from BIMData  # noqa: E501
 
         NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -167,7 +167,7 @@ class SsoApi(object):
         return self.delete_user_with_http_info(data, **kwargs)  # noqa: E501
 
     def delete_user_with_http_info(self, data, **kwargs):  # noqa: E501
-        """Delete user form BIMData  # noqa: E501
+        """Delete user from BIMData  # noqa: E501
 
         NON HANDLED EDGE CASE: The user has been created on the identity provider (exists on the IDP) The user (or an app) has requested an access token (exists on keycloak) But the user has never used the API (doesn't exist on the API) So the API can't delete the user and can't forward the call to keycloak so a zombie user will stay on keycloak  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

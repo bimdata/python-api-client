@@ -32,7 +32,7 @@ Method | HTTP request | Description
 [**get_cloud_invitations**](CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
 [**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all files in the cloud
 [**get_cloud_user**](CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
-[**get_cloud_users**](CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud
+[**get_cloud_users**](CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 [**get_clouds**](CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
 [**get_document**](CollaborationApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
 [**get_documents**](CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
@@ -44,7 +44,7 @@ Method | HTTP request | Description
 [**get_project_sub_tree**](CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 [**get_project_tree**](CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 [**get_project_user**](CollaborationApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
-[**get_project_users**](CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project
+[**get_project_users**](CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 [**get_projects**](CollaborationApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 [**get_self_projects**](CollaborationApi.md#get_self_projects) | **GET** /user/projects | List current user&#39;s projects
 [**get_self_user**](CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
@@ -4152,11 +4152,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_cloud_users**
-> list[User] get_cloud_users(cloud_pk)
+> list[User] get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
 
-Retrieve all users in a cloud
+Retrieve all users in a cloud, or a list with a filter by email
 
-Only administrators can see all cloud members Required scopes: cloud:read
+Only administrators can see cloud members. Required scopes: cloud:read
 
 ### Example
 
@@ -4184,10 +4184,14 @@ configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a cloud
-    api_response = api_instance.get_cloud_users(cloud_pk)
+    # Retrieve all users in a cloud, or a list with a filter by email
+    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
@@ -4217,10 +4221,14 @@ configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a cloud
-    api_response = api_instance.get_cloud_users(cloud_pk)
+    # Retrieve all users in a cloud, or a list with a filter by email
+    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
@@ -4250,10 +4258,14 @@ configuration.host = "https://api.bimdata.io"
 # Create an instance of the API class
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a cloud
-    api_response = api_instance.get_cloud_users(cloud_pk)
+    # Retrieve all users in a cloud, or a list with a filter by email
+    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
@@ -4264,6 +4276,10 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
+ **email** | **str**| Filter the returned list by email | [optional] 
+ **email__contains** | **str**| Filter the returned list by email__contains | [optional] 
+ **email__startswith** | **str**| Filter the returned list by email__startswith | [optional] 
+ **email__endswith** | **str**| Filter the returned list by email__endswith | [optional] 
 
 ### Return type
 
@@ -5862,9 +5878,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_project_users**
-> list[User] get_project_users(cloud_pk, project_pk)
+> list[User] get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
 
-Retrieve all users in a project
+Retrieve all users in a project, or a list with a filter by email
 
 Each member of a project can see other members of the project Required scopes: cloud:read
 
@@ -5895,10 +5911,14 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a project
-    api_response = api_instance.get_project_users(cloud_pk, project_pk)
+    # Retrieve all users in a project, or a list with a filter by email
+    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
@@ -5929,10 +5949,14 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a project
-    api_response = api_instance.get_project_users(cloud_pk, project_pk)
+    # Retrieve all users in a project, or a list with a filter by email
+    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
@@ -5963,10 +5987,14 @@ configuration.host = "https://api.bimdata.io"
 api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+email = 'email_example' # str | Filter the returned list by email (optional)
+email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
+email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
+email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
 try:
-    # Retrieve all users in a project
-    api_response = api_instance.get_project_users(cloud_pk, project_pk)
+    # Retrieve all users in a project, or a list with a filter by email
+    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
@@ -5978,6 +6006,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **email** | **str**| Filter the returned list by email | [optional] 
+ **email__contains** | **str**| Filter the returned list by email__contains | [optional] 
+ **email__startswith** | **str**| Filter the returned list by email__startswith | [optional] 
+ **email__endswith** | **str**| Filter the returned list by email__endswith | [optional] 
 
 ### Return type
 

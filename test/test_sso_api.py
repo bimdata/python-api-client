@@ -39,7 +39,7 @@ class TestSsoApi(unittest.TestCase):
     def test_delete_user(self):
         """Test case for delete_user
 
-        Delete user form BIMData  # noqa: E501
+        Delete user from BIMData  # noqa: E501
         """
         pass
 

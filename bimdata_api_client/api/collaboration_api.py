@@ -3504,9 +3504,9 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_users(self, cloud_pk, **kwargs):  # noqa: E501
-        """Retrieve all users in a cloud  # noqa: E501
+        """Retrieve all users in a cloud, or a list with a filter by email  # noqa: E501
 
-        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
+        Only administrators can see cloud members. Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users(cloud_pk, async_req=True)
@@ -3514,6 +3514,10 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
+        :param str email: Filter the returned list by email
+        :param str email__contains: Filter the returned list by email__contains
+        :param str email__startswith: Filter the returned list by email__startswith
+        :param str email__endswith: Filter the returned list by email__endswith
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3529,9 +3533,9 @@ class CollaborationApi(object):
         return self.get_cloud_users_with_http_info(cloud_pk, **kwargs)  # noqa: E501
 
     def get_cloud_users_with_http_info(self, cloud_pk, **kwargs):  # noqa: E501
-        """Retrieve all users in a cloud  # noqa: E501
+        """Retrieve all users in a cloud, or a list with a filter by email  # noqa: E501
 
-        Only administrators can see all cloud members Required scopes: cloud:read  # noqa: E501
+        Only administrators can see cloud members. Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_users_with_http_info(cloud_pk, async_req=True)
@@ -3539,6 +3543,10 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
+        :param str email: Filter the returned list by email
+        :param str email__contains: Filter the returned list by email__contains
+        :param str email__startswith: Filter the returned list by email__startswith
+        :param str email__endswith: Filter the returned list by email__endswith
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3555,7 +3563,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'email', 'email__contains', 'email__startswith', 'email__endswith']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -3581,6 +3589,14 @@ class CollaborationApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
 
         query_params = []
+        if 'email' in local_var_params and local_var_params['email'] is not None:  # noqa: E501
+            query_params.append(('email', local_var_params['email']))  # noqa: E501
+        if 'email__contains' in local_var_params and local_var_params['email__contains'] is not None:  # noqa: E501
+            query_params.append(('email__contains', local_var_params['email__contains']))  # noqa: E501
+        if 'email__startswith' in local_var_params and local_var_params['email__startswith'] is not None:  # noqa: E501
+            query_params.append(('email__startswith', local_var_params['email__startswith']))  # noqa: E501
+        if 'email__endswith' in local_var_params and local_var_params['email__endswith'] is not None:  # noqa: E501
+            query_params.append(('email__endswith', local_var_params['email__endswith']))  # noqa: E501
 
         header_params = {}
 
@@ -4888,7 +4904,7 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_project_users(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all users in a project  # noqa: E501
+        """Retrieve all users in a project, or a list with a filter by email  # noqa: E501
 
         Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -4899,6 +4915,10 @@ class CollaborationApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str email: Filter the returned list by email
+        :param str email__contains: Filter the returned list by email__contains
+        :param str email__startswith: Filter the returned list by email__startswith
+        :param str email__endswith: Filter the returned list by email__endswith
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4914,7 +4934,7 @@ class CollaborationApi(object):
         return self.get_project_users_with_http_info(cloud_pk, project_pk, **kwargs)  # noqa: E501
 
     def get_project_users_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all users in a project  # noqa: E501
+        """Retrieve all users in a project, or a list with a filter by email  # noqa: E501
 
         Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -4925,6 +4945,10 @@ class CollaborationApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str project_pk: (required)
+        :param str email: Filter the returned list by email
+        :param str email__contains: Filter the returned list by email__contains
+        :param str email__startswith: Filter the returned list by email__startswith
+        :param str email__endswith: Filter the returned list by email__endswith
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4941,7 +4965,7 @@ class CollaborationApi(object):
 
         local_var_params = locals()
 
-        all_params = ['cloud_pk', 'project_pk']  # noqa: E501
+        all_params = ['cloud_pk', 'project_pk', 'email', 'email__contains', 'email__startswith', 'email__endswith']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -4973,6 +4997,14 @@ class CollaborationApi(object):
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
         query_params = []
+        if 'email' in local_var_params and local_var_params['email'] is not None:  # noqa: E501
+            query_params.append(('email', local_var_params['email']))  # noqa: E501
+        if 'email__contains' in local_var_params and local_var_params['email__contains'] is not None:  # noqa: E501
+            query_params.append(('email__contains', local_var_params['email__contains']))  # noqa: E501
+        if 'email__startswith' in local_var_params and local_var_params['email__startswith'] is not None:  # noqa: E501
+            query_params.append(('email__startswith', local_var_params['email__startswith']))  # noqa: E501
+        if 'email__endswith' in local_var_params and local_var_params['email__endswith'] is not None:  # noqa: E501
+            query_params.append(('email__endswith', local_var_params['email__endswith']))  # noqa: E501
 
         header_params = {}
 

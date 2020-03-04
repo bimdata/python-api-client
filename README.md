@@ -188,7 +188,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_cloud_invitations**](docs/CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
 *CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all files in the cloud
 *CollaborationApi* | [**get_cloud_user**](docs/CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
-*CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud
+*CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 *CollaborationApi* | [**get_clouds**](docs/CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
 *CollaborationApi* | [**get_document**](docs/CollaborationApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
 *CollaborationApi* | [**get_documents**](docs/CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
@@ -200,7 +200,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 *CollaborationApi* | [**get_project_tree**](docs/CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 *CollaborationApi* | [**get_project_user**](docs/CollaborationApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
-*CollaborationApi* | [**get_project_users**](docs/CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project
+*CollaborationApi* | [**get_project_users**](docs/CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 *CollaborationApi* | [**get_projects**](docs/CollaborationApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 *CollaborationApi* | [**get_self_projects**](docs/CollaborationApi.md#get_self_projects) | **GET** /user/projects | List current user&#39;s projects
 *CollaborationApi* | [**get_self_user**](docs/CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
@@ -341,7 +341,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_zone**](docs/IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 *SsoApi* | [**accept_invitation**](docs/SsoApi.md#accept_invitation) | **POST** /identity-provider/invitation/{id}/accept | Accept an invitation
-*SsoApi* | [**delete_user**](docs/SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user form BIMData
+*SsoApi* | [**delete_user**](docs/SsoApi.md#delete_user) | **DELETE** /identity-provider/user | Delete user from BIMData
 *SsoApi* | [**deny_invitation**](docs/SsoApi.md#deny_invitation) | **POST** /identity-provider/invitation/{id}/deny | Deny an invitation
 *SsoApi* | [**get_invitation**](docs/SsoApi.md#get_invitation) | **GET** /identity-provider/invitation/{id} | Retrieve an invitation
 *SsoApi* | [**get_invitations**](docs/SsoApi.md#get_invitations) | **GET** /identity-provider/invitation | Retrieve all invitations
