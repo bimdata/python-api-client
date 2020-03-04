@@ -3,15 +3,8 @@ version: 2
 references:
   container_config: &container_config
     docker:
-      - image: circleci/python:3.6
+      - image: circleci/python:3.8
     working_directory: ~/repo
-
-  restore_repo: &restore_repo
-    restore_cache:
-      keys:
-        - v1-repo-{{ .Branch }}-{{ .Revision }}
-        - v1-repo-{{ .Branch }}
-        - v1-repo
 
   restore_env: &restore_env
     restore_cache:
@@ -20,20 +13,11 @@ references:
         - v1-dependencies
 
 jobs:
-  checkout_code:
-    <<: *container_config
-    steps:
-      - *restore_repo
-      - checkout
-      - save_cache:
-          key: v1-repo-{{ .Branch }}-{{ .Revision }}
-          paths:
-            - .
   test:
     <<: *container_config
 
     steps:
-      - *restore_repo
+      - checkout
       - *restore_env
 
       - run:
@@ -66,7 +50,7 @@ jobs:
   release:
     <<: *container_config
     steps:
-      - *restore_repo
+      - checkout
       - *restore_env
       - add_ssh_keys
       - run:
@@ -83,13 +67,9 @@ workflows:
   version: 2
   test_and_release:
     jobs:
-      - checkout_code
-      - test:
-          requires:
-            - checkout_code
+      - test
       - release:
           requires:
-            - checkout_code
             - test
           filters:
             branches:
