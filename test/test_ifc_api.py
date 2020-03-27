@@ -753,7 +753,14 @@ class TestIfcApi(unittest.TestCase):
     def test_merge_ifcs(self):
         """Test case for merge_ifcs
 
-        merge IFC files  # noqa: E501
+        Merge IFC files  # noqa: E501
+        """
+        pass
+
+    def test_optimize_ifc(self):
+        """Test case for optimize_ifc
+
+        Optimize the IFC  # noqa: E501
         """
         pass
 
@@ -802,7 +809,7 @@ class TestIfcApi(unittest.TestCase):
     def test_reprocess_ifc(self):
         """Test case for reprocess_ifc
 
-        reprocess IFC file  # noqa: E501
+        Reprocess IFC file  # noqa: E501
         """
         pass
 

@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **guid** | **str** |  | [optional] 
 **date** | **datetime** |  | [optional] 
 **author** | **str** |  | [optional] [readonly] 
-**comment** | **str** |  | 
+**comment** | **str** |  | [optional] 
 **viewpoint_guid** | **str** |  | [optional] 
 **reply_to_comment_guid** | **str** |  | [optional] 
 **topic_guid** | **str** |  | [optional] [readonly] 

@@ -249,7 +249,7 @@ class Ifc(object):
         :param source: The source of this Ifc.  # noqa: E501
         :type: str
         """
-        allowed_values = ["UPLOAD", "SPLIT", "MERGE", "EXPORT"]  # noqa: E501
+        allowed_values = ["UPLOAD", "SPLIT", "MERGE", "EXPORT", "OPTIMIZED"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and source not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `source` ({0}), must be one of {1}"  # noqa: E501

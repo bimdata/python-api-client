@@ -82,7 +82,8 @@ class Comment(object):
         if date is not None:
             self.date = date
         self.author = author
-        self.comment = comment
+        if comment is not None:
+            self.comment = comment
         self.viewpoint_guid = viewpoint_guid
         self.reply_to_comment_guid = reply_to_comment_guid
         if topic_guid is not None:
@@ -174,11 +175,6 @@ class Comment(object):
         :param comment: The comment of this Comment.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and comment is None:  # noqa: E501
-            raise ValueError("Invalid value for `comment`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                comment is not None and len(comment) < 1):
-            raise ValueError("Invalid value for `comment`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._comment = comment
 

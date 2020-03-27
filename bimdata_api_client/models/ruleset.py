@@ -35,7 +35,7 @@ class Ruleset(object):
     """
     openapi_types = {
         'id': 'int',
-        'parent_ruleset_id': 'str',
+        'parent_ruleset_id': 'int',
         'name': 'str',
         'description': 'str',
         'rules': 'list[Rule]',
@@ -103,7 +103,7 @@ class Ruleset(object):
 
 
         :return: The parent_ruleset_id of this Ruleset.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._parent_ruleset_id
 
@@ -113,7 +113,7 @@ class Ruleset(object):
 
 
         :param parent_ruleset_id: The parent_ruleset_id of this Ruleset.  # noqa: E501
-        :type: str
+        :type: int
         """
 
         self._parent_ruleset_id = parent_ruleset_id

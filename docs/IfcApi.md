@@ -107,14 +107,15 @@ Method | HTTP request | Description
 [**get_zone_spaces**](IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 [**get_zones**](IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
 [**list_classification_element_relations**](IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
-[**merge_ifcs**](IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | merge IFC files
+[**merge_ifcs**](IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
+[**optimize_ifc**](IfcApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
 [**remove_classification_of_element**](IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 [**remove_element_property_set**](IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 [**remove_element_property_set_property**](IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
 [**remove_element_property_set_property_definition**](IfcApi.md#remove_element_property_set_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Remove a Definition from a Property
 [**remove_element_property_set_property_definition_unit**](IfcApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
 [**remove_elements_from_classification**](IfcApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/{uuid} | Remove the classification from all elements
-[**reprocess_ifc**](IfcApi.md#reprocess_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | reprocess IFC file
+[**reprocess_ifc**](IfcApi.md#reprocess_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | Reprocess IFC file
 [**update_access_token**](IfcApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
 [**update_element**](IfcApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of a zone
 [**update_element_property_set_property**](IfcApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
@@ -15724,9 +15725,9 @@ Name | Type | Description  | Notes
 # **merge_ifcs**
 > merge_ifcs(cloud_pk, project_pk, data)
 
-merge IFC files
+Merge IFC files
 
-Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list. Required scopes: ifc:write
+Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write
 
 ### Example
 
@@ -15758,7 +15759,7 @@ project_pk = 'project_pk_example' # str |
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
 try:
-    # merge IFC files
+    # Merge IFC files
     api_instance.merge_ifcs(cloud_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->merge_ifcs: %s\n" % e)
@@ -15792,7 +15793,7 @@ project_pk = 'project_pk_example' # str |
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
 try:
-    # merge IFC files
+    # Merge IFC files
     api_instance.merge_ifcs(cloud_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->merge_ifcs: %s\n" % e)
@@ -15826,7 +15827,7 @@ project_pk = 'project_pk_example' # str |
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
 try:
-    # merge IFC files
+    # Merge IFC files
     api_instance.merge_ifcs(cloud_pk, project_pk, data)
 except ApiException as e:
     print("Exception when calling IfcApi->merge_ifcs: %s\n" % e)
@@ -15839,6 +15840,154 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcMerge**](IfcMerge.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **optimize_ifc**
+> optimize_ifc(cloud_pk, id, project_pk, data)
+
+Optimize the IFC
+
+Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.IfcOptimize() # IfcOptimize | 
+
+try:
+    # Optimize the IFC
+    api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
+except ApiException as e:
+    print("Exception when calling IfcApi->optimize_ifc: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.IfcOptimize() # IfcOptimize | 
+
+try:
+    # Optimize the IFC
+    api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
+except ApiException as e:
+    print("Exception when calling IfcApi->optimize_ifc: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this ifc.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.IfcOptimize() # IfcOptimize | 
+
+try:
+    # Optimize the IFC
+    api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
+except ApiException as e:
+    print("Exception when calling IfcApi->optimize_ifc: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this ifc. | 
+ **project_pk** | **str**|  | 
+ **data** | [**IfcOptimize**](IfcOptimize.md)|  | 
 
 ### Return type
 
@@ -16804,7 +16953,7 @@ void (empty response body)
 # **reprocess_ifc**
 > reprocess_ifc(cloud_pk, id, project_pk)
 
-reprocess IFC file
+Reprocess IFC file
 
 Reprocess the IFC. All data that are not in the original IFC files will be lost Required scopes: ifc:write
 
@@ -16838,7 +16987,7 @@ id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
-    # reprocess IFC file
+    # Reprocess IFC file
     api_instance.reprocess_ifc(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->reprocess_ifc: %s\n" % e)
@@ -16872,7 +17021,7 @@ id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
-    # reprocess IFC file
+    # Reprocess IFC file
     api_instance.reprocess_ifc(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->reprocess_ifc: %s\n" % e)
@@ -16906,7 +17055,7 @@ id = 56 # int | A unique integer value identifying this ifc.
 project_pk = 'project_pk_example' # str | 
 
 try:
-    # reprocess IFC file
+    # Reprocess IFC file
     api_instance.reprocess_ifc(cloud_pk, id, project_pk)
 except ApiException as e:
     print("Exception when calling IfcApi->reprocess_ifc: %s\n" % e)

@@ -317,14 +317,15 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_zone_spaces**](docs/IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 *IfcApi* | [**get_zones**](docs/IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
 *IfcApi* | [**list_classification_element_relations**](docs/IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
-*IfcApi* | [**merge_ifcs**](docs/IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | merge IFC files
+*IfcApi* | [**merge_ifcs**](docs/IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
+*IfcApi* | [**optimize_ifc**](docs/IfcApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
 *IfcApi* | [**remove_classification_of_element**](docs/IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 *IfcApi* | [**remove_element_property_set**](docs/IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 *IfcApi* | [**remove_element_property_set_property**](docs/IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
 *IfcApi* | [**remove_element_property_set_property_definition**](docs/IfcApi.md#remove_element_property_set_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Remove a Definition from a Property
 *IfcApi* | [**remove_element_property_set_property_definition_unit**](docs/IfcApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
 *IfcApi* | [**remove_elements_from_classification**](docs/IfcApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/{uuid} | Remove the classification from all elements
-*IfcApi* | [**reprocess_ifc**](docs/IfcApi.md#reprocess_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | reprocess IFC file
+*IfcApi* | [**reprocess_ifc**](docs/IfcApi.md#reprocess_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | Reprocess IFC file
 *IfcApi* | [**update_access_token**](docs/IfcApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
 *IfcApi* | [**update_element**](docs/IfcApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of a zone
 *IfcApi* | [**update_element_property_set_property**](docs/IfcApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
@@ -388,6 +389,7 @@ Class | Method | HTTP request | Description
  - [IfcExport](docs/IfcExport.md)
  - [IfcFiles](docs/IfcFiles.md)
  - [IfcMerge](docs/IfcMerge.md)
+ - [IfcOptimize](docs/IfcOptimize.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
  - [Layer](docs/Layer.md)
