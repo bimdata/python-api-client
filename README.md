@@ -165,6 +165,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_classification**](docs/CollaborationApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 *CollaborationApi* | [**create_cloud**](docs/CollaborationApi.md#create_cloud) | **POST** /cloud | Create a cloud
 *CollaborationApi* | [**create_demo**](docs/CollaborationApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
+*CollaborationApi* | [**create_dms_tree**](docs/CollaborationApi.md#create_dms_tree) | **POST** /cloud/{cloud_pk}/project/{id}/dms-tree | Create a complete DMS tree
 *CollaborationApi* | [**create_document**](docs/CollaborationApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *CollaborationApi* | [**create_folder**](docs/CollaborationApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
 *CollaborationApi* | [**create_project**](docs/CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project

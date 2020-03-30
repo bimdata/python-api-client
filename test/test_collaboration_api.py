@@ -64,6 +64,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_create_dms_tree(self):
+        """Test case for create_dms_tree
+
+        Create a complete DMS tree  # noqa: E501
+        """
+        pass
+
     def test_create_document(self):
         """Test case for create_document
 
