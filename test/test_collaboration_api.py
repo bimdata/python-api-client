@@ -92,6 +92,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_create_project_access_token(self):
+        """Test case for create_project_access_token
+
+        Create a token for this project  # noqa: E501
+        """
+        pass
+
     def test_delete_classification(self):
         """Test case for delete_classification
 
@@ -131,6 +138,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for delete_project
 
         Delete a project  # noqa: E501
+        """
+        pass
+
+    def test_delete_project_access_token(self):
+        """Test case for delete_project_access_token
+
+        Delete a token  # noqa: E501
         """
         pass
 
@@ -180,6 +194,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for full_update_project
 
         Update all fields of a project  # noqa: E501
+        """
+        pass
+
+    def test_full_update_project_access_token(self):
+        """Test case for full_update_project_access_token
+
+        Update all fields of a token  # noqa: E501
         """
         pass
 
@@ -278,6 +299,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_project
 
         Retrieve a project  # noqa: E501
+        """
+        pass
+
+    def test_get_project_access_token(self):
+        """Test case for get_project_access_token
+
+        Retrieve one token created for this project  # noqa: E501
+        """
+        pass
+
+    def test_get_project_access_tokens(self):
+        """Test case for get_project_access_tokens
+
+        Retrieve all tokens created for this project  # noqa: E501
         """
         pass
 
@@ -397,6 +432,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_project
 
         Update some fields of a project  # noqa: E501
+        """
+        pass
+
+    def test_update_project_access_token(self):
+        """Test case for update_project_access_token
+
+        Update some fields of a token  # noqa: E501
         """
         pass
 

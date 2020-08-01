@@ -79,6 +79,7 @@ from bimdata_api_client.models.point import Point
 from bimdata_api_client.models.priority import Priority
 from bimdata_api_client.models.processor_handler import ProcessorHandler
 from bimdata_api_client.models.project import Project
+from bimdata_api_client.models.project_access_token import ProjectAccessToken
 from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
 from bimdata_api_client.models.project_with_children import ProjectWithChildren

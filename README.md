@@ -169,12 +169,14 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_document**](docs/CollaborationApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *CollaborationApi* | [**create_folder**](docs/CollaborationApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
 *CollaborationApi* | [**create_project**](docs/CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
+*CollaborationApi* | [**create_project_access_token**](docs/CollaborationApi.md#create_project_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/access-token | Create a token for this project
 *CollaborationApi* | [**delete_classification**](docs/CollaborationApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
 *CollaborationApi* | [**delete_cloud**](docs/CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 *CollaborationApi* | [**delete_cloud_user**](docs/CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
 *CollaborationApi* | [**delete_document**](docs/CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
 *CollaborationApi* | [**delete_folder**](docs/CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
 *CollaborationApi* | [**delete_project**](docs/CollaborationApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
+*CollaborationApi* | [**delete_project_access_token**](docs/CollaborationApi.md#delete_project_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Delete a token
 *CollaborationApi* | [**delete_project_user**](docs/CollaborationApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
 *CollaborationApi* | [**full_update_classification**](docs/CollaborationApi.md#full_update_classification) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update all fields of a classification
 *CollaborationApi* | [**full_update_cloud**](docs/CollaborationApi.md#full_update_cloud) | **PUT** /cloud/{id} | Update all fields of a cloud
@@ -182,6 +184,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**full_update_document**](docs/CollaborationApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update all fields of the document
 *CollaborationApi* | [**full_update_folder**](docs/CollaborationApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update all fields of a folder
 *CollaborationApi* | [**full_update_project**](docs/CollaborationApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | Update all fields of a project
+*CollaborationApi* | [**full_update_project_access_token**](docs/CollaborationApi.md#full_update_project_access_token) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update all fields of a token
 *CollaborationApi* | [**full_update_project_user**](docs/CollaborationApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update all fields of a project user
 *CollaborationApi* | [**get_classification**](docs/CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
@@ -196,6 +199,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_folder**](docs/CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 *CollaborationApi* | [**get_folders**](docs/CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
 *CollaborationApi* | [**get_project**](docs/CollaborationApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
+*CollaborationApi* | [**get_project_access_token**](docs/CollaborationApi.md#get_project_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Retrieve one token created for this project
+*CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 *CollaborationApi* | [**get_project_dms_tree**](docs/CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
 *CollaborationApi* | [**get_project_invitations**](docs/CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 *CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
@@ -213,6 +218,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_document**](docs/CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
+*CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user
 *CollaborationApi* | [**update_self_user**](docs/CollaborationApi.md#update_self_user) | **PATCH** /user | Update info of the current user
 *IfcApi* | [**add_ifc_errors**](docs/IfcApi.md#add_ifc_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to IFC
@@ -403,6 +409,7 @@ Class | Method | HTTP request | Description
  - [Priority](docs/Priority.md)
  - [ProcessorHandler](docs/ProcessorHandler.md)
  - [Project](docs/Project.md)
+ - [ProjectAccessToken](docs/ProjectAccessToken.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectRole](docs/ProjectRole.md)
  - [ProjectWithChildren](docs/ProjectWithChildren.md)
