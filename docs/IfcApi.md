@@ -109,6 +109,7 @@ Method | HTTP request | Description
 [**list_classification_element_relations**](IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
 [**merge_ifcs**](IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
 [**optimize_ifc**](IfcApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
+[**remove_all_element_property_set**](IfcApi.md#remove_all_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
 [**remove_classification_of_element**](IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 [**remove_element_property_set**](IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 [**remove_element_property_set_property**](IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
@@ -16014,6 +16015,154 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **remove_all_element_property_set**
+> remove_all_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk)
+
+Remove all property sets from element
+
+Remove all property sets from element. Property Sets will not be deleted, just detached from element Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    # Remove all property sets from element
+    api_instance.remove_all_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk)
+except ApiException as e:
+    print("Exception when calling IfcApi->remove_all_element_property_set: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    # Remove all property sets from element
+    api_instance.remove_all_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk)
+except ApiException as e:
+    print("Exception when calling IfcApi->remove_all_element_property_set: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+configuration = bimdata_api_client.Configuration()
+# Configure API key authorization: Bearer
+configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+configuration = bimdata_api_client.Configuration()
+# Configure OAuth2 access token for authorization: client_credentials
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Defining host is optional and default to https://api.bimdata.io
+configuration.host = "https://api.bimdata.io"
+# Create an instance of the API class
+api_instance = bimdata_api_client.IfcApi(bimdata_api_client.ApiClient(configuration))
+cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+try:
+    # Remove all property sets from element
+    api_instance.remove_all_element_property_set(cloud_pk, element_uuid, ifc_pk, project_pk)
+except ApiException as e:
+    print("Exception when calling IfcApi->remove_all_element_property_set: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **remove_classification_of_element**
 > remove_classification_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
 
@@ -17719,7 +17868,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_ifc_files**
-> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+> IfcFiles update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
 
 Update models file (gltf, svg, structure, etc)
 
@@ -17757,13 +17906,14 @@ structure_file = '/path/to/file' # file |  (optional)
 systems_file = '/path/to/file' # file |  (optional)
 map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
 xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -17799,13 +17949,14 @@ structure_file = '/path/to/file' # file |  (optional)
 systems_file = '/path/to/file' # file |  (optional)
 map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
 xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -17841,13 +17992,14 @@ structure_file = '/path/to/file' # file |  (optional)
 systems_file = '/path/to/file' # file |  (optional)
 map_file = '/path/to/file' # file |  (optional)
 gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
 bvh_tree_file = '/path/to/file' # file |  (optional)
 viewer_360_file = '/path/to/file' # file |  (optional)
 xkt_file = '/path/to/file' # file |  (optional)
 
 try:
     # Update models file (gltf, svg, structure, etc)
-    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+    api_response = api_instance.update_ifc_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling IfcApi->update_ifc_files: %s\n" % e)
@@ -17864,6 +18016,7 @@ Name | Type | Description  | Notes
  **systems_file** | **file**|  | [optional] 
  **map_file** | **file**|  | [optional] 
  **gltf_file** | **file**|  | [optional] 
+ **gltf_with_openings_file** | **file**|  | [optional] 
  **bvh_tree_file** | **file**|  | [optional] 
  **viewer_360_file** | **file**|  | [optional] 
  **xkt_file** | **file**|  | [optional] 

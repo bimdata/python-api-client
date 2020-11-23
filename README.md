@@ -162,6 +162,7 @@ Class | Method | HTTP request | Description
 *CheckerApi* | [**update_ruleset**](docs/CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
 *CollaborationApi* | [**cancel_cloud_user_invitation**](docs/CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**cancel_project_user_invitation**](docs/CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
+*CollaborationApi* | [**check_access**](docs/CollaborationApi.md#check_access) | **GET** /cloud/{id}/check-access | Check app access from cloud
 *CollaborationApi* | [**create_classification**](docs/CollaborationApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 *CollaborationApi* | [**create_cloud**](docs/CollaborationApi.md#create_cloud) | **POST** /cloud | Create a cloud
 *CollaborationApi* | [**create_demo**](docs/CollaborationApi.md#create_demo) | **POST** /cloud/{id}/create-demo | Create a Demo project in a cloud
@@ -326,6 +327,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**list_classification_element_relations**](docs/IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
 *IfcApi* | [**merge_ifcs**](docs/IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
 *IfcApi* | [**optimize_ifc**](docs/IfcApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
+*IfcApi* | [**remove_all_element_property_set**](docs/IfcApi.md#remove_all_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
 *IfcApi* | [**remove_classification_of_element**](docs/IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
 *IfcApi* | [**remove_element_property_set**](docs/IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 *IfcApi* | [**remove_element_property_set_property**](docs/IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
@@ -369,7 +371,6 @@ Class | Method | HTTP request | Description
  - [CheckPlan](docs/CheckPlan.md)
  - [CheckerResult](docs/CheckerResult.md)
  - [Classification](docs/Classification.md)
- - [ClientUser](docs/ClientUser.md)
  - [ClippingPlane](docs/ClippingPlane.md)
  - [Cloud](docs/Cloud.md)
  - [CloudInvitation](docs/CloudInvitation.md)
@@ -403,6 +404,7 @@ Class | Method | HTTP request | Description
  - [LayerElement](docs/LayerElement.md)
  - [Line](docs/Line.md)
  - [ModelProperty](docs/ModelProperty.md)
+ - [Organization](docs/Organization.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [PerspectiveCamera](docs/PerspectiveCamera.md)
  - [Point](docs/Point.md)
@@ -479,6 +481,6 @@ Class | Method | HTTP request | Description
 
 ## Author
 
-contact@bimdata.io
+support@bimdata.io
 
 

@@ -6,8 +6,10 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] [readonly] 
 **name** | **str** | Name of the cloud | 
 **features** | [**list[Feature]**](Feature.md) |  | [optional] [readonly] 
+**marketplace_apps** | **str** |  | [optional] [readonly] 
+**organization** | [**Organization**](Organization.md) |  | [optional] 
 **creator** | [**User**](User.md) |  | [optional] 
-**creator_app** | [**ClientUser**](ClientUser.md) |  | [optional] 
+**creator_app** | **str** |  | [optional] [readonly] 
 **is_default** | **bool** |  | [optional] [readonly] 
 **created_at** | **datetime** | Creation date | [optional] [readonly] 
 **image** | **str** |  | [optional] [readonly] 

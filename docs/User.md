@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **cloud_role** | **int** |  | [optional] [readonly] 
 **project_role** | **int** |  | [optional] [readonly] 
 **provider** | **str** |  | [optional] [readonly] 
+**sub** | **str** | sub from Keycloak | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
