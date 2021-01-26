@@ -249,7 +249,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_get_cloud_size(self):
         """Test case for get_cloud_size
 
-        Get size of all files in the cloud  # noqa: E501
+        Get size of all ifc files in the cloud  # noqa: E501
         """
         pass
 

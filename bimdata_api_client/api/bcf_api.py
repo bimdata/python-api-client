@@ -905,7 +905,7 @@ class BcfApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: file
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -934,7 +934,7 @@ class BcfApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(file, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -978,6 +978,10 @@ class BcfApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -989,7 +993,7 @@ class BcfApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='file',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -3156,7 +3160,7 @@ class BcfApi(object):
     def get_user(self, **kwargs):  # noqa: E501
         """Get current user info  # noqa: E501
 
-        Get current user info Required scopes: bcf:read  # noqa: E501
+        Get current user info. If request comes from an App, the response is always:         {             \"id\": None,             \"name\": None,             \"is_client\": True,         } Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_user(async_req=True)
@@ -3180,7 +3184,7 @@ class BcfApi(object):
     def get_user_with_http_info(self, **kwargs):  # noqa: E501
         """Get current user info  # noqa: E501
 
-        Get current user info Required scopes: bcf:read  # noqa: E501
+        Get current user info. If request comes from an App, the response is always:         {             \"id\": None,             \"name\": None,             \"is_client\": True,         } Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_user_with_http_info(async_req=True)

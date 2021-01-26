@@ -35,7 +35,6 @@ from bimdata_api_client.exceptions import ApiKeyError
 from bimdata_api_client.exceptions import ApiException
 # import models into sdk package
 from bimdata_api_client.models.bcf_project import BcfProject
-from bimdata_api_client.models.bcf_user import BcfUser
 from bimdata_api_client.models.check_plan import CheckPlan
 from bimdata_api_client.models.checker_result import CheckerResult
 from bimdata_api_client.models.classification import Classification

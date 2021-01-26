@@ -154,6 +154,9 @@ class Comment(object):
         :param author: The author of this Comment.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                author is not None and len(author) > 254):
+            raise ValueError("Invalid value for `author`, length must be less than or equal to `254`")  # noqa: E501
 
         self._author = author
 
@@ -259,6 +262,9 @@ class Comment(object):
         :param modified_author: The modified_author of this Comment.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                modified_author is not None and len(modified_author) > 254):
+            raise ValueError("Invalid value for `modified_author`, length must be less than or equal to `254`")  # noqa: E501
 
         self._modified_author = modified_author
 

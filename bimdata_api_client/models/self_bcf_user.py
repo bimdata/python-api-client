@@ -36,16 +36,18 @@ class SelfBcfUser(object):
     openapi_types = {
         'id': 'str',
         'name': 'str',
-        'email': 'str'
+        'email': 'str',
+        'is_client': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
-        'email': 'email'
+        'email': 'email',
+        'is_client': 'is_client'
     }
 
-    def __init__(self, id=None, name=None, email=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, email=None, is_client=None, local_vars_configuration=None):  # noqa: E501
         """SelfBcfUser - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,12 +56,15 @@ class SelfBcfUser(object):
         self._id = None
         self._name = None
         self._email = None
+        self._is_client = None
         self.discriminator = None
 
         self.id = id
         if name is not None:
             self.name = name
         self.email = email
+        if is_client is not None:
+            self.is_client = is_client
 
     @property
     def id(self):
@@ -136,6 +141,27 @@ class SelfBcfUser(object):
             raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
+
+    @property
+    def is_client(self):
+        """Gets the is_client of this SelfBcfUser.  # noqa: E501
+
+
+        :return: The is_client of this SelfBcfUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_client
+
+    @is_client.setter
+    def is_client(self, is_client):
+        """Sets the is_client of this SelfBcfUser.
+
+
+        :param is_client: The is_client of this SelfBcfUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_client = is_client
 
     def to_dict(self):
         """Returns the model properties as a dict"""

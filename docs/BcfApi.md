@@ -1052,7 +1052,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **download_bcf_export**
-> download_bcf_export(id, topics=topics, format=format)
+> file download_bcf_export(id, topics=topics, format=format)
 
 Export project's topics in bcf-xml format
 
@@ -1089,7 +1089,8 @@ format = 'format_example' # str | topic format to export, comma separated. Defau
 
 try:
     # Export project's topics in bcf-xml format
-    api_instance.download_bcf_export(id, topics=topics, format=format)
+    api_response = api_instance.download_bcf_export(id, topics=topics, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 ```
@@ -1123,7 +1124,8 @@ format = 'format_example' # str | topic format to export, comma separated. Defau
 
 try:
     # Export project's topics in bcf-xml format
-    api_instance.download_bcf_export(id, topics=topics, format=format)
+    api_response = api_instance.download_bcf_export(id, topics=topics, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 ```
@@ -1157,7 +1159,8 @@ format = 'format_example' # str | topic format to export, comma separated. Defau
 
 try:
     # Export project's topics in bcf-xml format
-    api_instance.download_bcf_export(id, topics=topics, format=format)
+    api_response = api_instance.download_bcf_export(id, topics=topics, format=format)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling BcfApi->download_bcf_export: %s\n" % e)
 ```
@@ -1172,7 +1175,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+**file**
 
 ### Authorization
 
@@ -1181,12 +1184,12 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** | The file |  -  |
+**200** | bcf-xml file |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -3804,7 +3807,7 @@ Name | Type | Description  | Notes
 
 Get current user info
 
-Get current user info Required scopes: bcf:read
+Get current user info. If request comes from an App, the response is always:         {             \"id\": None,             \"name\": None,             \"is_client\": True,         } Required scopes: bcf:read
 
 ### Example
 

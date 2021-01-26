@@ -35,7 +35,7 @@ Method | HTTP request | Description
 [**get_classifications**](CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 [**get_cloud**](CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 [**get_cloud_invitations**](CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
-[**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all files in the cloud
+[**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all ifc files in the cloud
 [**get_cloud_user**](CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 [**get_cloud_users**](CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 [**get_clouds**](CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
@@ -4602,7 +4602,7 @@ Name | Type | Description  | Notes
 # **get_cloud_size**
 > int get_cloud_size(id)
 
-Get size of all files in the cloud
+Get size of all ifc files in the cloud
 
 Returns the size of the cloud in Bytes
 
@@ -4634,7 +4634,7 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
-    # Get size of all files in the cloud
+    # Get size of all ifc files in the cloud
     api_response = api_instance.get_cloud_size(id)
     pprint(api_response)
 except ApiException as e:
@@ -4667,7 +4667,7 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
-    # Get size of all files in the cloud
+    # Get size of all ifc files in the cloud
     api_response = api_instance.get_cloud_size(id)
     pprint(api_response)
 except ApiException as e:
@@ -4700,7 +4700,7 @@ api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(
 id = 56 # int | A unique integer value identifying this cloud.
 
 try:
-    # Get size of all files in the cloud
+    # Get size of all ifc files in the cloud
     api_response = api_instance.get_cloud_size(id)
     pprint(api_response)
 except ApiException as e:

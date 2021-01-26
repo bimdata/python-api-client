@@ -5,9 +5,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **guid** | **str** |  | [optional] 
 **creation_date** | **datetime** |  | [optional] 
-**creation_author** | **str** |  | [optional] [readonly] 
+**creation_author** | **str** |  | [optional] 
 **modified_date** | **datetime** |  | [optional] [readonly] 
-**modified_author** | **str** |  | [optional] [readonly] 
+**modified_author** | **str** |  | [optional] 
 **title** | **str** |  | 
 **description** | **str** |  | [optional] 
 **reference_links** | **list[str]** |  | [optional] 

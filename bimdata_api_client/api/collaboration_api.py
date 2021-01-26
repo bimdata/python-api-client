@@ -3892,7 +3892,7 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_size(self, id, **kwargs):  # noqa: E501
-        """Get size of all files in the cloud  # noqa: E501
+        """Get size of all ifc files in the cloud  # noqa: E501
 
         Returns the size of the cloud in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -3917,7 +3917,7 @@ class CollaborationApi(object):
         return self.get_cloud_size_with_http_info(id, **kwargs)  # noqa: E501
 
     def get_cloud_size_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Get size of all files in the cloud  # noqa: E501
+        """Get size of all ifc files in the cloud  # noqa: E501
 
         Returns the size of the cloud in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

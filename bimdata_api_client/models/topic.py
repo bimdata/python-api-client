@@ -113,12 +113,10 @@ class Topic(object):
         self.labels = labels
         if creation_date is not None:
             self.creation_date = creation_date
-        if creation_author is not None:
-            self.creation_author = creation_author
+        self.creation_author = creation_author
         if modified_date is not None:
             self.modified_date = modified_date
-        if modified_author is not None:
-            self.modified_author = modified_author
+        self.modified_author = modified_author
         self.assigned_to = assigned_to
         self.reference_links = reference_links
         self.stage = stage
@@ -301,6 +299,9 @@ class Topic(object):
         :param creation_author: The creation_author of this Topic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                creation_author is not None and len(creation_author) > 254):
+            raise ValueError("Invalid value for `creation_author`, length must be less than or equal to `254`")  # noqa: E501
 
         self._creation_author = creation_author
 
@@ -343,6 +344,9 @@ class Topic(object):
         :param modified_author: The modified_author of this Topic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                modified_author is not None and len(modified_author) > 254):
+            raise ValueError("Invalid value for `modified_author`, length must be less than or equal to `254`")  # noqa: E501
 
         self._modified_author = modified_author
 
@@ -364,6 +368,9 @@ class Topic(object):
         :param assigned_to: The assigned_to of this Topic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                assigned_to is not None and len(assigned_to) > 254):
+            raise ValueError("Invalid value for `assigned_to`, length must be less than or equal to `254`")  # noqa: E501
 
         self._assigned_to = assigned_to
 

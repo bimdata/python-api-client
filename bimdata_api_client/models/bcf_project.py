@@ -35,26 +35,31 @@ class BcfProject(object):
     """
     openapi_types = {
         'id': 'int',
+        'project_id': 'str',
         'name': 'str'
     }
 
     attribute_map = {
         'id': 'id',
+        'project_id': 'project_id',
         'name': 'name'
     }
 
-    def __init__(self, id=None, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, project_id=None, name=None, local_vars_configuration=None):  # noqa: E501
         """BcfProject - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
+        self._project_id = None
         self._name = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
+        if project_id is not None:
+            self.project_id = project_id
         self.name = name
 
     @property
@@ -77,6 +82,30 @@ class BcfProject(object):
         """
 
         self._id = id
+
+    @property
+    def project_id(self):
+        """Gets the project_id of this BcfProject.  # noqa: E501
+
+
+        :return: The project_id of this BcfProject.  # noqa: E501
+        :rtype: str
+        """
+        return self._project_id
+
+    @project_id.setter
+    def project_id(self, project_id):
+        """Sets the project_id of this BcfProject.
+
+
+        :param project_id: The project_id of this BcfProject.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                project_id is not None and len(project_id) < 1):
+            raise ValueError("Invalid value for `project_id`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._project_id = project_id
 
     @property
     def name(self):
