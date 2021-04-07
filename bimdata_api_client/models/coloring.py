@@ -89,6 +89,7 @@ class Coloring(object):
     def components(self):
         """Gets the components of this Coloring.  # noqa: E501
 
+          # noqa: E501
 
         :return: The components of this Coloring.  # noqa: E501
         :rtype: list[Component]
@@ -99,6 +100,7 @@ class Coloring(object):
     def components(self, components):
         """Sets the components of this Coloring.
 
+          # noqa: E501
 
         :param components: The components of this Coloring.  # noqa: E501
         :type: list[Component]

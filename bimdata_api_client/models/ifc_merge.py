@@ -65,6 +65,7 @@ class IfcMerge(object):
     def ifc_ids(self):
         """Gets the ifc_ids of this IfcMerge.  # noqa: E501
 
+          # noqa: E501
 
         :return: The ifc_ids of this IfcMerge.  # noqa: E501
         :rtype: list[int]
@@ -75,6 +76,7 @@ class IfcMerge(object):
     def ifc_ids(self, ifc_ids):
         """Sets the ifc_ids of this IfcMerge.
 
+          # noqa: E501
 
         :param ifc_ids: The ifc_ids of this IfcMerge.  # noqa: E501
         :type: list[int]

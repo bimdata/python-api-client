@@ -253,7 +253,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_zone**](docs/IfcApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space**](docs/IfcApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
 *IfcApi* | [**delete_access_token**](docs/IfcApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
-*IfcApi* | [**delete_element**](docs/IfcApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete a zone of a model
+*IfcApi* | [**delete_element**](docs/IfcApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete an element of a model
 *IfcApi* | [**delete_ifc**](docs/IfcApi.md#delete_ifc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Delete a model
 *IfcApi* | [**delete_ifc_property**](docs/IfcApi.md#delete_ifc_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Delete a Property of a model
 *IfcApi* | [**delete_ifc_property_definition**](docs/IfcApi.md#delete_ifc_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
@@ -298,6 +298,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_ifc_classifications**](docs/IfcApi.md#get_ifc_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification | Retrieve all classifications in a model
 *IfcApi* | [**get_ifc_gltf**](docs/IfcApi.md#get_ifc_gltf) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/gltf | Get gltf file
 *IfcApi* | [**get_ifc_map**](docs/IfcApi.md#get_ifc_map) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/bvh | Get bvh file
+*IfcApi* | [**get_ifc_material**](docs/IfcApi.md#get_ifc_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material/{id} | Retrieve a material of a model
+*IfcApi* | [**get_ifc_materials**](docs/IfcApi.md#get_ifc_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material | Retrieve all materials of a model
 *IfcApi* | [**get_ifc_properties**](docs/IfcApi.md#get_ifc_properties) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property | Retrieve all Properties of a model
 *IfcApi* | [**get_ifc_property**](docs/IfcApi.md#get_ifc_property) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Retrieve a Property of a model
 *IfcApi* | [**get_ifc_property_definition**](docs/IfcApi.md#get_ifc_property_definition) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Retrieve a PropertyDefinition of a model
@@ -309,6 +311,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_ifcs**](docs/IfcApi.md#get_ifcs) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc | Retrieve all models
 *IfcApi* | [**get_layer**](docs/IfcApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Retrieve a layer of a model
 *IfcApi* | [**get_layers**](docs/IfcApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Retrieve all layers of a model
+*IfcApi* | [**get_material**](docs/IfcApi.md#get_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
+*IfcApi* | [**get_materials**](docs/IfcApi.md#get_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
 *IfcApi* | [**get_processor_handler**](docs/IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 *IfcApi* | [**get_processor_handlers**](docs/IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 *IfcApi* | [**get_property_set**](docs/IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -336,7 +340,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**remove_elements_from_classification**](docs/IfcApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/{uuid} | Remove the classification from all elements
 *IfcApi* | [**reprocess_ifc**](docs/IfcApi.md#reprocess_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | Reprocess IFC file
 *IfcApi* | [**update_access_token**](docs/IfcApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
-*IfcApi* | [**update_element**](docs/IfcApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of a zone
+*IfcApi* | [**update_element**](docs/IfcApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of an element
 *IfcApi* | [**update_element_property_set_property**](docs/IfcApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *IfcApi* | [**update_ifc**](docs/IfcApi.md#update_ifc) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Update some fields of a model
 *IfcApi* | [**update_ifc_files**](docs/IfcApi.md#update_ifc_files) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/files | Update models file (gltf, svg, structure, etc)
@@ -402,6 +406,9 @@ Class | Method | HTTP request | Description
  - [Layer](docs/Layer.md)
  - [LayerElement](docs/LayerElement.md)
  - [Line](docs/Line.md)
+ - [Material](docs/Material.md)
+ - [MaterialListComponent](docs/MaterialListComponent.md)
+ - [MaterialOption](docs/MaterialOption.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [Organization](docs/Organization.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
@@ -421,6 +428,10 @@ Class | Method | HTTP request | Description
  - [RawElement](docs/RawElement.md)
  - [RawElements](docs/RawElements.md)
  - [RawLayer](docs/RawLayer.md)
+ - [RawMaterial](docs/RawMaterial.md)
+ - [RawMaterialList](docs/RawMaterialList.md)
+ - [RawMaterialListComponents](docs/RawMaterialListComponents.md)
+ - [RawMaterialOptions](docs/RawMaterialOptions.md)
  - [RawProperty](docs/RawProperty.md)
  - [RawPropertySet](docs/RawPropertySet.md)
  - [RawSystem](docs/RawSystem.md)

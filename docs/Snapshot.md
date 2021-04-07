@@ -1,5 +1,6 @@
 # Snapshot
 
+Snapshot(id, snapshot_type, snapshot_data)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

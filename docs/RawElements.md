@@ -1,5 +1,6 @@
 # RawElements
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -9,6 +10,7 @@ Name | Type | Description | Notes
 **classifications** | [**list[RawClassification]**](RawClassification.md) |  | [optional] 
 **layers** | [**list[RawLayer]**](RawLayer.md) |  | [optional] 
 **systems** | [**list[RawSystem]**](RawSystem.md) |  | [optional] 
+**material_list** | [**RawMaterialList**](RawMaterialList.md) |  | [optional] 
 **elements** | [**list[RawElement]**](RawElement.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

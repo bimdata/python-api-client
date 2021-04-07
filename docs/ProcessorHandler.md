@@ -1,5 +1,6 @@
 # ProcessorHandler
 
+ProcessorHandler(id, ifc, processor, status, detail_message, created_at, updated_at)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

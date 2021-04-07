@@ -60,7 +60,7 @@ class IfcErrors(object):
     def errors(self):
         """Gets the errors of this IfcErrors.  # noqa: E501
 
-        List of errors that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :return: The errors of this IfcErrors.  # noqa: E501
         :rtype: list[str]
@@ -71,7 +71,7 @@ class IfcErrors(object):
     def errors(self, errors):
         """Sets the errors of this IfcErrors.
 
-        List of errors that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :param errors: The errors of this IfcErrors.  # noqa: E501
         :type: list[str]
@@ -83,7 +83,7 @@ class IfcErrors(object):
     def warnings(self):
         """Gets the warnings of this IfcErrors.  # noqa: E501
 
-        List of warnings that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :return: The warnings of this IfcErrors.  # noqa: E501
         :rtype: list[str]
@@ -94,7 +94,7 @@ class IfcErrors(object):
     def warnings(self, warnings):
         """Sets the warnings of this IfcErrors.
 
-        List of warnings that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :param warnings: The warnings of this IfcErrors.  # noqa: E501
         :type: list[str]

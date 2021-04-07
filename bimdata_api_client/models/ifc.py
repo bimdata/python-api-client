@@ -53,7 +53,8 @@ class Ifc(object):
         'project_id': 'str',
         'world_position': 'list[float]',
         'errors': 'list[str]',
-        'warnings': 'list[str]'
+        'warnings': 'list[str]',
+        'archived': 'bool'
     }
 
     attribute_map = {
@@ -76,10 +77,11 @@ class Ifc(object):
         'project_id': 'project_id',
         'world_position': 'world_position',
         'errors': 'errors',
-        'warnings': 'warnings'
+        'warnings': 'warnings',
+        'archived': 'archived'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, local_vars_configuration=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -105,6 +107,7 @@ class Ifc(object):
         self._world_position = None
         self._errors = None
         self._warnings = None
+        self._archived = None
         self.discriminator = None
 
         if id is not None:
@@ -146,6 +149,8 @@ class Ifc(object):
             self.errors = errors
         if warnings is not None:
             self.warnings = warnings
+        if archived is not None:
+            self.archived = archived
 
     @property
     def id(self):
@@ -514,7 +519,7 @@ class Ifc(object):
     def world_position(self):
         """Gets the world_position of this Ifc.  # noqa: E501
 
-        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
+          # noqa: E501
 
         :return: The world_position of this Ifc.  # noqa: E501
         :rtype: list[float]
@@ -525,7 +530,7 @@ class Ifc(object):
     def world_position(self, world_position):
         """Sets the world_position of this Ifc.
 
-        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
+          # noqa: E501
 
         :param world_position: The world_position of this Ifc.  # noqa: E501
         :type: list[float]
@@ -537,7 +542,7 @@ class Ifc(object):
     def errors(self):
         """Gets the errors of this Ifc.  # noqa: E501
 
-        List of errors that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :return: The errors of this Ifc.  # noqa: E501
         :rtype: list[str]
@@ -548,7 +553,7 @@ class Ifc(object):
     def errors(self, errors):
         """Sets the errors of this Ifc.
 
-        List of errors that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :param errors: The errors of this Ifc.  # noqa: E501
         :type: list[str]
@@ -560,7 +565,7 @@ class Ifc(object):
     def warnings(self):
         """Gets the warnings of this Ifc.  # noqa: E501
 
-        List of warnings that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :return: The warnings of this Ifc.  # noqa: E501
         :rtype: list[str]
@@ -571,13 +576,34 @@ class Ifc(object):
     def warnings(self, warnings):
         """Sets the warnings of this Ifc.
 
-        List of warnings that happened during IFC processing  # noqa: E501
+          # noqa: E501
 
         :param warnings: The warnings of this Ifc.  # noqa: E501
         :type: list[str]
         """
 
         self._warnings = warnings
+
+    @property
+    def archived(self):
+        """Gets the archived of this Ifc.  # noqa: E501
+
+
+        :return: The archived of this Ifc.  # noqa: E501
+        :rtype: bool
+        """
+        return self._archived
+
+    @archived.setter
+    def archived(self, archived):
+        """Sets the archived of this Ifc.
+
+
+        :param archived: The archived of this Ifc.  # noqa: E501
+        :type: bool
+        """
+
+        self._archived = archived
 
     def to_dict(self):
         """Returns the model properties as a dict"""

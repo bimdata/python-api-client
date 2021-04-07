@@ -182,6 +182,7 @@ class Viewpoint(object):
     def lines(self):
         """Gets the lines of this Viewpoint.  # noqa: E501
 
+          # noqa: E501
 
         :return: The lines of this Viewpoint.  # noqa: E501
         :rtype: list[Line]
@@ -192,6 +193,7 @@ class Viewpoint(object):
     def lines(self, lines):
         """Sets the lines of this Viewpoint.
 
+          # noqa: E501
 
         :param lines: The lines of this Viewpoint.  # noqa: E501
         :type: list[Line]
@@ -203,6 +205,7 @@ class Viewpoint(object):
     def clipping_planes(self):
         """Gets the clipping_planes of this Viewpoint.  # noqa: E501
 
+          # noqa: E501
 
         :return: The clipping_planes of this Viewpoint.  # noqa: E501
         :rtype: list[ClippingPlane]
@@ -213,6 +216,7 @@ class Viewpoint(object):
     def clipping_planes(self, clipping_planes):
         """Sets the clipping_planes of this Viewpoint.
 
+          # noqa: E501
 
         :param clipping_planes: The clipping_planes of this Viewpoint.  # noqa: E501
         :type: list[ClippingPlane]

@@ -1,5 +1,6 @@
 # RawDefinition
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

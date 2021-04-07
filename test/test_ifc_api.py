@@ -249,7 +249,7 @@ class TestIfcApi(unittest.TestCase):
     def test_delete_element(self):
         """Test case for delete_element
 
-        Delete a zone of a model  # noqa: E501
+        Delete an element of a model  # noqa: E501
         """
         pass
 
@@ -561,6 +561,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_ifc_material(self):
+        """Test case for get_ifc_material
+
+        Retrieve a material of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_ifc_materials(self):
+        """Test case for get_ifc_materials
+
+        Retrieve all materials of a model  # noqa: E501
+        """
+        pass
+
     def test_get_ifc_properties(self):
         """Test case for get_ifc_properties
 
@@ -635,6 +649,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_layers
 
         Retrieve all layers of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_material(self):
+        """Test case for get_material
+
+        Retrieve a material of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_materials(self):
+        """Test case for get_materials
+
+        Retrieve all materials of a model  # noqa: E501
         """
         pass
 
@@ -830,7 +858,7 @@ class TestIfcApi(unittest.TestCase):
     def test_update_element(self):
         """Test case for update_element
 
-        Update some fields of a zone  # noqa: E501
+        Update some fields of an element  # noqa: E501
         """
         pass
 

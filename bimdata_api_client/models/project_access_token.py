@@ -90,6 +90,7 @@ class ProjectAccessToken(object):
     def scopes(self):
         """Gets the scopes of this ProjectAccessToken.  # noqa: E501
 
+          # noqa: E501
 
         :return: The scopes of this ProjectAccessToken.  # noqa: E501
         :rtype: list[str]
@@ -100,6 +101,7 @@ class ProjectAccessToken(object):
     def scopes(self, scopes):
         """Sets the scopes of this ProjectAccessToken.
 
+          # noqa: E501
 
         :param scopes: The scopes of this ProjectAccessToken.  # noqa: E501
         :type: list[str]

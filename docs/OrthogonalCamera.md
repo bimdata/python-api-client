@@ -1,5 +1,6 @@
 # OrthogonalCamera
 
+OrthogonalCamera(id, view_to_world_scale, camera_direction, camera_up_vector, camera_view_point)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

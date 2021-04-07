@@ -277,6 +277,7 @@ class SelfUser(object):
     def organizations(self):
         """Gets the organizations of this SelfUser.  # noqa: E501
 
+          # noqa: E501
 
         :return: The organizations of this SelfUser.  # noqa: E501
         :rtype: list[Organization]
@@ -287,6 +288,7 @@ class SelfUser(object):
     def organizations(self, organizations):
         """Sets the organizations of this SelfUser.
 
+          # noqa: E501
 
         :param organizations: The organizations of this SelfUser.  # noqa: E501
         :type: list[Organization]
@@ -298,6 +300,7 @@ class SelfUser(object):
     def clouds(self):
         """Gets the clouds of this SelfUser.  # noqa: E501
 
+          # noqa: E501
 
         :return: The clouds of this SelfUser.  # noqa: E501
         :rtype: list[CloudRole]
@@ -308,6 +311,7 @@ class SelfUser(object):
     def clouds(self, clouds):
         """Sets the clouds of this SelfUser.
 
+          # noqa: E501
 
         :param clouds: The clouds of this SelfUser.  # noqa: E501
         :type: list[CloudRole]
@@ -319,6 +323,7 @@ class SelfUser(object):
     def projects(self):
         """Gets the projects of this SelfUser.  # noqa: E501
 
+          # noqa: E501
 
         :return: The projects of this SelfUser.  # noqa: E501
         :rtype: list[ProjectRole]
@@ -329,6 +334,7 @@ class SelfUser(object):
     def projects(self, projects):
         """Sets the projects of this SelfUser.
 
+          # noqa: E501
 
         :param projects: The projects of this SelfUser.  # noqa: E501
         :type: list[ProjectRole]

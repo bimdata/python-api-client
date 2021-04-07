@@ -157,6 +157,7 @@ class Cloud(object):
     def features(self):
         """Gets the features of this Cloud.  # noqa: E501
 
+          # noqa: E501
 
         :return: The features of this Cloud.  # noqa: E501
         :rtype: list[Feature]
@@ -167,6 +168,7 @@ class Cloud(object):
     def features(self, features):
         """Sets the features of this Cloud.
 
+          # noqa: E501
 
         :param features: The features of this Cloud.  # noqa: E501
         :type: list[Feature]

@@ -5634,7 +5634,7 @@ class CollaborationApi(object):
     def get_project_user(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Retrieve a user in a project  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_user(cloud_pk, id, project_pk, async_req=True)
@@ -5661,7 +5661,7 @@ class CollaborationApi(object):
     def get_project_user_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Retrieve a user in a project  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_user_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -5758,7 +5758,7 @@ class CollaborationApi(object):
     def get_project_users(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project, or a list with a filter by email  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users(cloud_pk, project_pk, async_req=True)
@@ -5788,7 +5788,7 @@ class CollaborationApi(object):
     def get_project_users_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project, or a list with a filter by email  # noqa: E501
 
-        Each member of a project can see other members of the project Required scopes: cloud:read  # noqa: E501
+        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_project_users_with_http_info(cloud_pk, project_pk, async_req=True)

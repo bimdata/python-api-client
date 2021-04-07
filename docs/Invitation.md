@@ -1,5 +1,6 @@
 # Invitation
 
+Invitation(id, sender, client, email, redirect_uri, cloud, cloud_role, project, project_role, provider, status)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

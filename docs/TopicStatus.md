@@ -1,5 +1,6 @@
 # TopicStatus
 
+TopicStatus(id, topic_status)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

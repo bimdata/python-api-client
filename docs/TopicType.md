@@ -1,5 +1,6 @@
 # TopicType
 
+TopicType(id, topic_type)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,6 @@
 # Feature
 
+Feature(id, name, cloud_setup_url, secret, viewer_url)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

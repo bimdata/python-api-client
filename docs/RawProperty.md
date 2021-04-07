@@ -1,5 +1,6 @@
 # RawProperty
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,6 @@
 # Cloud
 
+Cloud(id, creator, creator_app, organization, name, created_at, updated_at, is_default, image)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -40,6 +40,7 @@ class Element(object):
         'attributes': 'PropertySet',
         'property_sets': 'list[PropertySet]',
         'classifications': 'list[Classification]',
+        'material_list': 'list[MaterialListComponent]',
         'layers': 'list[LayerElement]'
     }
 
@@ -50,10 +51,11 @@ class Element(object):
         'attributes': 'attributes',
         'property_sets': 'property_sets',
         'classifications': 'classifications',
+        'material_list': 'material_list',
         'layers': 'layers'
     }
 
-    def __init__(self, id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None, layers=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, uuid=None, type=None, attributes=None, property_sets=None, classifications=None, material_list=None, layers=None, local_vars_configuration=None):  # noqa: E501
         """Element - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +67,7 @@ class Element(object):
         self._attributes = None
         self._property_sets = None
         self._classifications = None
+        self._material_list = None
         self._layers = None
         self.discriminator = None
 
@@ -79,6 +82,8 @@ class Element(object):
             self.property_sets = property_sets
         if classifications is not None:
             self.classifications = classifications
+        if material_list is not None:
+            self.material_list = material_list
         if layers is not None:
             self.layers = layers
 
@@ -186,6 +191,7 @@ class Element(object):
     def property_sets(self):
         """Gets the property_sets of this Element.  # noqa: E501
 
+          # noqa: E501
 
         :return: The property_sets of this Element.  # noqa: E501
         :rtype: list[PropertySet]
@@ -196,6 +202,7 @@ class Element(object):
     def property_sets(self, property_sets):
         """Sets the property_sets of this Element.
 
+          # noqa: E501
 
         :param property_sets: The property_sets of this Element.  # noqa: E501
         :type: list[PropertySet]
@@ -207,6 +214,7 @@ class Element(object):
     def classifications(self):
         """Gets the classifications of this Element.  # noqa: E501
 
+          # noqa: E501
 
         :return: The classifications of this Element.  # noqa: E501
         :rtype: list[Classification]
@@ -217,6 +225,7 @@ class Element(object):
     def classifications(self, classifications):
         """Sets the classifications of this Element.
 
+          # noqa: E501
 
         :param classifications: The classifications of this Element.  # noqa: E501
         :type: list[Classification]
@@ -225,9 +234,33 @@ class Element(object):
         self._classifications = classifications
 
     @property
+    def material_list(self):
+        """Gets the material_list of this Element.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The material_list of this Element.  # noqa: E501
+        :rtype: list[MaterialListComponent]
+        """
+        return self._material_list
+
+    @material_list.setter
+    def material_list(self, material_list):
+        """Sets the material_list of this Element.
+
+          # noqa: E501
+
+        :param material_list: The material_list of this Element.  # noqa: E501
+        :type: list[MaterialListComponent]
+        """
+
+        self._material_list = material_list
+
+    @property
     def layers(self):
         """Gets the layers of this Element.  # noqa: E501
 
+          # noqa: E501
 
         :return: The layers of this Element.  # noqa: E501
         :rtype: list[LayerElement]
@@ -238,6 +271,7 @@ class Element(object):
     def layers(self, layers):
         """Sets the layers of this Element.
 
+          # noqa: E501
 
         :param layers: The layers of this Element.  # noqa: E501
         :type: list[LayerElement]

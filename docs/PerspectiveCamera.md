@@ -1,5 +1,6 @@
 # PerspectiveCamera
 
+PerspectiveCamera(id, field_of_view, camera_direction, bimdata_camera_direction, camera_up_vector, camera_view_point)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

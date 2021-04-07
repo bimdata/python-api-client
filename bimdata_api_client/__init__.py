@@ -70,6 +70,9 @@ from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.layer import Layer
 from bimdata_api_client.models.layer_element import LayerElement
 from bimdata_api_client.models.line import Line
+from bimdata_api_client.models.material import Material
+from bimdata_api_client.models.material_list_component import MaterialListComponent
+from bimdata_api_client.models.material_option import MaterialOption
 from bimdata_api_client.models.model_property import ModelProperty
 from bimdata_api_client.models.organization import Organization
 from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
@@ -89,6 +92,10 @@ from bimdata_api_client.models.raw_definition import RawDefinition
 from bimdata_api_client.models.raw_element import RawElement
 from bimdata_api_client.models.raw_elements import RawElements
 from bimdata_api_client.models.raw_layer import RawLayer
+from bimdata_api_client.models.raw_material import RawMaterial
+from bimdata_api_client.models.raw_material_list import RawMaterialList
+from bimdata_api_client.models.raw_material_list_components import RawMaterialListComponents
+from bimdata_api_client.models.raw_material_options import RawMaterialOptions
 from bimdata_api_client.models.raw_property import RawProperty
 from bimdata_api_client.models.raw_property_set import RawPropertySet
 from bimdata_api_client.models.raw_system import RawSystem

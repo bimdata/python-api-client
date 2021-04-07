@@ -168,6 +168,7 @@ class Zone(object):
     def zones(self):
         """Gets the zones of this Zone.  # noqa: E501
 
+          # noqa: E501
 
         :return: The zones of this Zone.  # noqa: E501
         :rtype: list[Zone]
@@ -178,6 +179,7 @@ class Zone(object):
     def zones(self, zones):
         """Sets the zones of this Zone.
 
+          # noqa: E501
 
         :param zones: The zones of this Zone.  # noqa: E501
         :type: list[Zone]
@@ -210,6 +212,7 @@ class Zone(object):
     def spaces(self):
         """Gets the spaces of this Zone.  # noqa: E501
 
+          # noqa: E501
 
         :return: The spaces of this Zone.  # noqa: E501
         :rtype: list[Space]
@@ -220,6 +223,7 @@ class Zone(object):
     def spaces(self, spaces):
         """Sets the spaces of this Zone.
 
+          # noqa: E501
 
         :param spaces: The spaces of this Zone.  # noqa: E501
         :type: list[Space]

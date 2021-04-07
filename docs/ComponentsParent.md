@@ -1,5 +1,6 @@
 # ComponentsParent
 
+ComponentsParent(id, visibility)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

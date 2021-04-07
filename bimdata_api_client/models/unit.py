@@ -213,7 +213,7 @@ class Unit(object):
     def dimensions(self):
         """Gets the dimensions of this Unit.  # noqa: E501
 
-        List of 7 units dimensions  # noqa: E501
+          # noqa: E501
 
         :return: The dimensions of this Unit.  # noqa: E501
         :rtype: list[float]
@@ -224,7 +224,7 @@ class Unit(object):
     def dimensions(self, dimensions):
         """Sets the dimensions of this Unit.
 
-        List of 7 units dimensions  # noqa: E501
+          # noqa: E501
 
         :param dimensions: The dimensions of this Unit.  # noqa: E501
         :type: list[float]

@@ -4234,7 +4234,7 @@ class IfcApi(object):
             collection_formats=collection_formats)
 
     def delete_element(self, cloud_pk, ifc_pk, project_pk, uuid, **kwargs):  # noqa: E501
-        """Delete a zone of a model  # noqa: E501
+        """Delete an element of a model  # noqa: E501
 
         The IFC file will not be updated. The remaining elements are available in API and will be available when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -4262,7 +4262,7 @@ class IfcApi(object):
         return self.delete_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, **kwargs)  # noqa: E501
 
     def delete_element_with_http_info(self, cloud_pk, ifc_pk, project_pk, uuid, **kwargs):  # noqa: E501
-        """Delete a zone of a model  # noqa: E501
+        """Delete an element of a model  # noqa: E501
 
         The IFC file will not be updated. The remaining elements are available in API and will be available when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -5924,7 +5924,7 @@ class IfcApi(object):
     def full_update_element(self, cloud_pk, ifc_pk, project_pk, uuid, data, **kwargs):  # noqa: E501
         """Update all fields of an element  # noqa: E501
 
-        Update all fields of a element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Update all fields of an element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_element(cloud_pk, ifc_pk, project_pk, uuid, data, async_req=True)
@@ -5953,7 +5953,7 @@ class IfcApi(object):
     def full_update_element_with_http_info(self, cloud_pk, ifc_pk, project_pk, uuid, data, **kwargs):  # noqa: E501
         """Update all fields of an element  # noqa: E501
 
-        Update all fields of a element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Update all fields of an element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, data, async_req=True)
@@ -10389,6 +10389,262 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_ifc_material(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_material(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Material
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_ifc_material_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_ifc_material_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_material_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Material, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_ifc_material" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_material`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_material`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_material`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_material`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Material',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_ifc_materials(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_materials(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Material]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_ifc_materials_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_ifc_materials_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_ifc_materials_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Material], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_ifc_materials" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_materials`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_ifc_materials`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_materials`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Material]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_ifc_properties(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all Properties of a model  # noqa: E501
 
@@ -11770,6 +12026,278 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[Layer]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_material(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_material(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Material
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_material_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_material_with_http_info(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_material_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Material, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'element_uuid', 'id', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_material" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_material`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_material`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_material`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_material`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_material`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Material',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_materials(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_materials(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Material]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_materials_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_materials_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_materials_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Material], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = ['cloud_pk', 'element_uuid', 'ifc_pk', 'project_pk']  # noqa: E501
+        all_params.append('async_req')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_materials" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_materials`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_materials`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_materials`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_materials`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Material]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -15374,9 +15902,9 @@ class IfcApi(object):
             collection_formats=collection_formats)
 
     def update_element(self, cloud_pk, ifc_pk, project_pk, uuid, data, **kwargs):  # noqa: E501
-        """Update some fields of a zone  # noqa: E501
+        """Update some fields of an element  # noqa: E501
 
-        Update some fields of a zone. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Update some fields of an element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_element(cloud_pk, ifc_pk, project_pk, uuid, data, async_req=True)
@@ -15403,9 +15931,9 @@ class IfcApi(object):
         return self.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, data, **kwargs)  # noqa: E501
 
     def update_element_with_http_info(self, cloud_pk, ifc_pk, project_pk, uuid, data, **kwargs):  # noqa: E501
-        """Update some fields of a zone  # noqa: E501
+        """Update some fields of an element  # noqa: E501
 
-        Update some fields of a zone. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
+        Update some fields of an element. The IFC file will not be updated. The created element will be accessible over the API and when exporting an IFC file Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_element_with_http_info(cloud_pk, ifc_pk, project_pk, uuid, data, async_req=True)

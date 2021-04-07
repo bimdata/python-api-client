@@ -143,6 +143,7 @@ class Rule(object):
     def rule_components(self):
         """Gets the rule_components of this Rule.  # noqa: E501
 
+          # noqa: E501
 
         :return: The rule_components of this Rule.  # noqa: E501
         :rtype: list[RuleComponent]
@@ -153,6 +154,7 @@ class Rule(object):
     def rule_components(self, rule_components):
         """Sets the rule_components of this Rule.
 
+          # noqa: E501
 
         :param rule_components: The rule_components of this Rule.  # noqa: E501
         :type: list[RuleComponent]

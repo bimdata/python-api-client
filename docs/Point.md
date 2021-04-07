@@ -1,5 +1,6 @@
 # Point
 
+Point(id, x, y, z)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

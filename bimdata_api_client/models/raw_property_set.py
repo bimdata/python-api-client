@@ -157,6 +157,7 @@ class RawPropertySet(object):
     def properties(self):
         """Gets the properties of this RawPropertySet.  # noqa: E501
 
+          # noqa: E501
 
         :return: The properties of this RawPropertySet.  # noqa: E501
         :rtype: list[RawProperty]
@@ -167,6 +168,7 @@ class RawPropertySet(object):
     def properties(self, properties):
         """Sets the properties of this RawPropertySet.
 
+          # noqa: E501
 
         :param properties: The properties of this RawPropertySet.  # noqa: E501
         :type: list[RawProperty]

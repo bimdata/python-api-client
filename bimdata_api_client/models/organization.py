@@ -36,16 +36,22 @@ class Organization(object):
     openapi_types = {
         'id': 'int',
         'name': 'str',
-        'is_personnal': 'bool'
+        'is_personnal': 'bool',
+        'created_at': 'datetime',
+        'updated_at': 'datetime',
+        'logo': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
-        'is_personnal': 'is_personnal'
+        'is_personnal': 'is_personnal',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at',
+        'logo': 'logo'
     }
 
-    def __init__(self, id=None, name=None, is_personnal=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, is_personnal=None, created_at=None, updated_at=None, logo=None, local_vars_configuration=None):  # noqa: E501
         """Organization - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -54,6 +60,9 @@ class Organization(object):
         self._id = None
         self._name = None
         self._is_personnal = None
+        self._created_at = None
+        self._updated_at = None
+        self._logo = None
         self.discriminator = None
 
         if id is not None:
@@ -61,6 +70,11 @@ class Organization(object):
         self.name = name
         if is_personnal is not None:
             self.is_personnal = is_personnal
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
+        self.logo = logo
 
     @property
     def id(self):
@@ -134,6 +148,73 @@ class Organization(object):
         """
 
         self._is_personnal = is_personnal
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this Organization.  # noqa: E501
+
+        Creation date  # noqa: E501
+
+        :return: The created_at of this Organization.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this Organization.
+
+        Creation date  # noqa: E501
+
+        :param created_at: The created_at of this Organization.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this Organization.  # noqa: E501
+
+        Date of the last update  # noqa: E501
+
+        :return: The updated_at of this Organization.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this Organization.
+
+        Date of the last update  # noqa: E501
+
+        :param updated_at: The updated_at of this Organization.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
+
+    @property
+    def logo(self):
+        """Gets the logo of this Organization.  # noqa: E501
+
+
+        :return: The logo of this Organization.  # noqa: E501
+        :rtype: str
+        """
+        return self._logo
+
+    @logo.setter
+    def logo(self, logo):
+        """Sets the logo of this Organization.
+
+
+        :param logo: The logo of this Organization.  # noqa: E501
+        :type: str
+        """
+
+        self._logo = logo
 
     def to_dict(self):
         """Returns the model properties as a dict"""

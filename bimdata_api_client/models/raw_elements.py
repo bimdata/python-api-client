@@ -40,6 +40,7 @@ class RawElements(object):
         'classifications': 'list[RawClassification]',
         'layers': 'list[RawLayer]',
         'systems': 'list[RawSystem]',
+        'material_list': 'RawMaterialList',
         'elements': 'list[RawElement]'
     }
 
@@ -50,10 +51,11 @@ class RawElements(object):
         'classifications': 'classifications',
         'layers': 'layers',
         'systems': 'systems',
+        'material_list': 'material_list',
         'elements': 'elements'
     }
 
-    def __init__(self, units=None, definitions=None, property_sets=None, classifications=None, layers=None, systems=None, elements=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, units=None, definitions=None, property_sets=None, classifications=None, layers=None, systems=None, material_list=None, elements=None, local_vars_configuration=None):  # noqa: E501
         """RawElements - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +67,7 @@ class RawElements(object):
         self._classifications = None
         self._layers = None
         self._systems = None
+        self._material_list = None
         self._elements = None
         self.discriminator = None
 
@@ -74,12 +77,14 @@ class RawElements(object):
         self.classifications = classifications
         self.layers = layers
         self.systems = systems
+        self.material_list = material_list
         self.elements = elements
 
     @property
     def units(self):
         """Gets the units of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The units of this RawElements.  # noqa: E501
         :rtype: list[RawUnit]
@@ -90,6 +95,7 @@ class RawElements(object):
     def units(self, units):
         """Sets the units of this RawElements.
 
+          # noqa: E501
 
         :param units: The units of this RawElements.  # noqa: E501
         :type: list[RawUnit]
@@ -101,6 +107,7 @@ class RawElements(object):
     def definitions(self):
         """Gets the definitions of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The definitions of this RawElements.  # noqa: E501
         :rtype: list[RawDefinition]
@@ -111,6 +118,7 @@ class RawElements(object):
     def definitions(self, definitions):
         """Sets the definitions of this RawElements.
 
+          # noqa: E501
 
         :param definitions: The definitions of this RawElements.  # noqa: E501
         :type: list[RawDefinition]
@@ -122,6 +130,7 @@ class RawElements(object):
     def property_sets(self):
         """Gets the property_sets of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The property_sets of this RawElements.  # noqa: E501
         :rtype: list[RawPropertySet]
@@ -132,6 +141,7 @@ class RawElements(object):
     def property_sets(self, property_sets):
         """Sets the property_sets of this RawElements.
 
+          # noqa: E501
 
         :param property_sets: The property_sets of this RawElements.  # noqa: E501
         :type: list[RawPropertySet]
@@ -143,6 +153,7 @@ class RawElements(object):
     def classifications(self):
         """Gets the classifications of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The classifications of this RawElements.  # noqa: E501
         :rtype: list[RawClassification]
@@ -153,6 +164,7 @@ class RawElements(object):
     def classifications(self, classifications):
         """Sets the classifications of this RawElements.
 
+          # noqa: E501
 
         :param classifications: The classifications of this RawElements.  # noqa: E501
         :type: list[RawClassification]
@@ -164,6 +176,7 @@ class RawElements(object):
     def layers(self):
         """Gets the layers of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The layers of this RawElements.  # noqa: E501
         :rtype: list[RawLayer]
@@ -174,6 +187,7 @@ class RawElements(object):
     def layers(self, layers):
         """Sets the layers of this RawElements.
 
+          # noqa: E501
 
         :param layers: The layers of this RawElements.  # noqa: E501
         :type: list[RawLayer]
@@ -185,6 +199,7 @@ class RawElements(object):
     def systems(self):
         """Gets the systems of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The systems of this RawElements.  # noqa: E501
         :rtype: list[RawSystem]
@@ -195,6 +210,7 @@ class RawElements(object):
     def systems(self, systems):
         """Sets the systems of this RawElements.
 
+          # noqa: E501
 
         :param systems: The systems of this RawElements.  # noqa: E501
         :type: list[RawSystem]
@@ -203,9 +219,31 @@ class RawElements(object):
         self._systems = systems
 
     @property
+    def material_list(self):
+        """Gets the material_list of this RawElements.  # noqa: E501
+
+
+        :return: The material_list of this RawElements.  # noqa: E501
+        :rtype: RawMaterialList
+        """
+        return self._material_list
+
+    @material_list.setter
+    def material_list(self, material_list):
+        """Sets the material_list of this RawElements.
+
+
+        :param material_list: The material_list of this RawElements.  # noqa: E501
+        :type: RawMaterialList
+        """
+
+        self._material_list = material_list
+
+    @property
     def elements(self):
         """Gets the elements of this RawElements.  # noqa: E501
 
+          # noqa: E501
 
         :return: The elements of this RawElements.  # noqa: E501
         :rtype: list[RawElement]
@@ -216,6 +254,7 @@ class RawElements(object):
     def elements(self, elements):
         """Sets the elements of this RawElements.
 
+          # noqa: E501
 
         :param elements: The elements of this RawElements.  # noqa: E501
         :type: list[RawElement]

@@ -86,6 +86,7 @@ class Visibility(object):
     def exceptions(self):
         """Gets the exceptions of this Visibility.  # noqa: E501
 
+          # noqa: E501
 
         :return: The exceptions of this Visibility.  # noqa: E501
         :rtype: list[Component]
@@ -96,6 +97,7 @@ class Visibility(object):
     def exceptions(self, exceptions):
         """Sets the exceptions of this Visibility.
 
+          # noqa: E501
 
         :param exceptions: The exceptions of this Visibility.  # noqa: E501
         :type: list[Component]

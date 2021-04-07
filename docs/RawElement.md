@@ -1,11 +1,13 @@
 # RawElement
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **str** |  | 
 **type** | **str** |  | 
 **attributes** | **int** |  | [optional] 
+**material_list** | **list[str]** |  | [optional] [readonly] 
 **psets** | **list[int]** |  | [optional] 
 **classifications** | **list[int]** |  | [optional] 
 **layers** | **list[int]** |  | [optional] 

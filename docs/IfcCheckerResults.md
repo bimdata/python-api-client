@@ -1,5 +1,6 @@
 # IfcCheckerResults
 
+CheckerResult(id, error_detail, checker, status, result, collisions, created_at, updated_at)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

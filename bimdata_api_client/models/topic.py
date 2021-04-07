@@ -243,6 +243,7 @@ class Topic(object):
     def labels(self):
         """Gets the labels of this Topic.  # noqa: E501
 
+          # noqa: E501
 
         :return: The labels of this Topic.  # noqa: E501
         :rtype: list[str]
@@ -253,6 +254,7 @@ class Topic(object):
     def labels(self, labels):
         """Sets the labels of this Topic.
 
+          # noqa: E501
 
         :param labels: The labels of this Topic.  # noqa: E501
         :type: list[str]
@@ -378,6 +380,7 @@ class Topic(object):
     def reference_links(self):
         """Gets the reference_links of this Topic.  # noqa: E501
 
+          # noqa: E501
 
         :return: The reference_links of this Topic.  # noqa: E501
         :rtype: list[str]
@@ -388,6 +391,7 @@ class Topic(object):
     def reference_links(self, reference_links):
         """Sets the reference_links of this Topic.
 
+          # noqa: E501
 
         :param reference_links: The reference_links of this Topic.  # noqa: E501
         :type: list[str]

@@ -1,5 +1,6 @@
 # Priority
 
+Priority(id, priority)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
