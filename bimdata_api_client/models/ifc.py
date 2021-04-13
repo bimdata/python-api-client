@@ -54,7 +54,8 @@ class Ifc(object):
         'world_position': 'list[float]',
         'errors': 'list[str]',
         'warnings': 'list[str]',
-        'archived': 'bool'
+        'archived': 'bool',
+        'version': 'str'
     }
 
     attribute_map = {
@@ -78,10 +79,11 @@ class Ifc(object):
         'world_position': 'world_position',
         'errors': 'errors',
         'warnings': 'warnings',
-        'archived': 'archived'
+        'archived': 'archived',
+        'version': 'version'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, local_vars_configuration=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -108,6 +110,7 @@ class Ifc(object):
         self._errors = None
         self._warnings = None
         self._archived = None
+        self._version = None
         self.discriminator = None
 
         if id is not None:
@@ -151,6 +154,7 @@ class Ifc(object):
             self.warnings = warnings
         if archived is not None:
             self.archived = archived
+        self.version = version
 
     @property
     def id(self):
@@ -604,6 +608,32 @@ class Ifc(object):
         """
 
         self._archived = archived
+
+    @property
+    def version(self):
+        """Gets the version of this Ifc.  # noqa: E501
+
+        This field is only for information. Updating it won't impact the export.  # noqa: E501
+
+        :return: The version of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._version
+
+    @version.setter
+    def version(self, version):
+        """Sets the version of this Ifc.
+
+        This field is only for information. Updating it won't impact the export.  # noqa: E501
+
+        :param version: The version of this Ifc.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                version is not None and len(version) > 256):
+            raise ValueError("Invalid value for `version`, length must be less than or equal to `256`")  # noqa: E501
+
+        self._version = version
 
     def to_dict(self):
         """Returns the model properties as a dict"""

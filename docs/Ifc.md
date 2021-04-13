@@ -25,6 +25,7 @@ Name | Type | Description | Notes
 **errors** | **list[str]** |  | [optional] [readonly] 
 **warnings** | **list[str]** |  | [optional] [readonly] 
 **archived** | **bool** |  | [optional] 
+**version** | **str** | This field is only for information. Updating it won&#39;t impact the export. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
