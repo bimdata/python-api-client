@@ -55,7 +55,8 @@ class Ifc(object):
         'errors': 'list[str]',
         'warnings': 'list[str]',
         'archived': 'bool',
-        'version': 'str'
+        'version': 'str',
+        'north_vector': 'list[list[float]]'
     }
 
     attribute_map = {
@@ -80,10 +81,11 @@ class Ifc(object):
         'errors': 'errors',
         'warnings': 'warnings',
         'archived': 'archived',
-        'version': 'version'
+        'version': 'version',
+        'north_vector': 'north_vector'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, local_vars_configuration=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -111,6 +113,7 @@ class Ifc(object):
         self._warnings = None
         self._archived = None
         self._version = None
+        self._north_vector = None
         self.discriminator = None
 
         if id is not None:
@@ -155,6 +158,7 @@ class Ifc(object):
         if archived is not None:
             self.archived = archived
         self.version = version
+        self.north_vector = north_vector
 
     @property
     def id(self):
@@ -634,6 +638,29 @@ class Ifc(object):
             raise ValueError("Invalid value for `version`, length must be less than or equal to `256`")  # noqa: E501
 
         self._version = version
+
+    @property
+    def north_vector(self):
+        """Gets the north_vector of this Ifc.  # noqa: E501
+
+          # noqa: E501
+
+        :return: The north_vector of this Ifc.  # noqa: E501
+        :rtype: list[list[float]]
+        """
+        return self._north_vector
+
+    @north_vector.setter
+    def north_vector(self, north_vector):
+        """Sets the north_vector of this Ifc.
+
+          # noqa: E501
+
+        :param north_vector: The north_vector of this Ifc.  # noqa: E501
+        :type: list[list[float]]
+        """
+
+        self._north_vector = north_vector
 
     def to_dict(self):
         """Returns the model properties as a dict"""
