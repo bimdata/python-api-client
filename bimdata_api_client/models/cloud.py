@@ -39,6 +39,7 @@ class Cloud(object):
         'features': 'list[Feature]',
         'marketplace_apps': 'str',
         'organization': 'Organization',
+        'organization_id': 'int',
         'creator': 'User',
         'creator_app': 'str',
         'is_default': 'bool',
@@ -53,6 +54,7 @@ class Cloud(object):
         'features': 'features',
         'marketplace_apps': 'marketplace_apps',
         'organization': 'organization',
+        'organization_id': 'organization_id',
         'creator': 'creator',
         'creator_app': 'creator_app',
         'is_default': 'is_default',
@@ -61,7 +63,7 @@ class Cloud(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, features=None, marketplace_apps=None, organization=None, creator=None, creator_app=None, is_default=None, created_at=None, image=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, features=None, marketplace_apps=None, organization=None, organization_id=None, creator=None, creator_app=None, is_default=None, created_at=None, image=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Cloud - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -72,6 +74,7 @@ class Cloud(object):
         self._features = None
         self._marketplace_apps = None
         self._organization = None
+        self._organization_id = None
         self._creator = None
         self._creator_app = None
         self._is_default = None
@@ -89,6 +92,8 @@ class Cloud(object):
             self.marketplace_apps = marketplace_apps
         if organization is not None:
             self.organization = organization
+        if organization_id is not None:
+            self.organization_id = organization_id
         if creator is not None:
             self.creator = creator
         if creator_app is not None:
@@ -217,6 +222,27 @@ class Cloud(object):
         """
 
         self._organization = organization
+
+    @property
+    def organization_id(self):
+        """Gets the organization_id of this Cloud.  # noqa: E501
+
+
+        :return: The organization_id of this Cloud.  # noqa: E501
+        :rtype: int
+        """
+        return self._organization_id
+
+    @organization_id.setter
+    def organization_id(self, organization_id):
+        """Sets the organization_id of this Cloud.
+
+
+        :param organization_id: The organization_id of this Cloud.  # noqa: E501
+        :type: int
+        """
+
+        self._organization_id = organization_id
 
     @property
     def creator(self):

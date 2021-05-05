@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **features** | [**list[Feature]**](Feature.md) |  | [optional] [readonly] 
 **marketplace_apps** | **str** |  | [optional] [readonly] 
 **organization** | [**Organization**](Organization.md) |  | [optional] 
+**organization_id** | **int** |  | [optional] 
 **creator** | [**User**](User.md) |  | [optional] 
 **creator_app** | **str** |  | [optional] [readonly] 
 **is_default** | **bool** |  | [optional] [readonly] 

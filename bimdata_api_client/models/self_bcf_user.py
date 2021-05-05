@@ -37,17 +37,19 @@ class SelfBcfUser(object):
         'id': 'str',
         'name': 'str',
         'email': 'str',
-        'is_client': 'bool'
+        'is_client': 'bool',
+        'is_project_token': 'bool'
     }
 
     attribute_map = {
         'id': 'id',
         'name': 'name',
         'email': 'email',
-        'is_client': 'is_client'
+        'is_client': 'is_client',
+        'is_project_token': 'is_project_token'
     }
 
-    def __init__(self, id=None, name=None, email=None, is_client=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, email=None, is_client=None, is_project_token=None, local_vars_configuration=None):  # noqa: E501
         """SelfBcfUser - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -57,6 +59,7 @@ class SelfBcfUser(object):
         self._name = None
         self._email = None
         self._is_client = None
+        self._is_project_token = None
         self.discriminator = None
 
         self.id = id
@@ -65,6 +68,8 @@ class SelfBcfUser(object):
         self.email = email
         if is_client is not None:
             self.is_client = is_client
+        if is_project_token is not None:
+            self.is_project_token = is_project_token
 
     @property
     def id(self):
@@ -162,6 +167,27 @@ class SelfBcfUser(object):
         """
 
         self._is_client = is_client
+
+    @property
+    def is_project_token(self):
+        """Gets the is_project_token of this SelfBcfUser.  # noqa: E501
+
+
+        :return: The is_project_token of this SelfBcfUser.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_project_token
+
+    @is_project_token.setter
+    def is_project_token(self, is_project_token):
+        """Sets the is_project_token of this SelfBcfUser.
+
+
+        :param is_project_token: The is_project_token of this SelfBcfUser.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_project_token = is_project_token
 
     def to_dict(self):
         """Returns the model properties as a dict"""
