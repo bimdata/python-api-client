@@ -301,7 +301,6 @@ class FullTopic(object):
     def reference_links(self):
         """Gets the reference_links of this FullTopic.  # noqa: E501
 
-          # noqa: E501
 
         :return: The reference_links of this FullTopic.  # noqa: E501
         :rtype: list[str]
@@ -312,7 +311,6 @@ class FullTopic(object):
     def reference_links(self, reference_links):
         """Sets the reference_links of this FullTopic.
 
-          # noqa: E501
 
         :param reference_links: The reference_links of this FullTopic.  # noqa: E501
         :type: list[str]
@@ -345,7 +343,6 @@ class FullTopic(object):
     def labels(self):
         """Gets the labels of this FullTopic.  # noqa: E501
 
-          # noqa: E501
 
         :return: The labels of this FullTopic.  # noqa: E501
         :rtype: list[str]
@@ -356,7 +353,6 @@ class FullTopic(object):
     def labels(self, labels):
         """Sets the labels of this FullTopic.
 
-          # noqa: E501
 
         :param labels: The labels of this FullTopic.  # noqa: E501
         :type: list[str]
@@ -551,7 +547,6 @@ class FullTopic(object):
     def comments(self):
         """Gets the comments of this FullTopic.  # noqa: E501
 
-          # noqa: E501
 
         :return: The comments of this FullTopic.  # noqa: E501
         :rtype: list[Comment]
@@ -562,7 +557,6 @@ class FullTopic(object):
     def comments(self, comments):
         """Sets the comments of this FullTopic.
 
-          # noqa: E501
 
         :param comments: The comments of this FullTopic.  # noqa: E501
         :type: list[Comment]
@@ -574,7 +568,6 @@ class FullTopic(object):
     def viewpoints(self):
         """Gets the viewpoints of this FullTopic.  # noqa: E501
 
-          # noqa: E501
 
         :return: The viewpoints of this FullTopic.  # noqa: E501
         :rtype: list[Viewpoint]
@@ -585,7 +578,6 @@ class FullTopic(object):
     def viewpoints(self, viewpoints):
         """Sets the viewpoints of this FullTopic.
 
-          # noqa: E501
 
         :param viewpoints: The viewpoints of this FullTopic.  # noqa: E501
         :type: list[Viewpoint]

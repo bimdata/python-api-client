@@ -158,7 +158,6 @@ class PropertySet(object):
     def properties(self):
         """Gets the properties of this PropertySet.  # noqa: E501
 
-          # noqa: E501
 
         :return: The properties of this PropertySet.  # noqa: E501
         :rtype: list[ModelProperty]
@@ -169,7 +168,6 @@ class PropertySet(object):
     def properties(self, properties):
         """Sets the properties of this PropertySet.
 
-          # noqa: E501
 
         :param properties: The properties of this PropertySet.  # noqa: E501
         :type: list[ModelProperty]

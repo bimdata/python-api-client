@@ -47,7 +47,7 @@ class Document(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'ifc_source': 'str',
-        'ifc_id': 'str'
+        'ifc_id': 'int'
     }
 
     attribute_map = {
@@ -431,7 +431,7 @@ class Document(object):
 
 
         :return: The ifc_id of this Document.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._ifc_id
 
@@ -441,7 +441,7 @@ class Document(object):
 
 
         :param ifc_id: The ifc_id of this Document.  # noqa: E501
-        :type: str
+        :type: int
         """
 
         self._ifc_id = ifc_id

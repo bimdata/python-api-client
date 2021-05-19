@@ -1,6 +1,5 @@
 # ViewSetupHints
 
-ViewSetupHints(id, spaces_visible, space_boundaries_visible, openings_visible)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

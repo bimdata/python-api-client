@@ -1,6 +1,5 @@
 # IfcExport
 
-Ifc(id, creator, document, project, created_at, updated_at, structure_file, systems_file, zones_file, map_file, gltf_file, gltf_with_openings_file, bvh_tree_file, viewer_360_file, xkt_file, world_position, is_demo, errors, warnings, source, update_check_needed, archived, version, north_vector)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -12,7 +11,7 @@ Name | Type | Description | Notes
 **materials** | **str** | Exported IFC will include materials from original IFC file (ORIGINAL), from latest API updates (UPDATED), or won&#39;t include materials(NONE) | [optional] [default to 'UPDATED']
 **attributes** | **str** | Exported IFC will include attributes from original IFC file (ORIGINAL), from latest API updates (UPDATED), or won&#39;t include attributes(NONE) | [optional] [default to 'UPDATED']
 **structure** | **str** | Exported IFC will include the structure from original IFC file (ORIGINAL), from latest API updates (UPDATED), or won&#39;t include structure(NONE) | [optional] [default to 'UPDATED']
-**uuids** | **list[str]** |  | [optional] 
+**uuids** | **list[str]** | Exported IFC will only have those elements. If omitted, all elements will be exported | [optional] 
 **file_name** | **str** | The name of the exported IFC file. It MUST end with .ifc or the exported file won&#39;t be processed by BIMData | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

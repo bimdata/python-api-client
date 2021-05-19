@@ -1,6 +1,5 @@
 # Line
 
-Line(id, start_point, end_point, viewpoint)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

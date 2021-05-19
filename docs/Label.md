@@ -1,6 +1,5 @@
 # Label
 
-Label(id, label)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

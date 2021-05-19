@@ -1,6 +1,5 @@
 # ElementPropertySetRelation
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

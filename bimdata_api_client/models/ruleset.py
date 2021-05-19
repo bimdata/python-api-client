@@ -169,7 +169,6 @@ class Ruleset(object):
     def rules(self):
         """Gets the rules of this Ruleset.  # noqa: E501
 
-          # noqa: E501
 
         :return: The rules of this Ruleset.  # noqa: E501
         :rtype: list[Rule]
@@ -180,7 +179,6 @@ class Ruleset(object):
     def rules(self, rules):
         """Sets the rules of this Ruleset.
 
-          # noqa: E501
 
         :param rules: The rules of this Ruleset.  # noqa: E501
         :type: list[Rule]
@@ -192,7 +190,6 @@ class Ruleset(object):
     def rulesets(self):
         """Gets the rulesets of this Ruleset.  # noqa: E501
 
-          # noqa: E501
 
         :return: The rulesets of this Ruleset.  # noqa: E501
         :rtype: list[Ruleset]
@@ -203,7 +200,6 @@ class Ruleset(object):
     def rulesets(self, rulesets):
         """Sets the rulesets of this Ruleset.
 
-          # noqa: E501
 
         :param rulesets: The rulesets of this Ruleset.  # noqa: E501
         :type: list[Ruleset]

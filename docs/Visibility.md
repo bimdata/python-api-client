@@ -1,6 +1,5 @@
 # Visibility
 
-Visibility(id, default_visibility, view_setup_hints)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,6 +1,5 @@
 # Stage
 
-Stage(id, stage)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

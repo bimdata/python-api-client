@@ -1,6 +1,5 @@
 # SimpleElement
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

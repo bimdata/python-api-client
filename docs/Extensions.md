@@ -1,6 +1,5 @@
 # Extensions
 
-Extensions(id, project)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

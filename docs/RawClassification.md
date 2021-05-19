@@ -1,6 +1,5 @@
 # RawClassification
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,6 +1,5 @@
 # RawLayer
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

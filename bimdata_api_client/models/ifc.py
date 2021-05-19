@@ -527,7 +527,7 @@ class Ifc(object):
     def world_position(self):
         """Gets the world_position of this Ifc.  # noqa: E501
 
-          # noqa: E501
+        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
 
         :return: The world_position of this Ifc.  # noqa: E501
         :rtype: list[float]
@@ -538,7 +538,7 @@ class Ifc(object):
     def world_position(self, world_position):
         """Sets the world_position of this Ifc.
 
-          # noqa: E501
+        [x,y,z] array of the position of the local_placement in world coordinates  # noqa: E501
 
         :param world_position: The world_position of this Ifc.  # noqa: E501
         :type: list[float]
@@ -550,7 +550,7 @@ class Ifc(object):
     def errors(self):
         """Gets the errors of this Ifc.  # noqa: E501
 
-          # noqa: E501
+        List of errors that happened during IFC processing  # noqa: E501
 
         :return: The errors of this Ifc.  # noqa: E501
         :rtype: list[str]
@@ -561,7 +561,7 @@ class Ifc(object):
     def errors(self, errors):
         """Sets the errors of this Ifc.
 
-          # noqa: E501
+        List of errors that happened during IFC processing  # noqa: E501
 
         :param errors: The errors of this Ifc.  # noqa: E501
         :type: list[str]
@@ -573,7 +573,7 @@ class Ifc(object):
     def warnings(self):
         """Gets the warnings of this Ifc.  # noqa: E501
 
-          # noqa: E501
+        List of warnings that happened during IFC processing  # noqa: E501
 
         :return: The warnings of this Ifc.  # noqa: E501
         :rtype: list[str]
@@ -584,7 +584,7 @@ class Ifc(object):
     def warnings(self, warnings):
         """Sets the warnings of this Ifc.
 
-          # noqa: E501
+        List of warnings that happened during IFC processing  # noqa: E501
 
         :param warnings: The warnings of this Ifc.  # noqa: E501
         :type: list[str]
@@ -643,7 +643,7 @@ class Ifc(object):
     def north_vector(self):
         """Gets the north_vector of this Ifc.  # noqa: E501
 
-          # noqa: E501
+        This field is only for information. Updating it won't impact the export.  # noqa: E501
 
         :return: The north_vector of this Ifc.  # noqa: E501
         :rtype: list[list[float]]
@@ -654,7 +654,7 @@ class Ifc(object):
     def north_vector(self, north_vector):
         """Sets the north_vector of this Ifc.
 
-          # noqa: E501
+        This field is only for information. Updating it won't impact the export.  # noqa: E501
 
         :param north_vector: The north_vector of this Ifc.  # noqa: E501
         :type: list[list[float]]

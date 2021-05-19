@@ -1,6 +1,5 @@
 # RawMaterialOptions
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

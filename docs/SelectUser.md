@@ -1,6 +1,5 @@
 # SelectUser
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

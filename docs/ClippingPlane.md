@@ -1,6 +1,5 @@
 # ClippingPlane
 
-ClippingPlane(id, location, direction, viewpoint)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

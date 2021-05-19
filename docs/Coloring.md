@@ -1,6 +1,5 @@
 # Coloring
 
-Coloring(id, color, components_parent)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

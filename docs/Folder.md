@@ -1,6 +1,5 @@
 # Folder
 
-Folder with recursive children field, useful for openapi generator
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

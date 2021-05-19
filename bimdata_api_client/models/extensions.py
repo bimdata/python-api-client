@@ -77,7 +77,6 @@ class Extensions(object):
     def topic_type(self):
         """Gets the topic_type of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The topic_type of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -88,7 +87,6 @@ class Extensions(object):
     def topic_type(self, topic_type):
         """Sets the topic_type of this Extensions.
 
-          # noqa: E501
 
         :param topic_type: The topic_type of this Extensions.  # noqa: E501
         :type: list[str]
@@ -100,7 +98,6 @@ class Extensions(object):
     def topic_status(self):
         """Gets the topic_status of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The topic_status of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -111,7 +108,6 @@ class Extensions(object):
     def topic_status(self, topic_status):
         """Sets the topic_status of this Extensions.
 
-          # noqa: E501
 
         :param topic_status: The topic_status of this Extensions.  # noqa: E501
         :type: list[str]
@@ -123,7 +119,6 @@ class Extensions(object):
     def topic_label(self):
         """Gets the topic_label of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The topic_label of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -134,7 +129,6 @@ class Extensions(object):
     def topic_label(self, topic_label):
         """Sets the topic_label of this Extensions.
 
-          # noqa: E501
 
         :param topic_label: The topic_label of this Extensions.  # noqa: E501
         :type: list[str]
@@ -146,7 +140,6 @@ class Extensions(object):
     def priority(self):
         """Gets the priority of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The priority of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -157,7 +150,6 @@ class Extensions(object):
     def priority(self, priority):
         """Sets the priority of this Extensions.
 
-          # noqa: E501
 
         :param priority: The priority of this Extensions.  # noqa: E501
         :type: list[str]
@@ -169,7 +161,6 @@ class Extensions(object):
     def user_id_type(self):
         """Gets the user_id_type of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The user_id_type of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -180,7 +171,6 @@ class Extensions(object):
     def user_id_type(self, user_id_type):
         """Sets the user_id_type of this Extensions.
 
-          # noqa: E501
 
         :param user_id_type: The user_id_type of this Extensions.  # noqa: E501
         :type: list[str]
@@ -192,7 +182,6 @@ class Extensions(object):
     def stage(self):
         """Gets the stage of this Extensions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The stage of this Extensions.  # noqa: E501
         :rtype: list[str]
@@ -203,7 +192,6 @@ class Extensions(object):
     def stage(self, stage):
         """Sets the stage of this Extensions.
 
-          # noqa: E501
 
         :param stage: The stage of this Extensions.  # noqa: E501
         :type: list[str]

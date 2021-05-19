@@ -36,7 +36,7 @@ class MaterialOption(object):
     openapi_types = {
         'id': 'int',
         'thickness': 'float',
-        'list_components': 'str'
+        'list_components': 'list[dict(str, str)]'
     }
 
     attribute_map = {
@@ -111,7 +111,7 @@ class MaterialOption(object):
 
 
         :return: The list_components of this MaterialOption.  # noqa: E501
-        :rtype: str
+        :rtype: list[dict(str, str)]
         """
         return self._list_components
 
@@ -121,7 +121,7 @@ class MaterialOption(object):
 
 
         :param list_components: The list_components of this MaterialOption.  # noqa: E501
-        :type: str
+        :type: list[dict(str, str)]
         """
 
         self._list_components = list_components

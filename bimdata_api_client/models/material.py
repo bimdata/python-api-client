@@ -64,9 +64,12 @@ class Material(object):
 
         if id is not None:
             self.id = id
-        self.name = name
-        self.category = category
-        self.description = description
+        if name is not None:
+            self.name = name
+        if category is not None:
+            self.category = category
+        if description is not None:
+            self.description = description
         self.property_sets = property_sets
 
     @property
@@ -108,11 +111,6 @@ class Material(object):
         :param name: The name of this Material.  # noqa: E501
         :type: str
         """
-        if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
-            raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
-        if (self.local_vars_configuration.client_side_validation and
-                name is not None and len(name) > 255):
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) < 1):
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
@@ -138,8 +136,8 @@ class Material(object):
         :type: str
         """
         if (self.local_vars_configuration.client_side_validation and
-                category is not None and len(category) > 255):
-            raise ValueError("Invalid value for `category`, length must be less than or equal to `255`")  # noqa: E501
+                category is not None and len(category) < 1):
+            raise ValueError("Invalid value for `category`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._category = category
 
@@ -161,6 +159,9 @@ class Material(object):
         :param description: The description of this Material.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                description is not None and len(description) < 1):
+            raise ValueError("Invalid value for `description`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._description = description
 
@@ -168,7 +169,6 @@ class Material(object):
     def property_sets(self):
         """Gets the property_sets of this Material.  # noqa: E501
 
-          # noqa: E501
 
         :return: The property_sets of this Material.  # noqa: E501
         :rtype: list[PropertySet]
@@ -179,7 +179,6 @@ class Material(object):
     def property_sets(self, property_sets):
         """Sets the property_sets of this Material.
 
-          # noqa: E501
 
         :param property_sets: The property_sets of this Material.  # noqa: E501
         :type: list[PropertySet]

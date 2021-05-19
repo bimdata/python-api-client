@@ -77,14 +77,11 @@ class Viewpoint(object):
         self.index = index
         if guid is not None:
             self.guid = guid
-        if orthogonal_camera is not None:
-            self.orthogonal_camera = orthogonal_camera
-        if perspective_camera is not None:
-            self.perspective_camera = perspective_camera
+        self.orthogonal_camera = orthogonal_camera
+        self.perspective_camera = perspective_camera
         self.lines = lines
         self.clipping_planes = clipping_planes
-        if snapshot is not None:
-            self.snapshot = snapshot
+        self.snapshot = snapshot
         self.components = components
         self.temp_id = temp_id
 
@@ -182,7 +179,6 @@ class Viewpoint(object):
     def lines(self):
         """Gets the lines of this Viewpoint.  # noqa: E501
 
-          # noqa: E501
 
         :return: The lines of this Viewpoint.  # noqa: E501
         :rtype: list[Line]
@@ -193,7 +189,6 @@ class Viewpoint(object):
     def lines(self, lines):
         """Sets the lines of this Viewpoint.
 
-          # noqa: E501
 
         :param lines: The lines of this Viewpoint.  # noqa: E501
         :type: list[Line]
@@ -205,7 +200,6 @@ class Viewpoint(object):
     def clipping_planes(self):
         """Gets the clipping_planes of this Viewpoint.  # noqa: E501
 
-          # noqa: E501
 
         :return: The clipping_planes of this Viewpoint.  # noqa: E501
         :rtype: list[ClippingPlane]
@@ -216,7 +210,6 @@ class Viewpoint(object):
     def clipping_planes(self, clipping_planes):
         """Sets the clipping_planes of this Viewpoint.
 
-          # noqa: E501
 
         :param clipping_planes: The clipping_planes of this Viewpoint.  # noqa: E501
         :type: list[ClippingPlane]

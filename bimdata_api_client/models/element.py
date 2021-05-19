@@ -191,7 +191,6 @@ class Element(object):
     def property_sets(self):
         """Gets the property_sets of this Element.  # noqa: E501
 
-          # noqa: E501
 
         :return: The property_sets of this Element.  # noqa: E501
         :rtype: list[PropertySet]
@@ -202,7 +201,6 @@ class Element(object):
     def property_sets(self, property_sets):
         """Sets the property_sets of this Element.
 
-          # noqa: E501
 
         :param property_sets: The property_sets of this Element.  # noqa: E501
         :type: list[PropertySet]
@@ -214,7 +212,6 @@ class Element(object):
     def classifications(self):
         """Gets the classifications of this Element.  # noqa: E501
 
-          # noqa: E501
 
         :return: The classifications of this Element.  # noqa: E501
         :rtype: list[Classification]
@@ -225,7 +222,6 @@ class Element(object):
     def classifications(self, classifications):
         """Sets the classifications of this Element.
 
-          # noqa: E501
 
         :param classifications: The classifications of this Element.  # noqa: E501
         :type: list[Classification]
@@ -237,7 +233,6 @@ class Element(object):
     def material_list(self):
         """Gets the material_list of this Element.  # noqa: E501
 
-          # noqa: E501
 
         :return: The material_list of this Element.  # noqa: E501
         :rtype: list[MaterialListComponent]
@@ -248,7 +243,6 @@ class Element(object):
     def material_list(self, material_list):
         """Sets the material_list of this Element.
 
-          # noqa: E501
 
         :param material_list: The material_list of this Element.  # noqa: E501
         :type: list[MaterialListComponent]
@@ -260,7 +254,6 @@ class Element(object):
     def layers(self):
         """Gets the layers of this Element.  # noqa: E501
 
-          # noqa: E501
 
         :return: The layers of this Element.  # noqa: E501
         :rtype: list[LayerElement]
@@ -271,7 +264,6 @@ class Element(object):
     def layers(self, layers):
         """Sets the layers of this Element.
 
-          # noqa: E501
 
         :param layers: The layers of this Element.  # noqa: E501
         :type: list[LayerElement]

@@ -189,7 +189,6 @@ class RawMaterial(object):
     def psets(self):
         """Gets the psets of this RawMaterial.  # noqa: E501
 
-          # noqa: E501
 
         :return: The psets of this RawMaterial.  # noqa: E501
         :rtype: list[int]
@@ -200,7 +199,6 @@ class RawMaterial(object):
     def psets(self, psets):
         """Sets the psets of this RawMaterial.
 
-          # noqa: E501
 
         :param psets: The psets of this RawMaterial.  # noqa: E501
         :type: list[int]

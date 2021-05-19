@@ -333,7 +333,7 @@ class IfcExport(object):
     def uuids(self):
         """Gets the uuids of this IfcExport.  # noqa: E501
 
-          # noqa: E501
+        Exported IFC will only have those elements. If omitted, all elements will be exported  # noqa: E501
 
         :return: The uuids of this IfcExport.  # noqa: E501
         :rtype: list[str]
@@ -344,7 +344,7 @@ class IfcExport(object):
     def uuids(self, uuids):
         """Sets the uuids of this IfcExport.
 
-          # noqa: E501
+        Exported IFC will only have those elements. If omitted, all elements will be exported  # noqa: E501
 
         :param uuids: The uuids of this IfcExport.  # noqa: E501
         :type: list[str]

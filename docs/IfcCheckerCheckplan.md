@@ -1,6 +1,5 @@
 # IfcCheckerCheckplan
 
-CheckPlan(id, name, project, description, created_at, updated_at, protected)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

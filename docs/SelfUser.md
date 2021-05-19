@@ -1,6 +1,5 @@
 # SelfUser
 
-FosUser(id, user, email, firstname, lastname, company, created_at, updated_at, provider, provider_sub, sub, waiting_for_first_login)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

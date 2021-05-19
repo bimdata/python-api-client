@@ -195,7 +195,6 @@ class CheckPlan(object):
     def rulesets(self):
         """Gets the rulesets of this CheckPlan.  # noqa: E501
 
-          # noqa: E501
 
         :return: The rulesets of this CheckPlan.  # noqa: E501
         :rtype: list[Ruleset]
@@ -206,7 +205,6 @@ class CheckPlan(object):
     def rulesets(self, rulesets):
         """Sets the rulesets of this CheckPlan.
 
-          # noqa: E501
 
         :param rulesets: The rulesets of this CheckPlan.  # noqa: E501
         :type: list[Ruleset]

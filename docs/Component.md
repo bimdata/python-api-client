@@ -1,6 +1,5 @@
 # Component
 
-Component(id, ifc_guid, originating_system, authoring_tool_id, components_set, coloring, visibility)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -37,7 +37,7 @@ class Cloud(object):
         'id': 'int',
         'name': 'str',
         'features': 'list[Feature]',
-        'marketplace_apps': 'str',
+        'marketplace_apps': 'list[MarketplaceApp]',
         'organization': 'Organization',
         'organization_id': 'int',
         'creator': 'User',
@@ -162,7 +162,6 @@ class Cloud(object):
     def features(self):
         """Gets the features of this Cloud.  # noqa: E501
 
-          # noqa: E501
 
         :return: The features of this Cloud.  # noqa: E501
         :rtype: list[Feature]
@@ -173,7 +172,6 @@ class Cloud(object):
     def features(self, features):
         """Sets the features of this Cloud.
 
-          # noqa: E501
 
         :param features: The features of this Cloud.  # noqa: E501
         :type: list[Feature]
@@ -187,7 +185,7 @@ class Cloud(object):
 
 
         :return: The marketplace_apps of this Cloud.  # noqa: E501
-        :rtype: str
+        :rtype: list[MarketplaceApp]
         """
         return self._marketplace_apps
 
@@ -197,7 +195,7 @@ class Cloud(object):
 
 
         :param marketplace_apps: The marketplace_apps of this Cloud.  # noqa: E501
-        :type: str
+        :type: list[MarketplaceApp]
         """
 
         self._marketplace_apps = marketplace_apps

@@ -64,7 +64,6 @@ class RawMaterialList(object):
     def materials_data(self):
         """Gets the materials_data of this RawMaterialList.  # noqa: E501
 
-          # noqa: E501
 
         :return: The materials_data of this RawMaterialList.  # noqa: E501
         :rtype: list[RawMaterial]
@@ -75,7 +74,6 @@ class RawMaterialList(object):
     def materials_data(self, materials_data):
         """Sets the materials_data of this RawMaterialList.
 
-          # noqa: E501
 
         :param materials_data: The materials_data of this RawMaterialList.  # noqa: E501
         :type: list[RawMaterial]
@@ -87,7 +85,6 @@ class RawMaterialList(object):
     def list_components(self):
         """Gets the list_components of this RawMaterialList.  # noqa: E501
 
-          # noqa: E501
 
         :return: The list_components of this RawMaterialList.  # noqa: E501
         :rtype: list[RawMaterialListComponents]
@@ -98,7 +95,6 @@ class RawMaterialList(object):
     def list_components(self, list_components):
         """Sets the list_components of this RawMaterialList.
 
-          # noqa: E501
 
         :param list_components: The list_components of this RawMaterialList.  # noqa: E501
         :type: list[RawMaterialListComponents]
@@ -110,7 +106,6 @@ class RawMaterialList(object):
     def options(self):
         """Gets the options of this RawMaterialList.  # noqa: E501
 
-          # noqa: E501
 
         :return: The options of this RawMaterialList.  # noqa: E501
         :rtype: list[RawMaterialOptions]
@@ -121,7 +116,6 @@ class RawMaterialList(object):
     def options(self, options):
         """Sets the options of this RawMaterialList.
 
-          # noqa: E501
 
         :param options: The options of this RawMaterialList.  # noqa: E501
         :type: list[RawMaterialOptions]

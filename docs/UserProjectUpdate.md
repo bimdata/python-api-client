@@ -1,6 +1,5 @@
 # UserProjectUpdate
 
-UserProject(id, user, project, role)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

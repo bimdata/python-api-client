@@ -1,6 +1,5 @@
 # RawPropertySet
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

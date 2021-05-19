@@ -261,7 +261,6 @@ class ProjectWithChildren(object):
     def children(self):
         """Gets the children of this ProjectWithChildren.  # noqa: E501
 
-          # noqa: E501
 
         :return: The children of this ProjectWithChildren.  # noqa: E501
         :rtype: list[ProjectWithChildren]
@@ -272,7 +271,6 @@ class ProjectWithChildren(object):
     def children(self, children):
         """Sets the children of this ProjectWithChildren.
 
-          # noqa: E501
 
         :param children: The children of this ProjectWithChildren.  # noqa: E501
         :type: list[ProjectWithChildren]

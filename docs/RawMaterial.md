@@ -1,6 +1,5 @@
 # RawMaterial
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -406,6 +406,8 @@ Class | Method | HTTP request | Description
  - [Layer](docs/Layer.md)
  - [LayerElement](docs/LayerElement.md)
  - [Line](docs/Line.md)
+ - [MarketplaceApp](docs/MarketplaceApp.md)
+ - [MarketplaceAppImage](docs/MarketplaceAppImage.md)
  - [Material](docs/Material.md)
  - [MaterialListComponent](docs/MaterialListComponent.md)
  - [MaterialOption](docs/MaterialOption.md)

@@ -245,7 +245,6 @@ class RawUnit(object):
     def dimensions(self):
         """Gets the dimensions of this RawUnit.  # noqa: E501
 
-          # noqa: E501
 
         :return: The dimensions of this RawUnit.  # noqa: E501
         :rtype: list[float]
@@ -256,7 +255,6 @@ class RawUnit(object):
     def dimensions(self, dimensions):
         """Sets the dimensions of this RawUnit.
 
-          # noqa: E501
 
         :param dimensions: The dimensions of this RawUnit.  # noqa: E501
         :type: list[float]

@@ -67,8 +67,7 @@ class PropertyDefinition(object):
 
         if id is not None:
             self.id = id
-        if unit is not None:
-            self.unit = unit
+        self.unit = unit
         self.name = name
         self.description = description
         self.type = type

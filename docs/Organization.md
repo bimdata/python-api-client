@@ -1,6 +1,5 @@
 # Organization
 
-Organization(id, name, is_personnal, created_at, updated_at, logo)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

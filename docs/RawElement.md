@@ -1,6 +1,5 @@
 # RawElement
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

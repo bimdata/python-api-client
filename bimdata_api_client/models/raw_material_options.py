@@ -107,7 +107,6 @@ class RawMaterialOptions(object):
     def material_list(self):
         """Gets the material_list of this RawMaterialOptions.  # noqa: E501
 
-          # noqa: E501
 
         :return: The material_list of this RawMaterialOptions.  # noqa: E501
         :rtype: list[int]
@@ -118,7 +117,6 @@ class RawMaterialOptions(object):
     def material_list(self, material_list):
         """Sets the material_list of this RawMaterialOptions.
 
-          # noqa: E501
 
         :param material_list: The material_list of this RawMaterialOptions.  # noqa: E501
         :type: list[int]

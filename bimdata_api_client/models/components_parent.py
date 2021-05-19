@@ -58,8 +58,7 @@ class ComponentsParent(object):
 
         if coloring is not None:
             self.coloring = coloring
-        if visibility is not None:
-            self.visibility = visibility
+        self.visibility = visibility
         if selection is not None:
             self.selection = selection
 
@@ -67,7 +66,6 @@ class ComponentsParent(object):
     def coloring(self):
         """Gets the coloring of this ComponentsParent.  # noqa: E501
 
-          # noqa: E501
 
         :return: The coloring of this ComponentsParent.  # noqa: E501
         :rtype: list[Coloring]
@@ -78,7 +76,6 @@ class ComponentsParent(object):
     def coloring(self, coloring):
         """Sets the coloring of this ComponentsParent.
 
-          # noqa: E501
 
         :param coloring: The coloring of this ComponentsParent.  # noqa: E501
         :type: list[Coloring]
@@ -111,7 +108,6 @@ class ComponentsParent(object):
     def selection(self):
         """Gets the selection of this ComponentsParent.  # noqa: E501
 
-          # noqa: E501
 
         :return: The selection of this ComponentsParent.  # noqa: E501
         :rtype: list[Component]
@@ -122,7 +118,6 @@ class ComponentsParent(object):
     def selection(self, selection):
         """Sets the selection of this ComponentsParent.
 
-          # noqa: E501
 
         :param selection: The selection of this ComponentsParent.  # noqa: E501
         :type: list[Component]

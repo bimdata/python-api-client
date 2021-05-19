@@ -51,6 +51,8 @@ from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.layer import Layer
 from bimdata_api_client.models.layer_element import LayerElement
 from bimdata_api_client.models.line import Line
+from bimdata_api_client.models.marketplace_app import MarketplaceApp
+from bimdata_api_client.models.marketplace_app_image import MarketplaceAppImage
 from bimdata_api_client.models.material import Material
 from bimdata_api_client.models.material_list_component import MaterialListComponent
 from bimdata_api_client.models.material_option import MaterialOption

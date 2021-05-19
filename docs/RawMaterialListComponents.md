@@ -1,6 +1,5 @@
 # RawMaterialListComponents
 
-
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

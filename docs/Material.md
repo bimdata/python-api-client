@@ -1,13 +1,12 @@
 # Material
 
-Default behavior: - retrieve kwargs in the route (cloud_pk, project_pk, etc) - trim the _pk (cloud_pk => cloud) - check if the object has a foreign key with the name - if so, set the foreign key to the value in the route Override: If the serializer has a method \"get_parents\", we call it and set the parents The method \"get_parents\" should return an iterable of tuples : (parent_field_name, parent_object)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
-**name** | **str** |  | 
-**category** | **str** |  | [optional] 
-**description** | **str** |  | [optional] 
+**name** | **str** |  | [optional] [readonly] 
+**category** | **str** |  | [optional] [readonly] 
+**description** | **str** |  | [optional] [readonly] 
 **property_sets** | [**list[PropertySet]**](PropertySet.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

@@ -1,6 +1,5 @@
 # UserCloudUpdate
 
-UserCloud(id, user, cloud, role)
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
