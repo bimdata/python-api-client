@@ -56,7 +56,8 @@ class Ifc(object):
         'warnings': 'list[str]',
         'archived': 'bool',
         'version': 'str',
-        'north_vector': 'list[list[float]]'
+        'north_vector': 'list[list[float]]',
+        'recommanded_2d_angle': 'float'
     }
 
     attribute_map = {
@@ -82,10 +83,11 @@ class Ifc(object):
         'warnings': 'warnings',
         'archived': 'archived',
         'version': 'version',
-        'north_vector': 'north_vector'
+        'north_vector': 'north_vector',
+        'recommanded_2d_angle': 'recommanded_2d_angle'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, recommanded_2d_angle=None, local_vars_configuration=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -114,6 +116,7 @@ class Ifc(object):
         self._archived = None
         self._version = None
         self._north_vector = None
+        self._recommanded_2d_angle = None
         self.discriminator = None
 
         if id is not None:
@@ -159,6 +162,7 @@ class Ifc(object):
             self.archived = archived
         self.version = version
         self.north_vector = north_vector
+        self.recommanded_2d_angle = recommanded_2d_angle
 
     @property
     def id(self):
@@ -661,6 +665,29 @@ class Ifc(object):
         """
 
         self._north_vector = north_vector
+
+    @property
+    def recommanded_2d_angle(self):
+        """Gets the recommanded_2d_angle of this Ifc.  # noqa: E501
+
+        This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won't impact the export.  # noqa: E501
+
+        :return: The recommanded_2d_angle of this Ifc.  # noqa: E501
+        :rtype: float
+        """
+        return self._recommanded_2d_angle
+
+    @recommanded_2d_angle.setter
+    def recommanded_2d_angle(self, recommanded_2d_angle):
+        """Sets the recommanded_2d_angle of this Ifc.
+
+        This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won't impact the export.  # noqa: E501
+
+        :param recommanded_2d_angle: The recommanded_2d_angle of this Ifc.  # noqa: E501
+        :type: float
+        """
+
+        self._recommanded_2d_angle = recommanded_2d_angle
 
     def to_dict(self):
         """Returns the model properties as a dict"""

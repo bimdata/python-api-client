@@ -26,6 +26,7 @@ Name | Type | Description | Notes
 **archived** | **bool** |  | [optional] 
 **version** | **str** | This field is only for information. Updating it won&#39;t impact the export. | [optional] 
 **north_vector** | **list[list[float]]** | This field is only for information. Updating it won&#39;t impact the export. | [optional] 
+**recommanded_2d_angle** | **float** | This is the angle in clockwise degree to apply on the 2D to optimise the horizontality of objects. This field is only for information. Updating it won&#39;t impact the export. | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
