@@ -40,7 +40,7 @@ class RawElements(object):
         'classifications': 'list[RawClassification]',
         'layers': 'list[RawLayer]',
         'systems': 'list[RawSystem]',
-        'material_list': 'RawMaterialList',
+        'materials': 'RawMaterialList',
         'elements': 'list[RawElement]'
     }
 
@@ -51,11 +51,11 @@ class RawElements(object):
         'classifications': 'classifications',
         'layers': 'layers',
         'systems': 'systems',
-        'material_list': 'material_list',
+        'materials': 'materials',
         'elements': 'elements'
     }
 
-    def __init__(self, units=None, definitions=None, property_sets=None, classifications=None, layers=None, systems=None, material_list=None, elements=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, units=None, definitions=None, property_sets=None, classifications=None, layers=None, systems=None, materials=None, elements=None, local_vars_configuration=None):  # noqa: E501
         """RawElements - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -67,7 +67,7 @@ class RawElements(object):
         self._classifications = None
         self._layers = None
         self._systems = None
-        self._material_list = None
+        self._materials = None
         self._elements = None
         self.discriminator = None
 
@@ -77,7 +77,7 @@ class RawElements(object):
         self.classifications = classifications
         self.layers = layers
         self.systems = systems
-        self.material_list = material_list
+        self.materials = materials
         self.elements = elements
 
     @property
@@ -207,25 +207,25 @@ class RawElements(object):
         self._systems = systems
 
     @property
-    def material_list(self):
-        """Gets the material_list of this RawElements.  # noqa: E501
+    def materials(self):
+        """Gets the materials of this RawElements.  # noqa: E501
 
 
-        :return: The material_list of this RawElements.  # noqa: E501
+        :return: The materials of this RawElements.  # noqa: E501
         :rtype: RawMaterialList
         """
-        return self._material_list
+        return self._materials
 
-    @material_list.setter
-    def material_list(self, material_list):
-        """Sets the material_list of this RawElements.
+    @materials.setter
+    def materials(self, materials):
+        """Sets the materials of this RawElements.
 
 
-        :param material_list: The material_list of this RawElements.  # noqa: E501
+        :param materials: The materials of this RawElements.  # noqa: E501
         :type: RawMaterialList
         """
 
-        self._material_list = material_list
+        self._materials = materials
 
     @property
     def elements(self):
