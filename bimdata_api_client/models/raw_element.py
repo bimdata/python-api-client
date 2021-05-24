@@ -37,7 +37,7 @@ class RawElement(object):
         'uuid': 'str',
         'type': 'str',
         'attributes': 'int',
-        'material_list': 'list[str]',
+        'material_list': 'list[int]',
         'psets': 'list[int]',
         'classifications': 'list[int]',
         'layers': 'list[int]',
@@ -159,7 +159,7 @@ class RawElement(object):
 
 
         :return: The material_list of this RawElement.  # noqa: E501
-        :rtype: list[str]
+        :rtype: list[int]
         """
         return self._material_list
 
@@ -169,7 +169,7 @@ class RawElement(object):
 
 
         :param material_list: The material_list of this RawElement.  # noqa: E501
-        :type: list[str]
+        :type: list[int]
         """
 
         self._material_list = material_list

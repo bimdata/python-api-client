@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **uuid** | **str** |  | 
 **type** | **str** |  | 
 **attributes** | **int** |  | [optional] 
-**material_list** | **list[str]** |  | [optional] [readonly] 
+**material_list** | **list[int]** |  | [optional] 
 **psets** | **list[int]** |  | [optional] 
 **classifications** | **list[int]** |  | [optional] 
 **layers** | **list[int]** |  | [optional] 
