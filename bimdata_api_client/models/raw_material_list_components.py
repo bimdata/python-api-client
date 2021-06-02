@@ -121,8 +121,6 @@ class RawMaterialListComponents(object):
         :param material_option: The material_option of this RawMaterialListComponents.  # noqa: E501
         :type: int
         """
-        if self.local_vars_configuration.client_side_validation and material_option is None:  # noqa: E501
-            raise ValueError("Invalid value for `material_option`, must not be `None`")  # noqa: E501
 
         self._material_option = material_option
 
