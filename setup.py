@@ -16,11 +16,11 @@ from os import path
 from io import open
 
 this_directory = path.abspath(path.dirname(__file__))
-with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
+with open(path.join(this_directory, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 NAME = "bimdata-api-client"
-VERSION = '5.13.3'
+VERSION = "5.13.3"
 # To install the library, run the following
 #
 # python setup.py install
@@ -28,11 +28,14 @@ VERSION = '5.13.3'
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
+
 REQUIRES = [
-    "urllib3 >= 1.15",
+    "certifi >= 14.05.14",
     "six >= 1.10",
-    "certifi",
-    "python-dateutil"]
+    "python_dateutil >= 2.5.3",
+    "setuptools >= 21.0.0",
+    "urllib3 >= 1.15.1",
+]
 
 setup(
     name=NAME,
@@ -45,5 +48,5 @@ setup(
     keywords=["Swagger", "BIMData API"],
     install_requires=REQUIRES,
     packages=find_packages(),
-    include_package_data=True
+    include_package_data=True,
 )

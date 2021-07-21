@@ -13,17 +13,13 @@ jobs:
         with:
           python-version: 3.9
       - name: Install requirements
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-          pip install -r test-requirements.txt
+        run: pip install -r requirements.txt -r test-requirements.txt
       - name: test
         run: tox
       - name: Check Readme syntax
         run: |
           python setup.py sdist
           twine check dist/*
-
 
   release:
     runs-on: self-hosted
@@ -34,18 +30,17 @@ jobs:
       , github.ref)
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
           python-version: 3.9
-      - name: Install requirements
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r ci-requirements.txt
-      - name: Python Semantic Release
-        uses: relekang/python-semantic-release@master
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          pypi_username: ${{ secrets.PYPI_USERNAME }}
-          pypi_password: ${{ secrets.PYPI_PASSWORD }}
+      - name: Install ci requirements
+        run: pip install -r ci-requirements.txt
+      - name: Release
+        run: PYTHONPATH=$PWD semantic-release publish
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
       
