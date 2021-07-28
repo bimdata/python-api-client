@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.cloud_role import CloudRole  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestCloudRole(unittest.TestCase):
     """CloudRole unit test stubs"""
@@ -29,11 +29,26 @@ class TestCloudRole(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test CloudRole
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.cloud_role.CloudRole()  # noqa: E501
+        if include_optional :
+            return CloudRole(
+                cloud = 56, 
+                role = 56
+            )
+        else :
+            return CloudRole(
+                cloud = 56,
+        )
+
     def testCloudRole(self):
         """Test CloudRole"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.cloud_role.CloudRole()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

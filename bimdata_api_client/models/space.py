@@ -170,8 +170,8 @@ class Space(object):
         if self.local_vars_configuration.client_side_validation and uuid is None:  # noqa: E501
             raise ValueError("Invalid value for `uuid`, must not be `None`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
-                uuid is not None and len(uuid) > 255):
-            raise ValueError("Invalid value for `uuid`, length must be less than or equal to `255`")  # noqa: E501
+                uuid is not None and len(uuid) > 512):
+            raise ValueError("Invalid value for `uuid`, length must be less than or equal to `512`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 uuid is not None and len(uuid) < 1):
             raise ValueError("Invalid value for `uuid`, length must be greater than or equal to `1`")  # noqa: E501

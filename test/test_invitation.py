@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.invitation import Invitation  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestInvitation(unittest.TestCase):
     """Invitation unit test stubs"""
@@ -29,11 +29,37 @@ class TestInvitation(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test Invitation
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.invitation.Invitation()  # noqa: E501
+        if include_optional :
+            return Invitation(
+                id = 56, 
+                client_id = '0', 
+                redirect_uri = '0', 
+                cloud_name = '0', 
+                cloud_role = 56, 
+                project_name = '0', 
+                project_role = 56, 
+                email = '0', 
+                status = 'A', 
+                sender_provider_sub = '0'
+            )
+        else :
+            return Invitation(
+                redirect_uri = '0',
+                cloud_name = '0',
+                cloud_role = 56,
+                email = '0',
+        )
+
     def testInvitation(self):
         """Test Invitation"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.invitation.Invitation()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

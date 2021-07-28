@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.comment import Comment  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestComment(unittest.TestCase):
     """Comment unit test stubs"""
@@ -29,11 +29,33 @@ class TestComment(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test Comment
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.comment.Comment()  # noqa: E501
+        if include_optional :
+            return Comment(
+                guid = '0', 
+                date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                author = '0', 
+                comment = '0', 
+                viewpoint_guid = '0', 
+                reply_to_comment_guid = '0', 
+                topic_guid = '0', 
+                modified_author = '0', 
+                modified_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                viewpoint_temp_id = 56
+            )
+        else :
+            return Comment(
+        )
+
     def testComment(self):
         """Test Comment"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.comment.Comment()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

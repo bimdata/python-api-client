@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.processor_handler import ProcessorHandler  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestProcessorHandler(unittest.TestCase):
     """ProcessorHandler unit test stubs"""
@@ -29,11 +29,27 @@ class TestProcessorHandler(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test ProcessorHandler
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.processor_handler.ProcessorHandler()  # noqa: E501
+        if include_optional :
+            return ProcessorHandler(
+                id = 56, 
+                processor = 56, 
+                status = 'C', 
+                detail_message = '0'
+            )
+        else :
+            return ProcessorHandler(
+        )
+
     def testProcessorHandler(self):
         """Test ProcessorHandler"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.processor_handler.ProcessorHandler()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

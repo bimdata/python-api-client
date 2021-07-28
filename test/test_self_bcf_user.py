@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.self_bcf_user import SelfBcfUser  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestSelfBcfUser(unittest.TestCase):
     """SelfBcfUser unit test stubs"""
@@ -29,11 +29,30 @@ class TestSelfBcfUser(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test SelfBcfUser
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.self_bcf_user.SelfBcfUser()  # noqa: E501
+        if include_optional :
+            return SelfBcfUser(
+                id = '0', 
+                name = '0', 
+                email = '0', 
+                is_client = True, 
+                is_project_token = True
+            )
+        else :
+            return SelfBcfUser(
+                id = '0',
+                email = '0',
+        )
+
     def testSelfBcfUser(self):
         """Test SelfBcfUser"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.self_bcf_user.SelfBcfUser()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

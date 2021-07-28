@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.raw_material import RawMaterial  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestRawMaterial(unittest.TestCase):
     """RawMaterial unit test stubs"""
@@ -29,11 +29,33 @@ class TestRawMaterial(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test RawMaterial
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.raw_material.RawMaterial()  # noqa: E501
+        if include_optional :
+            return RawMaterial(
+                id = 56, 
+                step_id = 56, 
+                name = '0', 
+                description = '0', 
+                category = '0', 
+                psets = [
+                    56
+                    ]
+            )
+        else :
+            return RawMaterial(
+                step_id = 56,
+                name = '0',
+        )
+
     def testRawMaterial(self):
         """Test RawMaterial"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.raw_material.RawMaterial()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

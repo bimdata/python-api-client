@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.classification import Classification  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestClassification(unittest.TestCase):
     """Classification unit test stubs"""
@@ -29,11 +29,27 @@ class TestClassification(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test Classification
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.classification.Classification()  # noqa: E501
+        if include_optional :
+            return Classification(
+                id = 56, 
+                name = '0', 
+                notation = '0', 
+                title = '0'
+            )
+        else :
+            return Classification(
+        )
+
     def testClassification(self):
         """Test Classification"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.classification.Classification()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

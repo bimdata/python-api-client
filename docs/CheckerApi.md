@@ -59,33 +59,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Create a checker to a model
-    api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
+    try:
+        # Create a checker to a model
+        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -95,33 +116,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Create a checker to a model
-    api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
+    try:
+        # Create a checker to a model
+        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -131,33 +173,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Create a checker to a model
-    api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker: %s\n" % e)
+    try:
+        # Create a checker to a model
+        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -210,34 +273,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Create a CheckerResult
-    api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
+    try:
+        # Create a CheckerResult
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -247,34 +331,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Create a CheckerResult
-    api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
+    try:
+        # Create a CheckerResult
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -284,34 +389,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Create a CheckerResult
-    api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
+    try:
+        # Create a CheckerResult
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -365,32 +491,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Create a Checkplan
-    api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
+    try:
+        # Create a Checkplan
+        api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -400,32 +547,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Create a Checkplan
-    api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
+    try:
+        # Create a Checkplan
+        api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -435,32 +603,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Create a Checkplan
-    api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
+    try:
+        # Create a Checkplan
+        api_response = api_instance.create_checkplan(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -512,34 +701,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Create a Rule
-    api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
+    try:
+        # Create a Rule
+        api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -549,34 +759,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Create a Rule
-    api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
+    try:
+        # Create a Rule
+        api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -586,34 +817,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Create a Rule
-    api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule: %s\n" % e)
+    try:
+        # Create a Rule
+        api_response = api_instance.create_rule(check_plan_pk, cloud_pk, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -667,35 +919,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Create a RuleComponent
-    api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
+    try:
+        # Create a RuleComponent
+        api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -705,35 +978,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Create a RuleComponent
-    api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
+    try:
+        # Create a RuleComponent
+        api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -743,35 +1037,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Create a RuleComponent
-    api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
+    try:
+        # Create a RuleComponent
+        api_response = api_instance.create_rule_component(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -826,33 +1141,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Create a Ruleset
-    api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
+    try:
+        # Create a Ruleset
+        api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -862,33 +1198,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Create a Ruleset
-    api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
+    try:
+        # Create a Ruleset
+        api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -898,33 +1255,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Create a Ruleset
-    api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
+    try:
+        # Create a Ruleset
+        api_response = api_instance.create_ruleset(check_plan_pk, cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->create_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -977,32 +1355,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a checker of a model
-    api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
+    try:
+        # Delete a checker of a model
+        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1012,32 +1411,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a checker of a model
-    api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
+    try:
+        # Delete a checker of a model
+        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1047,32 +1467,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a checker of a model
-    api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
+    try:
+        # Delete a checker of a model
+        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -1125,33 +1566,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a CheckerResult
-    api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
+    try:
+        # Delete a CheckerResult
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1161,33 +1623,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a CheckerResult
-    api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
+    try:
+        # Delete a CheckerResult
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1197,33 +1680,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a CheckerResult
-    api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
+    try:
+        # Delete a CheckerResult
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -1277,31 +1781,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Checkplan
-    api_instance.delete_checkplan(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
+    try:
+        # Delete a Checkplan
+        api_instance.delete_checkplan(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1311,31 +1836,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Checkplan
-    api_instance.delete_checkplan(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
+    try:
+        # Delete a Checkplan
+        api_instance.delete_checkplan(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1345,31 +1891,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Checkplan
-    api_instance.delete_checkplan(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
+    try:
+        # Delete a Checkplan
+        api_instance.delete_checkplan(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -1421,33 +1988,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a Rule
-    api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
+    try:
+        # Delete a Rule
+        api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1457,33 +2045,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a Rule
-    api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
+    try:
+        # Delete a Rule
+        api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1493,33 +2102,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a Rule
-    api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
+    try:
+        # Delete a Rule
+        api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -1573,34 +2203,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a RuleComponent
-    api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
+    try:
+        # Delete a RuleComponent
+        api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1610,34 +2261,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a RuleComponent
-    api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
+    try:
+        # Delete a RuleComponent
+        api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1647,34 +2319,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Delete a RuleComponent
-    api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
+    try:
+        # Delete a RuleComponent
+        api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -1729,32 +2422,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Ruleset
-    api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
+    try:
+        # Delete a Ruleset
+        api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1764,32 +2478,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Ruleset
-    api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
+    try:
+        # Delete a Ruleset
+        api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1799,32 +2534,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a Ruleset
-    api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
+    try:
+        # Delete a Ruleset
+        api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -1877,34 +2633,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update all fields of a checker of a model
-    api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
+    try:
+        # Update all fields of a checker of a model
+        api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1914,34 +2691,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update all fields of a checker of a model
-    api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
+    try:
+        # Update all fields of a checker of a model
+        api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1951,34 +2749,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update all fields of a checker of a model
-    api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
+    try:
+        # Update all fields of a checker of a model
+        api_response = api_instance.full_update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -2032,35 +2851,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update all fields of a CheckerResult
-    api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
+    try:
+        # Update all fields of a CheckerResult
+        api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2070,35 +2910,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update all fields of a CheckerResult
-    api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
+    try:
+        # Update all fields of a CheckerResult
+        api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2108,35 +2969,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update all fields of a CheckerResult
-    api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
+    try:
+        # Update all fields of a CheckerResult
+        api_response = api_instance.full_update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -2191,33 +3073,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update all fields of a Checkplan
-    api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
+    try:
+        # Update all fields of a Checkplan
+        api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2227,33 +3130,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update all fields of a Checkplan
-    api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
+    try:
+        # Update all fields of a Checkplan
+        api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2263,33 +3187,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update all fields of a Checkplan
-    api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
+    try:
+        # Update all fields of a Checkplan
+        api_response = api_instance.full_update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -2342,35 +3287,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update all fields of a Rule
-    api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
+    try:
+        # Update all fields of a Rule
+        api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2380,35 +3346,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update all fields of a Rule
-    api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
+    try:
+        # Update all fields of a Rule
+        api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2418,35 +3405,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update all fields of a Rule
-    api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
+    try:
+        # Update all fields of a Rule
+        api_response = api_instance.full_update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -2501,23 +3509,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -2525,12 +3554,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update all fields of a RuleComponent
-    api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
+    try:
+        # Update all fields of a RuleComponent
+        api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2540,23 +3569,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -2564,12 +3614,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update all fields of a RuleComponent
-    api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
+    try:
+        # Update all fields of a RuleComponent
+        api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2579,23 +3629,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -2603,12 +3674,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update all fields of a RuleComponent
-    api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
+    try:
+        # Update all fields of a RuleComponent
+        api_response = api_instance.full_update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -2664,34 +3735,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update all fields of a Ruleset
-    api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
+    try:
+        # Update all fields of a Ruleset
+        api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2701,34 +3793,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update all fields of a Ruleset
-    api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
+    try:
+        # Update all fields of a Ruleset
+        api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2738,34 +3851,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update all fields of a Ruleset
-    api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
+    try:
+        # Update all fields of a Ruleset
+        api_response = api_instance.full_update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->full_update_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -2819,33 +3953,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a checker of a model
-    api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
+    try:
+        # Retrieve a checker of a model
+        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2855,33 +4010,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a checker of a model
-    api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
+    try:
+        # Retrieve a checker of a model
+        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2891,33 +4067,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a checker of a model
-    api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker: %s\n" % e)
+    try:
+        # Retrieve a checker of a model
+        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -2970,34 +4167,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one CheckerResult
-    api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
+    try:
+        # Retrieve one CheckerResult
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3007,34 +4225,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one CheckerResult
-    api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
+    try:
+        # Retrieve one CheckerResult
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3044,34 +4283,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one CheckerResult
-    api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
+    try:
+        # Retrieve one CheckerResult
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -3125,33 +4385,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all CheckerResults
-    api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
+    try:
+        # Retrieve all CheckerResults
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3161,33 +4442,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all CheckerResults
-    api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
+    try:
+        # Retrieve all CheckerResults
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3197,33 +4499,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all CheckerResults
-    api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
+    try:
+        # Retrieve all CheckerResults
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
 ```
 
 ### Parameters
@@ -3276,32 +4599,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all checkers of a model
-    api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
+    try:
+        # Retrieve all checkers of a model
+        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3311,32 +4655,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all checkers of a model
-    api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
+    try:
+        # Retrieve all checkers of a model
+        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3346,32 +4711,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all checkers of a model
-    api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
+    try:
+        # Retrieve all checkers of a model
+        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
 ```
 
 ### Parameters
@@ -3423,32 +4809,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Checkplan
-    api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
+    try:
+        # Retrieve one Checkplan
+        api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3458,32 +4865,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Checkplan
-    api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
+    try:
+        # Retrieve one Checkplan
+        api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3493,32 +4921,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Checkplan
-    api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
+    try:
+        # Retrieve one Checkplan
+        api_response = api_instance.get_checkplan(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -3570,31 +5019,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Checkplans
-    api_response = api_instance.get_checkplans(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
+    try:
+        # Retrieve all Checkplans
+        api_response = api_instance.get_checkplans(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3604,31 +5074,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Checkplans
-    api_response = api_instance.get_checkplans(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
+    try:
+        # Retrieve all Checkplans
+        api_response = api_instance.get_checkplans(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3638,31 +5129,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Checkplans
-    api_response = api_instance.get_checkplans(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
+    try:
+        # Retrieve all Checkplans
+        api_response = api_instance.get_checkplans(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_checkplans: %s\n" % e)
 ```
 
 ### Parameters
@@ -3713,34 +5225,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one Rule
-    api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
+    try:
+        # Retrieve one Rule
+        api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3750,34 +5283,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one Rule
-    api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
+    try:
+        # Retrieve one Rule
+        api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3787,34 +5341,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one Rule
-    api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule: %s\n" % e)
+    try:
+        # Retrieve one Rule
+        api_response = api_instance.get_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -3868,35 +5443,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one RuleComponent
-    api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
+    try:
+        # Retrieve one RuleComponent
+        api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3906,35 +5502,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one RuleComponent
-    api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
+    try:
+        # Retrieve one RuleComponent
+        api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3944,35 +5561,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve one RuleComponent
-    api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
+    try:
+        # Retrieve one RuleComponent
+        api_response = api_instance.get_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -4027,34 +5665,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all RuleComponents
-    api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
+    try:
+        # Retrieve all RuleComponents
+        api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4064,34 +5723,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all RuleComponents
-    api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
+    try:
+        # Retrieve all RuleComponents
+        api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4101,34 +5781,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 rule_pk = 'rule_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all RuleComponents
-    api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
+    try:
+        # Retrieve all RuleComponents
+        api_response = api_instance.get_rule_components(check_plan_pk, cloud_pk, project_pk, rule_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rule_components: %s\n" % e)
 ```
 
 ### Parameters
@@ -4182,33 +5883,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all Rules
-    api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
+    try:
+        # Retrieve all Rules
+        api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4218,33 +5940,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all Rules
-    api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
+    try:
+        # Retrieve all Rules
+        api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4254,33 +5997,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 
-try:
-    # Retrieve all Rules
-    api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rules: %s\n" % e)
+    try:
+        # Retrieve all Rules
+        api_response = api_instance.get_rules(check_plan_pk, cloud_pk, project_pk, ruleset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rules: %s\n" % e)
 ```
 
 ### Parameters
@@ -4333,33 +6097,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Ruleset
-    api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
+    try:
+        # Retrieve one Ruleset
+        api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4369,33 +6154,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Ruleset
-    api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
+    try:
+        # Retrieve one Ruleset
+        api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4405,33 +6211,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve one Ruleset
-    api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
+    try:
+        # Retrieve one Ruleset
+        api_response = api_instance.get_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_ruleset: %s\n" % e)
 ```
 
 ### Parameters
@@ -4484,32 +6311,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Rulesets
-    api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
+    try:
+        # Retrieve all Rulesets
+        api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4519,32 +6367,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Rulesets
-    api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
+    try:
+        # Retrieve all Rulesets
+        api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4554,32 +6423,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all Rulesets
-    api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
+    try:
+        # Retrieve all Rulesets
+        api_response = api_instance.get_rulesets(check_plan_pk, cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->get_rulesets: %s\n" % e)
 ```
 
 ### Parameters
@@ -4631,33 +6521,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Launch a new check on the model
-    api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
-except ApiException as e:
-    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
+    try:
+        # Launch a new check on the model
+        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4667,33 +6578,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Launch a new check on the model
-    api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
-except ApiException as e:
-    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
+    try:
+        # Launch a new check on the model
+        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4703,33 +6635,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Launch a new check on the model
-    api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
-except ApiException as e:
-    print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
+    try:
+        # Launch a new check on the model
+        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
 
 ### Parameters
@@ -4783,34 +6736,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update some fields of a checker of a model
-    api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
+    try:
+        # Update some fields of a checker of a model
+        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4820,34 +6794,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update some fields of a checker of a model
-    api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
+    try:
+        # Update some fields of a checker of a model
+        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4857,34 +6852,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
-try:
-    # Update some fields of a checker of a model
-    api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker: %s\n" % e)
+    try:
+        # Update some fields of a checker of a model
+        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker: %s\n" % e)
 ```
 
 ### Parameters
@@ -4938,35 +6954,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update some fields of a CheckerResult
-    api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
+    try:
+        # Update some fields of a CheckerResult
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4976,35 +7013,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update some fields of a CheckerResult
-    api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
+    try:
+        # Update some fields of a CheckerResult
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5014,35 +7072,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-checker_pk = 'checker_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
-try:
-    # Update some fields of a CheckerResult
-    api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
+    try:
+        # Update some fields of a CheckerResult
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
 ```
 
 ### Parameters
@@ -5097,33 +7176,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update some fields of a Checkplan
-    api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
+    try:
+        # Update some fields of a Checkplan
+        api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5133,33 +7233,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update some fields of a Checkplan
-    api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
+    try:
+        # Update some fields of a Checkplan
+        api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5169,33 +7290,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this check plan.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckPlan() # CheckPlan | 
 
-try:
-    # Update some fields of a Checkplan
-    api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
+    try:
+        # Update some fields of a Checkplan
+        api_response = api_instance.update_checkplan(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_checkplan: %s\n" % e)
 ```
 
 ### Parameters
@@ -5248,35 +7390,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update some fields of a Rule
-    api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
+    try:
+        # Update some fields of a Rule
+        api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5286,35 +7449,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update some fields of a Rule
-    api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
+    try:
+        # Update some fields of a Rule
+        api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5324,35 +7508,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule.
 project_pk = 'project_pk_example' # str | 
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.Rule() # Rule | 
 
-try:
-    # Update some fields of a Rule
-    api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule: %s\n" % e)
+    try:
+        # Update some fields of a Rule
+        api_response = api_instance.update_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule: %s\n" % e)
 ```
 
 ### Parameters
@@ -5407,23 +7612,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -5431,12 +7657,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update some fields of a RuleComponent
-    api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
+    try:
+        # Update some fields of a RuleComponent
+        api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5446,23 +7672,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -5470,12 +7717,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update some fields of a RuleComponent
-    api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
+    try:
+        # Update some fields of a RuleComponent
+        api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5485,23 +7732,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this rule component.
 project_pk = 'project_pk_example' # str | 
@@ -5509,12 +7777,12 @@ rule_pk = 'rule_pk_example' # str |
 ruleset_pk = 'ruleset_pk_example' # str | 
 data = bimdata_api_client.RuleComponent() # RuleComponent | 
 
-try:
-    # Update some fields of a RuleComponent
-    api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
+    try:
+        # Update some fields of a RuleComponent
+        api_response = api_instance.update_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_rule_component: %s\n" % e)
 ```
 
 ### Parameters
@@ -5570,34 +7838,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update some fields of a Ruleset
-    api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
+    try:
+        # Update some fields of a Ruleset
+        api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5607,34 +7896,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update some fields of a Ruleset
-    api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
+    try:
+        # Update some fields of a Ruleset
+        api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5644,34 +7954,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CheckerApi(bimdata_api_client.ApiClient(configuration))
-check_plan_pk = 'check_plan_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CheckerApi(api_client)
+    check_plan_pk = 'check_plan_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ruleset.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Ruleset() # Ruleset | 
 
-try:
-    # Update some fields of a Ruleset
-    api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
+    try:
+        # Update some fields of a Ruleset
+        api_response = api_instance.update_ruleset(check_plan_pk, cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CheckerApi->update_ruleset: %s\n" % e)
 ```
 
 ### Parameters

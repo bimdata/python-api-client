@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.ifc_optimize import IfcOptimize  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestIfcOptimize(unittest.TestCase):
     """IfcOptimize unit test stubs"""
@@ -29,11 +29,24 @@ class TestIfcOptimize(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test IfcOptimize
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.ifc_optimize.IfcOptimize()  # noqa: E501
+        if include_optional :
+            return IfcOptimize(
+                floating_point_reduction = 6
+            )
+        else :
+            return IfcOptimize(
+        )
+
     def testIfcOptimize(self):
         """Test IfcOptimize"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.ifc_optimize.IfcOptimize()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

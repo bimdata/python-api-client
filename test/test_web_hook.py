@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.web_hook import WebHook  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestWebHook(unittest.TestCase):
     """WebHook unit test stubs"""
@@ -29,11 +29,34 @@ class TestWebHook(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test WebHook
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.web_hook.WebHook()  # noqa: E501
+        if include_optional :
+            return WebHook(
+                id = 56, 
+                events = [
+                    '0'
+                    ], 
+                url = '0', 
+                secret = '0'
+            )
+        else :
+            return WebHook(
+                events = [
+                    '0'
+                    ],
+                url = '0',
+                secret = '0',
+        )
+
     def testWebHook(self):
         """Test WebHook"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.web_hook.WebHook()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

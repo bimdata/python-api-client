@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.topic import Topic  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestTopic(unittest.TestCase):
     """Topic unit test stubs"""
@@ -29,11 +29,50 @@ class TestTopic(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test Topic
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.topic.Topic()  # noqa: E501
+        if include_optional :
+            return Topic(
+                guid = '0', 
+                topic_type = '0', 
+                topic_status = '0', 
+                title = '0', 
+                priority = '0', 
+                labels = [
+                    '0'
+                    ], 
+                creation_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                creation_author = '0', 
+                modified_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                modified_author = '0', 
+                assigned_to = '0', 
+                reference_links = [
+                    '0'
+                    ], 
+                stage = '0', 
+                description = '0', 
+                due_date = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                ifcs = [
+                    56
+                    ], 
+                format = '0', 
+                index = 0, 
+                project = 56
+            )
+        else :
+            return Topic(
+                title = '0',
+                project = 56,
+        )
+
     def testTopic(self):
         """Test Topic"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.topic.Topic()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

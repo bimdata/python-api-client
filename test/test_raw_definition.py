@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.raw_definition import RawDefinition  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestRawDefinition(unittest.TestCase):
     """RawDefinition unit test stubs"""
@@ -29,11 +29,29 @@ class TestRawDefinition(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test RawDefinition
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.raw_definition.RawDefinition()  # noqa: E501
+        if include_optional :
+            return RawDefinition(
+                id = 56, 
+                description = '0', 
+                name = '0', 
+                type = '0', 
+                value_type = '0', 
+                unit_id = 56
+            )
+        else :
+            return RawDefinition(
+        )
+
     def testRawDefinition(self):
         """Test RawDefinition"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.raw_definition.RawDefinition()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.topic_status import TopicStatus  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestTopicStatus(unittest.TestCase):
     """TopicStatus unit test stubs"""
@@ -29,11 +29,25 @@ class TestTopicStatus(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test TopicStatus
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.topic_status.TopicStatus()  # noqa: E501
+        if include_optional :
+            return TopicStatus(
+                topic_status = '0'
+            )
+        else :
+            return TopicStatus(
+                topic_status = '0',
+        )
+
     def testTopicStatus(self):
         """Test TopicStatus"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.topic_status.TopicStatus()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

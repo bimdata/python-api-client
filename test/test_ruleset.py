@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.ruleset import Ruleset  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestRuleset(unittest.TestCase):
     """Ruleset unit test stubs"""
@@ -29,11 +29,80 @@ class TestRuleset(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test Ruleset
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.ruleset.Ruleset()  # noqa: E501
+        if include_optional :
+            return Ruleset(
+                id = 56, 
+                parent_ruleset_id = 56, 
+                name = '0', 
+                description = '0', 
+                rules = [
+                    bimdata_api_client.models.rule.Rule(
+                        id = 56, 
+                        name = '0', 
+                        condition = '0', 
+                        rule_components = [
+                            bimdata_api_client.models.rule_component.RuleComponent(
+                                id = 56, 
+                                type = '0', 
+                                value = bimdata_api_client.models.value.Value(), 
+                                operator = '0', 
+                                params = bimdata_api_client.models.params.Params(), 
+                                condition = '0', )
+                            ], 
+                        on = bimdata_api_client.models.rule.Rule(
+                            id = 56, 
+                            name = '0', 
+                            condition = '0', ), )
+                    ], 
+                rulesets = [
+                    bimdata_api_client.models.ruleset.Ruleset(
+                        id = 56, 
+                        parent_ruleset_id = 56, 
+                        name = '0', 
+                        description = '0', 
+                        rules = [
+                            bimdata_api_client.models.rule.Rule(
+                                id = 56, 
+                                name = '0', 
+                                condition = '0', 
+                                rule_components = [
+                                    bimdata_api_client.models.rule_component.RuleComponent(
+                                        id = 56, 
+                                        type = '0', 
+                                        value = bimdata_api_client.models.value.Value(), 
+                                        operator = '0', 
+                                        params = bimdata_api_client.models.params.Params(), 
+                                        condition = '0', )
+                                    ], 
+                                on = bimdata_api_client.models.rule.Rule(
+                                    id = 56, 
+                                    name = '0', 
+                                    condition = '0', ), )
+                            ], 
+                        rulesets = [
+                            bimdata_api_client.models.ruleset.Ruleset(
+                                id = 56, 
+                                parent_ruleset_id = 56, 
+                                name = '0', 
+                                description = '0', )
+                            ], )
+                    ]
+            )
+        else :
+            return Ruleset(
+                name = '0',
+        )
+
     def testRuleset(self):
         """Test Ruleset"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.ruleset.Ruleset()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

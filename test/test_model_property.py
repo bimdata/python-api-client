@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.model_property import ModelProperty  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestModelProperty(unittest.TestCase):
     """ModelProperty unit test stubs"""
@@ -29,11 +29,80 @@ class TestModelProperty(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test ModelProperty
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.model_property.ModelProperty()  # noqa: E501
+        if include_optional :
+            return ModelProperty(
+                id = 56, 
+                definition = bimdata_api_client.models.property_definition.PropertyDefinition(
+                    id = 56, 
+                    unit = bimdata_api_client.models.unit.Unit(
+                        id = 56, 
+                        type = '0', 
+                        name = '0', 
+                        unit_type = '0', 
+                        prefix = '0', 
+                        dimensions = [
+                            1.337
+                            ], 
+                        conversion_factor = 1.337, 
+                        conversion_baseunit = bimdata_api_client.models.unit.Unit(
+                            id = 56, 
+                            type = '0', 
+                            name = '0', 
+                            unit_type = '0', 
+                            prefix = '0', 
+                            conversion_factor = 1.337, 
+                            elements = bimdata_api_client.models.elements.Elements(), 
+                            is_default = True, ), 
+                        elements = bimdata_api_client.models.elements.Elements(), 
+                        is_default = True, ), 
+                    name = '0', 
+                    description = '0', 
+                    type = '0', 
+                    value_type = '0', ), 
+                value = bimdata_api_client.models.value.Value(), 
+                property_set_id = '0'
+            )
+        else :
+            return ModelProperty(
+                definition = bimdata_api_client.models.property_definition.PropertyDefinition(
+                    id = 56, 
+                    unit = bimdata_api_client.models.unit.Unit(
+                        id = 56, 
+                        type = '0', 
+                        name = '0', 
+                        unit_type = '0', 
+                        prefix = '0', 
+                        dimensions = [
+                            1.337
+                            ], 
+                        conversion_factor = 1.337, 
+                        conversion_baseunit = bimdata_api_client.models.unit.Unit(
+                            id = 56, 
+                            type = '0', 
+                            name = '0', 
+                            unit_type = '0', 
+                            prefix = '0', 
+                            conversion_factor = 1.337, 
+                            elements = bimdata_api_client.models.elements.Elements(), 
+                            is_default = True, ), 
+                        elements = bimdata_api_client.models.elements.Elements(), 
+                        is_default = True, ), 
+                    name = '0', 
+                    description = '0', 
+                    type = '0', 
+                    value_type = '0', ),
+        )
+
     def testModelProperty(self):
         """Test ModelProperty"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.model_property.ModelProperty()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

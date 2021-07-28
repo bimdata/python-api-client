@@ -84,30 +84,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_cloud_user_invitation(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_cloud_user_invitation(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -117,30 +138,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_cloud_user_invitation(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_cloud_user_invitation(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -150,30 +192,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_cloud_user_invitation(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_cloud_user_invitation(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -224,31 +287,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -258,31 +342,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -292,31 +397,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this invitation.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Cancel a pending invitation
-    api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
+    try:
+        # Cancel a pending invitation
+        api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
 ```
 
 ### Parameters
@@ -368,29 +494,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Check app access from cloud
-    api_instance.check_access(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->check_access: %s\n" % e)
+    try:
+        # Check app access from cloud
+        api_instance.check_access(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->check_access: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -400,29 +547,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Check app access from cloud
-    api_instance.check_access(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->check_access: %s\n" % e)
+    try:
+        # Check app access from cloud
+        api_instance.check_access(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->check_access: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -432,29 +600,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Check app access from cloud
-    api_instance.check_access(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->check_access: %s\n" % e)
+    try:
+        # Check app access from cloud
+        api_instance.check_access(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->check_access: %s\n" % e)
 ```
 
 ### Parameters
@@ -504,32 +693,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
+    try:
+        # Create a classification
+        api_response = api_instance.create_classification(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -539,32 +749,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
+    try:
+        # Create a classification
+        api_response = api_instance.create_classification(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -574,32 +805,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
-try:
-    # Create a classification
-    api_response = api_instance.create_classification(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
+    try:
+        # Create a classification
+        api_response = api_instance.create_classification(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -651,30 +903,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.Cloud() # Cloud | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Create a cloud
-    api_response = api_instance.create_cloud(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
+    try:
+        # Create a cloud
+        api_response = api_instance.create_cloud(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -684,30 +957,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.Cloud() # Cloud | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Create a cloud
-    api_response = api_instance.create_cloud(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
+    try:
+        # Create a cloud
+        api_response = api_instance.create_cloud(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -717,30 +1011,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.Cloud() # Cloud | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Create a cloud
-    api_response = api_instance.create_cloud(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
+    try:
+        # Create a cloud
+        api_response = api_instance.create_cloud(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_cloud: %s\n" % e)
 ```
 
 ### Parameters
@@ -790,30 +1105,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Create a Demo project in a cloud
-    api_response = api_instance.create_demo(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
+    try:
+        # Create a Demo project in a cloud
+        api_response = api_instance.create_demo(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -823,30 +1159,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Create a Demo project in a cloud
-    api_response = api_instance.create_demo(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
+    try:
+        # Create a Demo project in a cloud
+        api_response = api_instance.create_demo(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -856,30 +1213,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Create a Demo project in a cloud
-    api_response = api_instance.create_demo(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
+    try:
+        # Create a Demo project in a cloud
+        api_response = api_instance.create_demo(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_demo: %s\n" % e)
 ```
 
 ### Parameters
@@ -929,31 +1307,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a complete DMS tree
-    api_instance.create_dms_tree(cloud_pk, id, data)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
+    try:
+        # Create a complete DMS tree
+        api_instance.create_dms_tree(cloud_pk, id, data)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -963,31 +1362,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a complete DMS tree
-    api_instance.create_dms_tree(cloud_pk, id, data)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
+    try:
+        # Create a complete DMS tree
+        api_instance.create_dms_tree(cloud_pk, id, data)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -997,31 +1417,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a complete DMS tree
-    api_instance.create_dms_tree(cloud_pk, id, data)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
+    try:
+        # Create a complete DMS tree
+        api_instance.create_dms_tree(cloud_pk, id, data)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
 ```
 
 ### Parameters
@@ -1073,23 +1514,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
@@ -1101,12 +1563,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_document: %s\n" % e)
+    try:
+        # Create a document
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_document: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1116,23 +1578,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
@@ -1144,12 +1627,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_document: %s\n" % e)
+    try:
+        # Create a document
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_document: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1159,23 +1642,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
 file = '/path/to/file' # file | 
@@ -1187,12 +1691,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Create a document
-    api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_document: %s\n" % e)
+    try:
+        # Create a document
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -1252,32 +1756,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a folder
-    api_response = api_instance.create_folder(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
+    try:
+        # Create a folder
+        api_response = api_instance.create_folder(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1287,32 +1812,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a folder
-    api_response = api_instance.create_folder(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
+    try:
+        # Create a folder
+        api_response = api_instance.create_folder(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1322,32 +1868,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Create a folder
-    api_response = api_instance.create_folder(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
+    try:
+        # Create a folder
+        api_response = api_instance.create_folder(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_folder: %s\n" % e)
 ```
 
 ### Parameters
@@ -1399,31 +1966,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Create a project
-    api_response = api_instance.create_project(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project: %s\n" % e)
+    try:
+        # Create a project
+        api_response = api_instance.create_project(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1433,31 +2021,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Create a project
-    api_response = api_instance.create_project(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project: %s\n" % e)
+    try:
+        # Create a project
+        api_response = api_instance.create_project(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1467,31 +2076,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Create a project
-    api_response = api_instance.create_project(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project: %s\n" % e)
+    try:
+        # Create a project
+        api_response = api_instance.create_project(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project: %s\n" % e)
 ```
 
 ### Parameters
@@ -1542,32 +2172,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Create a token for this project
-    api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
+    try:
+        # Create a token for this project
+        api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1577,32 +2228,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Create a token for this project
-    api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
+    try:
+        # Create a token for this project
+        api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1612,32 +2284,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Create a token for this project
-    api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
+    try:
+        # Create a token for this project
+        api_response = api_instance.create_project_access_token(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->create_project_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -1689,31 +2382,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a classification
-    api_instance.delete_classification(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
+    try:
+        # Delete a classification
+        api_instance.delete_classification(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1723,31 +2437,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a classification
-    api_instance.delete_classification(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
+    try:
+        # Delete a classification
+        api_instance.delete_classification(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1757,31 +2492,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a classification
-    api_instance.delete_classification(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
+    try:
+        # Delete a classification
+        api_instance.delete_classification(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -1833,29 +2589,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Delete a cloud
-    api_instance.delete_cloud(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
+    try:
+        # Delete a cloud
+        api_instance.delete_cloud(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1865,29 +2642,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Delete a cloud
-    api_instance.delete_cloud(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
+    try:
+        # Delete a cloud
+        api_instance.delete_cloud(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1897,29 +2695,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Delete a cloud
-    api_instance.delete_cloud(id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
+    try:
+        # Delete a cloud
+        api_instance.delete_cloud(id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
 ```
 
 ### Parameters
@@ -1969,30 +2788,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Remove a user from a cloud
-    api_instance.delete_cloud_user(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
+    try:
+        # Remove a user from a cloud
+        api_instance.delete_cloud_user(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2002,30 +2842,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Remove a user from a cloud
-    api_instance.delete_cloud_user(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
+    try:
+        # Remove a user from a cloud
+        api_instance.delete_cloud_user(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2035,30 +2896,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Remove a user from a cloud
-    api_instance.delete_cloud_user(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
+    try:
+        # Remove a user from a cloud
+        api_instance.delete_cloud_user(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_cloud_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -2109,31 +2991,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete the document
-    api_instance.delete_document(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
+    try:
+        # Delete the document
+        api_instance.delete_document(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2143,31 +3046,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete the document
-    api_instance.delete_document(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
+    try:
+        # Delete the document
+        api_instance.delete_document(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2177,31 +3101,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete the document
-    api_instance.delete_document(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
+    try:
+        # Delete the document
+        api_instance.delete_document(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -2253,31 +3198,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a folder
-    api_instance.delete_folder(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
+    try:
+        # Delete a folder
+        api_instance.delete_folder(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2287,31 +3253,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a folder
-    api_instance.delete_folder(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
+    try:
+        # Delete a folder
+        api_instance.delete_folder(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2321,31 +3308,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Delete a folder
-    api_instance.delete_folder(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
+    try:
+        # Delete a folder
+        api_instance.delete_folder(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
 ```
 
 ### Parameters
@@ -2397,30 +3405,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Delete a project
-    api_instance.delete_project(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
+    try:
+        # Delete a project
+        api_instance.delete_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2430,30 +3459,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Delete a project
-    api_instance.delete_project(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
+    try:
+        # Delete a project
+        api_instance.delete_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2463,30 +3513,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Delete a project
-    api_instance.delete_project(cloud_pk, id)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
+    try:
+        # Delete a project
+        api_instance.delete_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
 ```
 
 ### Parameters
@@ -2537,31 +3608,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Delete a token
-    api_instance.delete_project_access_token(cloud_pk, project_pk, token)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
+    try:
+        # Delete a token
+        api_instance.delete_project_access_token(cloud_pk, project_pk, token)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2571,31 +3663,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Delete a token
-    api_instance.delete_project_access_token(cloud_pk, project_pk, token)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
+    try:
+        # Delete a token
+        api_instance.delete_project_access_token(cloud_pk, project_pk, token)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2605,31 +3718,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Delete a token
-    api_instance.delete_project_access_token(cloud_pk, project_pk, token)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
+    try:
+        # Delete a token
+        api_instance.delete_project_access_token(cloud_pk, project_pk, token)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -2681,31 +3815,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Remove a user from a project
-    api_instance.delete_project_user(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
+    try:
+        # Remove a user from a project
+        api_instance.delete_project_user(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2715,31 +3870,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Remove a user from a project
-    api_instance.delete_project_user(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
+    try:
+        # Remove a user from a project
+        api_instance.delete_project_user(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2749,31 +3925,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Remove a user from a project
-    api_instance.delete_project_user(cloud_pk, id, project_pk)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
+    try:
+        # Remove a user from a project
+        api_instance.delete_project_user(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->delete_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -2825,33 +4022,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update all fields of a classification
-    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
+    try:
+        # Update all fields of a classification
+        api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2861,33 +4079,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update all fields of a classification
-    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
+    try:
+        # Update all fields of a classification
+        api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2897,33 +4136,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update all fields of a classification
-    api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
+    try:
+        # Update all fields of a classification
+        api_response = api_instance.full_update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -2976,31 +4236,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update all fields of a cloud
-    api_response = api_instance.full_update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
+    try:
+        # Update all fields of a cloud
+        api_response = api_instance.full_update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3010,31 +4291,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update all fields of a cloud
-    api_response = api_instance.full_update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
+    try:
+        # Update all fields of a cloud
+        api_response = api_instance.full_update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3044,31 +4346,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update all fields of a cloud
-    api_response = api_instance.full_update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
+    try:
+        # Update all fields of a cloud
+        api_response = api_instance.full_update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud: %s\n" % e)
 ```
 
 ### Parameters
@@ -3119,32 +4442,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update all fields of a cloud user
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
+    try:
+        # Update all fields of a cloud user
+        api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3154,32 +4498,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update all fields of a cloud user
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
+    try:
+        # Update all fields of a cloud user
+        api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3189,32 +4554,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update all fields of a cloud user
-    api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
+    try:
+        # Update all fields of a cloud user
+        api_response = api_instance.full_update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_cloud_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -3266,23 +4652,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
@@ -3295,12 +4702,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
+    try:
+        # Update all fields of the document
+        api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3310,23 +4717,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
@@ -3339,12 +4767,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
+    try:
+        # Update all fields of the document
+        api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3354,23 +4782,44 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 name = 'name_example' # str | Shown name of the file
@@ -3383,12 +4832,12 @@ description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
 ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
 
-try:
-    # Update all fields of the document
-    api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
+    try:
+        # Update all fields of the document
+        api_response = api_instance.full_update_document(cloud_pk, id, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -3449,33 +4898,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update all fields of a folder
-    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
+    try:
+        # Update all fields of a folder
+        api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3485,33 +4955,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update all fields of a folder
-    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
+    try:
+        # Update all fields of a folder
+        api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3521,33 +5012,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update all fields of a folder
-    api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
+    try:
+        # Update all fields of a folder
+        api_response = api_instance.full_update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_folder: %s\n" % e)
 ```
 
 ### Parameters
@@ -3600,32 +5112,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update all fields of a project
-    api_response = api_instance.full_update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
+    try:
+        # Update all fields of a project
+        api_response = api_instance.full_update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3635,32 +5168,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update all fields of a project
-    api_response = api_instance.full_update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
+    try:
+        # Update all fields of a project
+        api_response = api_instance.full_update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3670,32 +5224,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update all fields of a project
-    api_response = api_instance.full_update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
+    try:
+        # Update all fields of a project
+        api_response = api_instance.full_update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project: %s\n" % e)
 ```
 
 ### Parameters
@@ -3747,33 +5322,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update all fields of a token
-    api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
+    try:
+        # Update all fields of a token
+        api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3783,33 +5379,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update all fields of a token
-    api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
+    try:
+        # Update all fields of a token
+        api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3819,33 +5436,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update all fields of a token
-    api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
+    try:
+        # Update all fields of a token
+        api_response = api_instance.full_update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -3898,33 +5536,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update all fields of a project user
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
+    try:
+        # Update all fields of a project user
+        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3934,33 +5593,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update all fields of a project user
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
+    try:
+        # Update all fields of a project user
+        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3970,33 +5650,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update all fields of a project user
-    api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
+    try:
+        # Update all fields of a project user
+        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -4049,32 +5750,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a classification
-    api_response = api_instance.get_classification(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
+    try:
+        # Retrieve a classification
+        api_response = api_instance.get_classification(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4084,32 +5806,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a classification
-    api_response = api_instance.get_classification(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
+    try:
+        # Retrieve a classification
+        api_response = api_instance.get_classification(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4119,32 +5862,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a classification
-    api_response = api_instance.get_classification(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
+    try:
+        # Retrieve a classification
+        api_response = api_instance.get_classification(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -4196,31 +5960,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all classifications
-    api_response = api_instance.get_classifications(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
+    try:
+        # Retrieve all classifications
+        api_response = api_instance.get_classifications(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4230,31 +6015,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all classifications
-    api_response = api_instance.get_classifications(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
+    try:
+        # Retrieve all classifications
+        api_response = api_instance.get_classifications(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4264,31 +6070,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all classifications
-    api_response = api_instance.get_classifications(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
+    try:
+        # Retrieve all classifications
+        api_response = api_instance.get_classifications(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_classifications: %s\n" % e)
 ```
 
 ### Parameters
@@ -4337,30 +6164,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Retrieve one cloud
-    api_response = api_instance.get_cloud(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
+    try:
+        # Retrieve one cloud
+        api_response = api_instance.get_cloud(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4370,30 +6218,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Retrieve one cloud
-    api_response = api_instance.get_cloud(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
+    try:
+        # Retrieve one cloud
+        api_response = api_instance.get_cloud(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4403,30 +6272,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Retrieve one cloud
-    api_response = api_instance.get_cloud(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
+    try:
+        # Retrieve one cloud
+        api_response = api_instance.get_cloud(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud: %s\n" % e)
 ```
 
 ### Parameters
@@ -4476,30 +6366,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the cloud
-    api_response = api_instance.get_cloud_invitations(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the cloud
+        api_response = api_instance.get_cloud_invitations(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4509,30 +6420,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the cloud
-    api_response = api_instance.get_cloud_invitations(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the cloud
+        api_response = api_instance.get_cloud_invitations(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4542,30 +6474,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the cloud
-    api_response = api_instance.get_cloud_invitations(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the cloud
+        api_response = api_instance.get_cloud_invitations(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_invitations: %s\n" % e)
 ```
 
 ### Parameters
@@ -4615,30 +6568,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Get size of all ifc files in the cloud
-    api_response = api_instance.get_cloud_size(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
+    try:
+        # Get size of all ifc files in the cloud
+        api_response = api_instance.get_cloud_size(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4648,30 +6622,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Get size of all ifc files in the cloud
-    api_response = api_instance.get_cloud_size(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
+    try:
+        # Get size of all ifc files in the cloud
+        api_response = api_instance.get_cloud_size(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4681,30 +6676,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 
-try:
-    # Get size of all ifc files in the cloud
-    api_response = api_instance.get_cloud_size(id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
+    try:
+        # Get size of all ifc files in the cloud
+        api_response = api_instance.get_cloud_size(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_size: %s\n" % e)
 ```
 
 ### Parameters
@@ -4754,31 +6770,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Retrieve a user in a cloud
-    api_response = api_instance.get_cloud_user(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
+    try:
+        # Retrieve a user in a cloud
+        api_response = api_instance.get_cloud_user(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4788,31 +6825,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Retrieve a user in a cloud
-    api_response = api_instance.get_cloud_user(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
+    try:
+        # Retrieve a user in a cloud
+        api_response = api_instance.get_cloud_user(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4822,31 +6880,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 
-try:
-    # Retrieve a user in a cloud
-    api_response = api_instance.get_cloud_user(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
+    try:
+        # Retrieve a user in a cloud
+        api_response = api_instance.get_cloud_user(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -4897,34 +6976,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a cloud, or a list with a filter by email
-    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
+    try:
+        # Retrieve all users in a cloud, or a list with a filter by email
+        api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4934,34 +7034,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a cloud, or a list with a filter by email
-    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
+    try:
+        # Retrieve all users in a cloud, or a list with a filter by email
+        api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4971,34 +7092,55 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a cloud, or a list with a filter by email
-    api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
+    try:
+        # Retrieve all users in a cloud, or a list with a filter by email
+        api_response = api_instance.get_cloud_users(cloud_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_cloud_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -5052,29 +7194,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Retrieve all clouds
-    api_response = api_instance.get_clouds()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Retrieve all clouds
+        api_response = api_instance.get_clouds()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5084,29 +7247,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Retrieve all clouds
-    api_response = api_instance.get_clouds()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Retrieve all clouds
+        api_response = api_instance.get_clouds()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5116,29 +7300,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Retrieve all clouds
-    api_response = api_instance.get_clouds()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Retrieve all clouds
+        api_response = api_instance.get_clouds()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_clouds: %s\n" % e)
 ```
 
 ### Parameters
@@ -5185,32 +7390,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a document
-    api_response = api_instance.get_document(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_document: %s\n" % e)
+    try:
+        # Retrieve a document
+        api_response = api_instance.get_document(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_document: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5220,32 +7446,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a document
-    api_response = api_instance.get_document(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_document: %s\n" % e)
+    try:
+        # Retrieve a document
+        api_response = api_instance.get_document(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_document: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5255,32 +7502,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a document
-    api_response = api_instance.get_document(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_document: %s\n" % e)
+    try:
+        # Retrieve a document
+        api_response = api_instance.get_document(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -5332,31 +7600,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all documents
-    api_response = api_instance.get_documents(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
+    try:
+        # Retrieve all documents
+        api_response = api_instance.get_documents(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5366,31 +7655,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all documents
-    api_response = api_instance.get_documents(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
+    try:
+        # Retrieve all documents
+        api_response = api_instance.get_documents(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5400,31 +7710,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all documents
-    api_response = api_instance.get_documents(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
+    try:
+        # Retrieve all documents
+        api_response = api_instance.get_documents(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_documents: %s\n" % e)
 ```
 
 ### Parameters
@@ -5475,32 +7806,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a folder
-    api_response = api_instance.get_folder(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
+    try:
+        # Retrieve a folder
+        api_response = api_instance.get_folder(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5510,32 +7862,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a folder
-    api_response = api_instance.get_folder(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
+    try:
+        # Retrieve a folder
+        api_response = api_instance.get_folder(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5545,32 +7918,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a folder
-    api_response = api_instance.get_folder(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
+    try:
+        # Retrieve a folder
+        api_response = api_instance.get_folder(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folder: %s\n" % e)
 ```
 
 ### Parameters
@@ -5622,31 +8016,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all folders
-    api_response = api_instance.get_folders(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
+    try:
+        # Retrieve all folders
+        api_response = api_instance.get_folders(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5656,31 +8071,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all folders
-    api_response = api_instance.get_folders(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
+    try:
+        # Retrieve all folders
+        api_response = api_instance.get_folders(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5690,31 +8126,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all folders
-    api_response = api_instance.get_folders(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
+    try:
+        # Retrieve all folders
+        api_response = api_instance.get_folders(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_folders: %s\n" % e)
 ```
 
 ### Parameters
@@ -5765,31 +8222,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve a project
-    api_response = api_instance.get_project(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project: %s\n" % e)
+    try:
+        # Retrieve a project
+        api_response = api_instance.get_project(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5799,31 +8277,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve a project
-    api_response = api_instance.get_project(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project: %s\n" % e)
+    try:
+        # Retrieve a project
+        api_response = api_instance.get_project(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5833,31 +8332,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve a project
-    api_response = api_instance.get_project(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project: %s\n" % e)
+    try:
+        # Retrieve a project
+        api_response = api_instance.get_project(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project: %s\n" % e)
 ```
 
 ### Parameters
@@ -5908,32 +8428,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Retrieve one token created for this project
-    api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
+    try:
+        # Retrieve one token created for this project
+        api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5943,32 +8484,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Retrieve one token created for this project
-    api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
+    try:
+        # Retrieve one token created for this project
+        api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5978,32 +8540,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
-try:
-    # Retrieve one token created for this project
-    api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
+    try:
+        # Retrieve one token created for this project
+        api_response = api_instance.get_project_access_token(cloud_pk, project_pk, token)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -6055,31 +8638,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all tokens created for this project
-    api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
+    try:
+        # Retrieve all tokens created for this project
+        api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6089,31 +8693,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all tokens created for this project
-    api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
+    try:
+        # Retrieve all tokens created for this project
+        api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6123,31 +8748,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all tokens created for this project
-    api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
+    try:
+        # Retrieve all tokens created for this project
+        api_response = api_instance.get_project_access_tokens(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_access_tokens: %s\n" % e)
 ```
 
 ### Parameters
@@ -6198,31 +8844,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_dms_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_dms_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6232,31 +8899,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_dms_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_dms_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6266,31 +8954,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_dms_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_dms_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_dms_tree: %s\n" % e)
 ```
 
 ### Parameters
@@ -6341,31 +9050,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the project
-    api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the project
+        api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6375,31 +9105,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the project
-    api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the project
+        api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6409,31 +9160,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve all pending invitations in the project
-    api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
+    try:
+        # Retrieve all pending invitations in the project
+        api_response = api_instance.get_project_invitations(cloud_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_invitations: %s\n" % e)
 ```
 
 ### Parameters
@@ -6484,30 +9256,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve the complete projects tree of the cloud
-    api_response = api_instance.get_project_sub_tree(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
+    try:
+        # Retrieve the complete projects tree of the cloud
+        api_response = api_instance.get_project_sub_tree(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6517,30 +9310,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve the complete projects tree of the cloud
-    api_response = api_instance.get_project_sub_tree(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
+    try:
+        # Retrieve the complete projects tree of the cloud
+        api_response = api_instance.get_project_sub_tree(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6550,30 +9364,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve the complete projects tree of the cloud
-    api_response = api_instance.get_project_sub_tree(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
+    try:
+        # Retrieve the complete projects tree of the cloud
+        api_response = api_instance.get_project_sub_tree(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_sub_tree: %s\n" % e)
 ```
 
 ### Parameters
@@ -6623,31 +9458,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6657,31 +9513,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6691,31 +9568,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 
-try:
-    # Retrieve the complete DMS tree
-    api_response = api_instance.get_project_tree(cloud_pk, id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
+    try:
+        # Retrieve the complete DMS tree
+        api_response = api_instance.get_project_tree(cloud_pk, id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_tree: %s\n" % e)
 ```
 
 ### Parameters
@@ -6766,32 +9664,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a user in a project
-    api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
+    try:
+        # Retrieve a user in a project
+        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6801,32 +9720,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a user in a project
-    api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
+    try:
+        # Retrieve a user in a project
+        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6836,32 +9776,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 
-try:
-    # Retrieve a user in a project
-    api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
+    try:
+        # Retrieve a user in a project
+        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -6913,35 +9874,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a project, or a list with a filter by email
-    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
+    try:
+        # Retrieve all users in a project, or a list with a filter by email
+        api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6951,35 +9933,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a project, or a list with a filter by email
-    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
+    try:
+        # Retrieve all users in a project, or a list with a filter by email
+        api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6989,35 +9992,56 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 email = 'email_example' # str | Filter the returned list by email (optional)
 email__contains = 'email__contains_example' # str | Filter the returned list by email__contains (optional)
 email__startswith = 'email__startswith_example' # str | Filter the returned list by email__startswith (optional)
 email__endswith = 'email__endswith_example' # str | Filter the returned list by email__endswith (optional)
 
-try:
-    # Retrieve all users in a project, or a list with a filter by email
-    api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
+    try:
+        # Retrieve all users in a project, or a list with a filter by email
+        api_response = api_instance.get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_users: %s\n" % e)
 ```
 
 ### Parameters
@@ -7072,30 +10096,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all projects
-    api_response = api_instance.get_projects(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
+    try:
+        # Retrieve all projects
+        api_response = api_instance.get_projects(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7105,30 +10150,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all projects
-    api_response = api_instance.get_projects(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
+    try:
+        # Retrieve all projects
+        api_response = api_instance.get_projects(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7138,30 +10204,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 
-try:
-    # Retrieve all projects
-    api_response = api_instance.get_projects(cloud_pk)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
+    try:
+        # Retrieve all projects
+        api_response = api_instance.get_projects(cloud_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_projects: %s\n" % e)
 ```
 
 ### Parameters
@@ -7211,29 +10298,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # List current user's projects
-    api_response = api_instance.get_self_projects()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # List current user's projects
+        api_response = api_instance.get_self_projects()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7243,29 +10351,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # List current user's projects
-    api_response = api_instance.get_self_projects()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # List current user's projects
+        api_response = api_instance.get_self_projects()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7275,29 +10404,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # List current user's projects
-    api_response = api_instance.get_self_projects()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # List current user's projects
+        api_response = api_instance.get_self_projects()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_projects: %s\n" % e)
 ```
 
 ### Parameters
@@ -7344,29 +10494,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Get info about the current user
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Get info about the current user
+        api_response = api_instance.get_self_user()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7376,29 +10547,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Get info about the current user
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Get info about the current user
+        api_response = api_instance.get_self_user()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7408,29 +10600,50 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-
-try:
-    # Get info about the current user
-    api_response = api_instance.get_self_user()
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    
+    try:
+        # Get info about the current user
+        api_response = api_instance.get_self_user()
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->get_self_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -7477,31 +10690,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.CloudInvitation() # CloudInvitation | 
 
-try:
-    # Invite a cloud administrator
-    api_response = api_instance.invite_cloud_user(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
+    try:
+        # Invite a cloud administrator
+        api_response = api_instance.invite_cloud_user(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7511,31 +10745,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.CloudInvitation() # CloudInvitation | 
 
-try:
-    # Invite a cloud administrator
-    api_response = api_instance.invite_cloud_user(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
+    try:
+        # Invite a cloud administrator
+        api_response = api_instance.invite_cloud_user(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7545,31 +10800,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 data = bimdata_api_client.CloudInvitation() # CloudInvitation | 
 
-try:
-    # Invite a cloud administrator
-    api_response = api_instance.invite_cloud_user(cloud_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
+    try:
+        # Invite a cloud administrator
+        api_response = api_instance.invite_cloud_user(cloud_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_cloud_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -7620,32 +10896,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectInvitation() # ProjectInvitation | 
 
-try:
-    # Invite a project member
-    api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
+    try:
+        # Invite a project member
+        api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7655,32 +10952,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectInvitation() # ProjectInvitation | 
 
-try:
-    # Invite a project member
-    api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
+    try:
+        # Invite a project member
+        api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7690,32 +11008,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProjectInvitation() # ProjectInvitation | 
 
-try:
-    # Invite a project member
-    api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
+    try:
+        # Invite a project member
+        api_response = api_instance.invite_project_user(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->invite_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -7767,33 +11106,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update some fields of a classification
-    api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
+    try:
+        # Update some fields of a classification
+        api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7803,33 +11163,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update some fields of a classification
-    api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
+    try:
+        # Update some fields of a classification
+        api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7839,33 +11220,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Classification() # Classification | 
 
-try:
-    # Update some fields of a classification
-    api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
+    try:
+        # Update some fields of a classification
+        api_response = api_instance.update_classification(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -7918,31 +11320,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update some fields of a cloud
-    api_response = api_instance.update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
+    try:
+        # Update some fields of a cloud
+        api_response = api_instance.update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7952,31 +11375,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update some fields of a cloud
-    api_response = api_instance.update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
+    try:
+        # Update some fields of a cloud
+        api_response = api_instance.update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7986,31 +11430,52 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-id = 56 # int | A unique integer value identifying this cloud.
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    id = 56 # int | A unique integer value identifying this cloud.
 data = bimdata_api_client.Cloud() # Cloud | 
 
-try:
-    # Update some fields of a cloud
-    api_response = api_instance.update_cloud(id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
+    try:
+        # Update some fields of a cloud
+        api_response = api_instance.update_cloud(id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud: %s\n" % e)
 ```
 
 ### Parameters
@@ -8061,32 +11526,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update some fields of a cloud user
-    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
+    try:
+        # Update some fields of a cloud user
+        api_response = api_instance.update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8096,32 +11582,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update some fields of a cloud user
-    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
+    try:
+        # Update some fields of a cloud user
+        api_response = api_instance.update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8131,32 +11638,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 data = bimdata_api_client.UserCloudUpdate() # UserCloudUpdate | 
 
-try:
-    # Update some fields of a cloud user
-    api_response = api_instance.update_cloud_user(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
+    try:
+        # Update some fields of a cloud user
+        api_response = api_instance.update_cloud_user(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_cloud_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -8208,33 +11736,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Document() # Document | 
 
-try:
-    # Update some fields of the document
-    api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_document: %s\n" % e)
+    try:
+        # Update some fields of the document
+        api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_document: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8244,33 +11793,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Document() # Document | 
 
-try:
-    # Update some fields of the document
-    api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_document: %s\n" % e)
+    try:
+        # Update some fields of the document
+        api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_document: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8280,33 +11850,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Document() # Document | 
 
-try:
-    # Update some fields of the document
-    api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_document: %s\n" % e)
+    try:
+        # Update some fields of the document
+        api_response = api_instance.update_document(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_document: %s\n" % e)
 ```
 
 ### Parameters
@@ -8359,33 +11950,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update some fields of a folder
-    api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
+    try:
+        # Update some fields of a folder
+        api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8395,33 +12007,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update some fields of a folder
-    api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
+    try:
+        # Update some fields of a folder
+        api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8431,33 +12064,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this folder.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Folder() # Folder | 
 
-try:
-    # Update some fields of a folder
-    api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
+    try:
+        # Update some fields of a folder
+        api_response = api_instance.update_folder(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_folder: %s\n" % e)
 ```
 
 ### Parameters
@@ -8510,32 +12164,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update some fields of a project
-    api_response = api_instance.update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project: %s\n" % e)
+    try:
+        # Update some fields of a project
+        api_response = api_instance.update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8545,32 +12220,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update some fields of a project
-    api_response = api_instance.update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project: %s\n" % e)
+    try:
+        # Update some fields of a project
+        api_response = api_instance.update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8580,32 +12276,53 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this project.
 data = bimdata_api_client.Project() # Project | 
 
-try:
-    # Update some fields of a project
-    api_response = api_instance.update_project(cloud_pk, id, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project: %s\n" % e)
+    try:
+        # Update some fields of a project
+        api_response = api_instance.update_project(cloud_pk, id, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project: %s\n" % e)
 ```
 
 ### Parameters
@@ -8657,33 +12374,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update some fields of a token
-    api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
+    try:
+        # Update some fields of a token
+        api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8693,33 +12431,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update some fields of a token
-    api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
+    try:
+        # Update some fields of a token
+        api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8729,33 +12488,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.ProjectAccessToken() # ProjectAccessToken | 
 
-try:
-    # Update some fields of a token
-    api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
+    try:
+        # Update some fields of a token
+        api_response = api_instance.update_project_access_token(cloud_pk, project_pk, token, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -8808,33 +12588,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update some fields of a project user
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
+    try:
+        # Update some fields of a project user
+        api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8844,33 +12645,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update some fields of a project user
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
+    try:
+        # Update some fields of a project user
+        api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8880,33 +12702,54 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
-# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-cloud_pk = 'cloud_pk_example' # str | 
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this fos user.
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
-try:
-    # Update some fields of a project user
-    api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
+    try:
+        # Update some fields of a project user
+        api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_project_user: %s\n" % e)
 ```
 
 ### Parameters
@@ -8959,30 +12802,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.SelfUser() # SelfUser | 
 
-try:
-    # Update info of the current user
-    api_response = api_instance.update_self_user(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
+    try:
+        # Update info of the current user
+        api_response = api_instance.update_self_user(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8992,30 +12856,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.SelfUser() # SelfUser | 
 
-try:
-    # Update info of the current user
-    api_response = api_instance.update_self_user(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
+    try:
+        # Update info of the current user
+        api_response = api_instance.update_self_user(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -9025,30 +12910,51 @@ import time
 import bimdata_api_client
 from bimdata_api_client.rest import ApiException
 from pprint import pprint
-configuration = bimdata_api_client.Configuration()
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
 # Configure API key authorization: Bearer
-configuration.api_key['Authorization'] = 'YOUR_API_KEY'
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
 # Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 # configuration.api_key_prefix['Authorization'] = 'Bearer'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
-configuration = bimdata_api_client.Configuration()
+
 # Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
 configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
-# Defining host is optional and default to https://api.bimdata.io
-configuration.host = "https://api.bimdata.io"
-# Create an instance of the API class
-api_instance = bimdata_api_client.CollaborationApi(bimdata_api_client.ApiClient(configuration))
-data = bimdata_api_client.SelfUser() # SelfUser | 
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    data = bimdata_api_client.SelfUser() # SelfUser | 
 
-try:
-    # Update info of the current user
-    api_response = api_instance.update_self_user(data)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
+    try:
+        # Update info of the current user
+        api_response = api_instance.update_self_user(data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->update_self_user: %s\n" % e)
 ```
 
 ### Parameters

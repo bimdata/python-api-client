@@ -49,8 +49,6 @@ from bimdata_api_client.models.components_parent import ComponentsParent
 from bimdata_api_client.models.direction import Direction
 from bimdata_api_client.models.document import Document
 from bimdata_api_client.models.element import Element
-from bimdata_api_client.models.element_classification_relation import ElementClassificationRelation
-from bimdata_api_client.models.element_property_set_relation import ElementPropertySetRelation
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder

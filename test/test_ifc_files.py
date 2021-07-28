@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.ifc_files import IfcFiles  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestIfcFiles(unittest.TestCase):
     """IfcFiles unit test stubs"""
@@ -29,11 +29,31 @@ class TestIfcFiles(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test IfcFiles
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.ifc_files.IfcFiles()  # noqa: E501
+        if include_optional :
+            return IfcFiles(
+                structure_file = '0', 
+                systems_file = '0', 
+                map_file = '0', 
+                gltf_file = '0', 
+                gltf_with_openings_file = '0', 
+                bvh_tree_file = '0', 
+                viewer_360_file = '0', 
+                xkt_file = '0'
+            )
+        else :
+            return IfcFiles(
+        )
+
     def testIfcFiles(self):
         """Test IfcFiles"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.ifc_files.IfcFiles()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':

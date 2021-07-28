@@ -14,11 +14,11 @@
 from __future__ import absolute_import
 
 import unittest
+import datetime
 
 import bimdata_api_client
 from bimdata_api_client.models.zone_space import ZoneSpace  # noqa: E501
 from bimdata_api_client.rest import ApiException
-
 
 class TestZoneSpace(unittest.TestCase):
     """ZoneSpace unit test stubs"""
@@ -29,11 +29,33 @@ class TestZoneSpace(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def make_instance(self, include_optional):
+        """Test ZoneSpace
+            include_option is a boolean, when False only required
+            params are included, when True both required and
+            optional params are included """
+        # model = bimdata_api_client.models.zone_space.ZoneSpace()  # noqa: E501
+        if include_optional :
+            return ZoneSpace(
+                id = 56, 
+                name = '0', 
+                longname = '0', 
+                uuid = '0', 
+                zone_set = [
+                    56
+                    ], 
+                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f')
+            )
+        else :
+            return ZoneSpace(
+                uuid = '0',
+        )
+
     def testZoneSpace(self):
         """Test ZoneSpace"""
-        # FIXME: construct object with mandatory attributes with example values
-        # model = bimdata_api_client.models.zone_space.ZoneSpace()  # noqa: E501
-        pass
+        inst_req_only = self.make_instance(include_optional=False)
+        inst_req_and_optional = self.make_instance(include_optional=True)
 
 
 if __name__ == '__main__':
