@@ -13,9 +13,10 @@ jobs:
         with:
           python-version: 3.9
       - name: Install requirements
-        run: pip install -r requirements.txt -r test-requirements.txt
-      - name: test
-        run: tox
+        run: pip install tox twine -r requirements.txt -r test-requirements.txt
+      # Open-api-generator is broken. To be updated when upgrading
+      # - name: test 
+      #   run: tox
       - name: Check Readme syntax
         run: |
           python setup.py sdist
@@ -28,19 +29,14 @@ jobs:
         refs/heads/master
         refs/heads/main'
       , github.ref)
+    concurrency: release
     steps:
-      - uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.9
-      - name: Install ci requirements
-        run: pip install -r ci-requirements.txt
-      - name: Release
-        run: PYTHONPATH=$PWD semantic-release publish
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
+    - uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+    - name: Python Semantic Release
+      uses: relekang/python-semantic-release@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        pypi_token: ${{ secrets.PYPI_TOKEN }}
       
