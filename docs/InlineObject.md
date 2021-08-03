@@ -1,4 +1,4 @@
-# Folder
+# InlineObject
 
 ## Properties
 Name | Type | Description | Notes
@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **groups** | **list[int]** |  | [optional] [readonly] 
 **default_permission** | **int** | Permission for a Folder | [optional] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [optional] [readonly] 
-**children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

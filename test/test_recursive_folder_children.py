@@ -72,6 +72,8 @@ class TestRecursiveFolderChildren(unittest.TestCase):
                 size = 56, 
                 ifc_id = 56, 
                 file = '0', 
+                default_permission = 56, 
+                user_permission = 56, 
                 children = [
                     bimdata_api_client.models.recursive_folder_children.RecursiveFolderChildren(
                         id = 56, 
@@ -109,6 +111,8 @@ class TestRecursiveFolderChildren(unittest.TestCase):
                         size = 56, 
                         ifc_id = 56, 
                         file = '0', 
+                        default_permission = 56, 
+                        user_permission = 56, 
                         children = [
                             bimdata_api_client.models.recursive_folder_children.RecursiveFolderChildren(
                                 id = 56, 
@@ -121,7 +125,9 @@ class TestRecursiveFolderChildren(unittest.TestCase):
                                 description = '0', 
                                 size = 56, 
                                 ifc_id = 56, 
-                                file = '0', )
+                                file = '0', 
+                                default_permission = 56, 
+                                user_permission = 56, )
                             ], )
                     ]
             )

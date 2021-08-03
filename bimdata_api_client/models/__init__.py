@@ -33,7 +33,9 @@ from bimdata_api_client.models.element import Element
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder
+from bimdata_api_client.models.fos_user_id import FosUserId
 from bimdata_api_client.models.full_topic import FullTopic
+from bimdata_api_client.models.group_folder import GroupFolder
 from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_access_token import IfcAccessToken
 from bimdata_api_client.models.ifc_checker import IfcChecker
@@ -44,6 +46,14 @@ from bimdata_api_client.models.ifc_export import IfcExport
 from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.ifc_merge import IfcMerge
 from bimdata_api_client.models.ifc_optimize import IfcOptimize
+from bimdata_api_client.models.inline_object import InlineObject
+from bimdata_api_client.models.inline_object1 import InlineObject1
+from bimdata_api_client.models.inline_object2 import InlineObject2
+from bimdata_api_client.models.inline_object3 import InlineObject3
+from bimdata_api_client.models.inline_object4 import InlineObject4
+from bimdata_api_client.models.inline_object5 import InlineObject5
+from bimdata_api_client.models.inline_response200 import InlineResponse200
+from bimdata_api_client.models.inline_response2001 import InlineResponse2001
 from bimdata_api_client.models.invitation import Invitation
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.layer import Layer

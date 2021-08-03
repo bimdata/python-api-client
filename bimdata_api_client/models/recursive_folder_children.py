@@ -47,6 +47,8 @@ class RecursiveFolderChildren(object):
         'size': 'int',
         'ifc_id': 'int',
         'file': 'str',
+        'default_permission': 'int',
+        'user_permission': 'int',
         'children': 'list[RecursiveFolderChildren]'
     }
 
@@ -64,10 +66,12 @@ class RecursiveFolderChildren(object):
         'size': 'size',
         'ifc_id': 'ifc_id',
         'file': 'file',
+        'default_permission': 'default_permission',
+        'user_permission': 'user_permission',
         'children': 'children'
     }
 
-    def __init__(self, id=None, parent_id=None, created_by=None, creator=None, type=None, name=None, created_at=None, updated_at=None, file_name=None, description=None, size=None, ifc_id=None, file=None, children=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent_id=None, created_by=None, creator=None, type=None, name=None, created_at=None, updated_at=None, file_name=None, description=None, size=None, ifc_id=None, file=None, default_permission=None, user_permission=None, children=None, local_vars_configuration=None):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -86,6 +90,8 @@ class RecursiveFolderChildren(object):
         self._size = None
         self._ifc_id = None
         self._file = None
+        self._default_permission = None
+        self._user_permission = None
         self._children = None
         self.discriminator = None
 
@@ -110,6 +116,10 @@ class RecursiveFolderChildren(object):
             self.ifc_id = ifc_id
         if file is not None:
             self.file = file
+        if default_permission is not None:
+            self.default_permission = default_permission
+        if user_permission is not None:
+            self.user_permission = user_permission
         self.children = children
 
     @property
@@ -411,6 +421,52 @@ class RecursiveFolderChildren(object):
         """
 
         self._file = file
+
+    @property
+    def default_permission(self):
+        """Gets the default_permission of this RecursiveFolderChildren.  # noqa: E501
+
+        Default permissions of folder  # noqa: E501
+
+        :return: The default_permission of this RecursiveFolderChildren.  # noqa: E501
+        :rtype: int
+        """
+        return self._default_permission
+
+    @default_permission.setter
+    def default_permission(self, default_permission):
+        """Sets the default_permission of this RecursiveFolderChildren.
+
+        Default permissions of folder  # noqa: E501
+
+        :param default_permission: The default_permission of this RecursiveFolderChildren.  # noqa: E501
+        :type: int
+        """
+
+        self._default_permission = default_permission
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this RecursiveFolderChildren.  # noqa: E501
+
+        Aggregate of group user permissions and folder default permission  # noqa: E501
+
+        :return: The user_permission of this RecursiveFolderChildren.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this RecursiveFolderChildren.
+
+        Aggregate of group user permissions and folder default permission  # noqa: E501
+
+        :param user_permission: The user_permission of this RecursiveFolderChildren.  # noqa: E501
+        :type: int
+        """
+
+        self._user_permission = user_permission
 
     @property
     def children(self):

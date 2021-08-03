@@ -29,6 +29,13 @@ class TestCollaborationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_add_group_member(self):
+        """Test case for add_group_member
+
+        Add a user to a group  # noqa: E501
+        """
+        pass
+
     def test_cancel_cloud_user_invitation(self):
         """Test case for cancel_cloud_user_invitation
 
@@ -92,6 +99,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_create_manage_group(self):
+        """Test case for create_manage_group
+
+        Create a group  # noqa: E501
+        """
+        pass
+
     def test_create_project(self):
         """Test case for create_project
 
@@ -138,6 +152,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for delete_folder
 
         Delete a folder  # noqa: E501
+        """
+        pass
+
+    def test_delete_group_member(self):
+        """Test case for delete_group_member
+
+        Delete a user from a group  # noqa: E501
+        """
+        pass
+
+    def test_delete_manage_group(self):
+        """Test case for delete_manage_group
+
+        Delete a group  # noqa: E501
         """
         pass
 
@@ -194,6 +222,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for full_update_folder
 
         Update all fields of a folder  # noqa: E501
+        """
+        pass
+
+    def test_full_update_group_folder(self):
+        """Test case for full_update_group_folder
+
+        Update the permission of a group on a folder  # noqa: E501
+        """
+        pass
+
+    def test_full_update_manage_group(self):
+        """Test case for full_update_manage_group
+
+        Update all fields of a group  # noqa: E501
         """
         pass
 
@@ -299,6 +341,34 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_folders
 
         Retrieve all folders  # noqa: E501
+        """
+        pass
+
+    def test_get_group(self):
+        """Test case for get_group
+
+        Retrieve a group  # noqa: E501
+        """
+        pass
+
+    def test_get_groups(self):
+        """Test case for get_groups
+
+        Retrieve all groups  # noqa: E501
+        """
+        pass
+
+    def test_get_manage_group(self):
+        """Test case for get_manage_group
+
+        Retrieve a group  # noqa: E501
+        """
+        pass
+
+    def test_get_manage_groups(self):
+        """Test case for get_manage_groups
+
+        Retrieve all groups  # noqa: E501
         """
         pass
 
@@ -432,6 +502,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_folder
 
         Update some fields of a folder  # noqa: E501
+        """
+        pass
+
+    def test_update_group_folder(self):
+        """Test case for update_group_folder
+
+        Update the permission of a group on a folder  # noqa: E501
+        """
+        pass
+
+    def test_update_manage_group(self):
+        """Test case for update_manage_group
+
+        Update some fields of a group  # noqa: E501
         """
         pass
 

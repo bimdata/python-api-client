@@ -184,6 +184,7 @@ Class | Method | HTTP request | Description
 *CheckerApi* | [**update_rule**](docs/CheckerApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
 *CheckerApi* | [**update_rule_component**](docs/CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
 *CheckerApi* | [**update_ruleset**](docs/CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
+*CollaborationApi* | [**add_group_member**](docs/CollaborationApi.md#add_group_member) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member | Add a user to a group
 *CollaborationApi* | [**cancel_cloud_user_invitation**](docs/CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**cancel_project_user_invitation**](docs/CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**check_access**](docs/CollaborationApi.md#check_access) | **GET** /cloud/{id}/check-access | Check app access from cloud
@@ -193,6 +194,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_dms_tree**](docs/CollaborationApi.md#create_dms_tree) | **POST** /cloud/{cloud_pk}/project/{id}/dms-tree | Create a complete DMS tree
 *CollaborationApi* | [**create_document**](docs/CollaborationApi.md#create_document) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document | Create a document
 *CollaborationApi* | [**create_folder**](docs/CollaborationApi.md#create_folder) | **POST** /cloud/{cloud_pk}/project/{project_pk}/folder | Create a folder
+*CollaborationApi* | [**create_manage_group**](docs/CollaborationApi.md#create_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group | Create a group
 *CollaborationApi* | [**create_project**](docs/CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
 *CollaborationApi* | [**create_project_access_token**](docs/CollaborationApi.md#create_project_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/access-token | Create a token for this project
 *CollaborationApi* | [**delete_classification**](docs/CollaborationApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
@@ -200,6 +202,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_cloud_user**](docs/CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
 *CollaborationApi* | [**delete_document**](docs/CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
 *CollaborationApi* | [**delete_folder**](docs/CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
+*CollaborationApi* | [**delete_group_member**](docs/CollaborationApi.md#delete_group_member) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id} | Delete a user from a group
+*CollaborationApi* | [**delete_manage_group**](docs/CollaborationApi.md#delete_manage_group) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Delete a group
 *CollaborationApi* | [**delete_project**](docs/CollaborationApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
 *CollaborationApi* | [**delete_project_access_token**](docs/CollaborationApi.md#delete_project_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Delete a token
 *CollaborationApi* | [**delete_project_user**](docs/CollaborationApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
@@ -208,6 +212,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**full_update_cloud_user**](docs/CollaborationApi.md#full_update_cloud_user) | **PUT** /cloud/{cloud_pk}/user/{id} | Update all fields of a cloud user
 *CollaborationApi* | [**full_update_document**](docs/CollaborationApi.md#full_update_document) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update all fields of the document
 *CollaborationApi* | [**full_update_folder**](docs/CollaborationApi.md#full_update_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update all fields of a folder
+*CollaborationApi* | [**full_update_group_folder**](docs/CollaborationApi.md#full_update_group_folder) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder
+*CollaborationApi* | [**full_update_manage_group**](docs/CollaborationApi.md#full_update_manage_group) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update all fields of a group
 *CollaborationApi* | [**full_update_project**](docs/CollaborationApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | Update all fields of a project
 *CollaborationApi* | [**full_update_project_access_token**](docs/CollaborationApi.md#full_update_project_access_token) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update all fields of a token
 *CollaborationApi* | [**full_update_project_user**](docs/CollaborationApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update all fields of a project user
@@ -223,6 +229,10 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_documents**](docs/CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 *CollaborationApi* | [**get_folder**](docs/CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 *CollaborationApi* | [**get_folders**](docs/CollaborationApi.md#get_folders) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder | Retrieve all folders
+*CollaborationApi* | [**get_group**](docs/CollaborationApi.md#get_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group/{id} | Retrieve a group
+*CollaborationApi* | [**get_groups**](docs/CollaborationApi.md#get_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/group | Retrieve all groups
+*CollaborationApi* | [**get_manage_group**](docs/CollaborationApi.md#get_manage_group) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Retrieve a group
+*CollaborationApi* | [**get_manage_groups**](docs/CollaborationApi.md#get_manage_groups) | **GET** /cloud/{cloud_pk}/project/{project_pk}/group | Retrieve all groups
 *CollaborationApi* | [**get_project**](docs/CollaborationApi.md#get_project) | **GET** /cloud/{cloud_pk}/project/{id} | Retrieve a project
 *CollaborationApi* | [**get_project_access_token**](docs/CollaborationApi.md#get_project_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Retrieve one token created for this project
 *CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
@@ -242,6 +252,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_cloud_user**](docs/CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Update some fields of a cloud user
 *CollaborationApi* | [**update_document**](docs/CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
+*CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder
+*CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user
@@ -412,7 +424,9 @@ Class | Method | HTTP request | Description
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
+ - [FosUserId](docs/FosUserId.md)
  - [FullTopic](docs/FullTopic.md)
+ - [GroupFolder](docs/GroupFolder.md)
  - [Ifc](docs/Ifc.md)
  - [IfcAccessToken](docs/IfcAccessToken.md)
  - [IfcChecker](docs/IfcChecker.md)
@@ -423,6 +437,14 @@ Class | Method | HTTP request | Description
  - [IfcFiles](docs/IfcFiles.md)
  - [IfcMerge](docs/IfcMerge.md)
  - [IfcOptimize](docs/IfcOptimize.md)
+ - [InlineObject](docs/InlineObject.md)
+ - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject2](docs/InlineObject2.md)
+ - [InlineObject3](docs/InlineObject3.md)
+ - [InlineObject4](docs/InlineObject4.md)
+ - [InlineObject5](docs/InlineObject5.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse2001](docs/InlineResponse2001.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
  - [Layer](docs/Layer.md)
