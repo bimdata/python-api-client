@@ -41,7 +41,7 @@ class Folder(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'created_by': 'User',
-        'groups': 'list[int]',
+        'groups_permissions': 'list[FolderGroupPermission]',
         'default_permission': 'int',
         'user_permission': 'int',
         'children': 'list[RecursiveFolderChildren]'
@@ -55,13 +55,13 @@ class Folder(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'created_by': 'created_by',
-        'groups': 'groups',
+        'groups_permissions': 'groups_permissions',
         'default_permission': 'default_permission',
         'user_permission': 'user_permission',
         'children': 'children'
     }
 
-    def __init__(self, id=None, parent_id=None, type=None, name=None, created_at=None, updated_at=None, created_by=None, groups=None, default_permission=None, user_permission=None, children=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent_id=None, type=None, name=None, created_at=None, updated_at=None, created_by=None, groups_permissions=None, default_permission=None, user_permission=None, children=None, local_vars_configuration=None):  # noqa: E501
         """Folder - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -74,7 +74,7 @@ class Folder(object):
         self._created_at = None
         self._updated_at = None
         self._created_by = None
-        self._groups = None
+        self._groups_permissions = None
         self._default_permission = None
         self._user_permission = None
         self._children = None
@@ -92,8 +92,8 @@ class Folder(object):
             self.updated_at = updated_at
         if created_by is not None:
             self.created_by = created_by
-        if groups is not None:
-            self.groups = groups
+        if groups_permissions is not None:
+            self.groups_permissions = groups_permissions
         if default_permission is not None:
             self.default_permission = default_permission
         if user_permission is not None:
@@ -265,25 +265,25 @@ class Folder(object):
         self._created_by = created_by
 
     @property
-    def groups(self):
-        """Gets the groups of this Folder.  # noqa: E501
+    def groups_permissions(self):
+        """Gets the groups_permissions of this Folder.  # noqa: E501
 
 
-        :return: The groups of this Folder.  # noqa: E501
-        :rtype: list[int]
+        :return: The groups_permissions of this Folder.  # noqa: E501
+        :rtype: list[FolderGroupPermission]
         """
-        return self._groups
+        return self._groups_permissions
 
-    @groups.setter
-    def groups(self, groups):
-        """Sets the groups of this Folder.
+    @groups_permissions.setter
+    def groups_permissions(self, groups_permissions):
+        """Sets the groups_permissions of this Folder.
 
 
-        :param groups: The groups of this Folder.  # noqa: E501
-        :type: list[int]
+        :param groups_permissions: The groups_permissions of this Folder.  # noqa: E501
+        :type: list[FolderGroupPermission]
         """
 
-        self._groups = groups
+        self._groups_permissions = groups_permissions
 
     @property
     def default_permission(self):

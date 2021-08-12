@@ -424,6 +424,7 @@ Class | Method | HTTP request | Description
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
+ - [FolderGroupPermission](docs/FolderGroupPermission.md)
  - [FosUserId](docs/FosUserId.md)
  - [FullTopic](docs/FullTopic.md)
  - [GroupFolder](docs/GroupFolder.md)

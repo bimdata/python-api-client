@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | Creation date | [optional] [readonly] 
 **updated_at** | **datetime** | Date of the last update | [optional] [readonly] 
 **created_by** | [**User**](User.md) |  | [optional] 
-**groups** | **list[int]** |  | [optional] [readonly] 
+**groups_permissions** | [**list[FolderGroupPermission]**](FolderGroupPermission.md) |  | [optional] [readonly] 
 **default_permission** | **int** | Permission for a Folder | [optional] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [optional] [readonly] 
 
