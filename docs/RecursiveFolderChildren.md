@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **size** | **int** |  | [optional] 
 **ifc_id** | **int** |  | [optional] [readonly] 
 **file** | **str** |  | [optional] [readonly] 
-**groups_permissions** | [**FolderGroupPermission**](FolderGroupPermission.md) |  | [optional] 
+**groups_permissions** | [**list[FolderGroupPermission]**](FolderGroupPermission.md) | Groups permissions of folder | [optional] [readonly] 
 **default_permission** | **int** | Default permissions of folder | [optional] [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [optional] [readonly] 
 **children** | [**list[RecursiveFolderChildren]**](RecursiveFolderChildren.md) |  | [optional] 

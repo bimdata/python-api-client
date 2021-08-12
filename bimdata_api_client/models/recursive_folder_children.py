@@ -47,7 +47,7 @@ class RecursiveFolderChildren(object):
         'size': 'int',
         'ifc_id': 'int',
         'file': 'str',
-        'groups_permissions': 'FolderGroupPermission',
+        'groups_permissions': 'list[FolderGroupPermission]',
         'default_permission': 'int',
         'user_permission': 'int',
         'children': 'list[RecursiveFolderChildren]'
@@ -119,8 +119,7 @@ class RecursiveFolderChildren(object):
             self.ifc_id = ifc_id
         if file is not None:
             self.file = file
-        if groups_permissions is not None:
-            self.groups_permissions = groups_permissions
+        self.groups_permissions = groups_permissions
         if default_permission is not None:
             self.default_permission = default_permission
         if user_permission is not None:
@@ -431,9 +430,10 @@ class RecursiveFolderChildren(object):
     def groups_permissions(self):
         """Gets the groups_permissions of this RecursiveFolderChildren.  # noqa: E501
 
+        Groups permissions of folder  # noqa: E501
 
         :return: The groups_permissions of this RecursiveFolderChildren.  # noqa: E501
-        :rtype: FolderGroupPermission
+        :rtype: list[FolderGroupPermission]
         """
         return self._groups_permissions
 
@@ -441,9 +441,10 @@ class RecursiveFolderChildren(object):
     def groups_permissions(self, groups_permissions):
         """Sets the groups_permissions of this RecursiveFolderChildren.
 
+        Groups permissions of folder  # noqa: E501
 
         :param groups_permissions: The groups_permissions of this RecursiveFolderChildren.  # noqa: E501
-        :type: FolderGroupPermission
+        :type: list[FolderGroupPermission]
         """
 
         self._groups_permissions = groups_permissions
