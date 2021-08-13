@@ -39,7 +39,6 @@ class TestUser(unittest.TestCase):
             return User(
                 id = 56, 
                 email = '0', 
-                company = '0', 
                 firstname = '0', 
                 lastname = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -47,7 +46,8 @@ class TestUser(unittest.TestCase):
                 cloud_role = 56, 
                 project_role = 56, 
                 provider = '0', 
-                sub = '0'
+                sub = '0', 
+                profile_picture = '0'
             )
         else :
             return User(

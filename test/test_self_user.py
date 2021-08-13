@@ -39,7 +39,6 @@ class TestSelfUser(unittest.TestCase):
             return SelfUser(
                 id = 56, 
                 email = '0', 
-                company = '0', 
                 firstname = '0', 
                 lastname = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -65,7 +64,8 @@ class TestSelfUser(unittest.TestCase):
                     ], 
                 provider = '0', 
                 provider_sub = '0', 
-                sub = '0'
+                sub = '0', 
+                profile_picture = '0'
             )
         else :
             return SelfUser(

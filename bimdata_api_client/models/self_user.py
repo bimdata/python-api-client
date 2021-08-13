@@ -36,7 +36,6 @@ class SelfUser(object):
     openapi_types = {
         'id': 'int',
         'email': 'str',
-        'company': 'str',
         'firstname': 'str',
         'lastname': 'str',
         'created_at': 'datetime',
@@ -46,13 +45,13 @@ class SelfUser(object):
         'projects': 'list[ProjectRole]',
         'provider': 'str',
         'provider_sub': 'str',
-        'sub': 'str'
+        'sub': 'str',
+        'profile_picture': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'email': 'email',
-        'company': 'company',
         'firstname': 'firstname',
         'lastname': 'lastname',
         'created_at': 'created_at',
@@ -62,10 +61,11 @@ class SelfUser(object):
         'projects': 'projects',
         'provider': 'provider',
         'provider_sub': 'provider_sub',
-        'sub': 'sub'
+        'sub': 'sub',
+        'profile_picture': 'profile_picture'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, organizations=None, clouds=None, projects=None, provider=None, provider_sub=None, sub=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, firstname=None, lastname=None, created_at=None, updated_at=None, organizations=None, clouds=None, projects=None, provider=None, provider_sub=None, sub=None, profile_picture=None, local_vars_configuration=None):  # noqa: E501
         """SelfUser - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -73,7 +73,6 @@ class SelfUser(object):
 
         self._id = None
         self._email = None
-        self._company = None
         self._firstname = None
         self._lastname = None
         self._created_at = None
@@ -84,12 +83,12 @@ class SelfUser(object):
         self._provider = None
         self._provider_sub = None
         self._sub = None
+        self._profile_picture = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         self.email = email
-        self.company = company
         self.firstname = firstname
         self.lastname = lastname
         if created_at is not None:
@@ -107,6 +106,8 @@ class SelfUser(object):
         self.provider_sub = provider_sub
         if sub is not None:
             self.sub = sub
+        if profile_picture is not None:
+            self.profile_picture = profile_picture
 
     @property
     def id(self):
@@ -157,27 +158,6 @@ class SelfUser(object):
             raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
-
-    @property
-    def company(self):
-        """Gets the company of this SelfUser.  # noqa: E501
-
-
-        :return: The company of this SelfUser.  # noqa: E501
-        :rtype: str
-        """
-        return self._company
-
-    @company.setter
-    def company(self, company):
-        """Sets the company of this SelfUser.
-
-
-        :param company: The company of this SelfUser.  # noqa: E501
-        :type: str
-        """
-
-        self._company = company
 
     @property
     def firstname(self):
@@ -411,6 +391,30 @@ class SelfUser(object):
             raise ValueError("Invalid value for `sub`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._sub = sub
+
+    @property
+    def profile_picture(self):
+        """Gets the profile_picture of this SelfUser.  # noqa: E501
+
+
+        :return: The profile_picture of this SelfUser.  # noqa: E501
+        :rtype: str
+        """
+        return self._profile_picture
+
+    @profile_picture.setter
+    def profile_picture(self, profile_picture):
+        """Sets the profile_picture of this SelfUser.
+
+
+        :param profile_picture: The profile_picture of this SelfUser.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                profile_picture is not None and len(profile_picture) < 1):
+            raise ValueError("Invalid value for `profile_picture`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._profile_picture = profile_picture
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -36,7 +36,6 @@ class User(object):
     openapi_types = {
         'id': 'int',
         'email': 'str',
-        'company': 'str',
         'firstname': 'str',
         'lastname': 'str',
         'created_at': 'datetime',
@@ -44,13 +43,13 @@ class User(object):
         'cloud_role': 'int',
         'project_role': 'int',
         'provider': 'str',
-        'sub': 'str'
+        'sub': 'str',
+        'profile_picture': 'str'
     }
 
     attribute_map = {
         'id': 'id',
         'email': 'email',
-        'company': 'company',
         'firstname': 'firstname',
         'lastname': 'lastname',
         'created_at': 'created_at',
@@ -58,10 +57,11 @@ class User(object):
         'cloud_role': 'cloud_role',
         'project_role': 'project_role',
         'provider': 'provider',
-        'sub': 'sub'
+        'sub': 'sub',
+        'profile_picture': 'profile_picture'
     }
 
-    def __init__(self, id=None, email=None, company=None, firstname=None, lastname=None, created_at=None, updated_at=None, cloud_role=None, project_role=None, provider=None, sub=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, email=None, firstname=None, lastname=None, created_at=None, updated_at=None, cloud_role=None, project_role=None, provider=None, sub=None, profile_picture=None, local_vars_configuration=None):  # noqa: E501
         """User - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,7 +69,6 @@ class User(object):
 
         self._id = None
         self._email = None
-        self._company = None
         self._firstname = None
         self._lastname = None
         self._created_at = None
@@ -78,14 +77,13 @@ class User(object):
         self._project_role = None
         self._provider = None
         self._sub = None
+        self._profile_picture = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
         if email is not None:
             self.email = email
-        if company is not None:
-            self.company = company
         if firstname is not None:
             self.firstname = firstname
         if lastname is not None:
@@ -102,6 +100,8 @@ class User(object):
             self.provider = provider
         if sub is not None:
             self.sub = sub
+        if profile_picture is not None:
+            self.profile_picture = profile_picture
 
     @property
     def id(self):
@@ -147,27 +147,6 @@ class User(object):
             raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._email = email
-
-    @property
-    def company(self):
-        """Gets the company of this User.  # noqa: E501
-
-
-        :return: The company of this User.  # noqa: E501
-        :rtype: str
-        """
-        return self._company
-
-    @company.setter
-    def company(self, company):
-        """Sets the company of this User.
-
-
-        :param company: The company of this User.  # noqa: E501
-        :type: str
-        """
-
-        self._company = company
 
     @property
     def firstname(self):
@@ -344,6 +323,27 @@ class User(object):
             raise ValueError("Invalid value for `sub`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._sub = sub
+
+    @property
+    def profile_picture(self):
+        """Gets the profile_picture of this User.  # noqa: E501
+
+
+        :return: The profile_picture of this User.  # noqa: E501
+        :rtype: str
+        """
+        return self._profile_picture
+
+    @profile_picture.setter
+    def profile_picture(self, profile_picture):
+        """Sets the profile_picture of this User.
+
+
+        :param profile_picture: The profile_picture of this User.  # noqa: E501
+        :type: str
+        """
+
+        self._profile_picture = profile_picture
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -63,7 +63,6 @@ class TestProject(unittest.TestCase):
                             creator = bimdata_api_client.models.user.User(
                                 id = 56, 
                                 email = '0', 
-                                company = '0', 
                                 firstname = '0', 
                                 lastname = '0', 
                                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -71,7 +70,8 @@ class TestProject(unittest.TestCase):
                                 cloud_role = 56, 
                                 project_role = 56, 
                                 provider = '0', 
-                                sub = '0', ), 
+                                sub = '0', 
+                                profile_picture = '0', ), 
                             scopes = [
                                 '0'
                                 ], 
@@ -100,7 +100,6 @@ class TestProject(unittest.TestCase):
                     creator = bimdata_api_client.models.user.User(
                         id = 56, 
                         email = '0', 
-                        company = '0', 
                         firstname = '0', 
                         lastname = '0', 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
@@ -108,7 +107,8 @@ class TestProject(unittest.TestCase):
                         cloud_role = 56, 
                         project_role = 56, 
                         provider = '0', 
-                        sub = '0', ), 
+                        sub = '0', 
+                        profile_picture = '0', ), 
                     creator_app = '0', 
                     is_default = True, 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
