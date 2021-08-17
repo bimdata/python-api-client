@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** | Date of the last update | [optional] [readonly] 
 **ifc_source** | **str** | Define the ifc.source field if the upload is an IFC | [optional] 
 **ifc_id** | **str** |  | [optional] [readonly] 
+**user_permission** | **int** | Aggregate of group user permissions and folder default permission | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

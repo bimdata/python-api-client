@@ -47,7 +47,8 @@ class Document(object):
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'ifc_source': 'str',
-        'ifc_id': 'str'
+        'ifc_id': 'str',
+        'user_permission': 'int'
     }
 
     attribute_map = {
@@ -64,10 +65,11 @@ class Document(object):
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'ifc_source': 'ifc_source',
-        'ifc_id': 'ifc_id'
+        'ifc_id': 'ifc_id',
+        'user_permission': 'user_permission'
     }
 
-    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_source=None, ifc_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_source=None, ifc_id=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
         """Document - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -87,6 +89,7 @@ class Document(object):
         self._updated_at = None
         self._ifc_source = None
         self._ifc_id = None
+        self._user_permission = None
         self.discriminator = None
 
         if id is not None:
@@ -111,6 +114,8 @@ class Document(object):
             self.ifc_source = ifc_source
         if ifc_id is not None:
             self.ifc_id = ifc_id
+        if user_permission is not None:
+            self.user_permission = user_permission
 
     @property
     def id(self):
@@ -445,6 +450,29 @@ class Document(object):
         """
 
         self._ifc_id = ifc_id
+
+    @property
+    def user_permission(self):
+        """Gets the user_permission of this Document.  # noqa: E501
+
+        Aggregate of group user permissions and folder default permission  # noqa: E501
+
+        :return: The user_permission of this Document.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_permission
+
+    @user_permission.setter
+    def user_permission(self, user_permission):
+        """Sets the user_permission of this Document.
+
+        Aggregate of group user permissions and folder default permission  # noqa: E501
+
+        :param user_permission: The user_permission of this Document.  # noqa: E501
+        :type: int
+        """
+
+        self._user_permission = user_permission
 
     def to_dict(self):
         """Returns the model properties as a dict"""
