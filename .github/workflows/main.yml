@@ -44,7 +44,7 @@ jobs:
       run: |
         git config --global user.email "infra@bimdata.io"
         git config --global user.name "GA"
-        PYTHONPATH=$PWD semantic-release publish --retry
+        PYTHONPATH=$PWD semantic-release publish
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         PYPI_TOKEN: ${{ secrets.PYPI_TOKEN }}
