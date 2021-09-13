@@ -1,5 +1,6 @@
-from semantic_release.errors import UnknownCommitMessageStyleError
+from semantic_release import UnknownCommitMessageStyleError
 from semantic_release.settings import config
+from semantic_release.history.parser_helpers import ParsedCommit
 
 
 def parse_commit_message(message):
@@ -11,20 +12,20 @@ def parse_commit_message(message):
     :raises semantic_release.UnknownCommitMessageStyle: If it does not recognise the commit style
     :return: A tuple of (level to bump, type of change, scope of change, a tuple with descriptions)
     """
-    if config.get('semantic_release', 'minor_tag') in message:
+    if config.get('minor_tag') in message:
         level = 'feature'
         level_bump = 2
-        subject = message.replace(config.get('semantic_release', 'minor_tag'.format(level)), '')
+        subject = message.replace(config.get('minor_tag'), '')
 
-    elif config.get('semantic_release', 'fix_tag') in message:
+    elif config.get('fix_tag') in message:
         level = 'fix'
         level_bump = 1
-        subject = message.replace(config.get('semantic_release', 'fix_tag'.format(level)), '')
+        subject = message.replace(config.get('fix_tag'), '')
 
-    elif config.get('semantic_release', 'major_tag') in message:
+    elif config.get('major_tag') in message:
         level = 'breaking'
         level_bump = 3
-        subject = message.replace(config.get('semantic_release', 'major_tag'.format(level)), '')
+        subject = message.replace(config.get('major_tag'), '')
 
     else:
         raise UnknownCommitMessageStyleError(
@@ -34,4 +35,4 @@ def parse_commit_message(message):
     body = message
     footer = message
 
-    return level_bump, level, None, (subject.strip(), body.strip(), footer.strip())
+    return ParsedCommit(level_bump, level, None, (subject.strip(), body.strip(), footer.strip()), None)
