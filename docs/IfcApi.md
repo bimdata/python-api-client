@@ -2880,11 +2880,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_classification_element_relations**
-> create_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+> create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 Create association between existing classification and existing element
 
- Required scopes: ifc:write
+Create association between existing classification and existing element Required scopes: ifc:write
 
 ### Example
 
@@ -2935,10 +2935,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -2990,10 +2991,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -3045,10 +3047,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_classification_element_relations: %s\n" % e)
 ```
@@ -3060,6 +3063,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[ElementClassificationRelation]**](ElementClassificationRelation.md)|  | 
 
 ### Return type
 
@@ -3071,13 +3075,14 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**201** | The response is empty |  -  |
+**204** | Nothing to do, the array was empty |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -5271,11 +5276,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_property_set_element_relations**
-> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk)
+> create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
 
 Create association between PropertySet and element
 
- Required scopes: ifc:write
+Create association between existing PropertySet and existing element Required scopes: ifc:write
 
 ### Example
 
@@ -5326,10 +5331,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -5381,10 +5387,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -5436,10 +5443,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_instance.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->create_property_set_element_relations: %s\n" % e)
 ```
@@ -5451,6 +5459,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[ElementPropertySetRelation]**](ElementPropertySetRelation.md)|  | 
 
 ### Return type
 
@@ -5462,13 +5471,13 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** |  |  -  |
+**201** | The response is empty |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -22854,11 +22863,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **list_classification_element_relations**
-> list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+> list[ElementClassificationRelation] list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
 
 List all associations between classifications and elements
 
- Required scopes: ifc:read
+List all associations between classifications and elements Required scopes: ifc:read
 
 ### Example
 
@@ -22912,7 +22921,8 @@ project_pk = 'project_pk_example' # str |
 
     try:
         # List all associations between classifications and elements
-        api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->list_classification_element_relations: %s\n" % e)
 ```
@@ -22967,7 +22977,8 @@ project_pk = 'project_pk_example' # str |
 
     try:
         # List all associations between classifications and elements
-        api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->list_classification_element_relations: %s\n" % e)
 ```
@@ -23022,7 +23033,8 @@ project_pk = 'project_pk_example' # str |
 
     try:
         # List all associations between classifications and elements
-        api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
+        pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->list_classification_element_relations: %s\n" % e)
 ```
@@ -23037,7 +23049,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**list[ElementClassificationRelation]**](ElementClassificationRelation.md)
 
 ### Authorization
 
@@ -23046,7 +23058,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 ### HTTP response details
 | Status code | Description | Response headers |

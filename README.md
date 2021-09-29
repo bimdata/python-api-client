@@ -221,7 +221,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 *CollaborationApi* | [**get_cloud_invitations**](docs/CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
-*CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Get size of all ifc files in the cloud
+*CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Returns the sizes of the cloud in Bytes.
 *CollaborationApi* | [**get_cloud_user**](docs/CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 *CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 *CollaborationApi* | [**get_clouds**](docs/CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
@@ -238,6 +238,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 *CollaborationApi* | [**get_project_dms_tree**](docs/CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
 *CollaborationApi* | [**get_project_invitations**](docs/CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
+*CollaborationApi* | [**get_project_size**](docs/CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all ifc files in the project
 *CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 *CollaborationApi* | [**get_project_tree**](docs/CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 *CollaborationApi* | [**get_project_user**](docs/CollaborationApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
@@ -421,6 +422,8 @@ Class | Method | HTTP request | Description
  - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
  - [Element](docs/Element.md)
+ - [ElementClassificationRelation](docs/ElementClassificationRelation.md)
+ - [ElementPropertySetRelation](docs/ElementPropertySetRelation.md)
  - [Extensions](docs/Extensions.md)
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
@@ -467,6 +470,7 @@ Class | Method | HTTP request | Description
  - [ProjectAccessToken](docs/ProjectAccessToken.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectRole](docs/ProjectRole.md)
+ - [ProjectSize](docs/ProjectSize.md)
  - [ProjectWithChildren](docs/ProjectWithChildren.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
@@ -491,6 +495,7 @@ Class | Method | HTTP request | Description
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
  - [SimpleElement](docs/SimpleElement.md)
+ - [Size](docs/Size.md)
  - [Snapshot](docs/Snapshot.md)
  - [Space](docs/Space.md)
  - [Stage](docs/Stage.md)

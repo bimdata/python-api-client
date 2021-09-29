@@ -49,6 +49,8 @@ from bimdata_api_client.models.components_parent import ComponentsParent
 from bimdata_api_client.models.direction import Direction
 from bimdata_api_client.models.document import Document
 from bimdata_api_client.models.element import Element
+from bimdata_api_client.models.element_classification_relation import ElementClassificationRelation
+from bimdata_api_client.models.element_property_set_relation import ElementPropertySetRelation
 from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder
@@ -95,6 +97,7 @@ from bimdata_api_client.models.project import Project
 from bimdata_api_client.models.project_access_token import ProjectAccessToken
 from bimdata_api_client.models.project_invitation import ProjectInvitation
 from bimdata_api_client.models.project_role import ProjectRole
+from bimdata_api_client.models.project_size import ProjectSize
 from bimdata_api_client.models.project_with_children import ProjectWithChildren
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
@@ -119,6 +122,7 @@ from bimdata_api_client.models.select_user import SelectUser
 from bimdata_api_client.models.self_bcf_user import SelfBcfUser
 from bimdata_api_client.models.self_user import SelfUser
 from bimdata_api_client.models.simple_element import SimpleElement
+from bimdata_api_client.models.size import Size
 from bimdata_api_client.models.snapshot import Snapshot
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.stage import Stage

@@ -347,8 +347,8 @@ class Document(object):
         :type: int
         """
         if (self.local_vars_configuration.client_side_validation and
-                size is not None and size > 2147483647):  # noqa: E501
-            raise ValueError("Invalid value for `size`, must be a value less than or equal to `2147483647`")  # noqa: E501
+                size is not None and size > 9223372036854775807):  # noqa: E501
+            raise ValueError("Invalid value for `size`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 size is not None and size < 0):  # noqa: E501
             raise ValueError("Invalid value for `size`, must be a value greater than or equal to `0`")  # noqa: E501

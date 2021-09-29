@@ -1821,19 +1821,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def create_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create association between existing classification and existing element  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Create association between existing classification and existing element Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_classification_element_relations(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[ElementClassificationRelation] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1846,21 +1847,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def create_classification_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def create_classification_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create association between existing classification and existing element  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Create association between existing classification and existing element Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[ElementClassificationRelation] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1880,7 +1882,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -1911,6 +1914,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_classification_element_relations`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_classification_element_relations`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1930,6 +1937,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -3498,19 +3511,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_property_set_element_relations(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def create_property_set_element_relations(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create association between PropertySet and element  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Create association between existing PropertySet and existing element Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_property_set_element_relations(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[ElementPropertySetRelation] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3523,21 +3537,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def create_property_set_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def create_property_set_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create association between PropertySet and element  # noqa: E501
 
-         Required scopes: ifc:write  # noqa: E501
+        Create association between existing PropertySet and existing element Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_property_set_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[ElementPropertySetRelation] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3557,7 +3572,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -3588,6 +3604,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `create_property_set_element_relations`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_property_set_element_relations`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3607,6 +3627,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -15226,7 +15252,7 @@ class IfcApi(object):
     def list_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """List all associations between classifications and elements  # noqa: E501
 
-         Required scopes: ifc:read  # noqa: E501
+        List all associations between classifications and elements Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.list_classification_element_relations(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -15243,7 +15269,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: list[ElementClassificationRelation]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15253,7 +15279,7 @@ class IfcApi(object):
     def list_classification_element_relations_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """List all associations between classifications and elements  # noqa: E501
 
-         Required scopes: ifc:read  # noqa: E501
+        List all associations between classifications and elements Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.list_classification_element_relations_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
@@ -15272,7 +15298,7 @@ class IfcApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: None
+        :return: tuple(list[ElementClassificationRelation], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -15332,6 +15358,10 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -15343,7 +15373,7 @@ class IfcApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type=None,  # noqa: E501
+            response_type='list[ElementClassificationRelation]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

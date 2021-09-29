@@ -1170,8 +1170,8 @@ class CollaborationApi(object):
         if self.api_client.client_side_validation and ('file_name' in local_var_params and  # noqa: E501
                                                         len(local_var_params['file_name']) < 1):  # noqa: E501
             raise ApiValueError("Invalid value for parameter `file_name` when calling `create_document`, length must be greater than or equal to `1`")  # noqa: E501
-        if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `size` when calling `create_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] > 9223372036854775807:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `size` when calling `create_document`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
         if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `size` when calling `create_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
@@ -3569,8 +3569,8 @@ class CollaborationApi(object):
         if self.api_client.client_side_validation and ('file_name' in local_var_params and  # noqa: E501
                                                         len(local_var_params['file_name']) < 1):  # noqa: E501
             raise ApiValueError("Invalid value for parameter `file_name` when calling `full_update_document`, length must be greater than or equal to `1`")  # noqa: E501
-        if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] > 2147483647:  # noqa: E501
-            raise ApiValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value less than or equal to `2147483647`")  # noqa: E501
+        if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] > 9223372036854775807:  # noqa: E501
+            raise ApiValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value less than or equal to `9223372036854775807`")  # noqa: E501
         if self.api_client.client_side_validation and 'size' in local_var_params and local_var_params['size'] < 0:  # noqa: E501
             raise ApiValueError("Invalid value for parameter `size` when calling `full_update_document`, must be a value greater than or equal to `0`")  # noqa: E501
         collection_formats = {}
@@ -4988,9 +4988,9 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_size(self, id, **kwargs):  # noqa: E501
-        """Get size of all ifc files in the cloud  # noqa: E501
+        """Returns the sizes of the cloud in Bytes.  # noqa: E501
 
-        Returns the size of the cloud in Bytes  # noqa: E501
+         Returns the sizes of the cloud in Bytes. The response fields depends on the role of the user. If the user is an admin, all field will be returned. If the user is a standard user, only `remaining_total_size` and `remaining_smart_data_size` will be set. If the call is made from an API access, role admin (100) will be returned and all fields will be set. The fields `managed by` indicate if the subscription for this cloud is an API subscription or a BIMData Platform subscription. If the cloud is managed by an API plan, the remaining sizes will take others organizations's clouds size into account   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_size(id, async_req=True)
@@ -5005,7 +5005,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: int
+        :return: Size
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5013,9 +5013,9 @@ class CollaborationApi(object):
         return self.get_cloud_size_with_http_info(id, **kwargs)  # noqa: E501
 
     def get_cloud_size_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Get size of all ifc files in the cloud  # noqa: E501
+        """Returns the sizes of the cloud in Bytes.  # noqa: E501
 
-        Returns the size of the cloud in Bytes  # noqa: E501
+         Returns the sizes of the cloud in Bytes. The response fields depends on the role of the user. If the user is an admin, all field will be returned. If the user is a standard user, only `remaining_total_size` and `remaining_smart_data_size` will be set. If the call is made from an API access, role admin (100) will be returned and all fields will be set. The fields `managed by` indicate if the subscription for this cloud is an API subscription or a BIMData Platform subscription. If the cloud is managed by an API plan, the remaining sizes will take others organizations's clouds size into account   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_cloud_size_with_http_info(id, async_req=True)
@@ -5032,7 +5032,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(int, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Size, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -5093,7 +5093,7 @@ class CollaborationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='int',  # noqa: E501
+            response_type='Size',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -7100,6 +7100,129 @@ class CollaborationApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[ProjectInvitation]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_project_size(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Get size of all ifc files in the project  # noqa: E501
+
+        Returns the size of the project in Bytes  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_size(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: ProjectSize
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_project_size_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
+
+    def get_project_size_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
+        """Get size of all ifc files in the project  # noqa: E501
+
+        Returns the size of the project in Bytes  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_project_size_with_http_info(cloud_pk, id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(ProjectSize, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_project_size" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project_size`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_project_size`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{id}/size', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ProjectSize',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
