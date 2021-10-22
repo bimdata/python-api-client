@@ -4988,7 +4988,7 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_cloud_size(self, id, **kwargs):  # noqa: E501
-        """Returns the sizes of the cloud in Bytes.  # noqa: E501
+        """summary  # noqa: E501
 
          Returns the sizes of the cloud in Bytes. The response fields depends on the role of the user. If the user is an admin, all field will be returned. If the user is a standard user, only `remaining_total_size` and `remaining_smart_data_size` will be set. If the call is made from an API access, role admin (100) will be returned and all fields will be set. The fields `managed by` indicate if the subscription for this cloud is an API subscription or a BIMData Platform subscription. If the cloud is managed by an API plan, the remaining sizes will take others organizations's clouds size into account   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -5013,7 +5013,7 @@ class CollaborationApi(object):
         return self.get_cloud_size_with_http_info(id, **kwargs)  # noqa: E501
 
     def get_cloud_size_with_http_info(self, id, **kwargs):  # noqa: E501
-        """Returns the sizes of the cloud in Bytes.  # noqa: E501
+        """summary  # noqa: E501
 
          Returns the sizes of the cloud in Bytes. The response fields depends on the role of the user. If the user is an admin, all field will be returned. If the user is a standard user, only `remaining_total_size` and `remaining_smart_data_size` will be set. If the call is made from an API access, role admin (100) will be returned and all fields will be set. The fields `managed by` indicate if the subscription for this cloud is an API subscription or a BIMData Platform subscription. If the cloud is managed by an API plan, the remaining sizes will take others organizations's clouds size into account   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an

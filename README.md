@@ -221,7 +221,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 *CollaborationApi* | [**get_cloud_invitations**](docs/CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
-*CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Returns the sizes of the cloud in Bytes.
+*CollaborationApi* | [**get_cloud_size**](docs/CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | summary
 *CollaborationApi* | [**get_cloud_user**](docs/CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 *CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 *CollaborationApi* | [**get_clouds**](docs/CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
@@ -529,7 +529,7 @@ Class | Method | HTTP request | Description
 
 - **Type**: OAuth
 - **Flow**: implicit
-- **Authorization URL**: http://localhost:8080/auth/realms/bimdata/protocol/openid-connect/auth
+- **Authorization URL**: http://IAM_URL/realms/bimdata/protocol/openid-connect/auth
 - **Scopes**: N/A
 
 

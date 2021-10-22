@@ -41,7 +41,7 @@ Method | HTTP request | Description
 [**get_classifications**](CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 [**get_cloud**](CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
 [**get_cloud_invitations**](CollaborationApi.md#get_cloud_invitations) | **GET** /cloud/{cloud_pk}/invitation | Retrieve all pending invitations in the cloud
-[**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | Returns the sizes of the cloud in Bytes.
+[**get_cloud_size**](CollaborationApi.md#get_cloud_size) | **GET** /cloud/{id}/size | summary
 [**get_cloud_user**](CollaborationApi.md#get_cloud_user) | **GET** /cloud/{cloud_pk}/user/{id} | Retrieve a user in a cloud
 [**get_cloud_users**](CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 [**get_clouds**](CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
@@ -7842,7 +7842,7 @@ Name | Type | Description  | Notes
 # **get_cloud_size**
 > Size get_cloud_size(id)
 
-Returns the sizes of the cloud in Bytes.
+summary
 
  Returns the sizes of the cloud in Bytes. The response fields depends on the role of the user. If the user is an admin, all field will be returned. If the user is a standard user, only `remaining_total_size` and `remaining_smart_data_size` will be set. If the call is made from an API access, role admin (100) will be returned and all fields will be set. The fields `managed by` indicate if the subscription for this cloud is an API subscription or a BIMData Platform subscription. If the cloud is managed by an API plan, the remaining sizes will take others organizations's clouds size into account 
 
@@ -7895,7 +7895,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | A unique integer value identifying this cloud.
 
     try:
-        # Returns the sizes of the cloud in Bytes.
+        # summary
         api_response = api_instance.get_cloud_size(id)
         pprint(api_response)
     except ApiException as e:
@@ -7949,7 +7949,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | A unique integer value identifying this cloud.
 
     try:
-        # Returns the sizes of the cloud in Bytes.
+        # summary
         api_response = api_instance.get_cloud_size(id)
         pprint(api_response)
     except ApiException as e:
@@ -8003,7 +8003,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 56 # int | A unique integer value identifying this cloud.
 
     try:
-        # Returns the sizes of the cloud in Bytes.
+        # summary
         api_response = api_instance.get_cloud_size(id)
         pprint(api_response)
     except ApiException as e:

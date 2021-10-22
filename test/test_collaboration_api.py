@@ -291,7 +291,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_get_cloud_size(self):
         """Test case for get_cloud_size
 
-        Returns the sizes of the cloud in Bytes.  # noqa: E501
+        summary  # noqa: E501
         """
         pass
 
