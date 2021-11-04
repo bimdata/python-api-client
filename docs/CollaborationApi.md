@@ -82,7 +82,7 @@ Method | HTTP request | Description
 
 
 # **add_group_member**
-> User add_group_member(cloud_pk, group_pk, project_pk, data)
+> UserProject add_group_member(cloud_pk, group_pk, project_pk, data)
 
 Add a user to a group
 
@@ -272,7 +272,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**User**](User.md)
+[**UserProject**](UserProject.md)
 
 ### Authorization
 

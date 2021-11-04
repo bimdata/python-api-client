@@ -37,7 +37,7 @@ class InlineObject5(object):
         'id': 'int',
         'name': 'str',
         'color': 'str',
-        'members': 'list[User]'
+        'members': 'list[UserProject]'
     }
 
     attribute_map = {
@@ -148,7 +148,7 @@ class InlineObject5(object):
 
 
         :return: The members of this InlineObject5.  # noqa: E501
-        :rtype: list[User]
+        :rtype: list[UserProject]
         """
         return self._members
 
@@ -158,7 +158,7 @@ class InlineObject5(object):
 
 
         :param members: The members of this InlineObject5.  # noqa: E501
-        :type: list[User]
+        :type: list[UserProject]
         """
 
         self._members = members

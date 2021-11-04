@@ -133,6 +133,7 @@ from bimdata_api_client.models.topic_type import TopicType
 from bimdata_api_client.models.unit import Unit
 from bimdata_api_client.models.user import User
 from bimdata_api_client.models.user_cloud_update import UserCloudUpdate
+from bimdata_api_client.models.user_project import UserProject
 from bimdata_api_client.models.user_project_update import UserProjectUpdate
 from bimdata_api_client.models.view_setup_hints import ViewSetupHints
 from bimdata_api_client.models.viewpoint import Viewpoint

@@ -506,6 +506,7 @@ Class | Method | HTTP request | Description
  - [Unit](docs/Unit.md)
  - [User](docs/User.md)
  - [UserCloudUpdate](docs/UserCloudUpdate.md)
+ - [UserProject](docs/UserProject.md)
  - [UserProjectUpdate](docs/UserProjectUpdate.md)
  - [ViewSetupHints](docs/ViewSetupHints.md)
  - [Viewpoint](docs/Viewpoint.md)
