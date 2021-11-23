@@ -246,6 +246,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_self_user**](docs/CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
 *CollaborationApi* | [**invite_cloud_user**](docs/CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
 *CollaborationApi* | [**invite_project_user**](docs/CollaborationApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
+*CollaborationApi* | [**leave_project**](docs/CollaborationApi.md#leave_project) | **POST** /cloud/{cloud_pk}/project/{id}/leave | Leave the project
 *CollaborationApi* | [**update_classification**](docs/CollaborationApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update some fields of a classification
 *CollaborationApi* | [**update_cloud**](docs/CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 *CollaborationApi* | [**update_cloud_user**](docs/CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Update some fields of a cloud user

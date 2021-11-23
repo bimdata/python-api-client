@@ -463,6 +463,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_leave_project(self):
+        """Test case for leave_project
+
+        Leave the project  # noqa: E501
+        """
+        pass
+
     def test_update_classification(self):
         """Test case for update_classification
 

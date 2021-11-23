@@ -66,6 +66,7 @@ Method | HTTP request | Description
 [**get_self_user**](CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
 [**invite_cloud_user**](CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
 [**invite_project_user**](CollaborationApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
+[**leave_project**](CollaborationApi.md#leave_project) | **POST** /cloud/{cloud_pk}/project/{id}/leave | Leave the project
 [**update_classification**](CollaborationApi.md#update_classification) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Update some fields of a classification
 [**update_cloud**](CollaborationApi.md#update_cloud) | **PATCH** /cloud/{id} | Update some fields of a cloud
 [**update_cloud_user**](CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Update some fields of a cloud user
@@ -12981,6 +12982,209 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **leave_project**
+> leave_project(cloud_pk, id)
+
+Leave the project
+
+Leave the project. Only authenticated users (no app) can call this route. Required scopes: org:manage
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Leave the project
+        api_instance.leave_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->leave_project: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Leave the project
+        api_instance.leave_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->leave_project: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.CollaborationApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Leave the project
+        api_instance.leave_project(cloud_pk, id)
+    except ApiException as e:
+        print("Exception when calling CollaborationApi->leave_project: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No content |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
