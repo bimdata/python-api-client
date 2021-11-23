@@ -37,8 +37,9 @@ class TestSize(unittest.TestCase):
         # model = bimdata_api_client.models.size.Size()  # noqa: E501
         if include_optional :
             return Size(
+                is_unsupervised = True, 
                 managed_by = 'BIMDATA_PLATFORM', 
-                role = 'A', 
+                role = 56, 
                 total_size = 56, 
                 smart_data_size = 56, 
                 total_size_available = 56, 
@@ -51,7 +52,7 @@ class TestSize(unittest.TestCase):
         else :
             return Size(
                 managed_by = 'BIMDATA_PLATFORM',
-                role = 'A',
+                role = 56,
         )
 
     def testSize(self):

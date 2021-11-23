@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import bimdata_api_client
-from bimdata_api_client.models.fos_user_id import FosUserId  # noqa: E501
+from bimdata_api_client.models.user_project_id import UserProjectId  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
-class TestFosUserId(unittest.TestCase):
-    """FosUserId unit test stubs"""
+class TestUserProjectId(unittest.TestCase):
+    """UserProjectId unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,22 +30,22 @@ class TestFosUserId(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test FosUserId
+        """Test UserProjectId
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = bimdata_api_client.models.fos_user_id.FosUserId()  # noqa: E501
+        # model = bimdata_api_client.models.user_project_id.UserProjectId()  # noqa: E501
         if include_optional :
-            return FosUserId(
-                user_id = 56
+            return UserProjectId(
+                userproject_id = 56
             )
         else :
-            return FosUserId(
-                user_id = 56,
+            return UserProjectId(
+                userproject_id = 56,
         )
 
-    def testFosUserId(self):
-        """Test FosUserId"""
+    def testUserProjectId(self):
+        """Test UserProjectId"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

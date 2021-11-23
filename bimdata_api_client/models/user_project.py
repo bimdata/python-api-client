@@ -34,44 +34,218 @@ class UserProject(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'role': 'int',
-        'user': 'User',
-        'invitation': 'ProjectInvitation',
-        'project': 'int'
+        'id': 'int',
+        'user_id': 'int',
+        'invitation_id': 'int',
+        'email': 'str',
+        'firstname': 'str',
+        'lastname': 'str',
+        'profile_picture': 'str',
+        'role': 'int'
     }
 
     attribute_map = {
-        'role': 'role',
-        'user': 'user',
-        'invitation': 'invitation',
-        'project': 'project'
+        'id': 'id',
+        'user_id': 'user_id',
+        'invitation_id': 'invitation_id',
+        'email': 'email',
+        'firstname': 'firstname',
+        'lastname': 'lastname',
+        'profile_picture': 'profile_picture',
+        'role': 'role'
     }
 
-    def __init__(self, role=None, user=None, invitation=None, project=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, user_id=None, invitation_id=None, email=None, firstname=None, lastname=None, profile_picture=None, role=None, local_vars_configuration=None):  # noqa: E501
         """UserProject - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
+        self._user_id = None
+        self._invitation_id = None
+        self._email = None
+        self._firstname = None
+        self._lastname = None
+        self._profile_picture = None
         self._role = None
-        self._user = None
-        self._invitation = None
-        self._project = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
+        self.user_id = user_id
+        self.invitation_id = invitation_id
+        if email is not None:
+            self.email = email
+        self.firstname = firstname
+        self.lastname = lastname
+        self.profile_picture = profile_picture
         if role is not None:
             self.role = role
-        if user is not None:
-            self.user = user
-        if invitation is not None:
-            self.invitation = invitation
-        self.project = project
+
+    @property
+    def id(self):
+        """Gets the id of this UserProject.  # noqa: E501
+
+
+        :return: The id of this UserProject.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this UserProject.
+
+
+        :param id: The id of this UserProject.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
+
+    @property
+    def user_id(self):
+        """Gets the user_id of this UserProject.  # noqa: E501
+
+
+        :return: The user_id of this UserProject.  # noqa: E501
+        :rtype: int
+        """
+        return self._user_id
+
+    @user_id.setter
+    def user_id(self, user_id):
+        """Sets the user_id of this UserProject.
+
+
+        :param user_id: The user_id of this UserProject.  # noqa: E501
+        :type: int
+        """
+
+        self._user_id = user_id
+
+    @property
+    def invitation_id(self):
+        """Gets the invitation_id of this UserProject.  # noqa: E501
+
+
+        :return: The invitation_id of this UserProject.  # noqa: E501
+        :rtype: int
+        """
+        return self._invitation_id
+
+    @invitation_id.setter
+    def invitation_id(self, invitation_id):
+        """Sets the invitation_id of this UserProject.
+
+
+        :param invitation_id: The invitation_id of this UserProject.  # noqa: E501
+        :type: int
+        """
+
+        self._invitation_id = invitation_id
+
+    @property
+    def email(self):
+        """Gets the email of this UserProject.  # noqa: E501
+
+
+        :return: The email of this UserProject.  # noqa: E501
+        :rtype: str
+        """
+        return self._email
+
+    @email.setter
+    def email(self, email):
+        """Sets the email of this UserProject.
+
+
+        :param email: The email of this UserProject.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                email is not None and len(email) < 1):
+            raise ValueError("Invalid value for `email`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._email = email
+
+    @property
+    def firstname(self):
+        """Gets the firstname of this UserProject.  # noqa: E501
+
+
+        :return: The firstname of this UserProject.  # noqa: E501
+        :rtype: str
+        """
+        return self._firstname
+
+    @firstname.setter
+    def firstname(self, firstname):
+        """Sets the firstname of this UserProject.
+
+
+        :param firstname: The firstname of this UserProject.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                firstname is not None and len(firstname) < 1):
+            raise ValueError("Invalid value for `firstname`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._firstname = firstname
+
+    @property
+    def lastname(self):
+        """Gets the lastname of this UserProject.  # noqa: E501
+
+
+        :return: The lastname of this UserProject.  # noqa: E501
+        :rtype: str
+        """
+        return self._lastname
+
+    @lastname.setter
+    def lastname(self, lastname):
+        """Sets the lastname of this UserProject.
+
+
+        :param lastname: The lastname of this UserProject.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                lastname is not None and len(lastname) < 1):
+            raise ValueError("Invalid value for `lastname`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._lastname = lastname
+
+    @property
+    def profile_picture(self):
+        """Gets the profile_picture of this UserProject.  # noqa: E501
+
+
+        :return: The profile_picture of this UserProject.  # noqa: E501
+        :rtype: str
+        """
+        return self._profile_picture
+
+    @profile_picture.setter
+    def profile_picture(self, profile_picture):
+        """Sets the profile_picture of this UserProject.
+
+
+        :param profile_picture: The profile_picture of this UserProject.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                profile_picture is not None and len(profile_picture) < 1):
+            raise ValueError("Invalid value for `profile_picture`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._profile_picture = profile_picture
 
     @property
     def role(self):
         """Gets the role of this UserProject.  # noqa: E501
 
-        User's role in the project  # noqa: E501
 
         :return: The role of this UserProject.  # noqa: E501
         :rtype: int
@@ -82,78 +256,12 @@ class UserProject(object):
     def role(self, role):
         """Sets the role of this UserProject.
 
-        User's role in the project  # noqa: E501
 
         :param role: The role of this UserProject.  # noqa: E501
         :type: int
         """
 
         self._role = role
-
-    @property
-    def user(self):
-        """Gets the user of this UserProject.  # noqa: E501
-
-
-        :return: The user of this UserProject.  # noqa: E501
-        :rtype: User
-        """
-        return self._user
-
-    @user.setter
-    def user(self, user):
-        """Sets the user of this UserProject.
-
-
-        :param user: The user of this UserProject.  # noqa: E501
-        :type: User
-        """
-
-        self._user = user
-
-    @property
-    def invitation(self):
-        """Gets the invitation of this UserProject.  # noqa: E501
-
-
-        :return: The invitation of this UserProject.  # noqa: E501
-        :rtype: ProjectInvitation
-        """
-        return self._invitation
-
-    @invitation.setter
-    def invitation(self, invitation):
-        """Sets the invitation of this UserProject.
-
-
-        :param invitation: The invitation of this UserProject.  # noqa: E501
-        :type: ProjectInvitation
-        """
-
-        self._invitation = invitation
-
-    @property
-    def project(self):
-        """Gets the project of this UserProject.  # noqa: E501
-
-
-        :return: The project of this UserProject.  # noqa: E501
-        :rtype: int
-        """
-        return self._project
-
-    @project.setter
-    def project(self, project):
-        """Sets the project of this UserProject.
-
-
-        :param project: The project of this UserProject.  # noqa: E501
-        :type: int
-        """
-        if self.local_vars_configuration.client_side_validation and project is None:  # noqa: E501
-            raise ValueError("Invalid value for `project`, must not be `None`")  # noqa: E501
-
-        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

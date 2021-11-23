@@ -216,7 +216,6 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**full_update_manage_group**](docs/CollaborationApi.md#full_update_manage_group) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update all fields of a group
 *CollaborationApi* | [**full_update_project**](docs/CollaborationApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | Update all fields of a project
 *CollaborationApi* | [**full_update_project_access_token**](docs/CollaborationApi.md#full_update_project_access_token) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update all fields of a token
-*CollaborationApi* | [**full_update_project_user**](docs/CollaborationApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update all fields of a project user
 *CollaborationApi* | [**get_classification**](docs/CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
@@ -241,7 +240,6 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_size**](docs/CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all ifc files in the project
 *CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 *CollaborationApi* | [**get_project_tree**](docs/CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
-*CollaborationApi* | [**get_project_user**](docs/CollaborationApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
 *CollaborationApi* | [**get_project_users**](docs/CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 *CollaborationApi* | [**get_projects**](docs/CollaborationApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 *CollaborationApi* | [**get_self_projects**](docs/CollaborationApi.md#get_self_projects) | **GET** /user/projects | List current user&#39;s projects
@@ -257,7 +255,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
-*CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user
+*CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
 *CollaborationApi* | [**update_self_user**](docs/CollaborationApi.md#update_self_user) | **PATCH** /user | Update info of the current user
 *IfcApi* | [**add_ifc_errors**](docs/IfcApi.md#add_ifc_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to IFC
 *IfcApi* | [**bulk_delete_ifc_classifications**](docs/IfcApi.md#bulk_delete_ifc_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
@@ -428,7 +426,6 @@ Class | Method | HTTP request | Description
  - [Feature](docs/Feature.md)
  - [Folder](docs/Folder.md)
  - [FolderGroupPermission](docs/FolderGroupPermission.md)
- - [FosUserId](docs/FosUserId.md)
  - [FullTopic](docs/FullTopic.md)
  - [GroupFolder](docs/GroupFolder.md)
  - [Ifc](docs/Ifc.md)
@@ -507,6 +504,7 @@ Class | Method | HTTP request | Description
  - [User](docs/User.md)
  - [UserCloudUpdate](docs/UserCloudUpdate.md)
  - [UserProject](docs/UserProject.md)
+ - [UserProjectId](docs/UserProjectId.md)
  - [UserProjectUpdate](docs/UserProjectUpdate.md)
  - [ViewSetupHints](docs/ViewSetupHints.md)
  - [Viewpoint](docs/Viewpoint.md)

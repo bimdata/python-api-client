@@ -36,7 +36,6 @@ Method | HTTP request | Description
 [**full_update_manage_group**](CollaborationApi.md#full_update_manage_group) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update all fields of a group
 [**full_update_project**](CollaborationApi.md#full_update_project) | **PUT** /cloud/{cloud_pk}/project/{id} | Update all fields of a project
 [**full_update_project_access_token**](CollaborationApi.md#full_update_project_access_token) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update all fields of a token
-[**full_update_project_user**](CollaborationApi.md#full_update_project_user) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update all fields of a project user
 [**get_classification**](CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 [**get_classifications**](CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 [**get_cloud**](CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
@@ -61,7 +60,6 @@ Method | HTTP request | Description
 [**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all ifc files in the project
 [**get_project_sub_tree**](CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 [**get_project_tree**](CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
-[**get_project_user**](CollaborationApi.md#get_project_user) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Retrieve a user in a project
 [**get_project_users**](CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
 [**get_projects**](CollaborationApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 [**get_self_projects**](CollaborationApi.md#get_self_projects) | **GET** /user/projects | List current user&#39;s projects
@@ -77,7 +75,7 @@ Method | HTTP request | Description
 [**update_manage_group**](CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 [**update_project**](CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 [**update_project_access_token**](CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
-[**update_project_user**](CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Update some fields of a project user
+[**update_project_user**](CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
 [**update_self_user**](CollaborationApi.md#update_self_user) | **PATCH** /user | Update info of the current user
 
 
@@ -86,7 +84,7 @@ Method | HTTP request | Description
 
 Add a user to a group
 
-Add a user to a group. Must be an admin of the project Required scopes: org:manage
+Add a userproject to a group. Must be an admin of the project Required scopes: org:manage
 
 ### Example
 
@@ -137,7 +135,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.FosUserId() # FosUserId | 
+data = bimdata_api_client.UserProjectId() # UserProjectId | 
 
     try:
         # Add a user to a group
@@ -194,7 +192,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.FosUserId() # FosUserId | 
+data = bimdata_api_client.UserProjectId() # UserProjectId | 
 
     try:
         # Add a user to a group
@@ -251,7 +249,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.FosUserId() # FosUserId | 
+data = bimdata_api_client.UserProjectId() # UserProjectId | 
 
     try:
         # Add a user to a group
@@ -268,7 +266,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **group_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**FosUserId**](FosUserId.md)|  | 
+ **data** | [**UserProjectId**](UserProjectId.md)|  | 
 
 ### Return type
 
@@ -3831,7 +3829,7 @@ void (empty response body)
 
 Delete a user from a group
 
-Delete a user from a group. Must be an admin of the project Required scopes: org:manage
+Delete a userproject from a group. Id is the userproject_id. Must be an admin of the project. Required scopes: org:manage
 
 ### Example
 
@@ -3881,7 +3879,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -3937,7 +3935,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -3993,7 +3991,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 group_pk = 'group_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -4009,7 +4007,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **group_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this fos user. | 
+ **id** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -4708,7 +4706,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -4763,7 +4761,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -4818,7 +4816,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
@@ -4833,7 +4831,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this fos user. | 
+ **id** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -6785,220 +6783,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ProjectAccessToken**](ProjectAccessToken.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **full_update_project_user**
-> User full_update_project_user(cloud_pk, id, project_pk, data)
-
-Update all fields of a project user
-
-Change the user role in the cloud Required scopes: cloud:manage
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
-
-    try:
-        # Update all fields of a project user
-        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
-
-    try:
-        # Update all fields of a project user
-        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
-
-    try:
-        # Update all fields of a project user
-        api_response = api_instance.full_update_project_user(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->full_update_project_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this fos user. | 
- **project_pk** | **str**|  | 
- **data** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
-
-### Return type
-
-[**User**](User.md)
 
 ### Authorization
 
@@ -11973,218 +11757,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_project_user**
-> User get_project_user(cloud_pk, id, project_pk)
-
-Retrieve a user in a project
-
-Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a user in a project
-        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a user in a project
-        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.CollaborationApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a user in a project
-        api_response = api_instance.get_project_user(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling CollaborationApi->get_project_user: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this fos user. | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**User**](User.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **get_project_users**
-> list[User] get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
+> list[UserProject] get_project_users(cloud_pk, project_pk, email=email, email__contains=email__contains, email__startswith=email__startswith, email__endswith=email__endswith)
 
 Retrieve all users in a project, or a list with a filter by email
 
@@ -12382,7 +11956,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**list[User]**](User.md)
+[**list[UserProject]**](UserProject.md)
 
 ### Authorization
 
@@ -15330,9 +14904,9 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_project_user**
-> User update_project_user(cloud_pk, id, project_pk, data)
+> UserProject update_project_user(cloud_pk, id, project_pk, data)
 
-Update some fields of a project user
+Change the user role in the cloud
 
 Change the user role in the cloud Required scopes: cloud:manage
 
@@ -15383,12 +14957,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
     try:
-        # Update some fields of a project user
+        # Change the user role in the cloud
         api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
@@ -15440,12 +15014,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
     try:
-        # Update some fields of a project user
+        # Change the user role in the cloud
         api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
@@ -15497,12 +15071,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CollaborationApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this fos user.
+id = 'id_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate | 
 
     try:
-        # Update some fields of a project user
+        # Change the user role in the cloud
         api_response = api_instance.update_project_user(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
@@ -15514,13 +15088,13 @@ data = bimdata_api_client.UserProjectUpdate() # UserProjectUpdate |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this fos user. | 
+ **id** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**UserProjectUpdate**](UserProjectUpdate.md)|  | 
 
 ### Return type
 
-[**User**](User.md)
+[**UserProject**](UserProject.md)
 
 ### Authorization
 

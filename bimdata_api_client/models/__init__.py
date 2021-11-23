@@ -36,7 +36,6 @@ from bimdata_api_client.models.extensions import Extensions
 from bimdata_api_client.models.feature import Feature
 from bimdata_api_client.models.folder import Folder
 from bimdata_api_client.models.folder_group_permission import FolderGroupPermission
-from bimdata_api_client.models.fos_user_id import FosUserId
 from bimdata_api_client.models.full_topic import FullTopic
 from bimdata_api_client.models.group_folder import GroupFolder
 from bimdata_api_client.models.ifc import Ifc
@@ -115,6 +114,7 @@ from bimdata_api_client.models.unit import Unit
 from bimdata_api_client.models.user import User
 from bimdata_api_client.models.user_cloud_update import UserCloudUpdate
 from bimdata_api_client.models.user_project import UserProject
+from bimdata_api_client.models.user_project_id import UserProjectId
 from bimdata_api_client.models.user_project_update import UserProjectUpdate
 from bimdata_api_client.models.view_setup_hints import ViewSetupHints
 from bimdata_api_client.models.viewpoint import Viewpoint

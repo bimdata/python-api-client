@@ -3,8 +3,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**is_unsupervised** | **bool** |  | [optional] [readonly] 
 **managed_by** | **str** |  | 
-**role** | **str** |  | 
+**role** | **int** |  | 
 **total_size** | **int** |  | [optional] [readonly] 
 **smart_data_size** | **int** |  | [optional] [readonly] 
 **total_size_available** | **int** |  | [optional] [readonly] 

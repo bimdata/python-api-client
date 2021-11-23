@@ -253,13 +253,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_project_user(self):
-        """Test case for full_update_project_user
-
-        Update all fields of a project user  # noqa: E501
-        """
-        pass
-
     def test_get_classification(self):
         """Test case for get_classification
 
@@ -428,13 +421,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_get_project_user(self):
-        """Test case for get_project_user
-
-        Retrieve a user in a project  # noqa: E501
-        """
-        pass
-
     def test_get_project_users(self):
         """Test case for get_project_users
 
@@ -543,7 +529,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_update_project_user(self):
         """Test case for update_project_user
 
-        Update some fields of a project user  # noqa: E501
+        Change the user role in the cloud  # noqa: E501
         """
         pass
 

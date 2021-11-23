@@ -34,8 +34,9 @@ class Size(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'is_unsupervised': 'bool',
         'managed_by': 'str',
-        'role': 'str',
+        'role': 'int',
         'total_size': 'int',
         'smart_data_size': 'int',
         'total_size_available': 'int',
@@ -47,6 +48,7 @@ class Size(object):
     }
 
     attribute_map = {
+        'is_unsupervised': 'is_unsupervised',
         'managed_by': 'managed_by',
         'role': 'role',
         'total_size': 'total_size',
@@ -59,12 +61,13 @@ class Size(object):
         'remaining_smart_data_size_percent': 'remaining_smart_data_size_percent'
     }
 
-    def __init__(self, managed_by=None, role=None, total_size=None, smart_data_size=None, total_size_available=None, smart_data_size_available=None, remaining_total_size=None, remaining_smart_data_size=None, remaining_total_size_percent=None, remaining_smart_data_size_percent=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, is_unsupervised=None, managed_by=None, role=None, total_size=None, smart_data_size=None, total_size_available=None, smart_data_size_available=None, remaining_total_size=None, remaining_smart_data_size=None, remaining_total_size_percent=None, remaining_smart_data_size_percent=None, local_vars_configuration=None):  # noqa: E501
         """Size - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._is_unsupervised = None
         self._managed_by = None
         self._role = None
         self._total_size = None
@@ -77,6 +80,8 @@ class Size(object):
         self._remaining_smart_data_size_percent = None
         self.discriminator = None
 
+        if is_unsupervised is not None:
+            self.is_unsupervised = is_unsupervised
         self.managed_by = managed_by
         self.role = role
         self.total_size = total_size
@@ -87,6 +92,27 @@ class Size(object):
         self.remaining_smart_data_size = remaining_smart_data_size
         self.remaining_total_size_percent = remaining_total_size_percent
         self.remaining_smart_data_size_percent = remaining_smart_data_size_percent
+
+    @property
+    def is_unsupervised(self):
+        """Gets the is_unsupervised of this Size.  # noqa: E501
+
+
+        :return: The is_unsupervised of this Size.  # noqa: E501
+        :rtype: bool
+        """
+        return self._is_unsupervised
+
+    @is_unsupervised.setter
+    def is_unsupervised(self, is_unsupervised):
+        """Sets the is_unsupervised of this Size.
+
+
+        :param is_unsupervised: The is_unsupervised of this Size.  # noqa: E501
+        :type: bool
+        """
+
+        self._is_unsupervised = is_unsupervised
 
     @property
     def managed_by(self):
@@ -123,7 +149,7 @@ class Size(object):
 
 
         :return: The role of this Size.  # noqa: E501
-        :rtype: str
+        :rtype: int
         """
         return self._role
 
@@ -133,16 +159,10 @@ class Size(object):
 
 
         :param role: The role of this Size.  # noqa: E501
-        :type: str
+        :type: int
         """
         if self.local_vars_configuration.client_side_validation and role is None:  # noqa: E501
             raise ValueError("Invalid value for `role`, must not be `None`")  # noqa: E501
-        allowed_values = ["A", "D"]  # noqa: E501
-        if self.local_vars_configuration.client_side_validation and role not in allowed_values:  # noqa: E501
-            raise ValueError(
-                "Invalid value for `role` ({0}), must be one of {1}"  # noqa: E501
-                .format(role, allowed_values)
-            )
 
         self._role = role
 

@@ -40,7 +40,7 @@ class CollaborationApi(object):
     def add_group_member(self, cloud_pk, group_pk, project_pk, data, **kwargs):  # noqa: E501
         """Add a user to a group  # noqa: E501
 
-        Add a user to a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
+        Add a userproject to a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_group_member(cloud_pk, group_pk, project_pk, data, async_req=True)
@@ -50,7 +50,7 @@ class CollaborationApi(object):
         :param str cloud_pk: (required)
         :param str group_pk: (required)
         :param str project_pk: (required)
-        :param FosUserId data: (required)
+        :param UserProjectId data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -68,7 +68,7 @@ class CollaborationApi(object):
     def add_group_member_with_http_info(self, cloud_pk, group_pk, project_pk, data, **kwargs):  # noqa: E501
         """Add a user to a group  # noqa: E501
 
-        Add a user to a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
+        Add a userproject to a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.add_group_member_with_http_info(cloud_pk, group_pk, project_pk, data, async_req=True)
@@ -78,7 +78,7 @@ class CollaborationApi(object):
         :param str cloud_pk: (required)
         :param str group_pk: (required)
         :param str project_pk: (required)
-        :param FosUserId data: (required)
+        :param UserProjectId data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2386,7 +2386,7 @@ class CollaborationApi(object):
     def delete_group_member(self, cloud_pk, group_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a user from a group  # noqa: E501
 
-        Delete a user from a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
+        Delete a userproject from a group. Id is the userproject_id. Must be an admin of the project. Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_group_member(cloud_pk, group_pk, id, project_pk, async_req=True)
@@ -2395,7 +2395,7 @@ class CollaborationApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str group_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2414,7 +2414,7 @@ class CollaborationApi(object):
     def delete_group_member_with_http_info(self, cloud_pk, group_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a user from a group  # noqa: E501
 
-        Delete a user from a group. Must be an admin of the project Required scopes: org:manage  # noqa: E501
+        Delete a userproject from a group. Id is the userproject_id. Must be an admin of the project. Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_group_member_with_http_info(cloud_pk, group_pk, id, project_pk, async_req=True)
@@ -2423,7 +2423,7 @@ class CollaborationApi(object):
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str group_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -2906,7 +2906,7 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2933,7 +2933,7 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -4354,151 +4354,6 @@ class CollaborationApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ProjectAccessToken',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def full_update_project_user(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
-        """Update all fields of a project user  # noqa: E501
-
-        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_project_user(cloud_pk, id, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
-        :param str project_pk: (required)
-        :param UserProjectUpdate data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: User
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.full_update_project_user_with_http_info(cloud_pk, id, project_pk, data, **kwargs)  # noqa: E501
-
-    def full_update_project_user_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
-        """Update all fields of a project user  # noqa: E501
-
-        Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.full_update_project_user_with_http_info(cloud_pk, id, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
-        :param str project_pk: (required)
-        :param UserProjectUpdate data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(User, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method full_update_project_user" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `full_update_project_user`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `full_update_project_user`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'PUT',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='User',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -7467,138 +7322,6 @@ class CollaborationApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_project_user(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a user in a project  # noqa: E501
-
-        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_project_user(cloud_pk, id, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: User
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_project_user_with_http_info(cloud_pk, id, project_pk, **kwargs)  # noqa: E501
-
-    def get_project_user_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a user in a project  # noqa: E501
-
-        Each member of a project can see other members of the project Required scopes: cloud:read, bcf:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_project_user_with_http_info(cloud_pk, id, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(User, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_project_user" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_project_user`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `get_project_user`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_project_user`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/user/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='User',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def get_project_users(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all users in a project, or a list with a filter by email  # noqa: E501
 
@@ -7622,7 +7345,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: list[User]
+        :return: list[UserProject]
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7654,7 +7377,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(list[User], status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(list[UserProject], status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -7734,7 +7457,7 @@ class CollaborationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='list[User]',  # noqa: E501
+            response_type='list[UserProject]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -9608,7 +9331,7 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def update_project_user(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a project user  # noqa: E501
+        """Change the user role in the cloud  # noqa: E501
 
         Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -9618,7 +9341,7 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param UserProjectUpdate data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -9628,7 +9351,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: User
+        :return: UserProject
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9636,7 +9359,7 @@ class CollaborationApi(object):
         return self.update_project_user_with_http_info(cloud_pk, id, project_pk, data, **kwargs)  # noqa: E501
 
     def update_project_user_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a project user  # noqa: E501
+        """Change the user role in the cloud  # noqa: E501
 
         Change the user role in the cloud Required scopes: cloud:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -9646,7 +9369,7 @@ class CollaborationApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this fos user. (required)
+        :param str id: (required)
         :param str project_pk: (required)
         :param UserProjectUpdate data: (required)
         :param _return_http_data_only: response data without head status code
@@ -9658,7 +9381,7 @@ class CollaborationApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(User, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(UserProject, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -9744,7 +9467,7 @@ class CollaborationApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='User',  # noqa: E501
+            response_type='UserProject',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

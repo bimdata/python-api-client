@@ -43,25 +43,14 @@ class TestFolderGroupPermission(unittest.TestCase):
                     color = '0', 
                     members = [
                         bimdata_api_client.models.user_project.UserProject(
-                            role = 56, 
-                            user = bimdata_api_client.models.user.User(
-                                id = 56, 
-                                email = '0', 
-                                firstname = '0', 
-                                lastname = '0', 
-                                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                                cloud_role = 56, 
-                                project_role = 56, 
-                                provider = '0', 
-                                sub = '0', 
-                                profile_picture = '0', ), 
-                            invitation = bimdata_api_client.models.project_invitation.ProjectInvitation(
-                                id = 56, 
-                                email = '0', 
-                                redirect_uri = '0', 
-                                role = 56, ), 
-                            project = 56, )
+                            id = 56, 
+                            user_id = 56, 
+                            invitation_id = 56, 
+                            email = '0', 
+                            firstname = '0', 
+                            lastname = '0', 
+                            profile_picture = '0', 
+                            role = 56, )
                         ], ), 
                 permission = 56
             )
@@ -73,25 +62,14 @@ class TestFolderGroupPermission(unittest.TestCase):
                     color = '0', 
                     members = [
                         bimdata_api_client.models.user_project.UserProject(
-                            role = 56, 
-                            user = bimdata_api_client.models.user.User(
-                                id = 56, 
-                                email = '0', 
-                                firstname = '0', 
-                                lastname = '0', 
-                                created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                                updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
-                                cloud_role = 56, 
-                                project_role = 56, 
-                                provider = '0', 
-                                sub = '0', 
-                                profile_picture = '0', ), 
-                            invitation = bimdata_api_client.models.project_invitation.ProjectInvitation(
-                                id = 56, 
-                                email = '0', 
-                                redirect_uri = '0', 
-                                role = 56, ), 
-                            project = 56, )
+                            id = 56, 
+                            user_id = 56, 
+                            invitation_id = 56, 
+                            email = '0', 
+                            firstname = '0', 
+                            lastname = '0', 
+                            profile_picture = '0', 
+                            role = 56, )
                         ], ),
         )
 
