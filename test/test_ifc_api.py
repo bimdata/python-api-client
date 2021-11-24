@@ -330,101 +330,10 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_access_token(self):
-        """Test case for full_update_access_token
-
-        Update all fields of a token  # noqa: E501
-        """
-        pass
-
     def test_full_update_element(self):
         """Test case for full_update_element
 
         Update all fields of an element  # noqa: E501
-        """
-        pass
-
-    def test_full_update_element_property_set_property(self):
-        """Test case for full_update_element_property_set_property
-
-        Update a property from an element  # noqa: E501
-        """
-        pass
-
-    def test_full_update_ifc(self):
-        """Test case for full_update_ifc
-
-        Update all fields of a model  # noqa: E501
-        """
-        pass
-
-    def test_full_update_ifc_property(self):
-        """Test case for full_update_ifc_property
-
-        Update some fields of a Property  # noqa: E501
-        """
-        pass
-
-    def test_full_update_ifc_property_definition(self):
-        """Test case for full_update_ifc_property_definition
-
-        Update all fields of many PropertyDefinitions of a model  # noqa: E501
-        """
-        pass
-
-    def test_full_update_ifc_unit(self):
-        """Test case for full_update_ifc_unit
-
-        Update all fields of a Unit of a model  # noqa: E501
-        """
-        pass
-
-    def test_full_update_layer(self):
-        """Test case for full_update_layer
-
-        Update all fields of a layer  # noqa: E501
-        """
-        pass
-
-    def test_full_update_processor_handler(self):
-        """Test case for full_update_processor_handler
-
-        Update the status of a processor handler  # noqa: E501
-        """
-        pass
-
-    def test_full_update_property_set(self):
-        """Test case for full_update_property_set
-
-        Update all fields of a PropertySet  # noqa: E501
-        """
-        pass
-
-    def test_full_update_space(self):
-        """Test case for full_update_space
-
-        Update all fields of a space  # noqa: E501
-        """
-        pass
-
-    def test_full_update_system(self):
-        """Test case for full_update_system
-
-        Update all fields of a system  # noqa: E501
-        """
-        pass
-
-    def test_full_update_zone(self):
-        """Test case for full_update_zone
-
-        Update all fields of a zone  # noqa: E501
-        """
-        pass
-
-    def test_full_update_zone_space(self):
-        """Test case for full_update_zone_space
-
-        Update all fields of a space  # noqa: E501
         """
         pass
 
@@ -533,31 +442,10 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_get_ifc_bvh(self):
-        """Test case for get_ifc_bvh
-
-        Get svg file  # noqa: E501
-        """
-        pass
-
     def test_get_ifc_classifications(self):
         """Test case for get_ifc_classifications
 
         Retrieve all classifications in a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_gltf(self):
-        """Test case for get_ifc_gltf
-
-        Get gltf file  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_map(self):
-        """Test case for get_ifc_map
-
-        Get bvh file  # noqa: E501
         """
         pass
 
@@ -600,20 +488,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_ifc_property_definitions
 
         Retrieve all PropertyDefinitions of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_structure(self):
-        """Test case for get_ifc_structure
-
-        Get structure file  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_systems(self):
-        """Test case for get_ifc_systems
-
-        Get systems file  # noqa: E501
         """
         pass
 

@@ -190,69 +190,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_classification(self):
-        """Test case for full_update_classification
-
-        Update all fields of a classification  # noqa: E501
-        """
-        pass
-
-    def test_full_update_cloud(self):
-        """Test case for full_update_cloud
-
-        Update all fields of a cloud  # noqa: E501
-        """
-        pass
-
-    def test_full_update_cloud_user(self):
-        """Test case for full_update_cloud_user
-
-        Update all fields of a cloud user  # noqa: E501
-        """
-        pass
-
-    def test_full_update_document(self):
-        """Test case for full_update_document
-
-        Update all fields of the document  # noqa: E501
-        """
-        pass
-
-    def test_full_update_folder(self):
-        """Test case for full_update_folder
-
-        Update all fields of a folder  # noqa: E501
-        """
-        pass
-
-    def test_full_update_group_folder(self):
-        """Test case for full_update_group_folder
-
-        Update the permission of a group on a folder  # noqa: E501
-        """
-        pass
-
-    def test_full_update_manage_group(self):
-        """Test case for full_update_manage_group
-
-        Update all fields of a group  # noqa: E501
-        """
-        pass
-
-    def test_full_update_project(self):
-        """Test case for full_update_project
-
-        Update all fields of a project  # noqa: E501
-        """
-        pass
-
-    def test_full_update_project_access_token(self):
-        """Test case for full_update_project_access_token
-
-        Update all fields of a token  # noqa: E501
-        """
-        pass
-
     def test_get_classification(self):
         """Test case for get_classification
 
@@ -537,13 +474,6 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_project_user
 
         Change the user role in the cloud  # noqa: E501
-        """
-        pass
-
-    def test_update_self_user(self):
-        """Test case for update_self_user
-
-        Update info of the current user  # noqa: E501
         """
         pass
 

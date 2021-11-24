@@ -113,48 +113,6 @@ class TestCheckerApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_checker(self):
-        """Test case for full_update_checker
-
-        Update all fields of a checker of a model  # noqa: E501
-        """
-        pass
-
-    def test_full_update_checker_result(self):
-        """Test case for full_update_checker_result
-
-        Update all fields of a CheckerResult  # noqa: E501
-        """
-        pass
-
-    def test_full_update_checkplan(self):
-        """Test case for full_update_checkplan
-
-        Update all fields of a Checkplan  # noqa: E501
-        """
-        pass
-
-    def test_full_update_rule(self):
-        """Test case for full_update_rule
-
-        Update all fields of a Rule  # noqa: E501
-        """
-        pass
-
-    def test_full_update_rule_component(self):
-        """Test case for full_update_rule_component
-
-        Update all fields of a RuleComponent  # noqa: E501
-        """
-        pass
-
-    def test_full_update_ruleset(self):
-        """Test case for full_update_ruleset
-
-        Update all fields of a Ruleset  # noqa: E501
-        """
-        pass
-
     def test_get_checker(self):
         """Test case for get_checker
 

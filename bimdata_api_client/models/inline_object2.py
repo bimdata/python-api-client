@@ -35,66 +35,36 @@ class InlineObject2(object):
     """
     openapi_types = {
         'id': 'int',
-        'parent_id': 'int',
-        'type': 'str',
         'name': 'str',
-        'created_at': 'datetime',
-        'updated_at': 'datetime',
-        'created_by': 'User',
-        'groups_permissions': 'list[FolderGroupPermission]',
-        'default_permission': 'int',
-        'user_permission': 'int'
+        'color': 'str',
+        'members': 'list[UserProject]'
     }
 
     attribute_map = {
         'id': 'id',
-        'parent_id': 'parent_id',
-        'type': 'type',
         'name': 'name',
-        'created_at': 'created_at',
-        'updated_at': 'updated_at',
-        'created_by': 'created_by',
-        'groups_permissions': 'groups_permissions',
-        'default_permission': 'default_permission',
-        'user_permission': 'user_permission'
+        'color': 'color',
+        'members': 'members'
     }
 
-    def __init__(self, id=None, parent_id=None, type=None, name=None, created_at=None, updated_at=None, created_by=None, groups_permissions=None, default_permission=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, color=None, members=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject2 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
-        self._parent_id = None
-        self._type = None
         self._name = None
-        self._created_at = None
-        self._updated_at = None
-        self._created_by = None
-        self._groups_permissions = None
-        self._default_permission = None
-        self._user_permission = None
+        self._color = None
+        self._members = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        self.parent_id = parent_id
-        if type is not None:
-            self.type = type
         self.name = name
-        if created_at is not None:
-            self.created_at = created_at
-        if updated_at is not None:
-            self.updated_at = updated_at
-        if created_by is not None:
-            self.created_by = created_by
-        if groups_permissions is not None:
-            self.groups_permissions = groups_permissions
-        if default_permission is not None:
-            self.default_permission = default_permission
-        if user_permission is not None:
-            self.user_permission = user_permission
+        self.color = color
+        if members is not None:
+            self.members = members
 
     @property
     def id(self):
@@ -118,54 +88,10 @@ class InlineObject2(object):
         self._id = id
 
     @property
-    def parent_id(self):
-        """Gets the parent_id of this InlineObject2.  # noqa: E501
-
-
-        :return: The parent_id of this InlineObject2.  # noqa: E501
-        :rtype: int
-        """
-        return self._parent_id
-
-    @parent_id.setter
-    def parent_id(self, parent_id):
-        """Sets the parent_id of this InlineObject2.
-
-
-        :param parent_id: The parent_id of this InlineObject2.  # noqa: E501
-        :type: int
-        """
-
-        self._parent_id = parent_id
-
-    @property
-    def type(self):
-        """Gets the type of this InlineObject2.  # noqa: E501
-
-        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
-
-        :return: The type of this InlineObject2.  # noqa: E501
-        :rtype: str
-        """
-        return self._type
-
-    @type.setter
-    def type(self, type):
-        """Sets the type of this InlineObject2.
-
-        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
-
-        :param type: The type of this InlineObject2.  # noqa: E501
-        :type: str
-        """
-
-        self._type = type
-
-    @property
     def name(self):
         """Gets the name of this InlineObject2.  # noqa: E501
 
-        Name of the folder  # noqa: E501
+        Full name of the group  # noqa: E501
 
         :return: The name of this InlineObject2.  # noqa: E501
         :rtype: str
@@ -176,7 +102,7 @@ class InlineObject2(object):
     def name(self, name):
         """Sets the name of this InlineObject2.
 
-        Name of the folder  # noqa: E501
+        Full name of the group  # noqa: E501
 
         :param name: The name of this InlineObject2.  # noqa: E501
         :type: str
@@ -184,8 +110,8 @@ class InlineObject2(object):
         if self.local_vars_configuration.client_side_validation and name is None:  # noqa: E501
             raise ValueError("Invalid value for `name`, must not be `None`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
-                name is not None and len(name) > 255):
-            raise ValueError("Invalid value for `name`, length must be less than or equal to `255`")  # noqa: E501
+                name is not None and len(name) > 512):
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `512`")  # noqa: E501
         if (self.local_vars_configuration.client_side_validation and
                 name is not None and len(name) < 1):
             raise ValueError("Invalid value for `name`, length must be greater than or equal to `1`")  # noqa: E501
@@ -193,138 +119,49 @@ class InlineObject2(object):
         self._name = name
 
     @property
-    def created_at(self):
-        """Gets the created_at of this InlineObject2.  # noqa: E501
+    def color(self):
+        """Gets the color of this InlineObject2.  # noqa: E501
 
-        Creation date  # noqa: E501
 
-        :return: The created_at of this InlineObject2.  # noqa: E501
-        :rtype: datetime
+        :return: The color of this InlineObject2.  # noqa: E501
+        :rtype: str
         """
-        return self._created_at
+        return self._color
 
-    @created_at.setter
-    def created_at(self, created_at):
-        """Sets the created_at of this InlineObject2.
+    @color.setter
+    def color(self, color):
+        """Sets the color of this InlineObject2.
 
-        Creation date  # noqa: E501
 
-        :param created_at: The created_at of this InlineObject2.  # noqa: E501
-        :type: datetime
+        :param color: The color of this InlineObject2.  # noqa: E501
+        :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                color is not None and len(color) > 255):
+            raise ValueError("Invalid value for `color`, length must be less than or equal to `255`")  # noqa: E501
 
-        self._created_at = created_at
+        self._color = color
 
     @property
-    def updated_at(self):
-        """Gets the updated_at of this InlineObject2.  # noqa: E501
+    def members(self):
+        """Gets the members of this InlineObject2.  # noqa: E501
 
-        Date of the last update  # noqa: E501
 
-        :return: The updated_at of this InlineObject2.  # noqa: E501
-        :rtype: datetime
+        :return: The members of this InlineObject2.  # noqa: E501
+        :rtype: list[UserProject]
         """
-        return self._updated_at
+        return self._members
 
-    @updated_at.setter
-    def updated_at(self, updated_at):
-        """Sets the updated_at of this InlineObject2.
+    @members.setter
+    def members(self, members):
+        """Sets the members of this InlineObject2.
 
-        Date of the last update  # noqa: E501
 
-        :param updated_at: The updated_at of this InlineObject2.  # noqa: E501
-        :type: datetime
+        :param members: The members of this InlineObject2.  # noqa: E501
+        :type: list[UserProject]
         """
 
-        self._updated_at = updated_at
-
-    @property
-    def created_by(self):
-        """Gets the created_by of this InlineObject2.  # noqa: E501
-
-
-        :return: The created_by of this InlineObject2.  # noqa: E501
-        :rtype: User
-        """
-        return self._created_by
-
-    @created_by.setter
-    def created_by(self, created_by):
-        """Sets the created_by of this InlineObject2.
-
-
-        :param created_by: The created_by of this InlineObject2.  # noqa: E501
-        :type: User
-        """
-
-        self._created_by = created_by
-
-    @property
-    def groups_permissions(self):
-        """Gets the groups_permissions of this InlineObject2.  # noqa: E501
-
-
-        :return: The groups_permissions of this InlineObject2.  # noqa: E501
-        :rtype: list[FolderGroupPermission]
-        """
-        return self._groups_permissions
-
-    @groups_permissions.setter
-    def groups_permissions(self, groups_permissions):
-        """Sets the groups_permissions of this InlineObject2.
-
-
-        :param groups_permissions: The groups_permissions of this InlineObject2.  # noqa: E501
-        :type: list[FolderGroupPermission]
-        """
-
-        self._groups_permissions = groups_permissions
-
-    @property
-    def default_permission(self):
-        """Gets the default_permission of this InlineObject2.  # noqa: E501
-
-        Permission for a Folder  # noqa: E501
-
-        :return: The default_permission of this InlineObject2.  # noqa: E501
-        :rtype: int
-        """
-        return self._default_permission
-
-    @default_permission.setter
-    def default_permission(self, default_permission):
-        """Sets the default_permission of this InlineObject2.
-
-        Permission for a Folder  # noqa: E501
-
-        :param default_permission: The default_permission of this InlineObject2.  # noqa: E501
-        :type: int
-        """
-
-        self._default_permission = default_permission
-
-    @property
-    def user_permission(self):
-        """Gets the user_permission of this InlineObject2.  # noqa: E501
-
-        Aggregate of group user permissions and folder default permission  # noqa: E501
-
-        :return: The user_permission of this InlineObject2.  # noqa: E501
-        :rtype: int
-        """
-        return self._user_permission
-
-    @user_permission.setter
-    def user_permission(self, user_permission):
-        """Sets the user_permission of this InlineObject2.
-
-        Aggregate of group user permissions and folder default permission  # noqa: E501
-
-        :param user_permission: The user_permission of this InlineObject2.  # noqa: E501
-        :type: int
-        """
-
-        self._user_permission = user_permission
+        self._members = members
 
     def to_dict(self):
         """Returns the model properties as a dict"""

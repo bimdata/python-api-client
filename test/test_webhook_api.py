@@ -43,13 +43,6 @@ class TestWebhookApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_web_hook(self):
-        """Test case for full_update_web_hook
-
-        Update all field of a webhook  # noqa: E501
-        """
-        pass
-
     def test_get_web_hook(self):
         """Test case for get_web_hook
 
