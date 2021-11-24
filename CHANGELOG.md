@@ -2,6 +2,41 @@
 
 <!--next-version-placeholder-->
 
+## v5.15.0 (2021-11-24)
+### Feature
+* Remove deprecated and put (#450)
+
+* remove deprecated route and PUT route without BCF routes
+
+* fix some tests
+
+* fix last tests and restore project tree route
+
+* restore BCF tests change
+
+* rename fullUpdate operation ([`5769df5`](https://github.com/bimdata/python-api-client/commit/5769df5195f22e65696b4c46ed1a8ee925634526))
+* Add leave project route (#449)
+
+* Add leave project route
+
+* fix roles ([`4d52c51`](https://github.com/bimdata/python-api-client/commit/4d52c51628bf3e977074dfec3d8af51615a13c2d))
+
+### Fix
+* Fix semantic release ([`aca3560`](https://github.com/bimdata/python-api-client/commit/aca3560c5d69a91d32be6992c0d8aea1153110b4))
+* Fix serializer user project (#448)
+
+Breaking Change:
+ -  key to  for GroupUser create view
+ - Route pk for userProject views is now UserProject pk and not FosUser pk
+
+Some other change:
+- fix serializer of userProject for swagger and libs
+- add missing invitation user project from project and group
+- fix some test ([`8b5446a`](https://github.com/bimdata/python-api-client/commit/8b5446a58252f767665f6cd3fff59af93baddfbd))
+* Add invitation key in UserProject ([`30a8fb5`](https://github.com/bimdata/python-api-client/commit/30a8fb5ad88a6aed47de4bcb69a34cd37702e5ff))
+* Get cloud size operation id in openapi ([`d508862`](https://github.com/bimdata/python-api-client/commit/d5088627492eec9d1ea02a8915cfb1d7ed4ce09c))
+* Fix list/create methods openAPI ([`7519d93`](https://github.com/bimdata/python-api-client/commit/7519d931205caffc57f964e92e0547714d916304))
+
 ## v5.14.0 (2021-09-13)
 ### Feature
 * Serialize user-permissions on documents ([`8597421`](https://github.com/bimdata/python-api-client/commit/859742176f6e0827c170dd8d30c95c254d502fcc))
