@@ -24,3 +24,4 @@
 
 tox.ini
 setup.py
+setup.cfg
