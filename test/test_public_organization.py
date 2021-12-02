@@ -37,6 +37,7 @@ class TestPublicOrganization(unittest.TestCase):
         # model = bimdata_api_client.models.public_organization.PublicOrganization()  # noqa: E501
         if include_optional :
             return PublicOrganization(
+                id = 56, 
                 name = '0', 
                 logo = '0'
             )

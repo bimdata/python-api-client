@@ -34,27 +34,53 @@ class PublicOrganization(object):
                             and the value is json key in definition.
     """
     openapi_types = {
+        'id': 'int',
         'name': 'str',
         'logo': 'str'
     }
 
     attribute_map = {
+        'id': 'id',
         'name': 'name',
         'logo': 'logo'
     }
 
-    def __init__(self, name=None, logo=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, logo=None, local_vars_configuration=None):  # noqa: E501
         """PublicOrganization - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
         self._name = None
         self._logo = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         self.name = name
         self.logo = logo
+
+    @property
+    def id(self):
+        """Gets the id of this PublicOrganization.  # noqa: E501
+
+
+        :return: The id of this PublicOrganization.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this PublicOrganization.
+
+
+        :param id: The id of this PublicOrganization.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def name(self):

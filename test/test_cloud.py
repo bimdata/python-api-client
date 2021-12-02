@@ -84,6 +84,7 @@ class TestCloud(unittest.TestCase):
                                 order = 56, )
                             ], 
                         organization = bimdata_api_client.models.public_organization.PublicOrganization(
+                            id = 56, 
                             name = '0', 
                             logo = '0', ), )
                     ], 
