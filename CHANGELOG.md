@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v5.15.1 (2021-12-02)
+### Fix
+* Add organization serializer in App and MPApp serializers (#452)
+
+* add organization serializer in App and MPApp serializers
+
+* fix test and add select related
+
+* use Public Organization Serializer ([`b1f0958`](https://github.com/bimdata/python-api-client/commit/b1f0958e511655ca19ddbf52ab35fbb1d1fd1fc2))
+
 ## v5.15.0 (2021-11-24)
 ### Feature
 * Remove deprecated and put (#450)
