@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.15.2 (2021-12-02)
+### Fix
+* Add id to Public Organization Serializer ([`5ac3574`](https://github.com/bimdata/python-api-client/commit/5ac357430084e206b40537112334d8de4075f805))
+
 ## v5.15.1 (2021-12-02)
 ### Fix
 * Add organization serializer in App and MPApp serializers (#452)
