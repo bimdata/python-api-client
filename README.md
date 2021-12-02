@@ -435,6 +435,7 @@ Class | Method | HTTP request | Description
  - [ProjectWithChildren](docs/ProjectWithChildren.md)
  - [PropertyDefinition](docs/PropertyDefinition.md)
  - [PropertySet](docs/PropertySet.md)
+ - [PublicOrganization](docs/PublicOrganization.md)
  - [RawClassification](docs/RawClassification.md)
  - [RawDefinition](docs/RawDefinition.md)
  - [RawElement](docs/RawElement.md)

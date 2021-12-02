@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **tags** | **list[str]** |  | [optional] 
 **logo** | **str** |  | [optional] [readonly] 
 **images** | [**list[MarketplaceAppImage]**](MarketplaceAppImage.md) |  | [optional] [readonly] 
-**organization_id** | **str** |  | [optional] [readonly] 
+**organization** | [**PublicOrganization**](PublicOrganization.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

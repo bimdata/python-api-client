@@ -87,7 +87,9 @@ class TestProject(unittest.TestCase):
                                     image = '0', 
                                     order = 56, )
                                 ], 
-                            organization_id = '0', )
+                            organization = bimdata_api_client.models.public_organization.PublicOrganization(
+                                name = '0', 
+                                logo = '0', ), )
                         ], 
                     organization = bimdata_api_client.models.organization.Organization(
                         id = 56, 

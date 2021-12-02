@@ -49,7 +49,7 @@ class MarketplaceApp(object):
         'tags': 'list[str]',
         'logo': 'str',
         'images': 'list[MarketplaceAppImage]',
-        'organization_id': 'str'
+        'organization': 'PublicOrganization'
     }
 
     attribute_map = {
@@ -68,10 +68,10 @@ class MarketplaceApp(object):
         'tags': 'tags',
         'logo': 'logo',
         'images': 'images',
-        'organization_id': 'organization_id'
+        'organization': 'organization'
     }
 
-    def __init__(self, id=None, name=None, short_description=None, long_description=None, activation_webhook_url=None, post_activation_redirect_uri=None, viewer_plugins_urls=None, webhook_secret=None, creator=None, scopes=None, settings_url=None, is_public=None, tags=None, logo=None, images=None, organization_id=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, short_description=None, long_description=None, activation_webhook_url=None, post_activation_redirect_uri=None, viewer_plugins_urls=None, webhook_secret=None, creator=None, scopes=None, settings_url=None, is_public=None, tags=None, logo=None, images=None, organization=None, local_vars_configuration=None):  # noqa: E501
         """MarketplaceApp - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -92,7 +92,7 @@ class MarketplaceApp(object):
         self._tags = None
         self._logo = None
         self._images = None
-        self._organization_id = None
+        self._organization = None
         self.discriminator = None
 
         if id is not None:
@@ -117,8 +117,8 @@ class MarketplaceApp(object):
         self.logo = logo
         if images is not None:
             self.images = images
-        if organization_id is not None:
-            self.organization_id = organization_id
+        if organization is not None:
+            self.organization = organization
 
     @property
     def id(self):
@@ -471,25 +471,25 @@ class MarketplaceApp(object):
         self._images = images
 
     @property
-    def organization_id(self):
-        """Gets the organization_id of this MarketplaceApp.  # noqa: E501
+    def organization(self):
+        """Gets the organization of this MarketplaceApp.  # noqa: E501
 
 
-        :return: The organization_id of this MarketplaceApp.  # noqa: E501
-        :rtype: str
+        :return: The organization of this MarketplaceApp.  # noqa: E501
+        :rtype: PublicOrganization
         """
-        return self._organization_id
+        return self._organization
 
-    @organization_id.setter
-    def organization_id(self, organization_id):
-        """Sets the organization_id of this MarketplaceApp.
+    @organization.setter
+    def organization(self, organization):
+        """Sets the organization of this MarketplaceApp.
 
 
-        :param organization_id: The organization_id of this MarketplaceApp.  # noqa: E501
-        :type: str
+        :param organization: The organization of this MarketplaceApp.  # noqa: E501
+        :type: PublicOrganization
         """
 
-        self._organization_id = organization_id
+        self._organization = organization
 
     def to_dict(self):
         """Returns the model properties as a dict"""

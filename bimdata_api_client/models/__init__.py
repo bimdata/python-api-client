@@ -79,6 +79,7 @@ from bimdata_api_client.models.project_size import ProjectSize
 from bimdata_api_client.models.project_with_children import ProjectWithChildren
 from bimdata_api_client.models.property_definition import PropertyDefinition
 from bimdata_api_client.models.property_set import PropertySet
+from bimdata_api_client.models.public_organization import PublicOrganization
 from bimdata_api_client.models.raw_classification import RawClassification
 from bimdata_api_client.models.raw_definition import RawDefinition
 from bimdata_api_client.models.raw_element import RawElement
