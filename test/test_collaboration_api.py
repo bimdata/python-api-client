@@ -29,6 +29,13 @@ class TestCollaborationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_accept_validation(self):
+        """Test case for accept_validation
+
+        Accept a validation  # noqa: E501
+        """
+        pass
+
     def test_add_group_member(self):
         """Test case for add_group_member
 
@@ -54,6 +61,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for check_access
 
         Check app access from cloud  # noqa: E501
+        """
+        pass
+
+    def test_close_visa(self):
+        """Test case for close_visa
+
+        Close a visa of a document  # noqa: E501
         """
         pass
 
@@ -117,6 +131,27 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for create_project_access_token
 
         Create a token for this project  # noqa: E501
+        """
+        pass
+
+    def test_create_validation(self):
+        """Test case for create_validation
+
+        Add a validation to a visa  # noqa: E501
+        """
+        pass
+
+    def test_create_visa(self):
+        """Test case for create_visa
+
+        Create a visa  # noqa: E501
+        """
+        pass
+
+    def test_create_visa_comment(self):
+        """Test case for create_visa_comment
+
+        Add a comment  # noqa: E501
         """
         pass
 
@@ -187,6 +222,34 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for delete_project_user
 
         Remove a user from a project  # noqa: E501
+        """
+        pass
+
+    def test_delete_validation(self):
+        """Test case for delete_validation
+
+        Remove a validation  # noqa: E501
+        """
+        pass
+
+    def test_delete_visa(self):
+        """Test case for delete_visa
+
+        Remove a visa  # noqa: E501
+        """
+        pass
+
+    def test_delete_visa_comment(self):
+        """Test case for delete_visa_comment
+
+        Remove a comment  # noqa: E501
+        """
+        pass
+
+    def test_deny_validation(self):
+        """Test case for deny_validation
+
+        Deny a validation  # noqa: E501
         """
         pass
 
@@ -267,6 +330,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_folder_project_users(self):
+        """Test case for get_folder_project_users
+
+        Retrieve all users in a project with the permission on the folder  # noqa: E501
+        """
+        pass
+
     def test_get_folders(self):
         """Test case for get_folders
 
@@ -323,6 +393,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_project_creator_visas(self):
+        """Test case for get_project_creator_visas
+
+        List visas created by user  # noqa: E501
+        """
+        pass
+
     def test_get_project_dms_tree(self):
         """Test case for get_project_dms_tree
 
@@ -365,6 +442,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_project_validator_visas(self):
+        """Test case for get_project_validator_visas
+
+        List visas where user is a validator  # noqa: E501
+        """
+        pass
+
     def test_get_projects(self):
         """Test case for get_projects
 
@@ -386,6 +470,48 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_validation(self):
+        """Test case for get_validation
+
+        Retrieve a validation to a visa  # noqa: E501
+        """
+        pass
+
+    def test_get_validations(self):
+        """Test case for get_validations
+
+        List all validations to a visa  # noqa: E501
+        """
+        pass
+
+    def test_get_visa(self):
+        """Test case for get_visa
+
+        Retrieve a visa of a document  # noqa: E501
+        """
+        pass
+
+    def test_get_visa_comment(self):
+        """Test case for get_visa_comment
+
+        Retrieve a comment  # noqa: E501
+        """
+        pass
+
+    def test_get_visa_comments(self):
+        """Test case for get_visa_comments
+
+        List all comment of a visa  # noqa: E501
+        """
+        pass
+
+    def test_get_visas(self):
+        """Test case for get_visas
+
+        List all visas of a document  # noqa: E501
+        """
+        pass
+
     def test_invite_cloud_user(self):
         """Test case for invite_cloud_user
 
@@ -404,6 +530,27 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for leave_project
 
         Leave the project  # noqa: E501
+        """
+        pass
+
+    def test_pause_visa(self):
+        """Test case for pause_visa
+
+        Pause a visa of a document  # noqa: E501
+        """
+        pass
+
+    def test_reset_validation(self):
+        """Test case for reset_validation
+
+        Reset a validation  # noqa: E501
+        """
+        pass
+
+    def test_resume_visa(self):
+        """Test case for resume_visa
+
+        Resume a visa of a document  # noqa: E501
         """
         pass
 
@@ -474,6 +621,27 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_project_user
 
         Change the user role in the cloud  # noqa: E501
+        """
+        pass
+
+    def test_update_validation(self):
+        """Test case for update_validation
+
+        Update the validator of validation  # noqa: E501
+        """
+        pass
+
+    def test_update_visa(self):
+        """Test case for update_visa
+
+        Update some fields of a visa  # noqa: E501
+        """
+        pass
+
+    def test_update_visa_comment(self):
+        """Test case for update_visa_comment
+
+        Update some fields of a comment  # noqa: E501
         """
         pass
 
