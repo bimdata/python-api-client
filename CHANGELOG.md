@@ -2,6 +2,44 @@
 
 <!--next-version-placeholder-->
 
+## v5.16.0 (2021-12-06)
+### Feature
+* Feature/visa (#451)
+
+* add invitation to userProject
+
+* PR changes requests
+
+* init visa
+
+* fix: boolean swagger bad import
+
+* fix: git conflict migrations, replace tests 'put'
+
+* add visa project view and change perform_created method on others views
+
+* fix: duplicate swagger operation id on getComment*
+
+* review PR and add permission mixin actions
+
+* fix tests
+
+* fix swagger
+
+* add nested mixin to self visa project view
+
+* fix creator filter view
+
+* print test
+
+* bypass schrodinger swagger pb
+
+* clean useless db requests in permissions
+
+* restore 404 ifc tests
+
+* add userproject to serializers context ([`a963e5f`](https://github.com/bimdata/python-api-client/commit/a963e5f94af8f3e4d098856adc9253a0cb473252))
+
 ## v5.15.2 (2021-12-02)
 ### Fix
 * Add id to Public Organization Serializer ([`5ac3574`](https://github.com/bimdata/python-api-client/commit/5ac357430084e206b40537112334d8de4075f805))
