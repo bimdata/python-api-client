@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v5.17.0 (2021-12-09)
+### Feature
+* Feature/link element document (#457)
+
+* add documents to elements
+
+* add test for filterred ifc and document list
+
+* typo
+
+* add some query optimizations ([`92814d1`](https://github.com/bimdata/python-api-client/commit/92814d193cd97e2feddbed979806ed702db7301d))
+
 ## v5.16.0 (2021-12-06)
 ### Feature
 * Feature/visa (#451)
