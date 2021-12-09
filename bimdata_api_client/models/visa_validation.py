@@ -155,7 +155,7 @@ class VisaValidation(object):
     def validator_id(self):
         """Gets the validator_id of this VisaValidation.  # noqa: E501
 
-        This is the userproject_id. This field is only used if the call is made from an App  # noqa: E501
+        This is the userproject_id  # noqa: E501
 
         :return: The validator_id of this VisaValidation.  # noqa: E501
         :rtype: int
@@ -166,7 +166,7 @@ class VisaValidation(object):
     def validator_id(self, validator_id):
         """Sets the validator_id of this VisaValidation.
 
-        This is the userproject_id. This field is only used if the call is made from an App  # noqa: E501
+        This is the userproject_id  # noqa: E501
 
         :param validator_id: The validator_id of this VisaValidation.  # noqa: E501
         :type: int

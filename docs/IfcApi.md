@@ -13,6 +13,7 @@ Method | HTTP request | Description
 [**bulk_full_update_elements**](IfcApi.md#bulk_full_update_elements) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (only changing fields may be defined)
 [**bulk_full_update_ifc_property**](IfcApi.md#bulk_full_update_ifc_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update some fields of many properties of a model
 [**bulk_remove_classifications_of_element**](IfcApi.md#bulk_remove_classifications_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/bulk_destroy | Remove many classifications from an element
+[**bulk_remove_documents_of_element**](IfcApi.md#bulk_remove_documents_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/bulk_destroy | Remove many documents from an element
 [**bulk_remove_elements_from_classification**](IfcApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{ifc_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
 [**bulk_update_elements**](IfcApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 [**bulk_update_ifc_property**](IfcApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
@@ -51,6 +52,7 @@ Method | HTTP request | Description
 [**get_access_token**](IfcApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
 [**get_access_tokens**](IfcApi.md#get_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Retrieve all tokens created for this model
 [**get_classifications_of_element**](IfcApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
+[**get_documents_of_element**](IfcApi.md#get_documents_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
 [**get_element**](IfcApi.md#get_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Retrieve an element of a model
 [**get_element_property_set**](IfcApi.md#get_element_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
 [**get_element_property_set_properties**](IfcApi.md#get_element_property_set_properties) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Retrieve all Properties of a PropertySet
@@ -92,11 +94,13 @@ Method | HTTP request | Description
 [**get_zone_space**](IfcApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 [**get_zone_spaces**](IfcApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 [**get_zones**](IfcApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
+[**link_documents_of_element**](IfcApi.md#link_documents_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Link one or many documents to an element
 [**list_classification_element_relations**](IfcApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
 [**merge_ifcs**](IfcApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
 [**optimize_ifc**](IfcApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
 [**remove_all_element_property_set**](IfcApi.md#remove_all_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
 [**remove_classification_of_element**](IfcApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
+[**remove_document_of_element**](IfcApi.md#remove_document_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/{id} | Remove a documents from an element
 [**remove_element_property_set**](IfcApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
 [**remove_element_property_set_property**](IfcApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
 [**remove_element_property_set_property_definition**](IfcApi.md#remove_element_property_set_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Remove a Definition from a Property
@@ -542,11 +546,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_properties**
-> bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
+> bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, data)
 
 Delete many Property of a model
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -597,10 +601,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
@@ -652,10 +657,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
@@ -707,10 +713,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
@@ -722,6 +729,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -733,7 +741,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -749,11 +757,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_property_definitions**
-> bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
+> bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, data)
 
 Delete many PropertyDefinitions of a model
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -804,10 +812,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
@@ -859,10 +868,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
@@ -914,10 +924,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
@@ -929,6 +940,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -940,7 +952,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -956,11 +968,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_ifc_units**
-> bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
+> bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, data)
 
 Delete many Units of a model
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -1011,10 +1023,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_units: %s\n" % e)
 ```
@@ -1066,10 +1079,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_units: %s\n" % e)
 ```
@@ -1121,10 +1135,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_ifc_units: %s\n" % e)
 ```
@@ -1136,6 +1151,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -1147,7 +1163,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -1163,11 +1179,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_delete_property_set**
-> bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
+> bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, data)
 
 Delete many PropertySet of a model
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -1218,10 +1234,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_property_set: %s\n" % e)
 ```
@@ -1273,10 +1290,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_property_set: %s\n" % e)
 ```
@@ -1328,10 +1346,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_delete_property_set: %s\n" % e)
 ```
@@ -1343,6 +1362,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -1354,7 +1374,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -1798,11 +1818,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_remove_classifications_of_element**
-> bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+> bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
 
 Remove many classifications from an element
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -1854,10 +1874,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
@@ -1910,10 +1931,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
@@ -1966,10 +1988,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 element_uuid = 'element_uuid_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
@@ -1982,6 +2005,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -1993,7 +2017,222 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No content |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **bulk_remove_documents_of_element**
+> bulk_remove_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+
+Remove many documents from an element
+
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Remove many documents from an element
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling IfcApi->bulk_remove_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Remove many documents from an element
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling IfcApi->bulk_remove_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Remove many documents from an element
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+    except ApiException as e:
+        print("Exception when calling IfcApi->bulk_remove_documents_of_element: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -2009,11 +2248,11 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **bulk_remove_elements_from_classification**
-> bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
+> bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
 
 Remove the classifications from all elements
 
-         Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
+         Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write
 
 ### Example
 
@@ -2065,10 +2304,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
@@ -2121,10 +2361,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
@@ -2177,10 +2418,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 ifc_classification_pk = 'ifc_classification_pk_example' # str | 
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling IfcApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
@@ -2193,6 +2435,7 @@ Name | Type | Description  | Notes
  **ifc_classification_pk** | **str**|  | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
 
 ### Return type
 
@@ -2204,7 +2447,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 ### HTTP response details
@@ -10119,6 +10362,220 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**list[Classification]**](Classification.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_documents_of_element**
+> list[Document] get_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+
+Retrieve all documents of an element
+
+Retrieve all documents of an element Required scopes: ifc:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all documents of an element
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all documents of an element
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all documents of an element
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_documents_of_element: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**list[Document]**](Document.md)
 
 ### Authorization
 
@@ -18967,6 +19424,224 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **link_documents_of_element**
+> list[Document] link_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+
+Link one or many documents to an element
+
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Link one or many documents to an element
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->link_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Link one or many documents to an element
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->link_documents_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = [56] # list[int] | 
+
+    try:
+        # Link one or many documents to an element
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->link_documents_of_element: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**list[int]**](int.md)|  | 
+
+### Return type
+
+[**list[Document]**](Document.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **list_classification_element_relations**
 > list[ElementClassificationRelation] list_classification_element_relations(cloud_pk, ifc_pk, project_pk)
 
@@ -19993,6 +20668,221 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this classification. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **remove_document_of_element**
+> remove_document_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+
+Remove a documents from an element
+
+The document will not be deleted Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Remove a documents from an element
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling IfcApi->remove_document_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Remove a documents from an element
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling IfcApi->remove_document_of_element: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this document.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Remove a documents from an element
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling IfcApi->remove_document_of_element: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this document. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 

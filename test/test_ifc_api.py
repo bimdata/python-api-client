@@ -92,6 +92,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_bulk_remove_documents_of_element(self):
+        """Test case for bulk_remove_documents_of_element
+
+        Remove many documents from an element  # noqa: E501
+        """
+        pass
+
     def test_bulk_remove_elements_from_classification(self):
         """Test case for bulk_remove_elements_from_classification
 
@@ -355,6 +362,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_classifications_of_element
 
         Retrieve all classifications of an element  # noqa: E501
+        """
+        pass
+
+    def test_get_documents_of_element(self):
+        """Test case for get_documents_of_element
+
+        Retrieve all documents of an element  # noqa: E501
         """
         pass
 
@@ -645,6 +659,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_link_documents_of_element(self):
+        """Test case for link_documents_of_element
+
+        Link one or many documents to an element  # noqa: E501
+        """
+        pass
+
     def test_list_classification_element_relations(self):
         """Test case for list_classification_element_relations
 
@@ -677,6 +698,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for remove_classification_of_element
 
         Remove a classification from an element  # noqa: E501
+        """
+        pass
+
+    def test_remove_document_of_element(self):
+        """Test case for remove_document_of_element
+
+        Remove a documents from an element  # noqa: E501
         """
         pass
 

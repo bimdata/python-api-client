@@ -310,19 +310,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_properties(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_properties(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Property of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -335,21 +336,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_properties_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_properties_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Property of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -369,7 +371,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -400,6 +403,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_properties`")  # noqa: E501
 
         collection_formats = {}
 
@@ -419,6 +426,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -438,19 +451,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_property_definitions(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_property_definitions(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertyDefinitions of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -463,21 +477,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_property_definitions_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_property_definitions_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertyDefinitions of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -497,7 +512,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -528,6 +544,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
 
         collection_formats = {}
 
@@ -547,6 +567,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -566,19 +592,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_units(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_units(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Units of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_units(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -591,21 +618,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_units_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_ifc_units_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Units of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -625,7 +653,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -656,6 +685,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_units`")  # noqa: E501
 
         collection_formats = {}
 
@@ -675,6 +708,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -694,19 +733,20 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_property_set(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_property_set(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertySet of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_property_set(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -719,21 +759,22 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_property_set_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_property_set_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertySet of a model  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_property_set_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -753,7 +794,8 @@ class IfcApi(object):
         all_params = [
             'cloud_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -784,6 +826,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_property_set`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_property_set`")  # noqa: E501
 
         collection_formats = {}
 
@@ -803,6 +849,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -1112,13 +1164,13 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_remove_classifications_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_remove_classifications_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Remove many classifications from an element  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1126,6 +1178,7 @@ class IfcApi(object):
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1138,15 +1191,15 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_remove_classifications_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_remove_classifications_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Remove many classifications from an element  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_classifications_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1154,6 +1207,7 @@ class IfcApi(object):
         :param str element_uuid: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1174,7 +1228,8 @@ class IfcApi(object):
             'cloud_pk',
             'element_uuid',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -1209,6 +1264,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_remove_classifications_of_element`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1230,6 +1289,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -1249,20 +1314,21 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_remove_elements_from_classification(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
-        """Remove the classifications from all elements  # noqa: E501
+    def bulk_remove_documents_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Remove many documents from an element  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str ifc_classification_pk: (required)
+        :param str element_uuid: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1275,15 +1341,136 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_remove_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_remove_elements_from_classification_with_http_info(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
-        """Remove the classifications from all elements  # noqa: E501
+    def bulk_remove_documents_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Remove many documents from an element  # noqa: E501
 
-                 Bulk delete.         You should send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param list[int] data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'element_uuid',
+            'ifc_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method bulk_remove_documents_of_element" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_remove_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `bulk_remove_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `bulk_remove_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_remove_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_remove_documents_of_element`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/bulk_destroy', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def bulk_remove_elements_from_classification(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Remove the classifications from all elements  # noqa: E501
+
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1291,6 +1478,36 @@ class IfcApi(object):
         :param str ifc_classification_pk: (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
+        :param list[int] data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def bulk_remove_elements_from_classification_with_http_info(self, cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Remove the classifications from all elements  # noqa: E501
+
+                 Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.bulk_remove_elements_from_classification_with_http_info(cloud_pk, ifc_classification_pk, ifc_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str ifc_classification_pk: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param list[int] data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1311,7 +1528,8 @@ class IfcApi(object):
             'cloud_pk',
             'ifc_classification_pk',
             'ifc_pk',
-            'project_pk'
+            'project_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -1346,6 +1564,10 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_remove_elements_from_classification`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1367,6 +1589,12 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
@@ -6732,6 +6960,147 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='list[Classification]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_documents_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all documents of an element  # noqa: E501
+
+        Retrieve all documents of an element Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Document]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_documents_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all documents of an element  # noqa: E501
+
+        Retrieve all documents of an element Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Document], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'element_uuid',
+            'ifc_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_documents_of_element" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `get_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_documents_of_element`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Document]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -12589,6 +12958,160 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def link_documents_of_element(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Link one or many documents to an element  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.link_documents_of_element(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param list[int] data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Document]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.link_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def link_documents_of_element_with_http_info(self, cloud_pk, element_uuid, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Link one or many documents to an element  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.link_documents_of_element_with_http_info(cloud_pk, element_uuid, ifc_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param list[int] data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Document], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'element_uuid',
+            'ifc_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method link_documents_of_element" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `link_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `link_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `link_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `link_documents_of_element`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `link_documents_of_element`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Document]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def list_classification_element_relations(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """List all associations between classifications and elements  # noqa: E501
 
@@ -13263,6 +13786,152 @@ class IfcApi(object):
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def remove_document_of_element(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Remove a documents from an element  # noqa: E501
+
+        The document will not be deleted Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_document_of_element(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param int id: A unique integer value identifying this document. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.remove_document_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+
+    def remove_document_of_element_with_http_info(self, cloud_pk, element_uuid, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+        """Remove a documents from an element  # noqa: E501
+
+        The document will not be deleted Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.remove_document_of_element_with_http_info(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str element_uuid: (required)
+        :param int id: A unique integer value identifying this document. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'element_uuid',
+            'id',
+            'ifc_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method remove_document_of_element" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `remove_document_of_element`")  # noqa: E501
+        # verify the required parameter 'element_uuid' is set
+        if self.api_client.client_side_validation and ('element_uuid' not in local_var_params or  # noqa: E501
+                                                        local_var_params['element_uuid'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `element_uuid` when calling `remove_document_of_element`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `remove_document_of_element`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `remove_document_of_element`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `remove_document_of_element`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'element_uuid' in local_var_params:
+            path_params['element_uuid'] = local_var_params['element_uuid']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
