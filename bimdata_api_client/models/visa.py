@@ -40,6 +40,7 @@ class Visa(object):
         'creator_id': 'int',
         'status': 'str',
         'description': 'str',
+        'document': 'Document',
         'comments': 'list[VisaComment]',
         'deadline': 'date',
         'created_at': 'datetime',
@@ -53,13 +54,14 @@ class Visa(object):
         'creator_id': 'creator_id',
         'status': 'status',
         'description': 'description',
+        'document': 'document',
         'comments': 'comments',
         'deadline': 'deadline',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, validations=None, creator=None, creator_id=None, status=None, description=None, comments=None, deadline=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, validations=None, creator=None, creator_id=None, status=None, description=None, document=None, comments=None, deadline=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Visa - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -71,6 +73,7 @@ class Visa(object):
         self._creator_id = None
         self._status = None
         self._description = None
+        self._document = None
         self._comments = None
         self._deadline = None
         self._created_at = None
@@ -88,6 +91,8 @@ class Visa(object):
         if status is not None:
             self.status = status
         self.description = description
+        if document is not None:
+            self.document = document
         if comments is not None:
             self.comments = comments
         self.deadline = deadline
@@ -231,6 +236,27 @@ class Visa(object):
         """
 
         self._description = description
+
+    @property
+    def document(self):
+        """Gets the document of this Visa.  # noqa: E501
+
+
+        :return: The document of this Visa.  # noqa: E501
+        :rtype: Document
+        """
+        return self._document
+
+    @document.setter
+    def document(self, document):
+        """Sets the document of this Visa.
+
+
+        :param document: The document of this Visa.  # noqa: E501
+        :type: Document
+        """
+
+        self._document = document
 
     @property
     def comments(self):

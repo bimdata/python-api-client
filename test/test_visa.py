@@ -69,6 +69,22 @@ class TestVisa(unittest.TestCase):
                 creator_id = 56, 
                 status = 'O', 
                 description = '0', 
+                document = bimdata_api_client.models.document.Document(
+                    id = 56, 
+                    parent = 56, 
+                    parent_id = 56, 
+                    creator = 56, 
+                    project = 56, 
+                    name = '0', 
+                    file_name = '0', 
+                    description = '0', 
+                    file = '0', 
+                    size = 0, 
+                    created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                    updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                    ifc_source = 'UPLOAD', 
+                    ifc_id = '0', 
+                    user_permission = 56, ), 
                 comments = [
                     bimdata_api_client.models.visa_comment.VisaComment(
                         id = 56, 
