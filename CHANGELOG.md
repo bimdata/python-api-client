@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.18.1 (2021-12-22)
+### Fix
+* Rename element_ids to element_uuids ([`461e3db`](https://github.com/bimdata/python-api-client/commit/461e3db667d2edba71b1596d694185f61d3233b5))
+
 ## v5.18.0 (2021-12-22)
 ### Feature
 * Add element/documents route ([`68a02e7`](https://github.com/bimdata/python-api-client/commit/68a02e7d227d78ef2e4efd9bdfbe82b1b686cf89))
