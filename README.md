@@ -316,6 +316,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_classifications_of_element**](docs/IfcApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
 *IfcApi* | [**get_documents_of_element**](docs/IfcApi.md#get_documents_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
 *IfcApi* | [**get_element**](docs/IfcApi.md#get_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Retrieve an element of a model
+*IfcApi* | [**get_element_linked_documents**](docs/IfcApi.md#get_element_linked_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/documents | Retrieve all documents linked to any element
 *IfcApi* | [**get_element_property_set**](docs/IfcApi.md#get_element_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
 *IfcApi* | [**get_element_property_set_properties**](docs/IfcApi.md#get_element_property_set_properties) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Retrieve all Properties of a PropertySet
 *IfcApi* | [**get_element_property_set_property**](docs/IfcApi.md#get_element_property_set_property) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Retrieve a Property of a PropertySet
@@ -413,6 +414,7 @@ Class | Method | HTTP request | Description
  - [ComponentsParent](docs/ComponentsParent.md)
  - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
+ - [DocumentWithElementList](docs/DocumentWithElementList.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)
  - [ElementPropertySetRelation](docs/ElementPropertySetRelation.md)

@@ -379,6 +379,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_element_linked_documents(self):
+        """Test case for get_element_linked_documents
+
+        Retrieve all documents linked to any element  # noqa: E501
+        """
+        pass
+
     def test_get_element_property_set(self):
         """Test case for get_element_property_set
 
