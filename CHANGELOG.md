@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.18.0 (2021-12-22)
+### Feature
+* Add element/documents route ([`68a02e7`](https://github.com/bimdata/python-api-client/commit/68a02e7d227d78ef2e4efd9bdfbe82b1b686cf89))
+
 ## v5.17.1 (2021-12-13)
 ### Fix
 * Add document to visa serializer ([#458](https://github.com/bimdata/python-api-client/issues/458)) ([`7504aee`](https://github.com/bimdata/python-api-client/commit/7504aee678ed033bcbe517ab9fcfe7c54776bfcf))
