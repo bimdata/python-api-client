@@ -53,7 +53,7 @@ class TestDocumentWithElementList(unittest.TestCase):
                     ifc_source = 'UPLOAD', 
                     ifc_id = '0', 
                     user_permission = 56, ), 
-                element_ids = [
+                element_uuids = [
                     56
                     ]
             )

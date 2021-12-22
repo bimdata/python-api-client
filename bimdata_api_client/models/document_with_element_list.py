@@ -35,28 +35,28 @@ class DocumentWithElementList(object):
     """
     openapi_types = {
         'document': 'Document',
-        'element_ids': 'list[int]'
+        'element_uuids': 'list[int]'
     }
 
     attribute_map = {
         'document': 'document',
-        'element_ids': 'element_ids'
+        'element_uuids': 'element_uuids'
     }
 
-    def __init__(self, document=None, element_ids=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, document=None, element_uuids=None, local_vars_configuration=None):  # noqa: E501
         """DocumentWithElementList - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._document = None
-        self._element_ids = None
+        self._element_uuids = None
         self.discriminator = None
 
         if document is not None:
             self.document = document
-        if element_ids is not None:
-            self.element_ids = element_ids
+        if element_uuids is not None:
+            self.element_uuids = element_uuids
 
     @property
     def document(self):
@@ -80,25 +80,25 @@ class DocumentWithElementList(object):
         self._document = document
 
     @property
-    def element_ids(self):
-        """Gets the element_ids of this DocumentWithElementList.  # noqa: E501
+    def element_uuids(self):
+        """Gets the element_uuids of this DocumentWithElementList.  # noqa: E501
 
 
-        :return: The element_ids of this DocumentWithElementList.  # noqa: E501
+        :return: The element_uuids of this DocumentWithElementList.  # noqa: E501
         :rtype: list[int]
         """
-        return self._element_ids
+        return self._element_uuids
 
-    @element_ids.setter
-    def element_ids(self, element_ids):
-        """Sets the element_ids of this DocumentWithElementList.
+    @element_uuids.setter
+    def element_uuids(self, element_uuids):
+        """Sets the element_uuids of this DocumentWithElementList.
 
 
-        :param element_ids: The element_ids of this DocumentWithElementList.  # noqa: E501
+        :param element_uuids: The element_uuids of this DocumentWithElementList.  # noqa: E501
         :type: list[int]
         """
 
-        self._element_ids = element_ids
+        self._element_uuids = element_uuids
 
     def to_dict(self):
         """Returns the model properties as a dict"""
