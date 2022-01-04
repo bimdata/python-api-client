@@ -54,7 +54,7 @@ class TestDocumentWithElementList(unittest.TestCase):
                     ifc_id = '0', 
                     user_permission = 56, ), 
                 element_uuids = [
-                    56
+                    '0'
                     ]
             )
         else :

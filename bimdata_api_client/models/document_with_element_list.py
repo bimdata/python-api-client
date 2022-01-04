@@ -35,7 +35,7 @@ class DocumentWithElementList(object):
     """
     openapi_types = {
         'document': 'Document',
-        'element_uuids': 'list[int]'
+        'element_uuids': 'list[str]'
     }
 
     attribute_map = {
@@ -85,7 +85,7 @@ class DocumentWithElementList(object):
 
 
         :return: The element_uuids of this DocumentWithElementList.  # noqa: E501
-        :rtype: list[int]
+        :rtype: list[str]
         """
         return self._element_uuids
 
@@ -95,7 +95,7 @@ class DocumentWithElementList(object):
 
 
         :param element_uuids: The element_uuids of this DocumentWithElementList.  # noqa: E501
-        :type: list[int]
+        :type: list[str]
         """
 
         self._element_uuids = element_uuids
