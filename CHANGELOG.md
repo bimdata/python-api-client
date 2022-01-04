@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.18.2 (2022-01-04)
+### Fix
+* Fix document elements list uuids ([`39de959`](https://github.com/bimdata/python-api-client/commit/39de959c2a58e9ab3b5949542efe76456cd8cad9))
+
 ## v5.18.1 (2021-12-22)
 ### Fix
 * Rename element_ids to element_uuids ([`461e3db`](https://github.com/bimdata/python-api-client/commit/461e3db667d2edba71b1596d694185f61d3233b5))
