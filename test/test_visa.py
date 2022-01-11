@@ -57,6 +57,9 @@ class TestVisa(unittest.TestCase):
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                     ], 
+                validations_in_error = [
+                    56
+                    ], 
                 creator = bimdata_api_client.models.user_project.UserProject(
                     id = 56, 
                     user_id = 56, 

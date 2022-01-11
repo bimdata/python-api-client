@@ -36,6 +36,7 @@ class Visa(object):
     openapi_types = {
         'id': 'int',
         'validations': 'list[VisaValidation]',
+        'validations_in_error': 'list[int]',
         'creator': 'UserProject',
         'creator_id': 'int',
         'status': 'str',
@@ -50,6 +51,7 @@ class Visa(object):
     attribute_map = {
         'id': 'id',
         'validations': 'validations',
+        'validations_in_error': 'validations_in_error',
         'creator': 'creator',
         'creator_id': 'creator_id',
         'status': 'status',
@@ -61,7 +63,7 @@ class Visa(object):
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, validations=None, creator=None, creator_id=None, status=None, description=None, document=None, comments=None, deadline=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, validations=None, validations_in_error=None, creator=None, creator_id=None, status=None, description=None, document=None, comments=None, deadline=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """Visa - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -69,6 +71,7 @@ class Visa(object):
 
         self._id = None
         self._validations = None
+        self._validations_in_error = None
         self._creator = None
         self._creator_id = None
         self._status = None
@@ -84,6 +87,8 @@ class Visa(object):
             self.id = id
         if validations is not None:
             self.validations = validations
+        if validations_in_error is not None:
+            self.validations_in_error = validations_in_error
         if creator is not None:
             self.creator = creator
         if creator_id is not None:
@@ -142,6 +147,29 @@ class Visa(object):
         """
 
         self._validations = validations
+
+    @property
+    def validations_in_error(self):
+        """Gets the validations_in_error of this Visa.  # noqa: E501
+
+        Validation IDs where one or more validators have no longer access to the visa document.  # noqa: E501
+
+        :return: The validations_in_error of this Visa.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._validations_in_error
+
+    @validations_in_error.setter
+    def validations_in_error(self, validations_in_error):
+        """Sets the validations_in_error of this Visa.
+
+        Validation IDs where one or more validators have no longer access to the visa document.  # noqa: E501
+
+        :param validations_in_error: The validations_in_error of this Visa.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._validations_in_error = validations_in_error
 
     @property
     def creator(self):
