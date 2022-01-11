@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.18.3 (2022-01-11)
+### Fix
+* (visa) add validations_in_error to serializer ([`e4df33f`](https://github.com/bimdata/python-api-client/commit/e4df33ffcaf01b3f60f7e214a2a64809d2befcf3))
+
 ## v5.18.2 (2022-01-04)
 ### Fix
 * Fix document elements list uuids ([`39de959`](https://github.com/bimdata/python-api-client/commit/39de959c2a58e9ab3b5949542efe76456cd8cad9))
