@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
 **name** | **str** |  | [optional] [readonly] 
+**type** | **str** |  | [optional] [readonly] 
 **creator** | [**User**](User.md) |  | [optional] 
 **status** | **str** |  | [optional] [readonly] 
 **source** | **str** |  | [optional] 

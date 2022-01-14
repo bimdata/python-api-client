@@ -9320,7 +9320,7 @@ void (empty response body)
 
 Export IFC
 
-Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write
+Only works for IFC files. Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write
 
 ### Example
 
@@ -15364,11 +15364,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_ifcs**
-> list[Ifc] get_ifcs(cloud_pk, project_pk, status=status, source=source)
+> list[Ifc] get_ifcs(cloud_pk, project_pk, status=status, source=source, type=type)
 
 Retrieve all models
 
-Retrieve all models Required scopes: ifc:read
+Retrieve all models. For legacy reasons, this route is named IFC but now handle all models types (DWG, PDF, IFC, etc). The field `type` allows you to discriminate which kind of model it is. Required scopes: ifc:read
 
 ### Example
 
@@ -15420,10 +15420,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
 source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
 
     try:
         # Retrieve all models
-        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
+        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source, type=type)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -15477,10 +15478,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
 source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
 
     try:
         # Retrieve all models
-        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
+        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source, type=type)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -15534,10 +15536,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 project_pk = 'project_pk_example' # str | 
 status = 'status_example' # str | Filter the returned list by status (optional)
 source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
 
     try:
         # Retrieve all models
-        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source)
+        api_response = api_instance.get_ifcs(cloud_pk, project_pk, status=status, source=source, type=type)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->get_ifcs: %s\n" % e)
@@ -15551,6 +15554,7 @@ Name | Type | Description  | Notes
  **project_pk** | **str**|  | 
  **status** | **str**| Filter the returned list by status | [optional] 
  **source** | **str**| Filter the returned list by source | [optional] 
+ **type** | **str**| Filter the returned list by type | [optional] 
 
 ### Return type
 
@@ -20080,7 +20084,7 @@ Name | Type | Description  | Notes
 
 Merge IFC files
 
-Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write
+Only works for IFC files. Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write
 
 ### Example
 
@@ -20287,7 +20291,7 @@ void (empty response body)
 
 Optimize the IFC
 
-Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write
+Only works for IFC files. Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write
 
 ### Example
 

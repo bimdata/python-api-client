@@ -39,6 +39,7 @@ class TestIfc(unittest.TestCase):
             return Ifc(
                 id = 56, 
                 name = '0', 
+                type = '0', 
                 creator = bimdata_api_client.models.user.User(
                     id = 56, 
                     email = '0', 

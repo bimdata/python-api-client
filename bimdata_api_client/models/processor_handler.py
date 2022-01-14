@@ -35,34 +35,34 @@ class ProcessorHandler(object):
     """
     openapi_types = {
         'id': 'int',
-        'processor': 'int',
+        'worker': 'str',
         'status': 'str',
         'detail_message': 'str'
     }
 
     attribute_map = {
         'id': 'id',
-        'processor': 'processor',
+        'worker': 'worker',
         'status': 'status',
         'detail_message': 'detail_message'
     }
 
-    def __init__(self, id=None, processor=None, status=None, detail_message=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, worker=None, status=None, detail_message=None, local_vars_configuration=None):  # noqa: E501
         """ProcessorHandler - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
-        self._processor = None
+        self._worker = None
         self._status = None
         self._detail_message = None
         self.discriminator = None
 
         if id is not None:
             self.id = id
-        if processor is not None:
-            self.processor = processor
+        if worker is not None:
+            self.worker = worker
         if status is not None:
             self.status = status
         self.detail_message = detail_message
@@ -89,25 +89,28 @@ class ProcessorHandler(object):
         self._id = id
 
     @property
-    def processor(self):
-        """Gets the processor of this ProcessorHandler.  # noqa: E501
+    def worker(self):
+        """Gets the worker of this ProcessorHandler.  # noqa: E501
 
 
-        :return: The processor of this ProcessorHandler.  # noqa: E501
-        :rtype: int
+        :return: The worker of this ProcessorHandler.  # noqa: E501
+        :rtype: str
         """
-        return self._processor
+        return self._worker
 
-    @processor.setter
-    def processor(self, processor):
-        """Sets the processor of this ProcessorHandler.
+    @worker.setter
+    def worker(self, worker):
+        """Sets the worker of this ProcessorHandler.
 
 
-        :param processor: The processor of this ProcessorHandler.  # noqa: E501
-        :type: int
+        :param worker: The worker of this ProcessorHandler.  # noqa: E501
+        :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                worker is not None and len(worker) < 1):
+            raise ValueError("Invalid value for `worker`, length must be greater than or equal to `1`")  # noqa: E501
 
-        self._processor = processor
+        self._worker = worker
 
     @property
     def status(self):

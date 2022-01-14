@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
-**processor** | **int** |  | [optional] [readonly] 
+**worker** | **str** |  | [optional] [readonly] 
 **status** | **str** |  | [optional] 
 **detail_message** | **str** |  | [optional] 
 

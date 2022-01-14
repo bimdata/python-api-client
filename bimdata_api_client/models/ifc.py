@@ -36,6 +36,7 @@ class Ifc(object):
     openapi_types = {
         'id': 'int',
         'name': 'str',
+        'type': 'str',
         'creator': 'User',
         'status': 'str',
         'source': 'str',
@@ -63,6 +64,7 @@ class Ifc(object):
     attribute_map = {
         'id': 'id',
         'name': 'name',
+        'type': 'type',
         'creator': 'creator',
         'status': 'status',
         'source': 'source',
@@ -87,7 +89,7 @@ class Ifc(object):
         'recommanded_2d_angle': 'recommanded_2d_angle'
     }
 
-    def __init__(self, id=None, name=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, recommanded_2d_angle=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, type=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, recommanded_2d_angle=None, local_vars_configuration=None):  # noqa: E501
         """Ifc - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -95,6 +97,7 @@ class Ifc(object):
 
         self._id = None
         self._name = None
+        self._type = None
         self._creator = None
         self._status = None
         self._source = None
@@ -123,6 +126,8 @@ class Ifc(object):
             self.id = id
         if name is not None:
             self.name = name
+        if type is not None:
+            self.type = type
         if creator is not None:
             self.creator = creator
         if status is not None:
@@ -205,6 +210,30 @@ class Ifc(object):
         """
 
         self._name = name
+
+    @property
+    def type(self):
+        """Gets the type of this Ifc.  # noqa: E501
+
+
+        :return: The type of this Ifc.  # noqa: E501
+        :rtype: str
+        """
+        return self._type
+
+    @type.setter
+    def type(self, type):
+        """Sets the type of this Ifc.
+
+
+        :param type: The type of this Ifc.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                type is not None and len(type) < 1):
+            raise ValueError("Invalid value for `type`, length must be greater than or equal to `1`")  # noqa: E501
+
+        self._type = type
 
     @property
     def creator(self):

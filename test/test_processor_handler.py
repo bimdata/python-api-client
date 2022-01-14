@@ -38,7 +38,7 @@ class TestProcessorHandler(unittest.TestCase):
         if include_optional :
             return ProcessorHandler(
                 id = 56, 
-                processor = 56, 
+                worker = '0', 
                 status = 'C', 
                 detail_message = '0'
             )

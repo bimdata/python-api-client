@@ -6257,7 +6257,7 @@ class IfcApi(object):
     def export_ifc(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Export IFC  # noqa: E501
 
-        Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.export_ifc(cloud_pk, id, project_pk, data, async_req=True)
@@ -6285,7 +6285,7 @@ class IfcApi(object):
     def export_ifc_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Export IFC  # noqa: E501
 
-        Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Export IFC as requested in parameters. When the export is finished, a new IFC file with will be created in the same folder than the original IFC. You can query the folder or subscribe to the new document webhook to retrieve the result Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.export_ifc_with_http_info(cloud_pk, id, project_pk, data, async_req=True)
@@ -10315,7 +10315,7 @@ class IfcApi(object):
     def get_ifcs(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all models  # noqa: E501
 
-        Retrieve all models Required scopes: ifc:read  # noqa: E501
+        Retrieve all models. For legacy reasons, this route is named IFC but now handle all models types (DWG, PDF, IFC, etc). The field `type` allows you to discriminate which kind of model it is. Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs(cloud_pk, project_pk, async_req=True)
@@ -10326,6 +10326,7 @@ class IfcApi(object):
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
         :param str source: Filter the returned list by source
+        :param str type: Filter the returned list by type
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -10343,7 +10344,7 @@ class IfcApi(object):
     def get_ifcs_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all models  # noqa: E501
 
-        Retrieve all models Required scopes: ifc:read  # noqa: E501
+        Retrieve all models. For legacy reasons, this route is named IFC but now handle all models types (DWG, PDF, IFC, etc). The field `type` allows you to discriminate which kind of model it is. Required scopes: ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_ifcs_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -10354,6 +10355,7 @@ class IfcApi(object):
         :param str project_pk: (required)
         :param str status: Filter the returned list by status
         :param str source: Filter the returned list by source
+        :param str type: Filter the returned list by type
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -10374,7 +10376,8 @@ class IfcApi(object):
             'cloud_pk',
             'project_pk',
             'status',
-            'source'
+            'source',
+            'type'
         ]
         all_params.extend(
             [
@@ -10415,6 +10418,8 @@ class IfcApi(object):
             query_params.append(('status', local_var_params['status']))  # noqa: E501
         if 'source' in local_var_params and local_var_params['source'] is not None:  # noqa: E501
             query_params.append(('source', local_var_params['source']))  # noqa: E501
+        if 'type' in local_var_params and local_var_params['type'] is not None:  # noqa: E501
+            query_params.append(('type', local_var_params['type']))  # noqa: E501
 
         header_params = {}
 
@@ -13394,7 +13399,7 @@ class IfcApi(object):
     def merge_ifcs(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Merge IFC files  # noqa: E501
 
-        Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.merge_ifcs(cloud_pk, project_pk, data, async_req=True)
@@ -13421,7 +13426,7 @@ class IfcApi(object):
     def merge_ifcs_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Merge IFC files  # noqa: E501
 
-        Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Merge IFC files. The merged IFC file will be put in the same folder that the first IFC of the list Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.merge_ifcs_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -13526,7 +13531,7 @@ class IfcApi(object):
     def optimize_ifc(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Optimize the IFC  # noqa: E501
 
-        Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.optimize_ifc(cloud_pk, id, project_pk, data, async_req=True)
@@ -13554,7 +13559,7 @@ class IfcApi(object):
     def optimize_ifc_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Optimize the IFC  # noqa: E501
 
-        Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write  # noqa: E501
+        Only works for IFC files. Optimize the IFC. A new optimized IFC file will be put in the same folder that the original IFC Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.optimize_ifc_with_http_info(cloud_pk, id, project_pk, data, async_req=True)
