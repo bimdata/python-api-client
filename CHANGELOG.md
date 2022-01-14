@@ -2,6 +2,28 @@
 
 <!--next-version-placeholder-->
 
+## v5.19.0 (2022-01-14)
+### Feature
+* Feature/smart files (#463)
+
+* allow many model types
+
+* add tests
+
+* fix document name
+
+* more cleanup
+
+* update ci poetry version
+
+* do not reprocess on file update
+
+* fix export,merge and optimize queues
+
+* add types.py
+
+* more contants ([`a5ba918`](https://github.com/bimdata/python-api-client/commit/a5ba9187333e0a1b754b49755322102085adacc3))
+
 ## v5.18.3 (2022-01-11)
 ### Fix
 * (visa) add validations_in_error to serializer ([`e4df33f`](https://github.com/bimdata/python-api-client/commit/e4df33ffcaf01b3f60f7e214a2a64809d2befcf3))
