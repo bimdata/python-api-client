@@ -290,6 +290,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_ifc_property_definition**](docs/IfcApi.md#create_ifc_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition | Create a PropertyDefinition on the model
 *IfcApi* | [**create_ifc_unit**](docs/IfcApi.md#create_ifc_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
 *IfcApi* | [**create_layer**](docs/IfcApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
+*IfcApi* | [**create_model**](docs/IfcApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-model | Make a PDF or Image file a Model
 *IfcApi* | [**create_property_set**](docs/IfcApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create a PropertySet
 *IfcApi* | [**create_property_set_element_relations**](docs/IfcApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements**](docs/IfcApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
@@ -304,6 +305,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_ifc_property_definition**](docs/IfcApi.md#delete_ifc_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
 *IfcApi* | [**delete_ifc_unit**](docs/IfcApi.md#delete_ifc_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Delete a Unit of a model
 *IfcApi* | [**delete_layer**](docs/IfcApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Delete a layer of a model
+*IfcApi* | [**delete_model_without_doc**](docs/IfcApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/delete-model | Delete the Model without deleting the related document
 *IfcApi* | [**delete_property_set**](docs/IfcApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 *IfcApi* | [**delete_space**](docs/IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
 *IfcApi* | [**delete_system**](docs/IfcApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
@@ -412,6 +414,7 @@ Class | Method | HTTP request | Description
  - [Comment](docs/Comment.md)
  - [Component](docs/Component.md)
  - [ComponentsParent](docs/ComponentsParent.md)
+ - [CreateModel](docs/CreateModel.md)
  - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)

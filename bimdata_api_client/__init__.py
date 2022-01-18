@@ -46,6 +46,7 @@ from bimdata_api_client.models.coloring import Coloring
 from bimdata_api_client.models.comment import Comment
 from bimdata_api_client.models.component import Component
 from bimdata_api_client.models.components_parent import ComponentsParent
+from bimdata_api_client.models.create_model import CreateModel
 from bimdata_api_client.models.direction import Direction
 from bimdata_api_client.models.document import Document
 from bimdata_api_client.models.document_with_element_list import DocumentWithElementList

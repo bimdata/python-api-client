@@ -197,6 +197,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_model(self):
+        """Test case for create_model
+
+        Make a PDF or Image file a Model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set(self):
         """Test case for create_property_set
 
@@ -292,6 +299,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for delete_layer
 
         Delete a layer of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_model_without_doc(self):
+        """Test case for delete_model_without_doc
+
+        Delete the Model without deleting the related document  # noqa: E501
         """
         pass
 

@@ -229,9 +229,12 @@ class Ifc(object):
         :param type: The type of this Ifc.  # noqa: E501
         :type: str
         """
-        if (self.local_vars_configuration.client_side_validation and
-                type is not None and len(type) < 1):
-            raise ValueError("Invalid value for `type`, length must be greater than or equal to `1`")  # noqa: E501
+        allowed_values = ["IFC", "DWG", "DXF", "GLTF", "PDF", "JPEG", "PNG", "OBJ", "DAE", "BFX"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
+                .format(type, allowed_values)
+            )
 
         self._type = type
 
