@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v5.19.1 (2022-01-18)
+### Fix
+* Add non automatic models (#464)
+
+* Add non automatic models
+
+* improve tests
+
+* rename route and add permissions
+
+* add model delete with doc ([`b224801`](https://github.com/bimdata/python-api-client/commit/b2248010f7890245d90e9b4f067e4ca96ea00a63))
+
 ## v5.19.0 (2022-01-14)
 ### Feature
 * Feature/smart files (#463)
