@@ -2,6 +2,22 @@
 
 <!--next-version-placeholder-->
 
+## v5.20.0 (2022-01-27)
+### Feature
+* Plans and storeys (#468)
+
+* create storey
+
+* add migrations and route manage model children
+
+* create metabuilding and relation between storey and model-plans
+
+* fix signal test
+
+* PR review
+
+* models can update name ([`6a125d1`](https://github.com/bimdata/python-api-client/commit/6a125d1eebe97eacd063a6ef2001c9057ac57cb2))
+
 ## v5.19.1 (2022-01-18)
 ### Fix
 * Add non automatic models (#464)
