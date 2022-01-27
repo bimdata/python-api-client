@@ -290,11 +290,13 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_ifc_property_definition**](docs/IfcApi.md#create_ifc_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition | Create a PropertyDefinition on the model
 *IfcApi* | [**create_ifc_unit**](docs/IfcApi.md#create_ifc_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
 *IfcApi* | [**create_layer**](docs/IfcApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
+*IfcApi* | [**create_meta_building**](docs/IfcApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-metabuilding | Create an empty 3D Model
 *IfcApi* | [**create_model**](docs/IfcApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-model | Make a PDF or Image file a Model
 *IfcApi* | [**create_property_set**](docs/IfcApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create a PropertySet
 *IfcApi* | [**create_property_set_element_relations**](docs/IfcApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements**](docs/IfcApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
 *IfcApi* | [**create_space**](docs/IfcApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
+*IfcApi* | [**create_storey_plan**](docs/IfcApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/add | Create a 2d model in storey
 *IfcApi* | [**create_system**](docs/IfcApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 *IfcApi* | [**create_zone**](docs/IfcApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space**](docs/IfcApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
@@ -308,11 +310,14 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_model_without_doc**](docs/IfcApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/delete-model | Delete the Model without deleting the related document
 *IfcApi* | [**delete_property_set**](docs/IfcApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 *IfcApi* | [**delete_space**](docs/IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
+*IfcApi* | [**delete_storey**](docs/IfcApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Delete a storey of a model
+*IfcApi* | [**delete_storey_plan**](docs/IfcApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/delete | Delete a 2d model
 *IfcApi* | [**delete_system**](docs/IfcApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 *IfcApi* | [**delete_zone**](docs/IfcApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 *IfcApi* | [**delete_zone_space**](docs/IfcApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
 *IfcApi* | [**export_ifc**](docs/IfcApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
 *IfcApi* | [**full_update_element**](docs/IfcApi.md#full_update_element) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
+*IfcApi* | [**full_update_storeys**](docs/IfcApi.md#full_update_storeys) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/full_update | Update all fields of all storeys
 *IfcApi* | [**get_access_token**](docs/IfcApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
 *IfcApi* | [**get_access_tokens**](docs/IfcApi.md#get_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Retrieve all tokens created for this model
 *IfcApi* | [**get_classifications_of_element**](docs/IfcApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
@@ -344,6 +349,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_layers**](docs/IfcApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Retrieve all layers of a model
 *IfcApi* | [**get_material**](docs/IfcApi.md#get_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
 *IfcApi* | [**get_materials**](docs/IfcApi.md#get_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
+*IfcApi* | [**get_model_storey**](docs/IfcApi.md#get_model_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Retrieve a storey of a model
+*IfcApi* | [**get_model_storeys**](docs/IfcApi.md#get_model_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
 *IfcApi* | [**get_processor_handler**](docs/IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 *IfcApi* | [**get_processor_handlers**](docs/IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 *IfcApi* | [**get_property_set**](docs/IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -384,6 +391,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_processor_handler**](docs/IfcApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 *IfcApi* | [**update_property_set**](docs/IfcApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 *IfcApi* | [**update_space**](docs/IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
+*IfcApi* | [**update_storey**](docs/IfcApi.md#update_storey) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Update some fields of a storey
 *IfcApi* | [**update_system**](docs/IfcApi.md#update_system) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Update some fields of a system
 *IfcApi* | [**update_zone**](docs/IfcApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space**](docs/IfcApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
@@ -414,6 +422,7 @@ Class | Method | HTTP request | Description
  - [Comment](docs/Comment.md)
  - [Component](docs/Component.md)
  - [ComponentsParent](docs/ComponentsParent.md)
+ - [CreateBuilding](docs/CreateBuilding.md)
  - [CreateModel](docs/CreateModel.md)
  - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
@@ -495,6 +504,8 @@ Class | Method | HTTP request | Description
  - [Snapshot](docs/Snapshot.md)
  - [Space](docs/Space.md)
  - [Stage](docs/Stage.md)
+ - [Storey](docs/Storey.md)
+ - [StoreyRequest](docs/StoreyRequest.md)
  - [System](docs/System.md)
  - [Topic](docs/Topic.md)
  - [TopicStatus](docs/TopicStatus.md)

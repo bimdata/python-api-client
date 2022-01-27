@@ -46,6 +46,7 @@ from bimdata_api_client.models.coloring import Coloring
 from bimdata_api_client.models.comment import Comment
 from bimdata_api_client.models.component import Component
 from bimdata_api_client.models.components_parent import ComponentsParent
+from bimdata_api_client.models.create_building import CreateBuilding
 from bimdata_api_client.models.create_model import CreateModel
 from bimdata_api_client.models.direction import Direction
 from bimdata_api_client.models.document import Document
@@ -127,6 +128,8 @@ from bimdata_api_client.models.size import Size
 from bimdata_api_client.models.snapshot import Snapshot
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.stage import Stage
+from bimdata_api_client.models.storey import Storey
+from bimdata_api_client.models.storey_request import StoreyRequest
 from bimdata_api_client.models.system import System
 from bimdata_api_client.models.topic import Topic
 from bimdata_api_client.models.topic_status import TopicStatus

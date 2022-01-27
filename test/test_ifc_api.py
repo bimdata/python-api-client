@@ -197,6 +197,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_meta_building(self):
+        """Test case for create_meta_building
+
+        Create an empty 3D Model  # noqa: E501
+        """
+        pass
+
     def test_create_model(self):
         """Test case for create_model
 
@@ -229,6 +236,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for create_space
 
         Create a space in the model  # noqa: E501
+        """
+        pass
+
+    def test_create_storey_plan(self):
+        """Test case for create_storey_plan
+
+        Create a 2d model in storey  # noqa: E501
         """
         pass
 
@@ -323,6 +337,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_storey(self):
+        """Test case for delete_storey
+
+        Delete a storey of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_storey_plan(self):
+        """Test case for delete_storey_plan
+
+        Delete a 2d model  # noqa: E501
+        """
+        pass
+
     def test_delete_system(self):
         """Test case for delete_system
 
@@ -355,6 +383,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for full_update_element
 
         Update all fields of an element  # noqa: E501
+        """
+        pass
+
+    def test_full_update_storeys(self):
+        """Test case for full_update_storeys
+
+        Update all fields of all storeys  # noqa: E501
         """
         pass
 
@@ -572,6 +607,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_materials
 
         Retrieve all materials of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_storey(self):
+        """Test case for get_model_storey
+
+        Retrieve a storey of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_storeys(self):
+        """Test case for get_model_storeys
+
+        Retrieve all storeys of a model  # noqa: E501
         """
         pass
 
@@ -852,6 +901,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_space
 
         Update some fields of a space  # noqa: E501
+        """
+        pass
+
+    def test_update_storey(self):
+        """Test case for update_storey
+
+        Update some fields of a storey  # noqa: E501
         """
         pass
 

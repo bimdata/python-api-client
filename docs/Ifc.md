@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
-**name** | **str** |  | [optional] [readonly] 
+**name** | **str** |  | [optional] 
 **type** | **str** |  | [optional] [readonly] 
 **creator** | [**User**](User.md) |  | [optional] 
 **status** | **str** |  | [optional] [readonly] 

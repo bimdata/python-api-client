@@ -124,8 +124,7 @@ class Ifc(object):
 
         if id is not None:
             self.id = id
-        if name is not None:
-            self.name = name
+        self.name = name
         if type is not None:
             self.type = type
         if creator is not None:
@@ -208,6 +207,9 @@ class Ifc(object):
         :param name: The name of this Ifc.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                name is not None and len(name) > 512):
+            raise ValueError("Invalid value for `name`, length must be less than or equal to `512`")  # noqa: E501
 
         self._name = name
 
@@ -229,7 +231,7 @@ class Ifc(object):
         :param type: The type of this Ifc.  # noqa: E501
         :type: str
         """
-        allowed_values = ["IFC", "DWG", "DXF", "GLTF", "PDF", "JPEG", "PNG", "OBJ", "DAE", "BFX"]  # noqa: E501
+        allowed_values = ["IFC", "DWG", "DXF", "GLTF", "PDF", "JPEG", "PNG", "OBJ", "DAE", "BFX", "METABUILDING"]  # noqa: E501
         if self.local_vars_configuration.client_side_validation and type not in allowed_values:  # noqa: E501
             raise ValueError(
                 "Invalid value for `type` ({0}), must be one of {1}"  # noqa: E501
