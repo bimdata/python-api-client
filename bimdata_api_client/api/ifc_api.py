@@ -4438,13 +4438,13 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_storey_plan(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+    def create_storey_plan(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
         """Create a 2d model in storey  # noqa: E501
 
-        Create a 2d model in storey Required scopes: ifc:write  # noqa: E501
+        Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, async_req=True)
+        >>> thread = api.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -4453,7 +4453,6 @@ class IfcApi(object):
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str storey_pk: (required)
-        :param Storey data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4466,15 +4465,15 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs)  # noqa: E501
+        return self.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs)  # noqa: E501
 
-    def create_storey_plan_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+    def create_storey_plan_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
         """Create a 2d model in storey  # noqa: E501
 
-        Create a 2d model in storey Required scopes: ifc:write  # noqa: E501
+        Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, async_req=True)
+        >>> thread = api.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -4483,7 +4482,6 @@ class IfcApi(object):
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str storey_pk: (required)
-        :param Storey data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4505,8 +4503,7 @@ class IfcApi(object):
             'id',
             'ifc_pk',
             'project_pk',
-            'storey_pk',
-            'data'
+            'storey_pk'
         ]
         all_params.extend(
             [
@@ -4545,10 +4542,6 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('storey_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['storey_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `storey_pk` when calling `create_storey_plan`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `create_storey_plan`")  # noqa: E501
 
         collection_formats = {}
 
@@ -4572,14 +4565,8 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
@@ -7402,7 +7389,7 @@ class IfcApi(object):
     def full_update_storeys(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update all fields of all storeys  # noqa: E501
 
-                 This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         An storey with \"is_site=True\" will be stored without order.  Required scopes: ifc:write  # noqa: E501
+                 This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         A storey with \"is_site=True\" will be stored without order. There can be only one storey with \"is_site=True\"\"  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_storeys(cloud_pk, ifc_pk, project_pk, data, async_req=True)
@@ -7430,7 +7417,7 @@ class IfcApi(object):
     def full_update_storeys_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update all fields of all storeys  # noqa: E501
 
-                 This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         An storey with \"is_site=True\" will be stored without order.  Required scopes: ifc:write  # noqa: E501
+                 This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         A storey with \"is_site=True\" will be stored without order. There can be only one storey with \"is_site=True\"\"  Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.full_update_storeys_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)

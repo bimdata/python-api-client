@@ -6568,11 +6568,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_storey_plan**
-> Storey create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+> Storey create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
 
 Create a 2d model in storey
 
-Create a 2d model in storey Required scopes: ifc:write
+Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write
 
 ### Example
 
@@ -6625,11 +6625,10 @@ id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6684,11 +6683,10 @@ id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6743,11 +6741,10 @@ id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6762,7 +6759,6 @@ Name | Type | Description  | Notes
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
- **data** | [**Storey**](Storey.md)|  | 
 
 ### Return type
 
@@ -6774,7 +6770,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 ### HTTP response details
@@ -11037,7 +11033,7 @@ Name | Type | Description  | Notes
 
 Update all fields of all storeys
 
-         This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         An storey with \"is_site=True\" will be stored without order.  Required scopes: ifc:write
+         This route allows you to create storeys, modify them, delete them and organize them by order.         If the optional field \"id\" is present, the storey will be modified. Otherwise, a new storey will be created.         If an \"id\" present in the api is not present in the list passed in parameter, the corresponding storey will be deleted.         A storey with \"is_site=True\" will be stored without order. There can be only one storey with \"is_site=True\"\"  Required scopes: ifc:write
 
 ### Example
 
