@@ -2,6 +2,24 @@
 
 <!--next-version-placeholder-->
 
+## v5.20.1 (2022-01-28)
+### Fix
+* One storey site by building (#469)
+
+* one storey site by building
+
+* add db unique constraint
+
+* Update ifc/v1/views.py
+
+Co-authored-by: Hugo Duroux <hugo@bimdata.io>
+
+* Update ifc/v1/views.py
+
+Co-authored-by: Hugo Duroux <hugo@bimdata.io>
+
+Co-authored-by: Hugo Duroux <hugo@bimdata.io> ([`7c907c8`](https://github.com/bimdata/python-api-client/commit/7c907c80cb76328f174e414efb73850ca81dc188))
+
 ## v5.20.0 (2022-01-27)
 ### Feature
 * Plans and storeys (#468)
