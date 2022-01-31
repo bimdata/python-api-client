@@ -2,6 +2,22 @@
 
 <!--next-version-placeholder-->
 
+## v5.22.0 (2022-01-31)
+### Feature
+* 2d positioning (#471)
+
+* filter storey models with permissions
+
+* rework storey serializer
+
+* add positioning plan to m2m (storey-plan)
+
+* add route with params id and positioning route renaming
+
+* include positioning in storey serializer
+
+* fix tests ([`f8bf0c8`](https://github.com/bimdata/python-api-client/commit/f8bf0c8b641cb613d99d7a116ecd8377fab46245))
+
 ## v5.21.1 (2022-01-31)
 ### Fix
 * Filter storey models with permissions and add models_unreachable_count field (#470)
