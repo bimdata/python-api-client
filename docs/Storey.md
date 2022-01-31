@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **name** | **str** |  | 
 **elevation** | **float** |  | [optional] 
 **order** | **int** |  | [optional] [readonly] 
-**models** | [**list[Ifc]**](Ifc.md) |  | [optional] [readonly] 
+**models** | [**list[ModelWithPositioningPlan]**](ModelWithPositioningPlan.md) |  | [optional] [readonly] 
 **models_unreachable_count** | **int** |  | [optional] [readonly] 
 **is_site** | **bool** |  | [optional] [readonly] 
 

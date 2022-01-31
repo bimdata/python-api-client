@@ -56,6 +56,7 @@ from bimdata_api_client.models.inline_object import InlineObject
 from bimdata_api_client.models.inline_object1 import InlineObject1
 from bimdata_api_client.models.inline_object2 import InlineObject2
 from bimdata_api_client.models.inline_object3 import InlineObject3
+from bimdata_api_client.models.inline_object4 import InlineObject4
 from bimdata_api_client.models.inline_response200 import InlineResponse200
 from bimdata_api_client.models.inline_response2001 import InlineResponse2001
 from bimdata_api_client.models.invitation import Invitation
@@ -69,10 +70,12 @@ from bimdata_api_client.models.material import Material
 from bimdata_api_client.models.material_list_component import MaterialListComponent
 from bimdata_api_client.models.material_option import MaterialOption
 from bimdata_api_client.models.model_property import ModelProperty
+from bimdata_api_client.models.model_with_positioning_plan import ModelWithPositioningPlan
 from bimdata_api_client.models.organization import Organization
 from bimdata_api_client.models.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.models.perspective_camera import PerspectiveCamera
 from bimdata_api_client.models.point import Point
+from bimdata_api_client.models.positioning_plan import PositioningPlan
 from bimdata_api_client.models.priority import Priority
 from bimdata_api_client.models.processor_handler import ProcessorHandler
 from bimdata_api_client.models.project import Project

@@ -242,7 +242,7 @@ class TestIfcApi(unittest.TestCase):
     def test_create_storey_plan(self):
         """Test case for create_storey_plan
 
-        Create a 2d model in storey  # noqa: E501
+        Create a relation between a 2d model and a storey  # noqa: E501
         """
         pass
 
@@ -347,7 +347,7 @@ class TestIfcApi(unittest.TestCase):
     def test_delete_storey_plan(self):
         """Test case for delete_storey_plan
 
-        Delete a 2d model  # noqa: E501
+        Delete the relation between a 2d model and a storey  # noqa: E501
         """
         pass
 
@@ -624,6 +624,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_get_plan_positioning(self):
+        """Test case for get_plan_positioning
+
+        Retrieve the postioning of the plan in the storey  # noqa: E501
+        """
+        pass
+
     def test_get_processor_handler(self):
         """Test case for get_processor_handler
 
@@ -880,6 +887,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_layer
 
         Update some fields of a layer  # noqa: E501
+        """
+        pass
+
+    def test_update_plan_positioning(self):
+        """Test case for update_plan_positioning
+
+        Update the postioning of the plan in the storey  # noqa: E501
         """
         pass
 

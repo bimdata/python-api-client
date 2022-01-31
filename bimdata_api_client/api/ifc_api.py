@@ -4438,21 +4438,21 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_storey_plan(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
-        """Create a 2d model in storey  # noqa: E501
+    def create_storey_plan(self, cloud_pk, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+        """Create a relation between a 2d model and a storey  # noqa: E501
 
-        Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
+        Create a relation between a 2d model and a storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
+        >>> thread = api.create_storey_plan(cloud_pk, ifc_pk, project_pk, storey_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this storey. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str storey_pk: (required)
+        :param InlineObject4 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4465,23 +4465,23 @@ class IfcApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs)  # noqa: E501
+        return self.create_storey_plan_with_http_info(cloud_pk, ifc_pk, project_pk, storey_pk, data, **kwargs)  # noqa: E501
 
-    def create_storey_plan_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
-        """Create a 2d model in storey  # noqa: E501
+    def create_storey_plan_with_http_info(self, cloud_pk, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+        """Create a relation between a 2d model and a storey  # noqa: E501
 
-        Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
+        Create a relation between a 2d model and a storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
+        >>> thread = api.create_storey_plan_with_http_info(cloud_pk, ifc_pk, project_pk, storey_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this storey. (required)
         :param str ifc_pk: (required)
         :param str project_pk: (required)
         :param str storey_pk: (required)
+        :param InlineObject4 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4500,10 +4500,10 @@ class IfcApi(object):
 
         all_params = [
             'cloud_pk',
-            'id',
             'ifc_pk',
             'project_pk',
-            'storey_pk'
+            'storey_pk',
+            'data'
         ]
         all_params.extend(
             [
@@ -4526,10 +4526,6 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_storey_plan`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `create_storey_plan`")  # noqa: E501
         # verify the required parameter 'ifc_pk' is set
         if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['ifc_pk'] is None):  # noqa: E501
@@ -4542,14 +4538,16 @@ class IfcApi(object):
         if self.api_client.client_side_validation and ('storey_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['storey_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `storey_pk` when calling `create_storey_plan`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_storey_plan`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
         if 'cloud_pk' in local_var_params:
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
         if 'ifc_pk' in local_var_params:
             path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
@@ -4565,15 +4563,21 @@ class IfcApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/add', 'POST',
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/add', 'POST',
             path_params,
             query_params,
             header_params,
@@ -6522,9 +6526,9 @@ class IfcApi(object):
             collection_formats=collection_formats)
 
     def delete_storey_plan(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
-        """Delete a 2d model  # noqa: E501
+        """Delete the relation between a 2d model and a storey  # noqa: E501
 
-        Delete a 2D model Required scopes: ifc:write  # noqa: E501
+        Delete the relation between a 2d model and a storey Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
@@ -6551,9 +6555,9 @@ class IfcApi(object):
         return self.delete_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs)  # noqa: E501
 
     def delete_storey_plan_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
-        """Delete a 2d model  # noqa: E501
+        """Delete the relation between a 2d model and a storey  # noqa: E501
 
-        Delete a 2D model Required scopes: ifc:write  # noqa: E501
+        Delete the relation between a 2d model and a storey Required scopes: ifc:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_storey_plan_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
@@ -6652,7 +6656,7 @@ class IfcApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/delete', 'DELETE',
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -12265,6 +12269,156 @@ class IfcApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def get_plan_positioning(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
+        """Retrieve the postioning of the plan in the storey  # noqa: E501
+
+        Retrieve the postioning of the plan in the storey Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this storey. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param str storey_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: PositioningPlan
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_plan_positioning_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs)  # noqa: E501
+
+    def get_plan_positioning_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, **kwargs):  # noqa: E501
+        """Retrieve the postioning of the plan in the storey  # noqa: E501
+
+        Retrieve the postioning of the plan in the storey Required scopes: ifc:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_plan_positioning_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this storey. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param str storey_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(PositioningPlan, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'ifc_pk',
+            'project_pk',
+            'storey_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_plan_positioning" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'storey_pk' is set
+        if self.api_client.client_side_validation and ('storey_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['storey_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `storey_pk` when calling `get_plan_positioning`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+        if 'storey_pk' in local_var_params:
+            path_params['storey_pk'] = local_var_params['storey_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='PositioningPlan',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def get_processor_handler(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve a processor handler  # noqa: E501
 
@@ -17671,6 +17825,169 @@ class IfcApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Layer',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_plan_positioning(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+        """Update the postioning of the plan in the storey  # noqa: E501
+
+        Update the postioning of the plan in the storey Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this storey. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param str storey_pk: (required)
+        :param PositioningPlan data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: PositioningPlan
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_plan_positioning_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs)  # noqa: E501
+
+    def update_plan_positioning_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, storey_pk, data, **kwargs):  # noqa: E501
+        """Update the postioning of the plan in the storey  # noqa: E501
+
+        Update the postioning of the plan in the storey Required scopes: ifc:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_plan_positioning_with_http_info(cloud_pk, id, ifc_pk, project_pk, storey_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this storey. (required)
+        :param str ifc_pk: (required)
+        :param str project_pk: (required)
+        :param str storey_pk: (required)
+        :param PositioningPlan data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(PositioningPlan, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'ifc_pk',
+            'project_pk',
+            'storey_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_plan_positioning" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'ifc_pk' is set
+        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'storey_pk' is set
+        if self.api_client.client_side_validation and ('storey_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['storey_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `storey_pk` when calling `update_plan_positioning`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_plan_positioning`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'ifc_pk' in local_var_params:
+            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+        if 'storey_pk' in local_var_params:
+            path_params['storey_pk'] = local_var_params['storey_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='PositioningPlan',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

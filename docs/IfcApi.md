@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**create_property_set_element_relations**](IfcApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 [**create_raw_elements**](IfcApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
 [**create_space**](IfcApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
-[**create_storey_plan**](IfcApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/add | Create a 2d model in storey
+[**create_storey_plan**](IfcApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
 [**create_system**](IfcApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 [**create_zone**](IfcApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 [**create_zone_space**](IfcApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
@@ -49,7 +49,7 @@ Method | HTTP request | Description
 [**delete_property_set**](IfcApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 [**delete_space**](IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
 [**delete_storey**](IfcApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Delete a storey of a model
-[**delete_storey_plan**](IfcApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/delete | Delete a 2d model
+[**delete_storey_plan**](IfcApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
 [**delete_system**](IfcApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 [**delete_zone**](IfcApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 [**delete_zone_space**](IfcApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
@@ -89,6 +89,7 @@ Method | HTTP request | Description
 [**get_materials**](IfcApi.md#get_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
 [**get_model_storey**](IfcApi.md#get_model_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Retrieve a storey of a model
 [**get_model_storeys**](IfcApi.md#get_model_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
+[**get_plan_positioning**](IfcApi.md#get_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 [**get_processor_handler**](IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 [**get_processor_handlers**](IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 [**get_property_set**](IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -126,6 +127,7 @@ Method | HTTP request | Description
 [**update_ifc_property_definition**](IfcApi.md#update_ifc_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
 [**update_ifc_unit**](IfcApi.md#update_ifc_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
 [**update_layer**](IfcApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update some fields of a layer
+[**update_plan_positioning**](IfcApi.md#update_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
 [**update_processor_handler**](IfcApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 [**update_property_set**](IfcApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 [**update_space**](IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
@@ -6568,11 +6570,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_storey_plan**
-> Storey create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+> Storey create_storey_plan(cloud_pk, ifc_pk, project_pk, storey_pk, data)
 
-Create a 2d model in storey
+Create a relation between a 2d model and a storey
 
-Create a 2d model in storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write
+Create a relation between a 2d model and a storey. The model type must be one of : ('DWG', 'DXF', 'PDF', 'JPEG', 'PNG') Required scopes: ifc:write
 
 ### Example
 
@@ -6621,14 +6623,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.IfcApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.InlineObject4() # InlineObject4 | 
 
     try:
-        # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        # Create a relation between a 2d model and a storey
+        api_response = api_instance.create_storey_plan(cloud_pk, ifc_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6679,14 +6681,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.IfcApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.InlineObject4() # InlineObject4 | 
 
     try:
-        # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        # Create a relation between a 2d model and a storey
+        api_response = api_instance.create_storey_plan(cloud_pk, ifc_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6737,14 +6739,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.IfcApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this storey.
 ifc_pk = 'ifc_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.InlineObject4() # InlineObject4 | 
 
     try:
-        # Create a 2d model in storey
-        api_response = api_instance.create_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        # Create a relation between a 2d model and a storey
+        api_response = api_instance.create_storey_plan(cloud_pk, ifc_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan: %s\n" % e)
@@ -6755,10 +6757,10 @@ storey_pk = 'storey_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this storey. | 
  **ifc_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
+ **data** | [**InlineObject4**](InlineObject4.md)|  | 
 
 ### Return type
 
@@ -6770,7 +6772,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 ### HTTP response details
@@ -9747,9 +9749,9 @@ void (empty response body)
 # **delete_storey_plan**
 > delete_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
 
-Delete a 2d model
+Delete the relation between a 2d model and a storey
 
-Delete a 2D model Required scopes: ifc:write
+Delete the relation between a 2d model and a storey Required scopes: ifc:write
 
 ### Example
 
@@ -9804,7 +9806,7 @@ project_pk = 'project_pk_example' # str |
 storey_pk = 'storey_pk_example' # str | 
 
     try:
-        # Delete a 2d model
+        # Delete the relation between a 2d model and a storey
         api_instance.delete_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
     except ApiException as e:
         print("Exception when calling IfcApi->delete_storey_plan: %s\n" % e)
@@ -9861,7 +9863,7 @@ project_pk = 'project_pk_example' # str |
 storey_pk = 'storey_pk_example' # str | 
 
     try:
-        # Delete a 2d model
+        # Delete the relation between a 2d model and a storey
         api_instance.delete_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
     except ApiException as e:
         print("Exception when calling IfcApi->delete_storey_plan: %s\n" % e)
@@ -9918,7 +9920,7 @@ project_pk = 'project_pk_example' # str |
 storey_pk = 'storey_pk_example' # str | 
 
     try:
-        # Delete a 2d model
+        # Delete the relation between a 2d model and a storey
         api_instance.delete_storey_plan(cloud_pk, id, ifc_pk, project_pk, storey_pk)
     except ApiException as e:
         print("Exception when calling IfcApi->delete_storey_plan: %s\n" % e)
@@ -18356,6 +18358,224 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_plan_positioning**
+> PositioningPlan get_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+
+Retrieve the postioning of the plan in the storey
+
+Retrieve the postioning of the plan in the storey Required scopes: ifc:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+
+    try:
+        # Retrieve the postioning of the plan in the storey
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_plan_positioning: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+
+    try:
+        # Retrieve the postioning of the plan in the storey
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_plan_positioning: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+
+    try:
+        # Retrieve the postioning of the plan in the storey
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->get_plan_positioning: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this storey. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **storey_pk** | **str**|  | 
+
+### Return type
+
+[**PositioningPlan**](PositioningPlan.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_processor_handler**
 > ProcessorHandler get_processor_handler(cloud_pk, id, ifc_pk, project_pk)
 
@@ -26331,6 +26551,228 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Layer**](Layer.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_plan_positioning**
+> PositioningPlan update_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+
+Update the postioning of the plan in the storey
+
+Update the postioning of the plan in the storey Required scopes: ifc:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
+
+    try:
+        # Update the postioning of the plan in the storey
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->update_plan_positioning: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
+
+    try:
+        # Update the postioning of the plan in the storey
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->update_plan_positioning: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.IfcApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this storey.
+ifc_pk = 'ifc_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+storey_pk = 'storey_pk_example' # str | 
+data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
+
+    try:
+        # Update the postioning of the plan in the storey
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling IfcApi->update_plan_positioning: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this storey. | 
+ **ifc_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **storey_pk** | **str**|  | 
+ **data** | [**PositioningPlan**](PositioningPlan.md)|  | 
+
+### Return type
+
+[**PositioningPlan**](PositioningPlan.md)
 
 ### Authorization
 

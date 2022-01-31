@@ -39,7 +39,7 @@ class Storey(object):
         'name': 'str',
         'elevation': 'float',
         'order': 'int',
-        'models': 'list[Ifc]',
+        'models': 'list[ModelWithPositioningPlan]',
         'models_unreachable_count': 'int',
         'is_site': 'bool'
     }
@@ -205,7 +205,7 @@ class Storey(object):
 
 
         :return: The models of this Storey.  # noqa: E501
-        :rtype: list[Ifc]
+        :rtype: list[ModelWithPositioningPlan]
         """
         return self._models
 
@@ -215,7 +215,7 @@ class Storey(object):
 
 
         :param models: The models of this Storey.  # noqa: E501
-        :type: list[Ifc]
+        :type: list[ModelWithPositioningPlan]
         """
 
         self._models = models

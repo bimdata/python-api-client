@@ -296,7 +296,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_property_set_element_relations**](docs/IfcApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements**](docs/IfcApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
 *IfcApi* | [**create_space**](docs/IfcApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
-*IfcApi* | [**create_storey_plan**](docs/IfcApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/add | Create a 2d model in storey
+*IfcApi* | [**create_storey_plan**](docs/IfcApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
 *IfcApi* | [**create_system**](docs/IfcApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 *IfcApi* | [**create_zone**](docs/IfcApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space**](docs/IfcApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
@@ -311,7 +311,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_property_set**](docs/IfcApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 *IfcApi* | [**delete_space**](docs/IfcApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
 *IfcApi* | [**delete_storey**](docs/IfcApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Delete a storey of a model
-*IfcApi* | [**delete_storey_plan**](docs/IfcApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/delete | Delete a 2d model
+*IfcApi* | [**delete_storey_plan**](docs/IfcApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
 *IfcApi* | [**delete_system**](docs/IfcApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 *IfcApi* | [**delete_zone**](docs/IfcApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 *IfcApi* | [**delete_zone_space**](docs/IfcApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
@@ -351,6 +351,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_materials**](docs/IfcApi.md#get_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
 *IfcApi* | [**get_model_storey**](docs/IfcApi.md#get_model_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Retrieve a storey of a model
 *IfcApi* | [**get_model_storeys**](docs/IfcApi.md#get_model_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
+*IfcApi* | [**get_plan_positioning**](docs/IfcApi.md#get_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 *IfcApi* | [**get_processor_handler**](docs/IfcApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 *IfcApi* | [**get_processor_handlers**](docs/IfcApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 *IfcApi* | [**get_property_set**](docs/IfcApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -388,6 +389,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_ifc_property_definition**](docs/IfcApi.md#update_ifc_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
 *IfcApi* | [**update_ifc_unit**](docs/IfcApi.md#update_ifc_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
 *IfcApi* | [**update_layer**](docs/IfcApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update some fields of a layer
+*IfcApi* | [**update_plan_positioning**](docs/IfcApi.md#update_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
 *IfcApi* | [**update_processor_handler**](docs/IfcApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 *IfcApi* | [**update_property_set**](docs/IfcApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 *IfcApi* | [**update_space**](docs/IfcApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
@@ -451,6 +453,7 @@ Class | Method | HTTP request | Description
  - [InlineObject1](docs/InlineObject1.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject3](docs/InlineObject3.md)
+ - [InlineObject4](docs/InlineObject4.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [Invitation](docs/Invitation.md)
@@ -464,10 +467,12 @@ Class | Method | HTTP request | Description
  - [MaterialListComponent](docs/MaterialListComponent.md)
  - [MaterialOption](docs/MaterialOption.md)
  - [ModelProperty](docs/ModelProperty.md)
+ - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
  - [Organization](docs/Organization.md)
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [PerspectiveCamera](docs/PerspectiveCamera.md)
  - [Point](docs/Point.md)
+ - [PositioningPlan](docs/PositioningPlan.md)
  - [Priority](docs/Priority.md)
  - [ProcessorHandler](docs/ProcessorHandler.md)
  - [Project](docs/Project.md)
