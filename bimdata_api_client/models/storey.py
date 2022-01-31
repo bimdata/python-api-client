@@ -40,6 +40,7 @@ class Storey(object):
         'elevation': 'float',
         'order': 'int',
         'models': 'list[Ifc]',
+        'models_unreachable_count': 'int',
         'is_site': 'bool'
     }
 
@@ -50,10 +51,11 @@ class Storey(object):
         'elevation': 'elevation',
         'order': 'order',
         'models': 'models',
+        'models_unreachable_count': 'models_unreachable_count',
         'is_site': 'is_site'
     }
 
-    def __init__(self, id=None, ifc_id=None, name=None, elevation=None, order=None, models=None, is_site=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, ifc_id=None, name=None, elevation=None, order=None, models=None, models_unreachable_count=None, is_site=None, local_vars_configuration=None):  # noqa: E501
         """Storey - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -65,6 +67,7 @@ class Storey(object):
         self._elevation = None
         self._order = None
         self._models = None
+        self._models_unreachable_count = None
         self._is_site = None
         self.discriminator = None
 
@@ -78,6 +81,8 @@ class Storey(object):
             self.order = order
         if models is not None:
             self.models = models
+        if models_unreachable_count is not None:
+            self.models_unreachable_count = models_unreachable_count
         if is_site is not None:
             self.is_site = is_site
 
@@ -214,6 +219,27 @@ class Storey(object):
         """
 
         self._models = models
+
+    @property
+    def models_unreachable_count(self):
+        """Gets the models_unreachable_count of this Storey.  # noqa: E501
+
+
+        :return: The models_unreachable_count of this Storey.  # noqa: E501
+        :rtype: int
+        """
+        return self._models_unreachable_count
+
+    @models_unreachable_count.setter
+    def models_unreachable_count(self, models_unreachable_count):
+        """Sets the models_unreachable_count of this Storey.
+
+
+        :param models_unreachable_count: The models_unreachable_count of this Storey.  # noqa: E501
+        :type: int
+        """
+
+        self._models_unreachable_count = models_unreachable_count
 
     @property
     def is_site(self):

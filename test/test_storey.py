@@ -105,6 +105,7 @@ class TestStorey(unittest.TestCase):
                             ], 
                         recommanded_2d_angle = 1.337, )
                     ], 
+                models_unreachable_count = 56, 
                 is_site = True
             )
         else :
