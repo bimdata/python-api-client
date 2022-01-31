@@ -254,7 +254,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_full_topic**
-> FullTopic create_full_topic(projects_pk, data)
+> FullTopic create_full_topic(projects_pk, data, img_format=img_format)
 
 Create a Topic with viewpoints and comments
 
@@ -308,10 +308,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Topic with viewpoints and comments
-        api_response = api_instance.create_full_topic(projects_pk, data)
+        api_response = api_instance.create_full_topic(projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_full_topic: %s\n" % e)
@@ -363,10 +364,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Topic with viewpoints and comments
-        api_response = api_instance.create_full_topic(projects_pk, data)
+        api_response = api_instance.create_full_topic(projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_full_topic: %s\n" % e)
@@ -418,10 +420,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Topic with viewpoints and comments
-        api_response = api_instance.create_full_topic(projects_pk, data)
+        api_response = api_instance.create_full_topic(projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_full_topic: %s\n" % e)
@@ -433,6 +436,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **data** | [**FullTopic**](FullTopic.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -666,7 +670,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_viewpoint**
-> Viewpoint create_viewpoint(projects_pk, topics_guid, data)
+> Viewpoint create_viewpoint(projects_pk, topics_guid, data, img_format=img_format)
 
 Create a Viewpoint
 
@@ -721,10 +725,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Viewpoint
-        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data)
+        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
@@ -777,10 +782,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Viewpoint
-        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data)
+        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
@@ -833,10 +839,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Create a Viewpoint
-        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data)
+        api_response = api_instance.create_viewpoint(projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->create_viewpoint: %s\n" % e)
@@ -849,6 +856,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -1286,7 +1294,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_viewpoint**
-> delete_viewpoint(guid, projects_pk, topics_guid)
+> delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
 
 Delete a Viewpoint
 
@@ -1341,10 +1349,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Delete a Viewpoint
-        api_instance.delete_viewpoint(guid, projects_pk, topics_guid)
+        api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
     except ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 ```
@@ -1396,10 +1405,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Delete a Viewpoint
-        api_instance.delete_viewpoint(guid, projects_pk, topics_guid)
+        api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
     except ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 ```
@@ -1451,10 +1461,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Delete a Viewpoint
-        api_instance.delete_viewpoint(guid, projects_pk, topics_guid)
+        api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
     except ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 ```
@@ -1466,6 +1477,7 @@ Name | Type | Description  | Notes
  **guid** | [**str**](.md)|  | 
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -2123,7 +2135,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_full_topic**
-> FullTopic full_update_full_topic(guid, projects_pk, data)
+> FullTopic full_update_full_topic(guid, projects_pk, data, img_format=img_format)
 
 Update all fields of a topic
 
@@ -2178,10 +2190,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a topic
-        api_response = api_instance.full_update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.full_update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_full_topic: %s\n" % e)
@@ -2234,10 +2247,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a topic
-        api_response = api_instance.full_update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.full_update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_full_topic: %s\n" % e)
@@ -2290,10 +2304,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a topic
-        api_response = api_instance.full_update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.full_update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_full_topic: %s\n" % e)
@@ -2306,6 +2321,7 @@ Name | Type | Description  | Notes
  **guid** | [**str**](.md)|  | 
  **projects_pk** | **str**|  | 
  **data** | [**FullTopic**](FullTopic.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -2543,7 +2559,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **full_update_viewpoint**
-> Viewpoint full_update_viewpoint(guid, projects_pk, topics_guid, data)
+> Viewpoint full_update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
 
 Update all fields of a Viewpoint
 
@@ -2599,10 +2615,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a Viewpoint
-        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_viewpoint: %s\n" % e)
@@ -2656,10 +2673,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a Viewpoint
-        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_viewpoint: %s\n" % e)
@@ -2713,10 +2731,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update all fields of a Viewpoint
-        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.full_update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->full_update_viewpoint: %s\n" % e)
@@ -2730,6 +2749,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -3983,7 +4003,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_full_topic**
-> FullTopic get_full_topic(guid, projects_pk)
+> FullTopic get_full_topic(guid, projects_pk, img_format=img_format)
 
 Retrieve a full topic
 
@@ -4037,10 +4057,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a full topic
-        api_response = api_instance.get_full_topic(guid, projects_pk)
+        api_response = api_instance.get_full_topic(guid, projects_pk, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topic: %s\n" % e)
@@ -4092,10 +4113,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a full topic
-        api_response = api_instance.get_full_topic(guid, projects_pk)
+        api_response = api_instance.get_full_topic(guid, projects_pk, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topic: %s\n" % e)
@@ -4147,10 +4169,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a full topic
-        api_response = api_instance.get_full_topic(guid, projects_pk)
+        api_response = api_instance.get_full_topic(guid, projects_pk, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topic: %s\n" % e)
@@ -4162,6 +4185,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | [**str**](.md)|  | 
  **projects_pk** | **str**|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -4189,7 +4213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_full_topics**
-> list[FullTopic] get_full_topics(projects_pk, ifcs=ifcs, format=format)
+> list[FullTopic] get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
 
 Retrieve all full topics
 
@@ -4244,10 +4268,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4300,10 +4325,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4356,10 +4382,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 'projects_pk_example' # str | 
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4372,6 +4399,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **ifcs** | **str**| Filter the returned list by ifcs | [optional] 
  **format** | **str**| Filter the returned list by format | [optional] 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -5025,7 +5053,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topic_viewpoints**
-> list[Viewpoint] get_topic_viewpoints(projects_pk, topics_guid)
+> list[Viewpoint] get_topic_viewpoints(projects_pk, topics_guid, img_format=img_format)
 
 Retrieve all viewpoints attached to the topic
 
@@ -5079,10 +5107,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all viewpoints attached to the topic
-        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
@@ -5134,10 +5163,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all viewpoints attached to the topic
-        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
@@ -5189,10 +5219,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all viewpoints attached to the topic
-        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_topic_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topic_viewpoints: %s\n" % e)
@@ -5204,6 +5235,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -5637,7 +5669,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoint**
-> Viewpoint get_viewpoint(guid, projects_pk, topics_guid)
+> Viewpoint get_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
 
 Retrieve a Viewpoint
 
@@ -5692,10 +5724,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a Viewpoint
-        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
@@ -5748,10 +5781,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a Viewpoint
-        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
@@ -5804,10 +5838,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve a Viewpoint
-        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoint: %s\n" % e)
@@ -5820,6 +5855,7 @@ Name | Type | Description  | Notes
  **guid** | [**str**](.md)|  | 
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -5847,7 +5883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_viewpoints**
-> list[Viewpoint] get_viewpoints(projects_pk, topics_guid)
+> list[Viewpoint] get_viewpoints(projects_pk, topics_guid, img_format=img_format)
 
 Retrieve all Viewpoints of a topic
 
@@ -5901,10 +5937,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all Viewpoints of a topic
-        api_response = api_instance.get_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
@@ -5956,10 +5993,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all Viewpoints of a topic
-        api_response = api_instance.get_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
@@ -6011,10 +6049,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all Viewpoints of a topic
-        api_response = api_instance.get_viewpoints(projects_pk, topics_guid)
+        api_response = api_instance.get_viewpoints(projects_pk, topics_guid, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_viewpoints: %s\n" % e)
@@ -6026,6 +6065,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -7092,7 +7132,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_full_topic**
-> FullTopic update_full_topic(guid, projects_pk, data)
+> FullTopic update_full_topic(guid, projects_pk, data, img_format=img_format)
 
 Update some fields of a topic
 
@@ -7147,10 +7187,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a topic
-        api_response = api_instance.update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_full_topic: %s\n" % e)
@@ -7203,10 +7244,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a topic
-        api_response = api_instance.update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_full_topic: %s\n" % e)
@@ -7259,10 +7301,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = 'guid_example' # str | 
 projects_pk = 'projects_pk_example' # str | 
 data = bimdata_api_client.FullTopic() # FullTopic | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a topic
-        api_response = api_instance.update_full_topic(guid, projects_pk, data)
+        api_response = api_instance.update_full_topic(guid, projects_pk, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_full_topic: %s\n" % e)
@@ -7275,6 +7318,7 @@ Name | Type | Description  | Notes
  **guid** | [**str**](.md)|  | 
  **projects_pk** | **str**|  | 
  **data** | [**FullTopic**](FullTopic.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 
@@ -7512,7 +7556,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_viewpoint**
-> Viewpoint update_viewpoint(guid, projects_pk, topics_guid, data)
+> Viewpoint update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
 
 Update some fields of a Viewpoint
 
@@ -7568,10 +7612,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a Viewpoint
-        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
@@ -7625,10 +7670,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a Viewpoint
-        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
@@ -7682,10 +7728,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 projects_pk = 'projects_pk_example' # str | 
 topics_guid = 'topics_guid_example' # str | 
 data = bimdata_api_client.Viewpoint() # Viewpoint | 
+img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Update some fields of a Viewpoint
-        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data)
+        api_response = api_instance.update_viewpoint(guid, projects_pk, topics_guid, data, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->update_viewpoint: %s\n" % e)
@@ -7699,6 +7746,7 @@ Name | Type | Description  | Notes
  **projects_pk** | **str**|  | 
  **topics_guid** | **str**|  | 
  **data** | [**Viewpoint**](Viewpoint.md)|  | 
+ **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
 
 ### Return type
 

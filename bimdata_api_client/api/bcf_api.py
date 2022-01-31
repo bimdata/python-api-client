@@ -185,6 +185,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -211,6 +212,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -229,7 +231,8 @@ class BcfApi(object):
 
         all_params = [
             'projects_pk',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -264,6 +267,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -440,6 +445,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -467,6 +473,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -486,7 +493,8 @@ class BcfApi(object):
         all_params = [
             'projects_pk',
             'topics_guid',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -527,6 +535,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -823,6 +833,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -850,6 +861,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -869,7 +881,8 @@ class BcfApi(object):
         all_params = [
             'guid',
             'projects_pk',
-            'topics_guid'
+            'topics_guid',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -912,6 +925,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -1347,6 +1362,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1374,6 +1390,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1393,7 +1410,8 @@ class BcfApi(object):
         all_params = [
             'guid',
             'projects_pk',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -1434,6 +1452,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -1620,6 +1640,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1648,6 +1669,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1668,7 +1690,8 @@ class BcfApi(object):
             'guid',
             'projects_pk',
             'topics_guid',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -1715,6 +1738,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -2483,6 +2508,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str guid: (required)
         :param str projects_pk: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2509,6 +2535,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str guid: (required)
         :param str projects_pk: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2527,7 +2554,8 @@ class BcfApi(object):
 
         all_params = [
             'guid',
-            'projects_pk'
+            'projects_pk',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -2564,6 +2592,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -2607,6 +2637,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2634,6 +2665,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2653,7 +2685,8 @@ class BcfApi(object):
         all_params = [
             'projects_pk',
             'ifcs',
-            'format'
+            'format',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -2688,6 +2721,8 @@ class BcfApi(object):
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
         if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501
             query_params.append(('format', local_var_params['format']))  # noqa: E501
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -3117,6 +3152,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3143,6 +3179,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3161,7 +3198,8 @@ class BcfApi(object):
 
         all_params = [
             'projects_pk',
-            'topics_guid'
+            'topics_guid',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -3198,6 +3236,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -3470,6 +3510,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3497,6 +3538,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3516,7 +3558,8 @@ class BcfApi(object):
         all_params = [
             'guid',
             'projects_pk',
-            'topics_guid'
+            'topics_guid',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -3559,6 +3602,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -3601,6 +3646,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -3627,6 +3673,7 @@ class BcfApi(object):
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
         :param str topics_guid: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3645,7 +3692,8 @@ class BcfApi(object):
 
         all_params = [
             'projects_pk',
-            'topics_guid'
+            'topics_guid',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -3682,6 +3730,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -4385,6 +4435,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4412,6 +4463,7 @@ class BcfApi(object):
         :param str guid: (required)
         :param str projects_pk: (required)
         :param FullTopic data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4431,7 +4483,8 @@ class BcfApi(object):
         all_params = [
             'guid',
             'projects_pk',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -4472,6 +4525,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
@@ -4658,6 +4713,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4686,6 +4742,7 @@ class BcfApi(object):
         :param str projects_pk: (required)
         :param str topics_guid: (required)
         :param Viewpoint data: (required)
+        :param str img_format: All snapshot_data will be returned as url instead of base64
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4706,7 +4763,8 @@ class BcfApi(object):
             'guid',
             'projects_pk',
             'topics_guid',
-            'data'
+            'data',
+            'img_format'
         ]
         all_params.extend(
             [
@@ -4753,6 +4811,8 @@ class BcfApi(object):
             path_params['topics_guid'] = local_var_params['topics_guid']  # noqa: E501
 
         query_params = []
+        if 'img_format' in local_var_params and local_var_params['img_format'] is not None:  # noqa: E501
+            query_params.append(('img_format', local_var_params['img_format']))  # noqa: E501
 
         header_params = {}
 
