@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v5.21.0 (2022-01-31)
+### Feature
+* Add img_format=url in BCF routes ([#472](https://github.com/bimdata/python-api-client/issues/472)) ([`9cef689`](https://github.com/bimdata/python-api-client/commit/9cef6891bd435d25098035e413489bb6735515c2))
+
 ## v5.20.1 (2022-01-28)
 ### Fix
 * One storey site by building (#469)
