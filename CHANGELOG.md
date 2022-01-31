@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v5.21.1 (2022-01-31)
+### Fix
+* Filter storey models with permissions and add models_unreachable_count field (#470)
+
+* filter storey models with permissions
+
+* fix test add model to storey
+
+* rework storey serializer ([`b68c55a`](https://github.com/bimdata/python-api-client/commit/b68c55a4665fda225fd205dac533f64d9dca9ee8))
+
 ## v5.21.0 (2022-01-31)
 ### Feature
 * Add img_format=url in BCF routes ([#472](https://github.com/bimdata/python-api-client/issues/472)) ([`9cef689`](https://github.com/bimdata/python-api-client/commit/9cef6891bd435d25098035e413489bb6735515c2))
