@@ -2,6 +2,79 @@
 
 <!--next-version-placeholder-->
 
+## v7.0.0 (2022-02-04)
+### Breaking
+* Rename ifc to model (#477)
+
+* filter storey models with permissions
+
+* duplicate ifc routes and update tags ViewSet
+
+* add deprecated ifc views and filter by type
+
+* rename ifc operations
+
+* rename Ifc table
+
+* rename some Ifc classes
+
+* duplicate ifc test and change reverse url name
+
+* update foreignkeys
+
+* rename ifc_pk in model_pk
+
+* update route name
+
+* update scopes
+
+* fix swagger dupplicate
+
+* fix test projectAccessToken
+
+* actually send keycloak scope create
+
+* restore ifc_guid
+
+* don't unzip unzipped structure files
+
+* fix bad rebase ([`6d48496`](https://github.com/bimdata/python-api-client/commit/6d48496db3d7b9f80e1ffcfe407873046383e516))
+* rename ifc to model (#477)
+
+* filter storey models with permissions
+
+* duplicate ifc routes and update tags ViewSet
+
+* add deprecated ifc views and filter by type
+
+* rename ifc operations
+
+* rename Ifc table
+
+* rename some Ifc classes
+
+* duplicate ifc test and change reverse url name
+
+* update foreignkeys
+
+* rename ifc_pk in model_pk
+
+* update route name
+
+* update scopes
+
+* fix swagger dupplicate
+
+* fix test projectAccessToken
+
+* actually send keycloak scope create
+
+* restore ifc_guid
+
+* don't unzip unzipped structure files
+
+* fix bad rebase ([`6d48496`](https://github.com/bimdata/python-api-client/commit/6d48496db3d7b9f80e1ffcfe407873046383e516))
+
 ## v6.0.0 (2022-02-04)
 ### Breaking
 * Sync with js libs ([`eb430f5`](https://github.com/bimdata/python-api-client/commit/eb430f5f2a77313a510db067276c7fe520c28adc))
