@@ -2,6 +2,11 @@
 
 <!--next-version-placeholder-->
 
+## v6.0.0 (2022-02-04)
+### Breaking
+* Sync with js libs ([`eb430f5`](https://github.com/bimdata/python-api-client/commit/eb430f5f2a77313a510db067276c7fe520c28adc))
+* sync with js libs ([`eb430f5`](https://github.com/bimdata/python-api-client/commit/eb430f5f2a77313a510db067276c7fe520c28adc))
+
 ## v5.22.0 (2022-01-31)
 ### Feature
 * 2d positioning (#471)
