@@ -1,4 +1,4 @@
-# IfcErrors
+# ModelErrors
 
 ## Properties
 Name | Type | Description | Notes

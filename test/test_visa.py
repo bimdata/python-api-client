@@ -85,6 +85,8 @@ class TestVisa(unittest.TestCase):
                     size = 0, 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                    model_source = 'UPLOAD', 
+                    model_id = '0', 
                     ifc_source = 'UPLOAD', 
                     ifc_id = '0', 
                     user_permission = 56, ), 

@@ -43,6 +43,7 @@ class FullTopic(object):
         'description': 'str',
         'reference_links': 'list[str]',
         'ifcs': 'list[int]',
+        'models': 'list[int]',
         'labels': 'list[str]',
         'topic_type': 'str',
         'topic_status': 'str',
@@ -67,6 +68,7 @@ class FullTopic(object):
         'description': 'description',
         'reference_links': 'reference_links',
         'ifcs': 'ifcs',
+        'models': 'models',
         'labels': 'labels',
         'topic_type': 'topic_type',
         'topic_status': 'topic_status',
@@ -81,7 +83,7 @@ class FullTopic(object):
         'project': 'project'
     }
 
-    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, due_date=None, comments=None, viewpoints=None, project=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, guid=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, title=None, description=None, reference_links=None, ifcs=None, models=None, labels=None, topic_type=None, topic_status=None, stage=None, priority=None, index=None, assigned_to=None, format=None, due_date=None, comments=None, viewpoints=None, project=None, local_vars_configuration=None):  # noqa: E501
         """FullTopic - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -96,6 +98,7 @@ class FullTopic(object):
         self._description = None
         self._reference_links = None
         self._ifcs = None
+        self._models = None
         self._labels = None
         self._topic_type = None
         self._topic_status = None
@@ -123,6 +126,8 @@ class FullTopic(object):
         self.reference_links = reference_links
         if ifcs is not None:
             self.ifcs = ifcs
+        if models is not None:
+            self.models = models
         self.labels = labels
         self.topic_type = topic_type
         self.topic_status = topic_status
@@ -322,6 +327,7 @@ class FullTopic(object):
     def ifcs(self):
         """Gets the ifcs of this FullTopic.  # noqa: E501
 
+        DEPRECATED: Use 'models' instead  # noqa: E501
 
         :return: The ifcs of this FullTopic.  # noqa: E501
         :rtype: list[int]
@@ -332,12 +338,34 @@ class FullTopic(object):
     def ifcs(self, ifcs):
         """Sets the ifcs of this FullTopic.
 
+        DEPRECATED: Use 'models' instead  # noqa: E501
 
         :param ifcs: The ifcs of this FullTopic.  # noqa: E501
         :type: list[int]
         """
 
         self._ifcs = ifcs
+
+    @property
+    def models(self):
+        """Gets the models of this FullTopic.  # noqa: E501
+
+
+        :return: The models of this FullTopic.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._models
+
+    @models.setter
+    def models(self, models):
+        """Sets the models of this FullTopic.
+
+
+        :param models: The models of this FullTopic.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._models = models
 
     @property
     def labels(self):

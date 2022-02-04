@@ -35,7 +35,7 @@ class Storey(object):
     """
     openapi_types = {
         'id': 'int',
-        'ifc_id': 'str',
+        'building_id': 'str',
         'name': 'str',
         'elevation': 'float',
         'order': 'int',
@@ -46,7 +46,7 @@ class Storey(object):
 
     attribute_map = {
         'id': 'id',
-        'ifc_id': 'ifc_id',
+        'building_id': 'building_id',
         'name': 'name',
         'elevation': 'elevation',
         'order': 'order',
@@ -55,14 +55,14 @@ class Storey(object):
         'is_site': 'is_site'
     }
 
-    def __init__(self, id=None, ifc_id=None, name=None, elevation=None, order=None, models=None, models_unreachable_count=None, is_site=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, building_id=None, name=None, elevation=None, order=None, models=None, models_unreachable_count=None, is_site=None, local_vars_configuration=None):  # noqa: E501
         """Storey - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
         self._id = None
-        self._ifc_id = None
+        self._building_id = None
         self._name = None
         self._elevation = None
         self._order = None
@@ -73,8 +73,8 @@ class Storey(object):
 
         if id is not None:
             self.id = id
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
+        if building_id is not None:
+            self.building_id = building_id
         self.name = name
         self.elevation = elevation
         if order is not None:
@@ -108,25 +108,25 @@ class Storey(object):
         self._id = id
 
     @property
-    def ifc_id(self):
-        """Gets the ifc_id of this Storey.  # noqa: E501
+    def building_id(self):
+        """Gets the building_id of this Storey.  # noqa: E501
 
 
-        :return: The ifc_id of this Storey.  # noqa: E501
+        :return: The building_id of this Storey.  # noqa: E501
         :rtype: str
         """
-        return self._ifc_id
+        return self._building_id
 
-    @ifc_id.setter
-    def ifc_id(self, ifc_id):
-        """Sets the ifc_id of this Storey.
+    @building_id.setter
+    def building_id(self, building_id):
+        """Sets the building_id of this Storey.
 
 
-        :param ifc_id: The ifc_id of this Storey.  # noqa: E501
+        :param building_id: The building_id of this Storey.  # noqa: E501
         :type: str
         """
 
-        self._ifc_id = ifc_id
+        self._building_id = building_id
 
     @property
     def name(self):

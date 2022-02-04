@@ -50,6 +50,7 @@ class Topic(object):
         'description': 'str',
         'due_date': 'datetime',
         'ifcs': 'list[int]',
+        'models': 'list[int]',
         'format': 'str',
         'index': 'int',
         'project': 'int'
@@ -72,12 +73,13 @@ class Topic(object):
         'description': 'description',
         'due_date': 'due_date',
         'ifcs': 'ifcs',
+        'models': 'models',
         'format': 'format',
         'index': 'index',
         'project': 'project'
     }
 
-    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, format=None, index=None, project=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, guid=None, topic_type=None, topic_status=None, title=None, priority=None, labels=None, creation_date=None, creation_author=None, modified_date=None, modified_author=None, assigned_to=None, reference_links=None, stage=None, description=None, due_date=None, ifcs=None, models=None, format=None, index=None, project=None, local_vars_configuration=None):  # noqa: E501
         """Topic - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -99,6 +101,7 @@ class Topic(object):
         self._description = None
         self._due_date = None
         self._ifcs = None
+        self._models = None
         self._format = None
         self._index = None
         self._project = None
@@ -124,6 +127,8 @@ class Topic(object):
         self.due_date = due_date
         if ifcs is not None:
             self.ifcs = ifcs
+        if models is not None:
+            self.models = models
         if format is not None:
             self.format = format
         self.index = index
@@ -462,6 +467,7 @@ class Topic(object):
     def ifcs(self):
         """Gets the ifcs of this Topic.  # noqa: E501
 
+        DEPRECATED: Use 'models' instead  # noqa: E501
 
         :return: The ifcs of this Topic.  # noqa: E501
         :rtype: list[int]
@@ -472,12 +478,34 @@ class Topic(object):
     def ifcs(self, ifcs):
         """Sets the ifcs of this Topic.
 
+        DEPRECATED: Use 'models' instead  # noqa: E501
 
         :param ifcs: The ifcs of this Topic.  # noqa: E501
         :type: list[int]
         """
 
         self._ifcs = ifcs
+
+    @property
+    def models(self):
+        """Gets the models of this Topic.  # noqa: E501
+
+
+        :return: The models of this Topic.  # noqa: E501
+        :rtype: list[int]
+        """
+        return self._models
+
+    @models.setter
+    def models(self, models):
+        """Sets the models of this Topic.
+
+
+        :param models: The models of this Topic.  # noqa: E501
+        :type: list[int]
+        """
+
+        self._models = models
 
     @property
     def format(self):

@@ -4213,7 +4213,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_full_topics**
-> list[FullTopic] get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
+> list[FullTopic] get_full_topics(projects_pk, models=models, ifcs=ifcs, format=format, img_format=img_format)
 
 Retrieve all full topics
 
@@ -4266,13 +4266,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
+        api_response = api_instance.get_full_topics(projects_pk, models=models, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4323,13 +4324,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
+        api_response = api_instance.get_full_topics(projects_pk, models=models, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4380,13 +4382,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 img_format = 'img_format_example' # str | All snapshot_data will be returned as url instead of base64 (optional)
 
     try:
         # Retrieve all full topics
-        api_response = api_instance.get_full_topics(projects_pk, ifcs=ifcs, format=format, img_format=img_format)
+        api_response = api_instance.get_full_topics(projects_pk, models=models, ifcs=ifcs, format=format, img_format=img_format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_full_topics: %s\n" % e)
@@ -4397,6 +4400,7 @@ img_format = 'img_format_example' # str | All snapshot_data will be returned as 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
+ **models** | **str**| Filter the returned list by models | [optional] 
  **ifcs** | **str**| Filter the returned list by ifcs | [optional] 
  **format** | **str**| Filter the returned list by format | [optional] 
  **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] 
@@ -5263,7 +5267,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_topics**
-> list[Topic] get_topics(projects_pk, ifcs=ifcs, format=format)
+> list[Topic] get_topics(projects_pk, models=models, ifcs=ifcs, format=format)
 
 Retrieve all topics
 
@@ -5316,12 +5320,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 
     try:
         # Retrieve all topics
-        api_response = api_instance.get_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_topics(projects_pk, models=models, ifcs=ifcs, format=format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
@@ -5372,12 +5377,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 
     try:
         # Retrieve all topics
-        api_response = api_instance.get_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_topics(projects_pk, models=models, ifcs=ifcs, format=format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
@@ -5428,12 +5434,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
     projects_pk = 'projects_pk_example' # str | 
+models = 'models_example' # str | Filter the returned list by models (optional)
 ifcs = 'ifcs_example' # str | Filter the returned list by ifcs (optional)
 format = 'format_example' # str | Filter the returned list by format (optional)
 
     try:
         # Retrieve all topics
-        api_response = api_instance.get_topics(projects_pk, ifcs=ifcs, format=format)
+        api_response = api_instance.get_topics(projects_pk, models=models, ifcs=ifcs, format=format)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_topics: %s\n" % e)
@@ -5444,6 +5451,7 @@ format = 'format_example' # str | Filter the returned list by format (optional)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **str**|  | 
+ **models** | **str**| Filter the returned list by models | [optional] 
  **ifcs** | **str**| Filter the returned list by ifcs | [optional] 
  **format** | **str**| Filter the returned list by format | [optional] 
 

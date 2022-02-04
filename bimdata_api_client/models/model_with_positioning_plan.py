@@ -39,7 +39,7 @@ class ModelWithPositioningPlan(object):
         'rotate_z': 'float',
         'scale': 'float',
         'opacity': 'float',
-        'plan': 'Ifc'
+        'plan': 'Model'
     }
 
     attribute_map = {
@@ -184,7 +184,7 @@ class ModelWithPositioningPlan(object):
 
 
         :return: The plan of this ModelWithPositioningPlan.  # noqa: E501
-        :rtype: Ifc
+        :rtype: Model
         """
         return self._plan
 
@@ -194,7 +194,7 @@ class ModelWithPositioningPlan(object):
 
 
         :param plan: The plan of this ModelWithPositioningPlan.  # noqa: E501
-        :type: Ifc
+        :type: Model
         """
 
         self._plan = plan

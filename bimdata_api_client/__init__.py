@@ -22,6 +22,7 @@ from bimdata_api_client.api.bcf_api import BcfApi
 from bimdata_api_client.api.checker_api import CheckerApi
 from bimdata_api_client.api.collaboration_api import CollaborationApi
 from bimdata_api_client.api.ifc_api import IfcApi
+from bimdata_api_client.api.model_api import ModelApi
 from bimdata_api_client.api.sso_api import SsoApi
 from bimdata_api_client.api.webhook_api import WebhookApi
 
@@ -61,14 +62,11 @@ from bimdata_api_client.models.folder_group_permission import FolderGroupPermiss
 from bimdata_api_client.models.folder_user_project import FolderUserProject
 from bimdata_api_client.models.full_topic import FullTopic
 from bimdata_api_client.models.group_folder import GroupFolder
-from bimdata_api_client.models.ifc import Ifc
 from bimdata_api_client.models.ifc_access_token import IfcAccessToken
 from bimdata_api_client.models.ifc_checker import IfcChecker
 from bimdata_api_client.models.ifc_checker_checkplan import IfcCheckerCheckplan
 from bimdata_api_client.models.ifc_checker_results import IfcCheckerResults
-from bimdata_api_client.models.ifc_errors import IfcErrors
 from bimdata_api_client.models.ifc_export import IfcExport
-from bimdata_api_client.models.ifc_files import IfcFiles
 from bimdata_api_client.models.ifc_merge import IfcMerge
 from bimdata_api_client.models.ifc_optimize import IfcOptimize
 from bimdata_api_client.models.inline_object import InlineObject
@@ -76,6 +74,7 @@ from bimdata_api_client.models.inline_object1 import InlineObject1
 from bimdata_api_client.models.inline_object2 import InlineObject2
 from bimdata_api_client.models.inline_object3 import InlineObject3
 from bimdata_api_client.models.inline_object4 import InlineObject4
+from bimdata_api_client.models.inline_object5 import InlineObject5
 from bimdata_api_client.models.inline_response200 import InlineResponse200
 from bimdata_api_client.models.inline_response2001 import InlineResponse2001
 from bimdata_api_client.models.invitation import Invitation
@@ -88,6 +87,9 @@ from bimdata_api_client.models.marketplace_app_image import MarketplaceAppImage
 from bimdata_api_client.models.material import Material
 from bimdata_api_client.models.material_list_component import MaterialListComponent
 from bimdata_api_client.models.material_option import MaterialOption
+from bimdata_api_client.models.model import Model
+from bimdata_api_client.models.model_errors import ModelErrors
+from bimdata_api_client.models.model_files import ModelFiles
 from bimdata_api_client.models.model_property import ModelProperty
 from bimdata_api_client.models.model_with_positioning_plan import ModelWithPositioningPlan
 from bimdata_api_client.models.organization import Organization

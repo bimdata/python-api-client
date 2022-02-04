@@ -37,6 +37,7 @@ class InlineObject1(object):
         'id': 'int',
         'parent_id': 'int',
         'type': 'str',
+        'nature': 'str',
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
@@ -50,6 +51,7 @@ class InlineObject1(object):
         'id': 'id',
         'parent_id': 'parent_id',
         'type': 'type',
+        'nature': 'nature',
         'name': 'name',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
@@ -59,7 +61,7 @@ class InlineObject1(object):
         'user_permission': 'user_permission'
     }
 
-    def __init__(self, id=None, parent_id=None, type=None, name=None, created_at=None, updated_at=None, created_by=None, groups_permissions=None, default_permission=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent_id=None, type=None, nature=None, name=None, created_at=None, updated_at=None, created_by=None, groups_permissions=None, default_permission=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject1 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -68,6 +70,7 @@ class InlineObject1(object):
         self._id = None
         self._parent_id = None
         self._type = None
+        self._nature = None
         self._name = None
         self._created_at = None
         self._updated_at = None
@@ -82,6 +85,8 @@ class InlineObject1(object):
         self.parent_id = parent_id
         if type is not None:
             self.type = type
+        if nature is not None:
+            self.nature = nature
         self.name = name
         if created_at is not None:
             self.created_at = created_at
@@ -142,7 +147,7 @@ class InlineObject1(object):
     def type(self):
         """Gets the type of this InlineObject1.  # noqa: E501
 
-        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+        DEPRECATED: Use 'nature' instead. Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
 
         :return: The type of this InlineObject1.  # noqa: E501
         :rtype: str
@@ -153,13 +158,36 @@ class InlineObject1(object):
     def type(self, type):
         """Sets the type of this InlineObject1.
 
-        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+        DEPRECATED: Use 'nature' instead. Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
 
         :param type: The type of this InlineObject1.  # noqa: E501
         :type: str
         """
 
         self._type = type
+
+    @property
+    def nature(self):
+        """Gets the nature of this InlineObject1.  # noqa: E501
+
+        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+
+        :return: The nature of this InlineObject1.  # noqa: E501
+        :rtype: str
+        """
+        return self._nature
+
+    @nature.setter
+    def nature(self, nature):
+        """Sets the nature of this InlineObject1.
+
+        Value is \"Folder\". It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+
+        :param nature: The nature of this InlineObject1.  # noqa: E501
+        :type: str
+        """
+
+        self._nature = nature
 
     @property
     def name(self):

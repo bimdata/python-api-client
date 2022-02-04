@@ -4,22 +4,22 @@ All URIs are relative to *https://api.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**create_checker**](CheckerApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
-[**create_checker_result**](CheckerApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
+[**create_checker**](CheckerApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker | Create a checker to a model
+[**create_checker_result**](CheckerApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result | Create a CheckerResult
 [**create_checkplan**](CheckerApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Create a Checkplan
 [**create_rule**](CheckerApi.md#create_rule) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Create a Rule
 [**create_rule_component**](CheckerApi.md#create_rule_component) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Create a RuleComponent
 [**create_ruleset**](CheckerApi.md#create_ruleset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Create a Ruleset
-[**delete_checker**](CheckerApi.md#delete_checker) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
-[**delete_checker_result**](CheckerApi.md#delete_checker_result) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
+[**delete_checker**](CheckerApi.md#delete_checker) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Delete a checker of a model
+[**delete_checker_result**](CheckerApi.md#delete_checker_result) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
 [**delete_checkplan**](CheckerApi.md#delete_checkplan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Delete a Checkplan
 [**delete_rule**](CheckerApi.md#delete_rule) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Delete a Rule
 [**delete_rule_component**](CheckerApi.md#delete_rule_component) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Delete a RuleComponent
 [**delete_ruleset**](CheckerApi.md#delete_ruleset) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Delete a Ruleset
-[**get_checker**](CheckerApi.md#get_checker) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
-[**get_checker_result**](CheckerApi.md#get_checker_result) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
-[**get_checker_results**](CheckerApi.md#get_checker_results) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
-[**get_checkers**](CheckerApi.md#get_checkers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Retrieve all checkers of a model
+[**get_checker**](CheckerApi.md#get_checker) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Retrieve a checker of a model
+[**get_checker_result**](CheckerApi.md#get_checker_result) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
+[**get_checker_results**](CheckerApi.md#get_checker_results) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
+[**get_checkers**](CheckerApi.md#get_checkers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker | Retrieve all checkers of a model
 [**get_checkplan**](CheckerApi.md#get_checkplan) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Retrieve one Checkplan
 [**get_checkplans**](CheckerApi.md#get_checkplans) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Retrieve all Checkplans
 [**get_rule**](CheckerApi.md#get_rule) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Retrieve one Rule
@@ -28,9 +28,9 @@ Method | HTTP request | Description
 [**get_rules**](CheckerApi.md#get_rules) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Retrieve all Rules
 [**get_ruleset**](CheckerApi.md#get_ruleset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Retrieve one Ruleset
 [**get_rulesets**](CheckerApi.md#get_rulesets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Retrieve all Rulesets
-[**launch_new_check**](CheckerApi.md#launch_new_check) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check | Launch a new check on the model
-[**update_checker**](CheckerApi.md#update_checker) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
-[**update_checker_result**](CheckerApi.md#update_checker_result) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
+[**launch_new_check**](CheckerApi.md#launch_new_check) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}/launch-check | Launch a new check on the model
+[**update_checker**](CheckerApi.md#update_checker) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Update some fields of a checker of a model
+[**update_checker_result**](CheckerApi.md#update_checker_result) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
 [**update_checkplan**](CheckerApi.md#update_checkplan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update some fields of a Checkplan
 [**update_rule**](CheckerApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
 [**update_rule_component**](CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
@@ -38,7 +38,7 @@ Method | HTTP request | Description
 
 
 # **create_checker**
-> IfcChecker create_checker(cloud_pk, ifc_pk, project_pk, data)
+> IfcChecker create_checker(cloud_pk, model_pk, project_pk, data)
 
 Create a checker to a model
 
@@ -91,13 +91,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Create a checker to a model
-        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker: %s\n" % e)
@@ -148,13 +148,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Create a checker to a model
-        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker: %s\n" % e)
@@ -205,13 +205,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Create a checker to a model
-        api_response = api_instance.create_checker(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker: %s\n" % e)
@@ -222,7 +222,7 @@ data = bimdata_api_client.IfcChecker() # IfcChecker |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
@@ -252,7 +252,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_checker_result**
-> CheckerResult create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+> CheckerResult create_checker_result(checker_pk, cloud_pk, model_pk, project_pk, data)
 
 Create a CheckerResult
 
@@ -306,13 +306,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Create a CheckerResult
-        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
@@ -364,13 +364,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Create a CheckerResult
-        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
@@ -422,13 +422,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Create a CheckerResult
-        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_checker_result(checker_pk, cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->create_checker_result: %s\n" % e)
@@ -440,7 +440,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
 
@@ -1334,7 +1334,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checker**
-> delete_checker(cloud_pk, id, ifc_pk, project_pk)
+> delete_checker(cloud_pk, id, model_pk, project_pk)
 
 Delete a checker of a model
 
@@ -1388,12 +1388,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a checker of a model
-        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
@@ -1444,12 +1444,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a checker of a model
-        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
@@ -1500,12 +1500,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a checker of a model
-        api_instance.delete_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
@@ -1516,7 +1516,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -1545,7 +1545,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checker_result**
-> delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+> delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
 
 Delete a CheckerResult
 
@@ -1600,12 +1600,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a CheckerResult
-        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
@@ -1657,12 +1657,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a CheckerResult
-        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
@@ -1714,12 +1714,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a CheckerResult
-        api_instance.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
         print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
@@ -1731,7 +1731,7 @@ Name | Type | Description  | Notes
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -2612,7 +2612,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker**
-> IfcChecker get_checker(cloud_pk, id, ifc_pk, project_pk)
+> IfcChecker get_checker(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a checker of a model
 
@@ -2666,12 +2666,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a checker of a model
-        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker: %s\n" % e)
@@ -2723,12 +2723,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a checker of a model
-        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker: %s\n" % e)
@@ -2780,12 +2780,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a checker of a model
-        api_response = api_instance.get_checker(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker: %s\n" % e)
@@ -2797,7 +2797,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -2826,7 +2826,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker_result**
-> CheckerResult get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+> CheckerResult get_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
 
 Retrieve one CheckerResult
 
@@ -2881,12 +2881,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
@@ -2939,12 +2939,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
@@ -2997,12 +2997,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_result: %s\n" % e)
@@ -3015,7 +3015,7 @@ Name | Type | Description  | Notes
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3044,7 +3044,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checker_results**
-> list[CheckerResult] get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+> list[CheckerResult] get_checker_results(checker_pk, cloud_pk, model_pk, project_pk)
 
 Retrieve all CheckerResults
 
@@ -3098,12 +3098,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
@@ -3155,12 +3155,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
@@ -3212,12 +3212,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checker_results(checker_pk, cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checker_results: %s\n" % e)
@@ -3229,7 +3229,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -3258,7 +3258,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_checkers**
-> list[IfcChecker] get_checkers(cloud_pk, ifc_pk, project_pk)
+> list[IfcChecker] get_checkers(cloud_pk, model_pk, project_pk)
 
 Retrieve all checkers of a model
 
@@ -3311,12 +3311,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checkers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
@@ -3367,12 +3367,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checkers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
@@ -3423,12 +3423,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_checkers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->get_checkers: %s\n" % e)
@@ -3439,7 +3439,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -5180,7 +5180,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **launch_new_check**
-> launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+> launch_new_check(cloud_pk, id, model_pk, project_pk, data)
 
 Launch a new check on the model
 
@@ -5234,13 +5234,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Launch a new check on the model
-        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+        api_instance.launch_new_check(cloud_pk, id, model_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
@@ -5291,13 +5291,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Launch a new check on the model
-        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+        api_instance.launch_new_check(cloud_pk, id, model_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
@@ -5348,13 +5348,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Launch a new check on the model
-        api_instance.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data)
+        api_instance.launch_new_check(cloud_pk, id, model_pk, project_pk, data)
     except ApiException as e:
         print("Exception when calling CheckerApi->launch_new_check: %s\n" % e)
 ```
@@ -5365,7 +5365,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
@@ -5395,7 +5395,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checker**
-> IfcChecker update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+> IfcChecker update_checker(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a checker of a model
 
@@ -5449,13 +5449,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Update some fields of a checker of a model
-        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker: %s\n" % e)
@@ -5507,13 +5507,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Update some fields of a checker of a model
-        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker: %s\n" % e)
@@ -5565,13 +5565,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bimdata_api_client.CheckerApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcChecker() # IfcChecker | 
 
     try:
         # Update some fields of a checker of a model
-        api_response = api_instance.update_checker(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker: %s\n" % e)
@@ -5583,7 +5583,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcChecker**](IfcChecker.md)|  | 
 
@@ -5613,7 +5613,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_checker_result**
-> CheckerResult update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+> CheckerResult update_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a CheckerResult
 
@@ -5668,13 +5668,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
@@ -5727,13 +5727,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
@@ -5786,13 +5786,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     checker_pk = 'checker_pk_example' # str | 
 cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CheckerResult() # CheckerResult | 
 
     try:
         # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CheckerApi->update_checker_result: %s\n" % e)
@@ -5805,7 +5805,7 @@ Name | Type | Description  | Notes
  **checker_pk** | **str**|  | 
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**CheckerResult**](CheckerResult.md)|  | 
 

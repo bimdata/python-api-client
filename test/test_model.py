@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import bimdata_api_client
-from bimdata_api_client.models.ifc import Ifc  # noqa: E501
+from bimdata_api_client.models.model import Model  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
-class TestIfc(unittest.TestCase):
-    """Ifc unit test stubs"""
+class TestModel(unittest.TestCase):
+    """Model unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,13 +30,13 @@ class TestIfc(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Ifc
+        """Test Model
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = bimdata_api_client.models.ifc.Ifc()  # noqa: E501
+        # model = bimdata_api_client.models.model.Model()  # noqa: E501
         if include_optional :
-            return Ifc(
+            return Model(
                 id = 56, 
                 name = '0', 
                 type = 'IFC', 
@@ -70,6 +70,8 @@ class TestIfc(unittest.TestCase):
                     size = 0, 
                     created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                     updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                    model_source = 'UPLOAD', 
+                    model_id = '0', 
                     ifc_source = 'UPLOAD', 
                     ifc_id = '0', 
                     user_permission = 56, ), 
@@ -100,11 +102,11 @@ class TestIfc(unittest.TestCase):
                 recommanded_2d_angle = 1.337
             )
         else :
-            return Ifc(
+            return Model(
         )
 
-    def testIfc(self):
-        """Test Ifc"""
+    def testModel(self):
+        """Test Model"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

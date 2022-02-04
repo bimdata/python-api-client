@@ -46,6 +46,8 @@ class Document(object):
         'size': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime',
+        'model_source': 'str',
+        'model_id': 'str',
         'ifc_source': 'str',
         'ifc_id': 'str',
         'user_permission': 'int'
@@ -64,12 +66,14 @@ class Document(object):
         'size': 'size',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
+        'model_source': 'model_source',
+        'model_id': 'model_id',
         'ifc_source': 'ifc_source',
         'ifc_id': 'ifc_id',
         'user_permission': 'user_permission'
     }
 
-    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, ifc_source=None, ifc_id=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent=None, parent_id=None, creator=None, project=None, name=None, file_name=None, description=None, file=None, size=None, created_at=None, updated_at=None, model_source=None, model_id=None, ifc_source=None, ifc_id=None, user_permission=None, local_vars_configuration=None):  # noqa: E501
         """Document - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -87,6 +91,8 @@ class Document(object):
         self._size = None
         self._created_at = None
         self._updated_at = None
+        self._model_source = None
+        self._model_id = None
         self._ifc_source = None
         self._ifc_id = None
         self._user_permission = None
@@ -110,6 +116,10 @@ class Document(object):
             self.created_at = created_at
         if updated_at is not None:
             self.updated_at = updated_at
+        if model_source is not None:
+            self.model_source = model_source
+        if model_id is not None:
+            self.model_id = model_id
         if ifc_source is not None:
             self.ifc_source = ifc_source
         if ifc_id is not None:
@@ -402,10 +412,60 @@ class Document(object):
         self._updated_at = updated_at
 
     @property
+    def model_source(self):
+        """Gets the model_source of this Document.  # noqa: E501
+
+        Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  # noqa: E501
+
+        :return: The model_source of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._model_source
+
+    @model_source.setter
+    def model_source(self, model_source):
+        """Sets the model_source of this Document.
+
+        Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  # noqa: E501
+
+        :param model_source: The model_source of this Document.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["UPLOAD", "SPLIT", "MERGE", "EXPORT", "OPTIMIZED"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and model_source not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `model_source` ({0}), must be one of {1}"  # noqa: E501
+                .format(model_source, allowed_values)
+            )
+
+        self._model_source = model_source
+
+    @property
+    def model_id(self):
+        """Gets the model_id of this Document.  # noqa: E501
+
+
+        :return: The model_id of this Document.  # noqa: E501
+        :rtype: str
+        """
+        return self._model_id
+
+    @model_id.setter
+    def model_id(self, model_id):
+        """Sets the model_id of this Document.
+
+
+        :param model_id: The model_id of this Document.  # noqa: E501
+        :type: str
+        """
+
+        self._model_id = model_id
+
+    @property
     def ifc_source(self):
         """Gets the ifc_source of this Document.  # noqa: E501
 
-        Define the ifc.source field if the upload is an IFC  # noqa: E501
+        DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  # noqa: E501
 
         :return: The ifc_source of this Document.  # noqa: E501
         :rtype: str
@@ -416,7 +476,7 @@ class Document(object):
     def ifc_source(self, ifc_source):
         """Sets the ifc_source of this Document.
 
-        Define the ifc.source field if the upload is an IFC  # noqa: E501
+        DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  # noqa: E501
 
         :param ifc_source: The ifc_source of this Document.  # noqa: E501
         :type: str
@@ -434,6 +494,7 @@ class Document(object):
     def ifc_id(self):
         """Gets the ifc_id of this Document.  # noqa: E501
 
+        DEPRECATED: Use 'model_id' instead.  # noqa: E501
 
         :return: The ifc_id of this Document.  # noqa: E501
         :rtype: str
@@ -444,6 +505,7 @@ class Document(object):
     def ifc_id(self, ifc_id):
         """Sets the ifc_id of this Document.
 
+        DEPRECATED: Use 'model_id' instead.  # noqa: E501
 
         :param ifc_id: The ifc_id of this Document.  # noqa: E501
         :type: str

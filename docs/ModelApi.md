@@ -1,155 +1,144 @@
-# bimdata_api_client.IfcApi
+# bimdata_api_client.ModelApi
 
 All URIs are relative to *https://api.bimdata.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**add_ifc_errors_deprecated**](IfcApi.md#add_ifc_errors_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/errors | Add errors to model
-[**bulk_delete_ifc_classifications_deprecated**](IfcApi.md#bulk_delete_ifc_classifications_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
-[**bulk_delete_ifc_properties_deprecated**](IfcApi.md#bulk_delete_ifc_properties_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_destroy | Delete many Property of a model
-[**bulk_delete_ifc_property_definitions_deprecated**](IfcApi.md#bulk_delete_ifc_property_definitions_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
-[**bulk_delete_ifc_units_deprecated**](IfcApi.md#bulk_delete_ifc_units_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/bulk_destroy | Delete many Units of a model
-[**bulk_delete_property_set_deprecated**](IfcApi.md#bulk_delete_property_set_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/bulk_destroy | Delete many PropertySet of a model
-[**bulk_full_update_elements_deprecated**](IfcApi.md#bulk_full_update_elements_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (only changing fields may be defined)
-[**bulk_full_update_ifc_property_deprecated**](IfcApi.md#bulk_full_update_ifc_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update some fields of many properties of a model
-[**bulk_remove_classifications_of_element_deprecated**](IfcApi.md#bulk_remove_classifications_of_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/bulk_destroy | Remove many classifications from an element
-[**bulk_remove_documents_of_element_deprecated**](IfcApi.md#bulk_remove_documents_of_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/bulk_destroy | Remove many documents from an element
-[**bulk_remove_elements_from_classification_deprecated**](IfcApi.md#bulk_remove_elements_from_classification_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{model_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
-[**bulk_update_elements_deprecated**](IfcApi.md#bulk_update_elements_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
-[**bulk_update_ifc_property_deprecated**](IfcApi.md#bulk_update_ifc_property_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
-[**create_access_token_deprecated**](IfcApi.md#create_access_token_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Create a token for this model
-[**create_checker_deprecated**](IfcApi.md#create_checker_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
-[**create_checker_result_deprecated**](IfcApi.md#create_checker_result_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
-[**create_classification_element_relations_deprecated**](IfcApi.md#create_classification_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
-[**create_classifications_of_element_deprecated**](IfcApi.md#create_classifications_of_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
-[**create_element_deprecated**](IfcApi.md#create_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
-[**create_element_property_set_deprecated**](IfcApi.md#create_element_property_set_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset | Create a PropertySets to an element
-[**create_element_property_set_property_definition_deprecated**](IfcApi.md#create_element_property_set_property_definition_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
-[**create_element_property_set_property_definition_unit_deprecated**](IfcApi.md#create_element_property_set_property_definition_unit_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
-[**create_element_property_set_property_deprecated**](IfcApi.md#create_element_property_set_property_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
-[**create_ifc_deprecated**](IfcApi.md#create_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-model | Make a PDF or Image file a Model
-[**create_ifc_property_definition_deprecated**](IfcApi.md#create_ifc_property_definition_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition | Create a PropertyDefinition on the model
-[**create_ifc_unit_deprecated**](IfcApi.md#create_ifc_unit_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
-[**create_layer_deprecated**](IfcApi.md#create_layer_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
-[**create_meta_building_deprecated**](IfcApi.md#create_meta_building_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-metabuilding | Create an empty 3D Model
-[**create_property_set_deprecated**](IfcApi.md#create_property_set_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create a PropertySet
-[**create_property_set_element_relations_deprecated**](IfcApi.md#create_property_set_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
-[**create_raw_elements_deprecated**](IfcApi.md#create_raw_elements_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
-[**create_space_deprecated**](IfcApi.md#create_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
-[**create_storey_plan_deprecated**](IfcApi.md#create_storey_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
-[**create_system_deprecated**](IfcApi.md#create_system_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
-[**create_zone_deprecated**](IfcApi.md#create_zone_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
-[**create_zone_space_deprecated**](IfcApi.md#create_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
-[**delete_access_token_deprecated**](IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
-[**delete_checker_deprecated**](IfcApi.md#delete_checker_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
-[**delete_checker_result_deprecated**](IfcApi.md#delete_checker_result_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
-[**delete_element_deprecated**](IfcApi.md#delete_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete an element of a model
-[**delete_ifc_deprecated**](IfcApi.md#delete_ifc_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Delete a model
-[**delete_ifc_property_definition_deprecated**](IfcApi.md#delete_ifc_property_definition_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
-[**delete_ifc_property_deprecated**](IfcApi.md#delete_ifc_property_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Delete a Property of a model
-[**delete_ifc_unit_deprecated**](IfcApi.md#delete_ifc_unit_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Delete a Unit of a model
-[**delete_ifc_without_doc_deprecated**](IfcApi.md#delete_ifc_without_doc_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/delete-model | Delete the Model without deleting the related document
-[**delete_layer_deprecated**](IfcApi.md#delete_layer_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Delete a layer of a model
-[**delete_property_set_deprecated**](IfcApi.md#delete_property_set_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
-[**delete_space_deprecated**](IfcApi.md#delete_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
-[**delete_storey_deprecated**](IfcApi.md#delete_storey_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Delete a storey of a model
-[**delete_storey_plan_deprecated**](IfcApi.md#delete_storey_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
-[**delete_system_deprecated**](IfcApi.md#delete_system_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
-[**delete_zone_deprecated**](IfcApi.md#delete_zone_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
-[**delete_zone_space_deprecated**](IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
-[**export_ifc_deprecated**](IfcApi.md#export_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
-[**full_update_element_deprecated**](IfcApi.md#full_update_element_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
-[**full_update_storeys_deprecated**](IfcApi.md#full_update_storeys_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/full_update | Update all fields of all storeys
-[**get_access_token_deprecated**](IfcApi.md#get_access_token_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
-[**get_access_tokens_deprecated**](IfcApi.md#get_access_tokens_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Retrieve all tokens created for this model
-[**get_checker_deprecated**](IfcApi.md#get_checker_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
-[**get_checker_result_deprecated**](IfcApi.md#get_checker_result_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
-[**get_checker_results_deprecated**](IfcApi.md#get_checker_results_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
-[**get_checkers_deprecated**](IfcApi.md#get_checkers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Retrieve all checkers of a model
-[**get_classifications_of_element_deprecated**](IfcApi.md#get_classifications_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
-[**get_documents_of_element_deprecated**](IfcApi.md#get_documents_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
-[**get_element_deprecated**](IfcApi.md#get_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Retrieve an element of a model
-[**get_element_linked_documents_deprecated**](IfcApi.md#get_element_linked_documents_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/documents | Retrieve all documents linked to any element
-[**get_element_property_set_deprecated**](IfcApi.md#get_element_property_set_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
-[**get_element_property_set_properties_deprecated**](IfcApi.md#get_element_property_set_properties_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Retrieve all Properties of a PropertySet
-[**get_element_property_set_property_definition_deprecated**](IfcApi.md#get_element_property_set_property_definition_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Retrieve a Definition of a Property
-[**get_element_property_set_property_definition_unit_deprecated**](IfcApi.md#get_element_property_set_property_definition_unit_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Retrieve a Unit of a Definition
-[**get_element_property_set_property_definition_units_deprecated**](IfcApi.md#get_element_property_set_property_definition_units_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Retrieve all Units of a Definition
-[**get_element_property_set_property_definitions_deprecated**](IfcApi.md#get_element_property_set_property_definitions_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Retrieve all Definitions of a PropertySet
-[**get_element_property_set_property_deprecated**](IfcApi.md#get_element_property_set_property_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Retrieve a Property of a PropertySet
-[**get_element_property_sets_deprecated**](IfcApi.md#get_element_property_sets_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset | Retrieve all PropertySets of an element
-[**get_elements_deprecated**](IfcApi.md#get_elements_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Retrieve all elements of a model
-[**get_elements_from_classification_deprecated**](IfcApi.md#get_elements_from_classification_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
-[**get_ifc_classifications_deprecated**](IfcApi.md#get_ifc_classifications_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification | Retrieve all classifications in a model
-[**get_ifc_deprecated**](IfcApi.md#get_ifc_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Retrieve one model
-[**get_ifc_material_deprecated**](IfcApi.md#get_ifc_material_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material/{id} | Retrieve a material of a model
-[**get_ifc_materials_deprecated**](IfcApi.md#get_ifc_materials_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/material | Retrieve all materials of a model
-[**get_ifc_properties_deprecated**](IfcApi.md#get_ifc_properties_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property | Retrieve all Properties of a model
-[**get_ifc_property_definition_deprecated**](IfcApi.md#get_ifc_property_definition_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Retrieve a PropertyDefinition of a model
-[**get_ifc_property_definitions_deprecated**](IfcApi.md#get_ifc_property_definitions_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition | Retrieve all PropertyDefinitions of a model
-[**get_ifc_property_deprecated**](IfcApi.md#get_ifc_property_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Retrieve a Property of a model
-[**get_ifc_unit_deprecated**](IfcApi.md#get_ifc_unit_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Retrieve a Unit of a model
-[**get_ifc_units_deprecated**](IfcApi.md#get_ifc_units_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Retrieve all Units of a model
-[**get_ifcs_deprecated**](IfcApi.md#get_ifcs_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc | Retrieve all models
-[**get_layer_deprecated**](IfcApi.md#get_layer_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Retrieve a layer of a model
-[**get_layers_deprecated**](IfcApi.md#get_layers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Retrieve all layers of a model
-[**get_material_deprecated**](IfcApi.md#get_material_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
-[**get_materials_deprecated**](IfcApi.md#get_materials_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
-[**get_plan_positioning_deprecated**](IfcApi.md#get_plan_positioning_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
-[**get_processor_handler_deprecated**](IfcApi.md#get_processor_handler_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
-[**get_processor_handlers_deprecated**](IfcApi.md#get_processor_handlers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
-[**get_property_set_deprecated**](IfcApi.md#get_property_set_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
-[**get_property_sets_deprecated**](IfcApi.md#get_property_sets_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Retrieve all PropertySets of a model
-[**get_raw_elements_deprecated**](IfcApi.md#get_raw_elements_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Retrieve all elements in a optimized format
-[**get_simple_element_deprecated**](IfcApi.md#get_simple_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid}/simple | Retrieve an element of a model with a simple value representation
-[**get_simple_elements_deprecated**](IfcApi.md#get_simple_elements_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/simple | Retrieve all elements of a model with a simple value representation
-[**get_space_deprecated**](IfcApi.md#get_space_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Retrieve one space of the model
-[**get_spaces_deprecated**](IfcApi.md#get_spaces_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Retrieve all spaces of the model
-[**get_storey_deprecated**](IfcApi.md#get_storey_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Retrieve a storey of a model
-[**get_storeys_deprecated**](IfcApi.md#get_storeys_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
-[**get_system_deprecated**](IfcApi.md#get_system_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Retrieve a system of a model
-[**get_systems_deprecated**](IfcApi.md#get_systems_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Retrieve all systems of a model
-[**get_zone_deprecated**](IfcApi.md#get_zone_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Retrieve one zone of a model
-[**get_zone_space_deprecated**](IfcApi.md#get_zone_space_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
-[**get_zone_spaces_deprecated**](IfcApi.md#get_zone_spaces_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
-[**get_zones_deprecated**](IfcApi.md#get_zones_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
-[**launch_new_check_deprecated**](IfcApi.md#launch_new_check_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check | Launch a new check on the model
-[**link_documents_of_element_deprecated**](IfcApi.md#link_documents_of_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Link one or many documents to an element
-[**list_classification_element_relations_deprecated**](IfcApi.md#list_classification_element_relations_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
-[**merge_ifcs_deprecated**](IfcApi.md#merge_ifcs_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
-[**optimize_ifc_deprecated**](IfcApi.md#optimize_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/optimize | Optimize the IFC
-[**remove_all_element_property_set_deprecated**](IfcApi.md#remove_all_element_property_set_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
-[**remove_classification_of_element_deprecated**](IfcApi.md#remove_classification_of_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
-[**remove_document_of_element_deprecated**](IfcApi.md#remove_document_of_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents/{id} | Remove a documents from an element
-[**remove_element_property_set_deprecated**](IfcApi.md#remove_element_property_set_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
-[**remove_element_property_set_property_definition_deprecated**](IfcApi.md#remove_element_property_set_property_definition_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Remove a Definition from a Property
-[**remove_element_property_set_property_definition_unit_deprecated**](IfcApi.md#remove_element_property_set_property_definition_unit_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
-[**remove_element_property_set_property_deprecated**](IfcApi.md#remove_element_property_set_property_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
-[**remove_elements_from_classification_deprecated**](IfcApi.md#remove_elements_from_classification_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
-[**reprocess_ifc_deprecated**](IfcApi.md#reprocess_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | Reprocess Model file
-[**update_access_token_deprecated**](IfcApi.md#update_access_token_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
-[**update_checker_deprecated**](IfcApi.md#update_checker_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
-[**update_checker_result_deprecated**](IfcApi.md#update_checker_result_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
-[**update_element_deprecated**](IfcApi.md#update_element_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of an element
-[**update_element_property_set_property_deprecated**](IfcApi.md#update_element_property_set_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
-[**update_ifc_deprecated**](IfcApi.md#update_ifc_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Update some fields of a model
-[**update_ifc_files_deprecated**](IfcApi.md#update_ifc_files_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/files | Update models file (gltf, svg, structure, etc)
-[**update_ifc_property_definition_deprecated**](IfcApi.md#update_ifc_property_definition_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
-[**update_ifc_property_deprecated**](IfcApi.md#update_ifc_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
-[**update_ifc_unit_deprecated**](IfcApi.md#update_ifc_unit_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
-[**update_layer_deprecated**](IfcApi.md#update_layer_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update some fields of a layer
-[**update_plan_positioning_deprecated**](IfcApi.md#update_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
-[**update_processor_handler_deprecated**](IfcApi.md#update_processor_handler_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
-[**update_property_set_deprecated**](IfcApi.md#update_property_set_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
-[**update_space_deprecated**](IfcApi.md#update_space_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
-[**update_storey_deprecated**](IfcApi.md#update_storey_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Update some fields of a storey
-[**update_system_deprecated**](IfcApi.md#update_system_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Update some fields of a system
-[**update_zone_deprecated**](IfcApi.md#update_zone_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
-[**update_zone_space_deprecated**](IfcApi.md#update_zone_space_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
+[**add_model_errors**](ModelApi.md#add_model_errors) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/errors | Add errors to model
+[**bulk_delete_ifc_classifications**](ModelApi.md#bulk_delete_ifc_classifications) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/list_destroy | Remove all classifications from model&#39;s elements
+[**bulk_delete_ifc_properties**](ModelApi.md#bulk_delete_ifc_properties) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_destroy | Delete many Property of a model
+[**bulk_delete_ifc_property_definitions**](ModelApi.md#bulk_delete_ifc_property_definitions) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/bulk_destroy | Delete many PropertyDefinitions of a model
+[**bulk_delete_ifc_units**](ModelApi.md#bulk_delete_ifc_units) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/bulk_destroy | Delete many Units of a model
+[**bulk_delete_property_set**](ModelApi.md#bulk_delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/bulk_destroy | Delete many PropertySet of a model
+[**bulk_full_update_elements**](ModelApi.md#bulk_full_update_elements) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/bulk_update | Update many elements at once (only changing fields may be defined)
+[**bulk_full_update_ifc_property**](ModelApi.md#bulk_full_update_ifc_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_update | Update some fields of many properties of a model
+[**bulk_remove_classifications_of_element**](ModelApi.md#bulk_remove_classifications_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification/bulk_destroy | Remove many classifications from an element
+[**bulk_remove_documents_of_element**](ModelApi.md#bulk_remove_documents_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents/bulk_destroy | Remove many documents from an element
+[**bulk_remove_elements_from_classification**](ModelApi.md#bulk_remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/bulk_destroy | Remove the classifications from all elements
+[**bulk_update_elements**](ModelApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/bulk_update | Update many elements at once (all field must be defined)
+[**bulk_update_ifc_property**](ModelApi.md#bulk_update_ifc_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_update | Update all fields of many properties of a model
+[**create_access_token**](ModelApi.md#create_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token | Create a token for this model
+[**create_classification_element_relations**](ModelApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | Create association between existing classification and existing element
+[**create_classifications_of_element**](ModelApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
+[**create_element**](ModelApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Create an element in the model
+[**create_element_property_set**](ModelApi.md#create_element_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Create a PropertySets to an element
+[**create_element_property_set_property**](ModelApi.md#create_element_property_set_property) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Create a property to a PropertySet
+[**create_element_property_set_property_definition**](ModelApi.md#create_element_property_set_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Create a Definition to a Property
+[**create_element_property_set_property_definition_unit**](ModelApi.md#create_element_property_set_property_definition_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Create a Unit to a Definition
+[**create_ifc_property_definition**](ModelApi.md#create_ifc_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
+[**create_ifc_unit**](ModelApi.md#create_ifc_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Create a Unit on a model
+[**create_layer**](ModelApi.md#create_layer) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Create a layer in the model
+[**create_meta_building**](ModelApi.md#create_meta_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-metabuilding | Create an empty 3D Model
+[**create_model**](ModelApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-model | Make a PDF or Image file a Model
+[**create_property_set**](ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create a PropertySet
+[**create_property_set_element_relations**](ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
+[**create_raw_elements**](ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
+[**create_space**](ModelApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space | Create a space in the model
+[**create_storey_plan**](ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
+[**create_system**](ModelApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Create a system in the model
+[**create_zone**](ModelApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Create a zone in the model
+[**create_zone_space**](ModelApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Create a space in a zone
+[**delete_access_token**](ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
+[**delete_element**](ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
+[**delete_ifc_property**](ModelApi.md#delete_ifc_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Delete a Property of a model
+[**delete_ifc_property_definition**](ModelApi.md#delete_ifc_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
+[**delete_ifc_unit**](ModelApi.md#delete_ifc_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Delete a Unit of a model
+[**delete_layer**](ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
+[**delete_model**](ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
+[**delete_model_without_doc**](ModelApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/delete-model | Delete the Model without deleting the related document
+[**delete_property_set**](ModelApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Delete a PropertySet of a model
+[**delete_space**](ModelApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Delete a space
+[**delete_storey**](ModelApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Delete a storey of a model
+[**delete_storey_plan**](ModelApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
+[**delete_system**](ModelApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Delete a system of a model
+[**delete_zone**](ModelApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Delete a zone of a model
+[**delete_zone_space**](ModelApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
+[**export_ifc**](ModelApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/export | Export IFC
+[**full_update_element**](ModelApi.md#full_update_element) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update all fields of an element
+[**full_update_storeys**](ModelApi.md#full_update_storeys) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/full_update | Update all fields of all storeys
+[**get_access_token**](ModelApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Retrieve one token created for this model
+[**get_access_tokens**](ModelApi.md#get_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token | Retrieve all tokens created for this model
+[**get_classifications_of_element**](ModelApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
+[**get_documents_of_element**](ModelApi.md#get_documents_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
+[**get_element**](ModelApi.md#get_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Retrieve an element of a model
+[**get_element_linked_documents**](ModelApi.md#get_element_linked_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/documents | Retrieve all documents linked to any element
+[**get_element_property_set**](ModelApi.md#get_element_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{id} | Retrieve a PropertySet of an element
+[**get_element_property_set_properties**](ModelApi.md#get_element_property_set_properties) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property | Retrieve all Properties of a PropertySet
+[**get_element_property_set_property**](ModelApi.md#get_element_property_set_property) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Retrieve a Property of a PropertySet
+[**get_element_property_set_property_definition**](ModelApi.md#get_element_property_set_property_definition) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Retrieve a Definition of a Property
+[**get_element_property_set_property_definition_unit**](ModelApi.md#get_element_property_set_property_definition_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Retrieve a Unit of a Definition
+[**get_element_property_set_property_definition_units**](ModelApi.md#get_element_property_set_property_definition_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit | Retrieve all Units of a Definition
+[**get_element_property_set_property_definitions**](ModelApi.md#get_element_property_set_property_definitions) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition | Retrieve all Definitions of a PropertySet
+[**get_element_property_sets**](ModelApi.md#get_element_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset | Retrieve all PropertySets of an element
+[**get_elements**](ModelApi.md#get_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Retrieve all elements of a model
+[**get_elements_from_classification**](ModelApi.md#get_elements_from_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element | Retrieve all elements with the classification
+[**get_ifc_classifications**](ModelApi.md#get_ifc_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification | Retrieve all classifications in a model
+[**get_ifc_material**](ModelApi.md#get_ifc_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material/{id} | Retrieve a material of a model
+[**get_ifc_materials**](ModelApi.md#get_ifc_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material | Retrieve all materials of a model
+[**get_ifc_properties**](ModelApi.md#get_ifc_properties) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property | Retrieve all Properties of a model
+[**get_ifc_property**](ModelApi.md#get_ifc_property) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Retrieve a Property of a model
+[**get_ifc_property_definition**](ModelApi.md#get_ifc_property_definition) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Retrieve a PropertyDefinition of a model
+[**get_ifc_property_definitions**](ModelApi.md#get_ifc_property_definitions) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Retrieve all PropertyDefinitions of a model
+[**get_ifc_unit**](ModelApi.md#get_ifc_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Retrieve a Unit of a model
+[**get_ifc_units**](ModelApi.md#get_ifc_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Retrieve all Units of a model
+[**get_layer**](ModelApi.md#get_layer) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Retrieve a layer of a model
+[**get_layers**](ModelApi.md#get_layers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer | Retrieve all layers of a model
+[**get_material**](ModelApi.md#get_material) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
+[**get_materials**](ModelApi.md#get_materials) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/material | Retrieve all materials of a model
+[**get_model**](ModelApi.md#get_model) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Retrieve one model
+[**get_models**](ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
+[**get_plan_positioning**](ModelApi.md#get_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
+[**get_processor_handler**](ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
+[**get_processor_handlers**](ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
+[**get_property_set**](ModelApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Retrieve a PropertySet of a model
+[**get_property_sets**](ModelApi.md#get_property_sets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Retrieve all PropertySets of a model
+[**get_raw_elements**](ModelApi.md#get_raw_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Retrieve all elements in a optimized format
+[**get_simple_element**](ModelApi.md#get_simple_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid}/simple | Retrieve an element of a model with a simple value representation
+[**get_simple_elements**](ModelApi.md#get_simple_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/simple | Retrieve all elements of a model with a simple value representation
+[**get_space**](ModelApi.md#get_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Retrieve one space of the model
+[**get_spaces**](ModelApi.md#get_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space | Retrieve all spaces of the model
+[**get_storey**](ModelApi.md#get_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Retrieve a storey of a model
+[**get_storeys**](ModelApi.md#get_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey | Retrieve all storeys of a model
+[**get_system**](ModelApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Retrieve a system of a model
+[**get_systems**](ModelApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Retrieve all systems of a model
+[**get_zone**](ModelApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Retrieve one zone of a model
+[**get_zone_space**](ModelApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
+[**get_zone_spaces**](ModelApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
+[**get_zones**](ModelApi.md#get_zones) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Retrieve zones of a model
+[**link_documents_of_element**](ModelApi.md#link_documents_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Link one or many documents to an element
+[**list_classification_element_relations**](ModelApi.md#list_classification_element_relations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | List all associations between classifications and elements
+[**merge_ifcs**](ModelApi.md#merge_ifcs) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/merge | Merge IFC files
+[**optimize_ifc**](ModelApi.md#optimize_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/optimize | Optimize the IFC
+[**remove_all_element_property_set**](ModelApi.md#remove_all_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/all | Remove all property sets from element
+[**remove_classification_of_element**](ModelApi.md#remove_classification_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification/{id} | Remove a classification from an element
+[**remove_document_of_element**](ModelApi.md#remove_document_of_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents/{id} | Remove a documents from an element
+[**remove_element_property_set**](ModelApi.md#remove_element_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{id} | Remove a PropertySet from an element
+[**remove_element_property_set_property**](ModelApi.md#remove_element_property_set_property) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Remove a property from a PropertySet
+[**remove_element_property_set_property_definition**](ModelApi.md#remove_element_property_set_property_definition) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{id} | Remove a Definition from a Property
+[**remove_element_property_set_property_definition_unit**](ModelApi.md#remove_element_property_set_property_definition_unit) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{property_pk}/propertydefinition/{propertydefinition_pk}/unit/{id} | Remove a Unit from a Definition
+[**remove_elements_from_classification**](ModelApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
+[**reprocess_model**](ModelApi.md#reprocess_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess | Reprocess Model file
+[**update_access_token**](ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
+[**update_element**](ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
+[**update_element_property_set_property**](ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
+[**update_ifc_property**](ModelApi.md#update_ifc_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Update some fields of a Property
+[**update_ifc_property_definition**](ModelApi.md#update_ifc_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
+[**update_ifc_unit**](ModelApi.md#update_ifc_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Update some fields of a Unit of a model
+[**update_layer**](ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
+[**update_model**](ModelApi.md#update_model) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Update some fields of a model
+[**update_model_files**](ModelApi.md#update_model_files) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/files | Update models file (gltf, svg, structure, etc)
+[**update_plan_positioning**](ModelApi.md#update_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
+[**update_processor_handler**](ModelApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Update the status of a processor handler
+[**update_property_set**](ModelApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Update some fields of a PropertySet
+[**update_space**](ModelApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Update some fields of a space
+[**update_storey**](ModelApi.md#update_storey) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Update some fields of a storey
+[**update_system**](ModelApi.md#update_system) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Update some fields of a system
+[**update_zone**](ModelApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Update some fields of a zone
+[**update_zone_space**](ModelApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
 
 
-# **add_ifc_errors_deprecated**
-> ModelErrors add_ifc_errors_deprecated(cloud_pk, id, project_pk, data)
+# **add_model_errors**
+> ModelErrors add_model_errors(cloud_pk, id, project_pk, data)
 
 Add errors to model
 
@@ -200,7 +189,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -208,10 +197,10 @@ data = bimdata_api_client.ModelErrors() # ModelErrors |
 
     try:
         # Add errors to model
-        api_response = api_instance.add_ifc_errors_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.add_model_errors(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->add_ifc_errors_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->add_model_errors: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -257,7 +246,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -265,10 +254,10 @@ data = bimdata_api_client.ModelErrors() # ModelErrors |
 
     try:
         # Add errors to model
-        api_response = api_instance.add_ifc_errors_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.add_model_errors(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->add_ifc_errors_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->add_model_errors: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -314,7 +303,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -322,10 +311,10 @@ data = bimdata_api_client.ModelErrors() # ModelErrors |
 
     try:
         # Add errors to model
-        api_response = api_instance.add_ifc_errors_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.add_model_errors(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->add_ifc_errors_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->add_model_errors: %s\n" % e)
 ```
 
 ### Parameters
@@ -362,8 +351,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_delete_ifc_classifications_deprecated**
-> bulk_delete_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+# **bulk_delete_ifc_classifications**
+> bulk_delete_ifc_classifications(cloud_pk, model_pk, project_pk)
 
 Remove all classifications from model's elements
 
@@ -414,16 +403,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all classifications from model's elements
-        api_instance.bulk_delete_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_classifications(cloud_pk, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -469,16 +458,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all classifications from model's elements
-        api_instance.bulk_delete_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_classifications(cloud_pk, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -524,16 +513,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all classifications from model's elements
-        api_instance.bulk_delete_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_instance.bulk_delete_ifc_classifications(cloud_pk, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_classifications: %s\n" % e)
 ```
 
 ### Parameters
@@ -541,7 +530,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -569,8 +558,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_delete_ifc_properties_deprecated**
-> bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_delete_ifc_properties**
+> bulk_delete_ifc_properties(cloud_pk, model_pk, project_pk, data)
 
 Delete many Property of a model
 
@@ -621,17 +610,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -677,17 +666,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -733,17 +722,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Property of a model
-        api_instance.bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_properties(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_properties: %s\n" % e)
 ```
 
 ### Parameters
@@ -751,7 +740,7 @@ data = [56] # list[int] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -780,8 +769,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_delete_ifc_property_definitions_deprecated**
-> bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_delete_ifc_property_definitions**
+> bulk_delete_ifc_property_definitions(cloud_pk, model_pk, project_pk, data)
 
 Delete many PropertyDefinitions of a model
 
@@ -832,17 +821,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -888,17 +877,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -944,17 +933,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertyDefinitions of a model
-        api_instance.bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_property_definitions(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_property_definitions_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_property_definitions: %s\n" % e)
 ```
 
 ### Parameters
@@ -962,7 +951,7 @@ data = [56] # list[int] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -991,8 +980,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_delete_ifc_units_deprecated**
-> bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_delete_ifc_units**
+> bulk_delete_ifc_units(cloud_pk, model_pk, project_pk, data)
 
 Delete many Units of a model
 
@@ -1043,17 +1032,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_units(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_units: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1099,17 +1088,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_units(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_units: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1155,17 +1144,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many Units of a model
-        api_instance.bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_ifc_units(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_ifc_units: %s\n" % e)
 ```
 
 ### Parameters
@@ -1173,7 +1162,7 @@ data = [56] # list[int] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -1202,8 +1191,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_delete_property_set_deprecated**
-> bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_delete_property_set**
+> bulk_delete_property_set(cloud_pk, model_pk, project_pk, data)
 
 Delete many PropertySet of a model
 
@@ -1254,17 +1243,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_property_set(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1310,17 +1299,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_property_set(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1366,17 +1355,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Delete many PropertySet of a model
-        api_instance.bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.bulk_delete_property_set(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_delete_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -1384,7 +1373,7 @@ data = [56] # list[int] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -1413,8 +1402,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_full_update_elements_deprecated**
-> list[Element] bulk_full_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_full_update_elements**
+> list[Element] bulk_full_update_elements(cloud_pk, model_pk, project_pk, data)
 
 Update many elements at once (only changing fields may be defined)
 
@@ -1465,18 +1454,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (only changing fields may be defined)
-        api_response = api_instance.bulk_full_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1522,18 +1511,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (only changing fields may be defined)
-        api_response = api_instance.bulk_full_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1579,18 +1568,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (only changing fields may be defined)
-        api_response = api_instance.bulk_full_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -1598,7 +1587,7 @@ data = [bimdata_api_client.Element()] # list[Element] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
@@ -1627,8 +1616,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_full_update_ifc_property_deprecated**
-> list[ModelProperty] bulk_full_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_full_update_ifc_property**
+> list[ModelProperty] bulk_full_update_ifc_property(cloud_pk, model_pk, project_pk, data)
 
 Update some fields of many properties of a model
 
@@ -1679,18 +1668,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update some fields of many properties of a model
-        api_response = api_instance.bulk_full_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1736,18 +1725,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update some fields of many properties of a model
-        api_response = api_instance.bulk_full_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -1793,18 +1782,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update some fields of many properties of a model
-        api_response = api_instance.bulk_full_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_full_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_full_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_full_update_ifc_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -1812,7 +1801,7 @@ data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
@@ -1841,8 +1830,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_remove_classifications_of_element_deprecated**
-> bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+# **bulk_remove_classifications_of_element**
+> bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
 
 Remove many classifications from an element
 
@@ -1893,18 +1882,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -1950,18 +1939,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2007,18 +1996,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many classifications from an element
-        api_instance.bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_classifications_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -2027,7 +2016,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -2056,8 +2045,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_remove_documents_of_element_deprecated**
-> bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+# **bulk_remove_documents_of_element**
+> bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
 
 Remove many documents from an element
 
@@ -2108,18 +2097,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many documents from an element
-        api_instance.bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2165,18 +2154,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many documents from an element
-        api_instance.bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2222,18 +2211,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove many documents from an element
-        api_instance.bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_instance.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_documents_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -2242,7 +2231,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -2271,8 +2260,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_remove_elements_from_classification_deprecated**
-> bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, data)
+# **bulk_remove_elements_from_classification**
+> bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, data)
 
 Remove the classifications from all elements
 
@@ -2323,18 +2312,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, data)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2380,18 +2369,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, data)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2437,18 +2426,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Remove the classifications from all elements
-        api_instance.bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, data)
+        api_instance.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_remove_elements_from_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -2456,8 +2445,8 @@ data = [56] # list[int] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **model_classification_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -2486,8 +2475,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_update_elements_deprecated**
-> list[Element] bulk_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_update_elements**
+> list[Element] bulk_update_elements(cloud_pk, model_pk, project_pk, data)
 
 Update many elements at once (all field must be defined)
 
@@ -2538,18 +2527,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (all field must be defined)
-        api_response = api_instance.bulk_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2595,18 +2584,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (all field must be defined)
-        api_response = api_instance.bulk_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2652,18 +2641,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Update many elements at once (all field must be defined)
-        api_response = api_instance.bulk_update_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_elements(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -2671,7 +2660,7 @@ data = [bimdata_api_client.Element()] # list[Element] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
@@ -2700,8 +2689,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **bulk_update_ifc_property_deprecated**
-> list[ModelProperty] bulk_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **bulk_update_ifc_property**
+> list[ModelProperty] bulk_update_ifc_property(cloud_pk, model_pk, project_pk, data)
 
 Update all fields of many properties of a model
 
@@ -2752,18 +2741,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update all fields of many properties of a model
-        api_response = api_instance.bulk_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -2809,18 +2798,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update all fields of many properties of a model
-        api_response = api_instance.bulk_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -2866,18 +2855,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] | 
 
     try:
         # Update all fields of many properties of a model
-        api_response = api_instance.bulk_update_ifc_property_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.bulk_update_ifc_property(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->bulk_update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->bulk_update_ifc_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -2885,7 +2874,7 @@ data = [bimdata_api_client.ModelProperty()] # list[ModelProperty] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[ModelProperty]**](ModelProperty.md)|  | 
 
@@ -2914,8 +2903,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_access_token_deprecated**
-> IfcAccessToken create_access_token_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_access_token**
+> IfcAccessToken create_access_token(cloud_pk, model_pk, project_pk, data)
 
 Create a token for this model
 
@@ -2966,18 +2955,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Create a token for this model
-        api_response = api_instance.create_access_token_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_access_token(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3023,18 +3012,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Create a token for this model
-        api_response = api_instance.create_access_token_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_access_token(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3080,18 +3069,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Create a token for this model
-        api_response = api_instance.create_access_token_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_access_token(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -3099,7 +3088,7 @@ data = bimdata_api_client.IfcAccessToken() # IfcAccessToken |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**IfcAccessToken**](IfcAccessToken.md)|  | 
 
@@ -3128,440 +3117,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_checker_deprecated**
-> IfcChecker create_checker_deprecated(cloud_pk, ifc_pk, project_pk, data)
-
-Create a checker to a model
-
-A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Create a checker to a model
-        api_response = api_instance.create_checker_deprecated(cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Create a checker to a model
-        api_response = api_instance.create_checker_deprecated(cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Create a checker to a model
-        api_response = api_instance.create_checker_deprecated(cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**IfcChecker**](IfcChecker.md)|  | 
-
-### Return type
-
-[**IfcChecker**](IfcChecker.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_checker_result_deprecated**
-> CheckerResult create_checker_result_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-
-Create a CheckerResult
-
-TCreate a CheckerResult Required scopes: check:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Create a CheckerResult
-        api_response = api_instance.create_checker_result_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Create a CheckerResult
-        api_response = api_instance.create_checker_result_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Create a CheckerResult
-        api_response = api_instance.create_checker_result_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_checker_result_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checker_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**CheckerResult**](CheckerResult.md)|  | 
-
-### Return type
-
-[**CheckerResult**](CheckerResult.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_classification_element_relations_deprecated**
-> create_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_classification_element_relations**
+> create_classification_element_relations(cloud_pk, model_pk, project_pk, data)
 
 Create association between existing classification and existing element
 
@@ -3612,17 +3169,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_classification_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classification_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3668,17 +3225,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_classification_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classification_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3724,17 +3281,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassificationRelation] | 
 
     try:
         # Create association between existing classification and existing element
-        api_instance.create_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_classification_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classification_element_relations: %s\n" % e)
 ```
 
 ### Parameters
@@ -3742,7 +3299,7 @@ data = [bimdata_api_client.ElementClassificationRelation()] # list[ElementClassi
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[ElementClassificationRelation]**](ElementClassificationRelation.md)|  | 
 
@@ -3772,8 +3329,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_classifications_of_element_deprecated**
-> list[Classification] create_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+# **create_classifications_of_element**
+> list[Classification] create_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
 
 Create one or many classifications to an element
 
@@ -3824,19 +3381,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
     try:
         # Create one or many classifications to an element
-        api_response = api_instance.create_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -3882,19 +3439,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
     try:
         # Create one or many classifications to an element
-        api_response = api_instance.create_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -3940,19 +3497,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Classification()] # list[Classification] | 
 
     try:
         # Create one or many classifications to an element
-        api_response = api_instance.create_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_classifications_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -3961,7 +3518,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Classification]**](Classification.md)|  | 
 
@@ -3990,8 +3547,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_element_deprecated**
-> list[Element] create_element_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_element**
+> list[Element] create_element(cloud_pk, model_pk, project_pk, data)
 
 Create an element in the model
 
@@ -4042,18 +3599,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Create an element in the model
-        api_response = api_instance.create_element_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4099,18 +3656,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Create an element in the model
-        api_response = api_instance.create_element_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4156,18 +3713,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Element()] # list[Element] | 
 
     try:
         # Create an element in the model
-        api_response = api_instance.create_element_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -4175,7 +3732,7 @@ data = [bimdata_api_client.Element()] # list[Element] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Element]**](Element.md)|  | 
 
@@ -4204,8 +3761,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_element_property_set_deprecated**
-> PropertySet create_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+# **create_element_property_set**
+> PropertySet create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk, data)
 
 Create a PropertySets to an element
 
@@ -4256,19 +3813,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Create a PropertySets to an element
-        api_response = api_instance.create_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4314,19 +3871,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Create a PropertySets to an element
-        api_response = api_instance.create_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -4372,19 +3929,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Create a PropertySets to an element
-        api_response = api_instance.create_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.create_element_property_set(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -4393,7 +3950,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**PropertySet**](PropertySet.md)|  | 
 
@@ -4422,464 +3979,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_element_property_set_property_definition_deprecated**
-> PropertyDefinition create_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
-
-Create a Definition to a Property
-
- Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Create a Definition to a Property
-        api_response = api_instance.create_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Create a Definition to a Property
-        api_response = api_instance.create_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Create a Definition to a Property
-        api_response = api_instance.create_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
-
-### Return type
-
-[**PropertyDefinition**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_element_property_set_property_definition_unit_deprecated**
-> Unit create_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
-
-Create a Unit to a Definition
-
-Create a Unit to a Definition Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
-
-    try:
-        # Create a Unit to a Definition
-        api_response = api_instance.create_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
-
-    try:
-        # Create a Unit to a Definition
-        api_response = api_instance.create_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-data = bimdata_api_client.Unit() # Unit | 
-
-    try:
-        # Create a Unit to a Definition
-        api_response = api_instance.create_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertydefinition_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
- **data** | [**Unit**](Unit.md)|  | 
-
-### Return type
-
-[**Unit**](Unit.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **create_element_property_set_property_deprecated**
-> ModelProperty create_element_property_set_property_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+# **create_element_property_set_property**
+> ModelProperty create_element_property_set_property(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk, data)
 
 Create a property to a PropertySet
 
@@ -4930,20 +4031,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Create a property to a PropertySet
-        api_response = api_instance.create_element_property_set_property_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -4989,20 +4090,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Create a property to a PropertySet
-        api_response = api_instance.create_element_property_set_property_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5048,20 +4149,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Create a property to a PropertySet
-        api_response = api_instance.create_element_property_set_property_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.create_element_property_set_property(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -5070,7 +4171,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
@@ -5100,12 +4201,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_ifc_deprecated**
-> Model create_ifc_deprecated(cloud_pk, project_pk, data)
+# **create_element_property_set_property_definition**
+> PropertyDefinition create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk, data)
 
-Make a PDF or Image file a Model
+Create a Definition to a Property
 
-Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write
+ Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -5152,17 +4253,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CreateModel() # CreateModel | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
     try:
-        # Make a PDF or Image file a Model
-        api_response = api_instance.create_ifc_deprecated(cloud_pk, project_pk, data)
+        # Create a Definition to a Property
+        api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property_definition: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5208,17 +4313,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CreateModel() # CreateModel | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
     try:
-        # Make a PDF or Image file a Model
-        api_response = api_instance.create_ifc_deprecated(cloud_pk, project_pk, data)
+        # Create a Definition to a Property
+        api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property_definition: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5264,17 +4373,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CreateModel() # CreateModel | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
 
     try:
-        # Make a PDF or Image file a Model
-        api_response = api_instance.create_ifc_deprecated(cloud_pk, project_pk, data)
+        # Create a Definition to a Property
+        api_response = api_instance.create_element_property_set_property_definition(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_element_property_set_property_definition: %s\n" % e)
 ```
 
 ### Parameters
@@ -5282,12 +4395,16 @@ data = bimdata_api_client.CreateModel() # CreateModel |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**CreateModel**](CreateModel.md)|  | 
+ **property_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+ **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
 
 ### Return type
 
-[**Model**](Model.md)
+[**PropertyDefinition**](PropertyDefinition.md)
 
 ### Authorization
 
@@ -5310,8 +4427,238 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_ifc_property_definition_deprecated**
-> list[PropertyDefinition] create_ifc_property_definition_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_element_property_set_property_definition_unit**
+> Unit create_element_property_set_property_definition_unit(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+
+Create a Unit to a Definition
+
+Create a Unit to a Definition Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.Unit() # Unit | 
+
+    try:
+        # Create a Unit to a Definition
+        api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.Unit() # Unit | 
+
+    try:
+        # Create a Unit to a Definition
+        api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+data = bimdata_api_client.Unit() # Unit | 
+
+    try:
+        # Create a Unit to a Definition
+        api_response = api_instance.create_element_property_set_property_definition_unit(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertydefinition_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+ **data** | [**Unit**](Unit.md)|  | 
+
+### Return type
+
+[**Unit**](Unit.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_ifc_property_definition**
+> list[PropertyDefinition] create_ifc_property_definition(cloud_pk, model_pk, project_pk, data)
 
 Create a PropertyDefinition on the model
 
@@ -5362,18 +4709,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
     try:
         # Create a PropertyDefinition on the model
-        api_response = api_instance.create_ifc_property_definition_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_property_definition(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_property_definition_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_property_definition: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5419,18 +4766,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
     try:
         # Create a PropertyDefinition on the model
-        api_response = api_instance.create_ifc_property_definition_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_property_definition(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_property_definition_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_property_definition: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5476,18 +4823,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] | 
 
     try:
         # Create a PropertyDefinition on the model
-        api_response = api_instance.create_ifc_property_definition_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_property_definition(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_property_definition_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_property_definition: %s\n" % e)
 ```
 
 ### Parameters
@@ -5495,7 +4842,7 @@ data = [bimdata_api_client.PropertyDefinition()] # list[PropertyDefinition] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[PropertyDefinition]**](PropertyDefinition.md)|  | 
 
@@ -5524,8 +4871,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_ifc_unit_deprecated**
-> list[Unit] create_ifc_unit_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_ifc_unit**
+> list[Unit] create_ifc_unit(cloud_pk, model_pk, project_pk, data)
 
 Create a Unit on a model
 
@@ -5576,18 +4923,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Unit()] # list[Unit] | 
 
     try:
         # Create a Unit on a model
-        api_response = api_instance.create_ifc_unit_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_unit(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5633,18 +4980,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Unit()] # list[Unit] | 
 
     try:
         # Create a Unit on a model
-        api_response = api_instance.create_ifc_unit_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_unit(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5690,18 +5037,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Unit()] # list[Unit] | 
 
     try:
         # Create a Unit on a model
-        api_response = api_instance.create_ifc_unit_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_ifc_unit(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_ifc_unit: %s\n" % e)
 ```
 
 ### Parameters
@@ -5709,7 +5056,7 @@ data = [bimdata_api_client.Unit()] # list[Unit] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Unit]**](Unit.md)|  | 
 
@@ -5738,8 +5085,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_layer_deprecated**
-> Layer create_layer_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_layer**
+> Layer create_layer(cloud_pk, model_pk, project_pk, data)
 
 Create a layer in the model
 
@@ -5790,18 +5137,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Create a layer in the model
-        api_response = api_instance.create_layer_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_layer(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -5847,18 +5194,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Create a layer in the model
-        api_response = api_instance.create_layer_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_layer(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -5904,18 +5251,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Create a layer in the model
-        api_response = api_instance.create_layer_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_layer(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_layer: %s\n" % e)
 ```
 
 ### Parameters
@@ -5923,7 +5270,7 @@ data = bimdata_api_client.Layer() # Layer |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Layer**](Layer.md)|  | 
 
@@ -5952,8 +5299,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_meta_building_deprecated**
-> Model create_meta_building_deprecated(cloud_pk, project_pk, data)
+# **create_meta_building**
+> Model create_meta_building(cloud_pk, project_pk, data)
 
 Create an empty 3D Model
 
@@ -6004,17 +5351,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CreateBuilding() # CreateBuilding | 
 
     try:
         # Create an empty 3D Model
-        api_response = api_instance.create_meta_building_deprecated(cloud_pk, project_pk, data)
+        api_response = api_instance.create_meta_building(cloud_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_meta_building_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_meta_building: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6060,17 +5407,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CreateBuilding() # CreateBuilding | 
 
     try:
         # Create an empty 3D Model
-        api_response = api_instance.create_meta_building_deprecated(cloud_pk, project_pk, data)
+        api_response = api_instance.create_meta_building(cloud_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_meta_building_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_meta_building: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6116,17 +5463,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.CreateBuilding() # CreateBuilding | 
 
     try:
         # Create an empty 3D Model
-        api_response = api_instance.create_meta_building_deprecated(cloud_pk, project_pk, data)
+        api_response = api_instance.create_meta_building(cloud_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_meta_building_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_meta_building: %s\n" % e)
 ```
 
 ### Parameters
@@ -6162,8 +5509,218 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_property_set_deprecated**
-> list[PropertySet] create_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_model**
+> Model create_model(cloud_pk, project_pk, data)
+
+Make a PDF or Image file a Model
+
+Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.CreateModel() # CreateModel | 
+
+    try:
+        # Make a PDF or Image file a Model
+        api_response = api_instance.create_model(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_model: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.CreateModel() # CreateModel | 
+
+    try:
+        # Make a PDF or Image file a Model
+        api_response = api_instance.create_model(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_model: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.CreateModel() # CreateModel | 
+
+    try:
+        # Make a PDF or Image file a Model
+        api_response = api_instance.create_model(cloud_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->create_model: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**CreateModel**](CreateModel.md)|  | 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_property_set**
+> list[PropertySet] create_property_set(cloud_pk, model_pk, project_pk, data)
 
 Create a PropertySet
 
@@ -6214,18 +5771,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
     try:
         # Create a PropertySet
-        api_response = api_instance.create_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_property_set(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6271,18 +5828,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
     try:
         # Create a PropertySet
-        api_response = api_instance.create_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_property_set(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6328,18 +5885,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.PropertySet()] # list[PropertySet] | 
 
     try:
         # Create a PropertySet
-        api_response = api_instance.create_property_set_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_property_set(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -6347,7 +5904,7 @@ data = [bimdata_api_client.PropertySet()] # list[PropertySet] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[PropertySet]**](PropertySet.md)|  | 
 
@@ -6376,8 +5933,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_property_set_element_relations_deprecated**
-> create_property_set_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_property_set_element_relations**
+> create_property_set_element_relations(cloud_pk, model_pk, project_pk, data)
 
 Create association between PropertySet and element
 
@@ -6428,17 +5985,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_property_set_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6484,17 +6041,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_property_set_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6540,17 +6097,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertySetRelation] | 
 
     try:
         # Create association between PropertySet and element
-        api_instance.create_property_set_element_relations_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_property_set_element_relations(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_property_set_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_property_set_element_relations: %s\n" % e)
 ```
 
 ### Parameters
@@ -6558,7 +6115,7 @@ data = [bimdata_api_client.ElementPropertySetRelation()] # list[ElementPropertyS
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[ElementPropertySetRelation]**](ElementPropertySetRelation.md)|  | 
 
@@ -6587,8 +6144,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_raw_elements_deprecated**
-> create_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_raw_elements**
+> create_raw_elements(cloud_pk, model_pk, project_pk, data)
 
 Create elements in an optimized format
 
@@ -6639,17 +6196,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.RawElements() # RawElements | 
 
     try:
         # Create elements in an optimized format
-        api_instance.create_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_raw_elements(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_raw_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6695,17 +6252,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.RawElements() # RawElements | 
 
     try:
         # Create elements in an optimized format
-        api_instance.create_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_raw_elements(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_raw_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6751,17 +6308,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.RawElements() # RawElements | 
 
     try:
         # Create elements in an optimized format
-        api_instance.create_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_instance.create_raw_elements(cloud_pk, model_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_raw_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -6769,7 +6326,7 @@ data = bimdata_api_client.RawElements() # RawElements |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**RawElements**](RawElements.md)|  | 
 
@@ -6798,8 +6355,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_space_deprecated**
-> list[Space] create_space_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_space**
+> list[Space] create_space(cloud_pk, model_pk, project_pk, data)
 
 Create a space in the model
 
@@ -6850,18 +6407,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Space()] # list[Space] | 
 
     try:
         # Create a space in the model
-        api_response = api_instance.create_space_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_space(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -6907,18 +6464,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Space()] # list[Space] | 
 
     try:
         # Create a space in the model
-        api_response = api_instance.create_space_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_space(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -6964,18 +6521,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Space()] # list[Space] | 
 
     try:
         # Create a space in the model
-        api_response = api_instance.create_space_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_space(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -6983,7 +6540,7 @@ data = [bimdata_api_client.Space()] # list[Space] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Space]**](Space.md)|  | 
 
@@ -7012,8 +6569,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_storey_plan_deprecated**
-> Storey create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_pk, data)
+# **create_storey_plan**
+> Storey create_storey_plan(cloud_pk, model_pk, project_pk, storey_pk, data)
 
 Create a relation between a 2d model and a storey
 
@@ -7064,19 +6621,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.InlineObject4() # InlineObject4 | 
+data = bimdata_api_client.InlineObject5() # InlineObject5 | 
 
     try:
         # Create a relation between a 2d model and a storey
-        api_response = api_instance.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_storey_plan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7122,19 +6679,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.InlineObject4() # InlineObject4 | 
+data = bimdata_api_client.InlineObject5() # InlineObject5 | 
 
     try:
         # Create a relation between a 2d model and a storey
-        api_response = api_instance.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_storey_plan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7180,19 +6737,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
-data = bimdata_api_client.InlineObject4() # InlineObject4 | 
+data = bimdata_api_client.InlineObject5() # InlineObject5 | 
 
     try:
         # Create a relation between a 2d model and a storey
-        api_response = api_instance.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.create_storey_plan(cloud_pk, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_storey_plan: %s\n" % e)
 ```
 
 ### Parameters
@@ -7200,10 +6757,10 @@ data = bimdata_api_client.InlineObject4() # InlineObject4 |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
- **data** | [**InlineObject4**](InlineObject4.md)|  | 
+ **data** | [**InlineObject5**](InlineObject5.md)|  | 
 
 ### Return type
 
@@ -7230,8 +6787,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_system_deprecated**
-> System create_system_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_system**
+> System create_system(cloud_pk, model_pk, project_pk, data)
 
 Create a system in the model
 
@@ -7282,18 +6839,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.System() # System | 
 
     try:
         # Create a system in the model
-        api_response = api_instance.create_system_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_system(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_system: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7339,18 +6896,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.System() # System | 
 
     try:
         # Create a system in the model
-        api_response = api_instance.create_system_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_system(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_system: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7396,18 +6953,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.System() # System | 
 
     try:
         # Create a system in the model
-        api_response = api_instance.create_system_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_system(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_system: %s\n" % e)
 ```
 
 ### Parameters
@@ -7415,7 +6972,7 @@ data = bimdata_api_client.System() # System |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**System**](System.md)|  | 
 
@@ -7444,8 +7001,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_zone_deprecated**
-> list[Zone] create_zone_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **create_zone**
+> list[Zone] create_zone(cloud_pk, model_pk, project_pk, data)
 
 Create a zone in the model
 
@@ -7496,18 +7053,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Zone()] # list[Zone] | 
 
     try:
         # Create a zone in the model
-        api_response = api_instance.create_zone_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_zone(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7553,18 +7110,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Zone()] # list[Zone] | 
 
     try:
         # Create a zone in the model
-        api_response = api_instance.create_zone_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_zone(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7610,18 +7167,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.Zone()] # list[Zone] | 
 
     try:
         # Create a zone in the model
-        api_response = api_instance.create_zone_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.create_zone(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -7629,7 +7186,7 @@ data = [bimdata_api_client.Zone()] # list[Zone] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[Zone]**](Zone.md)|  | 
 
@@ -7658,8 +7215,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **create_zone_space_deprecated**
-> ZoneSpace create_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+# **create_zone_space**
+> ZoneSpace create_zone_space(cloud_pk, model_pk, project_pk, zone_pk, data)
 
 Create a space in a zone
 
@@ -7710,19 +7267,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Create a space in a zone
-        api_response = api_instance.create_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.create_zone_space(cloud_pk, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7768,19 +7325,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Create a space in a zone
-        api_response = api_instance.create_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.create_zone_space(cloud_pk, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7826,19 +7383,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Create a space in a zone
-        api_response = api_instance.create_zone_space_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.create_zone_space(cloud_pk, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->create_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->create_zone_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -7846,7 +7403,7 @@ data = bimdata_api_client.ZoneSpace() # ZoneSpace |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
  **data** | [**ZoneSpace**](ZoneSpace.md)|  | 
@@ -7876,8 +7433,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_access_token_deprecated**
-> delete_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+# **delete_access_token**
+> delete_access_token(cloud_pk, model_pk, project_pk, token)
 
 Delete a token
 
@@ -7928,17 +7485,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Delete a token
-        api_instance.delete_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7984,17 +7541,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Delete a token
-        api_instance.delete_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8040,17 +7597,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Delete a token
-        api_instance.delete_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -8058,7 +7615,7 @@ token = 'token_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **token** | **str**|  | 
 
@@ -8087,434 +7644,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_checker_deprecated**
-> delete_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-
-Delete a checker of a model
-
-A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a checker of a model
-        api_instance.delete_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a checker of a model
-        api_instance.delete_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a checker of a model
-        api_instance.delete_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_checker_result_deprecated**
-> delete_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-
-Delete a CheckerResult
-
-Delete a CheckerResult Required scopes: check:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a CheckerResult
-        api_instance.delete_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a CheckerResult
-        api_instance.delete_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a CheckerResult
-        api_instance.delete_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_checker_result_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checker_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_element_deprecated**
-> delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+# **delete_element**
+> delete_element(cloud_pk, model_pk, project_pk, uuid)
 
 Delete an element of a model
 
@@ -8565,17 +7696,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Delete an element of a model
-        api_instance.delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -8621,17 +7752,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Delete an element of a model
-        api_instance.delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -8677,17 +7808,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Delete an element of a model
-        api_instance.delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -8695,7 +7826,7 @@ uuid = 'uuid_example' # str | IFC element or element type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
 
@@ -8724,426 +7855,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_ifc_deprecated**
-> delete_ifc_deprecated(cloud_pk, id, project_pk)
-
-Delete a model
-
-It will also delete the related document Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a model
-        api_instance.delete_ifc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a model
-        api_instance.delete_ifc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a model
-        api_instance.delete_ifc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this model. | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_ifc_property_definition_deprecated**
-> delete_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-
-Delete a PropertyDefinitions of a model
-
-Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a PropertyDefinitions of a model
-        api_instance.delete_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a PropertyDefinitions of a model
-        api_instance.delete_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete a PropertyDefinitions of a model
-        api_instance.delete_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this property definition. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_ifc_property_deprecated**
-> delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_ifc_property**
+> delete_ifc_property(cloud_pk, id, model_pk, project_pk)
 
 Delete a Property of a model
 
@@ -9194,17 +7907,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Property of a model
-        api_instance.delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_property(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -9250,17 +7963,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Property of a model
-        api_instance.delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_property(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -9306,17 +8019,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Property of a model
-        api_instance.delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_property(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -9325,7 +8038,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -9353,8 +8066,219 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_ifc_unit_deprecated**
-> delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_ifc_property_definition**
+> delete_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+
+Delete a PropertyDefinitions of a model
+
+Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a PropertyDefinitions of a model
+        api_instance.delete_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a PropertyDefinitions of a model
+        api_instance.delete_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a PropertyDefinitions of a model
+        api_instance.delete_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_ifc_property_definition: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_ifc_unit**
+> delete_ifc_unit(cloud_pk, id, model_pk, project_pk)
 
 Delete a Unit of a model
 
@@ -9405,17 +8329,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Unit of a model
-        api_instance.delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_unit(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -9461,17 +8385,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Unit of a model
-        api_instance.delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_unit(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -9517,17 +8441,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a Unit of a model
-        api_instance.delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_ifc_unit(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_ifc_unit: %s\n" % e)
 ```
 
 ### Parameters
@@ -9536,7 +8460,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this unit. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -9564,215 +8488,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_ifc_without_doc_deprecated**
-> delete_ifc_without_doc_deprecated(cloud_pk, id, project_pk)
-
-Delete the Model without deleting the related document
-
-Delete the Model without deleting the related document Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete the Model without deleting the related document
-        api_instance.delete_ifc_without_doc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_without_doc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete the Model without deleting the related document
-        api_instance.delete_ifc_without_doc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_without_doc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Delete the Model without deleting the related document
-        api_instance.delete_ifc_without_doc_deprecated(cloud_pk, id, project_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->delete_ifc_without_doc_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this model. | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** | No content |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **delete_layer_deprecated**
-> delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_layer**
+> delete_layer(cloud_pk, id, model_pk, project_pk)
 
 Delete a layer of a model
 
@@ -9823,17 +8540,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a layer of a model
-        api_instance.delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_layer(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -9879,17 +8596,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a layer of a model
-        api_instance.delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_layer(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -9935,17 +8652,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a layer of a model
-        api_instance.delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_layer(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_layer: %s\n" % e)
 ```
 
 ### Parameters
@@ -9954,7 +8671,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this layer. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -9982,8 +8699,422 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_property_set_deprecated**
-> delete_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_model**
+> delete_model(cloud_pk, id, project_pk)
+
+Delete a model
+
+It will also delete the related document Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a model
+        api_instance.delete_model(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a model
+        api_instance.delete_model(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete a model
+        api_instance.delete_model(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this model. | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_model_without_doc**
+> delete_model_without_doc(cloud_pk, id, project_pk)
+
+Delete the Model without deleting the related document
+
+Delete the Model without deleting the related document Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete the Model without deleting the related document
+        api_instance.delete_model_without_doc(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model_without_doc: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete the Model without deleting the related document
+        api_instance.delete_model_without_doc(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model_without_doc: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Delete the Model without deleting the related document
+        api_instance.delete_model_without_doc(cloud_pk, id, project_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->delete_model_without_doc: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this model. | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No content |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_property_set**
+> delete_property_set(cloud_pk, id, model_pk, project_pk)
 
 Delete a PropertySet of a model
 
@@ -10034,17 +9165,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a PropertySet of a model
-        api_instance.delete_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -10090,17 +9221,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a PropertySet of a model
-        api_instance.delete_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -10146,17 +9277,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a PropertySet of a model
-        api_instance.delete_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -10165,7 +9296,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property set. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -10193,8 +9324,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_space_deprecated**
-> delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_space**
+> delete_space(cloud_pk, id, model_pk, project_pk)
 
 Delete a space
 
@@ -10245,17 +9376,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a space
-        api_instance.delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_space(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -10301,17 +9432,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a space
-        api_instance.delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_space(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -10357,17 +9488,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a space
-        api_instance.delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_space(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -10376,7 +9507,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -10404,8 +9535,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_storey_deprecated**
-> delete_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_storey**
+> delete_storey(cloud_pk, id, model_pk, project_pk)
 
 Delete a storey of a model
 
@@ -10456,17 +9587,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a storey of a model
-        api_instance.delete_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_storey(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -10512,17 +9643,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a storey of a model
-        api_instance.delete_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_storey(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -10568,17 +9699,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a storey of a model
-        api_instance.delete_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_storey(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey: %s\n" % e)
 ```
 
 ### Parameters
@@ -10587,7 +9718,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -10615,8 +9746,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_storey_plan_deprecated**
-> delete_storey_plan_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+# **delete_storey_plan**
+> delete_storey_plan(cloud_pk, id, model_pk, project_pk, storey_pk)
 
 Delete the relation between a 2d model and a storey
 
@@ -10667,18 +9798,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Delete the relation between a 2d model and a storey
-        api_instance.delete_storey_plan_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_instance.delete_storey_plan(cloud_pk, id, model_pk, project_pk, storey_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey_plan: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -10724,18 +9855,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Delete the relation between a 2d model and a storey
-        api_instance.delete_storey_plan_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_instance.delete_storey_plan(cloud_pk, id, model_pk, project_pk, storey_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey_plan: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -10781,18 +9912,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Delete the relation between a 2d model and a storey
-        api_instance.delete_storey_plan_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_instance.delete_storey_plan(cloud_pk, id, model_pk, project_pk, storey_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_storey_plan_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_storey_plan: %s\n" % e)
 ```
 
 ### Parameters
@@ -10801,7 +9932,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
 
@@ -10830,8 +9961,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_system_deprecated**
-> delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+# **delete_system**
+> delete_system(cloud_pk, model_pk, project_pk, uuid)
 
 Delete a system of a model
 
@@ -10882,17 +10013,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Delete a system of a model
-        api_instance.delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_system: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -10938,17 +10069,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Delete a system of a model
-        api_instance.delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_system: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -10994,17 +10125,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Delete a system of a model
-        api_instance.delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_system: %s\n" % e)
 ```
 
 ### Parameters
@@ -11012,7 +10143,7 @@ uuid = 'uuid_example' # str | IFC sytem or system type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC sytem or system type UUID | 
 
@@ -11041,8 +10172,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_zone_deprecated**
-> delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **delete_zone**
+> delete_zone(cloud_pk, id, model_pk, project_pk)
 
 Delete a zone of a model
 
@@ -11093,17 +10224,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a zone of a model
-        api_instance.delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_zone(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -11149,17 +10280,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a zone of a model
-        api_instance.delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_zone(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -11205,17 +10336,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Delete a zone of a model
-        api_instance.delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_instance.delete_zone(cloud_pk, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -11224,7 +10355,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this zone. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -11252,8 +10383,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_zone_space_deprecated**
-> delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+# **delete_zone_space**
+> delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
 
 Delete a space of a zone
 
@@ -11304,18 +10435,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Delete a space of a zone
-        api_instance.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -11361,18 +10492,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Delete a space of a zone
-        api_instance.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -11418,18 +10549,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Delete a space of a zone
-        api_instance.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->delete_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->delete_zone_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -11438,7 +10569,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
 
@@ -11467,8 +10598,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **export_ifc_deprecated**
-> IfcExport export_ifc_deprecated(cloud_pk, id, project_pk, data)
+# **export_ifc**
+> IfcExport export_ifc(cloud_pk, id, project_pk, data)
 
 Export IFC
 
@@ -11519,7 +10650,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -11527,10 +10658,10 @@ data = bimdata_api_client.IfcExport() # IfcExport |
 
     try:
         # Export IFC
-        api_response = api_instance.export_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.export_ifc(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->export_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->export_ifc: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -11576,7 +10707,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -11584,10 +10715,10 @@ data = bimdata_api_client.IfcExport() # IfcExport |
 
     try:
         # Export IFC
-        api_response = api_instance.export_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.export_ifc(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->export_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->export_ifc: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -11633,7 +10764,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -11641,10 +10772,10 @@ data = bimdata_api_client.IfcExport() # IfcExport |
 
     try:
         # Export IFC
-        api_response = api_instance.export_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_response = api_instance.export_ifc(cloud_pk, id, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->export_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->export_ifc: %s\n" % e)
 ```
 
 ### Parameters
@@ -11681,8 +10812,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **full_update_element_deprecated**
-> Element full_update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+# **full_update_element**
+> Element full_update_element(cloud_pk, model_pk, project_pk, uuid, data)
 
 Update all fields of an element
 
@@ -11733,19 +10864,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update all fields of an element
-        api_response = api_instance.full_update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.full_update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -11791,19 +10922,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update all fields of an element
-        api_response = api_instance.full_update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.full_update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -11849,19 +10980,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update all fields of an element
-        api_response = api_instance.full_update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.full_update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -11869,7 +11000,7 @@ data = bimdata_api_client.Element() # Element |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
  **data** | [**Element**](Element.md)|  | 
@@ -11899,8 +11030,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **full_update_storeys_deprecated**
-> list[Storey] full_update_storeys_deprecated(cloud_pk, ifc_pk, project_pk, data)
+# **full_update_storeys**
+> list[Storey] full_update_storeys(cloud_pk, model_pk, project_pk, data)
 
 Update all fields of all storeys
 
@@ -11951,18 +11082,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.StoreyRequest()] # list[StoreyRequest] | 
 
     try:
         # Update all fields of all storeys
-        api_response = api_instance.full_update_storeys_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.full_update_storeys(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_storeys: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -12008,18 +11139,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.StoreyRequest()] # list[StoreyRequest] | 
 
     try:
         # Update all fields of all storeys
-        api_response = api_instance.full_update_storeys_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.full_update_storeys(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_storeys: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -12065,18 +11196,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [bimdata_api_client.StoreyRequest()] # list[StoreyRequest] | 
 
     try:
         # Update all fields of all storeys
-        api_response = api_instance.full_update_storeys_deprecated(cloud_pk, ifc_pk, project_pk, data)
+        api_response = api_instance.full_update_storeys(cloud_pk, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->full_update_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->full_update_storeys: %s\n" % e)
 ```
 
 ### Parameters
@@ -12084,7 +11215,7 @@ data = [bimdata_api_client.StoreyRequest()] # list[StoreyRequest] |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[StoreyRequest]**](StoreyRequest.md)|  | 
 
@@ -12113,8 +11244,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_access_token_deprecated**
-> IfcAccessToken get_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+# **get_access_token**
+> IfcAccessToken get_access_token(cloud_pk, model_pk, project_pk, token)
 
 Retrieve one token created for this model
 
@@ -12165,18 +11296,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Retrieve one token created for this model
-        api_response = api_instance.get_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_response = api_instance.get_access_token(cloud_pk, model_pk, project_pk, token)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -12222,18 +11353,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Retrieve one token created for this model
-        api_response = api_instance.get_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_response = api_instance.get_access_token(cloud_pk, model_pk, project_pk, token)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -12279,18 +11410,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 
     try:
         # Retrieve one token created for this model
-        api_response = api_instance.get_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token)
+        api_response = api_instance.get_access_token(cloud_pk, model_pk, project_pk, token)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -12298,7 +11429,7 @@ token = 'token_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **token** | **str**|  | 
 
@@ -12327,8 +11458,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_access_tokens_deprecated**
-> list[IfcAccessToken] get_access_tokens_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_access_tokens**
+> list[IfcAccessToken] get_access_tokens(cloud_pk, model_pk, project_pk)
 
 Retrieve all tokens created for this model
 
@@ -12379,17 +11510,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all tokens created for this model
-        api_response = api_instance.get_access_tokens_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_access_tokens(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_tokens_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_tokens: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -12435,17 +11566,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all tokens created for this model
-        api_response = api_instance.get_access_tokens_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_access_tokens(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_tokens_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_tokens: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -12491,17 +11622,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all tokens created for this model
-        api_response = api_instance.get_access_tokens_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_access_tokens(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_access_tokens_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_access_tokens: %s\n" % e)
 ```
 
 ### Parameters
@@ -12509,7 +11640,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -12537,864 +11668,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_checker_deprecated**
-> IfcChecker get_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-
-Retrieve a checker of a model
-
-A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a checker of a model
-        api_response = api_instance.get_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a checker of a model
-        api_response = api_instance.get_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a checker of a model
-        api_response = api_instance.get_checker_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**IfcChecker**](IfcChecker.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_checker_result_deprecated**
-> CheckerResult get_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-
-Retrieve one CheckerResult
-
-Retrieve one CheckerResult Required scopes: check:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one CheckerResult
-        api_response = api_instance.get_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_result_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checker_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**CheckerResult**](CheckerResult.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_checker_results_deprecated**
-> list[CheckerResult] get_checker_results_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk)
-
-Retrieve all CheckerResults
-
-Retrieve all CheckerResults Required scopes: check:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_results_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_results_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all CheckerResults
-        api_response = api_instance.get_checker_results_deprecated(checker_pk, cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checker_results_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checker_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**list[CheckerResult]**](CheckerResult.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_checkers_deprecated**
-> list[IfcChecker] get_checkers_deprecated(cloud_pk, ifc_pk, project_pk)
-
-Retrieve all checkers of a model
-
-A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checkers_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checkers_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all checkers of a model
-        api_response = api_instance.get_checkers_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_checkers_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**list[IfcChecker]**](IfcChecker.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_classifications_of_element_deprecated**
-> list[Classification] get_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+# **get_classifications_of_element**
+> list[Classification] get_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk)
 
 Retrieve all classifications of an element
 
@@ -13445,18 +11720,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications of an element
-        api_response = api_instance.get_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -13502,18 +11777,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications of an element
-        api_response = api_instance.get_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_classifications_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -13559,18 +11834,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications of an element
-        api_response = api_instance.get_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_classifications_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_classifications_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -13579,7 +11854,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -13607,8 +11882,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_documents_of_element_deprecated**
-> list[Document] get_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+# **get_documents_of_element**
+> list[Document] get_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk)
 
 Retrieve all documents of an element
 
@@ -13659,18 +11934,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all documents of an element
-        api_response = api_instance.get_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -13716,18 +11991,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all documents of an element
-        api_response = api_instance.get_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -13773,18 +12048,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all documents of an element
-        api_response = api_instance.get_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_documents_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -13793,7 +12068,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -13821,8 +12096,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_deprecated**
-> Element get_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+# **get_element**
+> Element get_element(cloud_pk, model_pk, project_pk, uuid)
 
 Retrieve an element of a model
 
@@ -13873,18 +12148,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model
-        api_response = api_instance.get_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -13930,18 +12205,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model
-        api_response = api_instance.get_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -13987,18 +12262,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model
-        api_response = api_instance.get_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -14006,7 +12281,7 @@ uuid = 'uuid_example' # str | IFC element or element type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
 
@@ -14035,8 +12310,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_linked_documents_deprecated**
-> list[DocumentWithElementList] get_element_linked_documents_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+# **get_element_linked_documents**
+> list[DocumentWithElementList] get_element_linked_documents(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 Retrieve all documents linked to any element
 
@@ -14087,9 +12362,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -14097,10 +12372,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all documents linked to any element
-        api_response = api_instance.get_element_linked_documents_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_linked_documents_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -14146,9 +12421,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -14156,10 +12431,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all documents linked to any element
-        api_response = api_instance.get_element_linked_documents_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_linked_documents_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -14205,9 +12480,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -14215,10 +12490,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all documents linked to any element
-        api_response = api_instance.get_element_linked_documents_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_element_linked_documents(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_linked_documents_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_linked_documents: %s\n" % e)
 ```
 
 ### Parameters
@@ -14226,7 +12501,7 @@ classification__notation = 'classification__notation_example' # str | Filter the
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **type** | **str**| Filter the returned list by type | [optional] 
  **classification** | **str**| Filter the returned list by classification | [optional] 
@@ -14257,8 +12532,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_property_set_deprecated**
-> PropertySet get_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+# **get_element_property_set**
+> PropertySet get_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Retrieve a PropertySet of an element
 
@@ -14309,19 +12584,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of an element
-        api_response = api_instance.get_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -14367,19 +12642,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of an element
-        api_response = api_instance.get_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -14425,19 +12700,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of an element
-        api_response = api_instance.get_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -14447,7 +12722,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property set. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -14475,8 +12750,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_property_set_properties_deprecated**
-> list[ModelProperty] get_element_property_set_properties_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
+# **get_element_property_set_properties**
+> list[ModelProperty] get_element_property_set_properties(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk)
 
 Retrieve all Properties of a PropertySet
 
@@ -14527,19 +12802,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a PropertySet
-        api_response = api_instance.get_element_property_set_properties_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_properties(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -14585,19 +12860,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a PropertySet
-        api_response = api_instance.get_element_property_set_properties_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_properties(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -14643,19 +12918,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a PropertySet
-        api_response = api_instance.get_element_property_set_properties_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_properties(cloud_pk, element_uuid, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_properties: %s\n" % e)
 ```
 
 ### Parameters
@@ -14664,7 +12939,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
 
@@ -14693,912 +12968,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_property_set_property_definition_deprecated**
-> PropertyDefinition get_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-Retrieve a Definition of a Property
-
-Retrieve a Definition of a Property Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Definition of a Property
-        api_response = api_instance.get_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Definition of a Property
-        api_response = api_instance.get_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Definition of a Property
-        api_response = api_instance.get_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **id** | **int**| A unique integer value identifying this property definition. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-[**PropertyDefinition**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_property_set_property_definition_unit_deprecated**
-> Unit get_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-Retrieve a Unit of a Definition
-
-Retrieve a Unit of a Definition Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Unit of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Unit of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve a Unit of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **id** | **int**| A unique integer value identifying this unit. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertydefinition_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-[**Unit**](Unit.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_property_set_property_definition_units_deprecated**
-> list[Unit] get_element_property_set_property_definition_units_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-Retrieve all Units of a Definition
-
-Retrieve all Units of a Definition Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Units of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_units_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_units_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Units of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_units_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_units_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Units of a Definition
-        api_response = api_instance.get_element_property_set_property_definition_units_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definition_units_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertydefinition_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-[**list[Unit]**](Unit.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_property_set_property_definitions_deprecated**
-> list[PropertyDefinition] get_element_property_set_property_definitions_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-Retrieve all Definitions of a PropertySet
-
-Retrieve all Definitions of a PropertySet Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Definitions of a PropertySet
-        api_response = api_instance.get_element_property_set_property_definitions_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definitions_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Definitions of a PropertySet
-        api_response = api_instance.get_element_property_set_property_definitions_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definitions_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Retrieve all Definitions of a PropertySet
-        api_response = api_instance.get_element_property_set_property_definitions_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, property_pk, propertyset_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_definitions_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-[**list[PropertyDefinition]**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_element_property_set_property_deprecated**
-> ModelProperty get_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+# **get_element_property_set_property**
+> ModelProperty get_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
 
 Retrieve a Property of a PropertySet
 
@@ -15649,20 +13020,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve a Property of a PropertySet
-        api_response = api_instance.get_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -15708,20 +13079,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve a Property of a PropertySet
-        api_response = api_instance.get_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -15767,20 +13138,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Retrieve a Property of a PropertySet
-        api_response = api_instance.get_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_response = api_instance.get_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_set_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -15790,7 +13161,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
 
@@ -15819,8 +13190,912 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_element_property_sets_deprecated**
-> list[PropertySet] get_element_property_sets_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+# **get_element_property_set_property_definition**
+> PropertyDefinition get_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+
+Retrieve a Definition of a Property
+
+Retrieve a Definition of a Property Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Definition of a Property
+        api_response = api_instance.get_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Definition of a Property
+        api_response = api_instance.get_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Definition of a Property
+        api_response = api_instance.get_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+[**PropertyDefinition**](PropertyDefinition.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_element_property_set_property_definition_unit**
+> Unit get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+Retrieve a Unit of a Definition
+
+Retrieve a Unit of a Definition Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Unit of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Unit of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve a Unit of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this unit. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertydefinition_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+[**Unit**](Unit.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_element_property_set_property_definition_units**
+> list[Unit] get_element_property_set_property_definition_units(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+Retrieve all Units of a Definition
+
+Retrieve all Units of a Definition Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Units of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_units(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_units: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Units of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_units(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_units: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Units of a Definition
+        api_response = api_instance.get_element_property_set_property_definition_units(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definition_units: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertydefinition_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+[**list[Unit]**](Unit.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_element_property_set_property_definitions**
+> list[PropertyDefinition] get_element_property_set_property_definitions(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
+
+Retrieve all Definitions of a PropertySet
+
+Retrieve all Definitions of a PropertySet Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Definitions of a PropertySet
+        api_response = api_instance.get_element_property_set_property_definitions(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definitions: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Definitions of a PropertySet
+        api_response = api_instance.get_element_property_set_property_definitions(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definitions: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Retrieve all Definitions of a PropertySet
+        api_response = api_instance.get_element_property_set_property_definitions(cloud_pk, element_uuid, model_pk, project_pk, property_pk, propertyset_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_element_property_set_property_definitions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+[**list[PropertyDefinition]**](PropertyDefinition.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_element_property_sets**
+> list[PropertySet] get_element_property_sets(cloud_pk, element_uuid, model_pk, project_pk)
 
 Retrieve all PropertySets of an element
 
@@ -15871,18 +14146,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of an element
-        api_response = api_instance.get_element_property_sets_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_sets(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_sets: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -15928,18 +14203,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of an element
-        api_response = api_instance.get_element_property_sets_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_sets(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_sets: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -15985,18 +14260,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of an element
-        api_response = api_instance.get_element_property_sets_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_element_property_sets(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_element_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_element_property_sets: %s\n" % e)
 ```
 
 ### Parameters
@@ -16005,7 +14280,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -16033,8 +14308,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_elements_deprecated**
-> list[Element] get_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+# **get_elements**
+> list[Element] get_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 Retrieve all elements of a model
 
@@ -16085,9 +14360,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -16095,10 +14370,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model
-        api_response = api_instance.get_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -16144,9 +14419,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -16154,10 +14429,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model
-        api_response = api_instance.get_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -16203,9 +14478,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -16213,10 +14488,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model
-        api_response = api_instance.get_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -16224,7 +14499,7 @@ classification__notation = 'classification__notation_example' # str | Filter the
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **type** | **str**| Filter the returned list by type | [optional] 
  **classification** | **str**| Filter the returned list by classification | [optional] 
@@ -16255,8 +14530,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_elements_from_classification_deprecated**
-> list[Element] get_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk)
+# **get_elements_from_classification**
+> list[Element] get_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk)
 
 Retrieve all elements with the classification
 
@@ -16307,18 +14582,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all elements with the classification
-        api_response = api_instance.get_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk)
+        api_response = api_instance.get_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -16364,18 +14639,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all elements with the classification
-        api_response = api_instance.get_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk)
+        api_response = api_instance.get_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -16421,18 +14696,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all elements with the classification
-        api_response = api_instance.get_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk)
+        api_response = api_instance.get_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_elements_from_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -16440,8 +14715,8 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **model_classification_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -16469,8 +14744,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_classifications_deprecated**
-> list[Classification] get_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_ifc_classifications**
+> list[Classification] get_ifc_classifications(cloud_pk, model_pk, project_pk)
 
 Retrieve all classifications in a model
 
@@ -16521,17 +14796,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications in a model
-        api_response = api_instance.get_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_classifications(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -16577,17 +14852,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications in a model
-        api_response = api_instance.get_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_classifications(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_classifications: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -16633,17 +14908,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all classifications in a model
-        api_response = api_instance.get_ifc_classifications_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_classifications(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_classifications_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_classifications: %s\n" % e)
 ```
 
 ### Parameters
@@ -16651,7 +14926,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -16679,218 +14954,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_deprecated**
-> Model get_ifc_deprecated(cloud_pk, id, project_pk)
-
-Retrieve one model
-
- Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one model
-        api_response = api_instance.get_ifc_deprecated(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one model
-        api_response = api_instance.get_ifc_deprecated(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve one model
-        api_response = api_instance.get_ifc_deprecated(cloud_pk, id, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this model. | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**Model**](Model.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_ifc_material_deprecated**
-> Material get_ifc_material_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_ifc_material**
+> Material get_ifc_material(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a material of a model
 
@@ -16941,18 +15006,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_ifc_material_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_material(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_material: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -16998,18 +15063,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_ifc_material_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_material(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_material: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -17055,18 +15120,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_ifc_material_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_material(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_material: %s\n" % e)
 ```
 
 ### Parameters
@@ -17075,7 +15140,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this material. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -17103,8 +15168,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_materials_deprecated**
-> list[Material] get_ifc_materials_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_ifc_materials**
+> list[Material] get_ifc_materials(cloud_pk, model_pk, project_pk)
 
 Retrieve all materials of a model
 
@@ -17155,17 +15220,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_ifc_materials_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_materials(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_materials: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -17211,17 +15276,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_ifc_materials_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_materials(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_materials: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -17267,17 +15332,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_ifc_materials_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_materials(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_materials: %s\n" % e)
 ```
 
 ### Parameters
@@ -17285,7 +15350,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -17313,8 +15378,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_properties_deprecated**
-> list[ModelProperty] get_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_ifc_properties**
+> list[ModelProperty] get_ifc_properties(cloud_pk, model_pk, project_pk)
 
 Retrieve all Properties of a model
 
@@ -17365,17 +15430,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a model
-        api_response = api_instance.get_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_properties(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -17421,17 +15486,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a model
-        api_response = api_instance.get_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_properties(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_properties: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -17477,17 +15542,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Properties of a model
-        api_response = api_instance.get_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_properties(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_properties_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_properties: %s\n" % e)
 ```
 
 ### Parameters
@@ -17495,7 +15560,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -17523,432 +15588,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_property_definition_deprecated**
-> PropertyDefinition get_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-
-Retrieve a PropertyDefinition of a model
-
-Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a PropertyDefinition of a model
-        api_response = api_instance.get_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a PropertyDefinition of a model
-        api_response = api_instance.get_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve a PropertyDefinition of a model
-        api_response = api_instance.get_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this property definition. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**PropertyDefinition**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_ifc_property_definitions_deprecated**
-> list[PropertyDefinition] get_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk)
-
-Retrieve all PropertyDefinitions of a model
-
-Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all PropertyDefinitions of a model
-        api_response = api_instance.get_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definitions_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all PropertyDefinitions of a model
-        api_response = api_instance.get_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definitions_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-
-    try:
-        # Retrieve all PropertyDefinitions of a model
-        api_response = api_instance.get_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_definitions_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
-
-### Return type
-
-[**list[PropertyDefinition]**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_ifc_property_deprecated**
-> ModelProperty get_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_ifc_property**
+> ModelProperty get_ifc_property(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a Property of a model
 
@@ -17999,18 +15640,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Property of a model
-        api_response = api_instance.get_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_property(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -18056,18 +15697,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Property of a model
-        api_response = api_instance.get_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_property(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -18113,18 +15754,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Property of a model
-        api_response = api_instance.get_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_property(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -18133,7 +15774,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -18161,8 +15802,432 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_unit_deprecated**
-> Unit get_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_ifc_property_definition**
+> PropertyDefinition get_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+
+Retrieve a PropertyDefinition of a model
+
+Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve a PropertyDefinition of a model
+        api_response = api_instance.get_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve a PropertyDefinition of a model
+        api_response = api_instance.get_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve a PropertyDefinition of a model
+        api_response = api_instance.get_ifc_property_definition(cloud_pk, id, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definition: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**PropertyDefinition**](PropertyDefinition.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ifc_property_definitions**
+> list[PropertyDefinition] get_ifc_property_definitions(cloud_pk, model_pk, project_pk)
+
+Retrieve all PropertyDefinitions of a model
+
+Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all PropertyDefinitions of a model
+        api_response = api_instance.get_ifc_property_definitions(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definitions: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all PropertyDefinitions of a model
+        api_response = api_instance.get_ifc_property_definitions(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definitions: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve all PropertyDefinitions of a model
+        api_response = api_instance.get_ifc_property_definitions(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_ifc_property_definitions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**list[PropertyDefinition]**](PropertyDefinition.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_ifc_unit**
+> Unit get_ifc_unit(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a Unit of a model
 
@@ -18213,18 +16278,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Unit of a model
-        api_response = api_instance.get_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_unit(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -18270,18 +16335,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Unit of a model
-        api_response = api_instance.get_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_unit(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -18327,18 +16392,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a Unit of a model
-        api_response = api_instance.get_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_unit(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_unit: %s\n" % e)
 ```
 
 ### Parameters
@@ -18347,7 +16412,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this unit. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -18375,8 +16440,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifc_units_deprecated**
-> list[Unit] get_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_ifc_units**
+> list[Unit] get_ifc_units(cloud_pk, model_pk, project_pk)
 
 Retrieve all Units of a model
 
@@ -18427,17 +16492,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Units of a model
-        api_response = api_instance.get_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_units(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_units: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -18483,17 +16548,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Units of a model
-        api_response = api_instance.get_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_units(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_units: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -18539,17 +16604,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all Units of a model
-        api_response = api_instance.get_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_ifc_units(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_ifc_units_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_ifc_units: %s\n" % e)
 ```
 
 ### Parameters
@@ -18557,7 +16622,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -18585,226 +16650,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_ifcs_deprecated**
-> list[Model] get_ifcs_deprecated(cloud_pk, project_pk, status=status, source=source, type=type)
-
-Retrieve all models
-
-Retrieve all models. The field `type` allows you to discriminate which kind of model it is. Required scopes: ifc:read, model:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-status = 'status_example' # str | Filter the returned list by status (optional)
-source = 'source_example' # str | Filter the returned list by source (optional)
-type = 'type_example' # str | Filter the returned list by type (optional)
-
-    try:
-        # Retrieve all models
-        api_response = api_instance.get_ifcs_deprecated(cloud_pk, project_pk, status=status, source=source, type=type)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifcs_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-status = 'status_example' # str | Filter the returned list by status (optional)
-source = 'source_example' # str | Filter the returned list by source (optional)
-type = 'type_example' # str | Filter the returned list by type (optional)
-
-    try:
-        # Retrieve all models
-        api_response = api_instance.get_ifcs_deprecated(cloud_pk, project_pk, status=status, source=source, type=type)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifcs_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-status = 'status_example' # str | Filter the returned list by status (optional)
-source = 'source_example' # str | Filter the returned list by source (optional)
-type = 'type_example' # str | Filter the returned list by type (optional)
-
-    try:
-        # Retrieve all models
-        api_response = api_instance.get_ifcs_deprecated(cloud_pk, project_pk, status=status, source=source, type=type)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->get_ifcs_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **status** | **str**| Filter the returned list by status | [optional] 
- **source** | **str**| Filter the returned list by source | [optional] 
- **type** | **str**| Filter the returned list by type | [optional] 
-
-### Return type
-
-[**list[Model]**](Model.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **get_layer_deprecated**
-> Layer get_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_layer**
+> Layer get_layer(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a layer of a model
 
@@ -18855,18 +16702,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a layer of a model
-        api_response = api_instance.get_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_layer(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -18912,18 +16759,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a layer of a model
-        api_response = api_instance.get_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_layer(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -18969,18 +16816,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a layer of a model
-        api_response = api_instance.get_layer_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_layer(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layer: %s\n" % e)
 ```
 
 ### Parameters
@@ -18989,7 +16836,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this layer. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -19017,8 +16864,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_layers_deprecated**
-> list[Layer] get_layers_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_layers**
+> list[Layer] get_layers(cloud_pk, model_pk, project_pk)
 
 Retrieve all layers of a model
 
@@ -19069,17 +16916,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all layers of a model
-        api_response = api_instance.get_layers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_layers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layers: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -19125,17 +16972,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all layers of a model
-        api_response = api_instance.get_layers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_layers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layers: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -19181,17 +17028,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all layers of a model
-        api_response = api_instance.get_layers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_layers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_layers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_layers: %s\n" % e)
 ```
 
 ### Parameters
@@ -19199,7 +17046,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -19227,8 +17074,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_material_deprecated**
-> Material get_material_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+# **get_material**
+> Material get_material(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Retrieve a material of a model
 
@@ -19279,19 +17126,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_material_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_material(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_material: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -19337,19 +17184,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_material_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_material(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_material: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -19395,19 +17242,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this material.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a material of a model
-        api_response = api_instance.get_material_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_response = api_instance.get_material(cloud_pk, element_uuid, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_material_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_material: %s\n" % e)
 ```
 
 ### Parameters
@@ -19417,7 +17264,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this material. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -19445,8 +17292,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_materials_deprecated**
-> list[Material] get_materials_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+# **get_materials**
+> list[Material] get_materials(cloud_pk, element_uuid, model_pk, project_pk)
 
 Retrieve all materials of a model
 
@@ -19497,18 +17344,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_materials_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_materials(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_materials: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -19554,18 +17401,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_materials_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_materials(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_materials: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -19611,18 +17458,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all materials of a model
-        api_response = api_instance.get_materials_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.get_materials(cloud_pk, element_uuid, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_materials_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_materials: %s\n" % e)
 ```
 
 ### Parameters
@@ -19631,7 +17478,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -19659,8 +17506,436 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_plan_positioning_deprecated**
-> PositioningPlan get_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+# **get_model**
+> Model get_model(cloud_pk, id, project_pk)
+
+Retrieve one model
+
+ Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve one model
+        api_response = api_instance.get_model(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_model: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve one model
+        api_response = api_instance.get_model(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_model: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+
+    try:
+        # Retrieve one model
+        api_response = api_instance.get_model(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_model: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this model. | 
+ **project_pk** | **str**|  | 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_models**
+> list[Model] get_models(cloud_pk, project_pk, status=status, source=source, type=type)
+
+Retrieve all models
+
+Retrieve all models. The field `type` allows you to discriminate which kind of model it is. Required scopes: ifc:read, model:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
+
+    try:
+        # Retrieve all models
+        api_response = api_instance.get_models(cloud_pk, project_pk, status=status, source=source, type=type)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_models: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
+
+    try:
+        # Retrieve all models
+        api_response = api_instance.get_models(cloud_pk, project_pk, status=status, source=source, type=type)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_models: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+status = 'status_example' # str | Filter the returned list by status (optional)
+source = 'source_example' # str | Filter the returned list by source (optional)
+type = 'type_example' # str | Filter the returned list by type (optional)
+
+    try:
+        # Retrieve all models
+        api_response = api_instance.get_models(cloud_pk, project_pk, status=status, source=source, type=type)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->get_models: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **status** | **str**| Filter the returned list by status | [optional] 
+ **source** | **str**| Filter the returned list by source | [optional] 
+ **type** | **str**| Filter the returned list by type | [optional] 
+
+### Return type
+
+[**list[Model]**](Model.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_plan_positioning**
+> PositioningPlan get_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk)
 
 Retrieve the postioning of the plan in the storey
 
@@ -19711,19 +17986,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Retrieve the postioning of the plan in the storey
-        api_response = api_instance.get_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_plan_positioning: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -19769,19 +18044,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Retrieve the postioning of the plan in the storey
-        api_response = api_instance.get_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_plan_positioning: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -19827,19 +18102,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 
     try:
         # Retrieve the postioning of the plan in the storey
-        api_response = api_instance.get_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk)
+        api_response = api_instance.get_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_plan_positioning: %s\n" % e)
 ```
 
 ### Parameters
@@ -19848,7 +18123,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
 
@@ -19877,8 +18152,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_processor_handler_deprecated**
-> ProcessorHandler get_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_processor_handler**
+> ProcessorHandler get_processor_handler(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a processor handler
 
@@ -19929,18 +18204,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a processor handler
-        api_response = api_instance.get_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handler(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handler: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -19986,18 +18261,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a processor handler
-        api_response = api_instance.get_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handler(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handler: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -20043,18 +18318,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a processor handler
-        api_response = api_instance.get_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handler(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handler: %s\n" % e)
 ```
 
 ### Parameters
@@ -20063,7 +18338,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this processor handler. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -20091,8 +18366,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_processor_handlers_deprecated**
-> list[ProcessorHandler] get_processor_handlers_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_processor_handlers**
+> list[ProcessorHandler] get_processor_handlers(cloud_pk, model_pk, project_pk)
 
 Get all processor handlers
 
@@ -20143,17 +18418,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Get all processor handlers
-        api_response = api_instance.get_processor_handlers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handlers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handlers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handlers: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -20199,17 +18474,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Get all processor handlers
-        api_response = api_instance.get_processor_handlers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handlers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handlers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handlers: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -20255,17 +18530,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Get all processor handlers
-        api_response = api_instance.get_processor_handlers_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_processor_handlers(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_processor_handlers_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_processor_handlers: %s\n" % e)
 ```
 
 ### Parameters
@@ -20273,7 +18548,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -20301,8 +18576,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_property_set_deprecated**
-> PropertySet get_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_property_set**
+> PropertySet get_property_set(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a PropertySet of a model
 
@@ -20353,18 +18628,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of a model
-        api_response = api_instance.get_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_property_set(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -20410,18 +18685,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of a model
-        api_response = api_instance.get_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_property_set(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -20467,18 +18742,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a PropertySet of a model
-        api_response = api_instance.get_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_property_set(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -20487,7 +18762,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property set. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -20515,8 +18790,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_property_sets_deprecated**
-> list[PropertySet] get_property_sets_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_property_sets**
+> list[PropertySet] get_property_sets(cloud_pk, model_pk, project_pk)
 
 Retrieve all PropertySets of a model
 
@@ -20567,17 +18842,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of a model
-        api_response = api_instance.get_property_sets_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_property_sets(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_sets: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -20623,17 +18898,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of a model
-        api_response = api_instance.get_property_sets_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_property_sets(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_sets: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -20679,17 +18954,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all PropertySets of a model
-        api_response = api_instance.get_property_sets_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_property_sets(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_property_sets_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_property_sets: %s\n" % e)
 ```
 
 ### Parameters
@@ -20697,7 +18972,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -20725,8 +19000,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_raw_elements_deprecated**
-> RawElements get_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+# **get_raw_elements**
+> RawElements get_raw_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 Retrieve all elements in a optimized format
 
@@ -20777,9 +19052,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -20787,10 +19062,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements in a optimized format
-        api_response = api_instance.get_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -20836,9 +19111,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -20846,10 +19121,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements in a optimized format
-        api_response = api_instance.get_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -20895,9 +19170,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -20905,10 +19180,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements in a optimized format
-        api_response = api_instance.get_raw_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_raw_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -20916,7 +19191,7 @@ classification__notation = 'classification__notation_example' # str | Filter the
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **type** | **str**| Filter the returned list by type | [optional] 
  **classification** | **str**| Filter the returned list by classification | [optional] 
@@ -20947,8 +19222,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_simple_element_deprecated**
-> SimpleElement get_simple_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+# **get_simple_element**
+> SimpleElement get_simple_element(cloud_pk, model_pk, project_pk, uuid)
 
 Retrieve an element of a model with a simple value representation
 
@@ -20999,18 +19274,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model with a simple value representation
-        api_response = api_instance.get_simple_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_simple_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -21056,18 +19331,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model with a simple value representation
-        api_response = api_instance.get_simple_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_simple_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -21113,18 +19388,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Retrieve an element of a model with a simple value representation
-        api_response = api_instance.get_simple_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_simple_element(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -21132,7 +19407,7 @@ uuid = 'uuid_example' # str | IFC element or element type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
 
@@ -21161,8 +19436,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_simple_elements_deprecated**
-> SimpleElement get_simple_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+# **get_simple_elements**
+> SimpleElement get_simple_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
 
 Retrieve all elements of a model with a simple value representation
 
@@ -21213,9 +19488,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -21223,10 +19498,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model with a simple value representation
-        api_response = api_instance.get_simple_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -21272,9 +19547,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -21282,10 +19557,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model with a simple value representation
-        api_response = api_instance.get_simple_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -21331,9 +19606,9 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 type = 'type_example' # str | Filter the returned list by type (optional)
 classification = 'classification_example' # str | Filter the returned list by classification (optional)
@@ -21341,10 +19616,10 @@ classification__notation = 'classification__notation_example' # str | Filter the
 
     try:
         # Retrieve all elements of a model with a simple value representation
-        api_response = api_instance.get_simple_elements_deprecated(cloud_pk, ifc_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
+        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, type=type, classification=classification, classification__notation=classification__notation)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_simple_elements_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
 ```
 
 ### Parameters
@@ -21352,7 +19627,7 @@ classification__notation = 'classification__notation_example' # str | Filter the
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **type** | **str**| Filter the returned list by type | [optional] 
  **classification** | **str**| Filter the returned list by classification | [optional] 
@@ -21383,8 +19658,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_space_deprecated**
-> Space get_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_space**
+> Space get_space(cloud_pk, id, model_pk, project_pk)
 
 Retrieve one space of the model
 
@@ -21435,18 +19710,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one space of the model
-        api_response = api_instance.get_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_space(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -21492,18 +19767,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one space of the model
-        api_response = api_instance.get_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_space(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -21549,18 +19824,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one space of the model
-        api_response = api_instance.get_space_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_space(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -21569,7 +19844,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -21597,8 +19872,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_spaces_deprecated**
-> list[Space] get_spaces_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_spaces**
+> list[Space] get_spaces(cloud_pk, model_pk, project_pk)
 
 Retrieve all spaces of the model
 
@@ -21649,17 +19924,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all spaces of the model
-        api_response = api_instance.get_spaces_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_spaces(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_spaces: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -21705,17 +19980,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all spaces of the model
-        api_response = api_instance.get_spaces_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_spaces(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_spaces: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -21761,17 +20036,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all spaces of the model
-        api_response = api_instance.get_spaces_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_spaces(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_spaces: %s\n" % e)
 ```
 
 ### Parameters
@@ -21779,7 +20054,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -21807,8 +20082,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_storey_deprecated**
-> Storey get_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_storey**
+> Storey get_storey(cloud_pk, id, model_pk, project_pk)
 
 Retrieve a storey of a model
 
@@ -21859,18 +20134,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a storey of a model
-        api_response = api_instance.get_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_storey(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -21916,18 +20191,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a storey of a model
-        api_response = api_instance.get_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_storey(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -21973,18 +20248,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve a storey of a model
-        api_response = api_instance.get_storey_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_storey(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storey: %s\n" % e)
 ```
 
 ### Parameters
@@ -21993,7 +20268,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -22021,8 +20296,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_storeys_deprecated**
-> list[Storey] get_storeys_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_storeys**
+> list[Storey] get_storeys(cloud_pk, model_pk, project_pk)
 
 Retrieve all storeys of a model
 
@@ -22073,17 +20348,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all storeys of a model
-        api_response = api_instance.get_storeys_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_storeys(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storeys: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -22129,17 +20404,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all storeys of a model
-        api_response = api_instance.get_storeys_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_storeys(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storeys: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -22185,17 +20460,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all storeys of a model
-        api_response = api_instance.get_storeys_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_storeys(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_storeys_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_storeys: %s\n" % e)
 ```
 
 ### Parameters
@@ -22203,7 +20478,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -22231,8 +20506,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_system_deprecated**
-> System get_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+# **get_system**
+> System get_system(cloud_pk, model_pk, project_pk, uuid)
 
 Retrieve a system of a model
 
@@ -22283,18 +20558,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Retrieve a system of a model
-        api_response = api_instance.get_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_system(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_system: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -22340,18 +20615,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Retrieve a system of a model
-        api_response = api_instance.get_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_system(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_system: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -22397,18 +20672,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 
     try:
         # Retrieve a system of a model
-        api_response = api_instance.get_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        api_response = api_instance.get_system(cloud_pk, model_pk, project_pk, uuid)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_system: %s\n" % e)
 ```
 
 ### Parameters
@@ -22416,7 +20691,7 @@ uuid = 'uuid_example' # str | IFC sytem or system type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC sytem or system type UUID | 
 
@@ -22445,8 +20720,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_systems_deprecated**
-> list[System] get_systems_deprecated(cloud_pk, ifc_pk, project_pk)
+# **get_systems**
+> list[System] get_systems(cloud_pk, model_pk, project_pk)
 
 Retrieve all systems of a model
 
@@ -22497,17 +20772,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all systems of a model
-        api_response = api_instance.get_systems_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_systems(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_systems_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_systems: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -22553,17 +20828,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all systems of a model
-        api_response = api_instance.get_systems_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_systems(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_systems_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_systems: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -22609,17 +20884,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve all systems of a model
-        api_response = api_instance.get_systems_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.get_systems(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_systems_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_systems: %s\n" % e)
 ```
 
 ### Parameters
@@ -22627,7 +20902,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -22655,8 +20930,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_zone_deprecated**
-> Zone get_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+# **get_zone**
+> Zone get_zone(cloud_pk, id, model_pk, project_pk)
 
 Retrieve one zone of a model
 
@@ -22707,18 +20982,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one zone of a model
-        api_response = api_instance.get_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_zone(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -22764,18 +21039,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one zone of a model
-        api_response = api_instance.get_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_zone(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -22821,18 +21096,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Retrieve one zone of a model
-        api_response = api_instance.get_zone_deprecated(cloud_pk, id, ifc_pk, project_pk)
+        api_response = api_instance.get_zone(cloud_pk, id, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -22841,7 +21116,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this zone. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -22869,8 +21144,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_zone_space_deprecated**
-> ZoneSpace get_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+# **get_zone_space**
+> ZoneSpace get_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
 
 Retrieve one space of a zone
 
@@ -22921,19 +21196,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve one space of a zone
-        api_response = api_instance.get_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -22979,19 +21254,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve one space of a zone
-        api_response = api_instance.get_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -23037,19 +21312,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve one space of a zone
-        api_response = api_instance.get_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -23058,7 +21333,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
 
@@ -23087,8 +21362,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_zone_spaces_deprecated**
-> list[ZoneSpace] get_zone_spaces_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk)
+# **get_zone_spaces**
+> list[ZoneSpace] get_zone_spaces(cloud_pk, model_pk, project_pk, zone_pk)
 
 Retrieve all spaces of a zone
 
@@ -23139,18 +21414,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve all spaces of a zone
-        api_response = api_instance.get_zone_spaces_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_spaces(cloud_pk, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_spaces: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -23196,18 +21471,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve all spaces of a zone
-        api_response = api_instance.get_zone_spaces_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_spaces(cloud_pk, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_spaces: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -23253,18 +21528,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 
     try:
         # Retrieve all spaces of a zone
-        api_response = api_instance.get_zone_spaces_deprecated(cloud_pk, ifc_pk, project_pk, zone_pk)
+        api_response = api_instance.get_zone_spaces(cloud_pk, model_pk, project_pk, zone_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zone_spaces_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zone_spaces: %s\n" % e)
 ```
 
 ### Parameters
@@ -23272,7 +21547,7 @@ zone_pk = 'zone_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
 
@@ -23301,8 +21576,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_zones_deprecated**
-> list[Zone] get_zones_deprecated(cloud_pk, ifc_pk, project_pk, color=color)
+# **get_zones**
+> list[Zone] get_zones(cloud_pk, model_pk, project_pk, color=color)
 
 Retrieve zones of a model
 
@@ -23353,18 +21628,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 color = 'color_example' # str | Filter the returned list by color (optional)
 
     try:
         # Retrieve zones of a model
-        api_response = api_instance.get_zones_deprecated(cloud_pk, ifc_pk, project_pk, color=color)
+        api_response = api_instance.get_zones(cloud_pk, model_pk, project_pk, color=color)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zones_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zones: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -23410,18 +21685,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 color = 'color_example' # str | Filter the returned list by color (optional)
 
     try:
         # Retrieve zones of a model
-        api_response = api_instance.get_zones_deprecated(cloud_pk, ifc_pk, project_pk, color=color)
+        api_response = api_instance.get_zones(cloud_pk, model_pk, project_pk, color=color)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zones_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zones: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -23467,18 +21742,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 color = 'color_example' # str | Filter the returned list by color (optional)
 
     try:
         # Retrieve zones of a model
-        api_response = api_instance.get_zones_deprecated(cloud_pk, ifc_pk, project_pk, color=color)
+        api_response = api_instance.get_zones(cloud_pk, model_pk, project_pk, color=color)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->get_zones_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->get_zones: %s\n" % e)
 ```
 
 ### Parameters
@@ -23486,7 +21761,7 @@ color = 'color_example' # str | Filter the returned list by color (optional)
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **color** | **str**| Filter the returned list by color | [optional] 
 
@@ -23515,223 +21790,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **launch_new_check_deprecated**
-> launch_new_check_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-
-Launch a new check on the model
-
-Starts a new check in the checker Required scopes: check:write, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Launch a new check on the model
-        api_instance.launch_new_check_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-    except ApiException as e:
-        print("Exception when calling IfcApi->launch_new_check_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Launch a new check on the model
-        api_instance.launch_new_check_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-    except ApiException as e:
-        print("Exception when calling IfcApi->launch_new_check_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Launch a new check on the model
-        api_instance.launch_new_check_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-    except ApiException as e:
-        print("Exception when calling IfcApi->launch_new_check_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**IfcChecker**](IfcChecker.md)|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**201** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **link_documents_of_element_deprecated**
-> list[Document] link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+# **link_documents_of_element**
+> list[Document] link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
 
 Link one or many documents to an element
 
@@ -23782,19 +21842,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Link one or many documents to an element
-        api_response = api_instance.link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->link_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->link_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -23840,19 +21900,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Link one or many documents to an element
-        api_response = api_instance.link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->link_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->link_documents_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -23898,19 +21958,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = [56] # list[int] | 
 
     try:
         # Link one or many documents to an element
-        api_response = api_instance.link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, data)
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->link_documents_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->link_documents_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -23919,7 +21979,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**list[int]**](int.md)|  | 
 
@@ -23948,8 +22008,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **list_classification_element_relations_deprecated**
-> list[ElementClassificationRelation] list_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk)
+# **list_classification_element_relations**
+> list[ElementClassificationRelation] list_classification_element_relations(cloud_pk, model_pk, project_pk)
 
 List all associations between classifications and elements
 
@@ -24000,17 +22060,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # List all associations between classifications and elements
-        api_response = api_instance.list_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->list_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->list_classification_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -24056,17 +22116,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # List all associations between classifications and elements
-        api_response = api_instance.list_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->list_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->list_classification_element_relations: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -24112,17 +22172,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # List all associations between classifications and elements
-        api_response = api_instance.list_classification_element_relations_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.list_classification_element_relations(cloud_pk, model_pk, project_pk)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->list_classification_element_relations_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->list_classification_element_relations: %s\n" % e)
 ```
 
 ### Parameters
@@ -24130,7 +22190,7 @@ project_pk = 'project_pk_example' # str |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -24158,8 +22218,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **merge_ifcs_deprecated**
-> merge_ifcs_deprecated(cloud_pk, project_pk, data)
+# **merge_ifcs**
+> merge_ifcs(cloud_pk, project_pk, data)
 
 Merge IFC files
 
@@ -24210,16 +22270,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
     try:
         # Merge IFC files
-        api_instance.merge_ifcs_deprecated(cloud_pk, project_pk, data)
+        api_instance.merge_ifcs(cloud_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->merge_ifcs_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->merge_ifcs: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -24265,16 +22325,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
     try:
         # Merge IFC files
-        api_instance.merge_ifcs_deprecated(cloud_pk, project_pk, data)
+        api_instance.merge_ifcs(cloud_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->merge_ifcs_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->merge_ifcs: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -24320,16 +22380,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.IfcMerge() # IfcMerge | 
 
     try:
         # Merge IFC files
-        api_instance.merge_ifcs_deprecated(cloud_pk, project_pk, data)
+        api_instance.merge_ifcs(cloud_pk, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->merge_ifcs_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->merge_ifcs: %s\n" % e)
 ```
 
 ### Parameters
@@ -24365,8 +22425,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **optimize_ifc_deprecated**
-> optimize_ifc_deprecated(cloud_pk, id, project_pk, data)
+# **optimize_ifc**
+> optimize_ifc(cloud_pk, id, project_pk, data)
 
 Optimize the IFC
 
@@ -24417,7 +22477,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -24425,9 +22485,9 @@ data = bimdata_api_client.IfcOptimize() # IfcOptimize |
 
     try:
         # Optimize the IFC
-        api_instance.optimize_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->optimize_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->optimize_ifc: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -24473,7 +22533,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -24481,9 +22541,9 @@ data = bimdata_api_client.IfcOptimize() # IfcOptimize |
 
     try:
         # Optimize the IFC
-        api_instance.optimize_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->optimize_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->optimize_ifc: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -24529,7 +22589,7 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
@@ -24537,9 +22597,9 @@ data = bimdata_api_client.IfcOptimize() # IfcOptimize |
 
     try:
         # Optimize the IFC
-        api_instance.optimize_ifc_deprecated(cloud_pk, id, project_pk, data)
+        api_instance.optimize_ifc(cloud_pk, id, project_pk, data)
     except ApiException as e:
-        print("Exception when calling IfcApi->optimize_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->optimize_ifc: %s\n" % e)
 ```
 
 ### Parameters
@@ -24576,8 +22636,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_all_element_property_set_deprecated**
-> remove_all_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+# **remove_all_element_property_set**
+> remove_all_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
 
 Remove all property sets from element
 
@@ -24628,17 +22688,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all property sets from element
-        api_instance.remove_all_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.remove_all_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_all_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_all_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -24684,17 +22744,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all property sets from element
-        api_instance.remove_all_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.remove_all_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_all_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_all_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -24740,17 +22800,17 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove all property sets from element
-        api_instance.remove_all_element_property_set_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_instance.remove_all_element_property_set(cloud_pk, element_uuid, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_all_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_all_element_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -24759,7 +22819,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -24787,8 +22847,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_classification_of_element_deprecated**
-> remove_classification_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+# **remove_classification_of_element**
+> remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Remove a classification from an element
 
@@ -24839,18 +22899,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a classification from an element
-        api_instance.remove_classification_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_classification_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -24896,18 +22956,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a classification from an element
-        api_instance.remove_classification_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_classification_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -24953,18 +23013,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this classification.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a classification from an element
-        api_instance.remove_classification_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_classification_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -24974,7 +23034,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this classification. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -25002,8 +23062,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_document_of_element_deprecated**
-> remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+# **remove_document_of_element**
+> remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Remove a documents from an element
 
@@ -25054,18 +23114,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a documents from an element
-        api_instance.remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_document_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_document_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -25111,18 +23171,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a documents from an element
-        api_instance.remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_document_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_document_of_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -25168,18 +23228,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this document.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a documents from an element
-        api_instance.remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_document_of_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_document_of_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -25189,7 +23249,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this document. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -25217,8 +23277,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_element_property_set_deprecated**
-> remove_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+# **remove_element_property_set**
+> remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Remove a PropertySet from an element
 
@@ -25269,18 +23329,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a PropertySet from an element
-        api_instance.remove_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -25326,18 +23386,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a PropertySet from an element
-        api_instance.remove_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -25383,18 +23443,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Remove a PropertySet from an element
-        api_instance.remove_element_property_set_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk)
+        api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -25404,7 +23464,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property set. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
 
 ### Return type
@@ -25432,458 +23492,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_element_property_set_property_definition_deprecated**
-> remove_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-
-Remove a Definition from a Property
-
- Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Definition from a Property
-        api_instance.remove_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Definition from a Property
-        api_instance.remove_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Definition from a Property
-        api_instance.remove_element_property_set_property_definition_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **id** | **int**| A unique integer value identifying this property definition. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **remove_element_property_set_property_definition_unit_deprecated**
-> remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-
-Remove a Unit from a Definition
-
-Remove a Unit from a Definition Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Unit from a Definition
-        api_instance.remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Unit from a Definition
-        api_instance.remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-element_uuid = 'element_uuid_example' # str | 
-id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-property_pk = 'property_pk_example' # str | 
-propertydefinition_pk = 'propertydefinition_pk_example' # str | 
-propertyset_pk = 'propertyset_pk_example' # str | 
-
-    try:
-        # Remove a Unit from a Definition
-        api_instance.remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
-    except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_definition_unit_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **element_uuid** | **str**|  | 
- **id** | **int**| A unique integer value identifying this unit. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **property_pk** | **str**|  | 
- **propertydefinition_pk** | **str**|  | 
- **propertyset_pk** | **str**|  | 
-
-### Return type
-
-void (empty response body)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: Not defined
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**204** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **remove_element_property_set_property_deprecated**
-> remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+# **remove_element_property_set_property**
+> remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
 
 Remove a property from a PropertySet
 
@@ -25934,19 +23544,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Remove a property from a PropertySet
-        api_instance.remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -25992,19 +23602,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Remove a property from a PropertySet
-        api_instance.remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -26050,19 +23660,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 
     try:
         # Remove a property from a PropertySet
-        api_instance.remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk)
+        api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_element_property_set_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -26072,7 +23682,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
 
@@ -26101,8 +23711,458 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **remove_elements_from_classification_deprecated**
-> remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid)
+# **remove_element_property_set_property_definition**
+> remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+
+Remove a Definition from a Property
+
+ Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Definition from a Property
+        api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Definition from a Property
+        api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Definition from a Property
+        api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **remove_element_property_set_property_definition_unit**
+> remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+
+Remove a Unit from a Definition
+
+Remove a Unit from a Definition Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Unit from a Definition
+        api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Unit from a Definition
+        api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+element_uuid = 'element_uuid_example' # str | 
+id = 56 # int | A unique integer value identifying this unit.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+property_pk = 'property_pk_example' # str | 
+propertydefinition_pk = 'propertydefinition_pk_example' # str | 
+propertyset_pk = 'propertyset_pk_example' # str | 
+
+    try:
+        # Remove a Unit from a Definition
+        api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
+    except ApiException as e:
+        print("Exception when calling ModelApi->remove_element_property_set_property_definition_unit: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **element_uuid** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this unit. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **property_pk** | **str**|  | 
+ **propertydefinition_pk** | **str**|  | 
+ **propertyset_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **remove_elements_from_classification**
+> remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
 
 Remove the classification from all elements
 
@@ -26153,18 +24213,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Remove the classification from all elements
-        api_instance.remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid)
+        api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -26210,18 +24270,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Remove the classification from all elements
-        api_instance.remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid)
+        api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_elements_from_classification: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -26267,18 +24327,18 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
 model_classification_pk = 'model_classification_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 
     try:
         # Remove the classification from all elements
-        api_instance.remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid)
+        api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
     except ApiException as e:
-        print("Exception when calling IfcApi->remove_elements_from_classification_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->remove_elements_from_classification: %s\n" % e)
 ```
 
 ### Parameters
@@ -26286,8 +24346,8 @@ uuid = 'uuid_example' # str | IFC element or element type UUID
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
  **model_classification_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
 
@@ -26316,8 +24376,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **reprocess_ifc_deprecated**
-> reprocess_ifc_deprecated(cloud_pk, id, project_pk)
+# **reprocess_model**
+> reprocess_model(cloud_pk, id, project_pk)
 
 Reprocess Model file
 
@@ -26368,16 +24428,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Reprocess Model file
-        api_instance.reprocess_ifc_deprecated(cloud_pk, id, project_pk)
+        api_instance.reprocess_model(cloud_pk, id, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->reprocess_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->reprocess_model: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -26423,16 +24483,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Reprocess Model file
-        api_instance.reprocess_ifc_deprecated(cloud_pk, id, project_pk)
+        api_instance.reprocess_model(cloud_pk, id, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->reprocess_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->reprocess_model: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -26478,16 +24538,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this model.
 project_pk = 'project_pk_example' # str | 
 
     try:
         # Reprocess Model file
-        api_instance.reprocess_ifc_deprecated(cloud_pk, id, project_pk)
+        api_instance.reprocess_model(cloud_pk, id, project_pk)
     except ApiException as e:
-        print("Exception when calling IfcApi->reprocess_ifc_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->reprocess_model: %s\n" % e)
 ```
 
 ### Parameters
@@ -26523,8 +24583,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_access_token_deprecated**
-> IfcAccessToken update_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token, data)
+# **update_access_token**
+> IfcAccessToken update_access_token(cloud_pk, model_pk, project_pk, token, data)
 
 Update some fields of a token
 
@@ -26575,19 +24635,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Update some fields of a token
-        api_response = api_instance.update_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token, data)
+        api_response = api_instance.update_access_token(cloud_pk, model_pk, project_pk, token, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -26633,19 +24693,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Update some fields of a token
-        api_response = api_instance.update_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token, data)
+        api_response = api_instance.update_access_token(cloud_pk, model_pk, project_pk, token, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_access_token: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -26691,19 +24751,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 token = 'token_example' # str | 
 data = bimdata_api_client.IfcAccessToken() # IfcAccessToken | 
 
     try:
         # Update some fields of a token
-        api_response = api_instance.update_access_token_deprecated(cloud_pk, ifc_pk, project_pk, token, data)
+        api_response = api_instance.update_access_token(cloud_pk, model_pk, project_pk, token, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_access_token_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_access_token: %s\n" % e)
 ```
 
 ### Parameters
@@ -26711,7 +24771,7 @@ data = bimdata_api_client.IfcAccessToken() # IfcAccessToken |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **token** | **str**|  | 
  **data** | [**IfcAccessToken**](IfcAccessToken.md)|  | 
@@ -26741,448 +24801,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_checker_deprecated**
-> IfcChecker update_checker_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-
-Update some fields of a checker of a model
-
-A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Update some fields of a checker of a model
-        api_response = api_instance.update_checker_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Update some fields of a checker of a model
-        api_response = api_instance.update_checker_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this ifc checker.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.IfcChecker() # IfcChecker | 
-
-    try:
-        # Update some fields of a checker of a model
-        api_response = api_instance.update_checker_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this ifc checker. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**IfcChecker**](IfcChecker.md)|  | 
-
-### Return type
-
-[**IfcChecker**](IfcChecker.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_checker_result_deprecated**
-> CheckerResult update_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-
-Update some fields of a CheckerResult
-
-Update some fields of a CheckerResult Required scopes: check:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_result_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    checker_pk = 'checker_pk_example' # str | 
-cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this checker result.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.CheckerResult() # CheckerResult | 
-
-    try:
-        # Update some fields of a CheckerResult
-        api_response = api_instance.update_checker_result_deprecated(checker_pk, cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_checker_result_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **checker_pk** | **str**|  | 
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this checker result. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**CheckerResult**](CheckerResult.md)|  | 
-
-### Return type
-
-[**CheckerResult**](CheckerResult.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_element_deprecated**
-> Element update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+# **update_element**
+> Element update_element(cloud_pk, model_pk, project_pk, uuid, data)
 
 Update some fields of an element
 
@@ -27233,19 +24853,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update some fields of an element
-        api_response = api_instance.update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -27291,19 +24911,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update some fields of an element
-        api_response = api_instance.update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -27349,19 +24969,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
 data = bimdata_api_client.Element() # Element | 
 
     try:
         # Update some fields of an element
-        api_response = api_instance.update_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_element(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element: %s\n" % e)
 ```
 
 ### Parameters
@@ -27369,7 +24989,7 @@ data = bimdata_api_client.Element() # Element |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
  **data** | [**Element**](Element.md)|  | 
@@ -27399,8 +25019,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_element_property_set_property_deprecated**
-> ModelProperty update_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, data)
+# **update_element_property_set_property**
+> ModelProperty update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, data)
 
 Update a property from an element
 
@@ -27451,21 +25071,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update a property from an element
-        api_response = api_instance.update_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -27511,21 +25131,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update a property from an element
-        api_response = api_instance.update_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element_property_set_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -27571,21 +25191,21 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 element_uuid = 'element_uuid_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 propertyset_pk = 'propertyset_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update a property from an element
-        api_response = api_instance.update_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, data)
+        api_response = api_instance.update_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_element_property_set_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_element_property_set_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -27595,7 +25215,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **element_uuid** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **propertyset_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
@@ -27625,682 +25245,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_ifc_deprecated**
-> Model update_ifc_deprecated(cloud_pk, id, project_pk, data)
-
-Update some fields of a model
-
-Update some fields of a model Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Model() # Model | 
-
-    try:
-        # Update some fields of a model
-        api_response = api_instance.update_ifc_deprecated(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Model() # Model | 
-
-    try:
-        # Update some fields of a model
-        api_response = api_instance.update_ifc_deprecated(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Model() # Model | 
-
-    try:
-        # Update some fields of a model
-        api_response = api_instance.update_ifc_deprecated(cloud_pk, id, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this model. | 
- **project_pk** | **str**|  | 
- **data** | [**Model**](Model.md)|  | 
-
-### Return type
-
-[**Model**](Model.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_ifc_files_deprecated**
-> ModelFiles update_ifc_files_deprecated(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
-
-Update models file (gltf, svg, structure, etc)
-
-         Patch model files (gltf, structure, svg, etc)  Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-structure_file = '/path/to/file' # file |  (optional)
-systems_file = '/path/to/file' # file |  (optional)
-map_file = '/path/to/file' # file |  (optional)
-gltf_file = '/path/to/file' # file |  (optional)
-gltf_with_openings_file = '/path/to/file' # file |  (optional)
-bvh_tree_file = '/path/to/file' # file |  (optional)
-viewer_360_file = '/path/to/file' # file |  (optional)
-xkt_file = '/path/to/file' # file |  (optional)
-
-    try:
-        # Update models file (gltf, svg, structure, etc)
-        api_response = api_instance.update_ifc_files_deprecated(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_files_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-structure_file = '/path/to/file' # file |  (optional)
-systems_file = '/path/to/file' # file |  (optional)
-map_file = '/path/to/file' # file |  (optional)
-gltf_file = '/path/to/file' # file |  (optional)
-gltf_with_openings_file = '/path/to/file' # file |  (optional)
-bvh_tree_file = '/path/to/file' # file |  (optional)
-viewer_360_file = '/path/to/file' # file |  (optional)
-xkt_file = '/path/to/file' # file |  (optional)
-
-    try:
-        # Update models file (gltf, svg, structure, etc)
-        api_response = api_instance.update_ifc_files_deprecated(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_files_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this model.
-project_pk = 'project_pk_example' # str | 
-structure_file = '/path/to/file' # file |  (optional)
-systems_file = '/path/to/file' # file |  (optional)
-map_file = '/path/to/file' # file |  (optional)
-gltf_file = '/path/to/file' # file |  (optional)
-gltf_with_openings_file = '/path/to/file' # file |  (optional)
-bvh_tree_file = '/path/to/file' # file |  (optional)
-viewer_360_file = '/path/to/file' # file |  (optional)
-xkt_file = '/path/to/file' # file |  (optional)
-
-    try:
-        # Update models file (gltf, svg, structure, etc)
-        api_response = api_instance.update_ifc_files_deprecated(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_files_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this model. | 
- **project_pk** | **str**|  | 
- **structure_file** | **file**|  | [optional] 
- **systems_file** | **file**|  | [optional] 
- **map_file** | **file**|  | [optional] 
- **gltf_file** | **file**|  | [optional] 
- **gltf_with_openings_file** | **file**|  | [optional] 
- **bvh_tree_file** | **file**|  | [optional] 
- **viewer_360_file** | **file**|  | [optional] 
- **xkt_file** | **file**|  | [optional] 
-
-### Return type
-
-[**ModelFiles**](ModelFiles.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_ifc_property_definition_deprecated**
-> PropertyDefinition update_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-
-Update some fields of many PropertyDefinitions of a model
-
- Required scopes: ifc:write, model:write
-
-### Example
-
-* Api Key Authentication (Bearer):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Update some fields of many PropertyDefinitions of a model
-        api_response = api_instance.update_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (bimdata_connect):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Update some fields of many PropertyDefinitions of a model
-        api_response = api_instance.update_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-* OAuth Authentication (client_credentials):
-```python
-from __future__ import print_function
-import time
-import bimdata_api_client
-from bimdata_api_client.rest import ApiException
-from pprint import pprint
-# Defining the host is optional and defaults to https://api.bimdata.io
-# See configuration.py for a list of all supported configuration parameters.
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-
-# The client must configure the authentication and authorization parameters
-# in accordance with the API server security policy.
-# Examples for each auth method are provided below, use the example that
-# satisfies your auth use case.
-
-# Configure API key authorization: Bearer
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io",
-    api_key = {
-        'Authorization': 'YOUR_API_KEY'
-    }
-)
-# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-# configuration.api_key_prefix['Authorization'] = 'Bearer'
-
-# Configure OAuth2 access token for authorization: bimdata_connect
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Configure OAuth2 access token for authorization: client_credentials
-configuration = bimdata_api_client.Configuration(
-    host = "https://api.bimdata.io"
-)
-configuration.access_token = 'YOUR_ACCESS_TOKEN'
-
-# Enter a context with an instance of the API client
-with bimdata_api_client.ApiClient(configuration) as api_client:
-    # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
-    cloud_pk = 'cloud_pk_example' # str | 
-id = 56 # int | A unique integer value identifying this property definition.
-ifc_pk = 'ifc_pk_example' # str | 
-project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
-
-    try:
-        # Update some fields of many PropertyDefinitions of a model
-        api_response = api_instance.update_ifc_property_definition_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
-        pprint(api_response)
-    except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_definition_deprecated: %s\n" % e)
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **cloud_pk** | **str**|  | 
- **id** | **int**| A unique integer value identifying this property definition. | 
- **ifc_pk** | **str**|  | 
- **project_pk** | **str**|  | 
- **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
-
-### Return type
-
-[**PropertyDefinition**](PropertyDefinition.md)
-
-### Authorization
-
-[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-### HTTP response details
-| Status code | Description | Response headers |
-|-------------|-------------|------------------|
-**200** |  |  -  |
-**400** | A required field is missing in the body |  -  |
-**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
-**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
-**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
-**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **update_ifc_property_deprecated**
-> ModelProperty update_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_ifc_property**
+> ModelProperty update_ifc_property(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a Property
 
@@ -28351,19 +25297,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update some fields of a Property
-        api_response = api_instance.update_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_property(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -28409,19 +25355,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update some fields of a Property
-        api_response = api_instance.update_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_property(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_property: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -28467,19 +25413,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ModelProperty() # ModelProperty | 
 
     try:
         # Update some fields of a Property
-        api_response = api_instance.update_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_property(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_property_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_property: %s\n" % e)
 ```
 
 ### Parameters
@@ -28488,7 +25434,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**ModelProperty**](ModelProperty.md)|  | 
 
@@ -28517,8 +25463,226 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_ifc_unit_deprecated**
-> Unit update_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_ifc_property_definition**
+> PropertyDefinition update_ifc_property_definition(cloud_pk, id, model_pk, project_pk, data)
+
+Update some fields of many PropertyDefinitions of a model
+
+ Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+
+    try:
+        # Update some fields of many PropertyDefinitions of a model
+        api_response = api_instance.update_ifc_property_definition(cloud_pk, id, model_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+
+    try:
+        # Update some fields of many PropertyDefinitions of a model
+        api_response = api_instance.update_ifc_property_definition(cloud_pk, id, model_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_ifc_property_definition: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this property definition.
+model_pk = 'model_pk_example' # str | 
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.PropertyDefinition() # PropertyDefinition | 
+
+    try:
+        # Update some fields of many PropertyDefinitions of a model
+        api_response = api_instance.update_ifc_property_definition(cloud_pk, id, model_pk, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_ifc_property_definition: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this property definition. | 
+ **model_pk** | **str**|  | 
+ **project_pk** | **str**|  | 
+ **data** | [**PropertyDefinition**](PropertyDefinition.md)|  | 
+
+### Return type
+
+[**PropertyDefinition**](PropertyDefinition.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_ifc_unit**
+> Unit update_ifc_unit(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a Unit of a model
 
@@ -28569,19 +25733,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
     try:
         # Update some fields of a Unit of a model
-        api_response = api_instance.update_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_unit(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -28627,19 +25791,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
     try:
         # Update some fields of a Unit of a model
-        api_response = api_instance.update_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_unit(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_unit: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -28685,19 +25849,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this unit.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Unit() # Unit | 
 
     try:
         # Update some fields of a Unit of a model
-        api_response = api_instance.update_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_ifc_unit(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_ifc_unit_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_ifc_unit: %s\n" % e)
 ```
 
 ### Parameters
@@ -28706,7 +25870,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this unit. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Unit**](Unit.md)|  | 
 
@@ -28735,8 +25899,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_layer_deprecated**
-> Layer update_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_layer**
+> Layer update_layer(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a layer
 
@@ -28787,19 +25951,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Update some fields of a layer
-        api_response = api_instance.update_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_layer(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -28845,19 +26009,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Update some fields of a layer
-        api_response = api_instance.update_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_layer(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_layer: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -28903,19 +26067,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this layer.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Layer() # Layer | 
 
     try:
         # Update some fields of a layer
-        api_response = api_instance.update_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_layer(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_layer_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_layer: %s\n" % e)
 ```
 
 ### Parameters
@@ -28924,7 +26088,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this layer. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Layer**](Layer.md)|  | 
 
@@ -28953,8 +26117,464 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_plan_positioning_deprecated**
-> PositioningPlan update_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+# **update_model**
+> Model update_model(cloud_pk, id, project_pk, data)
+
+Update some fields of a model
+
+Update some fields of a model Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Model() # Model | 
+
+    try:
+        # Update some fields of a model
+        api_response = api_instance.update_model(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Model() # Model | 
+
+    try:
+        # Update some fields of a model
+        api_response = api_instance.update_model(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+data = bimdata_api_client.Model() # Model | 
+
+    try:
+        # Update some fields of a model
+        api_response = api_instance.update_model(cloud_pk, id, project_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this model. | 
+ **project_pk** | **str**|  | 
+ **data** | [**Model**](Model.md)|  | 
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_model_files**
+> ModelFiles update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+
+Update models file (gltf, svg, structure, etc)
+
+         Patch model files (gltf, structure, svg, etc)  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+structure_file = '/path/to/file' # file |  (optional)
+systems_file = '/path/to/file' # file |  (optional)
+map_file = '/path/to/file' # file |  (optional)
+gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
+bvh_tree_file = '/path/to/file' # file |  (optional)
+viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
+
+    try:
+        # Update models file (gltf, svg, structure, etc)
+        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model_files: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+structure_file = '/path/to/file' # file |  (optional)
+systems_file = '/path/to/file' # file |  (optional)
+map_file = '/path/to/file' # file |  (optional)
+gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
+bvh_tree_file = '/path/to/file' # file |  (optional)
+viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
+
+    try:
+        # Update models file (gltf, svg, structure, etc)
+        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model_files: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.ModelApi(api_client)
+    cloud_pk = 'cloud_pk_example' # str | 
+id = 56 # int | A unique integer value identifying this model.
+project_pk = 'project_pk_example' # str | 
+structure_file = '/path/to/file' # file |  (optional)
+systems_file = '/path/to/file' # file |  (optional)
+map_file = '/path/to/file' # file |  (optional)
+gltf_file = '/path/to/file' # file |  (optional)
+gltf_with_openings_file = '/path/to/file' # file |  (optional)
+bvh_tree_file = '/path/to/file' # file |  (optional)
+viewer_360_file = '/path/to/file' # file |  (optional)
+xkt_file = '/path/to/file' # file |  (optional)
+
+    try:
+        # Update models file (gltf, svg, structure, etc)
+        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, viewer_360_file=viewer_360_file, xkt_file=xkt_file)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling ModelApi->update_model_files: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this model. | 
+ **project_pk** | **str**|  | 
+ **structure_file** | **file**|  | [optional] 
+ **systems_file** | **file**|  | [optional] 
+ **map_file** | **file**|  | [optional] 
+ **gltf_file** | **file**|  | [optional] 
+ **gltf_with_openings_file** | **file**|  | [optional] 
+ **bvh_tree_file** | **file**|  | [optional] 
+ **viewer_360_file** | **file**|  | [optional] 
+ **xkt_file** | **file**|  | [optional] 
+
+### Return type
+
+[**ModelFiles**](ModelFiles.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_plan_positioning**
+> PositioningPlan update_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk, data)
 
 Update the postioning of the plan in the storey
 
@@ -29005,20 +26625,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
 
     try:
         # Update the postioning of the plan in the storey
-        api_response = api_instance.update_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_plan_positioning: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -29064,20 +26684,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
 
     try:
         # Update the postioning of the plan in the storey
-        api_response = api_instance.update_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_plan_positioning: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -29123,20 +26743,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_pk = 'storey_pk_example' # str | 
 data = bimdata_api_client.PositioningPlan() # PositioningPlan | 
 
     try:
         # Update the postioning of the plan in the storey
-        api_response = api_instance.update_plan_positioning_deprecated(cloud_pk, id, ifc_pk, project_pk, storey_pk, data)
+        api_response = api_instance.update_plan_positioning(cloud_pk, id, model_pk, project_pk, storey_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_plan_positioning_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_plan_positioning: %s\n" % e)
 ```
 
 ### Parameters
@@ -29145,7 +26765,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_pk** | **str**|  | 
  **data** | [**PositioningPlan**](PositioningPlan.md)|  | 
@@ -29175,8 +26795,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_processor_handler_deprecated**
-> ProcessorHandler update_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_processor_handler**
+> ProcessorHandler update_processor_handler(cloud_pk, id, model_pk, project_pk, data)
 
 Update the status of a processor handler
 
@@ -29227,19 +26847,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
 
     try:
         # Update the status of a processor handler
-        api_response = api_instance.update_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_processor_handler(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_processor_handler: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -29285,19 +26905,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
 
     try:
         # Update the status of a processor handler
-        api_response = api_instance.update_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_processor_handler(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_processor_handler: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -29343,19 +26963,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this processor handler.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.ProcessorHandler() # ProcessorHandler | 
 
     try:
         # Update the status of a processor handler
-        api_response = api_instance.update_processor_handler_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_processor_handler(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_processor_handler_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_processor_handler: %s\n" % e)
 ```
 
 ### Parameters
@@ -29364,7 +26984,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this processor handler. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**ProcessorHandler**](ProcessorHandler.md)|  | 
 
@@ -29393,8 +27013,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_property_set_deprecated**
-> PropertySet update_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_property_set**
+> PropertySet update_property_set(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a PropertySet
 
@@ -29445,19 +27065,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Update some fields of a PropertySet
-        api_response = api_instance.update_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_property_set(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -29503,19 +27123,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Update some fields of a PropertySet
-        api_response = api_instance.update_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_property_set(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_property_set: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -29561,19 +27181,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this property set.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.PropertySet() # PropertySet | 
 
     try:
         # Update some fields of a PropertySet
-        api_response = api_instance.update_property_set_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_property_set(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_property_set_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_property_set: %s\n" % e)
 ```
 
 ### Parameters
@@ -29582,7 +27202,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this property set. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**PropertySet**](PropertySet.md)|  | 
 
@@ -29611,8 +27231,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_space_deprecated**
-> Space update_space_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_space**
+> Space update_space(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a space
 
@@ -29663,19 +27283,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_space_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_space(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -29721,19 +27341,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_space_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_space(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -29779,19 +27399,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Space() # Space | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_space_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_space(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -29800,7 +27420,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Space**](Space.md)|  | 
 
@@ -29829,8 +27449,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_storey_deprecated**
-> Storey update_storey_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_storey**
+> Storey update_storey(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a storey
 
@@ -29881,19 +27501,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Update some fields of a storey
-        api_response = api_instance.update_storey_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_storey(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -29939,19 +27559,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Update some fields of a storey
-        api_response = api_instance.update_storey_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_storey(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_storey: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -29997,19 +27617,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this storey.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Storey() # Storey | 
 
     try:
         # Update some fields of a storey
-        api_response = api_instance.update_storey_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_storey(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_storey_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_storey: %s\n" % e)
 ```
 
 ### Parameters
@@ -30018,7 +27638,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this storey. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Storey**](Storey.md)|  | 
 
@@ -30047,8 +27667,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_system_deprecated**
-> System update_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+# **update_system**
+> System update_system(cloud_pk, model_pk, project_pk, uuid, data)
 
 Update some fields of a system
 
@@ -30099,19 +27719,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 data = bimdata_api_client.System() # System | 
 
     try:
         # Update some fields of a system
-        api_response = api_instance.update_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_system(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_system: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -30157,19 +27777,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 data = bimdata_api_client.System() # System | 
 
     try:
         # Update some fields of a system
-        api_response = api_instance.update_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_system(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_system: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -30215,19 +27835,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC sytem or system type UUID
 data = bimdata_api_client.System() # System | 
 
     try:
         # Update some fields of a system
-        api_response = api_instance.update_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, data)
+        api_response = api_instance.update_system(cloud_pk, model_pk, project_pk, uuid, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_system_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_system: %s\n" % e)
 ```
 
 ### Parameters
@@ -30235,7 +27855,7 @@ data = bimdata_api_client.System() # System |
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC sytem or system type UUID | 
  **data** | [**System**](System.md)|  | 
@@ -30265,8 +27885,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_zone_deprecated**
-> Zone update_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+# **update_zone**
+> Zone update_zone(cloud_pk, id, model_pk, project_pk, data)
 
 Update some fields of a zone
 
@@ -30317,19 +27937,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
 
     try:
         # Update some fields of a zone
-        api_response = api_instance.update_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_zone(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -30375,19 +27995,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
 
     try:
         # Update some fields of a zone
-        api_response = api_instance.update_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_zone(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -30433,19 +28053,19 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this zone.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 data = bimdata_api_client.Zone() # Zone | 
 
     try:
         # Update some fields of a zone
-        api_response = api_instance.update_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, data)
+        api_response = api_instance.update_zone(cloud_pk, id, model_pk, project_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone: %s\n" % e)
 ```
 
 ### Parameters
@@ -30454,7 +28074,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this zone. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **data** | [**Zone**](Zone.md)|  | 
 
@@ -30483,8 +28103,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_zone_space_deprecated**
-> ZoneSpace update_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+# **update_zone_space**
+> ZoneSpace update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, data)
 
 Update some fields of a space
 
@@ -30535,20 +28155,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -30594,20 +28214,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone_space: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -30653,20 +28273,20 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 # Enter a context with an instance of the API client
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
-    api_instance = bimdata_api_client.IfcApi(api_client)
+    api_instance = bimdata_api_client.ModelApi(api_client)
     cloud_pk = 'cloud_pk_example' # str | 
 id = 56 # int | A unique integer value identifying this space.
-ifc_pk = 'ifc_pk_example' # str | 
+model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 zone_pk = 'zone_pk_example' # str | 
 data = bimdata_api_client.ZoneSpace() # ZoneSpace | 
 
     try:
         # Update some fields of a space
-        api_response = api_instance.update_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, data)
+        api_response = api_instance.update_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling IfcApi->update_zone_space_deprecated: %s\n" % e)
+        print("Exception when calling ModelApi->update_zone_space: %s\n" % e)
 ```
 
 ### Parameters
@@ -30675,7 +28295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **str**|  | 
  **id** | **int**| A unique integer value identifying this space. | 
- **ifc_pk** | **str**|  | 
+ **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **zone_pk** | **str**|  | 
  **data** | [**ZoneSpace**](ZoneSpace.md)|  | 

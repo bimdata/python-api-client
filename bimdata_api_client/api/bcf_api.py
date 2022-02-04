@@ -2635,6 +2635,7 @@ class BcfApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
+        :param str models: Filter the returned list by models
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
         :param str img_format: All snapshot_data will be returned as url instead of base64
@@ -2663,6 +2664,7 @@ class BcfApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
+        :param str models: Filter the returned list by models
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
         :param str img_format: All snapshot_data will be returned as url instead of base64
@@ -2684,6 +2686,7 @@ class BcfApi(object):
 
         all_params = [
             'projects_pk',
+            'models',
             'ifcs',
             'format',
             'img_format'
@@ -2717,6 +2720,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'models' in local_var_params and local_var_params['models'] is not None:  # noqa: E501
+            query_params.append(('models', local_var_params['models']))  # noqa: E501
         if 'ifcs' in local_var_params and local_var_params['ifcs'] is not None:  # noqa: E501
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
         if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501
@@ -3279,6 +3284,7 @@ class BcfApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
+        :param str models: Filter the returned list by models
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3306,6 +3312,7 @@ class BcfApi(object):
 
         :param async_req bool: execute request asynchronously
         :param str projects_pk: (required)
+        :param str models: Filter the returned list by models
         :param str ifcs: Filter the returned list by ifcs
         :param str format: Filter the returned list by format
         :param _return_http_data_only: response data without head status code
@@ -3326,6 +3333,7 @@ class BcfApi(object):
 
         all_params = [
             'projects_pk',
+            'models',
             'ifcs',
             'format'
         ]
@@ -3358,6 +3366,8 @@ class BcfApi(object):
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
         query_params = []
+        if 'models' in local_var_params and local_var_params['models'] is not None:  # noqa: E501
+            query_params.append(('models', local_var_params['models']))  # noqa: E501
         if 'ifcs' in local_var_params and local_var_params['ifcs'] is not None:  # noqa: E501
             query_params.append(('ifcs', local_var_params['ifcs']))  # noqa: E501
         if 'format' in local_var_params and local_var_params['format'] is not None:  # noqa: E501

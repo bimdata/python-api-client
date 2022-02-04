@@ -59,7 +59,7 @@ Method | HTTP request | Description
 [**get_project_creator_visas**](CollaborationApi.md#get_project_creator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/creator | List visas created by user
 [**get_project_dms_tree**](CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
 [**get_project_invitations**](CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
-[**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all ifc files in the project
+[**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
 [**get_project_sub_tree**](CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
 [**get_project_tree**](CollaborationApi.md#get_project_tree) | **GET** /cloud/{cloud_pk}/project/{id}/tree | Retrieve the complete DMS tree
 [**get_project_users**](CollaborationApi.md#get_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/user | Retrieve all users in a project, or a list with a filter by email
@@ -1348,7 +1348,7 @@ void (empty response body)
 
 Create a classification
 
-         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write
+         Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -2165,7 +2165,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> Document create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+> Document create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
 
 Create a document
 
@@ -2227,11 +2227,12 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
-ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
+model_source = 'model_source_example' # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+ifc_source = 'ifc_source_example' # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
 
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -2291,11 +2292,12 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
-ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
+model_source = 'model_source_example' # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+ifc_source = 'ifc_source_example' # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
 
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -2355,11 +2357,12 @@ creator = 56 # int |  (optional)
 file_name = 'file_name_example' # str | Full name of the file (optional)
 description = 'description_example' # str | Description of the file (optional)
 size = 56 # int | Size of the file. (optional)
-ifc_source = 'ifc_source_example' # str | Define the ifc.source field if the upload is an IFC (optional)
+model_source = 'model_source_example' # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+ifc_source = 'ifc_source_example' # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
 
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, ifc_source=ifc_source)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -2379,7 +2382,8 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional] 
  **description** | **str**| Description of the file | [optional] 
  **size** | **int**| Size of the file. | [optional] 
- **ifc_source** | **str**| Define the ifc.source field if the upload is an IFC | [optional] 
+ **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional] 
+ **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional] 
 
 ### Return type
 
@@ -3897,7 +3901,7 @@ Name | Type | Description  | Notes
 
 Delete a classification
 
-All elements having this classification will lose it Required scopes: ifc:write
+All elements having this classification will lose it Required scopes: ifc:write, model:write
 
 ### Example
 
@@ -6811,7 +6815,7 @@ void (empty response body)
 
 Retrieve a classification
 
-Retrieve a classification Required scopes: ifc:read
+Retrieve a classification Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -7021,7 +7025,7 @@ Name | Type | Description  | Notes
 
 Retrieve all classifications
 
-Retrieve all classifications of all models in the project Required scopes: ifc:read
+Retrieve all classifications of all models in the project Required scopes: ifc:read, model:read
 
 ### Example
 
@@ -11563,7 +11567,7 @@ Name | Type | Description  | Notes
 # **get_project_size**
 > ProjectSize get_project_size(cloud_pk, id)
 
-Get size of all ifc files in the project
+Get size of all model files in the project
 
 Returns the size of the project in Bytes
 
@@ -11617,7 +11621,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 id = 56 # int | A unique integer value identifying this project.
 
     try:
-        # Get size of all ifc files in the project
+        # Get size of all model files in the project
         api_response = api_instance.get_project_size(cloud_pk, id)
         pprint(api_response)
     except ApiException as e:
@@ -11672,7 +11676,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 id = 56 # int | A unique integer value identifying this project.
 
     try:
-        # Get size of all ifc files in the project
+        # Get size of all model files in the project
         api_response = api_instance.get_project_size(cloud_pk, id)
         pprint(api_response)
     except ApiException as e:
@@ -11727,7 +11731,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 id = 56 # int | A unique integer value identifying this project.
 
     try:
-        # Get size of all ifc files in the project
+        # Get size of all model files in the project
         api_response = api_instance.get_project_size(cloud_pk, id)
         pprint(api_response)
     except ApiException as e:
@@ -15745,7 +15749,7 @@ void (empty response body)
 
 Update some fields of a classification
 
-Update some fields of a classification Required scopes: ifc:write
+Update some fields of a classification Required scopes: ifc:write, model:write
 
 ### Example
 

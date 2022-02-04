@@ -40,6 +40,7 @@ class TestInlineObject(unittest.TestCase):
                 id = 56, 
                 parent_id = 56, 
                 type = '0', 
+                nature = '0', 
                 name = '0', 
                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 

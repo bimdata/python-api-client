@@ -59,6 +59,9 @@ class TestTopic(unittest.TestCase):
                 ifcs = [
                     56
                     ], 
+                models = [
+                    56
+                    ], 
                 format = '0', 
                 index = 0, 
                 project = 56

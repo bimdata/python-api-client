@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly] 
-**ifc_id** | **str** |  | [optional] [readonly] 
+**building_id** | **str** |  | [optional] [readonly] 
 **name** | **str** |  | 
 **elevation** | **float** |  | [optional] 
 **order** | **int** |  | [optional] [readonly] 

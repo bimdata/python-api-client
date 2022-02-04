@@ -417,7 +417,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_get_project_size(self):
         """Test case for get_project_size
 
-        Get size of all ifc files in the project  # noqa: E501
+        Get size of all model files in the project  # noqa: E501
         """
         pass
 

@@ -1,4 +1,4 @@
-# IfcFiles
+# ModelFiles
 
 ## Properties
 Name | Type | Description | Notes

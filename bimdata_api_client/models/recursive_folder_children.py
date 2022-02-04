@@ -39,12 +39,15 @@ class RecursiveFolderChildren(object):
         'created_by': 'User',
         'creator': 'User',
         'type': 'str',
+        'nature': 'str',
+        'model_type': 'str',
         'name': 'str',
         'created_at': 'datetime',
         'updated_at': 'datetime',
         'file_name': 'str',
         'description': 'str',
         'size': 'int',
+        'model_id': 'int',
         'ifc_id': 'int',
         'file': 'str',
         'groups_permissions': 'list[FolderGroupPermission]',
@@ -59,12 +62,15 @@ class RecursiveFolderChildren(object):
         'created_by': 'created_by',
         'creator': 'creator',
         'type': 'type',
+        'nature': 'nature',
+        'model_type': 'model_type',
         'name': 'name',
         'created_at': 'created_at',
         'updated_at': 'updated_at',
         'file_name': 'file_name',
         'description': 'description',
         'size': 'size',
+        'model_id': 'model_id',
         'ifc_id': 'ifc_id',
         'file': 'file',
         'groups_permissions': 'groups_permissions',
@@ -73,7 +79,7 @@ class RecursiveFolderChildren(object):
         'children': 'children'
     }
 
-    def __init__(self, id=None, parent_id=None, created_by=None, creator=None, type=None, name=None, created_at=None, updated_at=None, file_name=None, description=None, size=None, ifc_id=None, file=None, groups_permissions=None, default_permission=None, user_permission=None, children=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, parent_id=None, created_by=None, creator=None, type=None, nature=None, model_type=None, name=None, created_at=None, updated_at=None, file_name=None, description=None, size=None, model_id=None, ifc_id=None, file=None, groups_permissions=None, default_permission=None, user_permission=None, children=None, local_vars_configuration=None):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -84,12 +90,15 @@ class RecursiveFolderChildren(object):
         self._created_by = None
         self._creator = None
         self._type = None
+        self._nature = None
+        self._model_type = None
         self._name = None
         self._created_at = None
         self._updated_at = None
         self._file_name = None
         self._description = None
         self._size = None
+        self._model_id = None
         self._ifc_id = None
         self._file = None
         self._groups_permissions = None
@@ -106,6 +115,9 @@ class RecursiveFolderChildren(object):
             self.creator = creator
         if type is not None:
             self.type = type
+        if nature is not None:
+            self.nature = nature
+        self.model_type = model_type
         self.name = name
         self.created_at = created_at
         self.updated_at = updated_at
@@ -115,8 +127,8 @@ class RecursiveFolderChildren(object):
             self.description = description
         if size is not None:
             self.size = size
-        if ifc_id is not None:
-            self.ifc_id = ifc_id
+        self.model_id = model_id
+        self.ifc_id = ifc_id
         if file is not None:
             self.file = file
         self.groups_permissions = groups_permissions
@@ -218,7 +230,7 @@ class RecursiveFolderChildren(object):
     def type(self):
         """Gets the type of this RecursiveFolderChildren.  # noqa: E501
 
-        Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+        DEPRECATED: Use 'nature' instead. Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
 
         :return: The type of this RecursiveFolderChildren.  # noqa: E501
         :rtype: str
@@ -229,7 +241,7 @@ class RecursiveFolderChildren(object):
     def type(self, type):
         """Sets the type of this RecursiveFolderChildren.
 
-        Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+        DEPRECATED: Use 'nature' instead. Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
 
         :param type: The type of this RecursiveFolderChildren.  # noqa: E501
         :type: str
@@ -242,6 +254,64 @@ class RecursiveFolderChildren(object):
             )
 
         self._type = type
+
+    @property
+    def nature(self):
+        """Gets the nature of this RecursiveFolderChildren.  # noqa: E501
+
+        Values can be 'Folder', 'Document' or 'Model'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+
+        :return: The nature of this RecursiveFolderChildren.  # noqa: E501
+        :rtype: str
+        """
+        return self._nature
+
+    @nature.setter
+    def nature(self, nature):
+        """Sets the nature of this RecursiveFolderChildren.
+
+        Values can be 'Folder', 'Document' or 'Model'. It is usefull to parse the tree and discriminate folders and files  # noqa: E501
+
+        :param nature: The nature of this RecursiveFolderChildren.  # noqa: E501
+        :type: str
+        """
+        allowed_values = ["Folder", "Document", "Model"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and nature not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `nature` ({0}), must be one of {1}"  # noqa: E501
+                .format(nature, allowed_values)
+            )
+
+        self._nature = nature
+
+    @property
+    def model_type(self):
+        """Gets the model_type of this RecursiveFolderChildren.  # noqa: E501
+
+        Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, GLTF, DAE, BFX  # noqa: E501
+
+        :return: The model_type of this RecursiveFolderChildren.  # noqa: E501
+        :rtype: str
+        """
+        return self._model_type
+
+    @model_type.setter
+    def model_type(self, model_type):
+        """Sets the model_type of this RecursiveFolderChildren.
+
+        Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, GLTF, DAE, BFX  # noqa: E501
+
+        :param model_type: The model_type of this RecursiveFolderChildren.  # noqa: E501
+        :type: str
+        """
+        allowed_values = [None,"IFC", "DWG", "DXF", "GLTF", "PDF", "JPEG", "PNG", "OBJ", "DAE", "BFX"]  # noqa: E501
+        if self.local_vars_configuration.client_side_validation and model_type not in allowed_values:  # noqa: E501
+            raise ValueError(
+                "Invalid value for `model_type` ({0}), must be one of {1}"  # noqa: E501
+                .format(model_type, allowed_values)
+            )
+
+        self._model_type = model_type
 
     @property
     def name(self):
@@ -385,9 +455,31 @@ class RecursiveFolderChildren(object):
         self._size = size
 
     @property
+    def model_id(self):
+        """Gets the model_id of this RecursiveFolderChildren.  # noqa: E501
+
+
+        :return: The model_id of this RecursiveFolderChildren.  # noqa: E501
+        :rtype: int
+        """
+        return self._model_id
+
+    @model_id.setter
+    def model_id(self, model_id):
+        """Sets the model_id of this RecursiveFolderChildren.
+
+
+        :param model_id: The model_id of this RecursiveFolderChildren.  # noqa: E501
+        :type: int
+        """
+
+        self._model_id = model_id
+
+    @property
     def ifc_id(self):
         """Gets the ifc_id of this RecursiveFolderChildren.  # noqa: E501
 
+        DEPRECATED: Use 'model_id' instead  # noqa: E501
 
         :return: The ifc_id of this RecursiveFolderChildren.  # noqa: E501
         :rtype: int
@@ -398,6 +490,7 @@ class RecursiveFolderChildren(object):
     def ifc_id(self, ifc_id):
         """Sets the ifc_id of this RecursiveFolderChildren.
 
+        DEPRECATED: Use 'model_id' instead  # noqa: E501
 
         :param ifc_id: The ifc_id of this RecursiveFolderChildren.  # noqa: E501
         :type: int

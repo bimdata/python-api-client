@@ -38,7 +38,7 @@ class TestIfcChecker(unittest.TestCase):
         if include_optional :
             return IfcChecker(
                 id = 56, 
-                ifc = bimdata_api_client.models.ifc.Ifc(
+                ifc = bimdata_api_client.models.model.Model(
                     id = 56, 
                     name = '0', 
                     type = 'IFC', 
@@ -71,6 +71,8 @@ class TestIfcChecker(unittest.TestCase):
                         size = 0, 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                        model_source = 'UPLOAD', 
+                        model_id = '0', 
                         ifc_source = 'UPLOAD', 
                         ifc_id = '0', 
                         user_permission = 56, ), 

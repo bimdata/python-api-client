@@ -38,7 +38,7 @@ class TestStorey(unittest.TestCase):
         if include_optional :
             return Storey(
                 id = 56, 
-                ifc_id = '0', 
+                building_id = '0', 
                 name = '0', 
                 elevation = 1.337, 
                 order = 56, 
@@ -49,7 +49,7 @@ class TestStorey(unittest.TestCase):
                         rotate_z = 1.337, 
                         scale = 1.337, 
                         opacity = 1.337, 
-                        plan = bimdata_api_client.models.ifc.Ifc(
+                        plan = bimdata_api_client.models.model.Model(
                             id = 56, 
                             name = '0', 
                             type = 'IFC', 
@@ -82,6 +82,8 @@ class TestStorey(unittest.TestCase):
                                 size = 0, 
                                 created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                                 updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
+                                model_source = 'UPLOAD', 
+                                model_id = '0', 
                                 ifc_source = 'UPLOAD', 
                                 ifc_id = '0', 
                                 user_permission = 56, ), 

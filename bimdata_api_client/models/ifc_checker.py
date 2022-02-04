@@ -35,7 +35,7 @@ class IfcChecker(object):
     """
     openapi_types = {
         'id': 'int',
-        'ifc': 'Ifc',
+        'ifc': 'Model',
         'creator': 'User',
         'name': 'str',
         'checkplan_id': 'int',
@@ -119,7 +119,7 @@ class IfcChecker(object):
 
 
         :return: The ifc of this IfcChecker.  # noqa: E501
-        :rtype: Ifc
+        :rtype: Model
         """
         return self._ifc
 
@@ -129,7 +129,7 @@ class IfcChecker(object):
 
 
         :param ifc: The ifc of this IfcChecker.  # noqa: E501
-        :type: Ifc
+        :type: Model
         """
 
         self._ifc = ifc

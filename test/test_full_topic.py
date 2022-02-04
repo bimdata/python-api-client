@@ -50,6 +50,9 @@ class TestFullTopic(unittest.TestCase):
                 ifcs = [
                     56
                     ], 
+                models = [
+                    56
+                    ], 
                 labels = [
                     '0'
                     ], 

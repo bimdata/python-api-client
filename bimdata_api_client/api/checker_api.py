@@ -37,18 +37,18 @@ class CheckerApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def create_checker(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_checker(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a checker to a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_checker(cloud_pk, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.create_checker(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -63,20 +63,20 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.create_checker_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def create_checker_with_http_info(self, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_checker_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a checker to a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_checker_with_http_info(cloud_pk, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.create_checker_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _return_http_data_only: response data without head status code
@@ -97,7 +97,7 @@ class CheckerApi(object):
 
         all_params = [
             'cloud_pk',
-            'ifc_pk',
+            'model_pk',
             'project_pk',
             'data'
         ]
@@ -122,10 +122,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_checker`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_checker`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_checker`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -140,8 +140,8 @@ class CheckerApi(object):
         path_params = {}
         if 'cloud_pk' in local_var_params:
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -167,7 +167,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker', 'POST',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker', 'POST',
             path_params,
             query_params,
             header_params,
@@ -182,19 +182,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_checker_result(self, checker_pk, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_checker_result(self, checker_pk, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a CheckerResult  # noqa: E501
 
         TCreate a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_checker_result(checker_pk, cloud_pk, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.create_checker_result(checker_pk, cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -209,21 +209,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.create_checker_result_with_http_info(checker_pk, cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def create_checker_result_with_http_info(self, checker_pk, cloud_pk, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def create_checker_result_with_http_info(self, checker_pk, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a CheckerResult  # noqa: E501
 
         TCreate a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_checker_result_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.create_checker_result_with_http_info(checker_pk, cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
         :param _return_http_data_only: response data without head status code
@@ -245,7 +245,7 @@ class CheckerApi(object):
         all_params = [
             'checker_pk',
             'cloud_pk',
-            'ifc_pk',
+            'model_pk',
             'project_pk',
             'data'
         ]
@@ -274,10 +274,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_checker_result`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `create_checker_result`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_checker_result`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -294,8 +294,8 @@ class CheckerApi(object):
             path_params['checker_pk'] = local_var_params['checker_pk']  # noqa: E501
         if 'cloud_pk' in local_var_params:
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -321,7 +321,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result', 'POST',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result', 'POST',
             path_params,
             query_params,
             header_params,
@@ -934,19 +934,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_checker(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_checker(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Delete a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_checker(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_checker(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -960,21 +960,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.delete_checker_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def delete_checker_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_checker_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Delete a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_checker_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -995,7 +995,7 @@ class CheckerApi(object):
         all_params = [
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -1023,10 +1023,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_checker`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_checker`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_checker`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -1039,8 +1039,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -1056,7 +1056,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'DELETE',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -1071,20 +1071,20 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_checker_result(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_checker_result(self, checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Delete a CheckerResult  # noqa: E501
 
         Delete a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1098,22 +1098,22 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def delete_checker_result_with_http_info(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def delete_checker_result_with_http_info(self, checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Delete a CheckerResult  # noqa: E501
 
         Delete a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1135,7 +1135,7 @@ class CheckerApi(object):
             'checker_pk',
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -1167,10 +1167,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `delete_checker_result`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `delete_checker_result`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_checker_result`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -1185,8 +1185,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -1202,7 +1202,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'DELETE',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -1783,19 +1783,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checker(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1809,21 +1809,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.get_checker_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def get_checker_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1844,7 +1844,7 @@ class CheckerApi(object):
         all_params = [
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -1872,10 +1872,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_checker`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_checker`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_checker`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -1888,8 +1888,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -1909,7 +1909,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'GET',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -1924,20 +1924,20 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checker_result(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker_result(self, checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve one CheckerResult  # noqa: E501
 
         Retrieve one CheckerResult Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -1951,22 +1951,22 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.get_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def get_checker_result_with_http_info(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker_result_with_http_info(self, checker_pk, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve one CheckerResult  # noqa: E501
 
         Retrieve one CheckerResult Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -1988,7 +1988,7 @@ class CheckerApi(object):
             'checker_pk',
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -2020,10 +2020,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `get_checker_result`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_checker_result`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_checker_result`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -2038,8 +2038,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -2059,7 +2059,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'GET',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id}', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2074,19 +2074,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checker_results(self, checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker_results(self, checker_pk, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all CheckerResults  # noqa: E501
 
         Retrieve all CheckerResults Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker_results(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker_results(checker_pk, cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2100,21 +2100,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.get_checker_results_with_http_info(checker_pk, cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def get_checker_results_with_http_info(self, checker_pk, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checker_results_with_http_info(self, checker_pk, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all CheckerResults  # noqa: E501
 
         Retrieve all CheckerResults Required scopes: check:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checker_results_with_http_info(checker_pk, cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checker_results_with_http_info(checker_pk, cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -2135,7 +2135,7 @@ class CheckerApi(object):
         all_params = [
             'checker_pk',
             'cloud_pk',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -2163,10 +2163,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_checker_results`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_checker_results`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_checker_results`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -2179,8 +2179,8 @@ class CheckerApi(object):
             path_params['checker_pk'] = local_var_params['checker_pk']  # noqa: E501
         if 'cloud_pk' in local_var_params:
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -2200,7 +2200,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result', 'GET',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result', 'GET',
             path_params,
             query_params,
             header_params,
@@ -2215,18 +2215,18 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_checkers(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checkers(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all checkers of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checkers(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checkers(cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
@@ -2240,20 +2240,20 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, **kwargs)  # noqa: E501
+        return self.get_checkers_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def get_checkers_with_http_info(self, cloud_pk, ifc_pk, project_pk, **kwargs):  # noqa: E501
+    def get_checkers_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all checkers of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:read, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_checkers_with_http_info(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.get_checkers_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
@@ -2273,7 +2273,7 @@ class CheckerApi(object):
 
         all_params = [
             'cloud_pk',
-            'ifc_pk',
+            'model_pk',
             'project_pk'
         ]
         all_params.extend(
@@ -2297,10 +2297,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_checkers`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `get_checkers`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_checkers`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -2311,8 +2311,8 @@ class CheckerApi(object):
         path_params = {}
         if 'cloud_pk' in local_var_params:
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -2332,7 +2332,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker', 'GET',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3475,19 +3475,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def launch_new_check(self, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def launch_new_check(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Launch a new check on the model  # noqa: E501
 
         Starts a new check in the checker Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.launch_new_check(cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.launch_new_check(cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3502,21 +3502,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.launch_new_check_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def launch_new_check_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def launch_new_check_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Launch a new check on the model  # noqa: E501
 
         Starts a new check in the checker Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.launch_new_check_with_http_info(cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.launch_new_check_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _return_http_data_only: response data without head status code
@@ -3538,7 +3538,7 @@ class CheckerApi(object):
         all_params = [
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk',
             'data'
         ]
@@ -3567,10 +3567,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `launch_new_check`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `launch_new_check`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `launch_new_check`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -3587,8 +3587,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -3610,7 +3610,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check', 'POST',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}/launch-check', 'POST',
             path_params,
             query_params,
             header_params,
@@ -3625,19 +3625,19 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_checker(self, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_checker(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_checker(cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.update_checker(cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3652,21 +3652,21 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.update_checker_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def update_checker_with_http_info(self, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_checker_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a checker of a model  # noqa: E501
 
         A checker is a link between a checkplan and a model. A checker can launch a check multiple time and store all the results Required scopes: check:write, ifc:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_checker_with_http_info(cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.update_checker_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this ifc checker. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param IfcChecker data: (required)
         :param _return_http_data_only: response data without head status code
@@ -3688,7 +3688,7 @@ class CheckerApi(object):
         all_params = [
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk',
             'data'
         ]
@@ -3717,10 +3717,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_checker`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_checker`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_checker`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -3737,8 +3737,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -3764,7 +3764,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}', 'PATCH',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}', 'PATCH',
             path_params,
             query_params,
             header_params,
@@ -3779,20 +3779,20 @@ class CheckerApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_checker_result(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_checker_result(self, checker_pk, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a CheckerResult  # noqa: E501
 
         Update some fields of a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_checker_result(checker_pk, cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.update_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -3807,22 +3807,22 @@ class CheckerApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.update_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def update_checker_result_with_http_info(self, checker_pk, cloud_pk, id, ifc_pk, project_pk, data, **kwargs):  # noqa: E501
+    def update_checker_result_with_http_info(self, checker_pk, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a CheckerResult  # noqa: E501
 
         Update some fields of a CheckerResult Required scopes: check:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_checker_result_with_http_info(checker_pk, cloud_pk, id, ifc_pk, project_pk, data, async_req=True)
+        >>> thread = api.update_checker_result_with_http_info(checker_pk, cloud_pk, id, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
         :param str checker_pk: (required)
         :param str cloud_pk: (required)
         :param int id: A unique integer value identifying this checker result. (required)
-        :param str ifc_pk: (required)
+        :param str model_pk: (required)
         :param str project_pk: (required)
         :param CheckerResult data: (required)
         :param _return_http_data_only: response data without head status code
@@ -3845,7 +3845,7 @@ class CheckerApi(object):
             'checker_pk',
             'cloud_pk',
             'id',
-            'ifc_pk',
+            'model_pk',
             'project_pk',
             'data'
         ]
@@ -3878,10 +3878,10 @@ class CheckerApi(object):
         if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
                                                         local_var_params['id'] is None):  # noqa: E501
             raise ApiValueError("Missing the required parameter `id` when calling `update_checker_result`")  # noqa: E501
-        # verify the required parameter 'ifc_pk' is set
-        if self.api_client.client_side_validation and ('ifc_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['ifc_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `ifc_pk` when calling `update_checker_result`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_checker_result`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
@@ -3900,8 +3900,8 @@ class CheckerApi(object):
             path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
         if 'id' in local_var_params:
             path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'ifc_pk' in local_var_params:
-            path_params['ifc_pk'] = local_var_params['ifc_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
         if 'project_pk' in local_var_params:
             path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
 
@@ -3927,7 +3927,7 @@ class CheckerApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id}', 'PATCH',
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id}', 'PATCH',
             path_params,
             query_params,
             header_params,

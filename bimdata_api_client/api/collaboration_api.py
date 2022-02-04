@@ -825,7 +825,7 @@ class CollaborationApi(object):
     def create_classification(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write  # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification(cloud_pk, project_pk, data, async_req=True)
@@ -852,7 +852,7 @@ class CollaborationApi(object):
     def create_classification_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a classification  # noqa: E501
 
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write  # noqa: E501
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors      If created classification already exists, it will not be duplicated and the previous one will be returned.     You also can add a 'classification' filter on this endpoint. By ex: /classification?name='untec'. The name is case sensitive  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_classification_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -1342,7 +1342,8 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
-        :param str ifc_source: Define the ifc.source field if the upload is an IFC
+        :param str model_source: Define the model.source field if the upload is a Model (IFC, PDF, DWG...)
+        :param str ifc_source: DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -1377,7 +1378,8 @@ class CollaborationApi(object):
         :param str file_name: Full name of the file
         :param str description: Description of the file
         :param int size: Size of the file.
-        :param str ifc_source: Define the ifc.source field if the upload is an IFC
+        :param str model_source: Define the model.source field if the upload is a Model (IFC, PDF, DWG...)
+        :param str ifc_source: DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -1405,6 +1407,7 @@ class CollaborationApi(object):
             'file_name',
             'description',
             'size',
+            'model_source',
             'ifc_source'
         ]
         all_params.extend(
@@ -1487,6 +1490,8 @@ class CollaborationApi(object):
             local_var_files['file'] = local_var_params['file']  # noqa: E501
         if 'size' in local_var_params:
             form_params.append(('size', local_var_params['size']))  # noqa: E501
+        if 'model_source' in local_var_params:
+            form_params.append(('model_source', local_var_params['model_source']))  # noqa: E501
         if 'ifc_source' in local_var_params:
             form_params.append(('ifc_source', local_var_params['ifc_source']))  # noqa: E501
 
@@ -2509,7 +2514,7 @@ class CollaborationApi(object):
     def delete_classification(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a classification  # noqa: E501
 
-        All elements having this classification will lose it Required scopes: ifc:write  # noqa: E501
+        All elements having this classification will lose it Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_classification(cloud_pk, id, project_pk, async_req=True)
@@ -2536,7 +2541,7 @@ class CollaborationApi(object):
     def delete_classification_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Delete a classification  # noqa: E501
 
-        All elements having this classification will lose it Required scopes: ifc:write  # noqa: E501
+        All elements having this classification will lose it Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.delete_classification_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -4337,7 +4342,7 @@ class CollaborationApi(object):
     def get_classification(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Retrieve a classification  # noqa: E501
 
-        Retrieve a classification Required scopes: ifc:read  # noqa: E501
+        Retrieve a classification Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classification(cloud_pk, id, project_pk, async_req=True)
@@ -4364,7 +4369,7 @@ class CollaborationApi(object):
     def get_classification_with_http_info(self, cloud_pk, id, project_pk, **kwargs):  # noqa: E501
         """Retrieve a classification  # noqa: E501
 
-        Retrieve a classification Required scopes: ifc:read  # noqa: E501
+        Retrieve a classification Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classification_with_http_info(cloud_pk, id, project_pk, async_req=True)
@@ -4469,7 +4474,7 @@ class CollaborationApi(object):
     def get_classifications(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
+        Retrieve all classifications of all models in the project Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications(cloud_pk, project_pk, async_req=True)
@@ -4495,7 +4500,7 @@ class CollaborationApi(object):
     def get_classifications_with_http_info(self, cloud_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve all classifications  # noqa: E501
 
-        Retrieve all classifications of all models in the project Required scopes: ifc:read  # noqa: E501
+        Retrieve all classifications of all models in the project Required scopes: ifc:read, model:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.get_classifications_with_http_info(cloud_pk, project_pk, async_req=True)
@@ -7191,7 +7196,7 @@ class CollaborationApi(object):
             collection_formats=collection_formats)
 
     def get_project_size(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """Get size of all ifc files in the project  # noqa: E501
+        """Get size of all model files in the project  # noqa: E501
 
         Returns the size of the project in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -7217,7 +7222,7 @@ class CollaborationApi(object):
         return self.get_project_size_with_http_info(cloud_pk, id, **kwargs)  # noqa: E501
 
     def get_project_size_with_http_info(self, cloud_pk, id, **kwargs):  # noqa: E501
-        """Get size of all ifc files in the project  # noqa: E501
+        """Get size of all model files in the project  # noqa: E501
 
         Returns the size of the project in Bytes  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
@@ -9800,7 +9805,7 @@ class CollaborationApi(object):
     def update_classification(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a classification  # noqa: E501
 
-        Update some fields of a classification Required scopes: ifc:write  # noqa: E501
+        Update some fields of a classification Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_classification(cloud_pk, id, project_pk, data, async_req=True)
@@ -9828,7 +9833,7 @@ class CollaborationApi(object):
     def update_classification_with_http_info(self, cloud_pk, id, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a classification  # noqa: E501
 
-        Update some fields of a classification Required scopes: ifc:write  # noqa: E501
+        Update some fields of a classification Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.update_classification_with_http_info(cloud_pk, id, project_pk, data, async_req=True)

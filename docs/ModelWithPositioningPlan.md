@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **rotate_z** | **float** |  | [optional] 
 **scale** | **float** |  | [optional] 
 **opacity** | **float** |  | [optional] 
-**plan** | [**Ifc**](Ifc.md) |  | [optional] 
+**plan** | [**Model**](Model.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

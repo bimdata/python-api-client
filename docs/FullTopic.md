@@ -11,7 +11,8 @@ Name | Type | Description | Notes
 **title** | **str** |  | 
 **description** | **str** |  | [optional] 
 **reference_links** | **list[str]** |  | [optional] 
-**ifcs** | **list[int]** |  | [optional] 
+**ifcs** | **list[int]** | DEPRECATED: Use &#39;models&#39; instead | [optional] 
+**models** | **list[int]** |  | [optional] 
 **labels** | **list[str]** |  | [optional] 
 **topic_type** | **str** |  | [optional] 
 **topic_status** | **str** |  | [optional] 

@@ -18,7 +18,8 @@ Name | Type | Description | Notes
 **stage** | **str** |  | [optional] 
 **description** | **str** |  | [optional] 
 **due_date** | **datetime** |  | [optional] 
-**ifcs** | **list[int]** |  | [optional] 
+**ifcs** | **list[int]** | DEPRECATED: Use &#39;models&#39; instead | [optional] 
+**models** | **list[int]** |  | [optional] 
 **format** | **str** |  | [optional] 
 **index** | **int** |  | [optional] 
 **project** | **int** |  | 
