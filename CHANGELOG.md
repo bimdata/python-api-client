@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v7.0.1 (2022-02-15)
+### Fix
+* Rename last ifc operations ([#489](https://github.com/bimdata/python-api-client/issues/489)) ([`6a0bce1`](https://github.com/bimdata/python-api-client/commit/6a0bce138e8adad44c462cec339d523fc33cc346))
+
 ## v7.0.0 (2022-02-04)
 ### Breaking
 * Rename ifc to model (#477)
