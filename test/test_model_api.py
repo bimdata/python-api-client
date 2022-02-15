@@ -36,29 +36,29 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_bulk_delete_ifc_classifications(self):
-        """Test case for bulk_delete_ifc_classifications
+    def test_bulk_delete_model_classifications(self):
+        """Test case for bulk_delete_model_classifications
 
         Remove all classifications from model's elements  # noqa: E501
         """
         pass
 
-    def test_bulk_delete_ifc_properties(self):
-        """Test case for bulk_delete_ifc_properties
+    def test_bulk_delete_model_properties(self):
+        """Test case for bulk_delete_model_properties
 
         Delete many Property of a model  # noqa: E501
         """
         pass
 
-    def test_bulk_delete_ifc_property_definitions(self):
-        """Test case for bulk_delete_ifc_property_definitions
+    def test_bulk_delete_model_property_definitions(self):
+        """Test case for bulk_delete_model_property_definitions
 
         Delete many PropertyDefinitions of a model  # noqa: E501
         """
         pass
 
-    def test_bulk_delete_ifc_units(self):
-        """Test case for bulk_delete_ifc_units
+    def test_bulk_delete_model_units(self):
+        """Test case for bulk_delete_model_units
 
         Delete many Units of a model  # noqa: E501
         """
@@ -78,8 +78,8 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_bulk_full_update_ifc_property(self):
-        """Test case for bulk_full_update_ifc_property
+    def test_bulk_full_update_model_property(self):
+        """Test case for bulk_full_update_model_property
 
         Update some fields of many properties of a model  # noqa: E501
         """
@@ -113,8 +113,8 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_bulk_update_ifc_property(self):
-        """Test case for bulk_update_ifc_property
+    def test_bulk_update_model_property(self):
+        """Test case for bulk_update_model_property
 
         Update all fields of many properties of a model  # noqa: E501
         """
@@ -176,20 +176,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_create_ifc_property_definition(self):
-        """Test case for create_ifc_property_definition
-
-        Create a PropertyDefinition on the model  # noqa: E501
-        """
-        pass
-
-    def test_create_ifc_unit(self):
-        """Test case for create_ifc_unit
-
-        Create a Unit on a model  # noqa: E501
-        """
-        pass
-
     def test_create_layer(self):
         """Test case for create_layer
 
@@ -208,6 +194,20 @@ class TestModelApi(unittest.TestCase):
         """Test case for create_model
 
         Make a PDF or Image file a Model  # noqa: E501
+        """
+        pass
+
+    def test_create_model_property_definition(self):
+        """Test case for create_model_property_definition
+
+        Create a PropertyDefinition on the model  # noqa: E501
+        """
+        pass
+
+    def test_create_model_unit(self):
+        """Test case for create_model_unit
+
+        Create a Unit on a model  # noqa: E501
         """
         pass
 
@@ -281,27 +281,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_ifc_property(self):
-        """Test case for delete_ifc_property
-
-        Delete a Property of a model  # noqa: E501
-        """
-        pass
-
-    def test_delete_ifc_property_definition(self):
-        """Test case for delete_ifc_property_definition
-
-        Delete a PropertyDefinitions of a model  # noqa: E501
-        """
-        pass
-
-    def test_delete_ifc_unit(self):
-        """Test case for delete_ifc_unit
-
-        Delete a Unit of a model  # noqa: E501
-        """
-        pass
-
     def test_delete_layer(self):
         """Test case for delete_layer
 
@@ -313,6 +292,27 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_model
 
         Delete a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_model_property(self):
+        """Test case for delete_model_property
+
+        Delete a Property of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_model_property_definition(self):
+        """Test case for delete_model_property_definition
+
+        Delete a PropertyDefinitions of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_model_unit(self):
+        """Test case for delete_model_unit
+
+        Delete a Unit of a model  # noqa: E501
         """
         pass
 
@@ -505,69 +505,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_get_ifc_classifications(self):
-        """Test case for get_ifc_classifications
-
-        Retrieve all classifications in a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_material(self):
-        """Test case for get_ifc_material
-
-        Retrieve a material of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_materials(self):
-        """Test case for get_ifc_materials
-
-        Retrieve all materials of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_properties(self):
-        """Test case for get_ifc_properties
-
-        Retrieve all Properties of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_property(self):
-        """Test case for get_ifc_property
-
-        Retrieve a Property of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_property_definition(self):
-        """Test case for get_ifc_property_definition
-
-        Retrieve a PropertyDefinition of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_property_definitions(self):
-        """Test case for get_ifc_property_definitions
-
-        Retrieve all PropertyDefinitions of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_unit(self):
-        """Test case for get_ifc_unit
-
-        Retrieve a Unit of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_ifc_units(self):
-        """Test case for get_ifc_units
-
-        Retrieve all Units of a model  # noqa: E501
-        """
-        pass
-
     def test_get_layer(self):
         """Test case for get_layer
 
@@ -600,6 +537,69 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_model
 
         Retrieve one model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_classifications(self):
+        """Test case for get_model_classifications
+
+        Retrieve all classifications in a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_material(self):
+        """Test case for get_model_material
+
+        Retrieve a material of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_materials(self):
+        """Test case for get_model_materials
+
+        Retrieve all materials of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_properties(self):
+        """Test case for get_model_properties
+
+        Retrieve all Properties of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_property(self):
+        """Test case for get_model_property
+
+        Retrieve a Property of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_property_definition(self):
+        """Test case for get_model_property_definition
+
+        Retrieve a PropertyDefinition of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_property_definitions(self):
+        """Test case for get_model_property_definitions
+
+        Retrieve all PropertyDefinitions of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_unit(self):
+        """Test case for get_model_unit
+
+        Retrieve a Unit of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_model_units(self):
+        """Test case for get_model_units
+
+        Retrieve all Units of a model  # noqa: E501
         """
         pass
 
@@ -848,27 +848,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_update_ifc_property(self):
-        """Test case for update_ifc_property
-
-        Update some fields of a Property  # noqa: E501
-        """
-        pass
-
-    def test_update_ifc_property_definition(self):
-        """Test case for update_ifc_property_definition
-
-        Update some fields of many PropertyDefinitions of a model  # noqa: E501
-        """
-        pass
-
-    def test_update_ifc_unit(self):
-        """Test case for update_ifc_unit
-
-        Update some fields of a Unit of a model  # noqa: E501
-        """
-        pass
-
     def test_update_layer(self):
         """Test case for update_layer
 
@@ -887,6 +866,27 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_model_files
 
         Update models file (gltf, svg, structure, etc)  # noqa: E501
+        """
+        pass
+
+    def test_update_model_property(self):
+        """Test case for update_model_property
+
+        Update some fields of a Property  # noqa: E501
+        """
+        pass
+
+    def test_update_model_property_definition(self):
+        """Test case for update_model_property_definition
+
+        Update some fields of many PropertyDefinitions of a model  # noqa: E501
+        """
+        pass
+
+    def test_update_model_unit(self):
+        """Test case for update_model_unit
+
+        Update some fields of a Unit of a model  # noqa: E501
         """
         pass
 

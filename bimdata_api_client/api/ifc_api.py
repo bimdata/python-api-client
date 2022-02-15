@@ -3461,7 +3461,7 @@ class IfcApi(object):
     def create_ifc_deprecated(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Make a PDF or Image file a Model  # noqa: E501
 
-        Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write  # noqa: E501
+        Make a PDF or Image file a Model to be used in BIMData services. If a model already exists, this route does nothing and returns a 201 with the model Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_deprecated(cloud_pk, project_pk, data, async_req=True)
@@ -3488,7 +3488,7 @@ class IfcApi(object):
     def create_ifc_deprecated_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Make a PDF or Image file a Model  # noqa: E501
 
-        Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write  # noqa: E501
+        Make a PDF or Image file a Model to be used in BIMData services. If a model already exists, this route does nothing and returns a 201 with the model Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_ifc_deprecated_with_http_info(cloud_pk, project_pk, data, async_req=True)

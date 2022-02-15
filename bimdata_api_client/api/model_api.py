@@ -182,13 +182,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_classifications(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_model_classifications(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Remove all classifications from model's elements  # noqa: E501
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all mode's elements.             No classification will be deleted on this endpoint, only the relation between model's elements and their classification.  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_classifications(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_model_classifications(cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -207,15 +207,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_classifications_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+        return self.bulk_delete_model_classifications_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_classifications_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+    def bulk_delete_model_classifications_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
         """Remove all classifications from model's elements  # noqa: E501
 
                      Delete relation between filtered classifications (eg. /classifications?name=untec) and all mode's elements.             No classification will be deleted on this endpoint, only the relation between model's elements and their classification.  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_classifications_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_model_classifications_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -256,22 +256,22 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_delete_ifc_classifications" % key
+                    " to method bulk_delete_model_classifications" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_model_classifications`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_model_classifications`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_classifications`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_model_classifications`")  # noqa: E501
 
         collection_formats = {}
 
@@ -310,13 +310,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_properties(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_properties(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Property of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_properties(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_properties(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -336,15 +336,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_properties_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.bulk_delete_model_properties_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_properties_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_properties_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Property of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_properties_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_properties_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -387,26 +387,26 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_delete_ifc_properties" % key
+                    " to method bulk_delete_model_properties" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_model_properties`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_model_properties`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_model_properties`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_properties`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_model_properties`")  # noqa: E501
 
         collection_formats = {}
 
@@ -451,13 +451,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_property_definitions(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_property_definitions(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertyDefinitions of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_property_definitions(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_property_definitions(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -477,15 +477,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.bulk_delete_model_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_property_definitions_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_property_definitions_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many PropertyDefinitions of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -528,26 +528,26 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_delete_ifc_property_definitions" % key
+                    " to method bulk_delete_model_property_definitions" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_model_property_definitions`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_model_property_definitions`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_model_property_definitions`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_property_definitions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_model_property_definitions`")  # noqa: E501
 
         collection_formats = {}
 
@@ -592,13 +592,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_delete_ifc_units(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_units(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Units of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_units(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_units(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -618,15 +618,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_delete_ifc_units_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.bulk_delete_model_units_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_delete_ifc_units_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_delete_model_units_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Delete many Units of a model  # noqa: E501
 
                  Bulk delete.         You must send a list of ids in the body.         These ids (or relations with these ids in case of many-to-many relation deletion) will be deleted  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_delete_ifc_units_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_delete_model_units_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -669,26 +669,26 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_delete_ifc_units" % key
+                    " to method bulk_delete_model_units" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_delete_model_units`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_delete_model_units`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_ifc_units`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_delete_model_units`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_ifc_units`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_delete_model_units`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1019,13 +1019,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_full_update_ifc_property(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_full_update_model_property(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of many properties of a model  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_full_update_ifc_property(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_full_update_model_property(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1045,15 +1045,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_full_update_ifc_property_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.bulk_full_update_model_property_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_full_update_ifc_property_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_full_update_model_property_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of many properties of a model  # noqa: E501
 
                  Bulk update.         Similar to update, but the body should be a list of objects to patch or put         The response will be a list (in the same order) of updated objects or of errors if any         If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_full_update_ifc_property_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_full_update_model_property_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1096,26 +1096,26 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_full_update_ifc_property" % key
+                    " to method bulk_full_update_model_property" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_full_update_model_property`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_full_update_model_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_full_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_full_update_model_property`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `bulk_full_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_full_update_model_property`")  # noqa: E501
 
         collection_formats = {}
 
@@ -1759,13 +1759,13 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def bulk_update_ifc_property(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_update_model_property(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update all fields of many properties of a model  # noqa: E501
 
          Bulk update. Similar to update, but the body should be a list of objects to patch or put The response will be a list (in the same order) of updated objects or of errors if any If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_update_ifc_property(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_update_model_property(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1785,15 +1785,15 @@ class ModelApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.bulk_update_ifc_property_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+        return self.bulk_update_model_property_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
 
-    def bulk_update_ifc_property_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+    def bulk_update_model_property_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update all fields of many properties of a model  # noqa: E501
 
          Bulk update. Similar to update, but the body should be a list of objects to patch or put The response will be a list (in the same order) of updated objects or of errors if any If at least one update succeeded, the status code will be 200. If every update failed, the status code we'll be 400 with the list of errors   # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.bulk_update_ifc_property_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> thread = api.bulk_update_model_property_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
@@ -1836,26 +1836,26 @@ class ModelApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method bulk_update_ifc_property" % key
+                    " to method bulk_update_model_property" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
         # verify the required parameter 'cloud_pk' is set
         if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `bulk_update_model_property`")  # noqa: E501
         # verify the required parameter 'model_pk' is set
         if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `bulk_update_model_property`")  # noqa: E501
         # verify the required parameter 'project_pk' is set
         if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `bulk_update_model_property`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `bulk_update_ifc_property`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `bulk_update_model_property`")  # noqa: E501
 
         collection_formats = {}
 
@@ -3159,296 +3159,6 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def create_ifc_property_definition(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Create a PropertyDefinition on the model  # noqa: E501
-
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_ifc_property_definition(cloud_pk, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param list[PropertyDefinition] data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[PropertyDefinition]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.create_ifc_property_definition_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def create_ifc_property_definition_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Create a PropertyDefinition on the model  # noqa: E501
-
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_ifc_property_definition_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param list[PropertyDefinition] data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[PropertyDefinition], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_ifc_property_definition" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `create_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `create_ifc_property_definition`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[PropertyDefinition]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def create_ifc_unit(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Create a Unit on a model  # noqa: E501
-
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_ifc_unit(cloud_pk, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param list[Unit] data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[Unit]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.create_ifc_unit_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def create_ifc_unit_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Create a Unit on a model  # noqa: E501
-
-                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.create_ifc_unit_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param list[Unit] data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[Unit], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method create_ifc_unit" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `create_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `create_ifc_unit`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit', 'POST',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[Unit]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def create_layer(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Create a layer in the model  # noqa: E501
 
@@ -3733,7 +3443,7 @@ class ModelApi(object):
     def create_model(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Make a PDF or Image file a Model  # noqa: E501
 
-        Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write  # noqa: E501
+        Make a PDF or Image file a Model to be used in BIMData services. If a model already exists, this route does nothing and returns a 201 with the model Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_model(cloud_pk, project_pk, data, async_req=True)
@@ -3760,7 +3470,7 @@ class ModelApi(object):
     def create_model_with_http_info(self, cloud_pk, project_pk, data, **kwargs):  # noqa: E501
         """Make a PDF or Image file a Model  # noqa: E501
 
-        Make a PDF or Image file a Model to be used in BIMData services Required scopes: ifc:write, model:write  # noqa: E501
+        Make a PDF or Image file a Model to be used in BIMData services. If a model already exists, this route does nothing and returns a 201 with the model Required scopes: ifc:write, model:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.create_model_with_http_info(cloud_pk, project_pk, data, async_req=True)
@@ -3859,6 +3569,296 @@ class ModelApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Model',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_model_property_definition(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Create a PropertyDefinition on the model  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_model_property_definition(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param list[PropertyDefinition] data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[PropertyDefinition]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_model_property_definition_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def create_model_property_definition_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Create a PropertyDefinition on the model  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_model_property_definition_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param list[PropertyDefinition] data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[PropertyDefinition], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_model_property_definition" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `create_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_model_property_definition`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[PropertyDefinition]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_model_unit(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Create a Unit on a model  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_model_unit(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param list[Unit] data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Unit]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_model_unit_with_http_info(cloud_pk, model_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def create_model_unit_with_http_info(self, cloud_pk, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Create a Unit on a model  # noqa: E501
+
+                 Bulk create available.         You can either post an object or a list of objects.         Is you post a list, the response will be a list (in the same order) of created objects or of errors if any         If at least one create succeeded, the status code will be 201. If every create failed, the status code we'll be 400 with the list of errors  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_model_unit_with_http_info(cloud_pk, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param list[Unit] data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Unit], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_model_unit" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `create_model_unit`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `create_model_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `create_model_unit`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_model_unit`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Unit]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -5310,417 +5310,6 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def delete_ifc_property(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a Property of a model  # noqa: E501
-
-        Delete a Property of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_property(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.delete_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def delete_ifc_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a Property of a model  # noqa: E501
-
-        Delete a Property of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_ifc_property" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_property`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_ifc_property`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def delete_ifc_property_definition(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a PropertyDefinitions of a model  # noqa: E501
-
-        Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_property_definition(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.delete_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def delete_ifc_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a PropertyDefinitions of a model  # noqa: E501
-
-        Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_ifc_property_definition" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_property_definition`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def delete_ifc_unit(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a Unit of a model  # noqa: E501
-
-        Delete a Unit of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_unit(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.delete_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def delete_ifc_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Delete a Unit of a model  # noqa: E501
-
-        Delete a Unit of a model Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.delete_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: None
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method delete_ifc_unit" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `delete_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_ifc_unit`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'DELETE',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type=None,  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def delete_layer(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Delete a layer of a model  # noqa: E501
 
@@ -5972,6 +5561,417 @@ class ModelApi(object):
 
         return self.api_client.call_api(
             '/cloud/{cloud_pk}/project/{project_pk}/model/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_model_property(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a Property of a model  # noqa: E501
+
+        Delete a Property of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_property(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def delete_model_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a Property of a model  # noqa: E501
+
+        Delete a Property of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_model_property" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_model_property`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model_property`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_model_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_model_property`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_model_property_definition(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a PropertyDefinitions of a model  # noqa: E501
+
+        Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_property_definition(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def delete_model_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a PropertyDefinitions of a model  # noqa: E501
+
+        Delete a PropertyDefinitions of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_model_property_definition" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_model_property_definition`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_model_unit(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a Unit of a model  # noqa: E501
+
+        Delete a Unit of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_unit(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def delete_model_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Delete a Unit of a model  # noqa: E501
+
+        Delete a Unit of a model Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_model_unit" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `delete_model_unit`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_model_unit`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `delete_model_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `delete_model_unit`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'DELETE',
             path_params,
             query_params,
             header_params,
@@ -9938,1230 +9938,6 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_ifc_classifications(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all classifications in a model  # noqa: E501
-
-        Retrieve all classifications in a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_classifications(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[Classification]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_classifications_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_classifications_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all classifications in a model  # noqa: E501
-
-        Retrieve all classifications in a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_classifications_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[Classification], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_classifications" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_classifications`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_classifications`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_classifications`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[Classification]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_material(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a material of a model  # noqa: E501
-
-        Retrieve a material of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_material(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this material. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Material
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_material_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_material_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a material of a model  # noqa: E501
-
-        Retrieve a material of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_material_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this material. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Material, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_material" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_material`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_material`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_material`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_material`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Material',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_materials(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all materials of a model  # noqa: E501
-
-        Retrieve all materials of a model. Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_materials(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[Material]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_materials_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_materials_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all materials of a model  # noqa: E501
-
-        Retrieve all materials of a model. Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_materials_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[Material], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_materials" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_materials`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_materials`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_materials`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[Material]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_properties(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all Properties of a model  # noqa: E501
-
-        Retrieve all PropertySets of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_properties(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[ModelProperty]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_properties_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_properties_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all Properties of a model  # noqa: E501
-
-        Retrieve all PropertySets of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_properties_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[ModelProperty], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_properties" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_properties`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_properties`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_properties`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[ModelProperty]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_property(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a Property of a model  # noqa: E501
-
-        Retrieve a Property of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: ModelProperty
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a Property of a model  # noqa: E501
-
-        Retrieve a Property of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(ModelProperty, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_property" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_property`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_property`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ModelProperty',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_property_definition(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a PropertyDefinition of a model  # noqa: E501
-
-        Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property_definition(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: PropertyDefinition
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a PropertyDefinition of a model  # noqa: E501
-
-        Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(PropertyDefinition, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_property_definition" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definition`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='PropertyDefinition',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_property_definitions(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all PropertyDefinitions of a model  # noqa: E501
-
-        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property_definitions(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[PropertyDefinition]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_property_definitions_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all PropertyDefinitions of a model  # noqa: E501
-
-        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[PropertyDefinition], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_property_definitions" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_property_definitions`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[PropertyDefinition]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_unit(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a Unit of a model  # noqa: E501
-
-        Retrieve a Unit of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_unit(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Unit
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve a Unit of a model  # noqa: E501
-
-        Retrieve a Unit of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Unit, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_unit" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `get_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_unit`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Unit',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def get_ifc_units(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all Units of a model  # noqa: E501
-
-        Retrieve all Units of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_units(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: list[Unit]
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.get_ifc_units_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
-
-    def get_ifc_units_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
-        """Retrieve all Units of a model  # noqa: E501
-
-        Retrieve all Units of a model Required scopes: ifc:read, model:read  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_ifc_units_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(list[Unit], status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'model_pk',
-            'project_pk'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method get_ifc_units" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_ifc_units`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_ifc_units`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_ifc_units`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit', 'GET',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='list[Unit]',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def get_layer(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
         """Retrieve a layer of a model  # noqa: E501
 
@@ -11851,6 +10627,1230 @@ class ModelApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='Model',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_classifications(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all classifications in a model  # noqa: E501
+
+        Retrieve all classifications in a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_classifications(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Classification]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_classifications_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_classifications_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all classifications in a model  # noqa: E501
+
+        Retrieve all classifications in a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_classifications_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Classification], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_classifications" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_classifications`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_classifications`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_classifications`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Classification]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_material(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_material(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Material
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_material_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_material_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a material of a model  # noqa: E501
+
+        Retrieve a material of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_material_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this material. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Material, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_material" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_material`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_material`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_material`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_material`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Material',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_materials(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_materials(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Material]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_materials_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_materials_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all materials of a model  # noqa: E501
+
+        Retrieve all materials of a model. Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_materials_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Material], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_materials" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_materials`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_materials`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_materials`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/material', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Material]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_properties(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all Properties of a model  # noqa: E501
+
+        Retrieve all PropertySets of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_properties(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[ModelProperty]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_properties_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_properties_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all Properties of a model  # noqa: E501
+
+        Retrieve all PropertySets of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_properties_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[ModelProperty], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_properties" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_properties`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_properties`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_properties`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[ModelProperty]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_property(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a Property of a model  # noqa: E501
+
+        Retrieve a Property of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: ModelProperty
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a Property of a model  # noqa: E501
+
+        Retrieve a Property of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(ModelProperty, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_property" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_property`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_property`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_property`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelProperty',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_property_definition(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a PropertyDefinition of a model  # noqa: E501
+
+        Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property_definition(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: PropertyDefinition
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a PropertyDefinition of a model  # noqa: E501
+
+        Retrieve a PropertyDefinition of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(PropertyDefinition, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_property_definition" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_property_definition`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='PropertyDefinition',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_property_definitions(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all PropertyDefinitions of a model  # noqa: E501
+
+        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property_definitions(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[PropertyDefinition]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_property_definitions_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all PropertyDefinitions of a model  # noqa: E501
+
+        Retrieve all PropertyDefinitions of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_property_definitions_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[PropertyDefinition], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_property_definitions" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_property_definitions`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_property_definitions`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_property_definitions`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[PropertyDefinition]',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_unit(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a Unit of a model  # noqa: E501
+
+        Retrieve a Unit of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_unit(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Unit
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve a Unit of a model  # noqa: E501
+
+        Retrieve a Unit of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Unit, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_unit" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_unit`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_model_unit`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_unit`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Unit',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_model_units(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all Units of a model  # noqa: E501
+
+        Retrieve all Units of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_units(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: list[Unit]
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_model_units_with_http_info(cloud_pk, model_pk, project_pk, **kwargs)  # noqa: E501
+
+    def get_model_units_with_http_info(self, cloud_pk, model_pk, project_pk, **kwargs):  # noqa: E501
+        """Retrieve all Units of a model  # noqa: E501
+
+        Retrieve all Units of a model Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_model_units_with_http_info(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(list[Unit], status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'model_pk',
+            'project_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_model_units" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `get_model_units`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `get_model_units`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `get_model_units`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='list[Unit]',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -16895,468 +16895,6 @@ class ModelApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_ifc_property(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a Property  # noqa: E501
-
-        Update some fields of a Property Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_property(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param ModelProperty data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: ModelProperty
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.update_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def update_ifc_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a Property  # noqa: E501
-
-        Update some fields of a Property Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_property_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param ModelProperty data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(ModelProperty, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_ifc_property" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_property`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_ifc_property`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_property`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_property`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'PATCH',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='ModelProperty',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def update_ifc_property_definition(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of many PropertyDefinitions of a model  # noqa: E501
-
-         Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_property_definition(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param PropertyDefinition data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: PropertyDefinition
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.update_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def update_ifc_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of many PropertyDefinitions of a model  # noqa: E501
-
-         Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this property definition. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param PropertyDefinition data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(PropertyDefinition, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_ifc_property_definition" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_property_definition`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_property_definition`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'PATCH',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='PropertyDefinition',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
-    def update_ifc_unit(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a Unit of a model  # noqa: E501
-
-         Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_unit(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param Unit data: (required)
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: Unit
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        return self.update_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
-
-    def update_ifc_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
-        """Update some fields of a Unit of a model  # noqa: E501
-
-         Required scopes: ifc:write, model:write  # noqa: E501
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_ifc_unit_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
-        >>> result = thread.get()
-
-        :param async_req bool: execute request asynchronously
-        :param str cloud_pk: (required)
-        :param int id: A unique integer value identifying this unit. (required)
-        :param str model_pk: (required)
-        :param str project_pk: (required)
-        :param Unit data: (required)
-        :param _return_http_data_only: response data without head status code
-                                       and headers
-        :param _preload_content: if False, the urllib3.HTTPResponse object will
-                                 be returned without reading/decoding response
-                                 data. Default is True.
-        :param _request_timeout: timeout setting for this request. If one
-                                 number provided, it will be total request
-                                 timeout. It can also be a pair (tuple) of
-                                 (connection, read) timeouts.
-        :return: tuple(Unit, status_code(int), headers(HTTPHeaderDict))
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        local_var_params = locals()
-
-        all_params = [
-            'cloud_pk',
-            'id',
-            'model_pk',
-            'project_pk',
-            'data'
-        ]
-        all_params.extend(
-            [
-                'async_req',
-                '_return_http_data_only',
-                '_preload_content',
-                '_request_timeout'
-            ]
-        )
-
-        for key, val in six.iteritems(local_var_params['kwargs']):
-            if key not in all_params:
-                raise ApiTypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method update_ifc_unit" % key
-                )
-            local_var_params[key] = val
-        del local_var_params['kwargs']
-        # verify the required parameter 'cloud_pk' is set
-        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'id' is set
-        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
-                                                        local_var_params['id'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `id` when calling `update_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'model_pk' is set
-        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['model_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'project_pk' is set
-        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['project_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_ifc_unit`")  # noqa: E501
-        # verify the required parameter 'data' is set
-        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
-                                                        local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `update_ifc_unit`")  # noqa: E501
-
-        collection_formats = {}
-
-        path_params = {}
-        if 'cloud_pk' in local_var_params:
-            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
-        if 'id' in local_var_params:
-            path_params['id'] = local_var_params['id']  # noqa: E501
-        if 'model_pk' in local_var_params:
-            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
-        if 'project_pk' in local_var_params:
-            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
-
-        query_params = []
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'data' in local_var_params:
-            body_params = local_var_params['data']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.select_header_accept(
-            ['application/json'])  # noqa: E501
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
-            ['application/json'])  # noqa: E501
-
-        # Authentication setting
-        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
-
-        return self.api_client.call_api(
-            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'PATCH',
-            path_params,
-            query_params,
-            header_params,
-            body=body_params,
-            post_params=form_params,
-            files=local_var_files,
-            response_type='Unit',  # noqa: E501
-            auth_settings=auth_settings,
-            async_req=local_var_params.get('async_req'),
-            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
-            _preload_content=local_var_params.get('_preload_content', True),
-            _request_timeout=local_var_params.get('_request_timeout'),
-            collection_formats=collection_formats)
-
     def update_layer(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
         """Update some fields of a layer  # noqa: E501
 
@@ -17825,6 +17363,468 @@ class ModelApi(object):
             post_params=form_params,
             files=local_var_files,
             response_type='ModelFiles',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_model_property(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of a Property  # noqa: E501
+
+        Update some fields of a Property Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_property(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param ModelProperty data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: ModelProperty
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def update_model_property_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of a Property  # noqa: E501
+
+        Update some fields of a Property Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_property_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param ModelProperty data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(ModelProperty, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_model_property" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_model_property`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model_property`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_model_property`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_model_property`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_model_property`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='ModelProperty',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_model_property_definition(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of many PropertyDefinitions of a model  # noqa: E501
+
+         Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_property_definition(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param PropertyDefinition data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: PropertyDefinition
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def update_model_property_definition_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of many PropertyDefinitions of a model  # noqa: E501
+
+         Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_property_definition_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this property definition. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param PropertyDefinition data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(PropertyDefinition, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_model_property_definition" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_model_property_definition`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_model_property_definition`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='PropertyDefinition',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_model_unit(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of a Unit of a model  # noqa: E501
+
+         Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_unit(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param Unit data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Unit
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, data, **kwargs)  # noqa: E501
+
+    def update_model_unit_with_http_info(self, cloud_pk, id, model_pk, project_pk, data, **kwargs):  # noqa: E501
+        """Update some fields of a Unit of a model  # noqa: E501
+
+         Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_model_unit_with_http_info(cloud_pk, id, model_pk, project_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str cloud_pk: (required)
+        :param int id: A unique integer value identifying this unit. (required)
+        :param str model_pk: (required)
+        :param str project_pk: (required)
+        :param Unit data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Unit, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'cloud_pk',
+            'id',
+            'model_pk',
+            'project_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_model_unit" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'cloud_pk' is set
+        if self.api_client.client_side_validation and ('cloud_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['cloud_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `cloud_pk` when calling `update_model_unit`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_model_unit`")  # noqa: E501
+        # verify the required parameter 'model_pk' is set
+        if self.api_client.client_side_validation and ('model_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['model_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `model_pk` when calling `update_model_unit`")  # noqa: E501
+        # verify the required parameter 'project_pk' is set
+        if self.api_client.client_side_validation and ('project_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['project_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `project_pk` when calling `update_model_unit`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_model_unit`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'cloud_pk' in local_var_params:
+            path_params['cloud_pk'] = local_var_params['cloud_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'model_pk' in local_var_params:
+            path_params['model_pk'] = local_var_params['model_pk']  # noqa: E501
+        if 'project_pk' in local_var_params:
+            path_params['project_pk'] = local_var_params['project_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Unit',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
