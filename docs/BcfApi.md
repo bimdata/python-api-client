@@ -5,10 +5,20 @@ All URIs are relative to *https://api.bimdata.io*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**create_comment**](BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Create a comment
+[**create_extension_label**](BcfApi.md#create_extension_label) | **POST** /bcf/2.1/projects/{projects_pk}/extension/label | Create a Label
+[**create_extension_priority**](BcfApi.md#create_extension_priority) | **POST** /bcf/2.1/projects/{projects_pk}/extension/priority | Create a Priority
+[**create_extension_stage**](BcfApi.md#create_extension_stage) | **POST** /bcf/2.1/projects/{projects_pk}/extension/stage | Create a Stage
+[**create_extension_status**](BcfApi.md#create_extension_status) | **POST** /bcf/2.1/projects/{projects_pk}/extension/status | Create a TopicStatus
+[**create_extension_type**](BcfApi.md#create_extension_type) | **POST** /bcf/2.1/projects/{projects_pk}/extension/type | Create a TopicType
 [**create_full_topic**](BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
 [**create_topic**](BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
 [**create_viewpoint**](BcfApi.md#create_viewpoint) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Create a Viewpoint
 [**delete_comment**](BcfApi.md#delete_comment) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Delete a comment
+[**delete_extension_label**](BcfApi.md#delete_extension_label) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/label/{id} | Delete a Label
+[**delete_extension_priority**](BcfApi.md#delete_extension_priority) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/priority/{id} | Delete a Priority
+[**delete_extension_stage**](BcfApi.md#delete_extension_stage) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Delete a Stage
+[**delete_extension_status**](BcfApi.md#delete_extension_status) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Delete a TopicStatus
+[**delete_extension_type**](BcfApi.md#delete_extension_type) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Delete a TopicType
 [**delete_topic**](BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 [**delete_viewpoint**](BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
 [**download_bcf_export**](BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
@@ -22,7 +32,8 @@ Method | HTTP request | Description
 [**get_colorings**](BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring | Retrieve all colorings of a viewpoint
 [**get_comment**](BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Retrieve a comment
 [**get_comments**](BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Retrieve all comments
-[**get_extensions**](BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | Retrieve project extensions
+[**get_detailed_extensions**](BcfApi.md#get_detailed_extensions) | **GET** /bcf/2.1/projects/{id}/detailed-extensions | Retrieve project detailed extensions
+[**get_extensions**](BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
 [**get_full_topic**](BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Retrieve a full topic
 [**get_full_topics**](BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | Retrieve all full topics
 [**get_selections**](BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection | Retrieve all selections of a viewpoint
@@ -37,7 +48,11 @@ Method | HTTP request | Description
 [**import_bcf**](BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project
 [**update_bcf_project**](BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 [**update_comment**](BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
-[**update_extensions**](BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions
+[**update_extension_label**](BcfApi.md#update_extension_label) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/label/{id} | Update a Label
+[**update_extension_priority**](BcfApi.md#update_extension_priority) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/priority/{id} | Update a Priority
+[**update_extension_stage**](BcfApi.md#update_extension_stage) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Update a Stage
+[**update_extension_status**](BcfApi.md#update_extension_status) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Update a TopicStatus
+[**update_extension_type**](BcfApi.md#update_extension_type) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Update a TopicType
 [**update_full_topic**](BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update some fields of a topic
 [**update_topic**](BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update some fields of a topic
 [**update_viewpoint**](BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update some fields of a Viewpoint
@@ -231,6 +246,1036 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**Comment**](Comment.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_extension_label**
+> Label create_extension_label(projects_pk, data)
+
+Create a Label
+
+This is not a standard route. Create a Label available for the project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
+
+    try:
+        # Create a Label
+        api_response = api_instance.create_extension_label(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_label: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
+
+    try:
+        # Create a Label
+        api_response = api_instance.create_extension_label(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_label: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
+
+    try:
+        # Create a Label
+        api_response = api_instance.create_extension_label(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_label: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **data** | [**Label**](Label.md)|  | 
+
+### Return type
+
+[**Label**](Label.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_extension_priority**
+> Priority create_extension_priority(projects_pk, data)
+
+Create a Priority
+
+This is not a standard route. Create a Priority available for the project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Create a Priority
+        api_response = api_instance.create_extension_priority(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Create a Priority
+        api_response = api_instance.create_extension_priority(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Create a Priority
+        api_response = api_instance.create_extension_priority(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_priority: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **data** | [**Priority**](Priority.md)|  | 
+
+### Return type
+
+[**Priority**](Priority.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_extension_stage**
+> Stage create_extension_stage(projects_pk, data)
+
+Create a Stage
+
+This is not a standard route. Create a Stage available for the project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Create a Stage
+        api_response = api_instance.create_extension_stage(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Create a Stage
+        api_response = api_instance.create_extension_stage(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Create a Stage
+        api_response = api_instance.create_extension_stage(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_stage: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **data** | [**Stage**](Stage.md)|  | 
+
+### Return type
+
+[**Stage**](Stage.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_extension_status**
+> TopicStatus create_extension_status(projects_pk, data)
+
+Create a TopicStatus
+
+This is not a standard route. Create a TopicStatus available for the project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Create a TopicStatus
+        api_response = api_instance.create_extension_status(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Create a TopicStatus
+        api_response = api_instance.create_extension_status(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Create a TopicStatus
+        api_response = api_instance.create_extension_status(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_status: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **data** | [**TopicStatus**](TopicStatus.md)|  | 
+
+### Return type
+
+[**TopicStatus**](TopicStatus.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_extension_type**
+> TopicType create_extension_type(projects_pk, data)
+
+Create a TopicType
+
+This is not a standard route. Create a TopicType available for the project Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Create a TopicType
+        api_response = api_instance.create_extension_type(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Create a TopicType
+        api_response = api_instance.create_extension_type(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Create a TopicType
+        api_response = api_instance.create_extension_type(projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->create_extension_type: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **str**|  | 
+ **data** | [**TopicType**](TopicType.md)|  | 
+
+### Return type
+
+[**TopicType**](TopicType.md)
 
 ### Authorization
 
@@ -1090,6 +2135,1021 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **delete_extension_label**
+> delete_extension_label(id, projects_pk)
+
+Delete a Label
+
+This is not a standard route. Delete a Label. Topics using this label won't be deleted  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Label
+        api_instance.delete_extension_label(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_label: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Label
+        api_instance.delete_extension_label(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_label: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Label
+        api_instance.delete_extension_label(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_label: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this label. | 
+ **projects_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_extension_priority**
+> delete_extension_priority(id, projects_pk)
+
+Delete a Priority
+
+This is not a standard route. Delete a Priority. Topics using this priority won't be deleted  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Priority
+        api_instance.delete_extension_priority(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Priority
+        api_instance.delete_extension_priority(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Priority
+        api_instance.delete_extension_priority(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_priority: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this priority. | 
+ **projects_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_extension_stage**
+> delete_extension_stage(id, projects_pk)
+
+Delete a Stage
+
+This is not a standard route. Delete a Stage. Topics using this stage won't be deleted  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Stage
+        api_instance.delete_extension_stage(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Stage
+        api_instance.delete_extension_stage(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a Stage
+        api_instance.delete_extension_stage(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_stage: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this stage. | 
+ **projects_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_extension_status**
+> delete_extension_status(id, projects_pk)
+
+Delete a TopicStatus
+
+This is not a standard route. Delete a TopicStatus. Topics using this status won't be deleted  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicStatus
+        api_instance.delete_extension_status(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicStatus
+        api_instance.delete_extension_status(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicStatus
+        api_instance.delete_extension_status(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_status: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this topic status. | 
+ **projects_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_extension_type**
+> delete_extension_type(id, projects_pk)
+
+Delete a TopicType
+
+This is not a standard route. Delete a TopicType. Topics using this type won't be deleted Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicType
+        api_instance.delete_extension_type(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicType
+        api_instance.delete_extension_type(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+
+    try:
+        # Delete a TopicType
+        api_instance.delete_extension_type(id, projects_pk)
+    except ApiException as e:
+        print("Exception when calling BcfApi->delete_extension_type: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this topic type. | 
+ **projects_pk** | **str**|  | 
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **delete_topic**
 > delete_topic(guid, projects_pk)
 
@@ -1509,7 +3569,7 @@ void (empty response body)
 
 Export project's topics in bcf-xml format
 
-Export project's topics in bcf-xml format Required scopes: bcf:read
+This is not a standard route. Export project's topics in bcf-xml format Required scopes: bcf:read
 
 ### Example
 
@@ -3800,12 +5860,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **get_extensions**
-> Extensions get_extensions(projects_pk)
+# **get_detailed_extensions**
+> DetailedExtensions get_detailed_extensions(id)
 
-Retrieve project extensions
+Retrieve project detailed extensions
 
-Retrieve project extensions
+This is not a standard route. Retrieve project detailed extensions Required scopes: bcf:read
 
 ### Example
 
@@ -3853,11 +5913,213 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
+    id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Retrieve project detailed extensions
+        api_response = api_instance.get_detailed_extensions(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->get_detailed_extensions: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Retrieve project detailed extensions
+        api_response = api_instance.get_detailed_extensions(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->get_detailed_extensions: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this project.
+
+    try:
+        # Retrieve project detailed extensions
+        api_response = api_instance.get_detailed_extensions(id)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->get_detailed_extensions: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this project. | 
+
+### Return type
+
+[**DetailedExtensions**](DetailedExtensions.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_extensions**
+> Extensions get_extensions(id)
+
+Retrieve project extensions
+
+Retrieve project extensions Required scopes: bcf:read
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this project.
 
     try:
         # Retrieve project extensions
-        api_response = api_instance.get_extensions(projects_pk)
+        api_response = api_instance.get_extensions(id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_extensions: %s\n" % e)
@@ -3907,11 +6169,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
+    id = 56 # int | A unique integer value identifying this project.
 
     try:
         # Retrieve project extensions
-        api_response = api_instance.get_extensions(projects_pk)
+        api_response = api_instance.get_extensions(id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_extensions: %s\n" % e)
@@ -3961,11 +6223,11 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
+    id = 56 # int | A unique integer value identifying this project.
 
     try:
         # Retrieve project extensions
-        api_response = api_instance.get_extensions(projects_pk)
+        api_response = api_instance.get_extensions(id)
         pprint(api_response)
     except ApiException as e:
         print("Exception when calling BcfApi->get_extensions: %s\n" % e)
@@ -3975,7 +6237,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projects_pk** | **str**|  | 
+ **id** | **int**| A unique integer value identifying this project. | 
 
 ### Return type
 
@@ -6315,7 +8577,7 @@ Name | Type | Description  | Notes
 
 Import bcf-xml format into this project
 
-Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write
+This is not a standard route. Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write
 
 ### Example
 
@@ -6933,12 +9195,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **update_extensions**
-> Extensions update_extensions(projects_pk, data)
+# **update_extension_label**
+> Label update_extension_label(id, projects_pk, data)
 
-Update project extensions
+Update a Label
 
-Update project extensions
+This is not a standard route. Update a Label. All topics using this label will be updated Required scopes: bcf:write
 
 ### Example
 
@@ -6986,15 +9248,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Extensions() # Extensions | 
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
 
     try:
-        # Update project extensions
-        api_response = api_instance.update_extensions(projects_pk, data)
+        # Update a Label
+        api_response = api_instance.update_extension_label(id, projects_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BcfApi->update_extensions: %s\n" % e)
+        print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
 ```
 
 * OAuth Authentication (bimdata_connect):
@@ -7041,15 +9304,16 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Extensions() # Extensions | 
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
 
     try:
-        # Update project extensions
-        api_response = api_instance.update_extensions(projects_pk, data)
+        # Update a Label
+        api_response = api_instance.update_extension_label(id, projects_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BcfApi->update_extensions: %s\n" % e)
+        print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
 ```
 
 * OAuth Authentication (client_credentials):
@@ -7096,27 +9360,869 @@ configuration.access_token = 'YOUR_ACCESS_TOKEN'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bimdata_api_client.BcfApi(api_client)
-    projects_pk = 'projects_pk_example' # str | 
-data = bimdata_api_client.Extensions() # Extensions | 
+    id = 56 # int | A unique integer value identifying this label.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Label() # Label | 
 
     try:
-        # Update project extensions
-        api_response = api_instance.update_extensions(projects_pk, data)
+        # Update a Label
+        api_response = api_instance.update_extension_label(id, projects_pk, data)
         pprint(api_response)
     except ApiException as e:
-        print("Exception when calling BcfApi->update_extensions: %s\n" % e)
+        print("Exception when calling BcfApi->update_extension_label: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this label. | 
  **projects_pk** | **str**|  | 
- **data** | [**Extensions**](Extensions.md)|  | 
+ **data** | [**Label**](Label.md)|  | 
 
 ### Return type
 
-[**Extensions**](Extensions.md)
+[**Label**](Label.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_extension_priority**
+> Priority update_extension_priority(id, projects_pk, data)
+
+Update a Priority
+
+This is not a standard route. Update a Priority. All topics using this priority will be updated Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Update a Priority
+        api_response = api_instance.update_extension_priority(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Update a Priority
+        api_response = api_instance.update_extension_priority(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_priority: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this priority.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Priority() # Priority | 
+
+    try:
+        # Update a Priority
+        api_response = api_instance.update_extension_priority(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_priority: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this priority. | 
+ **projects_pk** | **str**|  | 
+ **data** | [**Priority**](Priority.md)|  | 
+
+### Return type
+
+[**Priority**](Priority.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_extension_stage**
+> Stage update_extension_stage(id, projects_pk, data)
+
+Update a Stage
+
+This is not a standard route. Update a Stage. All topics using this stage will be updated Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Update a Stage
+        api_response = api_instance.update_extension_stage(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Update a Stage
+        api_response = api_instance.update_extension_stage(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_stage: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this stage.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.Stage() # Stage | 
+
+    try:
+        # Update a Stage
+        api_response = api_instance.update_extension_stage(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_stage: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this stage. | 
+ **projects_pk** | **str**|  | 
+ **data** | [**Stage**](Stage.md)|  | 
+
+### Return type
+
+[**Stage**](Stage.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_extension_status**
+> TopicStatus update_extension_status(id, projects_pk, data)
+
+Update a TopicStatus
+
+This is not a standard route. Update a TopicStatus. All topics using this status will be updated Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Update a TopicStatus
+        api_response = api_instance.update_extension_status(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Update a TopicStatus
+        api_response = api_instance.update_extension_status(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_status: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic status.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicStatus() # TopicStatus | 
+
+    try:
+        # Update a TopicStatus
+        api_response = api_instance.update_extension_status(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_status: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this topic status. | 
+ **projects_pk** | **str**|  | 
+ **data** | [**TopicStatus**](TopicStatus.md)|  | 
+
+### Return type
+
+[**TopicStatus**](TopicStatus.md)
+
+### Authorization
+
+[Bearer](../README.md#Bearer), [bimdata_connect](../README.md#bimdata_connect), [client_credentials](../README.md#client_credentials)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_extension_type**
+> TopicType update_extension_type(id, projects_pk, data)
+
+Update a TopicType
+
+This is not a standard route. Update a TopicType. All topics using this type will be updated Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (Bearer):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Update a TopicType
+        api_response = api_instance.update_extension_type(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (bimdata_connect):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Update a TopicType
+        api_response = api_instance.update_extension_type(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_type: %s\n" % e)
+```
+
+* OAuth Authentication (client_credentials):
+```python
+from __future__ import print_function
+import time
+import bimdata_api_client
+from bimdata_api_client.rest import ApiException
+from pprint import pprint
+# Defining the host is optional and defaults to https://api.bimdata.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: Bearer
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io",
+    api_key = {
+        'Authorization': 'YOUR_API_KEY'
+    }
+)
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Authorization'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: bimdata_connect
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: client_credentials
+configuration = bimdata_api_client.Configuration(
+    host = "https://api.bimdata.io"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bimdata_api_client.BcfApi(api_client)
+    id = 56 # int | A unique integer value identifying this topic type.
+projects_pk = 'projects_pk_example' # str | 
+data = bimdata_api_client.TopicType() # TopicType | 
+
+    try:
+        # Update a TopicType
+        api_response = api_instance.update_extension_type(id, projects_pk, data)
+        pprint(api_response)
+    except ApiException as e:
+        print("Exception when calling BcfApi->update_extension_type: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this topic type. | 
+ **projects_pk** | **str**|  | 
+ **data** | [**TopicType**](TopicType.md)|  | 
+
+### Return type
+
+[**TopicType**](TopicType.md)
 
 ### Authorization
 

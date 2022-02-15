@@ -34,23 +34,54 @@ class Stage(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'stage': 'str'
+        'id': 'int',
+        'stage': 'str',
+        'project': 'int'
     }
 
     attribute_map = {
-        'stage': 'stage'
+        'id': 'id',
+        'stage': 'stage',
+        'project': 'project'
     }
 
-    def __init__(self, stage=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, stage=None, project=None, local_vars_configuration=None):  # noqa: E501
         """Stage - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
         self._stage = None
+        self._project = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         self.stage = stage
+        if project is not None:
+            self.project = project
+
+    @property
+    def id(self):
+        """Gets the id of this Stage.  # noqa: E501
+
+
+        :return: The id of this Stage.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this Stage.
+
+
+        :param id: The id of this Stage.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def stage(self):
@@ -80,6 +111,29 @@ class Stage(object):
             raise ValueError("Invalid value for `stage`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._stage = stage
+
+    @property
+    def project(self):
+        """Gets the project of this Stage.  # noqa: E501
+
+        This field is automatically provided by the route, you don't need to provide it in the body  # noqa: E501
+
+        :return: The project of this Stage.  # noqa: E501
+        :rtype: int
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this Stage.
+
+        This field is automatically provided by the route, you don't need to provide it in the body  # noqa: E501
+
+        :param project: The project of this Stage.  # noqa: E501
+        :type: int
+        """
+
+        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -406,6 +406,9 @@ class FullTopic(object):
         :param topic_type: The topic_type of this FullTopic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                topic_type is not None and len(topic_type) < 1):
+            raise ValueError("Invalid value for `topic_type`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._topic_type = topic_type
 
@@ -427,6 +430,9 @@ class FullTopic(object):
         :param topic_status: The topic_status of this FullTopic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                topic_status is not None and len(topic_status) < 1):
+            raise ValueError("Invalid value for `topic_status`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._topic_status = topic_status
 
@@ -448,6 +454,9 @@ class FullTopic(object):
         :param stage: The stage of this FullTopic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                stage is not None and len(stage) < 1):
+            raise ValueError("Invalid value for `stage`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._stage = stage
 
@@ -469,6 +478,9 @@ class FullTopic(object):
         :param priority: The priority of this FullTopic.  # noqa: E501
         :type: str
         """
+        if (self.local_vars_configuration.client_side_validation and
+                priority is not None and len(priority) < 1):
+            raise ValueError("Invalid value for `priority`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._priority = priority
 

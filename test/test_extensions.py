@@ -49,29 +49,26 @@ class TestExtensions(unittest.TestCase):
                 priority = [
                     '0'
                     ], 
+                stage = [
+                    '0'
+                    ], 
                 user_id_type = [
                     '0'
                     ], 
-                stage = [
-                    '0'
+                priority_colors = [
+                    '012345'
+                    ], 
+                topic_status_colors = [
+                    '012345'
                     ]
             )
         else :
             return Extensions(
-                topic_type = [
-                    '0'
+                priority_colors = [
+                    '012345'
                     ],
-                topic_status = [
-                    '0'
-                    ],
-                topic_label = [
-                    '0'
-                    ],
-                priority = [
-                    '0'
-                    ],
-                stage = [
-                    '0'
+                topic_status_colors = [
+                    '012345'
                     ],
         )
 

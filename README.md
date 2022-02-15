@@ -111,10 +111,20 @@ All URIs are relative to *https://api.bimdata.io*
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *BcfApi* | [**create_comment**](docs/BcfApi.md#create_comment) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Create a comment
+*BcfApi* | [**create_extension_label**](docs/BcfApi.md#create_extension_label) | **POST** /bcf/2.1/projects/{projects_pk}/extension/label | Create a Label
+*BcfApi* | [**create_extension_priority**](docs/BcfApi.md#create_extension_priority) | **POST** /bcf/2.1/projects/{projects_pk}/extension/priority | Create a Priority
+*BcfApi* | [**create_extension_stage**](docs/BcfApi.md#create_extension_stage) | **POST** /bcf/2.1/projects/{projects_pk}/extension/stage | Create a Stage
+*BcfApi* | [**create_extension_status**](docs/BcfApi.md#create_extension_status) | **POST** /bcf/2.1/projects/{projects_pk}/extension/status | Create a TopicStatus
+*BcfApi* | [**create_extension_type**](docs/BcfApi.md#create_extension_type) | **POST** /bcf/2.1/projects/{projects_pk}/extension/type | Create a TopicType
 *BcfApi* | [**create_full_topic**](docs/BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
 *BcfApi* | [**create_topic**](docs/BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
 *BcfApi* | [**create_viewpoint**](docs/BcfApi.md#create_viewpoint) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Create a Viewpoint
 *BcfApi* | [**delete_comment**](docs/BcfApi.md#delete_comment) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Delete a comment
+*BcfApi* | [**delete_extension_label**](docs/BcfApi.md#delete_extension_label) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/label/{id} | Delete a Label
+*BcfApi* | [**delete_extension_priority**](docs/BcfApi.md#delete_extension_priority) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/priority/{id} | Delete a Priority
+*BcfApi* | [**delete_extension_stage**](docs/BcfApi.md#delete_extension_stage) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Delete a Stage
+*BcfApi* | [**delete_extension_status**](docs/BcfApi.md#delete_extension_status) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Delete a TopicStatus
+*BcfApi* | [**delete_extension_type**](docs/BcfApi.md#delete_extension_type) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Delete a TopicType
 *BcfApi* | [**delete_topic**](docs/BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 *BcfApi* | [**delete_viewpoint**](docs/BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
 *BcfApi* | [**download_bcf_export**](docs/BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
@@ -128,7 +138,8 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_colorings**](docs/BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring | Retrieve all colorings of a viewpoint
 *BcfApi* | [**get_comment**](docs/BcfApi.md#get_comment) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Retrieve a comment
 *BcfApi* | [**get_comments**](docs/BcfApi.md#get_comments) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments | Retrieve all comments
-*BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{projects_pk}/extensions | Retrieve project extensions
+*BcfApi* | [**get_detailed_extensions**](docs/BcfApi.md#get_detailed_extensions) | **GET** /bcf/2.1/projects/{id}/detailed-extensions | Retrieve project detailed extensions
+*BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
 *BcfApi* | [**get_full_topic**](docs/BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Retrieve a full topic
 *BcfApi* | [**get_full_topics**](docs/BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | Retrieve all full topics
 *BcfApi* | [**get_selections**](docs/BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection | Retrieve all selections of a viewpoint
@@ -143,7 +154,11 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**import_bcf**](docs/BcfApi.md#import_bcf) | **POST** /bcf/2.1/projects/{id}/import | Import bcf-xml format into this project
 *BcfApi* | [**update_bcf_project**](docs/BcfApi.md#update_bcf_project) | **PATCH** /bcf/2.1/projects/{id} | Update some fields of a BCF project
 *BcfApi* | [**update_comment**](docs/BcfApi.md#update_comment) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update some fields of a comment
-*BcfApi* | [**update_extensions**](docs/BcfApi.md#update_extensions) | **PATCH** /bcf/2.1/projects/{projects_pk}/extensions | Update project extensions
+*BcfApi* | [**update_extension_label**](docs/BcfApi.md#update_extension_label) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/label/{id} | Update a Label
+*BcfApi* | [**update_extension_priority**](docs/BcfApi.md#update_extension_priority) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/priority/{id} | Update a Priority
+*BcfApi* | [**update_extension_stage**](docs/BcfApi.md#update_extension_stage) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Update a Stage
+*BcfApi* | [**update_extension_status**](docs/BcfApi.md#update_extension_status) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Update a TopicStatus
+*BcfApi* | [**update_extension_type**](docs/BcfApi.md#update_extension_type) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Update a TopicType
 *BcfApi* | [**update_full_topic**](docs/BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update some fields of a topic
 *BcfApi* | [**update_topic**](docs/BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update some fields of a topic
 *BcfApi* | [**update_viewpoint**](docs/BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update some fields of a Viewpoint
@@ -568,6 +583,7 @@ Class | Method | HTTP request | Description
  - [ComponentsParent](docs/ComponentsParent.md)
  - [CreateBuilding](docs/CreateBuilding.md)
  - [CreateModel](docs/CreateModel.md)
+ - [DetailedExtensions](docs/DetailedExtensions.md)
  - [Direction](docs/Direction.md)
  - [Document](docs/Document.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
@@ -598,6 +614,7 @@ Class | Method | HTTP request | Description
  - [InlineResponse2001](docs/InlineResponse2001.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
+ - [LabelRead](docs/LabelRead.md)
  - [Layer](docs/Layer.md)
  - [LayerElement](docs/LayerElement.md)
  - [Line](docs/Line.md)

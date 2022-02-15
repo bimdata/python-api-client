@@ -37,7 +37,10 @@ class TestPriority(unittest.TestCase):
         # model = bimdata_api_client.models.priority.Priority()  # noqa: E501
         if include_optional :
             return Priority(
-                priority = '0'
+                id = 56, 
+                priority = '0', 
+                color = '0', 
+                project = 56
             )
         else :
             return Priority(

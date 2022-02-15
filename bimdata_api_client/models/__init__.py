@@ -29,6 +29,7 @@ from bimdata_api_client.models.component import Component
 from bimdata_api_client.models.components_parent import ComponentsParent
 from bimdata_api_client.models.create_building import CreateBuilding
 from bimdata_api_client.models.create_model import CreateModel
+from bimdata_api_client.models.detailed_extensions import DetailedExtensions
 from bimdata_api_client.models.direction import Direction
 from bimdata_api_client.models.document import Document
 from bimdata_api_client.models.document_with_element_list import DocumentWithElementList
@@ -59,6 +60,7 @@ from bimdata_api_client.models.inline_response200 import InlineResponse200
 from bimdata_api_client.models.inline_response2001 import InlineResponse2001
 from bimdata_api_client.models.invitation import Invitation
 from bimdata_api_client.models.label import Label
+from bimdata_api_client.models.label_read import LabelRead
 from bimdata_api_client.models.layer import Layer
 from bimdata_api_client.models.layer_element import LayerElement
 from bimdata_api_client.models.line import Line

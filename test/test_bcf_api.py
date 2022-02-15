@@ -36,6 +36,41 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_create_extension_label(self):
+        """Test case for create_extension_label
+
+        Create a Label  # noqa: E501
+        """
+        pass
+
+    def test_create_extension_priority(self):
+        """Test case for create_extension_priority
+
+        Create a Priority  # noqa: E501
+        """
+        pass
+
+    def test_create_extension_stage(self):
+        """Test case for create_extension_stage
+
+        Create a Stage  # noqa: E501
+        """
+        pass
+
+    def test_create_extension_status(self):
+        """Test case for create_extension_status
+
+        Create a TopicStatus  # noqa: E501
+        """
+        pass
+
+    def test_create_extension_type(self):
+        """Test case for create_extension_type
+
+        Create a TopicType  # noqa: E501
+        """
+        pass
+
     def test_create_full_topic(self):
         """Test case for create_full_topic
 
@@ -61,6 +96,41 @@ class TestBcfApi(unittest.TestCase):
         """Test case for delete_comment
 
         Delete a comment  # noqa: E501
+        """
+        pass
+
+    def test_delete_extension_label(self):
+        """Test case for delete_extension_label
+
+        Delete a Label  # noqa: E501
+        """
+        pass
+
+    def test_delete_extension_priority(self):
+        """Test case for delete_extension_priority
+
+        Delete a Priority  # noqa: E501
+        """
+        pass
+
+    def test_delete_extension_stage(self):
+        """Test case for delete_extension_stage
+
+        Delete a Stage  # noqa: E501
+        """
+        pass
+
+    def test_delete_extension_status(self):
+        """Test case for delete_extension_status
+
+        Delete a TopicStatus  # noqa: E501
+        """
+        pass
+
+    def test_delete_extension_type(self):
+        """Test case for delete_extension_type
+
+        Delete a TopicType  # noqa: E501
         """
         pass
 
@@ -152,6 +222,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_comments
 
         Retrieve all comments  # noqa: E501
+        """
+        pass
+
+    def test_get_detailed_extensions(self):
+        """Test case for get_detailed_extensions
+
+        Retrieve project detailed extensions  # noqa: E501
         """
         pass
 
@@ -260,10 +337,38 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
-    def test_update_extensions(self):
-        """Test case for update_extensions
+    def test_update_extension_label(self):
+        """Test case for update_extension_label
 
-        Update project extensions  # noqa: E501
+        Update a Label  # noqa: E501
+        """
+        pass
+
+    def test_update_extension_priority(self):
+        """Test case for update_extension_priority
+
+        Update a Priority  # noqa: E501
+        """
+        pass
+
+    def test_update_extension_stage(self):
+        """Test case for update_extension_stage
+
+        Update a Stage  # noqa: E501
+        """
+        pass
+
+    def test_update_extension_status(self):
+        """Test case for update_extension_status
+
+        Update a TopicStatus  # noqa: E501
+        """
+        pass
+
+    def test_update_extension_type(self):
+        """Test case for update_extension_type
+
+        Update a TopicType  # noqa: E501
         """
         pass
 

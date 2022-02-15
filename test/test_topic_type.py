@@ -37,7 +37,9 @@ class TestTopicType(unittest.TestCase):
         # model = bimdata_api_client.models.topic_type.TopicType()  # noqa: E501
         if include_optional :
             return TopicType(
-                topic_type = '0'
+                id = 56, 
+                topic_type = '0', 
+                project = 56
             )
         else :
             return TopicType(

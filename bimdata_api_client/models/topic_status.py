@@ -34,23 +34,58 @@ class TopicStatus(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'topic_status': 'str'
+        'id': 'int',
+        'topic_status': 'str',
+        'color': 'str',
+        'project': 'int'
     }
 
     attribute_map = {
-        'topic_status': 'topic_status'
+        'id': 'id',
+        'topic_status': 'topic_status',
+        'color': 'color',
+        'project': 'project'
     }
 
-    def __init__(self, topic_status=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, topic_status=None, color=None, project=None, local_vars_configuration=None):  # noqa: E501
         """TopicStatus - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
+        self._id = None
         self._topic_status = None
+        self._color = None
+        self._project = None
         self.discriminator = None
 
+        if id is not None:
+            self.id = id
         self.topic_status = topic_status
+        self.color = color
+        if project is not None:
+            self.project = project
+
+    @property
+    def id(self):
+        """Gets the id of this TopicStatus.  # noqa: E501
+
+
+        :return: The id of this TopicStatus.  # noqa: E501
+        :rtype: int
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this TopicStatus.
+
+
+        :param id: The id of this TopicStatus.  # noqa: E501
+        :type: int
+        """
+
+        self._id = id
 
     @property
     def topic_status(self):
@@ -80,6 +115,53 @@ class TopicStatus(object):
             raise ValueError("Invalid value for `topic_status`, length must be greater than or equal to `1`")  # noqa: E501
 
         self._topic_status = topic_status
+
+    @property
+    def color(self):
+        """Gets the color of this TopicStatus.  # noqa: E501
+
+
+        :return: The color of this TopicStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._color
+
+    @color.setter
+    def color(self, color):
+        """Sets the color of this TopicStatus.
+
+
+        :param color: The color of this TopicStatus.  # noqa: E501
+        :type: str
+        """
+        if (self.local_vars_configuration.client_side_validation and
+                color is not None and len(color) > 8):
+            raise ValueError("Invalid value for `color`, length must be less than or equal to `8`")  # noqa: E501
+
+        self._color = color
+
+    @property
+    def project(self):
+        """Gets the project of this TopicStatus.  # noqa: E501
+
+        This field is automatically provided by the route, you don't need to provide it in the body  # noqa: E501
+
+        :return: The project of this TopicStatus.  # noqa: E501
+        :rtype: int
+        """
+        return self._project
+
+    @project.setter
+    def project(self, project):
+        """Sets the project of this TopicStatus.
+
+        This field is automatically provided by the route, you don't need to provide it in the body  # noqa: E501
+
+        :param project: The project of this TopicStatus.  # noqa: E501
+        :type: int
+        """
+
+        self._project = project
 
     def to_dict(self):
         """Returns the model properties as a dict"""

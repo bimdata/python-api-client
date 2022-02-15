@@ -37,7 +37,9 @@ class TestLabel(unittest.TestCase):
         # model = bimdata_api_client.models.label.Label()  # noqa: E501
         if include_optional :
             return Label(
-                label = '0'
+                id = 56, 
+                label = '0', 
+                project = 56
             )
         else :
             return Label(

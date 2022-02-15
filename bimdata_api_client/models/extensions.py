@@ -38,8 +38,10 @@ class Extensions(object):
         'topic_status': 'list[str]',
         'topic_label': 'list[str]',
         'priority': 'list[str]',
+        'stage': 'list[str]',
         'user_id_type': 'list[str]',
-        'stage': 'list[str]'
+        'priority_colors': 'list[str]',
+        'topic_status_colors': 'list[str]'
     }
 
     attribute_map = {
@@ -47,11 +49,13 @@ class Extensions(object):
         'topic_status': 'topic_status',
         'topic_label': 'topic_label',
         'priority': 'priority',
+        'stage': 'stage',
         'user_id_type': 'user_id_type',
-        'stage': 'stage'
+        'priority_colors': 'priority_colors',
+        'topic_status_colors': 'topic_status_colors'
     }
 
-    def __init__(self, topic_type=None, topic_status=None, topic_label=None, priority=None, user_id_type=None, stage=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, topic_type=None, topic_status=None, topic_label=None, priority=None, stage=None, user_id_type=None, priority_colors=None, topic_status_colors=None, local_vars_configuration=None):  # noqa: E501
         """Extensions - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -61,17 +65,26 @@ class Extensions(object):
         self._topic_status = None
         self._topic_label = None
         self._priority = None
-        self._user_id_type = None
         self._stage = None
+        self._user_id_type = None
+        self._priority_colors = None
+        self._topic_status_colors = None
         self.discriminator = None
 
-        self.topic_type = topic_type
-        self.topic_status = topic_status
-        self.topic_label = topic_label
-        self.priority = priority
+        if topic_type is not None:
+            self.topic_type = topic_type
+        if topic_status is not None:
+            self.topic_status = topic_status
+        if topic_label is not None:
+            self.topic_label = topic_label
+        if priority is not None:
+            self.priority = priority
+        if stage is not None:
+            self.stage = stage
         if user_id_type is not None:
             self.user_id_type = user_id_type
-        self.stage = stage
+        self.priority_colors = priority_colors
+        self.topic_status_colors = topic_status_colors
 
     @property
     def topic_type(self):
@@ -158,6 +171,27 @@ class Extensions(object):
         self._priority = priority
 
     @property
+    def stage(self):
+        """Gets the stage of this Extensions.  # noqa: E501
+
+
+        :return: The stage of this Extensions.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._stage
+
+    @stage.setter
+    def stage(self, stage):
+        """Sets the stage of this Extensions.
+
+
+        :param stage: The stage of this Extensions.  # noqa: E501
+        :type: list[str]
+        """
+
+        self._stage = stage
+
+    @property
     def user_id_type(self):
         """Gets the user_id_type of this Extensions.  # noqa: E501
 
@@ -179,25 +213,54 @@ class Extensions(object):
         self._user_id_type = user_id_type
 
     @property
-    def stage(self):
-        """Gets the stage of this Extensions.  # noqa: E501
+    def priority_colors(self):
+        """Gets the priority_colors of this Extensions.  # noqa: E501
 
+        Non standard field. Arrays of priorities and this array are in the same order.  # noqa: E501
 
-        :return: The stage of this Extensions.  # noqa: E501
+        :return: The priority_colors of this Extensions.  # noqa: E501
         :rtype: list[str]
         """
-        return self._stage
+        return self._priority_colors
 
-    @stage.setter
-    def stage(self, stage):
-        """Sets the stage of this Extensions.
+    @priority_colors.setter
+    def priority_colors(self, priority_colors):
+        """Sets the priority_colors of this Extensions.
 
+        Non standard field. Arrays of priorities and this array are in the same order.  # noqa: E501
 
-        :param stage: The stage of this Extensions.  # noqa: E501
+        :param priority_colors: The priority_colors of this Extensions.  # noqa: E501
         :type: list[str]
         """
+        if self.local_vars_configuration.client_side_validation and priority_colors is None:  # noqa: E501
+            raise ValueError("Invalid value for `priority_colors`, must not be `None`")  # noqa: E501
 
-        self._stage = stage
+        self._priority_colors = priority_colors
+
+    @property
+    def topic_status_colors(self):
+        """Gets the topic_status_colors of this Extensions.  # noqa: E501
+
+        Non standard field. Arrays of statuses and this array are in the same order.  # noqa: E501
+
+        :return: The topic_status_colors of this Extensions.  # noqa: E501
+        :rtype: list[str]
+        """
+        return self._topic_status_colors
+
+    @topic_status_colors.setter
+    def topic_status_colors(self, topic_status_colors):
+        """Sets the topic_status_colors of this Extensions.
+
+        Non standard field. Arrays of statuses and this array are in the same order.  # noqa: E501
+
+        :param topic_status_colors: The topic_status_colors of this Extensions.  # noqa: E501
+        :type: list[str]
+        """
+        if self.local_vars_configuration.client_side_validation and topic_status_colors is None:  # noqa: E501
+            raise ValueError("Invalid value for `topic_status_colors`, must not be `None`")  # noqa: E501
+
+        self._topic_status_colors = topic_status_colors
 
     def to_dict(self):
         """Returns the model properties as a dict"""

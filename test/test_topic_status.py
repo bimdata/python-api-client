@@ -37,7 +37,10 @@ class TestTopicStatus(unittest.TestCase):
         # model = bimdata_api_client.models.topic_status.TopicStatus()  # noqa: E501
         if include_optional :
             return TopicStatus(
-                topic_status = '0'
+                id = 56, 
+                topic_status = '0', 
+                color = '0', 
+                project = 56
             )
         else :
             return TopicStatus(

@@ -173,6 +173,641 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def create_extension_label(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Label  # noqa: E501
+
+        This is not a standard route. Create a Label available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_label(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Label data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Label
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_extension_label_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+
+    def create_extension_label_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Label  # noqa: E501
+
+        This is not a standard route. Create a Label available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_label_with_http_info(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Label data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Label, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_extension_label" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_extension_label`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_extension_label`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/label', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Label',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_extension_priority(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Priority  # noqa: E501
+
+        This is not a standard route. Create a Priority available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_priority(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Priority data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Priority
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_extension_priority_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+
+    def create_extension_priority_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Priority  # noqa: E501
+
+        This is not a standard route. Create a Priority available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_priority_with_http_info(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Priority data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Priority, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_extension_priority" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_extension_priority`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_extension_priority`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/priority', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Priority',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_extension_stage(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Stage  # noqa: E501
+
+        This is not a standard route. Create a Stage available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_stage(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Stage data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Stage
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_extension_stage_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+
+    def create_extension_stage_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a Stage  # noqa: E501
+
+        This is not a standard route. Create a Stage available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_stage_with_http_info(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param Stage data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Stage, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_extension_stage" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_extension_stage`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_extension_stage`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/stage', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Stage',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_extension_status(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a TopicStatus  # noqa: E501
+
+        This is not a standard route. Create a TopicStatus available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_status(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param TopicStatus data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: TopicStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_extension_status_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+
+    def create_extension_status_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a TopicStatus  # noqa: E501
+
+        This is not a standard route. Create a TopicStatus available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_status_with_http_info(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param TopicStatus data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(TopicStatus, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_extension_status" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_extension_status`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_extension_status`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/status', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TopicStatus',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def create_extension_type(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a TopicType  # noqa: E501
+
+        This is not a standard route. Create a TopicType available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_type(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param TopicType data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: TopicType
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.create_extension_type_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+
+    def create_extension_type_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
+        """Create a TopicType  # noqa: E501
+
+        This is not a standard route. Create a TopicType available for the project Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.create_extension_type_with_http_info(projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param str projects_pk: (required)
+        :param TopicType data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(TopicType, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method create_extension_type" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `create_extension_type`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `create_extension_type`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/type', 'POST',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TopicType',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def create_full_topic(self, projects_pk, data, **kwargs):  # noqa: E501
         """Create a Topic with viewpoints and comments  # noqa: E501
 
@@ -701,6 +1336,601 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
+    def delete_extension_label(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Label  # noqa: E501
+
+        This is not a standard route. Delete a Label. Topics using this label won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_label(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this label. (required)
+        :param str projects_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_extension_label_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
+
+    def delete_extension_label_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Label  # noqa: E501
+
+        This is not a standard route. Delete a Label. Topics using this label won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_label_with_http_info(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this label. (required)
+        :param str projects_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_extension_label" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_extension_label`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_extension_label`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/label/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_extension_priority(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Priority  # noqa: E501
+
+        This is not a standard route. Delete a Priority. Topics using this priority won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_priority(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this priority. (required)
+        :param str projects_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_extension_priority_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
+
+    def delete_extension_priority_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Priority  # noqa: E501
+
+        This is not a standard route. Delete a Priority. Topics using this priority won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_priority_with_http_info(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this priority. (required)
+        :param str projects_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_extension_priority" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_extension_priority`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_extension_priority`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/priority/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_extension_stage(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Stage  # noqa: E501
+
+        This is not a standard route. Delete a Stage. Topics using this stage won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_stage(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this stage. (required)
+        :param str projects_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_extension_stage_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
+
+    def delete_extension_stage_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a Stage  # noqa: E501
+
+        This is not a standard route. Delete a Stage. Topics using this stage won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_stage_with_http_info(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this stage. (required)
+        :param str projects_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_extension_stage" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_extension_stage`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_extension_stage`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/stage/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_extension_status(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a TopicStatus  # noqa: E501
+
+        This is not a standard route. Delete a TopicStatus. Topics using this status won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_status(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic status. (required)
+        :param str projects_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_extension_status_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
+
+    def delete_extension_status_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a TopicStatus  # noqa: E501
+
+        This is not a standard route. Delete a TopicStatus. Topics using this status won't be deleted  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_status_with_http_info(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic status. (required)
+        :param str projects_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_extension_status" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_extension_status`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_extension_status`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/status/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def delete_extension_type(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a TopicType  # noqa: E501
+
+        This is not a standard route. Delete a TopicType. Topics using this type won't be deleted Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_type(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic type. (required)
+        :param str projects_pk: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.delete_extension_type_with_http_info(id, projects_pk, **kwargs)  # noqa: E501
+
+    def delete_extension_type_with_http_info(self, id, projects_pk, **kwargs):  # noqa: E501
+        """Delete a TopicType  # noqa: E501
+
+        This is not a standard route. Delete a TopicType. Topics using this type won't be deleted Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.delete_extension_type_with_http_info(id, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic type. (required)
+        :param str projects_pk: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: None
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method delete_extension_type" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `delete_extension_type`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `delete_extension_type`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/type/{id}', 'DELETE',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type=None,  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
     def delete_topic(self, guid, projects_pk, **kwargs):  # noqa: E501
         """Delete a topic  # noqa: E501
 
@@ -956,7 +2186,7 @@ class BcfApi(object):
     def download_bcf_export(self, id, **kwargs):  # noqa: E501
         """Export project's topics in bcf-xml format  # noqa: E501
 
-        Export project's topics in bcf-xml format Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. Export project's topics in bcf-xml format Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.download_bcf_export(id, async_req=True)
@@ -983,7 +2213,7 @@ class BcfApi(object):
     def download_bcf_export_with_http_info(self, id, **kwargs):  # noqa: E501
         """Export project's topics in bcf-xml format  # noqa: E501
 
-        Export project's topics in bcf-xml format Required scopes: bcf:read  # noqa: E501
+        This is not a standard route. Export project's topics in bcf-xml format Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.download_bcf_export_with_http_info(id, async_req=True)
@@ -2382,17 +3612,131 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def get_extensions(self, projects_pk, **kwargs):  # noqa: E501
-        """Retrieve project extensions  # noqa: E501
+    def get_detailed_extensions(self, id, **kwargs):  # noqa: E501
+        """Retrieve project detailed extensions  # noqa: E501
 
-        Retrieve project extensions  # noqa: E501
+        This is not a standard route. Retrieve project detailed extensions Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_extensions(projects_pk, async_req=True)
+        >>> thread = api.get_detailed_extensions(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str projects_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: DetailedExtensions
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.get_detailed_extensions_with_http_info(id, **kwargs)  # noqa: E501
+
+    def get_detailed_extensions_with_http_info(self, id, **kwargs):  # noqa: E501
+        """Retrieve project detailed extensions  # noqa: E501
+
+        This is not a standard route. Retrieve project detailed extensions Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_detailed_extensions_with_http_info(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this project. (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(DetailedExtensions, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method get_detailed_extensions" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_detailed_extensions`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{id}/detailed-extensions', 'GET',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='DetailedExtensions',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def get_extensions(self, id, **kwargs):  # noqa: E501
+        """Retrieve project extensions  # noqa: E501
+
+        Retrieve project extensions Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.get_extensions(id, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this project. (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2405,19 +3749,19 @@ class BcfApi(object):
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.get_extensions_with_http_info(projects_pk, **kwargs)  # noqa: E501
+        return self.get_extensions_with_http_info(id, **kwargs)  # noqa: E501
 
-    def get_extensions_with_http_info(self, projects_pk, **kwargs):  # noqa: E501
+    def get_extensions_with_http_info(self, id, **kwargs):  # noqa: E501
         """Retrieve project extensions  # noqa: E501
 
-        Retrieve project extensions  # noqa: E501
+        Retrieve project extensions Required scopes: bcf:read  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.get_extensions_with_http_info(projects_pk, async_req=True)
+        >>> thread = api.get_extensions_with_http_info(id, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
-        :param str projects_pk: (required)
+        :param int id: A unique integer value identifying this project. (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2435,7 +3779,7 @@ class BcfApi(object):
         local_var_params = locals()
 
         all_params = [
-            'projects_pk'
+            'id'
         ]
         all_params.extend(
             [
@@ -2454,16 +3798,16 @@ class BcfApi(object):
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
-        # verify the required parameter 'projects_pk' is set
-        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
-                                                        local_var_params['projects_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `projects_pk` when calling `get_extensions`")  # noqa: E501
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `get_extensions`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
-        if 'projects_pk' in local_var_params:
-            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
 
         query_params = []
 
@@ -2481,7 +3825,7 @@ class BcfApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/extensions', 'GET',
+            '/bcf/2.1/projects/{id}/extensions', 'GET',
             path_params,
             query_params,
             header_params,
@@ -3907,7 +5251,7 @@ class BcfApi(object):
     def import_bcf(self, id, name, **kwargs):  # noqa: E501
         """Import bcf-xml format into this project  # noqa: E501
 
-        Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
+        This is not a standard route. Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_bcf(id, name, async_req=True)
@@ -3933,7 +5277,7 @@ class BcfApi(object):
     def import_bcf_with_http_info(self, id, name, **kwargs):  # noqa: E501
         """Import bcf-xml format into this project  # noqa: E501
 
-        Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
+        This is not a standard route. Import bcf-xml format into this project. If there are guid conflict, an error will be raised. If there are index conflicts, indexes of the imported file will be overriden with a new index. Author and assigned_to fields will be linked to existing users in the project. If no matching user are found, fields will be emptied. Only BCF 2.1 is supported Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
         >>> thread = api.import_bcf_with_http_info(id, name, async_req=True)
@@ -4305,18 +5649,19 @@ class BcfApi(object):
             _request_timeout=local_var_params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def update_extensions(self, projects_pk, data, **kwargs):  # noqa: E501
-        """Update project extensions  # noqa: E501
+    def update_extension_label(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Label  # noqa: E501
 
-        Update project extensions  # noqa: E501
+        This is not a standard route. Update a Label. All topics using this label will be updated Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_extensions(projects_pk, data, async_req=True)
+        >>> thread = api.update_extension_label(id, projects_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this label. (required)
         :param str projects_pk: (required)
-        :param Extensions data: (required)
+        :param Label data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4324,25 +5669,26 @@ class BcfApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Extensions
+        :return: Label
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
-        return self.update_extensions_with_http_info(projects_pk, data, **kwargs)  # noqa: E501
+        return self.update_extension_label_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
 
-    def update_extensions_with_http_info(self, projects_pk, data, **kwargs):  # noqa: E501
-        """Update project extensions  # noqa: E501
+    def update_extension_label_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Label  # noqa: E501
 
-        Update project extensions  # noqa: E501
+        This is not a standard route. Update a Label. All topics using this label will be updated Required scopes: bcf:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.update_extensions_with_http_info(projects_pk, data, async_req=True)
+        >>> thread = api.update_extension_label_with_http_info(id, projects_pk, data, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this label. (required)
         :param str projects_pk: (required)
-        :param Extensions data: (required)
+        :param Label data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4352,7 +5698,7 @@ class BcfApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Extensions, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(Label, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4360,6 +5706,7 @@ class BcfApi(object):
         local_var_params = locals()
 
         all_params = [
+            'id',
             'projects_pk',
             'data'
         ]
@@ -4376,22 +5723,28 @@ class BcfApi(object):
             if key not in all_params:
                 raise ApiTypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method update_extensions" % key
+                    " to method update_extension_label" % key
                 )
             local_var_params[key] = val
         del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_extension_label`")  # noqa: E501
         # verify the required parameter 'projects_pk' is set
         if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
                                                         local_var_params['projects_pk'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extensions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extension_label`")  # noqa: E501
         # verify the required parameter 'data' is set
         if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
                                                         local_var_params['data'] is None):  # noqa: E501
-            raise ApiValueError("Missing the required parameter `data` when calling `update_extensions`")  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_extension_label`")  # noqa: E501
 
         collection_formats = {}
 
         path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
         if 'projects_pk' in local_var_params:
             path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
 
@@ -4417,14 +5770,558 @@ class BcfApi(object):
         auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
 
         return self.api_client.call_api(
-            '/bcf/2.1/projects/{projects_pk}/extensions', 'PATCH',
+            '/bcf/2.1/projects/{projects_pk}/extension/label/{id}', 'PATCH',
             path_params,
             query_params,
             header_params,
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Extensions',  # noqa: E501
+            response_type='Label',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_extension_priority(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Priority  # noqa: E501
+
+        This is not a standard route. Update a Priority. All topics using this priority will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_priority(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this priority. (required)
+        :param str projects_pk: (required)
+        :param Priority data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Priority
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_extension_priority_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
+
+    def update_extension_priority_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Priority  # noqa: E501
+
+        This is not a standard route. Update a Priority. All topics using this priority will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_priority_with_http_info(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this priority. (required)
+        :param str projects_pk: (required)
+        :param Priority data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Priority, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_extension_priority" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_extension_priority`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extension_priority`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_extension_priority`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/priority/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Priority',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_extension_stage(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Stage  # noqa: E501
+
+        This is not a standard route. Update a Stage. All topics using this stage will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_stage(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this stage. (required)
+        :param str projects_pk: (required)
+        :param Stage data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: Stage
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_extension_stage_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
+
+    def update_extension_stage_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a Stage  # noqa: E501
+
+        This is not a standard route. Update a Stage. All topics using this stage will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_stage_with_http_info(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this stage. (required)
+        :param str projects_pk: (required)
+        :param Stage data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(Stage, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_extension_stage" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_extension_stage`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extension_stage`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_extension_stage`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/stage/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='Stage',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_extension_status(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a TopicStatus  # noqa: E501
+
+        This is not a standard route. Update a TopicStatus. All topics using this status will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_status(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic status. (required)
+        :param str projects_pk: (required)
+        :param TopicStatus data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: TopicStatus
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_extension_status_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
+
+    def update_extension_status_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a TopicStatus  # noqa: E501
+
+        This is not a standard route. Update a TopicStatus. All topics using this status will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_status_with_http_info(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic status. (required)
+        :param str projects_pk: (required)
+        :param TopicStatus data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(TopicStatus, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_extension_status" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_extension_status`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extension_status`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_extension_status`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/status/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TopicStatus',  # noqa: E501
+            auth_settings=auth_settings,
+            async_req=local_var_params.get('async_req'),
+            _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
+            _preload_content=local_var_params.get('_preload_content', True),
+            _request_timeout=local_var_params.get('_request_timeout'),
+            collection_formats=collection_formats)
+
+    def update_extension_type(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a TopicType  # noqa: E501
+
+        This is not a standard route. Update a TopicType. All topics using this type will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_type(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic type. (required)
+        :param str projects_pk: (required)
+        :param TopicType data: (required)
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: TopicType
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        return self.update_extension_type_with_http_info(id, projects_pk, data, **kwargs)  # noqa: E501
+
+    def update_extension_type_with_http_info(self, id, projects_pk, data, **kwargs):  # noqa: E501
+        """Update a TopicType  # noqa: E501
+
+        This is not a standard route. Update a TopicType. All topics using this type will be updated Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+        >>> thread = api.update_extension_type_with_http_info(id, projects_pk, data, async_req=True)
+        >>> result = thread.get()
+
+        :param async_req bool: execute request asynchronously
+        :param int id: A unique integer value identifying this topic type. (required)
+        :param str projects_pk: (required)
+        :param TopicType data: (required)
+        :param _return_http_data_only: response data without head status code
+                                       and headers
+        :param _preload_content: if False, the urllib3.HTTPResponse object will
+                                 be returned without reading/decoding response
+                                 data. Default is True.
+        :param _request_timeout: timeout setting for this request. If one
+                                 number provided, it will be total request
+                                 timeout. It can also be a pair (tuple) of
+                                 (connection, read) timeouts.
+        :return: tuple(TopicType, status_code(int), headers(HTTPHeaderDict))
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        local_var_params = locals()
+
+        all_params = [
+            'id',
+            'projects_pk',
+            'data'
+        ]
+        all_params.extend(
+            [
+                'async_req',
+                '_return_http_data_only',
+                '_preload_content',
+                '_request_timeout'
+            ]
+        )
+
+        for key, val in six.iteritems(local_var_params['kwargs']):
+            if key not in all_params:
+                raise ApiTypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method update_extension_type" % key
+                )
+            local_var_params[key] = val
+        del local_var_params['kwargs']
+        # verify the required parameter 'id' is set
+        if self.api_client.client_side_validation and ('id' not in local_var_params or  # noqa: E501
+                                                        local_var_params['id'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `id` when calling `update_extension_type`")  # noqa: E501
+        # verify the required parameter 'projects_pk' is set
+        if self.api_client.client_side_validation and ('projects_pk' not in local_var_params or  # noqa: E501
+                                                        local_var_params['projects_pk'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `projects_pk` when calling `update_extension_type`")  # noqa: E501
+        # verify the required parameter 'data' is set
+        if self.api_client.client_side_validation and ('data' not in local_var_params or  # noqa: E501
+                                                        local_var_params['data'] is None):  # noqa: E501
+            raise ApiValueError("Missing the required parameter `data` when calling `update_extension_type`")  # noqa: E501
+
+        collection_formats = {}
+
+        path_params = {}
+        if 'id' in local_var_params:
+            path_params['id'] = local_var_params['id']  # noqa: E501
+        if 'projects_pk' in local_var_params:
+            path_params['projects_pk'] = local_var_params['projects_pk']  # noqa: E501
+
+        query_params = []
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'data' in local_var_params:
+            body_params = local_var_params['data']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['application/json'])  # noqa: E501
+
+        # Authentication setting
+        auth_settings = ['Bearer', 'bimdata_connect', 'client_credentials']  # noqa: E501
+
+        return self.api_client.call_api(
+            '/bcf/2.1/projects/{projects_pk}/extension/type/{id}', 'PATCH',
+            path_params,
+            query_params,
+            header_params,
+            body=body_params,
+            post_params=form_params,
+            files=local_var_files,
+            response_type='TopicType',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
