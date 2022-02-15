@@ -2,6 +2,26 @@
 
 <!--next-version-placeholder-->
 
+## v7.1.0 (2022-02-15)
+### Feature
+* Feature/bcf colors (#485)
+
+* wip
+
+* update project extensions GET method
+
+* cleanup
+
+* fix project extensions
+
+* implement extension update
+
+* add color to all existing topics
+
+* respond with 400 if duplicated name
+
+* remove useless config ([`64b5792`](https://github.com/bimdata/python-api-client/commit/64b579260b41558e0c959ba65dcbfe159d57fcf0))
+
 ## v7.0.1 (2022-02-15)
 ### Fix
 * Rename last ifc operations ([#489](https://github.com/bimdata/python-api-client/issues/489)) ([`6a0bce1`](https://github.com/bimdata/python-api-client/commit/6a0bce138e8adad44c462cec339d523fc33cc346))
