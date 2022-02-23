@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v7.1.1 (2022-02-23)
+### Fix
+* Add creadted_at and upated_at to Propertie et PropertySet ([`9218cd7`](https://github.com/bimdata/python-api-client/commit/9218cd7ae22192003e0e09017565940604bff67c))
+
 ## v7.1.0 (2022-02-15)
 ### Feature
 * Feature/bcf colors (#485)
