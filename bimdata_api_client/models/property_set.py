@@ -38,7 +38,9 @@ class PropertySet(object):
         'name': 'str',
         'description': 'str',
         'type': 'str',
-        'properties': 'list[ModelProperty]'
+        'properties': 'list[ModelProperty]',
+        'created_at': 'datetime',
+        'updated_at': 'datetime'
     }
 
     attribute_map = {
@@ -46,10 +48,12 @@ class PropertySet(object):
         'name': 'name',
         'description': 'description',
         'type': 'type',
-        'properties': 'properties'
+        'properties': 'properties',
+        'created_at': 'created_at',
+        'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, name=None, description=None, type=None, properties=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, description=None, type=None, properties=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """PropertySet - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -60,6 +64,8 @@ class PropertySet(object):
         self._description = None
         self._type = None
         self._properties = None
+        self._created_at = None
+        self._updated_at = None
         self.discriminator = None
 
         if id is not None:
@@ -69,6 +75,10 @@ class PropertySet(object):
         self.type = type
         if properties is not None:
             self.properties = properties
+        if created_at is not None:
+            self.created_at = created_at
+        if updated_at is not None:
+            self.updated_at = updated_at
 
     @property
     def id(self):
@@ -174,6 +184,48 @@ class PropertySet(object):
         """
 
         self._properties = properties
+
+    @property
+    def created_at(self):
+        """Gets the created_at of this PropertySet.  # noqa: E501
+
+
+        :return: The created_at of this PropertySet.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._created_at
+
+    @created_at.setter
+    def created_at(self, created_at):
+        """Sets the created_at of this PropertySet.
+
+
+        :param created_at: The created_at of this PropertySet.  # noqa: E501
+        :type: datetime
+        """
+
+        self._created_at = created_at
+
+    @property
+    def updated_at(self):
+        """Gets the updated_at of this PropertySet.  # noqa: E501
+
+
+        :return: The updated_at of this PropertySet.  # noqa: E501
+        :rtype: datetime
+        """
+        return self._updated_at
+
+    @updated_at.setter
+    def updated_at(self, updated_at):
+        """Sets the updated_at of this PropertySet.
+
+
+        :param updated_at: The updated_at of this PropertySet.  # noqa: E501
+        :type: datetime
+        """
+
+        self._updated_at = updated_at
 
     def to_dict(self):
         """Returns the model properties as a dict"""
