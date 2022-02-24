@@ -53,6 +53,7 @@ class Model(object):
         'xkt_file': 'str',
         'project_id': 'str',
         'world_position': 'list[float]',
+        'size_ratio': 'float',
         'errors': 'list[str]',
         'warnings': 'list[str]',
         'archived': 'bool',
@@ -81,6 +82,7 @@ class Model(object):
         'xkt_file': 'xkt_file',
         'project_id': 'project_id',
         'world_position': 'world_position',
+        'size_ratio': 'size_ratio',
         'errors': 'errors',
         'warnings': 'warnings',
         'archived': 'archived',
@@ -89,7 +91,7 @@ class Model(object):
         'recommanded_2d_angle': 'recommanded_2d_angle'
     }
 
-    def __init__(self, id=None, name=None, type=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, recommanded_2d_angle=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, name=None, type=None, creator=None, status=None, source=None, created_at=None, updated_at=None, document_id=None, document=None, structure_file=None, systems_file=None, map_file=None, gltf_file=None, bvh_tree_file=None, viewer_360_file=None, xkt_file=None, project_id=None, world_position=None, size_ratio=None, errors=None, warnings=None, archived=None, version=None, north_vector=None, recommanded_2d_angle=None, local_vars_configuration=None):  # noqa: E501
         """Model - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -114,6 +116,7 @@ class Model(object):
         self._xkt_file = None
         self._project_id = None
         self._world_position = None
+        self._size_ratio = None
         self._errors = None
         self._warnings = None
         self._archived = None
@@ -158,6 +161,7 @@ class Model(object):
         if project_id is not None:
             self.project_id = project_id
         self.world_position = world_position
+        self.size_ratio = size_ratio
         if errors is not None:
             self.errors = errors
         if warnings is not None:
@@ -583,6 +587,29 @@ class Model(object):
         """
 
         self._world_position = world_position
+
+    @property
+    def size_ratio(self):
+        """Gets the size_ratio of this Model.  # noqa: E501
+
+        How many meters a unit represents  # noqa: E501
+
+        :return: The size_ratio of this Model.  # noqa: E501
+        :rtype: float
+        """
+        return self._size_ratio
+
+    @size_ratio.setter
+    def size_ratio(self, size_ratio):
+        """Sets the size_ratio of this Model.
+
+        How many meters a unit represents  # noqa: E501
+
+        :param size_ratio: The size_ratio of this Model.  # noqa: E501
+        :type: float
+        """
+
+        self._size_ratio = size_ratio
 
     @property
     def errors(self):

@@ -87,6 +87,7 @@ class TestIfcChecker(unittest.TestCase):
                     world_position = [
                         1.337
                         ], 
+                    size_ratio = 1.337, 
                     errors = [
                         '0'
                         ], 

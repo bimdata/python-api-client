@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **xkt_file** | **str** |  | [optional] [readonly] 
 **project_id** | **str** |  | [optional] [readonly] 
 **world_position** | **list[float]** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
+**size_ratio** | **float** | How many meters a unit represents | [optional] 
 **errors** | **list[str]** | List of errors that happened during IFC processing | [optional] [readonly] 
 **warnings** | **list[str]** | List of warnings that happened during IFC processing | [optional] [readonly] 
 **archived** | **bool** |  | [optional] 
