@@ -37,7 +37,7 @@ class TestDetailedExtensions(unittest.TestCase):
         # model = bimdata_api_client.models.detailed_extensions.DetailedExtensions()  # noqa: E501
         if include_optional :
             return DetailedExtensions(
-                labels = [
+                topic_labels = [
                     bimdata_api_client.models.label.Label(
                         id = 56, 
                         label = '0', 

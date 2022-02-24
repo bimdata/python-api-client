@@ -34,7 +34,7 @@ class DetailedExtensions(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'labels': 'list[Label]',
+        'topic_labels': 'list[Label]',
         'topic_types': 'list[TopicType]',
         'topic_statuses': 'list[TopicStatus]',
         'priorities': 'list[Priority]',
@@ -42,28 +42,28 @@ class DetailedExtensions(object):
     }
 
     attribute_map = {
-        'labels': 'labels',
+        'topic_labels': 'topic_labels',
         'topic_types': 'topic_types',
         'topic_statuses': 'topic_statuses',
         'priorities': 'priorities',
         'stages': 'stages'
     }
 
-    def __init__(self, labels=None, topic_types=None, topic_statuses=None, priorities=None, stages=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, topic_labels=None, topic_types=None, topic_statuses=None, priorities=None, stages=None, local_vars_configuration=None):  # noqa: E501
         """DetailedExtensions - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._labels = None
+        self._topic_labels = None
         self._topic_types = None
         self._topic_statuses = None
         self._priorities = None
         self._stages = None
         self.discriminator = None
 
-        if labels is not None:
-            self.labels = labels
+        if topic_labels is not None:
+            self.topic_labels = topic_labels
         if topic_types is not None:
             self.topic_types = topic_types
         if topic_statuses is not None:
@@ -74,25 +74,25 @@ class DetailedExtensions(object):
             self.stages = stages
 
     @property
-    def labels(self):
-        """Gets the labels of this DetailedExtensions.  # noqa: E501
+    def topic_labels(self):
+        """Gets the topic_labels of this DetailedExtensions.  # noqa: E501
 
 
-        :return: The labels of this DetailedExtensions.  # noqa: E501
+        :return: The topic_labels of this DetailedExtensions.  # noqa: E501
         :rtype: list[Label]
         """
-        return self._labels
+        return self._topic_labels
 
-    @labels.setter
-    def labels(self, labels):
-        """Sets the labels of this DetailedExtensions.
+    @topic_labels.setter
+    def topic_labels(self, topic_labels):
+        """Sets the topic_labels of this DetailedExtensions.
 
 
-        :param labels: The labels of this DetailedExtensions.  # noqa: E501
+        :param topic_labels: The topic_labels of this DetailedExtensions.  # noqa: E501
         :type: list[Label]
         """
 
-        self._labels = labels
+        self._topic_labels = topic_labels
 
     @property
     def topic_types(self):

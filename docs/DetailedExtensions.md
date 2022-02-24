@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**labels** | [**list[Label]**](Label.md) |  | [optional] 
+**topic_labels** | [**list[Label]**](Label.md) |  | [optional] 
 **topic_types** | [**list[TopicType]**](TopicType.md) |  | [optional] 
 **topic_statuses** | [**list[TopicStatus]**](TopicStatus.md) |  | [optional] 
 **priorities** | [**list[Priority]**](Priority.md) |  | [optional] 
