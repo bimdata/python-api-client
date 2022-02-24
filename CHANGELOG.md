@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v7.2.0 (2022-02-24)
+### Feature
+* Add size_ratio fields ([`2a5d90c`](https://github.com/bimdata/python-api-client/commit/2a5d90c51c5de429d10d6cf1f4d5da9da5448093))
+
 ## v7.1.2 (2022-02-24)
 ### Fix
 * Bcf detailed extensions labels ([`7d5ade7`](https://github.com/bimdata/python-api-client/commit/7d5ade750437b1e5007c4434fdaabfd1c54d9dc9))
