@@ -2,6 +2,28 @@
 
 <!--next-version-placeholder-->
 
+## v7.4.0 (2022-02-25)
+### Feature
+* Order plans in storey (#495)
+
+* init refacto storey
+
+* add building test
+
+* fix serializers
+
+* replace Counter
+
+* init refacto storey
+
+* order plans in storey
+
+* merge migration ifc/88_
+
+* fix bad merge
+
+* fix bad merge ([`ea3cf1d`](https://github.com/bimdata/python-api-client/commit/ea3cf1d3fc82b9baa09a5536cde76e1f2cfcfc9c))
+
 ## v7.3.0 (2022-02-25)
 ### Feature
 * Refacto storeys and add buildings (#494)
