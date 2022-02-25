@@ -3130,7 +3130,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_building**
-> Building create_building(cloud_pk, model_pk, project_pk, data)
+> InlineResponse201 create_building(cloud_pk, model_pk, project_pk, data)
 
 Create a building of a model
 
@@ -3185,7 +3185,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Building() # Building | 
+data = bimdata_api_client.InlineObject10() # InlineObject10 | 
 
     try:
         # Create a building of a model
@@ -3242,7 +3242,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Building() # Building | 
+data = bimdata_api_client.InlineObject10() # InlineObject10 | 
 
     try:
         # Create a building of a model
@@ -3299,7 +3299,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Building() # Building | 
+data = bimdata_api_client.InlineObject10() # InlineObject10 | 
 
     try:
         # Create a building of a model
@@ -3316,11 +3316,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Building**](Building.md)|  | 
+ **data** | [**InlineObject10**](InlineObject10.md)|  | 
 
 ### Return type
 
-[**Building**](Building.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
@@ -3400,7 +3400,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InlineObject8() # InlineObject8 | 
+data = bimdata_api_client.InlineObject11() # InlineObject11 | 
 
     try:
         # Create a relation between a 2d model and a building
@@ -3458,7 +3458,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InlineObject8() # InlineObject8 | 
+data = bimdata_api_client.InlineObject11() # InlineObject11 | 
 
     try:
         # Create a relation between a 2d model and a building
@@ -3516,7 +3516,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.InlineObject8() # InlineObject8 | 
+data = bimdata_api_client.InlineObject11() # InlineObject11 | 
 
     try:
         # Create a relation between a 2d model and a building
@@ -3534,7 +3534,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**InlineObject8**](InlineObject8.md)|  | 
+ **data** | [**InlineObject11**](InlineObject11.md)|  | 
 
 ### Return type
 
@@ -7014,7 +7014,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_storey**
-> Storey create_storey(cloud_pk, model_pk, project_pk, data)
+> InlineResponse201 create_storey(cloud_pk, model_pk, project_pk, data)
 
 Create a storey of a model
 
@@ -7069,7 +7069,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
+data = bimdata_api_client.InlineObject13() # InlineObject13 | 
 
     try:
         # Create a storey of a model
@@ -7126,7 +7126,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
+data = bimdata_api_client.InlineObject13() # InlineObject13 | 
 
     try:
         # Create a storey of a model
@@ -7183,7 +7183,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 'cloud_pk_example' # str | 
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
-data = bimdata_api_client.Storey() # Storey | 
+data = bimdata_api_client.InlineObject13() # InlineObject13 | 
 
     try:
         # Create a storey of a model
@@ -7200,11 +7200,11 @@ Name | Type | Description  | Notes
  **cloud_pk** | **str**|  | 
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
- **data** | [**Storey**](Storey.md)|  | 
+ **data** | [**InlineObject13**](InlineObject13.md)|  | 
 
 ### Return type
 
-[**Storey**](Storey.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
@@ -7284,7 +7284,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_uuid = 'storey_uuid_example' # str | 
-data = bimdata_api_client.InlineObject10() # InlineObject10 | 
+data = bimdata_api_client.InlineObject14() # InlineObject14 | 
 
     try:
         # Create a relation between a 2d model and a storey
@@ -7342,7 +7342,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_uuid = 'storey_uuid_example' # str | 
-data = bimdata_api_client.InlineObject10() # InlineObject10 | 
+data = bimdata_api_client.InlineObject14() # InlineObject14 | 
 
     try:
         # Create a relation between a 2d model and a storey
@@ -7400,7 +7400,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 storey_uuid = 'storey_uuid_example' # str | 
-data = bimdata_api_client.InlineObject10() # InlineObject10 | 
+data = bimdata_api_client.InlineObject14() # InlineObject14 | 
 
     try:
         # Create a relation between a 2d model and a storey
@@ -7418,7 +7418,7 @@ Name | Type | Description  | Notes
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **storey_uuid** | **str**|  | 
- **data** | [**InlineObject10**](InlineObject10.md)|  | 
+ **data** | [**InlineObject14**](InlineObject14.md)|  | 
 
 ### Return type
 
@@ -26314,7 +26314,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_building**
-> InlineResponse2002 update_building(cloud_pk, model_pk, project_pk, uuid, data)
+> InlineResponse201 update_building(cloud_pk, model_pk, project_pk, uuid, data)
 
 Update some fields of a building
 
@@ -26370,7 +26370,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject9() # InlineObject9 | 
+data = bimdata_api_client.InlineObject12() # InlineObject12 | 
 
     try:
         # Update some fields of a building
@@ -26428,7 +26428,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject9() # InlineObject9 | 
+data = bimdata_api_client.InlineObject12() # InlineObject12 | 
 
     try:
         # Update some fields of a building
@@ -26486,7 +26486,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject9() # InlineObject9 | 
+data = bimdata_api_client.InlineObject12() # InlineObject12 | 
 
     try:
         # Update some fields of a building
@@ -26504,11 +26504,11 @@ Name | Type | Description  | Notes
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **data** | [**InlineObject9**](InlineObject9.md)|  | 
+ **data** | [**InlineObject12**](InlineObject12.md)|  | 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 
@@ -29830,7 +29830,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **update_storey**
-> InlineResponse2002 update_storey(cloud_pk, model_pk, project_pk, uuid, data)
+> InlineResponse201 update_storey(cloud_pk, model_pk, project_pk, uuid, data)
 
 Update some fields of a storey
 
@@ -29886,7 +29886,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject11() # InlineObject11 | 
+data = bimdata_api_client.InlineObject15() # InlineObject15 | 
 
     try:
         # Update some fields of a storey
@@ -29944,7 +29944,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject11() # InlineObject11 | 
+data = bimdata_api_client.InlineObject15() # InlineObject15 | 
 
     try:
         # Update some fields of a storey
@@ -30002,7 +30002,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 model_pk = 'model_pk_example' # str | 
 project_pk = 'project_pk_example' # str | 
 uuid = 'uuid_example' # str | IFC element or element type UUID
-data = bimdata_api_client.InlineObject11() # InlineObject11 | 
+data = bimdata_api_client.InlineObject15() # InlineObject15 | 
 
     try:
         # Update some fields of a storey
@@ -30020,11 +30020,11 @@ Name | Type | Description  | Notes
  **model_pk** | **str**|  | 
  **project_pk** | **str**|  | 
  **uuid** | **str**| IFC element or element type UUID | 
- **data** | [**InlineObject11**](InlineObject11.md)|  | 
+ **data** | [**InlineObject15**](InlineObject15.md)|  | 
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**InlineResponse201**](InlineResponse201.md)
 
 ### Authorization
 

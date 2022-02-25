@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import bimdata_api_client
-from bimdata_api_client.models.inline_object11 import InlineObject11  # noqa: E501
+from bimdata_api_client.models.inline_response201 import InlineResponse201  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
-class TestInlineObject11(unittest.TestCase):
-    """InlineObject11 unit test stubs"""
+class TestInlineResponse201(unittest.TestCase):
+    """InlineResponse201 unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,21 +30,21 @@ class TestInlineObject11(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test InlineObject11
+        """Test InlineResponse201
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = bimdata_api_client.models.inline_object11.InlineObject11()  # noqa: E501
+        # model = bimdata_api_client.models.inline_response201.InlineResponse201()  # noqa: E501
         if include_optional :
-            return InlineObject11(
-                id = 56
+            return InlineResponse201(
+                name = '0'
             )
         else :
-            return InlineObject11(
+            return InlineResponse201(
         )
 
-    def testInlineObject11(self):
-        """Test InlineObject11"""
+    def testInlineResponse201(self):
+        """Test InlineResponse201"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

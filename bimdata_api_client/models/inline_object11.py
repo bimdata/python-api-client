@@ -34,47 +34,47 @@ class InlineObject11(object):
                             and the value is json key in definition.
     """
     openapi_types = {
-        'name': 'str'
+        'id': 'int'
     }
 
     attribute_map = {
-        'name': 'name'
+        'id': 'id'
     }
 
-    def __init__(self, name=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, local_vars_configuration=None):  # noqa: E501
         """InlineObject11 - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
         self.local_vars_configuration = local_vars_configuration
 
-        self._name = None
+        self._id = None
         self.discriminator = None
 
-        if name is not None:
-            self.name = name
+        if id is not None:
+            self.id = id
 
     @property
-    def name(self):
-        """Gets the name of this InlineObject11.  # noqa: E501
+    def id(self):
+        """Gets the id of this InlineObject11.  # noqa: E501
 
-        name of storey/building  # noqa: E501
+        model id  # noqa: E501
 
-        :return: The name of this InlineObject11.  # noqa: E501
-        :rtype: str
+        :return: The id of this InlineObject11.  # noqa: E501
+        :rtype: int
         """
-        return self._name
+        return self._id
 
-    @name.setter
-    def name(self, name):
-        """Sets the name of this InlineObject11.
+    @id.setter
+    def id(self, id):
+        """Sets the id of this InlineObject11.
 
-        name of storey/building  # noqa: E501
+        model id  # noqa: E501
 
-        :param name: The name of this InlineObject11.  # noqa: E501
-        :type: str
+        :param id: The id of this InlineObject11.  # noqa: E501
+        :type: int
         """
 
-        self._name = name
+        self._id = id
 
     def to_dict(self):
         """Returns the model properties as a dict"""

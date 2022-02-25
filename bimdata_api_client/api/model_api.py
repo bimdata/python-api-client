@@ -2062,7 +2062,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param Building data: (required)
+        :param InlineObject10 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2070,7 +2070,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Building
+        :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2090,7 +2090,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param Building data: (required)
+        :param InlineObject10 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -2100,7 +2100,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Building, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse201, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -2186,7 +2186,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Building',  # noqa: E501
+            response_type='InlineResponse201',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -2208,7 +2208,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param InlineObject8 data: (required)
+        :param InlineObject11 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -2237,7 +2237,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param InlineObject8 data: (required)
+        :param InlineObject11 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4750,7 +4750,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param Storey data: (required)
+        :param InlineObject13 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4758,7 +4758,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: Storey
+        :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4778,7 +4778,7 @@ class ModelApi(object):
         :param str cloud_pk: (required)
         :param str model_pk: (required)
         :param str project_pk: (required)
-        :param Storey data: (required)
+        :param InlineObject13 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -4788,7 +4788,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(Storey, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse201, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -4874,7 +4874,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='Storey',  # noqa: E501
+            response_type='InlineResponse201',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -4896,7 +4896,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str storey_uuid: (required)
-        :param InlineObject10 data: (required)
+        :param InlineObject14 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -4925,7 +4925,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str storey_uuid: (required)
-        :param InlineObject10 data: (required)
+        :param InlineObject14 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -17588,7 +17588,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str uuid: IFC element or element type UUID (required)
-        :param InlineObject9 data: (required)
+        :param InlineObject12 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -17596,7 +17596,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse2002
+        :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17617,7 +17617,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str uuid: IFC element or element type UUID (required)
-        :param InlineObject9 data: (required)
+        :param InlineObject12 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -17627,7 +17627,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse2002, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse201, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -17720,7 +17720,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2002',  # noqa: E501
+            response_type='InlineResponse201',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501
@@ -20083,7 +20083,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str uuid: IFC element or element type UUID (required)
-        :param InlineObject11 data: (required)
+        :param InlineObject15 data: (required)
         :param _preload_content: if False, the urllib3.HTTPResponse object will
                                  be returned without reading/decoding response
                                  data. Default is True.
@@ -20091,7 +20091,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: InlineResponse2002
+        :return: InlineResponse201
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -20112,7 +20112,7 @@ class ModelApi(object):
         :param str model_pk: (required)
         :param str project_pk: (required)
         :param str uuid: IFC element or element type UUID (required)
-        :param InlineObject11 data: (required)
+        :param InlineObject15 data: (required)
         :param _return_http_data_only: response data without head status code
                                        and headers
         :param _preload_content: if False, the urllib3.HTTPResponse object will
@@ -20122,7 +20122,7 @@ class ModelApi(object):
                                  number provided, it will be total request
                                  timeout. It can also be a pair (tuple) of
                                  (connection, read) timeouts.
-        :return: tuple(InlineResponse2002, status_code(int), headers(HTTPHeaderDict))
+        :return: tuple(InlineResponse201, status_code(int), headers(HTTPHeaderDict))
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -20215,7 +20215,7 @@ class ModelApi(object):
             body=body_params,
             post_params=form_params,
             files=local_var_files,
-            response_type='InlineResponse2002',  # noqa: E501
+            response_type='InlineResponse201',  # noqa: E501
             auth_settings=auth_settings,
             async_req=local_var_params.get('async_req'),
             _return_http_data_only=local_var_params.get('_return_http_data_only'),  # noqa: E501

@@ -37,7 +37,7 @@ class TestInlineObject5(unittest.TestCase):
         # model = bimdata_api_client.models.inline_object5.InlineObject5()  # noqa: E501
         if include_optional :
             return InlineObject5(
-                name = '0'
+                id = 56
             )
         else :
             return InlineObject5(
