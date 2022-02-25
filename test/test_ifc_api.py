@@ -1030,6 +1030,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_update_order_building_plan_deprecated(self):
+        """Test case for update_order_building_plan_deprecated
+
+        Update order of all plan of a building  # noqa: E501
+        """
+        pass
+
+    def test_update_order_storey_plan_deprecated(self):
+        """Test case for update_order_storey_plan_deprecated
+
+        Update order of all plan of a storey  # noqa: E501
+        """
+        pass
+
     def test_update_order_storeys_deprecated(self):
         """Test case for update_order_storeys_deprecated
 

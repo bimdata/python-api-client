@@ -953,6 +953,20 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_update_order_building_plan(self):
+        """Test case for update_order_building_plan
+
+        Update order of all plan of a building  # noqa: E501
+        """
+        pass
+
+    def test_update_order_storey_plan(self):
+        """Test case for update_order_storey_plan
+
+        Update order of all plan of a storey  # noqa: E501
+        """
+        pass
+
     def test_update_order_storeys(self):
         """Test case for update_order_storeys
 
