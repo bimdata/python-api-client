@@ -16,6 +16,7 @@ from __future__ import absolute_import
 
 # import models into model package
 from bimdata_api_client.models.bcf_project import BcfProject
+from bimdata_api_client.models.building import Building
 from bimdata_api_client.models.check_plan import CheckPlan
 from bimdata_api_client.models.checker_result import CheckerResult
 from bimdata_api_client.models.classification import Classification
@@ -52,12 +53,19 @@ from bimdata_api_client.models.ifc_merge import IfcMerge
 from bimdata_api_client.models.ifc_optimize import IfcOptimize
 from bimdata_api_client.models.inline_object import InlineObject
 from bimdata_api_client.models.inline_object1 import InlineObject1
+from bimdata_api_client.models.inline_object10 import InlineObject10
+from bimdata_api_client.models.inline_object11 import InlineObject11
 from bimdata_api_client.models.inline_object2 import InlineObject2
 from bimdata_api_client.models.inline_object3 import InlineObject3
 from bimdata_api_client.models.inline_object4 import InlineObject4
 from bimdata_api_client.models.inline_object5 import InlineObject5
+from bimdata_api_client.models.inline_object6 import InlineObject6
+from bimdata_api_client.models.inline_object7 import InlineObject7
+from bimdata_api_client.models.inline_object8 import InlineObject8
+from bimdata_api_client.models.inline_object9 import InlineObject9
 from bimdata_api_client.models.inline_response200 import InlineResponse200
 from bimdata_api_client.models.inline_response2001 import InlineResponse2001
+from bimdata_api_client.models.inline_response2002 import InlineResponse2002
 from bimdata_api_client.models.invitation import Invitation
 from bimdata_api_client.models.label import Label
 from bimdata_api_client.models.label_read import LabelRead
@@ -116,7 +124,6 @@ from bimdata_api_client.models.snapshot import Snapshot
 from bimdata_api_client.models.space import Space
 from bimdata_api_client.models.stage import Stage
 from bimdata_api_client.models.storey import Storey
-from bimdata_api_client.models.storey_request import StoreyRequest
 from bimdata_api_client.models.system import System
 from bimdata_api_client.models.topic import Topic
 from bimdata_api_client.models.topic_status import TopicStatus

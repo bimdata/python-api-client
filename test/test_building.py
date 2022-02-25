@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import bimdata_api_client
-from bimdata_api_client.models.storey import Storey  # noqa: E501
+from bimdata_api_client.models.building import Building  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
-class TestStorey(unittest.TestCase):
-    """Storey unit test stubs"""
+class TestBuilding(unittest.TestCase):
+    """Building unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,13 +30,13 @@ class TestStorey(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test Storey
+        """Test Building
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = bimdata_api_client.models.storey.Storey()  # noqa: E501
+        # model = bimdata_api_client.models.building.Building()  # noqa: E501
         if include_optional :
-            return Storey(
+            return Building(
                 uuid = '0', 
                 name = '0', 
                 plans = [
@@ -114,11 +114,11 @@ class TestStorey(unittest.TestCase):
                 plans_unreachable_count = 56
             )
         else :
-            return Storey(
+            return Building(
         )
 
-    def testStorey(self):
-        """Test Storey"""
+    def testBuilding(self):
+        """Test Building"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

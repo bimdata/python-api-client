@@ -58,8 +58,7 @@ class MaterialOption(object):
 
         if id is not None:
             self.id = id
-        if thickness is not None:
-            self.thickness = thickness
+        self.thickness = thickness
         if list_components is not None:
             self.list_components = list_components
 

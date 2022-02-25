@@ -84,10 +84,8 @@ class User(object):
             self.id = id
         if email is not None:
             self.email = email
-        if firstname is not None:
-            self.firstname = firstname
-        if lastname is not None:
-            self.lastname = lastname
+        self.firstname = firstname
+        self.lastname = lastname
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -98,10 +96,8 @@ class User(object):
             self.project_role = project_role
         if provider is not None:
             self.provider = provider
-        if sub is not None:
-            self.sub = sub
-        if profile_picture is not None:
-            self.profile_picture = profile_picture
+        self.sub = sub
+        self.profile_picture = profile_picture
 
     @property
     def id(self):

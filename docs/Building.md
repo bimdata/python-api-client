@@ -1,10 +1,10 @@
-# Storey
+# Building
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **uuid** | **str** | IFC element or element type UUID | [optional] [readonly] 
-**name** | **str** | Name of the storey | [optional] [readonly] 
+**name** | **str** | Name of the building | [optional] [readonly] 
 **plans** | [**list[ModelWithPositioningPlan]**](ModelWithPositioningPlan.md) |  | [optional] [readonly] 
 **plans_unreachable_count** | **int** |  | [optional] [readonly] 
 

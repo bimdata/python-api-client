@@ -295,6 +295,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**bulk_update_elements_deprecated**](docs/IfcApi.md#bulk_update_elements_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 *IfcApi* | [**bulk_update_ifc_property_deprecated**](docs/IfcApi.md#bulk_update_ifc_property_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/bulk_update | Update all fields of many properties of a model
 *IfcApi* | [**create_access_token_deprecated**](docs/IfcApi.md#create_access_token_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Create a token for this model
+*IfcApi* | [**create_building_deprecated**](docs/IfcApi.md#create_building_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building | Create a building of a model
+*IfcApi* | [**create_building_plan_deprecated**](docs/IfcApi.md#create_building_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/add | Create a relation between a 2d model and a building
 *IfcApi* | [**create_checker_deprecated**](docs/IfcApi.md#create_checker_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
 *IfcApi* | [**create_checker_result_deprecated**](docs/IfcApi.md#create_checker_result_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
 *IfcApi* | [**create_classification_element_relations_deprecated**](docs/IfcApi.md#create_classification_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
@@ -313,11 +315,14 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_property_set_element_relations_deprecated**](docs/IfcApi.md#create_property_set_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements_deprecated**](docs/IfcApi.md#create_raw_elements_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
 *IfcApi* | [**create_space_deprecated**](docs/IfcApi.md#create_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Create a space in the model
-*IfcApi* | [**create_storey_plan_deprecated**](docs/IfcApi.md#create_storey_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
+*IfcApi* | [**create_storey_deprecated**](docs/IfcApi.md#create_storey_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Create a storey of a model
+*IfcApi* | [**create_storey_plan_deprecated**](docs/IfcApi.md#create_storey_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *IfcApi* | [**create_system_deprecated**](docs/IfcApi.md#create_system_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 *IfcApi* | [**create_zone_deprecated**](docs/IfcApi.md#create_zone_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space_deprecated**](docs/IfcApi.md#create_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
 *IfcApi* | [**delete_access_token_deprecated**](docs/IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
+*IfcApi* | [**delete_building_deprecated**](docs/IfcApi.md#delete_building_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Delete a building of a model
+*IfcApi* | [**delete_building_plan_deprecated**](docs/IfcApi.md#delete_building_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
 *IfcApi* | [**delete_checker_deprecated**](docs/IfcApi.md#delete_checker_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
 *IfcApi* | [**delete_checker_result_deprecated**](docs/IfcApi.md#delete_checker_result_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
 *IfcApi* | [**delete_element_deprecated**](docs/IfcApi.md#delete_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete an element of a model
@@ -329,16 +334,18 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_layer_deprecated**](docs/IfcApi.md#delete_layer_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Delete a layer of a model
 *IfcApi* | [**delete_property_set_deprecated**](docs/IfcApi.md#delete_property_set_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Delete a PropertySet of a model
 *IfcApi* | [**delete_space_deprecated**](docs/IfcApi.md#delete_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Delete a space
-*IfcApi* | [**delete_storey_deprecated**](docs/IfcApi.md#delete_storey_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Delete a storey of a model
-*IfcApi* | [**delete_storey_plan_deprecated**](docs/IfcApi.md#delete_storey_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
+*IfcApi* | [**delete_storey_deprecated**](docs/IfcApi.md#delete_storey_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{uuid} | Delete a storey of a model
+*IfcApi* | [**delete_storey_plan_deprecated**](docs/IfcApi.md#delete_storey_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/{id} | Delete the relation between a 2d model and a storey
 *IfcApi* | [**delete_system_deprecated**](docs/IfcApi.md#delete_system_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Delete a system of a model
 *IfcApi* | [**delete_zone_deprecated**](docs/IfcApi.md#delete_zone_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Delete a zone of a model
 *IfcApi* | [**delete_zone_space_deprecated**](docs/IfcApi.md#delete_zone_space_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
 *IfcApi* | [**export_ifc_deprecated**](docs/IfcApi.md#export_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/export | Export IFC
 *IfcApi* | [**full_update_element_deprecated**](docs/IfcApi.md#full_update_element_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update all fields of an element
-*IfcApi* | [**full_update_storeys_deprecated**](docs/IfcApi.md#full_update_storeys_deprecated) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/full_update | Update all fields of all storeys
 *IfcApi* | [**get_access_token_deprecated**](docs/IfcApi.md#get_access_token_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Retrieve one token created for this model
 *IfcApi* | [**get_access_tokens_deprecated**](docs/IfcApi.md#get_access_tokens_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Retrieve all tokens created for this model
+*IfcApi* | [**get_building_deprecated**](docs/IfcApi.md#get_building_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Retrieve a building of a model
+*IfcApi* | [**get_building_plan_positioning_deprecated**](docs/IfcApi.md#get_building_plan_positioning_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id}/positioning | Retrieve the postioning of the plan in the building
+*IfcApi* | [**get_buildings_deprecated**](docs/IfcApi.md#get_buildings_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building | Retrieve all buildings of a model
 *IfcApi* | [**get_checker_deprecated**](docs/IfcApi.md#get_checker_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
 *IfcApi* | [**get_checker_result_deprecated**](docs/IfcApi.md#get_checker_result_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
 *IfcApi* | [**get_checker_results_deprecated**](docs/IfcApi.md#get_checker_results_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
@@ -372,7 +379,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_layers_deprecated**](docs/IfcApi.md#get_layers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Retrieve all layers of a model
 *IfcApi* | [**get_material_deprecated**](docs/IfcApi.md#get_material_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material/{id} | Retrieve a material of a model
 *IfcApi* | [**get_materials_deprecated**](docs/IfcApi.md#get_materials_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/material | Retrieve all materials of a model
-*IfcApi* | [**get_plan_positioning_deprecated**](docs/IfcApi.md#get_plan_positioning_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 *IfcApi* | [**get_processor_handler_deprecated**](docs/IfcApi.md#get_processor_handler_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Retrieve a processor handler
 *IfcApi* | [**get_processor_handlers_deprecated**](docs/IfcApi.md#get_processor_handlers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler | Get all processor handlers
 *IfcApi* | [**get_property_set_deprecated**](docs/IfcApi.md#get_property_set_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -382,7 +388,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_simple_elements_deprecated**](docs/IfcApi.md#get_simple_elements_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/simple | Retrieve all elements of a model with a simple value representation
 *IfcApi* | [**get_space_deprecated**](docs/IfcApi.md#get_space_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Retrieve one space of the model
 *IfcApi* | [**get_spaces_deprecated**](docs/IfcApi.md#get_spaces_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space | Retrieve all spaces of the model
-*IfcApi* | [**get_storey_deprecated**](docs/IfcApi.md#get_storey_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Retrieve a storey of a model
+*IfcApi* | [**get_storey_deprecated**](docs/IfcApi.md#get_storey_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{uuid} | Retrieve a storey of a model
+*IfcApi* | [**get_storey_plan_positioning_deprecated**](docs/IfcApi.md#get_storey_plan_positioning_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 *IfcApi* | [**get_storeys_deprecated**](docs/IfcApi.md#get_storeys_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
 *IfcApi* | [**get_system_deprecated**](docs/IfcApi.md#get_system_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Retrieve a system of a model
 *IfcApi* | [**get_systems_deprecated**](docs/IfcApi.md#get_systems_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Retrieve all systems of a model
@@ -405,6 +412,8 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**remove_elements_from_classification_deprecated**](docs/IfcApi.md#remove_elements_from_classification_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
 *IfcApi* | [**reprocess_ifc_deprecated**](docs/IfcApi.md#reprocess_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/reprocess | Reprocess Model file
 *IfcApi* | [**update_access_token_deprecated**](docs/IfcApi.md#update_access_token_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
+*IfcApi* | [**update_building_deprecated**](docs/IfcApi.md#update_building_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Update some fields of a building
+*IfcApi* | [**update_building_plan_positioning_deprecated**](docs/IfcApi.md#update_building_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id}/positioning | Update the postioning of the plan in the building
 *IfcApi* | [**update_checker_deprecated**](docs/IfcApi.md#update_checker_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
 *IfcApi* | [**update_checker_result_deprecated**](docs/IfcApi.md#update_checker_result_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
 *IfcApi* | [**update_element_deprecated**](docs/IfcApi.md#update_element_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of an element
@@ -415,11 +424,12 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_ifc_property_deprecated**](docs/IfcApi.md#update_ifc_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/property/{id} | Update some fields of a Property
 *IfcApi* | [**update_ifc_unit_deprecated**](docs/IfcApi.md#update_ifc_unit_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit/{id} | Update some fields of a Unit of a model
 *IfcApi* | [**update_layer_deprecated**](docs/IfcApi.md#update_layer_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer/{id} | Update some fields of a layer
-*IfcApi* | [**update_plan_positioning_deprecated**](docs/IfcApi.md#update_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
+*IfcApi* | [**update_order_storeys_deprecated**](docs/IfcApi.md#update_order_storeys_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/order | Update order of all storey of a model
 *IfcApi* | [**update_processor_handler_deprecated**](docs/IfcApi.md#update_processor_handler_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/processorhandler/{id} | Update the status of a processor handler
 *IfcApi* | [**update_property_set_deprecated**](docs/IfcApi.md#update_property_set_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset/{id} | Update some fields of a PropertySet
 *IfcApi* | [**update_space_deprecated**](docs/IfcApi.md#update_space_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/space/{id} | Update some fields of a space
-*IfcApi* | [**update_storey_deprecated**](docs/IfcApi.md#update_storey_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{id} | Update some fields of a storey
+*IfcApi* | [**update_storey_deprecated**](docs/IfcApi.md#update_storey_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{uuid} | Update some fields of a storey
+*IfcApi* | [**update_storey_plan_positioning_deprecated**](docs/IfcApi.md#update_storey_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/{id}/positioning | Update the postioning of the plan in the storey
 *IfcApi* | [**update_system_deprecated**](docs/IfcApi.md#update_system_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Update some fields of a system
 *IfcApi* | [**update_zone_deprecated**](docs/IfcApi.md#update_zone_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Update some fields of a zone
 *IfcApi* | [**update_zone_space_deprecated**](docs/IfcApi.md#update_zone_space_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
@@ -437,6 +447,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**bulk_update_elements**](docs/ModelApi.md#bulk_update_elements) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/bulk_update | Update many elements at once (all field must be defined)
 *ModelApi* | [**bulk_update_model_property**](docs/ModelApi.md#bulk_update_model_property) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/bulk_update | Update all fields of many properties of a model
 *ModelApi* | [**create_access_token**](docs/ModelApi.md#create_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token | Create a token for this model
+*ModelApi* | [**create_building**](docs/ModelApi.md#create_building) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building | Create a building of a model
+*ModelApi* | [**create_building_plan**](docs/ModelApi.md#create_building_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/add | Create a relation between a 2d model and a building
 *ModelApi* | [**create_classification_element_relations**](docs/ModelApi.md#create_classification_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification-element | Create association between existing classification and existing element
 *ModelApi* | [**create_classifications_of_element**](docs/ModelApi.md#create_classifications_of_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
 *ModelApi* | [**create_element**](docs/ModelApi.md#create_element) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element | Create an element in the model
@@ -453,11 +465,14 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_property_set_element_relations**](docs/ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 *ModelApi* | [**create_raw_elements**](docs/ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
 *ModelApi* | [**create_space**](docs/ModelApi.md#create_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space | Create a space in the model
-*ModelApi* | [**create_storey_plan**](docs/ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/add | Create a relation between a 2d model and a storey
+*ModelApi* | [**create_storey**](docs/ModelApi.md#create_storey) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey | Create a storey of a model
+*ModelApi* | [**create_storey_plan**](docs/ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *ModelApi* | [**create_system**](docs/ModelApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Create a system in the model
 *ModelApi* | [**create_zone**](docs/ModelApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Create a zone in the model
 *ModelApi* | [**create_zone_space**](docs/ModelApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Create a space in a zone
 *ModelApi* | [**delete_access_token**](docs/ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
+*ModelApi* | [**delete_building**](docs/ModelApi.md#delete_building) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Delete a building of a model
+*ModelApi* | [**delete_building_plan**](docs/ModelApi.md#delete_building_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
 *ModelApi* | [**delete_element**](docs/ModelApi.md#delete_element) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Delete an element of a model
 *ModelApi* | [**delete_layer**](docs/ModelApi.md#delete_layer) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Delete a layer of a model
 *ModelApi* | [**delete_model**](docs/ModelApi.md#delete_model) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id} | Delete a model
@@ -467,16 +482,18 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**delete_model_without_doc**](docs/ModelApi.md#delete_model_without_doc) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/delete-model | Delete the Model without deleting the related document
 *ModelApi* | [**delete_property_set**](docs/ModelApi.md#delete_property_set) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Delete a PropertySet of a model
 *ModelApi* | [**delete_space**](docs/ModelApi.md#delete_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Delete a space
-*ModelApi* | [**delete_storey**](docs/ModelApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Delete a storey of a model
-*ModelApi* | [**delete_storey_plan**](docs/ModelApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id} | Delete the relation between a 2d model and a storey
+*ModelApi* | [**delete_storey**](docs/ModelApi.md#delete_storey) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid} | Delete a storey of a model
+*ModelApi* | [**delete_storey_plan**](docs/ModelApi.md#delete_storey_plan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id} | Delete the relation between a 2d model and a storey
 *ModelApi* | [**delete_system**](docs/ModelApi.md#delete_system) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Delete a system of a model
 *ModelApi* | [**delete_zone**](docs/ModelApi.md#delete_zone) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Delete a zone of a model
 *ModelApi* | [**delete_zone_space**](docs/ModelApi.md#delete_zone_space) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Delete a space of a zone
 *ModelApi* | [**export_ifc**](docs/ModelApi.md#export_ifc) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/export | Export IFC
 *ModelApi* | [**full_update_element**](docs/ModelApi.md#full_update_element) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update all fields of an element
-*ModelApi* | [**full_update_storeys**](docs/ModelApi.md#full_update_storeys) | **PUT** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/full_update | Update all fields of all storeys
 *ModelApi* | [**get_access_token**](docs/ModelApi.md#get_access_token) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Retrieve one token created for this model
 *ModelApi* | [**get_access_tokens**](docs/ModelApi.md#get_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token | Retrieve all tokens created for this model
+*ModelApi* | [**get_building**](docs/ModelApi.md#get_building) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Retrieve a building of a model
+*ModelApi* | [**get_building_plan_positioning**](docs/ModelApi.md#get_building_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}/positioning | Retrieve the postioning of the plan in the building
+*ModelApi* | [**get_buildings**](docs/ModelApi.md#get_buildings) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building | Retrieve all buildings of a model
 *ModelApi* | [**get_classifications_of_element**](docs/ModelApi.md#get_classifications_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
 *ModelApi* | [**get_documents_of_element**](docs/ModelApi.md#get_documents_of_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
 *ModelApi* | [**get_element**](docs/ModelApi.md#get_element) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Retrieve an element of a model
@@ -506,7 +523,6 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_model_unit**](docs/ModelApi.md#get_model_unit) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Retrieve a Unit of a model
 *ModelApi* | [**get_model_units**](docs/ModelApi.md#get_model_units) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Retrieve all Units of a model
 *ModelApi* | [**get_models**](docs/ModelApi.md#get_models) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model | Retrieve all models
-*ModelApi* | [**get_plan_positioning**](docs/ModelApi.md#get_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 *ModelApi* | [**get_processor_handler**](docs/ModelApi.md#get_processor_handler) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Retrieve a processor handler
 *ModelApi* | [**get_processor_handlers**](docs/ModelApi.md#get_processor_handlers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler | Get all processor handlers
 *ModelApi* | [**get_property_set**](docs/ModelApi.md#get_property_set) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Retrieve a PropertySet of a model
@@ -516,7 +532,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_simple_elements**](docs/ModelApi.md#get_simple_elements) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/simple | Retrieve all elements of a model with a simple value representation
 *ModelApi* | [**get_space**](docs/ModelApi.md#get_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Retrieve one space of the model
 *ModelApi* | [**get_spaces**](docs/ModelApi.md#get_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space | Retrieve all spaces of the model
-*ModelApi* | [**get_storey**](docs/ModelApi.md#get_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Retrieve a storey of a model
+*ModelApi* | [**get_storey**](docs/ModelApi.md#get_storey) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid} | Retrieve a storey of a model
+*ModelApi* | [**get_storey_plan_positioning**](docs/ModelApi.md#get_storey_plan_positioning) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id}/positioning | Retrieve the postioning of the plan in the storey
 *ModelApi* | [**get_storeys**](docs/ModelApi.md#get_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey | Retrieve all storeys of a model
 *ModelApi* | [**get_system**](docs/ModelApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Retrieve a system of a model
 *ModelApi* | [**get_systems**](docs/ModelApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Retrieve all systems of a model
@@ -538,6 +555,8 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**remove_elements_from_classification**](docs/ModelApi.md#remove_elements_from_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/classification/{model_classification_pk}/element/{uuid} | Remove the classification from all elements
 *ModelApi* | [**reprocess_model**](docs/ModelApi.md#reprocess_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/reprocess | Reprocess Model file
 *ModelApi* | [**update_access_token**](docs/ModelApi.md#update_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Update some fields of a token
+*ModelApi* | [**update_building**](docs/ModelApi.md#update_building) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{uuid} | Update some fields of a building
+*ModelApi* | [**update_building_plan_positioning**](docs/ModelApi.md#update_building_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/building/{building_uuid}/plan/{id}/positioning | Update the postioning of the plan in the building
 *ModelApi* | [**update_element**](docs/ModelApi.md#update_element) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{uuid} | Update some fields of an element
 *ModelApi* | [**update_element_property_set_property**](docs/ModelApi.md#update_element_property_set_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *ModelApi* | [**update_layer**](docs/ModelApi.md#update_layer) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/layer/{id} | Update some fields of a layer
@@ -546,11 +565,12 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**update_model_property**](docs/ModelApi.md#update_model_property) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/property/{id} | Update some fields of a Property
 *ModelApi* | [**update_model_property_definition**](docs/ModelApi.md#update_model_property_definition) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition/{id} | Update some fields of many PropertyDefinitions of a model
 *ModelApi* | [**update_model_unit**](docs/ModelApi.md#update_model_unit) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit/{id} | Update some fields of a Unit of a model
-*ModelApi* | [**update_plan_positioning**](docs/ModelApi.md#update_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_pk}/plan/{id}/positioning | Update the postioning of the plan in the storey
+*ModelApi* | [**update_order_storeys**](docs/ModelApi.md#update_order_storeys) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/order | Update order of all storey of a model
 *ModelApi* | [**update_processor_handler**](docs/ModelApi.md#update_processor_handler) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/processorhandler/{id} | Update the status of a processor handler
 *ModelApi* | [**update_property_set**](docs/ModelApi.md#update_property_set) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset/{id} | Update some fields of a PropertySet
 *ModelApi* | [**update_space**](docs/ModelApi.md#update_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/space/{id} | Update some fields of a space
-*ModelApi* | [**update_storey**](docs/ModelApi.md#update_storey) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{id} | Update some fields of a storey
+*ModelApi* | [**update_storey**](docs/ModelApi.md#update_storey) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{uuid} | Update some fields of a storey
+*ModelApi* | [**update_storey_plan_positioning**](docs/ModelApi.md#update_storey_plan_positioning) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/{id}/positioning | Update the postioning of the plan in the storey
 *ModelApi* | [**update_system**](docs/ModelApi.md#update_system) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Update some fields of a system
 *ModelApi* | [**update_zone**](docs/ModelApi.md#update_zone) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Update some fields of a zone
 *ModelApi* | [**update_zone_space**](docs/ModelApi.md#update_zone_space) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Update some fields of a space
@@ -570,6 +590,7 @@ Class | Method | HTTP request | Description
 ## Documentation For Models
 
  - [BcfProject](docs/BcfProject.md)
+ - [Building](docs/Building.md)
  - [CheckPlan](docs/CheckPlan.md)
  - [CheckerResult](docs/CheckerResult.md)
  - [Classification](docs/Classification.md)
@@ -606,12 +627,19 @@ Class | Method | HTTP request | Description
  - [IfcOptimize](docs/IfcOptimize.md)
  - [InlineObject](docs/InlineObject.md)
  - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject10](docs/InlineObject10.md)
+ - [InlineObject11](docs/InlineObject11.md)
  - [InlineObject2](docs/InlineObject2.md)
  - [InlineObject3](docs/InlineObject3.md)
  - [InlineObject4](docs/InlineObject4.md)
  - [InlineObject5](docs/InlineObject5.md)
+ - [InlineObject6](docs/InlineObject6.md)
+ - [InlineObject7](docs/InlineObject7.md)
+ - [InlineObject8](docs/InlineObject8.md)
+ - [InlineObject9](docs/InlineObject9.md)
  - [InlineResponse200](docs/InlineResponse200.md)
  - [InlineResponse2001](docs/InlineResponse2001.md)
+ - [InlineResponse2002](docs/InlineResponse2002.md)
  - [Invitation](docs/Invitation.md)
  - [Label](docs/Label.md)
  - [LabelRead](docs/LabelRead.md)
@@ -670,7 +698,6 @@ Class | Method | HTTP request | Description
  - [Space](docs/Space.md)
  - [Stage](docs/Stage.md)
  - [Storey](docs/Storey.md)
- - [StoreyRequest](docs/StoreyRequest.md)
  - [System](docs/System.md)
  - [Topic](docs/Topic.md)
  - [TopicStatus](docs/TopicStatus.md)

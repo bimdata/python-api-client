@@ -66,10 +66,8 @@ class Material(object):
             self.id = id
         if name is not None:
             self.name = name
-        if category is not None:
-            self.category = category
-        if description is not None:
-            self.description = description
+        self.category = category
+        self.description = description
         self.property_sets = property_sets
 
     @property

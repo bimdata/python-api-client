@@ -104,10 +104,8 @@ class SelfUser(object):
         if provider is not None:
             self.provider = provider
         self.provider_sub = provider_sub
-        if sub is not None:
-            self.sub = sub
-        if profile_picture is not None:
-            self.profile_picture = profile_picture
+        self.sub = sub
+        self.profile_picture = profile_picture
 
     @property
     def id(self):

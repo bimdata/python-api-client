@@ -127,6 +127,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_building_deprecated(self):
+        """Test case for create_building_deprecated
+
+        Create a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_create_building_plan_deprecated(self):
+        """Test case for create_building_plan_deprecated
+
+        Create a relation between a 2d model and a building  # noqa: E501
+        """
+        pass
+
     def test_create_checker_deprecated(self):
         """Test case for create_checker_deprecated
 
@@ -253,6 +267,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_storey_deprecated(self):
+        """Test case for create_storey_deprecated
+
+        Create a storey of a model  # noqa: E501
+        """
+        pass
+
     def test_create_storey_plan_deprecated(self):
         """Test case for create_storey_plan_deprecated
 
@@ -285,6 +306,20 @@ class TestIfcApi(unittest.TestCase):
         """Test case for delete_access_token_deprecated
 
         Delete a token  # noqa: E501
+        """
+        pass
+
+    def test_delete_building_deprecated(self):
+        """Test case for delete_building_deprecated
+
+        Delete a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_building_plan_deprecated(self):
+        """Test case for delete_building_plan_deprecated
+
+        Delete the relation between a 2d model and a building  # noqa: E501
         """
         pass
 
@@ -414,13 +449,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_storeys_deprecated(self):
-        """Test case for full_update_storeys_deprecated
-
-        Update all fields of all storeys  # noqa: E501
-        """
-        pass
-
     def test_get_access_token_deprecated(self):
         """Test case for get_access_token_deprecated
 
@@ -432,6 +460,27 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_access_tokens_deprecated
 
         Retrieve all tokens created for this model  # noqa: E501
+        """
+        pass
+
+    def test_get_building_deprecated(self):
+        """Test case for get_building_deprecated
+
+        Retrieve a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_building_plan_positioning_deprecated(self):
+        """Test case for get_building_plan_positioning_deprecated
+
+        Retrieve the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
+    def test_get_buildings_deprecated(self):
+        """Test case for get_buildings_deprecated
+
+        Retrieve all buildings of a model  # noqa: E501
         """
         pass
 
@@ -666,13 +715,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_get_plan_positioning_deprecated(self):
-        """Test case for get_plan_positioning_deprecated
-
-        Retrieve the postioning of the plan in the storey  # noqa: E501
-        """
-        pass
-
     def test_get_processor_handler_deprecated(self):
         """Test case for get_processor_handler_deprecated
 
@@ -740,6 +782,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_storey_deprecated
 
         Retrieve a storey of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_storey_plan_positioning_deprecated(self):
+        """Test case for get_storey_plan_positioning_deprecated
+
+        Retrieve the postioning of the plan in the storey  # noqa: E501
         """
         pass
 
@@ -897,6 +946,20 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_update_building_deprecated(self):
+        """Test case for update_building_deprecated
+
+        Update some fields of a building  # noqa: E501
+        """
+        pass
+
+    def test_update_building_plan_positioning_deprecated(self):
+        """Test case for update_building_plan_positioning_deprecated
+
+        Update the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
     def test_update_checker_deprecated(self):
         """Test case for update_checker_deprecated
 
@@ -967,10 +1030,10 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_update_plan_positioning_deprecated(self):
-        """Test case for update_plan_positioning_deprecated
+    def test_update_order_storeys_deprecated(self):
+        """Test case for update_order_storeys_deprecated
 
-        Update the postioning of the plan in the storey  # noqa: E501
+        Update order of all storey of a model  # noqa: E501
         """
         pass
 
@@ -999,6 +1062,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_storey_deprecated
 
         Update some fields of a storey  # noqa: E501
+        """
+        pass
+
+    def test_update_storey_plan_positioning_deprecated(self):
+        """Test case for update_storey_plan_positioning_deprecated
+
+        Update the postioning of the plan in the storey  # noqa: E501
         """
         pass
 

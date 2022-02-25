@@ -17,11 +17,11 @@ import unittest
 import datetime
 
 import bimdata_api_client
-from bimdata_api_client.models.storey_request import StoreyRequest  # noqa: E501
+from bimdata_api_client.models.inline_object8 import InlineObject8  # noqa: E501
 from bimdata_api_client.rest import ApiException
 
-class TestStoreyRequest(unittest.TestCase):
-    """StoreyRequest unit test stubs"""
+class TestInlineObject8(unittest.TestCase):
+    """InlineObject8 unit test stubs"""
 
     def setUp(self):
         pass
@@ -30,25 +30,21 @@ class TestStoreyRequest(unittest.TestCase):
         pass
 
     def make_instance(self, include_optional):
-        """Test StoreyRequest
+        """Test InlineObject8
             include_option is a boolean, when False only required
             params are included, when True both required and
             optional params are included """
-        # model = bimdata_api_client.models.storey_request.StoreyRequest()  # noqa: E501
+        # model = bimdata_api_client.models.inline_object8.InlineObject8()  # noqa: E501
         if include_optional :
-            return StoreyRequest(
-                id = 56, 
-                name = '0', 
-                elevation = 1.337, 
-                is_site = True
+            return InlineObject8(
+                id = 56
             )
         else :
-            return StoreyRequest(
-                name = '0',
+            return InlineObject8(
         )
 
-    def testStoreyRequest(self):
-        """Test StoreyRequest"""
+    def testInlineObject8(self):
+        """Test InlineObject8"""
         inst_req_only = self.make_instance(include_optional=False)
         inst_req_and_optional = self.make_instance(include_optional=True)
 

@@ -144,28 +144,19 @@ class Model(object):
             self.document_id = document_id
         if document is not None:
             self.document = document
-        if structure_file is not None:
-            self.structure_file = structure_file
-        if systems_file is not None:
-            self.systems_file = systems_file
-        if map_file is not None:
-            self.map_file = map_file
-        if gltf_file is not None:
-            self.gltf_file = gltf_file
-        if bvh_tree_file is not None:
-            self.bvh_tree_file = bvh_tree_file
-        if viewer_360_file is not None:
-            self.viewer_360_file = viewer_360_file
-        if xkt_file is not None:
-            self.xkt_file = xkt_file
+        self.structure_file = structure_file
+        self.systems_file = systems_file
+        self.map_file = map_file
+        self.gltf_file = gltf_file
+        self.bvh_tree_file = bvh_tree_file
+        self.viewer_360_file = viewer_360_file
+        self.xkt_file = xkt_file
         if project_id is not None:
             self.project_id = project_id
         self.world_position = world_position
         self.size_ratio = size_ratio
-        if errors is not None:
-            self.errors = errors
-        if warnings is not None:
-            self.warnings = warnings
+        self.errors = errors
+        self.warnings = warnings
         if archived is not None:
             self.archived = archived
         self.version = version

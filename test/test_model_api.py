@@ -127,6 +127,20 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_building(self):
+        """Test case for create_building
+
+        Create a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_create_building_plan(self):
+        """Test case for create_building_plan
+
+        Create a relation between a 2d model and a building  # noqa: E501
+        """
+        pass
+
     def test_create_classification_element_relations(self):
         """Test case for create_classification_element_relations
 
@@ -239,6 +253,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_storey(self):
+        """Test case for create_storey
+
+        Create a storey of a model  # noqa: E501
+        """
+        pass
+
     def test_create_storey_plan(self):
         """Test case for create_storey_plan
 
@@ -271,6 +292,20 @@ class TestModelApi(unittest.TestCase):
         """Test case for delete_access_token
 
         Delete a token  # noqa: E501
+        """
+        pass
+
+    def test_delete_building(self):
+        """Test case for delete_building
+
+        Delete a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_delete_building_plan(self):
+        """Test case for delete_building_plan
+
+        Delete the relation between a 2d model and a building  # noqa: E501
         """
         pass
 
@@ -386,13 +421,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_full_update_storeys(self):
-        """Test case for full_update_storeys
-
-        Update all fields of all storeys  # noqa: E501
-        """
-        pass
-
     def test_get_access_token(self):
         """Test case for get_access_token
 
@@ -404,6 +432,27 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_access_tokens
 
         Retrieve all tokens created for this model  # noqa: E501
+        """
+        pass
+
+    def test_get_building(self):
+        """Test case for get_building
+
+        Retrieve a building of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_building_plan_positioning(self):
+        """Test case for get_building_plan_positioning
+
+        Retrieve the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
+    def test_get_buildings(self):
+        """Test case for get_buildings
+
+        Retrieve all buildings of a model  # noqa: E501
         """
         pass
 
@@ -610,13 +659,6 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_get_plan_positioning(self):
-        """Test case for get_plan_positioning
-
-        Retrieve the postioning of the plan in the storey  # noqa: E501
-        """
-        pass
-
     def test_get_processor_handler(self):
         """Test case for get_processor_handler
 
@@ -684,6 +726,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_storey
 
         Retrieve a storey of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_storey_plan_positioning(self):
+        """Test case for get_storey_plan_positioning
+
+        Retrieve the postioning of the plan in the storey  # noqa: E501
         """
         pass
 
@@ -834,6 +883,20 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_update_building(self):
+        """Test case for update_building
+
+        Update some fields of a building  # noqa: E501
+        """
+        pass
+
+    def test_update_building_plan_positioning(self):
+        """Test case for update_building_plan_positioning
+
+        Update the postioning of the plan in the building  # noqa: E501
+        """
+        pass
+
     def test_update_element(self):
         """Test case for update_element
 
@@ -890,10 +953,10 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
-    def test_update_plan_positioning(self):
-        """Test case for update_plan_positioning
+    def test_update_order_storeys(self):
+        """Test case for update_order_storeys
 
-        Update the postioning of the plan in the storey  # noqa: E501
+        Update order of all storey of a model  # noqa: E501
         """
         pass
 
@@ -922,6 +985,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for update_storey
 
         Update some fields of a storey  # noqa: E501
+        """
+        pass
+
+    def test_update_storey_plan_positioning(self):
+        """Test case for update_storey_plan_positioning
+
+        Update the postioning of the plan in the storey  # noqa: E501
         """
         pass
 
