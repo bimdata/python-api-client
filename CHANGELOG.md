@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v7.3.0 (2022-02-25)
+### Feature
+* Refacto storeys and add buildings (#494)
+
+* init refacto storey
+
+* add building test
+
+* fix serializers
+
+* replace Counter ([`06a735c`](https://github.com/bimdata/python-api-client/commit/06a735c75412fdfb301f7e10ecb29a5e4275afe7))
+
 ## v7.2.0 (2022-02-24)
 ### Feature
 * Add size_ratio fields ([`2a5d90c`](https://github.com/bimdata/python-api-client/commit/2a5d90c51c5de429d10d6cf1f4d5da9da5448093))
