@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v7.4.2 (2022-03-17)
+### Fix
+* Remove comment visa nested ([#502](https://github.com/bimdata/python-api-client/issues/502)) ([`a516af8`](https://github.com/bimdata/python-api-client/commit/a516af86ac3aa3ef6858f1b75c7f36e182bf7c45))
+
 ## v7.4.1 (2022-02-25)
 ### Fix
 * Fix create building and storey doc serializer ([`03903e7`](https://github.com/bimdata/python-api-client/commit/03903e7c077a08434ad587401dc691c5e2c8b646))
