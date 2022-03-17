@@ -39,7 +39,6 @@ class VisaComment(object):
         'author_id': 'int',
         'visa_id': 'str',
         'content': 'str',
-        'reply_to_comment_id': 'int',
         'created_at': 'datetime',
         'updated_at': 'datetime'
     }
@@ -50,12 +49,11 @@ class VisaComment(object):
         'author_id': 'author_id',
         'visa_id': 'visa_id',
         'content': 'content',
-        'reply_to_comment_id': 'reply_to_comment_id',
         'created_at': 'created_at',
         'updated_at': 'updated_at'
     }
 
-    def __init__(self, id=None, author=None, author_id=None, visa_id=None, content=None, reply_to_comment_id=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
+    def __init__(self, id=None, author=None, author_id=None, visa_id=None, content=None, created_at=None, updated_at=None, local_vars_configuration=None):  # noqa: E501
         """VisaComment - a model defined in OpenAPI"""  # noqa: E501
         if local_vars_configuration is None:
             local_vars_configuration = Configuration()
@@ -66,7 +64,6 @@ class VisaComment(object):
         self._author_id = None
         self._visa_id = None
         self._content = None
-        self._reply_to_comment_id = None
         self._created_at = None
         self._updated_at = None
         self.discriminator = None
@@ -81,7 +78,6 @@ class VisaComment(object):
             self.visa_id = visa_id
         if content is not None:
             self.content = content
-        self.reply_to_comment_id = reply_to_comment_id
         if created_at is not None:
             self.created_at = created_at
         if updated_at is not None:
@@ -193,27 +189,6 @@ class VisaComment(object):
         """
 
         self._content = content
-
-    @property
-    def reply_to_comment_id(self):
-        """Gets the reply_to_comment_id of this VisaComment.  # noqa: E501
-
-
-        :return: The reply_to_comment_id of this VisaComment.  # noqa: E501
-        :rtype: int
-        """
-        return self._reply_to_comment_id
-
-    @reply_to_comment_id.setter
-    def reply_to_comment_id(self, reply_to_comment_id):
-        """Sets the reply_to_comment_id of this VisaComment.
-
-
-        :param reply_to_comment_id: The reply_to_comment_id of this VisaComment.  # noqa: E501
-        :type: int
-        """
-
-        self._reply_to_comment_id = reply_to_comment_id
 
     @property
     def created_at(self):

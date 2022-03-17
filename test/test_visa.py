@@ -105,7 +105,6 @@ class TestVisa(unittest.TestCase):
                         author_id = 56, 
                         visa_id = '0', 
                         content = '0', 
-                        reply_to_comment_id = 56, 
                         created_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), 
                         updated_at = datetime.datetime.strptime('2013-10-20 19:20:30.00', '%Y-%m-%d %H:%M:%S.%f'), )
                     ], 
