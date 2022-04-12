@@ -2,6 +2,55 @@
 
 <!--next-version-placeholder-->
 
+## v8.0.0 (2022-04-12)
+### Breaking
+* Feat/openapi3 (#508)
+
+* install and pre configure drf-spectacular
+
+* finish replace drf-yasg lib by drf-spectacular
+
+* fix error on lib generation
+
+* recreate data for oauth delete tests
+
+* fix some typo
+
+* fix null enums
+
+* fix some serializer
+
+* add bearer auth to swagger
+
+* add test operationId and fix numquery MPApp test
+
+* fix head action in test doc
+
+Co-authored-by: Amoki <hugo@bimdata.io> ([`18591ec`](https://github.com/bimdata/python-api-client/commit/18591ec7c8156e00549d7d604500a0773b79463a))
+* Feat/openapi3 (#508)
+
+* install and pre configure drf-spectacular
+
+* finish replace drf-yasg lib by drf-spectacular
+
+* fix error on lib generation
+
+* recreate data for oauth delete tests
+
+* fix some typo
+
+* fix null enums
+
+* fix some serializer
+
+* add bearer auth to swagger
+
+* add test operationId and fix numquery MPApp test
+
+* fix head action in test doc
+
+Co-authored-by: Amoki <hugo@bimdata.io> ([`18591ec`](https://github.com/bimdata/python-api-client/commit/18591ec7c8156e00549d7d604500a0773b79463a))
+
 ## v7.4.2 (2022-03-17)
 ### Fix
 * Remove comment visa nested ([#502](https://github.com/bimdata/python-api-client/issues/502)) ([`a516af8`](https://github.com/bimdata/python-api-client/commit/a516af86ac3aa3ef6858f1b75c7f36e182bf7c45))
