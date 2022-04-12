@@ -2,6 +2,58 @@
 
 <!--next-version-placeholder-->
 
+## v9.0.0 (2022-04-12)
+### Fix
+* Fix swagger generation ([`3952685`](https://github.com/bimdata/python-api-client/commit/3952685f9c92059b94605b178693de95cd670f1d))
+
+### Breaking
+* Feat/openapi3 (#508)
+
+* install and pre configure drf-spectacular
+
+* finish replace drf-yasg lib by drf-spectacular
+
+* fix error on lib generation
+
+* recreate data for oauth delete tests
+
+* fix some typo
+
+* fix null enums
+
+* fix some serializer
+
+* add bearer auth to swagger
+
+* add test operationId and fix numquery MPApp test
+
+* fix head action in test doc
+
+Co-authored-by: Amoki <hugo@bimdata.io> ([`57074b7`](https://github.com/bimdata/python-api-client/commit/57074b73f37e92e1ee0b37cdfde59b3ccd7bdd80))
+* Feat/openapi3 (#508)
+
+* install and pre configure drf-spectacular
+
+* finish replace drf-yasg lib by drf-spectacular
+
+* fix error on lib generation
+
+* recreate data for oauth delete tests
+
+* fix some typo
+
+* fix null enums
+
+* fix some serializer
+
+* add bearer auth to swagger
+
+* add test operationId and fix numquery MPApp test
+
+* fix head action in test doc
+
+Co-authored-by: Amoki <hugo@bimdata.io> ([`57074b7`](https://github.com/bimdata/python-api-client/commit/57074b73f37e92e1ee0b37cdfde59b3ccd7bdd80))
+
 ## v8.0.0 (2022-04-12)
 ### Breaking
 * Feat/openapi3 (#508)
