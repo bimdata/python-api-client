@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **model_id** | **int, none_type** |  | [readonly] 
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
-**user_permission** | **bool, date, datetime, dict, float, int, list, str, none_type** | Aggregate of group user permissions and folder default permission | [readonly] 
+**user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **parent** | **int, none_type** |  | [optional] 
 **parent_id** | **int, none_type** |  | [optional] 
 **creator** | **int, none_type** |  | [optional] 

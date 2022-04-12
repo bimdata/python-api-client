@@ -16,7 +16,6 @@ from bimdata_api_client.model.check_plan import CheckPlan
 from bimdata_api_client.model.check_plan_request import CheckPlanRequest
 from bimdata_api_client.model.checker_result import CheckerResult
 from bimdata_api_client.model.checker_result_request import CheckerResultRequest
-from bimdata_api_client.model.checker_status_enum import CheckerStatusEnum
 from bimdata_api_client.model.classification import Classification
 from bimdata_api_client.model.classification_request import ClassificationRequest
 from bimdata_api_client.model.clipping_plane import ClippingPlane
@@ -26,7 +25,6 @@ from bimdata_api_client.model.cloud_invitation import CloudInvitation
 from bimdata_api_client.model.cloud_invitation_request import CloudInvitationRequest
 from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.cloud_role import CloudRole
-from bimdata_api_client.model.cloud_role_enum import CloudRoleEnum
 from bimdata_api_client.model.coloring import Coloring
 from bimdata_api_client.model.coloring_request import ColoringRequest
 from bimdata_api_client.model.comment import Comment
@@ -47,14 +45,12 @@ from bimdata_api_client.model.element_classification_relation import ElementClas
 from bimdata_api_client.model.element_classification_relation_request import ElementClassificationRelationRequest
 from bimdata_api_client.model.element_property_set_relation_request import ElementPropertySetRelationRequest
 from bimdata_api_client.model.element_request import ElementRequest
-from bimdata_api_client.model.export_enum import ExportEnum
 from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.feature import Feature
 from bimdata_api_client.model.feature_request import FeatureRequest
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
 from bimdata_api_client.model.folder_group_permission_request import FolderGroupPermissionRequest
-from bimdata_api_client.model.folder_permission_enum import FolderPermissionEnum
 from bimdata_api_client.model.folder_request import FolderRequest
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
@@ -73,7 +69,6 @@ from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
 from bimdata_api_client.model.invitation import Invitation
-from bimdata_api_client.model.invitation_status_enum import InvitationStatusEnum
 from bimdata_api_client.model.label import Label
 from bimdata_api_client.model.label_request import LabelRequest
 from bimdata_api_client.model.layer import Layer
@@ -82,7 +77,6 @@ from bimdata_api_client.model.layer_element_request import LayerElementRequest
 from bimdata_api_client.model.layer_request import LayerRequest
 from bimdata_api_client.model.line import Line
 from bimdata_api_client.model.line_request import LineRequest
-from bimdata_api_client.model.managed_by_enum import ManagedByEnum
 from bimdata_api_client.model.marketplace_app import MarketplaceApp
 from bimdata_api_client.model.marketplace_app_image import MarketplaceAppImage
 from bimdata_api_client.model.marketplace_app_image_request import MarketplaceAppImageRequest
@@ -98,12 +92,7 @@ from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
 from bimdata_api_client.model.model_property import ModelProperty
 from bimdata_api_client.model.model_request import ModelRequest
-from bimdata_api_client.model.model_source_enum import ModelSourceEnum
-from bimdata_api_client.model.model_status_enum import ModelStatusEnum
-from bimdata_api_client.model.model_type_enum import ModelTypeEnum
 from bimdata_api_client.model.model_with_positioning_plan import ModelWithPositioningPlan
-from bimdata_api_client.model.nature_enum import NatureEnum
-from bimdata_api_client.model.null_enum import NullEnum
 from bimdata_api_client.model.organization import Organization
 from bimdata_api_client.model.organization_request import OrganizationRequest
 from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
@@ -167,9 +156,7 @@ from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from bimdata_api_client.model.project_request import ProjectRequest
 from bimdata_api_client.model.project_role import ProjectRole
-from bimdata_api_client.model.project_role_enum import ProjectRoleEnum
 from bimdata_api_client.model.project_size import ProjectSize
-from bimdata_api_client.model.project_status_enum import ProjectStatusEnum
 from bimdata_api_client.model.project_with_children import ProjectWithChildren
 from bimdata_api_client.model.property_definition import PropertyDefinition
 from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
@@ -206,7 +193,6 @@ from bimdata_api_client.model.raw_unit import RawUnit
 from bimdata_api_client.model.raw_unit_request import RawUnitRequest
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
 from bimdata_api_client.model.recursive_folder_children_request import RecursiveFolderChildrenRequest
-from bimdata_api_client.model.recursive_folder_children_type_enum import RecursiveFolderChildrenTypeEnum
 from bimdata_api_client.model.rule import Rule
 from bimdata_api_client.model.rule_component import RuleComponent
 from bimdata_api_client.model.rule_component_request import RuleComponentRequest
@@ -245,10 +231,8 @@ from bimdata_api_client.model.visa import Visa
 from bimdata_api_client.model.visa_comment import VisaComment
 from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest
-from bimdata_api_client.model.visa_status_enum import VisaStatusEnum
 from bimdata_api_client.model.visa_validation import VisaValidation
 from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
-from bimdata_api_client.model.visa_validation_status_enum import VisaValidationStatusEnum
 from bimdata_api_client.model.visibility import Visibility
 from bimdata_api_client.model.visibility_request import VisibilityRequest
 from bimdata_api_client.model.web_hook import WebHook

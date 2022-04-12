@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
-**type** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**type** | **str** |  | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **status** | **str** |  | 
 **created_at** | **datetime** |  | [readonly] 
@@ -23,7 +23,7 @@ Name | Type | Description | Notes
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
 **name** | **str, none_type** |  | [optional] 
-**source** | [**ModelSourceEnum**](ModelSourceEnum.md) |  | [optional] 
+**source** | **str** |  | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
 **size_ratio** | **float, none_type** | How many meters a unit represents | [optional] 
 **archived** | **bool** |  | [optional] 

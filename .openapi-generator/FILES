@@ -23,7 +23,6 @@ bimdata_api_client/model/check_plan.py
 bimdata_api_client/model/check_plan_request.py
 bimdata_api_client/model/checker_result.py
 bimdata_api_client/model/checker_result_request.py
-bimdata_api_client/model/checker_status_enum.py
 bimdata_api_client/model/classification.py
 bimdata_api_client/model/classification_request.py
 bimdata_api_client/model/clipping_plane.py
@@ -33,7 +32,6 @@ bimdata_api_client/model/cloud_invitation.py
 bimdata_api_client/model/cloud_invitation_request.py
 bimdata_api_client/model/cloud_request.py
 bimdata_api_client/model/cloud_role.py
-bimdata_api_client/model/cloud_role_enum.py
 bimdata_api_client/model/coloring.py
 bimdata_api_client/model/coloring_request.py
 bimdata_api_client/model/comment.py
@@ -54,14 +52,12 @@ bimdata_api_client/model/element_classification_relation.py
 bimdata_api_client/model/element_classification_relation_request.py
 bimdata_api_client/model/element_property_set_relation_request.py
 bimdata_api_client/model/element_request.py
-bimdata_api_client/model/export_enum.py
 bimdata_api_client/model/extensions.py
 bimdata_api_client/model/feature.py
 bimdata_api_client/model/feature_request.py
 bimdata_api_client/model/folder.py
 bimdata_api_client/model/folder_group_permission.py
 bimdata_api_client/model/folder_group_permission_request.py
-bimdata_api_client/model/folder_permission_enum.py
 bimdata_api_client/model/folder_request.py
 bimdata_api_client/model/folder_user_project.py
 bimdata_api_client/model/folder_without_children.py
@@ -80,7 +76,6 @@ bimdata_api_client/model/ifc_export_request.py
 bimdata_api_client/model/ifc_merge_request.py
 bimdata_api_client/model/ifc_optimize_request.py
 bimdata_api_client/model/invitation.py
-bimdata_api_client/model/invitation_status_enum.py
 bimdata_api_client/model/label.py
 bimdata_api_client/model/label_request.py
 bimdata_api_client/model/layer.py
@@ -89,7 +84,6 @@ bimdata_api_client/model/layer_element_request.py
 bimdata_api_client/model/layer_request.py
 bimdata_api_client/model/line.py
 bimdata_api_client/model/line_request.py
-bimdata_api_client/model/managed_by_enum.py
 bimdata_api_client/model/marketplace_app.py
 bimdata_api_client/model/marketplace_app_image.py
 bimdata_api_client/model/marketplace_app_image_request.py
@@ -105,12 +99,7 @@ bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_request.py
-bimdata_api_client/model/model_source_enum.py
-bimdata_api_client/model/model_status_enum.py
-bimdata_api_client/model/model_type_enum.py
 bimdata_api_client/model/model_with_positioning_plan.py
-bimdata_api_client/model/nature_enum.py
-bimdata_api_client/model/null_enum.py
 bimdata_api_client/model/organization.py
 bimdata_api_client/model/organization_request.py
 bimdata_api_client/model/orthogonal_camera.py
@@ -174,9 +163,7 @@ bimdata_api_client/model/project_invitation.py
 bimdata_api_client/model/project_invitation_request.py
 bimdata_api_client/model/project_request.py
 bimdata_api_client/model/project_role.py
-bimdata_api_client/model/project_role_enum.py
 bimdata_api_client/model/project_size.py
-bimdata_api_client/model/project_status_enum.py
 bimdata_api_client/model/project_with_children.py
 bimdata_api_client/model/property_definition.py
 bimdata_api_client/model/property_definition_request.py
@@ -213,7 +200,6 @@ bimdata_api_client/model/raw_unit.py
 bimdata_api_client/model/raw_unit_request.py
 bimdata_api_client/model/recursive_folder_children.py
 bimdata_api_client/model/recursive_folder_children_request.py
-bimdata_api_client/model/recursive_folder_children_type_enum.py
 bimdata_api_client/model/rule.py
 bimdata_api_client/model/rule_component.py
 bimdata_api_client/model/rule_component_request.py
@@ -252,10 +238,8 @@ bimdata_api_client/model/visa.py
 bimdata_api_client/model/visa_comment.py
 bimdata_api_client/model/visa_comment_request.py
 bimdata_api_client/model/visa_request.py
-bimdata_api_client/model/visa_status_enum.py
 bimdata_api_client/model/visa_validation.py
 bimdata_api_client/model/visa_validation_request.py
-bimdata_api_client/model/visa_validation_status_enum.py
 bimdata_api_client/model/visibility.py
 bimdata_api_client/model/visibility_request.py
 bimdata_api_client/model/web_hook.py
@@ -276,7 +260,6 @@ docs/CheckPlanRequest.md
 docs/CheckerApi.md
 docs/CheckerResult.md
 docs/CheckerResultRequest.md
-docs/CheckerStatusEnum.md
 docs/Classification.md
 docs/ClassificationRequest.md
 docs/ClippingPlane.md
@@ -286,7 +269,6 @@ docs/CloudInvitation.md
 docs/CloudInvitationRequest.md
 docs/CloudRequest.md
 docs/CloudRole.md
-docs/CloudRoleEnum.md
 docs/CollaborationApi.md
 docs/Coloring.md
 docs/ColoringRequest.md
@@ -308,14 +290,12 @@ docs/ElementClassificationRelation.md
 docs/ElementClassificationRelationRequest.md
 docs/ElementPropertySetRelationRequest.md
 docs/ElementRequest.md
-docs/ExportEnum.md
 docs/Extensions.md
 docs/Feature.md
 docs/FeatureRequest.md
 docs/Folder.md
 docs/FolderGroupPermission.md
 docs/FolderGroupPermissionRequest.md
-docs/FolderPermissionEnum.md
 docs/FolderRequest.md
 docs/FolderUserProject.md
 docs/FolderWithoutChildren.md
@@ -335,7 +315,6 @@ docs/IfcExportRequest.md
 docs/IfcMergeRequest.md
 docs/IfcOptimizeRequest.md
 docs/Invitation.md
-docs/InvitationStatusEnum.md
 docs/Label.md
 docs/LabelRequest.md
 docs/Layer.md
@@ -344,7 +323,6 @@ docs/LayerElementRequest.md
 docs/LayerRequest.md
 docs/Line.md
 docs/LineRequest.md
-docs/ManagedByEnum.md
 docs/MarketplaceApp.md
 docs/MarketplaceAppImage.md
 docs/MarketplaceAppImageRequest.md
@@ -361,12 +339,7 @@ docs/ModelErrorsRequest.md
 docs/ModelFiles.md
 docs/ModelProperty.md
 docs/ModelRequest.md
-docs/ModelSourceEnum.md
-docs/ModelStatusEnum.md
-docs/ModelTypeEnum.md
 docs/ModelWithPositioningPlan.md
-docs/NatureEnum.md
-docs/NullEnum.md
 docs/Organization.md
 docs/OrganizationRequest.md
 docs/OrthogonalCamera.md
@@ -430,9 +403,7 @@ docs/ProjectInvitation.md
 docs/ProjectInvitationRequest.md
 docs/ProjectRequest.md
 docs/ProjectRole.md
-docs/ProjectRoleEnum.md
 docs/ProjectSize.md
-docs/ProjectStatusEnum.md
 docs/ProjectWithChildren.md
 docs/PropertyDefinition.md
 docs/PropertyDefinitionRequest.md
@@ -469,7 +440,6 @@ docs/RawUnit.md
 docs/RawUnitRequest.md
 docs/RecursiveFolderChildren.md
 docs/RecursiveFolderChildrenRequest.md
-docs/RecursiveFolderChildrenTypeEnum.md
 docs/Rule.md
 docs/RuleComponent.md
 docs/RuleComponentRequest.md
@@ -509,10 +479,8 @@ docs/Visa.md
 docs/VisaComment.md
 docs/VisaCommentRequest.md
 docs/VisaRequest.md
-docs/VisaStatusEnum.md
 docs/VisaValidation.md
 docs/VisaValidationRequest.md
-docs/VisaValidationStatusEnum.md
 docs/Visibility.md
 docs/VisibilityRequest.md
 docs/WebHook.md
@@ -535,7 +503,6 @@ test/test_check_plan_request.py
 test/test_checker_api.py
 test/test_checker_result.py
 test/test_checker_result_request.py
-test/test_checker_status_enum.py
 test/test_classification.py
 test/test_classification_request.py
 test/test_clipping_plane.py
@@ -545,7 +512,6 @@ test/test_cloud_invitation.py
 test/test_cloud_invitation_request.py
 test/test_cloud_request.py
 test/test_cloud_role.py
-test/test_cloud_role_enum.py
 test/test_collaboration_api.py
 test/test_coloring.py
 test/test_coloring_request.py
@@ -567,14 +533,12 @@ test/test_element_classification_relation.py
 test/test_element_classification_relation_request.py
 test/test_element_property_set_relation_request.py
 test/test_element_request.py
-test/test_export_enum.py
 test/test_extensions.py
 test/test_feature.py
 test/test_feature_request.py
 test/test_folder.py
 test/test_folder_group_permission.py
 test/test_folder_group_permission_request.py
-test/test_folder_permission_enum.py
 test/test_folder_request.py
 test/test_folder_user_project.py
 test/test_folder_without_children.py
@@ -594,7 +558,6 @@ test/test_ifc_export_request.py
 test/test_ifc_merge_request.py
 test/test_ifc_optimize_request.py
 test/test_invitation.py
-test/test_invitation_status_enum.py
 test/test_label.py
 test/test_label_request.py
 test/test_layer.py
@@ -603,7 +566,6 @@ test/test_layer_element_request.py
 test/test_layer_request.py
 test/test_line.py
 test/test_line_request.py
-test/test_managed_by_enum.py
 test/test_marketplace_app.py
 test/test_marketplace_app_image.py
 test/test_marketplace_app_image_request.py
@@ -620,12 +582,7 @@ test/test_model_errors_request.py
 test/test_model_files.py
 test/test_model_property.py
 test/test_model_request.py
-test/test_model_source_enum.py
-test/test_model_status_enum.py
-test/test_model_type_enum.py
 test/test_model_with_positioning_plan.py
-test/test_nature_enum.py
-test/test_null_enum.py
 test/test_organization.py
 test/test_organization_request.py
 test/test_orthogonal_camera.py
@@ -689,9 +646,7 @@ test/test_project_invitation.py
 test/test_project_invitation_request.py
 test/test_project_request.py
 test/test_project_role.py
-test/test_project_role_enum.py
 test/test_project_size.py
-test/test_project_status_enum.py
 test/test_project_with_children.py
 test/test_property_definition.py
 test/test_property_definition_request.py
@@ -728,7 +683,6 @@ test/test_raw_unit.py
 test/test_raw_unit_request.py
 test/test_recursive_folder_children.py
 test/test_recursive_folder_children_request.py
-test/test_recursive_folder_children_type_enum.py
 test/test_rule.py
 test/test_rule_component.py
 test/test_rule_component_request.py
@@ -768,10 +722,8 @@ test/test_visa.py
 test/test_visa_comment.py
 test/test_visa_comment_request.py
 test/test_visa_request.py
-test/test_visa_status_enum.py
 test/test_visa_validation.py
 test/test_visa_validation_request.py
-test/test_visa_validation_status_enum.py
 test/test_visibility.py
 test/test_visibility_request.py
 test/test_web_hook.py

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **validations** | [**[VisaValidation]**](VisaValidation.md) |  | [readonly] 
 **validations_in_error** | **[int]** | Validation IDs where one or more validators have no longer access to the visa document. | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**status** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**status** | **str** |  | [readonly] 
 **document** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **comments** | [**[VisaComment]**](VisaComment.md) |  | [readonly] 
 **created_at** | **datetime** |  | [readonly] 

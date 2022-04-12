@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly] 
 **visa_id** | **int** |  | [readonly] 
 **validator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**status** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
+**status** | **str** |  | [readonly] 
 **has_commented** | **bool** | Return True if validator has commented the visa | [readonly] 
 **created_at** | **datetime** |  | [readonly] 
 **updated_at** | **datetime** |  | [readonly] 

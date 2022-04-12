@@ -1128,7 +1128,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     folder_request = FolderRequest(
         parent_id=1,
         name="name_example",
-        default_permission=None,
+        default_permission=1,
     ) # FolderRequest | 
 
     # example passing only required values which don't have defaults set
@@ -1243,8 +1243,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     file_name = "file_name_example" # str | Full name of the file (optional)
     description = "description_example" # str, none_type | Description of the file (optional)
     size = 0 # int, none_type | Size of the file. (optional)
-    model_source = None # bool, date, datetime, dict, float, int, list, str, none_type | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
-    ifc_source = None # bool, date, datetime, dict, float, int, list, str, none_type | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+    model_source = "UPLOAD" # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+    ifc_source = "UPLOAD" # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -1277,8 +1277,8 @@ Name | Type | Description  | Notes
  **file_name** | **str**| Full name of the file | [optional]
  **description** | **str, none_type**| Description of the file | [optional]
  **size** | **int, none_type**| Size of the file. | [optional]
- **model_source** | **bool, date, datetime, dict, float, int, list, str, none_type**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
- **ifc_source** | **bool, date, datetime, dict, float, int, list, str, none_type**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
+ **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
+ **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
 
 ### Return type
 
@@ -1372,7 +1372,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     folder_without_children_request = FolderWithoutChildrenRequest(
         parent_id=1,
         name="name_example",
-        default_permission=None,
+        default_permission=1,
     ) # FolderWithoutChildrenRequest | 
 
     # example passing only required values which don't have defaults set
@@ -1596,7 +1596,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_request = ProjectRequest(
         logo=open('/path/to/file', 'rb'),
         name="name_example",
-        status=ProjectStatusEnum("A"),
+        status="A",
         parent_id=1,
     ) # ProjectRequest | 
 
@@ -7697,7 +7697,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_invitation_request = ProjectInvitationRequest(
         email="email_example",
         redirect_uri="redirect_uri_example",
-        role=ProjectRoleEnum(100),
+        role=100,
     ) # ProjectInvitationRequest | 
 
     # example passing only required values which don't have defaults set
@@ -8482,7 +8482,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this fos user.
     patched_user_cloud_update_request = PatchedUserCloudUpdateRequest(
-        role=None,
+        role=100,
     ) # PatchedUserCloudUpdateRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -8611,8 +8611,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         description="description_example",
         file=open('/path/to/file', 'rb'),
         size=0,
-        model_source=None,
-        ifc_source=None,
+        model_source="UPLOAD",
+        ifc_source="UPLOAD",
     ) # PatchedDocumentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -8736,7 +8736,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_folder_without_children_request = PatchedFolderWithoutChildrenRequest(
         parent_id=1,
         name="name_example",
-        default_permission=None,
+        default_permission=1,
     ) # PatchedFolderWithoutChildrenRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -8859,7 +8859,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this group folder.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_group_folder_request = PatchedGroupFolderRequest(
-        permission=None,
+        permission=1,
     ) # PatchedGroupFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -9106,7 +9106,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_project_request = PatchedProjectRequest(
         logo=open('/path/to/file', 'rb'),
         name="name_example",
-        status=ProjectStatusEnum("A"),
+        status="A",
         parent_id=1,
     ) # PatchedProjectRequest |  (optional)
 
@@ -9353,7 +9353,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this user project.
     project_pk = 1 # int | 
     patched_user_project_update_request = PatchedUserProjectUpdateRequest(
-        role=None,
+        role=100,
     ) # PatchedUserProjectUpdateRequest |  (optional)
 
     # example passing only required values which don't have defaults set

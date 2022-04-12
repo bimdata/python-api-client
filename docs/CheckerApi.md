@@ -225,7 +225,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     checker_result_request = CheckerResultRequest(
-        status=CheckerStatusEnum("C"),
+        status="C",
         result="result_example",
         collisions="collisions_example",
         error_detail="error_detail_example",
@@ -3110,7 +3110,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_checker_result_request = PatchedCheckerResultRequest(
-        status=CheckerStatusEnum("C"),
+        status="C",
         result="result_example",
         collisions="collisions_example",
         error_detail="error_detail_example",

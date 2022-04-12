@@ -2288,7 +2288,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     checker_result_request = CheckerResultRequest(
-        status=CheckerStatusEnum("C"),
+        status="C",
         result="result_example",
         collisions="collisions_example",
         error_detail="error_detail_example",
@@ -7155,14 +7155,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | 
     ifc_export_request = IfcExportRequest(
-        classifications=None,
-        zones=None,
-        properties=None,
-        systems=None,
-        layers=None,
-        materials=None,
-        attributes=None,
-        structure=None,
+        classifications="UPDATED",
+        zones="UPDATED",
+        properties="UPDATED",
+        systems="UPDATED",
+        layers="UPDATED",
+        materials="UPDATED",
+        attributes="UPDATED",
+        structure="UPDATED",
         uuids=[
             "uuids_example",
         ],
@@ -15641,7 +15641,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_checker_result_request = PatchedCheckerResultRequest(
-        status=CheckerStatusEnum("C"),
+        status="C",
         result="result_example",
         collisions="collisions_example",
         error_detail="error_detail_example",
@@ -16086,7 +16086,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_model_request = PatchedModelRequest(
         name="name_example",
         status="status_example",
-        source=ModelSourceEnum("UPLOAD"),
+        source="UPLOAD",
         world_position=[
             3.14,
         ],
@@ -17234,7 +17234,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_processor_handler_request = PatchedProcessorHandlerRequest(
-        status=ModelStatusEnum("C"),
+        status="C",
         detail_message="detail_message_example",
     ) # PatchedProcessorHandlerRequest |  (optional)
 

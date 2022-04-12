@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | [**CheckerStatusEnum**](CheckerStatusEnum.md) |  | [optional] 
+**status** | **str** |  | [optional] 
 **result** | **str, none_type** |  | [optional] 
 **collisions** | **str, none_type** |  | [optional] 
 **error_detail** | **str** |  | [optional] 

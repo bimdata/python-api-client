@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **status** | **str** |  | 
 **name** | **str, none_type** |  | [optional] 
-**source** | [**ModelSourceEnum**](ModelSourceEnum.md) |  | [optional] 
+**source** | **str** |  | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
 **size_ratio** | **float, none_type** | How many meters a unit represents | [optional] 
 **archived** | **bool** |  | [optional] 

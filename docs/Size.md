@@ -5,8 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **is_unsupervised** | **bool** |  | [readonly] 
-**managed_by** | [**ManagedByEnum**](ManagedByEnum.md) |  | 
-**role** | [**CloudRoleEnum**](CloudRoleEnum.md) |  | 
+**managed_by** | **str** |  | 
+**role** | **int** |  | 
 **total_size** | **int, none_type** |  | [readonly] 
 **smart_data_size** | **int, none_type** |  | [readonly] 
 **total_size_available** | **int, none_type** |  | [readonly] 
