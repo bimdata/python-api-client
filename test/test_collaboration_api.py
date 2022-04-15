@@ -31,6 +31,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_add_document_tag(self):
+        """Test case for add_document_tag
+
+        Add a tag to a document  # noqa: E501
+        """
+        pass
+
     def test_add_group_member(self):
         """Test case for add_group_member
 
@@ -129,6 +136,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_create_tag(self):
+        """Test case for create_tag
+
+        Create a tag  # noqa: E501
+        """
+        pass
+
     def test_create_validation(self):
         """Test case for create_validation
 
@@ -178,6 +192,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_document_tag(self):
+        """Test case for delete_document_tag
+
+        Delete a tag from a document  # noqa: E501
+        """
+        pass
+
     def test_delete_folder(self):
         """Test case for delete_folder
 
@@ -217,6 +238,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for delete_project_user
 
         Remove a user from a project  # noqa: E501
+        """
+        pass
+
+    def test_delete_tag(self):
+        """Test case for delete_tag
+
+        Delete the tag  # noqa: E501
         """
         pass
 
@@ -465,6 +493,20 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_get_tag(self):
+        """Test case for get_tag
+
+        Retrieve a tag  # noqa: E501
+        """
+        pass
+
+    def test_get_tags(self):
+        """Test case for get_tags
+
+        Retrieve all tags  # noqa: E501
+        """
+        pass
+
     def test_get_validation(self):
         """Test case for get_validation
 
@@ -616,6 +658,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for update_project_user
 
         Change the user role in the cloud  # noqa: E501
+        """
+        pass
+
+    def test_update_tag(self):
+        """Test case for update_tag
+
+        Update some fields of the tag  # noqa: E501
         """
         pass
 

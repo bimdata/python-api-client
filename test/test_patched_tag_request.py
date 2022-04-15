@@ -13,13 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.tag import Tag
-globals()['Tag'] = Tag
-from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 
 
-class TestDocument(unittest.TestCase):
-    """Document unit test stubs"""
+class TestPatchedTagRequest(unittest.TestCase):
+    """PatchedTagRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +25,10 @@ class TestDocument(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testDocument(self):
-        """Test Document"""
+    def testPatchedTagRequest(self):
+        """Test PatchedTagRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Document()  # noqa: E501
+        # model = PatchedTagRequest()  # noqa: E501
         pass
 
 

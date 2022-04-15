@@ -128,6 +128,7 @@ from bimdata_api_client.model.patched_ruleset_request import PatchedRulesetReque
 from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
 from bimdata_api_client.model.patched_system_request import PatchedSystemRequest
+from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
 from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
@@ -212,6 +213,9 @@ from bimdata_api_client.model.stage_request import StageRequest
 from bimdata_api_client.model.storey import Storey
 from bimdata_api_client.model.system import System
 from bimdata_api_client.model.system_request import SystemRequest
+from bimdata_api_client.model.tag import Tag
+from bimdata_api_client.model.tag_id_request import TagIdRequest
+from bimdata_api_client.model.tag_request import TagRequest
 from bimdata_api_client.model.topic import Topic
 from bimdata_api_client.model.topic_request import TopicRequest
 from bimdata_api_client.model.topic_status import TopicStatus

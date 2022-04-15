@@ -135,6 +135,7 @@ bimdata_api_client/model/patched_ruleset_request.py
 bimdata_api_client/model/patched_space_request.py
 bimdata_api_client/model/patched_stage_request.py
 bimdata_api_client/model/patched_system_request.py
+bimdata_api_client/model/patched_tag_request.py
 bimdata_api_client/model/patched_topic_request.py
 bimdata_api_client/model/patched_topic_status_request.py
 bimdata_api_client/model/patched_topic_type_request.py
@@ -219,6 +220,9 @@ bimdata_api_client/model/stage_request.py
 bimdata_api_client/model/storey.py
 bimdata_api_client/model/system.py
 bimdata_api_client/model/system_request.py
+bimdata_api_client/model/tag.py
+bimdata_api_client/model/tag_id_request.py
+bimdata_api_client/model/tag_request.py
 bimdata_api_client/model/topic.py
 bimdata_api_client/model/topic_request.py
 bimdata_api_client/model/topic_status.py
@@ -375,6 +379,7 @@ docs/PatchedRulesetRequest.md
 docs/PatchedSpaceRequest.md
 docs/PatchedStageRequest.md
 docs/PatchedSystemRequest.md
+docs/PatchedTagRequest.md
 docs/PatchedTopicRequest.md
 docs/PatchedTopicStatusRequest.md
 docs/PatchedTopicTypeRequest.md
@@ -460,6 +465,9 @@ docs/StageRequest.md
 docs/Storey.md
 docs/System.md
 docs/SystemRequest.md
+docs/Tag.md
+docs/TagIdRequest.md
+docs/TagRequest.md
 docs/Topic.md
 docs/TopicRequest.md
 docs/TopicStatus.md
@@ -618,6 +626,7 @@ test/test_patched_ruleset_request.py
 test/test_patched_space_request.py
 test/test_patched_stage_request.py
 test/test_patched_system_request.py
+test/test_patched_tag_request.py
 test/test_patched_topic_request.py
 test/test_patched_topic_status_request.py
 test/test_patched_topic_type_request.py
@@ -703,6 +712,9 @@ test/test_stage_request.py
 test/test_storey.py
 test/test_system.py
 test/test_system_request.py
+test/test_tag.py
+test/test_tag_id_request.py
+test/test_tag_request.py
 test/test_topic.py
 test/test_topic_request.py
 test/test_topic_status.py

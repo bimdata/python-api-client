@@ -239,6 +239,7 @@ Class | Method | HTTP request | Description
 *CheckerApi* | [**update_rule_component**](docs/CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
 *CheckerApi* | [**update_ruleset**](docs/CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
 *CollaborationApi* | [**accept_validation**](docs/CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
+*CollaborationApi* | [**add_document_tag**](docs/CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
 *CollaborationApi* | [**add_group_member**](docs/CollaborationApi.md#add_group_member) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member | Add a user to a group
 *CollaborationApi* | [**cancel_cloud_user_invitation**](docs/CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**cancel_project_user_invitation**](docs/CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
@@ -253,6 +254,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_manage_group**](docs/CollaborationApi.md#create_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group | Create a group
 *CollaborationApi* | [**create_project**](docs/CollaborationApi.md#create_project) | **POST** /cloud/{cloud_pk}/project | Create a project
 *CollaborationApi* | [**create_project_access_token**](docs/CollaborationApi.md#create_project_access_token) | **POST** /cloud/{cloud_pk}/project/{project_pk}/access-token | Create a token for this project
+*CollaborationApi* | [**create_tag**](docs/CollaborationApi.md#create_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/tag | Create a tag
 *CollaborationApi* | [**create_validation**](docs/CollaborationApi.md#create_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | Add a validation to a visa
 *CollaborationApi* | [**create_visa**](docs/CollaborationApi.md#create_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | Create a visa
 *CollaborationApi* | [**create_visa_comment**](docs/CollaborationApi.md#create_visa_comment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment | Add a comment
@@ -260,12 +262,14 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_cloud**](docs/CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 *CollaborationApi* | [**delete_cloud_user**](docs/CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
 *CollaborationApi* | [**delete_document**](docs/CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
+*CollaborationApi* | [**delete_document_tag**](docs/CollaborationApi.md#delete_document_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag/{id} | Delete a tag from a document
 *CollaborationApi* | [**delete_folder**](docs/CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
 *CollaborationApi* | [**delete_group_member**](docs/CollaborationApi.md#delete_group_member) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id} | Delete a user from a group
 *CollaborationApi* | [**delete_manage_group**](docs/CollaborationApi.md#delete_manage_group) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Delete a group
 *CollaborationApi* | [**delete_project**](docs/CollaborationApi.md#delete_project) | **DELETE** /cloud/{cloud_pk}/project/{id} | Delete a project
 *CollaborationApi* | [**delete_project_access_token**](docs/CollaborationApi.md#delete_project_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Delete a token
 *CollaborationApi* | [**delete_project_user**](docs/CollaborationApi.md#delete_project_user) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Remove a user from a project
+*CollaborationApi* | [**delete_tag**](docs/CollaborationApi.md#delete_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/tag/{id} | Delete the tag
 *CollaborationApi* | [**delete_validation**](docs/CollaborationApi.md#delete_validation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Remove a validation
 *CollaborationApi* | [**delete_visa**](docs/CollaborationApi.md#delete_visa) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Remove a visa
 *CollaborationApi* | [**delete_visa_comment**](docs/CollaborationApi.md#delete_visa_comment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Remove a comment
@@ -301,6 +305,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_projects**](docs/CollaborationApi.md#get_projects) | **GET** /cloud/{cloud_pk}/project | Retrieve all projects
 *CollaborationApi* | [**get_self_projects**](docs/CollaborationApi.md#get_self_projects) | **GET** /user/projects | List current user&#39;s projects
 *CollaborationApi* | [**get_self_user**](docs/CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
+*CollaborationApi* | [**get_tag**](docs/CollaborationApi.md#get_tag) | **GET** /cloud/{cloud_pk}/project/{project_pk}/tag/{id} | Retrieve a tag
+*CollaborationApi* | [**get_tags**](docs/CollaborationApi.md#get_tags) | **GET** /cloud/{cloud_pk}/project/{project_pk}/tag | Retrieve all tags
 *CollaborationApi* | [**get_validation**](docs/CollaborationApi.md#get_validation) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Retrieve a validation to a visa
 *CollaborationApi* | [**get_validations**](docs/CollaborationApi.md#get_validations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | List all validations to a visa
 *CollaborationApi* | [**get_visa**](docs/CollaborationApi.md#get_visa) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Retrieve a visa of a document
@@ -323,6 +329,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
+*CollaborationApi* | [**update_tag**](docs/CollaborationApi.md#update_tag) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/tag/{id} | Update some fields of the tag
 *CollaborationApi* | [**update_validation**](docs/CollaborationApi.md#update_validation) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Update the validator of validation
 *CollaborationApi* | [**update_visa**](docs/CollaborationApi.md#update_visa) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Update some fields of a visa
 *CollaborationApi* | [**update_visa_comment**](docs/CollaborationApi.md#update_visa_comment) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Update some fields of a comment
@@ -757,6 +764,7 @@ Class | Method | HTTP request | Description
  - [PatchedSpaceRequest](docs/PatchedSpaceRequest.md)
  - [PatchedStageRequest](docs/PatchedStageRequest.md)
  - [PatchedSystemRequest](docs/PatchedSystemRequest.md)
+ - [PatchedTagRequest](docs/PatchedTagRequest.md)
  - [PatchedTopicRequest](docs/PatchedTopicRequest.md)
  - [PatchedTopicStatusRequest](docs/PatchedTopicStatusRequest.md)
  - [PatchedTopicTypeRequest](docs/PatchedTopicTypeRequest.md)
@@ -841,6 +849,9 @@ Class | Method | HTTP request | Description
  - [Storey](docs/Storey.md)
  - [System](docs/System.md)
  - [SystemRequest](docs/SystemRequest.md)
+ - [Tag](docs/Tag.md)
+ - [TagIdRequest](docs/TagIdRequest.md)
+ - [TagRequest](docs/TagRequest.md)
  - [Topic](docs/Topic.md)
  - [TopicRequest](docs/TopicRequest.md)
  - [TopicStatus](docs/TopicStatus.md)
