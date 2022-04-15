@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v9.1.0 (2022-04-15)
+### Feature
+* Create document tag views (#513)
+
+* create document tag views
+
+* fix: serializer readOnly
+
+* add admin tags
+
+* add inline Tag Project ([`3c00f75`](https://github.com/bimdata/python-api-client/commit/3c00f752a14f58a4fc38ed9a3ff03ba54e005580))
+
 ## v9.0.0 (2022-04-12)
 ### Fix
 * Fix swagger generation ([`3952685`](https://github.com/bimdata/python-api-client/commit/3952685f9c92059b94605b178693de95cd670f1d))
