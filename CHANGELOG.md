@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.1.1 (2022-04-20)
+### Fix
+* Fix createDocument response missing ([`a7a4208`](https://github.com/bimdata/python-api-client/commit/a7a4208fa4163eb55e82628a570e743e217b85c3))
+
 ## v9.1.0 (2022-04-15)
 ### Feature
 * Create document tag views (#513)
