@@ -1296,7 +1296,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_document**
-> create_document(cloud_pk, project_pk, name, file)
+> Document create_document(cloud_pk, project_pk, name, file)
 
 Create a document
 
@@ -1313,6 +1313,7 @@ RCreate a document. If the document is an IFC, an IFC model will be created and 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document import Document
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1369,7 +1370,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create a document
-        api_instance.create_document(cloud_pk, project_pk, name, file)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
 
@@ -1377,7 +1379,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create a document
-        api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent=parent, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
 ```
@@ -1402,7 +1405,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**Document**](Document.md)
 
 ### Authorization
 
@@ -1411,13 +1414,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **402** | You have reached your upload limit. You must pay more storage |  -  |

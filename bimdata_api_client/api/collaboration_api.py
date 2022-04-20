@@ -805,7 +805,7 @@ class CollaborationApi(object):
         )
         self.create_document_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': (Document,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -947,7 +947,9 @@ class CollaborationApi(object):
                 }
             },
             headers_map={
-                'accept': [],
+                'accept': [
+                    'application/json'
+                ],
                 'content_type': [
                     'multipart/form-data',
                     'application/x-www-form-urlencoded'
@@ -7467,7 +7469,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            Document
                 If the method is called asynchronously, returns the request
                 thread.
         """
