@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.2.0 (2022-04-21)
+### Feature
+* Add bcf pins (#515)
+
+* add bcf pins
+
+* add view tests ([`8948499`](https://github.com/bimdata/python-api-client/commit/8948499b4f427735081404a23b9c68fe2f1b12d4))
+
 ## v9.1.1 (2022-04-20)
 ### Fix
 * Fix createDocument response missing ([`a7a4208`](https://github.com/bimdata/python-api-client/commit/a7a4208fa4163eb55e82628a570e743e217b85c3))
