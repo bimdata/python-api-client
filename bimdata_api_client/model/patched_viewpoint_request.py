@@ -110,6 +110,7 @@ class PatchedViewpointRequest(ModelNormal):
             'clipping_planes': ([ClippingPlaneRequest], none_type,),  # noqa: E501
             'snapshot': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'pins': ([[float]], none_type,),  # noqa: E501
             'temp_id': (int, none_type,),  # noqa: E501
         }
 
@@ -127,6 +128,7 @@ class PatchedViewpointRequest(ModelNormal):
         'clipping_planes': 'clipping_planes',  # noqa: E501
         'snapshot': 'snapshot',  # noqa: E501
         'components': 'components',  # noqa: E501
+        'pins': 'pins',  # noqa: E501
         'temp_id': 'temp_id',  # noqa: E501
     }
 
@@ -179,6 +181,7 @@ class PatchedViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 
@@ -269,6 +272,7 @@ class PatchedViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 

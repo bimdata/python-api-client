@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **clipping_planes** | [**[ClippingPlaneRequest], none_type**](ClippingPlaneRequest.md) |  | [optional] 
 **snapshot** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **components** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
+**pins** | **[[float]], none_type** | Non standard field. Pins is a list of points representing annotation positions | [optional] 
 **temp_id** | **int, none_type** | Only used when using POST on the full-topic route to bind viewpoint with comment | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

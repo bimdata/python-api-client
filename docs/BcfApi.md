@@ -873,6 +873,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
                 snapshot=None,
                 components=None,
+                pins=[
+                    [
+                        3.14,
+                    ],
+                ],
                 temp_id=1,
             ),
         ],
@@ -1167,6 +1172,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         snapshot=None,
         components=None,
+        pins=[
+            [
+                3.14,
+            ],
+        ],
         temp_id=1,
     ) # ViewpointRequest |  (optional)
 
@@ -2561,6 +2571,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
                 snapshot=None,
                 components=None,
+                pins=[
+                    [
+                        3.14,
+                    ],
+                ],
                 temp_id=1,
             ),
         ],
@@ -2859,6 +2874,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         snapshot=None,
         components=None,
+        pins=[
+            [
+                3.14,
+            ],
+        ],
         temp_id=1,
     ) # ViewpointRequest |  (optional)
 
@@ -5968,6 +5988,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 ],
                 snapshot=None,
                 components=None,
+                pins=[
+                    [
+                        3.14,
+                    ],
+                ],
                 temp_id=1,
             ),
         ],
@@ -6274,6 +6299,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         ],
         snapshot=None,
         components=None,
+        pins=[
+            [
+                3.14,
+            ],
+        ],
         temp_id=1,
     ) # PatchedViewpointRequest |  (optional)
 

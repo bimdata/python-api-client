@@ -110,6 +110,7 @@ class Viewpoint(ModelNormal):
             'clipping_planes': ([ClippingPlane], none_type,),  # noqa: E501
             'snapshot': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'pins': ([[float]], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -126,6 +127,7 @@ class Viewpoint(ModelNormal):
         'clipping_planes': 'clipping_planes',  # noqa: E501
         'snapshot': 'snapshot',  # noqa: E501
         'components': 'components',  # noqa: E501
+        'pins': 'pins',  # noqa: E501
     }
 
     read_only_vars = {
@@ -177,6 +179,7 @@ class Viewpoint(ModelNormal):
             clipping_planes ([ClippingPlane], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -266,6 +269,7 @@ class Viewpoint(ModelNormal):
             clipping_planes ([ClippingPlane], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
+            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
