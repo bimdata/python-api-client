@@ -5,7 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
-**parent** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **project** | **int** |  | [readonly] 
 **name** | **str** | Shown name of the file | 
 **file** | **str** |  | 

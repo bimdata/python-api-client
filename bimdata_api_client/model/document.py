@@ -31,9 +31,7 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.folder import Folder
     from bimdata_api_client.model.tag import Tag
-    globals()['Folder'] = Folder
     globals()['Tag'] = Tag
 
 
@@ -106,7 +104,6 @@ class Document(ModelNormal):
         lazy_import()
         return {
             'id': (int,),  # noqa: E501
-            'parent': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'project': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'file': (str,),  # noqa: E501
@@ -130,7 +127,6 @@ class Document(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'parent': 'parent',  # noqa: E501
         'project': 'project',  # noqa: E501
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -149,7 +145,6 @@ class Document(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
-        'parent',  # noqa: E501
         'project',  # noqa: E501
         'tags',  # noqa: E501
         'created_at',  # noqa: E501
@@ -163,12 +158,11 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent, project, name, file, tags, created_at, updated_at, model_id, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, project, name, file, tags, created_at, updated_at, model_id, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
             id (int):
-            parent (bool, date, datetime, dict, float, int, list, str, none_type):
             project (int):
             name (str): Shown name of the file
             file (str):
@@ -243,7 +237,6 @@ class Document(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.parent = parent
         self.project = project
         self.name = name
         self.file = file
