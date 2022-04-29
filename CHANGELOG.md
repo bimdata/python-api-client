@@ -2,6 +2,22 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.0 (2022-04-29)
+### Feature
+* Feat/versionning (#517)
+
+* add model, migrations, views, serializers
+
+* test DocumentHistory view
+
+* fix last tests
+
+* filter list model
+
+* fix migration and add reverse_code
+
+* renaming old_version_id ([`d562d95`](https://github.com/bimdata/python-api-client/commit/d562d9583f76b61f0f6ddf97ec80150a6fd6b902))
+
 ## v9.2.0 (2022-04-21)
 ### Feature
 * Add bcf pins (#515)
