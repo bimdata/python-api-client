@@ -13,7 +13,9 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.tag import Tag
+globals()['Folder'] = Folder
 globals()['Tag'] = Tag
 from bimdata_api_client.model.document import Document
 

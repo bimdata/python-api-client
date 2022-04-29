@@ -125,7 +125,7 @@ class RecursiveFolderChildren(ModelNormal):
         lazy_import()
         return {
             'id': (int,),  # noqa: E501
-            'parent_id': (int,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'type': (str,),  # noqa: E501
             'nature': (str,),  # noqa: E501
             'model_type': (str, none_type,),  # noqa: E501
@@ -175,6 +175,7 @@ class RecursiveFolderChildren(ModelNormal):
     }
 
     read_only_vars = {
+        'parent_id',  # noqa: E501
         'type',  # noqa: E501
         'nature',  # noqa: E501
         'model_type',  # noqa: E501
@@ -194,7 +195,7 @@ class RecursiveFolderChildren(ModelNormal):
 
         Args:
             id (int):
-            parent_id (int):
+            parent_id (int, none_type):
             type (str): DEPRECATED: Use 'nature' instead. Values can be 'Folder', 'Document' or 'Ifc'. It is usefull to parse the tree and discriminate folders and files
             nature (str): Values can be 'Folder', 'Document' or 'Model'. It is usefull to parse the tree and discriminate folders and files
             model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX
@@ -305,12 +306,11 @@ class RecursiveFolderChildren(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, parent_id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI
 
         Args:
             id (int):
-            parent_id (int):
             name (str):
             created_at (datetime):
             updated_at (datetime):
@@ -378,7 +378,6 @@ class RecursiveFolderChildren(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.parent_id = parent_id
         self.name = name
         self.created_at = created_at
         self.updated_at = updated_at

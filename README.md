@@ -262,6 +262,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_cloud**](docs/CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 *CollaborationApi* | [**delete_cloud_user**](docs/CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
 *CollaborationApi* | [**delete_document**](docs/CollaborationApi.md#delete_document) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Delete the document
+*CollaborationApi* | [**delete_document_history**](docs/CollaborationApi.md#delete_document_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id} | Delete the document
 *CollaborationApi* | [**delete_document_tag**](docs/CollaborationApi.md#delete_document_tag) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag/{id} | Delete a tag from a document
 *CollaborationApi* | [**delete_folder**](docs/CollaborationApi.md#delete_folder) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Delete a folder
 *CollaborationApi* | [**delete_group_member**](docs/CollaborationApi.md#delete_group_member) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member/{id} | Delete a user from a group
@@ -274,6 +275,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_visa**](docs/CollaborationApi.md#delete_visa) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Remove a visa
 *CollaborationApi* | [**delete_visa_comment**](docs/CollaborationApi.md#delete_visa_comment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Remove a comment
 *CollaborationApi* | [**deny_validation**](docs/CollaborationApi.md#deny_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/deny | Deny a validation
+*CollaborationApi* | [**exit_version_document_history**](docs/CollaborationApi.md#exit_version_document_history) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id}/exit | Exit of the history version
 *CollaborationApi* | [**get_classification**](docs/CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
 *CollaborationApi* | [**get_cloud**](docs/CollaborationApi.md#get_cloud) | **GET** /cloud/{id} | Retrieve one cloud
@@ -283,6 +285,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_cloud_users**](docs/CollaborationApi.md#get_cloud_users) | **GET** /cloud/{cloud_pk}/user | Retrieve all users in a cloud, or a list with a filter by email
 *CollaborationApi* | [**get_clouds**](docs/CollaborationApi.md#get_clouds) | **GET** /cloud | Retrieve all clouds
 *CollaborationApi* | [**get_document**](docs/CollaborationApi.md#get_document) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Retrieve a document
+*CollaborationApi* | [**get_document_histories**](docs/CollaborationApi.md#get_document_histories) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history | Retrieve all document histories
+*CollaborationApi* | [**get_document_history**](docs/CollaborationApi.md#get_document_history) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id} | Retrieve a document
 *CollaborationApi* | [**get_documents**](docs/CollaborationApi.md#get_documents) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document | Retrieve all documents
 *CollaborationApi* | [**get_folder**](docs/CollaborationApi.md#get_folder) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Retrieve a folder
 *CollaborationApi* | [**get_folder_project_users**](docs/CollaborationApi.md#get_folder_project_users) | **GET** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/user | Retrieve all users in a project with the permission on the folder
@@ -316,6 +320,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**invite_cloud_user**](docs/CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
 *CollaborationApi* | [**invite_project_user**](docs/CollaborationApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
 *CollaborationApi* | [**leave_project**](docs/CollaborationApi.md#leave_project) | **POST** /cloud/{cloud_pk}/project/{id}/leave | Leave the project
+*CollaborationApi* | [**make_head_version_document_history**](docs/CollaborationApi.md#make_head_version_document_history) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/{id}/head-version | Make the head of the version
 *CollaborationApi* | [**pause_visa**](docs/CollaborationApi.md#pause_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/pause | Pause a visa of a document
 *CollaborationApi* | [**reset_validation**](docs/CollaborationApi.md#reset_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/reset | Reset a validation
 *CollaborationApi* | [**resume_visa**](docs/CollaborationApi.md#resume_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/resume | Resume a visa of a document

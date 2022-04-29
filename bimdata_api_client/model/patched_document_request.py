@@ -108,7 +108,6 @@ class PatchedDocumentRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'parent': (int, none_type,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'creator': (int, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
@@ -118,6 +117,7 @@ class PatchedDocumentRequest(ModelNormal):
             'size': (int, none_type,),  # noqa: E501
             'model_source': (str,),  # noqa: E501
             'ifc_source': (str,),  # noqa: E501
+            'successor_of': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -126,7 +126,6 @@ class PatchedDocumentRequest(ModelNormal):
 
 
     attribute_map = {
-        'parent': 'parent',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'creator': 'creator',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -136,6 +135,7 @@ class PatchedDocumentRequest(ModelNormal):
         'size': 'size',  # noqa: E501
         'model_source': 'model_source',  # noqa: E501
         'ifc_source': 'ifc_source',  # noqa: E501
+        'successor_of': 'successor_of',  # noqa: E501
     }
 
     read_only_vars = {
@@ -179,7 +179,6 @@ class PatchedDocumentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent (int, none_type): [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
             creator (int, none_type): [optional]  # noqa: E501
             name (str): Shown name of the file. [optional]  # noqa: E501
@@ -189,6 +188,7 @@ class PatchedDocumentRequest(ModelNormal):
             size (int, none_type): Size of the file.. [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
+            successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -270,7 +270,6 @@ class PatchedDocumentRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            parent (int, none_type): [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
             creator (int, none_type): [optional]  # noqa: E501
             name (str): Shown name of the file. [optional]  # noqa: E501
@@ -280,6 +279,7 @@ class PatchedDocumentRequest(ModelNormal):
             size (int, none_type): Size of the file.. [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
+            successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

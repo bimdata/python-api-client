@@ -92,7 +92,6 @@ class RecursiveFolderChildrenRequest(ModelNormal):
         """
         return {
             'id': (int,),  # noqa: E501
-            'parent_id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -110,7 +109,6 @@ class RecursiveFolderChildrenRequest(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
-        'parent_id': 'parent_id',  # noqa: E501
         'name': 'name',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
@@ -128,12 +126,11 @@ class RecursiveFolderChildrenRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent_id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildrenRequest - a model defined in OpenAPI
 
         Args:
             id (int):
-            parent_id (int):
             name (str):
             created_at (datetime):
             updated_at (datetime):
@@ -202,7 +199,6 @@ class RecursiveFolderChildrenRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.parent_id = parent_id
         self.name = name
         self.created_at = created_at
         self.updated_at = updated_at
@@ -226,12 +222,11 @@ class RecursiveFolderChildrenRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, id, parent_id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def __init__(self, id, name, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildrenRequest - a model defined in OpenAPI
 
         Args:
             id (int):
-            parent_id (int):
             name (str):
             created_at (datetime):
             updated_at (datetime):
@@ -298,7 +293,6 @@ class RecursiveFolderChildrenRequest(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
-        self.parent_id = parent_id
         self.name = name
         self.created_at = created_at
         self.updated_at = updated_at
