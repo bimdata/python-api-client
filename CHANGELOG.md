@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.1 (2022-04-29)
+### Fix
+* Remove parent from document serialization ([#521](https://github.com/bimdata/python-api-client/issues/521)) ([`fbc5445`](https://github.com/bimdata/python-api-client/commit/fbc544512b74cc852b2b6f155cb2b62b79122289))
+
 ## v9.3.0 (2022-04-29)
 ### Feature
 * Feat/versionning (#517)
