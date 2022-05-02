@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.2 (2022-05-02)
+### Fix
+* Serialize document creator ([`cb1f35c`](https://github.com/bimdata/python-api-client/commit/cb1f35c2348a89acb7f8f0b3d47ff5d86e4eb80b))
+
 ## v9.3.1 (2022-04-29)
 ### Fix
 * Remove parent from document serialization ([#521](https://github.com/bimdata/python-api-client/issues/521)) ([`fbc5445`](https://github.com/bimdata/python-api-client/commit/fbc544512b74cc852b2b6f155cb2b62b79122289))
