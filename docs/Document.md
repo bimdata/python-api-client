@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
+**created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **project** | **int** |  | [readonly] 
 **name** | **str** | Shown name of the file | 
 **file** | **str** |  | 
@@ -15,7 +16,6 @@ Name | Type | Description | Notes
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
-**creator** | **int, none_type** |  | [optional] 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 
 **size** | **int, none_type** | Size of the file. | [optional] 

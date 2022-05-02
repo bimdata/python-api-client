@@ -824,7 +824,6 @@ class CollaborationApi(object):
                     'name',
                     'file',
                     'parent_id',
-                    'creator',
                     'file_name',
                     'description',
                     'size',
@@ -840,7 +839,6 @@ class CollaborationApi(object):
                 ],
                 'nullable': [
                     'parent_id',
-                    'creator',
                     'description',
                     'size',
                 ],
@@ -899,8 +897,6 @@ class CollaborationApi(object):
                         (file_type,),
                     'parent_id':
                         (int, none_type,),
-                    'creator':
-                        (int, none_type,),
                     'file_name':
                         (str,),
                     'description':
@@ -920,7 +916,6 @@ class CollaborationApi(object):
                     'name': 'name',
                     'file': 'file',
                     'parent_id': 'parent_id',
-                    'creator': 'creator',
                     'file_name': 'file_name',
                     'description': 'description',
                     'size': 'size',
@@ -934,7 +929,6 @@ class CollaborationApi(object):
                     'name': 'form',
                     'file': 'form',
                     'parent_id': 'form',
-                    'creator': 'form',
                     'file_name': 'form',
                     'description': 'form',
                     'size': 'form',
@@ -7785,7 +7779,6 @@ class CollaborationApi(object):
 
         Keyword Args:
             parent_id (int, none_type): [optional]
-            creator (int, none_type): [optional]
             file_name (str): Full name of the file. [optional]
             description (str, none_type): Description of the file. [optional]
             size (int, none_type): Size of the file.. [optional]

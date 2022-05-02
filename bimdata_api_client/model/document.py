@@ -32,7 +32,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.tag import Tag
+    from bimdata_api_client.model.user import User
     globals()['Tag'] = Tag
+    globals()['User'] = User
 
 
 class Document(ModelNormal):
@@ -104,6 +106,7 @@ class Document(ModelNormal):
         lazy_import()
         return {
             'id': (int,),  # noqa: E501
+            'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'project': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'file': (str,),  # noqa: E501
@@ -114,7 +117,6 @@ class Document(ModelNormal):
             'ifc_id': (int, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
-            'creator': (int, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'size': (int, none_type,),  # noqa: E501
@@ -127,6 +129,7 @@ class Document(ModelNormal):
 
     attribute_map = {
         'id': 'id',  # noqa: E501
+        'created_by': 'created_by',  # noqa: E501
         'project': 'project',  # noqa: E501
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -137,7 +140,6 @@ class Document(ModelNormal):
         'ifc_id': 'ifc_id',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
-        'creator': 'creator',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'size': 'size',  # noqa: E501
@@ -145,6 +147,7 @@ class Document(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
+        'created_by',  # noqa: E501
         'project',  # noqa: E501
         'tags',  # noqa: E501
         'created_at',  # noqa: E501
@@ -158,11 +161,12 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, project, name, file, tags, created_at, updated_at, model_id, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, tags, created_at, updated_at, model_id, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
             id (int):
+            created_by (bool, date, datetime, dict, float, int, list, str, none_type):
             project (int):
             name (str): Shown name of the file
             file (str):
@@ -205,7 +209,6 @@ class Document(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            creator (int, none_type): [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             size (int, none_type): Size of the file.. [optional]  # noqa: E501
@@ -237,6 +240,7 @@ class Document(ModelNormal):
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
         self.id = id
+        self.created_by = created_by
         self.project = project
         self.name = name
         self.file = file
@@ -303,7 +307,6 @@ class Document(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            creator (int, none_type): [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             size (int, none_type): Size of the file.. [optional]  # noqa: E501

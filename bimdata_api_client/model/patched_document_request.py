@@ -109,7 +109,6 @@ class PatchedDocumentRequest(ModelNormal):
         """
         return {
             'parent_id': (int, none_type,),  # noqa: E501
-            'creator': (int, none_type,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -127,7 +126,6 @@ class PatchedDocumentRequest(ModelNormal):
 
     attribute_map = {
         'parent_id': 'parent_id',  # noqa: E501
-        'creator': 'creator',  # noqa: E501
         'name': 'name',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -180,7 +178,6 @@ class PatchedDocumentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            creator (int, none_type): [optional]  # noqa: E501
             name (str): Shown name of the file. [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
@@ -271,7 +268,6 @@ class PatchedDocumentRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            creator (int, none_type): [optional]  # noqa: E501
             name (str): Shown name of the file. [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501

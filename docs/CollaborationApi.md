@@ -1364,7 +1364,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     name = "name_example" # str | Shown name of the file
     file = open('/path/to/file', 'rb') # file_type | 
     parent_id = 1 # int, none_type |  (optional)
-    creator = 1 # int, none_type |  (optional)
     file_name = "file_name_example" # str | Full name of the file (optional)
     description = "description_example" # str, none_type | Description of the file (optional)
     size = 0 # int, none_type | Size of the file. (optional)
@@ -1384,7 +1383,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, creator=creator, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -1400,7 +1399,6 @@ Name | Type | Description  | Notes
  **name** | **str**| Shown name of the file |
  **file** | **file_type**|  |
  **parent_id** | **int, none_type**|  | [optional]
- **creator** | **int, none_type**|  | [optional]
  **file_name** | **str**| Full name of the file | [optional]
  **description** | **str, none_type**| Description of the file | [optional]
  **size** | **int, none_type**| Size of the file. | [optional]
@@ -9813,7 +9811,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_document_request = PatchedDocumentRequest(
         parent_id=1,
-        creator=1,
         name="name_example",
         file_name="file_name_example",
         description="description_example",
