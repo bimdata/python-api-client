@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.3 (2022-05-03)
+### Fix
+* Reorder document history ([`c1afe9e`](https://github.com/bimdata/python-api-client/commit/c1afe9ea010a61da0ed2d0c0c7e43437e56bd311))
+
 ## v9.3.2 (2022-05-02)
 ### Fix
 * Serialize document creator ([`cb1f35c`](https://github.com/bimdata/python-api-client/commit/cb1f35c2348a89acb7f8f0b3d47ff5d86e4eb80b))
