@@ -62,6 +62,20 @@ class Document(ModelNormal):
     """
 
     allowed_values = {
+        ('model_type',): {
+            'None': None,
+            'IFC': "IFC",
+            'DWG': "DWG",
+            'DXF': "DXF",
+            'GLTF': "GLTF",
+            'PDF': "PDF",
+            'JPEG': "JPEG",
+            'PNG': "PNG",
+            'OBJ': "OBJ",
+            'DAE': "DAE",
+            'BFX': "BFX",
+            'NULL': "null",
+        },
         ('user_permission',): {
             '1': 1,
             '50': 50,
@@ -114,6 +128,7 @@ class Document(ModelNormal):
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'model_id': (int, none_type,),  # noqa: E501
+            'model_type': (str, none_type,),  # noqa: E501
             'ifc_id': (int, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
@@ -137,6 +152,7 @@ class Document(ModelNormal):
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
         'model_id': 'model_id',  # noqa: E501
+        'model_type': 'model_type',  # noqa: E501
         'ifc_id': 'ifc_id',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
@@ -153,6 +169,7 @@ class Document(ModelNormal):
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
         'model_id',  # noqa: E501
+        'model_type',  # noqa: E501
         'ifc_id',  # noqa: E501
         'user_permission',  # noqa: E501
     }
@@ -161,7 +178,7 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, tags, created_at, updated_at, model_id, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, tags, created_at, updated_at, model_id, model_type, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -174,6 +191,7 @@ class Document(ModelNormal):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             model_id (int, none_type):
+            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             user_permission (int): Aggregate of group user permissions and folder default permission
 
@@ -248,6 +266,7 @@ class Document(ModelNormal):
         self.created_at = created_at
         self.updated_at = updated_at
         self.model_id = model_id
+        self.model_type = model_type
         self.ifc_id = ifc_id
         self.user_permission = user_permission
         for var_name, var_value in kwargs.items():

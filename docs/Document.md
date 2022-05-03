@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **model_id** | **int, none_type** |  | [readonly] 
+**model_type** | **str, none_type** | Model&#39;s type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX | [readonly] 
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
