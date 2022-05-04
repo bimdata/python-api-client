@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.5 (2022-05-04)
+### Fix
+* Add document_id to visa serializer ([`2ec598a`](https://github.com/bimdata/python-api-client/commit/2ec598a2b1bdc0ebdf270e7c74df463327a2db28))
+
 ## v9.3.4 (2022-05-04)
 ### Fix
 * Visa serialization in document (#522)
