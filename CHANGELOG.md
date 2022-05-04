@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.4 (2022-05-04)
+### Fix
+* Visa serialization in document (#522)
+
+* visa serialization in document
+
+* no prefetch tag ([`213c4d7`](https://github.com/bimdata/python-api-client/commit/213c4d7141e9c5c8fc00d80e21739d1dfa2f8bf8))
+
 ## v9.3.3 (2022-05-03)
 ### Fix
 * Reorder document history ([`c1afe9e`](https://github.com/bimdata/python-api-client/commit/c1afe9ea010a61da0ed2d0c0c7e43437e56bd311))
