@@ -15,8 +15,10 @@ import unittest
 import bimdata_api_client
 from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.user import User
+from bimdata_api_client.model.visa import Visa
 globals()['Tag'] = Tag
 globals()['User'] = User
+globals()['Visa'] = Visa
 from bimdata_api_client.model.document import Document
 
 

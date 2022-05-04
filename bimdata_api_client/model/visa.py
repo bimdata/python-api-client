@@ -31,11 +31,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.document import Document
     from bimdata_api_client.model.user_project import UserProject
     from bimdata_api_client.model.visa_comment import VisaComment
     from bimdata_api_client.model.visa_validation import VisaValidation
-    globals()['Document'] = Document
     globals()['UserProject'] = UserProject
     globals()['VisaComment'] = VisaComment
     globals()['VisaValidation'] = VisaValidation
@@ -104,7 +102,6 @@ class Visa(ModelNormal):
             'validations_in_error': ([int],),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
-            'document': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'comments': ([VisaComment],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -123,7 +120,6 @@ class Visa(ModelNormal):
         'validations_in_error': 'validations_in_error',  # noqa: E501
         'creator': 'creator',  # noqa: E501
         'status': 'status',  # noqa: E501
-        'document': 'document',  # noqa: E501
         'comments': 'comments',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
@@ -137,7 +133,6 @@ class Visa(ModelNormal):
         'validations_in_error',  # noqa: E501
         'creator',  # noqa: E501
         'status',  # noqa: E501
-        'document',  # noqa: E501
         'comments',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
@@ -147,7 +142,7 @@ class Visa(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, validations, validations_in_error, creator, status, document, comments, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, validations, validations_in_error, creator, status, comments, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """Visa - a model defined in OpenAPI
 
         Args:
@@ -156,7 +151,6 @@ class Visa(ModelNormal):
             validations_in_error ([int]): Validation IDs where one or more validators have no longer access to the visa document.
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             status (str):
-            document (bool, date, datetime, dict, float, int, list, str, none_type):
             comments ([VisaComment]):
             created_at (datetime):
             updated_at (datetime):
@@ -226,7 +220,6 @@ class Visa(ModelNormal):
         self.validations_in_error = validations_in_error
         self.creator = creator
         self.status = status
-        self.document = document
         self.comments = comments
         self.created_at = created_at
         self.updated_at = updated_at

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **name** | **str** | Shown name of the file | 
 **file** | **str** |  | 
 **tags** | [**[Tag]**](Tag.md) |  | [readonly] 
+**visas** | [**[Visa]**](Visa.md) |  | [readonly] 
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **model_id** | **int, none_type** |  | [readonly] 

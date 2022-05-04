@@ -116,6 +116,7 @@ class MarketplaceAppRequest(ModelNormal):
             'is_public': (bool,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
             'logo': (file_type, none_type,),  # noqa: E501
+            'file': (file_type, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -135,6 +136,7 @@ class MarketplaceAppRequest(ModelNormal):
         'is_public': 'is_public',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'logo': 'logo',  # noqa: E501
+        'file': 'file',  # noqa: E501
     }
 
     read_only_vars = {
@@ -191,6 +193,7 @@ class MarketplaceAppRequest(ModelNormal):
             is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (file_type, none_type): [optional]  # noqa: E501
+            file (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -288,6 +291,7 @@ class MarketplaceAppRequest(ModelNormal):
             is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (file_type, none_type): [optional]  # noqa: E501
+            file (file_type, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

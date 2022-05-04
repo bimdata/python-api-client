@@ -13,11 +13,9 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.visa_comment import VisaComment
 from bimdata_api_client.model.visa_validation import VisaValidation
-globals()['Document'] = Document
 globals()['UserProject'] = UserProject
 globals()['VisaComment'] = VisaComment
 globals()['VisaValidation'] = VisaValidation

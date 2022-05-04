@@ -33,8 +33,10 @@ from bimdata_api_client.exceptions import ApiAttributeError
 def lazy_import():
     from bimdata_api_client.model.tag import Tag
     from bimdata_api_client.model.user import User
+    from bimdata_api_client.model.visa import Visa
     globals()['Tag'] = Tag
     globals()['User'] = User
+    globals()['Visa'] = Visa
 
 
 class Document(ModelNormal):
@@ -125,6 +127,7 @@ class Document(ModelNormal):
             'name': (str,),  # noqa: E501
             'file': (str,),  # noqa: E501
             'tags': ([Tag],),  # noqa: E501
+            'visas': ([Visa],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'model_id': (int, none_type,),  # noqa: E501
@@ -149,6 +152,7 @@ class Document(ModelNormal):
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
         'tags': 'tags',  # noqa: E501
+        'visas': 'visas',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'updated_at': 'updated_at',  # noqa: E501
         'model_id': 'model_id',  # noqa: E501
@@ -166,6 +170,7 @@ class Document(ModelNormal):
         'created_by',  # noqa: E501
         'project',  # noqa: E501
         'tags',  # noqa: E501
+        'visas',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
         'model_id',  # noqa: E501
@@ -178,7 +183,7 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, tags, created_at, updated_at, model_id, model_type, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -188,6 +193,7 @@ class Document(ModelNormal):
             name (str): Shown name of the file
             file (str):
             tags ([Tag]):
+            visas ([Visa]):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             model_id (int, none_type):
@@ -263,6 +269,7 @@ class Document(ModelNormal):
         self.name = name
         self.file = file
         self.tags = tags
+        self.visas = visas
         self.created_at = created_at
         self.updated_at = updated_at
         self.model_id = model_id
