@@ -101,6 +101,7 @@ class Visa(ModelNormal):
             'validations': ([VisaValidation],),  # noqa: E501
             'validations_in_error': ([int],),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
+            'document_id': (int,),  # noqa: E501
             'status': (str,),  # noqa: E501
             'comments': ([VisaComment],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
@@ -119,6 +120,7 @@ class Visa(ModelNormal):
         'validations': 'validations',  # noqa: E501
         'validations_in_error': 'validations_in_error',  # noqa: E501
         'creator': 'creator',  # noqa: E501
+        'document_id': 'document_id',  # noqa: E501
         'status': 'status',  # noqa: E501
         'comments': 'comments',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
@@ -132,6 +134,7 @@ class Visa(ModelNormal):
         'validations',  # noqa: E501
         'validations_in_error',  # noqa: E501
         'creator',  # noqa: E501
+        'document_id',  # noqa: E501
         'status',  # noqa: E501
         'comments',  # noqa: E501
         'created_at',  # noqa: E501
@@ -142,7 +145,7 @@ class Visa(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, validations, validations_in_error, creator, status, comments, created_at, updated_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, validations, validations_in_error, creator, document_id, status, comments, created_at, updated_at, *args, **kwargs):  # noqa: E501
         """Visa - a model defined in OpenAPI
 
         Args:
@@ -150,6 +153,7 @@ class Visa(ModelNormal):
             validations ([VisaValidation]):
             validations_in_error ([int]): Validation IDs where one or more validators have no longer access to the visa document.
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
+            document_id (int):
             status (str):
             comments ([VisaComment]):
             created_at (datetime):
@@ -219,6 +223,7 @@ class Visa(ModelNormal):
         self.validations = validations
         self.validations_in_error = validations_in_error
         self.creator = creator
+        self.document_id = document_id
         self.status = status
         self.comments = comments
         self.created_at = created_at
