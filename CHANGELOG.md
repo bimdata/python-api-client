@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.7 (2022-05-05)
+### Fix
+* Rename operation_id ([`e04c180`](https://github.com/bimdata/python-api-client/commit/e04c180145e8ab619657a38b6c3a59c4eb13b1eb))
+
 ## v9.3.6 (2022-05-05)
 ### Fix
 * Delete all document version on delete (#525)
