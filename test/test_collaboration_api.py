@@ -164,8 +164,8 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_all_history(self):
-        """Test case for delete_all_history
+    def test_delete_all_document_history(self):
+        """Test case for delete_all_document_history
 
         Delete all document history  # noqa: E501
         """

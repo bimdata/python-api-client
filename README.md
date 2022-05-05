@@ -258,7 +258,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**create_validation**](docs/CollaborationApi.md#create_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | Add a validation to a visa
 *CollaborationApi* | [**create_visa**](docs/CollaborationApi.md#create_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | Create a visa
 *CollaborationApi* | [**create_visa_comment**](docs/CollaborationApi.md#create_visa_comment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment | Add a comment
-*CollaborationApi* | [**delete_all_history**](docs/CollaborationApi.md#delete_all_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete | Delete all document history
+*CollaborationApi* | [**delete_all_document_history**](docs/CollaborationApi.md#delete_all_document_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete | Delete all document history
 *CollaborationApi* | [**delete_classification**](docs/CollaborationApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
 *CollaborationApi* | [**delete_cloud**](docs/CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 *CollaborationApi* | [**delete_cloud_user**](docs/CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud

@@ -1524,7 +1524,7 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
-        self.delete_all_history_endpoint = _Endpoint(
+        self.delete_all_document_history_endpoint = _Endpoint(
             settings={
                 'response_type': None,
                 'auth': [
@@ -1534,7 +1534,7 @@ class CollaborationApi(object):
                     'Bearer'
                 ],
                 'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete',
-                'operation_id': 'delete_all_history',
+                'operation_id': 'delete_all_document_history',
                 'http_method': 'DELETE',
                 'servers': None,
             },
@@ -8613,7 +8613,7 @@ class CollaborationApi(object):
             visa_pk
         return self.create_visa_comment_endpoint.call_with_http_info(**kwargs)
 
-    def delete_all_history(
+    def delete_all_document_history(
         self,
         cloud_pk,
         document_pk,
@@ -8622,11 +8622,11 @@ class CollaborationApi(object):
     ):
         """Delete all document history  # noqa: E501
 
-        Delete all document history  Required scopes: document:write  # noqa: E501
+        Delete the document from the head version and all its history  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_all_history(cloud_pk, document_pk, project_pk, async_req=True)
+        >>> thread = api.delete_all_document_history(cloud_pk, document_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -8697,7 +8697,7 @@ class CollaborationApi(object):
             document_pk
         kwargs['project_pk'] = \
             project_pk
-        return self.delete_all_history_endpoint.call_with_http_info(**kwargs)
+        return self.delete_all_document_history_endpoint.call_with_http_info(**kwargs)
 
     def delete_classification(
         self,

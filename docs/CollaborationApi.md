@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**create_validation**](CollaborationApi.md#create_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | Add a validation to a visa
 [**create_visa**](CollaborationApi.md#create_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | Create a visa
 [**create_visa_comment**](CollaborationApi.md#create_visa_comment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment | Add a comment
-[**delete_all_history**](CollaborationApi.md#delete_all_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete | Delete all document history
+[**delete_all_document_history**](CollaborationApi.md#delete_all_document_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete | Delete all document history
 [**delete_classification**](CollaborationApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
 [**delete_cloud**](CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 [**delete_cloud_user**](CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
@@ -2362,12 +2362,12 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **delete_all_history**
-> delete_all_history(cloud_pk, document_pk, project_pk)
+# **delete_all_document_history**
+> delete_all_document_history(cloud_pk, document_pk, project_pk)
 
 Delete all document history
 
-Delete all document history  Required scopes: document:write
+Delete the document from the head version and all its history  Required scopes: document:write
 
 ### Example
 
@@ -2427,9 +2427,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Delete all document history
-        api_instance.delete_all_history(cloud_pk, document_pk, project_pk)
+        api_instance.delete_all_document_history(cloud_pk, document_pk, project_pk)
     except bimdata_api_client.ApiException as e:
-        print("Exception when calling CollaborationApi->delete_all_history: %s\n" % e)
+        print("Exception when calling CollaborationApi->delete_all_document_history: %s\n" % e)
 ```
 
 
