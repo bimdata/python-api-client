@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**create_validation**](CollaborationApi.md#create_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | Add a validation to a visa
 [**create_visa**](CollaborationApi.md#create_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | Create a visa
 [**create_visa_comment**](CollaborationApi.md#create_visa_comment) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment | Add a comment
+[**delete_all_history**](CollaborationApi.md#delete_all_history) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete | Delete all document history
 [**delete_classification**](CollaborationApi.md#delete_classification) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Delete a classification
 [**delete_cloud**](CollaborationApi.md#delete_cloud) | **DELETE** /cloud/{id} | Delete a cloud
 [**delete_cloud_user**](CollaborationApi.md#delete_cloud_user) | **DELETE** /cloud/{cloud_pk}/user/{id} | Remove a user from a cloud
@@ -2353,6 +2354,112 @@ Name | Type | Description  | Notes
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
 **201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_all_history**
+> delete_all_history(cloud_pk, document_pk, project_pk)
+
+Delete all document history
+
+Delete all document history  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    document_pk = 1 # int | A unique integer value identifying this document.
+    project_pk = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete all document history
+        api_instance.delete_all_history(cloud_pk, document_pk, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_all_history: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **document_pk** | **int**| A unique integer value identifying this document. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |

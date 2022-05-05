@@ -1524,6 +1524,70 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.delete_all_history_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/history/delete',
+                'operation_id': 'delete_all_history',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'document_pk',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'document_pk',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'document_pk':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'document_pk': 'document_pk',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'document_pk': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.delete_classification_endpoint = _Endpoint(
             settings={
                 'response_type': None,
@@ -8548,6 +8612,92 @@ class CollaborationApi(object):
         kwargs['visa_pk'] = \
             visa_pk
         return self.create_visa_comment_endpoint.call_with_http_info(**kwargs)
+
+    def delete_all_history(
+        self,
+        cloud_pk,
+        document_pk,
+        project_pk,
+        **kwargs
+    ):
+        """Delete all document history  # noqa: E501
+
+        Delete all document history  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_all_history(cloud_pk, document_pk, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            document_pk (int): A unique integer value identifying this document.
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['document_pk'] = \
+            document_pk
+        kwargs['project_pk'] = \
+            project_pk
+        return self.delete_all_history_endpoint.call_with_http_info(**kwargs)
 
     def delete_classification(
         self,
