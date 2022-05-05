@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.6 (2022-05-05)
+### Fix
+* Delete all document version on delete (#525)
+
+* delete all document version on delete
+
+* versioning: add delete history route ([`9aa819b`](https://github.com/bimdata/python-api-client/commit/9aa819bd370259e21f61686a2903f34069bcaada))
+
 ## v9.3.5 (2022-05-04)
 ### Fix
 * Add document_id to visa serializer ([`2ec598a`](https://github.com/bimdata/python-api-client/commit/2ec598a2b1bdc0ebdf270e7c74df463327a2db28))
