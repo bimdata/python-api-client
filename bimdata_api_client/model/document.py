@@ -134,6 +134,7 @@ class Document(ModelNormal):
             'model_type': (str, none_type,),  # noqa: E501
             'ifc_id': (int, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
+            'is_head_version': (bool,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
@@ -159,6 +160,7 @@ class Document(ModelNormal):
         'model_type': 'model_type',  # noqa: E501
         'ifc_id': 'ifc_id',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
+        'is_head_version': 'is_head_version',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
@@ -177,13 +179,14 @@ class Document(ModelNormal):
         'model_type',  # noqa: E501
         'ifc_id',  # noqa: E501
         'user_permission',  # noqa: E501
+        'is_head_version',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, is_head_version, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -200,6 +203,7 @@ class Document(ModelNormal):
             model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             user_permission (int): Aggregate of group user permissions and folder default permission
+            is_head_version (bool): Document is a head of version or is owned by another document
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -276,6 +280,7 @@ class Document(ModelNormal):
         self.model_type = model_type
         self.ifc_id = ifc_id
         self.user_permission = user_permission
+        self.is_head_version = is_head_version
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

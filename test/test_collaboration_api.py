@@ -199,13 +199,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_document_history(self):
-        """Test case for delete_document_history
-
-        Delete the document  # noqa: E501
-        """
-        pass
-
     def test_delete_document_tag(self):
         """Test case for delete_document_tag
 
@@ -290,13 +283,6 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
-    def test_exit_version_document_history(self):
-        """Test case for exit_version_document_history
-
-        Exit of the history version  # noqa: E501
-        """
-        pass
-
     def test_get_classification(self):
         """Test case for get_classification
 
@@ -364,13 +350,6 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_document_histories
 
         Retrieve all document histories  # noqa: E501
-        """
-        pass
-
-    def test_get_document_history(self):
-        """Test case for get_document_history
-
-        Retrieve a document  # noqa: E501
         """
         pass
 
@@ -602,6 +581,13 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for leave_project
 
         Leave the project  # noqa: E501
+        """
+        pass
+
+    def test_leave_version_document_history(self):
+        """Test case for leave_version_document_history
+
+        Leave the history version  # noqa: E501
         """
         pass
 

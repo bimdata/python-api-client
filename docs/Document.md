@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **model_type** | **str, none_type** | Model&#39;s type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX | [readonly] 
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead. | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
+**is_head_version** | **bool** | Document is a head of version or is owned by another document | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 
