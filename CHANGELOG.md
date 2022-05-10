@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.8 (2022-05-10)
+### Fix
+* Versioning: more permissive archi ([#528](https://github.com/bimdata/python-api-client/issues/528)) ([`4cb18fd`](https://github.com/bimdata/python-api-client/commit/4cb18fdbc2ebf3de4de3e82c183ff5f43c80a929))
+
 ## v9.3.7 (2022-05-05)
 ### Fix
 * Rename operation_id ([`e04c180`](https://github.com/bimdata/python-api-client/commit/e04c180145e8ab619657a38b6c3a59c4eb13b1eb))
