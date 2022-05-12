@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.9 (2022-05-12)
+### Fix
+* Add tag to document in dms-tree ([#533](https://github.com/bimdata/python-api-client/issues/533)) ([`4ffe2ea`](https://github.com/bimdata/python-api-client/commit/4ffe2ea7d309477ebf5305b4b80ae6d3f47ea3fd))
+
 ## v9.3.8 (2022-05-10)
 ### Fix
 * Versioning: more permissive archi ([#528](https://github.com/bimdata/python-api-client/issues/528)) ([`4cb18fd`](https://github.com/bimdata/python-api-client/commit/4cb18fdbc2ebf3de4de3e82c183ff5f43c80a929))
