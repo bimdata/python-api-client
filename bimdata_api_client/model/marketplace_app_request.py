@@ -113,7 +113,6 @@ class MarketplaceAppRequest(ModelNormal):
             'viewer_plugins_urls': ([str], none_type,),  # noqa: E501
             'webhook_secret': (str,),  # noqa: E501
             'settings_url': (str, none_type,),  # noqa: E501
-            'is_public': (bool,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
             'logo': (file_type, none_type,),  # noqa: E501
             'file': (file_type, none_type,),  # noqa: E501
@@ -133,7 +132,6 @@ class MarketplaceAppRequest(ModelNormal):
         'viewer_plugins_urls': 'viewer_plugins_urls',  # noqa: E501
         'webhook_secret': 'webhook_secret',  # noqa: E501
         'settings_url': 'settings_url',  # noqa: E501
-        'is_public': 'is_public',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'logo': 'logo',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -190,7 +188,6 @@ class MarketplaceAppRequest(ModelNormal):
             viewer_plugins_urls ([str], none_type): [optional]  # noqa: E501
             webhook_secret (str): [optional]  # noqa: E501
             settings_url (str, none_type): this URL will be called with query params ?cloud_id=. [optional]  # noqa: E501
-            is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (file_type, none_type): [optional]  # noqa: E501
             file (file_type, none_type): [optional]  # noqa: E501
@@ -288,7 +285,6 @@ class MarketplaceAppRequest(ModelNormal):
             viewer_plugins_urls ([str], none_type): [optional]  # noqa: E501
             webhook_secret (str): [optional]  # noqa: E501
             settings_url (str, none_type): this URL will be called with query params ?cloud_id=. [optional]  # noqa: E501
-            is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (file_type, none_type): [optional]  # noqa: E501
             file (file_type, none_type): [optional]  # noqa: E501

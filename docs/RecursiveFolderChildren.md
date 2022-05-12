@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **groups_permissions** | [**[FolderGroupPermission], none_type**](FolderGroupPermission.md) | Groups permissions of folder | [readonly] 
 **default_permission** | **int** | Default permissions of folder | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
+**history** | [**[Document], none_type**](Document.md) | History of a document | [readonly] 
+**tags** | [**[Tag], none_type**](Tag.md) | Tags of a document | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **file_name** | **str** |  | [optional] 

@@ -12,7 +12,6 @@ Name | Type | Description | Notes
 **viewer_plugins_urls** | **[str], none_type** |  | [optional] 
 **webhook_secret** | **str** |  | [optional] 
 **settings_url** | **str, none_type** | this URL will be called with query params ?cloud_id&#x3D; | [optional] 
-**is_public** | **bool** |  | [optional] 
 **tags** | **[str]** |  | [optional] 
 **logo** | **file_type, none_type** |  | [optional] 
 **file** | **file_type, none_type** |  | [optional] 

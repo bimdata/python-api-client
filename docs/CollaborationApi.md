@@ -1304,7 +1304,7 @@ void (empty response body)
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'IFC', 'GLTF', 'OBJ', 'DXF', 'BFX', 'DAE'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'GLTF', 'OBJ', 'IFC', 'DAE', 'BFX', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 

@@ -113,13 +113,13 @@ class MarketplaceApp(ModelNormal):
             'long_description': (str,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'scopes': ([str],),  # noqa: E501
+            'is_public': (bool,),  # noqa: E501
             'images': ([MarketplaceAppImage],),  # noqa: E501
             'organization': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'activation_webhook_url': (str, none_type,),  # noqa: E501
             'post_activation_redirect_uri': (str, none_type,),  # noqa: E501
             'viewer_plugins_urls': ([str], none_type,),  # noqa: E501
             'settings_url': (str, none_type,),  # noqa: E501
-            'is_public': (bool,),  # noqa: E501
             'tags': ([str],),  # noqa: E501
             'logo': (str, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
@@ -137,13 +137,13 @@ class MarketplaceApp(ModelNormal):
         'long_description': 'long_description',  # noqa: E501
         'creator': 'creator',  # noqa: E501
         'scopes': 'scopes',  # noqa: E501
+        'is_public': 'is_public',  # noqa: E501
         'images': 'images',  # noqa: E501
         'organization': 'organization',  # noqa: E501
         'activation_webhook_url': 'activation_webhook_url',  # noqa: E501
         'post_activation_redirect_uri': 'post_activation_redirect_uri',  # noqa: E501
         'viewer_plugins_urls': 'viewer_plugins_urls',  # noqa: E501
         'settings_url': 'settings_url',  # noqa: E501
-        'is_public': 'is_public',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'logo': 'logo',  # noqa: E501
         'file': 'file',  # noqa: E501
@@ -153,6 +153,7 @@ class MarketplaceApp(ModelNormal):
         'id',  # noqa: E501
         'creator',  # noqa: E501
         'scopes',  # noqa: E501
+        'is_public',  # noqa: E501
         'images',  # noqa: E501
         'organization',  # noqa: E501
     }
@@ -161,7 +162,7 @@ class MarketplaceApp(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, short_description, long_description, creator, scopes, images, organization, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, short_description, long_description, creator, scopes, is_public, images, organization, *args, **kwargs):  # noqa: E501
         """MarketplaceApp - a model defined in OpenAPI
 
         Args:
@@ -171,6 +172,7 @@ class MarketplaceApp(ModelNormal):
             long_description (str):
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             scopes ([str]):
+            is_public (bool):
             images ([MarketplaceAppImage]):
             organization (bool, date, datetime, dict, float, int, list, str, none_type):
 
@@ -209,7 +211,6 @@ class MarketplaceApp(ModelNormal):
             post_activation_redirect_uri (str, none_type): [optional]  # noqa: E501
             viewer_plugins_urls ([str], none_type): [optional]  # noqa: E501
             settings_url (str, none_type): this URL will be called with query params ?cloud_id=. [optional]  # noqa: E501
-            is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
@@ -246,6 +247,7 @@ class MarketplaceApp(ModelNormal):
         self.long_description = long_description
         self.creator = creator
         self.scopes = scopes
+        self.is_public = is_public
         self.images = images
         self.organization = organization
         for var_name, var_value in kwargs.items():
@@ -309,7 +311,6 @@ class MarketplaceApp(ModelNormal):
             post_activation_redirect_uri (str, none_type): [optional]  # noqa: E501
             viewer_plugins_urls ([str], none_type): [optional]  # noqa: E501
             settings_url (str, none_type): this URL will be called with query params ?cloud_id=. [optional]  # noqa: E501
-            is_public (bool): [optional]  # noqa: E501
             tags ([str]): [optional]  # noqa: E501
             logo (str, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501

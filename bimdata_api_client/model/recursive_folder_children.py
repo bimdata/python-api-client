@@ -31,9 +31,13 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from bimdata_api_client.model.document import Document
     from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
+    from bimdata_api_client.model.tag import Tag
     from bimdata_api_client.model.user import User
+    globals()['Document'] = Document
     globals()['FolderGroupPermission'] = FolderGroupPermission
+    globals()['Tag'] = Tag
     globals()['User'] = User
 
 
@@ -137,6 +141,8 @@ class RecursiveFolderChildren(ModelNormal):
             'groups_permissions': ([FolderGroupPermission], none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
+            'history': ([Document], none_type,),  # noqa: E501
+            'tags': ([Tag], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
@@ -165,6 +171,8 @@ class RecursiveFolderChildren(ModelNormal):
         'groups_permissions': 'groups_permissions',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
+        'history': 'history',  # noqa: E501
+        'tags': 'tags',  # noqa: E501
         'created_by': 'created_by',  # noqa: E501
         'creator': 'creator',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
@@ -184,13 +192,15 @@ class RecursiveFolderChildren(ModelNormal):
         'groups_permissions',  # noqa: E501
         'default_permission',  # noqa: E501
         'user_permission',  # noqa: E501
+        'history',  # noqa: E501
+        'tags',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, history, tags, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI
 
         Args:
@@ -207,6 +217,8 @@ class RecursiveFolderChildren(ModelNormal):
             groups_permissions ([FolderGroupPermission], none_type): Groups permissions of folder
             default_permission (int): Default permissions of folder
             user_permission (int): Aggregate of group user permissions and folder default permission
+            history ([Document], none_type): History of a document
+            tags ([Tag], none_type): Tags of a document
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -286,6 +298,8 @@ class RecursiveFolderChildren(ModelNormal):
         self.groups_permissions = groups_permissions
         self.default_permission = default_permission
         self.user_permission = user_permission
+        self.history = history
+        self.tags = tags
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

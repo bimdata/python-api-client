@@ -13,9 +13,13 @@ import sys
 import unittest
 
 import bimdata_api_client
+from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
+from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.user import User
+globals()['Document'] = Document
 globals()['FolderGroupPermission'] = FolderGroupPermission
+globals()['Tag'] = Tag
 globals()['User'] = User
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
 
