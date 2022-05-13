@@ -51,7 +51,6 @@ from bimdata_api_client.model.feature_request import FeatureRequest
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
 from bimdata_api_client.model.folder_group_permission_request import FolderGroupPermissionRequest
-from bimdata_api_client.model.folder_request import FolderRequest
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
@@ -193,7 +192,6 @@ from bimdata_api_client.model.raw_system_request import RawSystemRequest
 from bimdata_api_client.model.raw_unit import RawUnit
 from bimdata_api_client.model.raw_unit_request import RawUnitRequest
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
-from bimdata_api_client.model.recursive_folder_children_request import RecursiveFolderChildrenRequest
 from bimdata_api_client.model.rule import Rule
 from bimdata_api_client.model.rule_component import RuleComponent
 from bimdata_api_client.model.rule_component_request import RuleComponentRequest
@@ -241,6 +239,7 @@ from bimdata_api_client.model.visibility import Visibility
 from bimdata_api_client.model.visibility_request import VisibilityRequest
 from bimdata_api_client.model.web_hook import WebHook
 from bimdata_api_client.model.web_hook_request import WebHookRequest
+from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 from bimdata_api_client.model.zone import Zone
 from bimdata_api_client.model.zone_request import ZoneRequest
 from bimdata_api_client.model.zone_space import ZoneSpace

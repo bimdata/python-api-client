@@ -30,7 +30,6 @@ from bimdata_api_client.model.cloud_invitation_request import CloudInvitationReq
 from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.folder import Folder
-from bimdata_api_client.model.folder_request import FolderRequest
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
@@ -73,6 +72,7 @@ from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from bimdata_api_client.model.visa_request import VisaRequest
 from bimdata_api_client.model.visa_validation import VisaValidation
 from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
+from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 
 
 class CollaborationApi(object):
@@ -754,12 +754,12 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'id',
-                    'folder_request',
+                    'write_folder_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
-                    'folder_request',
+                    'write_folder_request',
                 ],
                 'nullable': [
                 ],
@@ -778,8 +778,8 @@ class CollaborationApi(object):
                         (int,),
                     'id':
                         (int,),
-                    'folder_request':
-                        (FolderRequest,),
+                    'write_folder_request':
+                        (WriteFolderRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -788,7 +788,7 @@ class CollaborationApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
-                    'folder_request': 'body',
+                    'write_folder_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -7594,22 +7594,22 @@ class CollaborationApi(object):
         self,
         cloud_pk,
         id,
-        folder_request,
+        write_folder_request,
         **kwargs
     ):
         """Create a complete DMS tree  # noqa: E501
 
-         Create a DMS structure of folder Format request :     [{         \"name\": :name:         \"parent_id\": :parent_id:                      # optionnal         \"default_permission\": :default_permission:    # optionnal         \"children\": [{                                # optionnal             \"name\": :name:,             \"children\": []         }]     }],                   Required scopes: org:manage  # noqa: E501
+         Create a DMS structure of folder Format request : ``` [{     \"name\": :name:     \"parent_id\": :parent_id:                      # optionnal     \"default_permission\": :default_permission:    # optionnal     \"children\": [{                                # optionnal         \"name\": :name:,         \"children\": []     }] }], ```                   Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_dms_tree(cloud_pk, id, folder_request, async_req=True)
+        >>> thread = api.create_dms_tree(cloud_pk, id, write_folder_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this project.
-            folder_request (FolderRequest):
+            write_folder_request (WriteFolderRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -7672,8 +7672,8 @@ class CollaborationApi(object):
             cloud_pk
         kwargs['id'] = \
             id
-        kwargs['folder_request'] = \
-            folder_request
+        kwargs['write_folder_request'] = \
+            write_folder_request
         return self.create_dms_tree_endpoint.call_with_http_info(**kwargs)
 
     def create_document(
@@ -7686,7 +7686,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'GLTF', 'OBJ', 'IFC', 'DAE', 'BFX', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DAE', 'GLTF', 'IFC', 'DXF', 'DWG', 'OBJ', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

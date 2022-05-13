@@ -58,7 +58,6 @@ bimdata_api_client/model/feature_request.py
 bimdata_api_client/model/folder.py
 bimdata_api_client/model/folder_group_permission.py
 bimdata_api_client/model/folder_group_permission_request.py
-bimdata_api_client/model/folder_request.py
 bimdata_api_client/model/folder_user_project.py
 bimdata_api_client/model/folder_without_children.py
 bimdata_api_client/model/folder_without_children_request.py
@@ -200,7 +199,6 @@ bimdata_api_client/model/raw_system_request.py
 bimdata_api_client/model/raw_unit.py
 bimdata_api_client/model/raw_unit_request.py
 bimdata_api_client/model/recursive_folder_children.py
-bimdata_api_client/model/recursive_folder_children_request.py
 bimdata_api_client/model/rule.py
 bimdata_api_client/model/rule_component.py
 bimdata_api_client/model/rule_component_request.py
@@ -248,6 +246,7 @@ bimdata_api_client/model/visibility.py
 bimdata_api_client/model/visibility_request.py
 bimdata_api_client/model/web_hook.py
 bimdata_api_client/model/web_hook_request.py
+bimdata_api_client/model/write_folder_request.py
 bimdata_api_client/model/zone.py
 bimdata_api_client/model/zone_request.py
 bimdata_api_client/model/zone_space.py
@@ -300,7 +299,6 @@ docs/FeatureRequest.md
 docs/Folder.md
 docs/FolderGroupPermission.md
 docs/FolderGroupPermissionRequest.md
-docs/FolderRequest.md
 docs/FolderUserProject.md
 docs/FolderWithoutChildren.md
 docs/FolderWithoutChildrenRequest.md
@@ -444,7 +442,6 @@ docs/RawSystemRequest.md
 docs/RawUnit.md
 docs/RawUnitRequest.md
 docs/RecursiveFolderChildren.md
-docs/RecursiveFolderChildrenRequest.md
 docs/Rule.md
 docs/RuleComponent.md
 docs/RuleComponentRequest.md
@@ -494,6 +491,7 @@ docs/VisibilityRequest.md
 docs/WebHook.md
 docs/WebHookRequest.md
 docs/WebhookApi.md
+docs/WriteFolderRequest.md
 docs/Zone.md
 docs/ZoneRequest.md
 docs/ZoneSpace.md
@@ -547,7 +545,6 @@ test/test_feature_request.py
 test/test_folder.py
 test/test_folder_group_permission.py
 test/test_folder_group_permission_request.py
-test/test_folder_request.py
 test/test_folder_user_project.py
 test/test_folder_without_children.py
 test/test_folder_without_children_request.py
@@ -691,7 +688,6 @@ test/test_raw_system_request.py
 test/test_raw_unit.py
 test/test_raw_unit_request.py
 test/test_recursive_folder_children.py
-test/test_recursive_folder_children_request.py
 test/test_rule.py
 test/test_rule_component.py
 test/test_rule_component_request.py
@@ -741,6 +737,7 @@ test/test_visibility_request.py
 test/test_web_hook.py
 test/test_web_hook_request.py
 test/test_webhook_api.py
+test/test_write_folder_request.py
 test/test_zone.py
 test/test_zone_request.py
 test/test_zone_space.py

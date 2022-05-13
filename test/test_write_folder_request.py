@@ -13,11 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.folder_request import FolderRequest
+from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 
 
-class TestFolderRequest(unittest.TestCase):
-    """FolderRequest unit test stubs"""
+class TestWriteFolderRequest(unittest.TestCase):
+    """WriteFolderRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +25,10 @@ class TestFolderRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testFolderRequest(self):
-        """Test FolderRequest"""
+    def testWriteFolderRequest(self):
+        """Test WriteFolderRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = FolderRequest()  # noqa: E501
+        # model = WriteFolderRequest()  # noqa: E501
         pass
 
 

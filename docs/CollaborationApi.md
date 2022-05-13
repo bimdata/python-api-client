@@ -1189,11 +1189,11 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_dms_tree**
-> create_dms_tree(cloud_pk, id, folder_request)
+> create_dms_tree(cloud_pk, id, write_folder_request)
 
 Create a complete DMS tree
 
- Create a DMS structure of folder Format request :     [{         \"name\": :name:         \"parent_id\": :parent_id:                      # optionnal         \"default_permission\": :default_permission:    # optionnal         \"children\": [{                                # optionnal             \"name\": :name:,             \"children\": []         }]     }],                   Required scopes: org:manage
+ Create a DMS structure of folder Format request : ``` [{     \"name\": :name:     \"parent_id\": :parent_id:                      # optionnal     \"default_permission\": :default_permission:    # optionnal     \"children\": [{                                # optionnal         \"name\": :name:,         \"children\": []     }] }], ```                   Required scopes: org:manage
 
 ### Example
 
@@ -1206,7 +1206,7 @@ Create a complete DMS tree
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.folder_request import FolderRequest
+from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1249,16 +1249,19 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this project.
-    folder_request = FolderRequest(
+    write_folder_request = WriteFolderRequest(
         parent_id=1,
         name="name_example",
         default_permission=1,
-    ) # FolderRequest | 
+        children=[
+            WriteFolderRequest(),
+        ],
+    ) # WriteFolderRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a complete DMS tree
-        api_instance.create_dms_tree(cloud_pk, id, folder_request)
+        api_instance.create_dms_tree(cloud_pk, id, write_folder_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
 ```
@@ -1270,7 +1273,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this project. |
- **folder_request** | [**FolderRequest**](FolderRequest.md)|  |
+ **write_folder_request** | [**WriteFolderRequest**](WriteFolderRequest.md)|  |
 
 ### Return type
 
@@ -1304,7 +1307,7 @@ void (empty response body)
 
 Create a document
 
-Create a document. If the document is one of {'DXF', 'GLTF', 'OBJ', 'IFC', 'DAE', 'BFX', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DAE', 'GLTF', 'IFC', 'DXF', 'DWG', 'OBJ', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
