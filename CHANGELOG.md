@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.3.10 (2022-05-13)
+### Fix
+* Fix create dms tree doc, children was missing in serializer request (#531)
+
+* fix create dms tree doc, children was missing in serializer request
+
+* rename serializer ([`f734b1b`](https://github.com/bimdata/python-api-client/commit/f734b1b19270e293610b98951ebe44d098718001))
+
 ## v9.3.9 (2022-05-12)
 ### Fix
 * Add tag to document in dms-tree ([#533](https://github.com/bimdata/python-api-client/issues/533)) ([`4ffe2ea`](https://github.com/bimdata/python-api-client/commit/4ffe2ea7d309477ebf5305b4b80ae6d3f47ea3fd))
