@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.0 (2022-06-09)
+### Feature
+* Add BCF authoring tool ([#540](https://github.com/bimdata/python-api-client/issues/540)) ([`f8da5ba`](https://github.com/bimdata/python-api-client/commit/f8da5ba89f43f67cba93336c5031849ba0acdcd5))
+
 ## v9.3.10 (2022-05-13)
 ### Fix
 * Fix create dms tree doc, children was missing in serializer request (#531)
