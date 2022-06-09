@@ -188,6 +188,7 @@ class Model(ModelNormal):
         'id',  # noqa: E501
         'type',  # noqa: E501
         'creator',  # noqa: E501
+        'status',  # noqa: E501
         'created_at',  # noqa: E501
         'updated_at',  # noqa: E501
         'document_id',  # noqa: E501
@@ -335,10 +336,9 @@ class Model(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, status, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
-            status (str):
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -403,7 +403,6 @@ class Model(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.status = status
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

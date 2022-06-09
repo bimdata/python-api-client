@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **index** | **int, none_type** |  | [optional] 
 **guid** | **str** |  | [optional] 
+**authoring_view** | **str** |  | [optional] 
 **orthogonal_camera** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **perspective_camera** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **lines** | [**[Line], none_type**](Line.md) |  | [optional] 

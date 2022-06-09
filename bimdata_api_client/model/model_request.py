@@ -66,9 +66,6 @@ class ModelRequest(ModelNormal):
     }
 
     validations = {
-        ('status',): {
-            'min_length': 1,
-        },
         ('name',): {
             'max_length': 512,
         },
@@ -104,7 +101,6 @@ class ModelRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'status': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'source': (str,),  # noqa: E501
             'world_position': ([float], none_type,),  # noqa: E501
@@ -121,7 +117,6 @@ class ModelRequest(ModelNormal):
 
 
     attribute_map = {
-        'status': 'status',  # noqa: E501
         'name': 'name',  # noqa: E501
         'source': 'source',  # noqa: E501
         'world_position': 'world_position',  # noqa: E501
@@ -139,11 +134,8 @@ class ModelRequest(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, status, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, *args, **kwargs):  # noqa: E501
         """ModelRequest - a model defined in OpenAPI
-
-        Args:
-            status (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -211,7 +203,6 @@ class ModelRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.status = status
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -232,11 +223,8 @@ class ModelRequest(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, status, *args, **kwargs):  # noqa: E501
+    def __init__(self, *args, **kwargs):  # noqa: E501
         """ModelRequest - a model defined in OpenAPI
-
-        Args:
-            status (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -302,7 +290,6 @@ class ModelRequest(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
-        self.status = status
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

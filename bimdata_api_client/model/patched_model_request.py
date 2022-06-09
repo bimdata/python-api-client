@@ -69,9 +69,6 @@ class PatchedModelRequest(ModelNormal):
         ('name',): {
             'max_length': 512,
         },
-        ('status',): {
-            'min_length': 1,
-        },
         ('world_position',): {
             'max_items': 3,
         },
@@ -105,7 +102,6 @@ class PatchedModelRequest(ModelNormal):
         """
         return {
             'name': (str, none_type,),  # noqa: E501
-            'status': (str,),  # noqa: E501
             'source': (str,),  # noqa: E501
             'world_position': ([float], none_type,),  # noqa: E501
             'size_ratio': (float, none_type,),  # noqa: E501
@@ -122,7 +118,6 @@ class PatchedModelRequest(ModelNormal):
 
     attribute_map = {
         'name': 'name',  # noqa: E501
-        'status': 'status',  # noqa: E501
         'source': 'source',  # noqa: E501
         'world_position': 'world_position',  # noqa: E501
         'size_ratio': 'size_ratio',  # noqa: E501
@@ -174,7 +169,6 @@ class PatchedModelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
             source (str): [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501
@@ -264,7 +258,6 @@ class PatchedModelRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
             source (str): [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501

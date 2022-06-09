@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly] 
 **type** | **str** |  | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**status** | **str** |  | 
+**status** | **str** |  | [readonly] 
 **created_at** | **datetime** |  | [readonly] 
 **updated_at** | **datetime** |  | [readonly] 
 **document_id** | **int, none_type** |  | [readonly] 

@@ -16085,7 +16085,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | 
     patched_model_request = PatchedModelRequest(
         name="name_example",
-        status="status_example",
         source="UPLOAD",
         world_position=[
             3.14,

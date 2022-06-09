@@ -77,6 +77,10 @@ class PatchedViewpointRequest(ModelNormal):
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': 0,
         },
+        ('authoring_view',): {
+            'max_length': 32,
+            'min_length': 1,
+        },
     }
 
     @cached_property
@@ -104,6 +108,7 @@ class PatchedViewpointRequest(ModelNormal):
         return {
             'index': (int, none_type,),  # noqa: E501
             'guid': (str,),  # noqa: E501
+            'authoring_view': (str,),  # noqa: E501
             'orthogonal_camera': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'perspective_camera': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'lines': ([LineRequest], none_type,),  # noqa: E501
@@ -122,6 +127,7 @@ class PatchedViewpointRequest(ModelNormal):
     attribute_map = {
         'index': 'index',  # noqa: E501
         'guid': 'guid',  # noqa: E501
+        'authoring_view': 'authoring_view',  # noqa: E501
         'orthogonal_camera': 'orthogonal_camera',  # noqa: E501
         'perspective_camera': 'perspective_camera',  # noqa: E501
         'lines': 'lines',  # noqa: E501
@@ -175,6 +181,7 @@ class PatchedViewpointRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             index (int, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
+            authoring_view (str): [optional]  # noqa: E501
             orthogonal_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             perspective_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             lines ([LineRequest], none_type): [optional]  # noqa: E501
@@ -266,6 +273,7 @@ class PatchedViewpointRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             index (int, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
+            authoring_view (str): [optional]  # noqa: E501
             orthogonal_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             perspective_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             lines ([LineRequest], none_type): [optional]  # noqa: E501
