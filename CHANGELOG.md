@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.1 (2022-06-16)
+### Fix
+* Improve viewpoint pins ([#543](https://github.com/bimdata/python-api-client/issues/543)) ([`7a42412`](https://github.com/bimdata/python-api-client/commit/7a424129ec9ec62252018a17476afcffe01c1acb))
+
 ## v9.4.0 (2022-06-09)
 ### Feature
 * Add BCF authoring tool ([#540](https://github.com/bimdata/python-api-client/issues/540)) ([`f8da5ba`](https://github.com/bimdata/python-api-client/commit/f8da5ba89f43f67cba93336c5031849ba0acdcd5))
