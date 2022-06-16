@@ -150,6 +150,8 @@ bimdata_api_client/model/patched_zone_request.py
 bimdata_api_client/model/patched_zone_space_request.py
 bimdata_api_client/model/perspective_camera.py
 bimdata_api_client/model/perspective_camera_request.py
+bimdata_api_client/model/pin.py
+bimdata_api_client/model/pin_request.py
 bimdata_api_client/model/point.py
 bimdata_api_client/model/point_request.py
 bimdata_api_client/model/positioning_plan.py
@@ -393,6 +395,8 @@ docs/PatchedZoneRequest.md
 docs/PatchedZoneSpaceRequest.md
 docs/PerspectiveCamera.md
 docs/PerspectiveCameraRequest.md
+docs/Pin.md
+docs/PinRequest.md
 docs/Point.md
 docs/PointRequest.md
 docs/PositioningPlan.md
@@ -639,6 +643,8 @@ test/test_patched_zone_request.py
 test/test_patched_zone_space_request.py
 test/test_perspective_camera.py
 test/test_perspective_camera_request.py
+test/test_pin.py
+test/test_pin_request.py
 test/test_point.py
 test/test_point_request.py
 test/test_positioning_plan.py

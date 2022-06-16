@@ -36,12 +36,14 @@ def lazy_import():
     from bimdata_api_client.model.line_request import LineRequest
     from bimdata_api_client.model.orthogonal_camera_request import OrthogonalCameraRequest
     from bimdata_api_client.model.perspective_camera_request import PerspectiveCameraRequest
+    from bimdata_api_client.model.pin_request import PinRequest
     from bimdata_api_client.model.snapshot_request import SnapshotRequest
     globals()['ClippingPlaneRequest'] = ClippingPlaneRequest
     globals()['ComponentsParentRequest'] = ComponentsParentRequest
     globals()['LineRequest'] = LineRequest
     globals()['OrthogonalCameraRequest'] = OrthogonalCameraRequest
     globals()['PerspectiveCameraRequest'] = PerspectiveCameraRequest
+    globals()['PinRequest'] = PinRequest
     globals()['SnapshotRequest'] = SnapshotRequest
 
 
@@ -115,7 +117,7 @@ class PatchedViewpointRequest(ModelNormal):
             'clipping_planes': ([ClippingPlaneRequest], none_type,),  # noqa: E501
             'snapshot': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pins': ([[float]], none_type,),  # noqa: E501
+            'pins': ([PinRequest], none_type,),  # noqa: E501
             'temp_id': (int, none_type,),  # noqa: E501
         }
 
@@ -188,7 +190,7 @@ class PatchedViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
+            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 
@@ -280,7 +282,7 @@ class PatchedViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
+            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 

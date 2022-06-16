@@ -143,6 +143,8 @@ from bimdata_api_client.model.patched_zone_request import PatchedZoneRequest
 from bimdata_api_client.model.patched_zone_space_request import PatchedZoneSpaceRequest
 from bimdata_api_client.model.perspective_camera import PerspectiveCamera
 from bimdata_api_client.model.perspective_camera_request import PerspectiveCameraRequest
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
 from bimdata_api_client.model.point import Point
 from bimdata_api_client.model.point_request import PointRequest
 from bimdata_api_client.model.positioning_plan import PositioningPlan

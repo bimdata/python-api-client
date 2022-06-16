@@ -36,12 +36,14 @@ def lazy_import():
     from bimdata_api_client.model.line import Line
     from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
     from bimdata_api_client.model.perspective_camera import PerspectiveCamera
+    from bimdata_api_client.model.pin import Pin
     from bimdata_api_client.model.snapshot import Snapshot
     globals()['ClippingPlane'] = ClippingPlane
     globals()['ComponentsParent'] = ComponentsParent
     globals()['Line'] = Line
     globals()['OrthogonalCamera'] = OrthogonalCamera
     globals()['PerspectiveCamera'] = PerspectiveCamera
+    globals()['Pin'] = Pin
     globals()['Snapshot'] = Snapshot
 
 
@@ -114,7 +116,7 @@ class Viewpoint(ModelNormal):
             'clipping_planes': ([ClippingPlane], none_type,),  # noqa: E501
             'snapshot': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'components': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'pins': ([[float]], none_type,),  # noqa: E501
+            'pins': ([Pin], none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -185,7 +187,7 @@ class Viewpoint(ModelNormal):
             clipping_planes ([ClippingPlane], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
+            pins ([Pin], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -276,7 +278,7 @@ class Viewpoint(ModelNormal):
             clipping_planes ([ClippingPlane], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([[float]], none_type): Non standard field. Pins is a list of points representing annotation positions. [optional]  # noqa: E501
+            pins ([Pin], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

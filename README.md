@@ -783,6 +783,8 @@ Class | Method | HTTP request | Description
  - [PatchedZoneSpaceRequest](docs/PatchedZoneSpaceRequest.md)
  - [PerspectiveCamera](docs/PerspectiveCamera.md)
  - [PerspectiveCameraRequest](docs/PerspectiveCameraRequest.md)
+ - [Pin](docs/Pin.md)
+ - [PinRequest](docs/PinRequest.md)
  - [Point](docs/Point.md)
  - [PointRequest](docs/PointRequest.md)
  - [PositioningPlan](docs/PositioningPlan.md)

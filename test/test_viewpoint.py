@@ -18,12 +18,14 @@ from bimdata_api_client.model.components_parent import ComponentsParent
 from bimdata_api_client.model.line import Line
 from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.model.perspective_camera import PerspectiveCamera
+from bimdata_api_client.model.pin import Pin
 from bimdata_api_client.model.snapshot import Snapshot
 globals()['ClippingPlane'] = ClippingPlane
 globals()['ComponentsParent'] = ComponentsParent
 globals()['Line'] = Line
 globals()['OrthogonalCamera'] = OrthogonalCamera
 globals()['PerspectiveCamera'] = PerspectiveCamera
+globals()['Pin'] = Pin
 globals()['Snapshot'] = Snapshot
 from bimdata_api_client.model.viewpoint import Viewpoint
 
