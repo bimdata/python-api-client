@@ -779,7 +779,7 @@ class CollaborationApi(object):
                     'id':
                         (int,),
                     'write_folder_request':
-                        (WriteFolderRequest,),
+                        ([WriteFolderRequest],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -7609,7 +7609,7 @@ class CollaborationApi(object):
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this project.
-            write_folder_request (WriteFolderRequest):
+            write_folder_request ([WriteFolderRequest]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -7686,7 +7686,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DWG', 'DXF', 'OBJ', 'DAE', 'IFC', 'GLTF', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'IFC', 'GLTF', 'DXF', 'OBJ', 'DWG', 'BFX', 'DAE'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 

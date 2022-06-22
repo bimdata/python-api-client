@@ -1249,14 +1249,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this project.
-    write_folder_request = WriteFolderRequest(
-        parent_id=1,
-        name="name_example",
-        default_permission=1,
-        children=[
-            WriteFolderRequest(),
-        ],
-    ) # WriteFolderRequest | 
+    write_folder_request = [
+        WriteFolderRequest(
+            parent_id=1,
+            name="name_example",
+            default_permission=1,
+            children=[
+                WriteFolderRequest(),
+            ],
+        ),
+    ] # [WriteFolderRequest] | 
 
     # example passing only required values which don't have defaults set
     try:
@@ -1273,7 +1275,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this project. |
- **write_folder_request** | [**WriteFolderRequest**](WriteFolderRequest.md)|  |
+ **write_folder_request** | [**[WriteFolderRequest]**](WriteFolderRequest.md)|  |
 
 ### Return type
 
@@ -1307,7 +1309,7 @@ void (empty response body)
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'DXF', 'OBJ', 'DAE', 'IFC', 'GLTF', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'GLTF', 'DXF', 'OBJ', 'DWG', 'BFX', 'DAE'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
