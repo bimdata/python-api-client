@@ -145,10 +145,10 @@ class RecursiveFolderChildren(ModelNormal):
             'tags': ([Tag], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'file_name': (str,),  # noqa: E501
-            'description': (str,),  # noqa: E501
-            'size': (int,),  # noqa: E501
-            'file': (str,),  # noqa: E501
+            'file_name': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
+            'size': (int, none_type,),  # noqa: E501
+            'file': (str, none_type,),  # noqa: E501
             'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
         }
 
@@ -253,10 +253,10 @@ class RecursiveFolderChildren(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             created_by (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             creator (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            file_name (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            size (int): [optional]  # noqa: E501
-            file (str): [optional]  # noqa: E501
+            file_name (str, none_type): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            size (int, none_type): [optional]  # noqa: E501
+            file (str, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
@@ -361,10 +361,10 @@ class RecursiveFolderChildren(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             created_by (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             creator (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            file_name (str): [optional]  # noqa: E501
-            description (str): [optional]  # noqa: E501
-            size (int): [optional]  # noqa: E501
-            file (str): [optional]  # noqa: E501
+            file_name (str, none_type): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            size (int, none_type): [optional]  # noqa: E501
+            file (str, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
