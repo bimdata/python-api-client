@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.2 (2022-06-22)
+### Fix
+* Fix create-dsm-tree serializer ([`9f58aae`](https://github.com/bimdata/python-api-client/commit/9f58aae36e98cd7aa7cf5f5538c0645af99f4c50))
+
 ## v9.4.1 (2022-06-16)
 ### Fix
 * Improve viewpoint pins ([#543](https://github.com/bimdata/python-api-client/issues/543)) ([`7a42412`](https://github.com/bimdata/python-api-client/commit/7a424129ec9ec62252018a17476afcffe01c1acb))
