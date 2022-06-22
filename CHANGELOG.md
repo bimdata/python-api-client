@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.3 (2022-06-22)
+### Fix
+* Fix get-dms-tree serializer ([`ce53acf`](https://github.com/bimdata/python-api-client/commit/ce53acff6a0c3977f1c71c2e73c25b054b60dde1))
+
 ## v9.4.2 (2022-06-22)
 ### Fix
 * Fix create-dsm-tree serializer ([`9f58aae`](https://github.com/bimdata/python-api-client/commit/9f58aae36e98cd7aa7cf5f5538c0645af99f4c50))
