@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.4 (2022-06-24)
+### Fix
+* Add authoring viewpoint fields ([#547](https://github.com/bimdata/python-api-client/issues/547)) ([`5d0a18b`](https://github.com/bimdata/python-api-client/commit/5d0a18b4752fb192b0d8023677099794cc4c77e7))
+
 ## v9.4.3 (2022-06-22)
 ### Fix
 * Fix get-dms-tree serializer ([`ce53acf`](https://github.com/bimdata/python-api-client/commit/ce53acff6a0c3977f1c71c2e73c25b054b60dde1))
