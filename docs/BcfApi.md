@@ -841,7 +841,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ViewpointRequest(
                 index=0,
                 guid="guid_example",
-                authoring_view="authoring_view_example",
+                originating_system="originating_system_example",
+                authoring_tool_id="authoring_tool_id_example",
                 orthogonal_camera=None,
                 perspective_camera=None,
                 lines=[
@@ -1147,7 +1148,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     viewpoint_request = ViewpointRequest(
         index=0,
         guid="guid_example",
-        authoring_view="authoring_view_example",
+        originating_system="originating_system_example",
+        authoring_tool_id="authoring_tool_id_example",
         orthogonal_camera=None,
         perspective_camera=None,
         lines=[
@@ -2553,7 +2555,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ViewpointRequest(
                 index=0,
                 guid="guid_example",
-                authoring_view="authoring_view_example",
+                originating_system="originating_system_example",
+                authoring_tool_id="authoring_tool_id_example",
                 orthogonal_camera=None,
                 perspective_camera=None,
                 lines=[
@@ -2863,7 +2866,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     viewpoint_request = ViewpointRequest(
         index=0,
         guid="guid_example",
-        authoring_view="authoring_view_example",
+        originating_system="originating_system_example",
+        authoring_tool_id="authoring_tool_id_example",
         orthogonal_camera=None,
         perspective_camera=None,
         lines=[
@@ -5984,7 +5988,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             ViewpointRequest(
                 index=0,
                 guid="guid_example",
-                authoring_view="authoring_view_example",
+                originating_system="originating_system_example",
+                authoring_tool_id="authoring_tool_id_example",
                 orthogonal_camera=None,
                 perspective_camera=None,
                 lines=[
@@ -6302,7 +6307,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_viewpoint_request = PatchedViewpointRequest(
         index=0,
         guid="guid_example",
-        authoring_view="authoring_view_example",
+        originating_system="originating_system_example",
+        authoring_tool_id="authoring_tool_id_example",
         orthogonal_camera=None,
         perspective_camera=None,
         lines=[

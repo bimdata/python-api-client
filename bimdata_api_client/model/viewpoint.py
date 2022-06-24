@@ -79,8 +79,11 @@ class Viewpoint(ModelNormal):
             'inclusive_maximum': 2147483647,
             'inclusive_minimum': 0,
         },
-        ('authoring_view',): {
-            'max_length': 32,
+        ('originating_system',): {
+            'max_length': 256,
+        },
+        ('authoring_tool_id',): {
+            'max_length': 256,
         },
     }
 
@@ -109,7 +112,8 @@ class Viewpoint(ModelNormal):
         return {
             'index': (int, none_type,),  # noqa: E501
             'guid': (str,),  # noqa: E501
-            'authoring_view': (str,),  # noqa: E501
+            'originating_system': (str, none_type,),  # noqa: E501
+            'authoring_tool_id': (str, none_type,),  # noqa: E501
             'orthogonal_camera': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'perspective_camera': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'lines': ([Line], none_type,),  # noqa: E501
@@ -127,7 +131,8 @@ class Viewpoint(ModelNormal):
     attribute_map = {
         'index': 'index',  # noqa: E501
         'guid': 'guid',  # noqa: E501
-        'authoring_view': 'authoring_view',  # noqa: E501
+        'originating_system': 'originating_system',  # noqa: E501
+        'authoring_tool_id': 'authoring_tool_id',  # noqa: E501
         'orthogonal_camera': 'orthogonal_camera',  # noqa: E501
         'perspective_camera': 'perspective_camera',  # noqa: E501
         'lines': 'lines',  # noqa: E501
@@ -180,7 +185,8 @@ class Viewpoint(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             index (int, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
-            authoring_view (str): [optional]  # noqa: E501
+            originating_system (str, none_type): Name of the system in which the viewpoint is originated. [optional]  # noqa: E501
+            authoring_tool_id (str, none_type): System specific identifier of the viewpoint in the originating BIM tool. [optional]  # noqa: E501
             orthogonal_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             perspective_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             lines ([Line], none_type): [optional]  # noqa: E501
@@ -271,7 +277,8 @@ class Viewpoint(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             index (int, none_type): [optional]  # noqa: E501
             guid (str): [optional]  # noqa: E501
-            authoring_view (str): [optional]  # noqa: E501
+            originating_system (str, none_type): Name of the system in which the viewpoint is originated. [optional]  # noqa: E501
+            authoring_tool_id (str, none_type): System specific identifier of the viewpoint in the originating BIM tool. [optional]  # noqa: E501
             orthogonal_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             perspective_camera (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             lines ([Line], none_type): [optional]  # noqa: E501

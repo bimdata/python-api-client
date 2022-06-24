@@ -7,7 +7,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **index** | **int, none_type** |  | [optional] 
 **guid** | **str** |  | [optional] 
-**authoring_view** | **str** |  | [optional] 
+**originating_system** | **str, none_type** | Name of the system in which the viewpoint is originated | [optional] 
+**authoring_tool_id** | **str, none_type** | System specific identifier of the viewpoint in the originating BIM tool | [optional] 
 **orthogonal_camera** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **perspective_camera** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **lines** | [**[LineRequest], none_type**](LineRequest.md) |  | [optional] 
