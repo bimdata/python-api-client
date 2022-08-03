@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.5 (2022-08-03)
+### Fix
+* Add response data to create DMSTree ([`66c3969`](https://github.com/bimdata/python-api-client/commit/66c3969287fe9de08f80a5d60cb9b4bef702ae3d))
+
 ## v9.4.4 (2022-06-24)
 ### Fix
 * Add authoring viewpoint fields ([#547](https://github.com/bimdata/python-api-client/issues/547)) ([`5d0a18b`](https://github.com/bimdata/python-api-client/commit/5d0a18b4752fb192b0d8023677099794cc4c77e7))
