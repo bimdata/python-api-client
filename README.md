@@ -298,6 +298,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_project_access_tokens**](docs/CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 *CollaborationApi* | [**get_project_creator_visas**](docs/CollaborationApi.md#get_project_creator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/creator | List visas created by user
 *CollaborationApi* | [**get_project_dms_tree**](docs/CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
+*CollaborationApi* | [**get_project_folder_tree_serializers**](docs/CollaborationApi.md#get_project_folder_tree_serializers) | **GET** /cloud/{cloud_pk}/project/folder-trees | Retrieve folder tree for all projects
 *CollaborationApi* | [**get_project_invitations**](docs/CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 *CollaborationApi* | [**get_project_size**](docs/CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
 *CollaborationApi* | [**get_project_sub_tree**](docs/CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
@@ -691,6 +692,7 @@ Class | Method | HTTP request | Description
  - [Folder](docs/Folder.md)
  - [FolderGroupPermission](docs/FolderGroupPermission.md)
  - [FolderGroupPermissionRequest](docs/FolderGroupPermissionRequest.md)
+ - [FolderTree](docs/FolderTree.md)
  - [FolderUserProject](docs/FolderUserProject.md)
  - [FolderWithoutChildren](docs/FolderWithoutChildren.md)
  - [FolderWithoutChildrenRequest](docs/FolderWithoutChildrenRequest.md)
@@ -794,6 +796,7 @@ Class | Method | HTTP request | Description
  - [Project](docs/Project.md)
  - [ProjectAccessToken](docs/ProjectAccessToken.md)
  - [ProjectAccessTokenRequest](docs/ProjectAccessTokenRequest.md)
+ - [ProjectFolderTree](docs/ProjectFolderTree.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectInvitationRequest](docs/ProjectInvitationRequest.md)
  - [ProjectRequest](docs/ProjectRequest.md)

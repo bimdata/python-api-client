@@ -137,7 +137,7 @@ class Model(ModelNormal):
             'bvh_tree_file': (str, none_type,),  # noqa: E501
             'viewer_360_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
-            'project_id': (int,),  # noqa: E501
+            'project_id': (int, none_type,),  # noqa: E501
             'errors': ([str], none_type,),  # noqa: E501
             'warnings': ([str], none_type,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
@@ -228,7 +228,7 @@ class Model(ModelNormal):
             bvh_tree_file (str, none_type):
             viewer_360_file (str, none_type):
             xkt_file (str, none_type):
-            project_id (int):
+            project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
             warnings ([str], none_type): List of warnings that happened during IFC processing
 

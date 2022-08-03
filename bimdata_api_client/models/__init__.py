@@ -51,6 +51,7 @@ from bimdata_api_client.model.feature_request import FeatureRequest
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
 from bimdata_api_client.model.folder_group_permission_request import FolderGroupPermissionRequest
+from bimdata_api_client.model.folder_tree import FolderTree
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
@@ -154,6 +155,7 @@ from bimdata_api_client.model.processor_handler import ProcessorHandler
 from bimdata_api_client.model.project import Project
 from bimdata_api_client.model.project_access_token import ProjectAccessToken
 from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
+from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
 from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from bimdata_api_client.model.project_request import ProjectRequest

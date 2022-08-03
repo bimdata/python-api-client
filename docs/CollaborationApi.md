@@ -64,6 +64,7 @@ Method | HTTP request | Description
 [**get_project_access_tokens**](CollaborationApi.md#get_project_access_tokens) | **GET** /cloud/{cloud_pk}/project/{project_pk}/access-token | Retrieve all tokens created for this project
 [**get_project_creator_visas**](CollaborationApi.md#get_project_creator_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/me/visa/creator | List visas created by user
 [**get_project_dms_tree**](CollaborationApi.md#get_project_dms_tree) | **GET** /cloud/{cloud_pk}/project/{id}/dms-tree | Retrieve the complete DMS tree
+[**get_project_folder_tree_serializers**](CollaborationApi.md#get_project_folder_tree_serializers) | **GET** /cloud/{cloud_pk}/project/folder-trees | Retrieve folder tree for all projects
 [**get_project_invitations**](CollaborationApi.md#get_project_invitations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/invitation | Retrieve all pending invitations in the project
 [**get_project_size**](CollaborationApi.md#get_project_size) | **GET** /cloud/{cloud_pk}/project/{id}/size | Get size of all model files in the project
 [**get_project_sub_tree**](CollaborationApi.md#get_project_sub_tree) | **GET** /cloud/{cloud_pk}/project/subtree | Retrieve the complete projects tree of the cloud
@@ -1189,7 +1190,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_dms_tree**
-> create_dms_tree(cloud_pk, id, write_folder_request)
+> [Folder] create_dms_tree(cloud_pk, id, write_folder_request)
 
 Create a complete DMS tree
 
@@ -1206,6 +1207,7 @@ Create a complete DMS tree
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.write_folder_request import WriteFolderRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -1263,7 +1265,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Create a complete DMS tree
-        api_instance.create_dms_tree(cloud_pk, id, write_folder_request)
+        api_response = api_instance.create_dms_tree(cloud_pk, id, write_folder_request)
+        pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_dms_tree: %s\n" % e)
 ```
@@ -1279,7 +1282,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**[Folder]**](Folder.md)
 
 ### Authorization
 
@@ -1288,14 +1291,14 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**201** | No response body |  -  |
+**201** |  |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
@@ -1309,7 +1312,7 @@ void (empty response body)
 
 Create a document
 
-Create a document. If the document is one of {'DXF', 'IFC', 'DWG', 'OBJ', 'DAE', 'GLTF', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'BFX', 'DAE', 'IFC', 'GLTF', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1839,7 +1842,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     project_access_token_request = ProjectAccessTokenRequest(
         scopes=[
-            "scopes_example",
+            "bcf:read",
         ],
         expires_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
     ) # ProjectAccessTokenRequest | 
@@ -6599,6 +6602,108 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_project_folder_tree_serializers**
+> [ProjectFolderTree] get_project_folder_tree_serializers(cloud_pk)
+
+Retrieve folder tree for all projects
+
+Retrieve folder tree for all projects
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve folder tree for all projects
+        api_response = api_instance.get_project_folder_tree_serializers(cloud_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->get_project_folder_tree_serializers: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+
+### Return type
+
+[**[ProjectFolderTree]**](ProjectFolderTree.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_project_invitations**
 > [ProjectInvitation] get_project_invitations(cloud_pk, project_pk)
 
@@ -9774,7 +9879,7 @@ Name | Type | Description  | Notes
 
 Update some fields of a folder
 
-Update some fields of a folder. Only project admins can update the `default_permission` field  Required scopes: document:write
+ Update some fields of a folder. Only project admins can update the `default_permission` field.  `default_permission` choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.  Caution: The 'default_permission' field is not applied to users belonging to one or more groups.   Required scopes: document:write
 
 ### Example
 
@@ -9898,7 +10003,7 @@ Name | Type | Description  | Notes
 
 Update the permission of a group on a folder
 
-Update the permission of a group on a folder.             0: ACCESS_DENIED,             50: READ_ONLY,             100: READ_WRTIE               Required scopes: org:manage
+ Update the permission of a group on a folder. Permissions choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.               Required scopes: org:manage
 
 ### Example
 
@@ -10328,7 +10433,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     token = "token_example" # str | 
     patched_project_access_token_request = PatchedProjectAccessTokenRequest(
         scopes=[
-            "scopes_example",
+            "bcf:read",
         ],
         expires_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
     ) # PatchedProjectAccessTokenRequest |  (optional)

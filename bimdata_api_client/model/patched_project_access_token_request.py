@@ -56,6 +56,18 @@ class PatchedProjectAccessTokenRequest(ModelNormal):
     """
 
     allowed_values = {
+        ('scopes',): {
+            'BCF:READ': "bcf:read",
+            'BCF:WRITE': "bcf:write",
+            'DOCUMENT:READ': "document:read",
+            'DOCUMENT:WRITE': "document:write",
+            'IFC:READ': "ifc:read",
+            'IFC:WRITE': "ifc:write",
+            'MODEL:READ': "model:read",
+            'MODEL:WRITE': "model:write",
+            'EMPTY': "",
+            'NULL': "null",
+        },
     }
 
     validations = {
@@ -82,7 +94,7 @@ class PatchedProjectAccessTokenRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'scopes': ([str],),  # noqa: E501
+            'scopes': ([str, none_type],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
         }
 
@@ -137,7 +149,7 @@ class PatchedProjectAccessTokenRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            scopes ([str]): [optional]  # noqa: E501
+            scopes ([str, none_type]): [optional]  # noqa: E501
             expires_at (datetime): [optional]  # noqa: E501
         """
 
@@ -220,7 +232,7 @@ class PatchedProjectAccessTokenRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            scopes ([str]): [optional]  # noqa: E501
+            scopes ([str, none_type]): [optional]  # noqa: E501
             expires_at (datetime): [optional]  # noqa: E501
         """
 

@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **bvh_tree_file** | **str, none_type** |  | [readonly] 
 **viewer_360_file** | **str, none_type** |  | [readonly] 
 **xkt_file** | **str, none_type** |  | [readonly] 
-**project_id** | **int** |  | [readonly] 
+**project_id** | **int, none_type** |  | [readonly] 
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
 **name** | **str, none_type** |  | [optional] 

@@ -56,6 +56,18 @@ class ProjectAccessTokenRequest(ModelNormal):
     """
 
     allowed_values = {
+        ('scopes',): {
+            'BCF:READ': "bcf:read",
+            'BCF:WRITE': "bcf:write",
+            'DOCUMENT:READ': "document:read",
+            'DOCUMENT:WRITE': "document:write",
+            'IFC:READ': "ifc:read",
+            'IFC:WRITE': "ifc:write",
+            'MODEL:READ': "model:read",
+            'MODEL:WRITE': "model:write",
+            'EMPTY': "",
+            'NULL': "null",
+        },
     }
 
     validations = {
@@ -82,7 +94,7 @@ class ProjectAccessTokenRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'scopes': ([str],),  # noqa: E501
+            'scopes': ([str, none_type],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
         }
 
@@ -107,7 +119,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         """ProjectAccessTokenRequest - a model defined in OpenAPI
 
         Args:
-            scopes ([str]):
+            scopes ([str, none_type]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -193,7 +205,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         """ProjectAccessTokenRequest - a model defined in OpenAPI
 
         Args:
-            scopes ([str]):
+            scopes ([str, none_type]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

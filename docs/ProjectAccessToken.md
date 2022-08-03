@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **token** | **str** |  | [readonly] 
-**scopes** | **[str]** |  | 
+**scopes** | **[str, none_type]** |  | 
 **expires_at** | **datetime** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

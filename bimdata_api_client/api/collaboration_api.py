@@ -53,6 +53,7 @@ from bimdata_api_client.model.patched_visa_validation_request import PatchedVisa
 from bimdata_api_client.model.project import Project
 from bimdata_api_client.model.project_access_token import ProjectAccessToken
 from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
+from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
 from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from bimdata_api_client.model.project_request import ProjectRequest
@@ -738,7 +739,7 @@ class CollaborationApi(object):
         )
         self.create_dms_tree_endpoint = _Endpoint(
             settings={
-                'response_type': None,
+                'response_type': ([Folder],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -794,7 +795,9 @@ class CollaborationApi(object):
                 }
             },
             headers_map={
-                'accept': [],
+                'accept': [
+                    'application/json'
+                ],
                 'content_type': [
                     'application/json',
                     'application/x-www-form-urlencoded',
@@ -4041,6 +4044,60 @@ class CollaborationApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_project_folder_tree_serializers_endpoint = _Endpoint(
+            settings={
+                'response_type': ([ProjectFolderTree],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/folder-trees',
+                'operation_id': 'get_project_folder_tree_serializers',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -7640,7 +7697,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            None
+            [Folder]
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -7686,7 +7743,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'IFC', 'DWG', 'OBJ', 'DAE', 'GLTF', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'DXF', 'BFX', 'DAE', 'IFC', 'GLTF', 'DWG', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -11850,6 +11907,84 @@ class CollaborationApi(object):
             id
         return self.get_project_dms_tree_endpoint.call_with_http_info(**kwargs)
 
+    def get_project_folder_tree_serializers(
+        self,
+        cloud_pk,
+        **kwargs
+    ):
+        """Retrieve folder tree for all projects  # noqa: E501
+
+        Retrieve folder tree for all projects  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_project_folder_tree_serializers(cloud_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [ProjectFolderTree]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        return self.get_project_folder_tree_serializers_endpoint.call_with_http_info(**kwargs)
+
     def get_project_invitations(
         self,
         cloud_pk,
@@ -14327,7 +14462,7 @@ class CollaborationApi(object):
     ):
         """Update some fields of a folder  # noqa: E501
 
-        Update some fields of a folder. Only project admins can update the `default_permission` field  Required scopes: document:write  # noqa: E501
+         Update some fields of a folder. Only project admins can update the `default_permission` field.  `default_permission` choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.  Caution: The 'default_permission' field is not applied to users belonging to one or more groups.   Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14415,7 +14550,7 @@ class CollaborationApi(object):
     ):
         """Update the permission of a group on a folder  # noqa: E501
 
-        Update the permission of a group on a folder.             0: ACCESS_DENIED,             50: READ_ONLY,             100: READ_WRTIE               Required scopes: org:manage  # noqa: E501
+         Update the permission of a group on a folder. Permissions choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.               Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
