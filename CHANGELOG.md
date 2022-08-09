@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.6 (2022-08-09)
+### Fix
+* Fix project access token enum ([#555](https://github.com/bimdata/python-api-client/issues/555)) ([`1005bc4`](https://github.com/bimdata/python-api-client/commit/1005bc47ee0d8369a8ffbc0b98a532aff4c2b812))
+
 ## v9.4.5 (2022-08-03)
 ### Fix
 * Add response data to create DMSTree ([`66c3969`](https://github.com/bimdata/python-api-client/commit/66c3969287fe9de08f80a5d60cb9b4bef702ae3d))
