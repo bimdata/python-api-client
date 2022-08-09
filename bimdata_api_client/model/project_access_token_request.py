@@ -65,8 +65,6 @@ class ProjectAccessTokenRequest(ModelNormal):
             'IFC:WRITE': "ifc:write",
             'MODEL:READ': "model:read",
             'MODEL:WRITE': "model:write",
-            'EMPTY': "",
-            'NULL': "null",
         },
     }
 
@@ -94,7 +92,7 @@ class ProjectAccessTokenRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'scopes': ([str, none_type],),  # noqa: E501
+            'scopes': ([str],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
         }
 
@@ -119,7 +117,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         """ProjectAccessTokenRequest - a model defined in OpenAPI
 
         Args:
-            scopes ([str, none_type]):
+            scopes ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -205,7 +203,7 @@ class ProjectAccessTokenRequest(ModelNormal):
         """ProjectAccessTokenRequest - a model defined in OpenAPI
 
         Args:
-            scopes ([str, none_type]):
+            scopes ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

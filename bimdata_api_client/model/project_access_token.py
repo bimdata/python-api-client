@@ -65,8 +65,6 @@ class ProjectAccessToken(ModelNormal):
             'IFC:WRITE': "ifc:write",
             'MODEL:READ': "model:read",
             'MODEL:WRITE': "model:write",
-            'EMPTY': "",
-            'NULL': "null",
         },
     }
 
@@ -95,7 +93,7 @@ class ProjectAccessToken(ModelNormal):
         """
         return {
             'token': (str,),  # noqa: E501
-            'scopes': ([str, none_type],),  # noqa: E501
+            'scopes': ([str],),  # noqa: E501
             'expires_at': (datetime,),  # noqa: E501
         }
 
@@ -123,7 +121,7 @@ class ProjectAccessToken(ModelNormal):
 
         Args:
             token (str):
-            scopes ([str, none_type]):
+            scopes ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -209,7 +207,7 @@ class ProjectAccessToken(ModelNormal):
     def __init__(self, scopes, *args, **kwargs):  # noqa: E501
         """ProjectAccessToken - a model defined in OpenAPI
 
-            scopes ([str, none_type]):
+            scopes ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
