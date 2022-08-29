@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.7 (2022-08-29)
+### Fix
+* Fix/inline serializer fields (#560)
+
+Fix CreateStoreyPlan and BuildingStoreyPlan ([`6b706ce`](https://github.com/bimdata/python-api-client/commit/6b706ce71d28225513dd83a52e9f9e232f8fa00f))
+
 ## v9.4.6 (2022-08-09)
 ### Fix
 * Fix project access token enum ([#555](https://github.com/bimdata/python-api-client/issues/555)) ([`1005bc4`](https://github.com/bimdata/python-api-client/commit/1005bc47ee0d8369a8ffbc0b98a532aff4c2b812))
