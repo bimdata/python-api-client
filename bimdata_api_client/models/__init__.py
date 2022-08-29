@@ -12,6 +12,7 @@
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.building import Building
+from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
 from bimdata_api_client.model.check_plan import CheckPlan
 from bimdata_api_client.model.check_plan_request import CheckPlanRequest
 from bimdata_api_client.model.checker_result import CheckerResult
@@ -127,6 +128,7 @@ from bimdata_api_client.model.patched_rule_request import PatchedRuleRequest
 from bimdata_api_client.model.patched_ruleset_request import PatchedRulesetRequest
 from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
+from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from bimdata_api_client.model.patched_system_request import PatchedSystemRequest
 from bimdata_api_client.model.patched_tag_request import PatchedTagRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
@@ -213,6 +215,8 @@ from bimdata_api_client.model.space_request import SpaceRequest
 from bimdata_api_client.model.stage import Stage
 from bimdata_api_client.model.stage_request import StageRequest
 from bimdata_api_client.model.storey import Storey
+from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
+from bimdata_api_client.model.storey_model_plan_request import StoreyModelPlanRequest
 from bimdata_api_client.model.system import System
 from bimdata_api_client.model.system_request import SystemRequest
 from bimdata_api_client.model.tag import Tag

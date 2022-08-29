@@ -19,6 +19,7 @@ bimdata_api_client/model/__init__.py
 bimdata_api_client/model/bcf_project.py
 bimdata_api_client/model/bcf_project_request.py
 bimdata_api_client/model/building.py
+bimdata_api_client/model/building_model_plan_request.py
 bimdata_api_client/model/check_plan.py
 bimdata_api_client/model/check_plan_request.py
 bimdata_api_client/model/checker_result.py
@@ -134,6 +135,7 @@ bimdata_api_client/model/patched_rule_request.py
 bimdata_api_client/model/patched_ruleset_request.py
 bimdata_api_client/model/patched_space_request.py
 bimdata_api_client/model/patched_stage_request.py
+bimdata_api_client/model/patched_storey_building_request.py
 bimdata_api_client/model/patched_system_request.py
 bimdata_api_client/model/patched_tag_request.py
 bimdata_api_client/model/patched_topic_request.py
@@ -220,6 +222,8 @@ bimdata_api_client/model/space_request.py
 bimdata_api_client/model/stage.py
 bimdata_api_client/model/stage_request.py
 bimdata_api_client/model/storey.py
+bimdata_api_client/model/storey_building_request.py
+bimdata_api_client/model/storey_model_plan_request.py
 bimdata_api_client/model/system.py
 bimdata_api_client/model/system_request.py
 bimdata_api_client/model/tag.py
@@ -262,6 +266,7 @@ docs/BcfApi.md
 docs/BcfProject.md
 docs/BcfProjectRequest.md
 docs/Building.md
+docs/BuildingModelPlanRequest.md
 docs/CheckPlan.md
 docs/CheckPlanRequest.md
 docs/CheckerApi.md
@@ -381,6 +386,7 @@ docs/PatchedRuleRequest.md
 docs/PatchedRulesetRequest.md
 docs/PatchedSpaceRequest.md
 docs/PatchedStageRequest.md
+docs/PatchedStoreyBuildingRequest.md
 docs/PatchedSystemRequest.md
 docs/PatchedTagRequest.md
 docs/PatchedTopicRequest.md
@@ -468,6 +474,8 @@ docs/SsoApi.md
 docs/Stage.md
 docs/StageRequest.md
 docs/Storey.md
+docs/StoreyBuildingRequest.md
+docs/StoreyModelPlanRequest.md
 docs/System.md
 docs/SystemRequest.md
 docs/Tag.md
@@ -512,6 +520,7 @@ test/test_bcf_api.py
 test/test_bcf_project.py
 test/test_bcf_project_request.py
 test/test_building.py
+test/test_building_model_plan_request.py
 test/test_check_plan.py
 test/test_check_plan_request.py
 test/test_checker_api.py
@@ -631,6 +640,7 @@ test/test_patched_rule_request.py
 test/test_patched_ruleset_request.py
 test/test_patched_space_request.py
 test/test_patched_stage_request.py
+test/test_patched_storey_building_request.py
 test/test_patched_system_request.py
 test/test_patched_tag_request.py
 test/test_patched_topic_request.py
@@ -718,6 +728,8 @@ test/test_sso_api.py
 test/test_stage.py
 test/test_stage_request.py
 test/test_storey.py
+test/test_storey_building_request.py
+test/test_storey_model_plan_request.py
 test/test_system.py
 test/test_system_request.py
 test/test_tag.py

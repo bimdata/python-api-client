@@ -1883,7 +1883,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_building_deprecated**
-> Building create_building_deprecated(cloud_pk, ifc_pk, project_pk)
+> Building create_building_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request)
 
 Create a building of a model
 
@@ -1901,6 +1901,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.building import Building
+from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1944,11 +1945,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    storey_building_request = StoreyBuildingRequest(
+        name="name_example",
+    ) # StoreyBuildingRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a building of a model
-        api_response = api_instance.create_building_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.create_building_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->create_building_deprecated: %s\n" % e)
@@ -1962,6 +1966,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **storey_building_request** | [**StoreyBuildingRequest**](StoreyBuildingRequest.md)|  |
 
 ### Return type
 
@@ -1973,7 +1978,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -1991,7 +1996,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_building_plan_deprecated**
-> Building create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk)
+> Building create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk, building_model_plan_request)
 
 Create a relation between a 2d model and a building
 
@@ -2009,6 +2014,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.building import Building
+from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2053,11 +2059,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    building_model_plan_request = BuildingModelPlanRequest(
+        id=1,
+    ) # BuildingModelPlanRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a relation between a 2d model and a building
-        api_response = api_instance.create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk, building_model_plan_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->create_building_plan_deprecated: %s\n" % e)
@@ -2072,6 +2081,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **building_model_plan_request** | [**BuildingModelPlanRequest**](BuildingModelPlanRequest.md)|  |
 
 ### Return type
 
@@ -2083,7 +2093,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -4445,7 +4455,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_storey_deprecated**
-> Storey create_storey_deprecated(cloud_pk, ifc_pk, project_pk)
+> Storey create_storey_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request)
 
 Create a storey of a model
 
@@ -4463,6 +4473,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.storey import Storey
+from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4506,11 +4517,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    storey_building_request = StoreyBuildingRequest(
+        name="name_example",
+    ) # StoreyBuildingRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a storey of a model
-        api_response = api_instance.create_storey_deprecated(cloud_pk, ifc_pk, project_pk)
+        api_response = api_instance.create_storey_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->create_storey_deprecated: %s\n" % e)
@@ -4524,6 +4538,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **storey_building_request** | [**StoreyBuildingRequest**](StoreyBuildingRequest.md)|  |
 
 ### Return type
 
@@ -4535,7 +4550,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -4553,7 +4568,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_storey_plan_deprecated**
-> Storey create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid)
+> Storey create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid, storey_model_plan_request)
 
 Create a relation between a 2d model and a storey
 
@@ -4570,6 +4585,7 @@ Create a relation between a 2d model and a storey. The model type must be one of
 import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
+from bimdata_api_client.model.storey_model_plan_request import StoreyModelPlanRequest
 from bimdata_api_client.model.storey import Storey
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
@@ -4615,11 +4631,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     storey_uuid = "storey_uuid_example" # str | 
+    storey_model_plan_request = StoreyModelPlanRequest(
+        id=1,
+    ) # StoreyModelPlanRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Create a relation between a 2d model and a storey
-        api_response = api_instance.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid)
+        api_response = api_instance.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid, storey_model_plan_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->create_storey_plan_deprecated: %s\n" % e)
@@ -4634,6 +4653,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **storey_uuid** | **str**|  |
+ **storey_model_plan_request** | [**StoreyModelPlanRequest**](StoreyModelPlanRequest.md)|  |
 
 ### Return type
 
@@ -4645,7 +4665,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -15229,6 +15249,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.building import Building
+from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -15273,11 +15294,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     uuid = "uuid_example" # str | 
+    patched_storey_building_request = PatchedStoreyBuildingRequest(
+        name="name_example",
+    ) # PatchedStoreyBuildingRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Update some fields of a building
         api_response = api_instance.update_building_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling IfcApi->update_building_deprecated: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a building
+        api_response = api_instance.update_building_deprecated(cloud_pk, ifc_pk, project_pk, uuid, patched_storey_building_request=patched_storey_building_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->update_building_deprecated: %s\n" % e)
@@ -15292,6 +15325,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
+ **patched_storey_building_request** | [**PatchedStoreyBuildingRequest**](PatchedStoreyBuildingRequest.md)|  | [optional]
 
 ### Return type
 
@@ -15303,7 +15337,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
@@ -17578,6 +17612,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.storey import Storey
+from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -17622,11 +17657,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     uuid = "uuid_example" # str | 
+    patched_storey_building_request = PatchedStoreyBuildingRequest(
+        name="name_example",
+    ) # PatchedStoreyBuildingRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Update some fields of a storey
         api_response = api_instance.update_storey_deprecated(cloud_pk, ifc_pk, project_pk, uuid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling IfcApi->update_storey_deprecated: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a storey
+        api_response = api_instance.update_storey_deprecated(cloud_pk, ifc_pk, project_pk, uuid, patched_storey_building_request=patched_storey_building_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->update_storey_deprecated: %s\n" % e)
@@ -17641,6 +17688,7 @@ Name | Type | Description  | Notes
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
+ **patched_storey_building_request** | [**PatchedStoreyBuildingRequest**](PatchedStoreyBuildingRequest.md)|  | [optional]
 
 ### Return type
 
@@ -17652,7 +17700,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 

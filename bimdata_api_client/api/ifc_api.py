@@ -23,6 +23,7 @@ from bimdata_api_client.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from bimdata_api_client.model.building import Building
+from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
 from bimdata_api_client.model.checker_result import CheckerResult
 from bimdata_api_client.model.checker_result_request import CheckerResultRequest
 from bimdata_api_client.model.classification import Classification
@@ -64,6 +65,7 @@ from bimdata_api_client.model.patched_property_definition_request import Patched
 from bimdata_api_client.model.patched_property_request import PatchedPropertyRequest
 from bimdata_api_client.model.patched_property_set_request import PatchedPropertySetRequest
 from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
+from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
 from bimdata_api_client.model.patched_system_request import PatchedSystemRequest
 from bimdata_api_client.model.patched_unit_request import PatchedUnitRequest
 from bimdata_api_client.model.patched_zone_request import PatchedZoneRequest
@@ -81,6 +83,8 @@ from bimdata_api_client.model.simple_element import SimpleElement
 from bimdata_api_client.model.space import Space
 from bimdata_api_client.model.space_request import SpaceRequest
 from bimdata_api_client.model.storey import Storey
+from bimdata_api_client.model.storey_building_request import StoreyBuildingRequest
+from bimdata_api_client.model.storey_model_plan_request import StoreyModelPlanRequest
 from bimdata_api_client.model.system import System
 from bimdata_api_client.model.system_request import SystemRequest
 from bimdata_api_client.model.unit import Unit
@@ -1129,11 +1133,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'storey_building_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'storey_building_request',
                 ],
                 'nullable': [
                 ],
@@ -1154,6 +1160,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'storey_building_request':
+                        (StoreyBuildingRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -1164,6 +1172,7 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'storey_building_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1172,7 +1181,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -1196,12 +1209,14 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'building_model_plan_request',
                 ],
                 'required': [
                     'building_uuid',
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'building_model_plan_request',
                 ],
                 'nullable': [
                 ],
@@ -1224,6 +1239,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'building_model_plan_request':
+                        (BuildingModelPlanRequest,),
                 },
                 'attribute_map': {
                     'building_uuid': 'building_uuid',
@@ -1236,6 +1253,7 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'building_model_plan_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1244,7 +1262,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -2682,11 +2704,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'storey_building_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'storey_building_request',
                 ],
                 'nullable': [
                 ],
@@ -2707,6 +2731,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'storey_building_request':
+                        (StoreyBuildingRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2717,6 +2743,7 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'storey_building_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2725,7 +2752,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -2749,12 +2780,14 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'storey_uuid',
+                    'storey_model_plan_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
                     'storey_uuid',
+                    'storey_model_plan_request',
                 ],
                 'nullable': [
                 ],
@@ -2777,6 +2810,8 @@ class IfcApi(object):
                         (int,),
                     'storey_uuid':
                         (str,),
+                    'storey_model_plan_request':
+                        (StoreyModelPlanRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2789,6 +2824,7 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'storey_uuid': 'path',
+                    'storey_model_plan_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2797,7 +2833,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9805,6 +9845,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'patched_storey_building_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9833,6 +9874,8 @@ class IfcApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'patched_storey_building_request':
+                        (PatchedStoreyBuildingRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9845,6 +9888,7 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'patched_storey_building_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -9853,7 +9897,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -11289,6 +11337,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'patched_storey_building_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -11317,6 +11366,8 @@ class IfcApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'patched_storey_building_request':
+                        (PatchedStoreyBuildingRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -11329,6 +11380,7 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'patched_storey_building_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -11337,7 +11389,11 @@ class IfcApi(object):
                 'accept': [
                     'application/json'
                 ],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -12919,6 +12975,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        storey_building_request,
         **kwargs
     ):
         """Create a building of a model  # noqa: E501
@@ -12927,13 +12984,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_building_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_building_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            storey_building_request (StoreyBuildingRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12998,6 +13056,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['storey_building_request'] = \
+            storey_building_request
         return self.create_building_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def create_building_plan_deprecated(
@@ -13006,6 +13066,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        building_model_plan_request,
         **kwargs
     ):
         """Create a relation between a 2d model and a building  # noqa: E501
@@ -13014,7 +13075,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_building_plan_deprecated(building_uuid, cloud_pk, ifc_pk, project_pk, building_model_plan_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -13022,6 +13083,7 @@ class IfcApi(object):
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            building_model_plan_request (BuildingModelPlanRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -13088,6 +13150,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['building_model_plan_request'] = \
+            building_model_plan_request
         return self.create_building_plan_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def create_checker_deprecated(
@@ -14746,6 +14810,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        storey_building_request,
         **kwargs
     ):
         """Create a storey of a model  # noqa: E501
@@ -14754,13 +14819,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_storey_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.create_storey_deprecated(cloud_pk, ifc_pk, project_pk, storey_building_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            storey_building_request (StoreyBuildingRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -14825,6 +14891,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['storey_building_request'] = \
+            storey_building_request
         return self.create_storey_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def create_storey_plan_deprecated(
@@ -14833,6 +14901,7 @@ class IfcApi(object):
         ifc_pk,
         project_pk,
         storey_uuid,
+        storey_model_plan_request,
         **kwargs
     ):
         """Create a relation between a 2d model and a storey  # noqa: E501
@@ -14841,7 +14910,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid, async_req=True)
+        >>> thread = api.create_storey_plan_deprecated(cloud_pk, ifc_pk, project_pk, storey_uuid, storey_model_plan_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -14849,6 +14918,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             storey_uuid (str):
+            storey_model_plan_request (StoreyModelPlanRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -14915,6 +14985,8 @@ class IfcApi(object):
             project_pk
         kwargs['storey_uuid'] = \
             storey_uuid
+        kwargs['storey_model_plan_request'] = \
+            storey_model_plan_request
         return self.create_storey_plan_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def create_system_deprecated(
@@ -23553,6 +23625,7 @@ class IfcApi(object):
             uuid (str):
 
         Keyword Args:
+            patched_storey_building_request (PatchedStoreyBuildingRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -25210,6 +25283,7 @@ class IfcApi(object):
             uuid (str):
 
         Keyword Args:
+            patched_storey_building_request (PatchedStoreyBuildingRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
