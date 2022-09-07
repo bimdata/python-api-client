@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.8 (2022-09-07)
+### Fix
+* Allow empty files ([`c191c95`](https://github.com/bimdata/python-api-client/commit/c191c958362b0f2cf4d66232e592f683f6378c55))
+
 ## v9.4.7 (2022-08-29)
 ### Fix
 * Fix/inline serializer fields (#560)
