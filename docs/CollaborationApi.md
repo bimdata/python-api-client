@@ -1312,7 +1312,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'BFX', 'DXF', 'DAE', 'GLTF', 'OBJ', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'IFC', 'DAE', 'OBJ', 'DWG', 'BFX', 'GLTF', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
