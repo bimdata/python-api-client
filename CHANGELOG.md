@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.4.9 (2022-09-09)
+### Fix
+* Allow empty file on document upload ([`32585b1`](https://github.com/bimdata/python-api-client/commit/32585b1ed8aeef00f45cae6efa8fae0ad51e5c54))
+
 ## v9.4.8 (2022-09-07)
 ### Fix
 * Allow empty files ([`c191c95`](https://github.com/bimdata/python-api-client/commit/c191c958362b0f2cf4d66232e592f683f6378c55))
