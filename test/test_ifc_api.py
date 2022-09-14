@@ -283,6 +283,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_tileset_deprecated(self):
+        """Test case for create_tileset_deprecated
+
+        Create the tileset of the model and upload all files  # noqa: E501
+        """
+        pass
+
     def test_create_zone_deprecated(self):
         """Test case for create_zone_deprecated
 
@@ -805,6 +812,13 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_systems_deprecated
 
         Retrieve all systems of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_tileset_deprecated(self):
+        """Test case for get_tileset_deprecated
+
+        Retrieve the tileset of the model  # noqa: E501
         """
         pass
 

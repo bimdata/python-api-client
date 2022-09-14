@@ -2756,6 +2756,70 @@ class ModelApi(object):
             },
             api_client=api_client
         )
+        self.create_tileset_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset',
+                'operation_id': 'create_tileset',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.create_zone_endpoint = _Endpoint(
             settings={
                 'response_type': ([Zone],),
@@ -6787,7 +6851,8 @@ class ModelApi(object):
                         "METABUILDING": "METABUILDING",
                         "OBJ": "OBJ",
                         "PDF": "PDF",
-                        "PNG": "PNG"
+                        "PNG": "PNG",
+                        "POINT_CLOUD": "POINT_CLOUD"
                     },
                 },
                 'openapi_types': {
@@ -7797,6 +7862,81 @@ class ModelApi(object):
                 'accept': [
                     'application/json'
                 ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_tileset_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset',
+                'operation_id': 'get_tileset',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'tile_format',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                    'tile_format',
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                    ('tile_format',): {
+
+                        "PNTS": "pnts",
+                        "XKT": "xkt"
+                    },
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'tile_format':
+                        (str,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                    'tile_format': 'tile_format',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'tile_format': 'query',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
                 'content_type': [],
             },
             api_client=api_client
@@ -14063,6 +14203,92 @@ class ModelApi(object):
             system_request
         return self.create_system_endpoint.call_with_http_info(**kwargs)
 
+    def create_tileset(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Create the tileset of the model and upload all files  # noqa: E501
+
+        This route is internaly used by BIMData, you probably don't want to use it  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_tileset(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this model.
+            project_pk (int):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.create_tileset_endpoint.call_with_http_info(**kwargs)
+
     def create_zone(
         self,
         cloud_pk,
@@ -20290,6 +20516,93 @@ class ModelApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.get_systems_endpoint.call_with_http_info(**kwargs)
+
+    def get_tileset(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Retrieve the tileset of the model  # noqa: E501
+
+        This is only availble if the model is a POINT_CLOUD  Required scopes: ifc:read, model:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_tileset(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this model.
+            project_pk (int):
+
+        Keyword Args:
+            tile_format (str): [optional] if omitted the server will use the default value of "pnts"
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.get_tileset_endpoint.call_with_http_info(**kwargs)
 
     def get_zone(
         self,

@@ -269,6 +269,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_tileset(self):
+        """Test case for create_tileset
+
+        Create the tileset of the model and upload all files  # noqa: E501
+        """
+        pass
+
     def test_create_zone(self):
         """Test case for create_zone
 
@@ -749,6 +756,13 @@ class TestModelApi(unittest.TestCase):
         """Test case for get_systems
 
         Retrieve all systems of a model  # noqa: E501
+        """
+        pass
+
+    def test_get_tileset(self):
+        """Test case for get_tileset
+
+        Retrieve the tileset of the model  # noqa: E501
         """
         pass
 

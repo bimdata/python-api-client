@@ -76,6 +76,7 @@ class Document(ModelNormal):
             'OBJ': "OBJ",
             'DAE': "DAE",
             'BFX': "BFX",
+            'POINT_CLOUD': "POINT_CLOUD",
             'NULL': "null",
         },
         ('user_permission',): {
@@ -200,7 +201,7 @@ class Document(ModelNormal):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             model_id (int, none_type):
-            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX
+            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX, POINT_CLOUD
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             user_permission (int): Aggregate of group user permissions and folder default permission
             is_head_version (bool): Document is a head of version or is owned by another document

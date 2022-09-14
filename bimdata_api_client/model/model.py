@@ -73,6 +73,7 @@ class Model(ModelNormal):
             'OBJ': "OBJ",
             'DAE': "DAE",
             'BFX': "BFX",
+            'POINT_CLOUD': "POINT_CLOUD",
             'METABUILDING': "METABUILDING",
         },
         ('source',): {

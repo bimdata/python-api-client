@@ -375,6 +375,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_storey_deprecated**](docs/IfcApi.md#create_storey_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Create a storey of a model
 *IfcApi* | [**create_storey_plan_deprecated**](docs/IfcApi.md#create_storey_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *IfcApi* | [**create_system_deprecated**](docs/IfcApi.md#create_system_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
+*IfcApi* | [**create_tileset_deprecated**](docs/IfcApi.md#create_tileset_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/tileset | Create the tileset of the model and upload all files
 *IfcApi* | [**create_zone_deprecated**](docs/IfcApi.md#create_zone_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space_deprecated**](docs/IfcApi.md#create_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
 *IfcApi* | [**delete_access_token_deprecated**](docs/IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
@@ -450,6 +451,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_storeys_deprecated**](docs/IfcApi.md#get_storeys_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey | Retrieve all storeys of a model
 *IfcApi* | [**get_system_deprecated**](docs/IfcApi.md#get_system_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system/{uuid} | Retrieve a system of a model
 *IfcApi* | [**get_systems_deprecated**](docs/IfcApi.md#get_systems_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Retrieve all systems of a model
+*IfcApi* | [**get_tileset_deprecated**](docs/IfcApi.md#get_tileset_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/tileset | Retrieve the tileset of the model
 *IfcApi* | [**get_zone_deprecated**](docs/IfcApi.md#get_zone_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{id} | Retrieve one zone of a model
 *IfcApi* | [**get_zone_space_deprecated**](docs/IfcApi.md#get_zone_space_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 *IfcApi* | [**get_zone_spaces_deprecated**](docs/IfcApi.md#get_zone_spaces_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
@@ -527,6 +529,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_storey**](docs/ModelApi.md#create_storey) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey | Create a storey of a model
 *ModelApi* | [**create_storey_plan**](docs/ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *ModelApi* | [**create_system**](docs/ModelApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Create a system in the model
+*ModelApi* | [**create_tileset**](docs/ModelApi.md#create_tileset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Create the tileset of the model and upload all files
 *ModelApi* | [**create_zone**](docs/ModelApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Create a zone in the model
 *ModelApi* | [**create_zone_space**](docs/ModelApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Create a space in a zone
 *ModelApi* | [**delete_access_token**](docs/ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
@@ -596,6 +599,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**get_storeys**](docs/ModelApi.md#get_storeys) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey | Retrieve all storeys of a model
 *ModelApi* | [**get_system**](docs/ModelApi.md#get_system) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system/{uuid} | Retrieve a system of a model
 *ModelApi* | [**get_systems**](docs/ModelApi.md#get_systems) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Retrieve all systems of a model
+*ModelApi* | [**get_tileset**](docs/ModelApi.md#get_tileset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Retrieve the tileset of the model
 *ModelApi* | [**get_zone**](docs/ModelApi.md#get_zone) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{id} | Retrieve one zone of a model
 *ModelApi* | [**get_zone_space**](docs/ModelApi.md#get_zone_space) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 *ModelApi* | [**get_zone_spaces**](docs/ModelApi.md#get_zone_spaces) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
