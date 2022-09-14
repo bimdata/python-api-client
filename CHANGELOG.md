@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.5.0 (2022-09-14)
+### Feature
+* Point cloud ([`5f4bd06`](https://github.com/bimdata/python-api-client/commit/5f4bd06b2a5603b59130f8fc4037a9960c7287ac))
+
 ## v9.4.9 (2022-09-09)
 ### Fix
 * Allow empty file on document upload ([`32585b1`](https://github.com/bimdata/python-api-client/commit/32585b1ed8aeef00f45cae6efa8fae0ad51e5c54))
