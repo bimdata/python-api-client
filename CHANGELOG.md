@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.0 (2022-10-06)
+### Feature
+* User invitation routes  (#569)
+
+* make invitation api updatable
+
+* add user:write scope
+
+* use many to many scopes in views and tests
+
+* set scopes in MarketplaceAppAuthorization view ([`2f7d1d4`](https://github.com/bimdata/python-api-client/commit/2f7d1d45f528616b5b5921d06fec8cd36be2ca83))
+
 ## v9.5.0 (2022-09-14)
 ### Feature
 * Point cloud ([`5f4bd06`](https://github.com/bimdata/python-api-client/commit/5f4bd06b2a5603b59130f8fc4037a9960c7287ac))
