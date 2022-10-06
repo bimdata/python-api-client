@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.1 (2022-10-06)
+### Fix
+* Update fields of userInvitation serializer ([`88f7294`](https://github.com/bimdata/python-api-client/commit/88f7294512206fef11de7cce399d3c6e56344fa6))
+
 ## v9.6.0 (2022-10-06)
 ### Feature
 * User invitation routes  (#569)
