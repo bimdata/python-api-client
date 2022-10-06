@@ -238,6 +238,7 @@ bimdata_api_client/model/topic_type_request.py
 bimdata_api_client/model/unit.py
 bimdata_api_client/model/unit_request.py
 bimdata_api_client/model/user.py
+bimdata_api_client/model/user_invitation.py
 bimdata_api_client/model/user_project.py
 bimdata_api_client/model/user_project_id_request.py
 bimdata_api_client/model/view_setup_hints.py
@@ -490,6 +491,7 @@ docs/TopicTypeRequest.md
 docs/Unit.md
 docs/UnitRequest.md
 docs/User.md
+docs/UserInvitation.md
 docs/UserProject.md
 docs/UserProjectIdRequest.md
 docs/ViewSetupHints.md
@@ -744,6 +746,7 @@ test/test_topic_type_request.py
 test/test_unit.py
 test/test_unit_request.py
 test/test_user.py
+test/test_user_invitation.py
 test/test_user_project.py
 test/test_user_project_id_request.py
 test/test_view_setup_hints.py

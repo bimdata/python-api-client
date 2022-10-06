@@ -231,6 +231,7 @@ from bimdata_api_client.model.topic_type_request import TopicTypeRequest
 from bimdata_api_client.model.unit import Unit
 from bimdata_api_client.model.unit_request import UnitRequest
 from bimdata_api_client.model.user import User
+from bimdata_api_client.model.user_invitation import UserInvitation
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.user_project_id_request import UserProjectIdRequest
 from bimdata_api_client.model.view_setup_hints import ViewSetupHints

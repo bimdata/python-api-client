@@ -880,6 +880,7 @@ Class | Method | HTTP request | Description
  - [Unit](docs/Unit.md)
  - [UnitRequest](docs/UnitRequest.md)
  - [User](docs/User.md)
+ - [UserInvitation](docs/UserInvitation.md)
  - [UserProject](docs/UserProject.md)
  - [UserProjectIdRequest](docs/UserProjectIdRequest.md)
  - [ViewSetupHints](docs/ViewSetupHints.md)

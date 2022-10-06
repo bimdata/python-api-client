@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DXF', 'BFX', 'GLTF', 'DAE', 'OBJ', 'IFC', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'BFX', 'DAE', 'DWG', 'DXF', 'GLTF', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -8063,7 +8063,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_invitation**
-> Invitation get_user_invitation(id)
+> UserInvitation get_user_invitation(id)
 
 Retrieve an invitation
 
@@ -8080,7 +8080,7 @@ Retrieve the invitation  Required scopes: user:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.invitation import Invitation
+from bimdata_api_client.model.user_invitation import UserInvitation
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -8141,7 +8141,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**Invitation**](Invitation.md)
+[**UserInvitation**](UserInvitation.md)
 
 ### Authorization
 
@@ -8166,7 +8166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **get_user_invitations**
-> [Invitation] get_user_invitations()
+> [UserInvitation] get_user_invitations()
 
 List user's invitations
 
@@ -8183,7 +8183,7 @@ List all user's invitations  Required scopes: user:read
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
-from bimdata_api_client.model.invitation import Invitation
+from bimdata_api_client.model.user_invitation import UserInvitation
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -8240,7 +8240,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**[Invitation]**](Invitation.md)
+[**[UserInvitation]**](UserInvitation.md)
 
 ### Authorization
 

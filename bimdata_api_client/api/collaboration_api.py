@@ -36,7 +36,6 @@ from bimdata_api_client.model.folder_without_children_request import FolderWitho
 from bimdata_api_client.model.group import Group
 from bimdata_api_client.model.group_folder import GroupFolder
 from bimdata_api_client.model.group_request import GroupRequest
-from bimdata_api_client.model.invitation import Invitation
 from bimdata_api_client.model.patched_classification_request import PatchedClassificationRequest
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
 from bimdata_api_client.model.patched_document_request import PatchedDocumentRequest
@@ -66,6 +65,7 @@ from bimdata_api_client.model.tag import Tag
 from bimdata_api_client.model.tag_id_request import TagIdRequest
 from bimdata_api_client.model.tag_request import TagRequest
 from bimdata_api_client.model.user import User
+from bimdata_api_client.model.user_invitation import UserInvitation
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.user_project_id_request import UserProjectIdRequest
 from bimdata_api_client.model.visa import Visa
@@ -4865,7 +4865,7 @@ class CollaborationApi(object):
         )
         self.get_user_invitation_endpoint = _Endpoint(
             settings={
-                'response_type': (Invitation,),
+                'response_type': (UserInvitation,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -4919,7 +4919,7 @@ class CollaborationApi(object):
         )
         self.get_user_invitations_endpoint = _Endpoint(
             settings={
-                'response_type': ([Invitation],),
+                'response_type': ([UserInvitation],),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -8027,7 +8027,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'BFX', 'GLTF', 'DAE', 'OBJ', 'IFC', 'POINT_CLOUD', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'BFX', 'DAE', 'DWG', 'DXF', 'GLTF', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -13277,7 +13277,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            Invitation
+            UserInvitation
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -13352,7 +13352,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [Invitation]
+            [UserInvitation]
                 If the method is called asynchronously, returns the request
                 thread.
         """
