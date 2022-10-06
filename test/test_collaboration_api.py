@@ -24,6 +24,13 @@ class TestCollaborationApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_accept_user_invitation(self):
+        """Test case for accept_user_invitation
+
+        Accept an invitation  # noqa: E501
+        """
+        pass
+
     def test_accept_validation(self):
         """Test case for accept_validation
 
@@ -276,6 +283,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_deny_user_invitation(self):
+        """Test case for deny_user_invitation
+
+        Deny an invitation  # noqa: E501
+        """
+        pass
+
     def test_deny_validation(self):
         """Test case for deny_validation
 
@@ -525,6 +539,20 @@ class TestCollaborationApi(unittest.TestCase):
         """Test case for get_tags
 
         Retrieve all tags  # noqa: E501
+        """
+        pass
+
+    def test_get_user_invitation(self):
+        """Test case for get_user_invitation
+
+        Retrieve an invitation  # noqa: E501
+        """
+        pass
+
+    def test_get_user_invitations(self):
+        """Test case for get_user_invitations
+
+        List user's invitations  # noqa: E501
         """
         pass
 

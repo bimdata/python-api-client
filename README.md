@@ -238,6 +238,7 @@ Class | Method | HTTP request | Description
 *CheckerApi* | [**update_rule**](docs/CheckerApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
 *CheckerApi* | [**update_rule_component**](docs/CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
 *CheckerApi* | [**update_ruleset**](docs/CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
+*CollaborationApi* | [**accept_user_invitation**](docs/CollaborationApi.md#accept_user_invitation) | **POST** /user/invitations/{id}/accept | Accept an invitation
 *CollaborationApi* | [**accept_validation**](docs/CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
 *CollaborationApi* | [**add_document_tag**](docs/CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
 *CollaborationApi* | [**add_group_member**](docs/CollaborationApi.md#add_group_member) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/{group_pk}/member | Add a user to a group
@@ -274,6 +275,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**delete_validation**](docs/CollaborationApi.md#delete_validation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Remove a validation
 *CollaborationApi* | [**delete_visa**](docs/CollaborationApi.md#delete_visa) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Remove a visa
 *CollaborationApi* | [**delete_visa_comment**](docs/CollaborationApi.md#delete_visa_comment) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Remove a comment
+*CollaborationApi* | [**deny_user_invitation**](docs/CollaborationApi.md#deny_user_invitation) | **POST** /user/invitations/{id}/deny | Deny an invitation
 *CollaborationApi* | [**deny_validation**](docs/CollaborationApi.md#deny_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/deny | Deny a validation
 *CollaborationApi* | [**get_classification**](docs/CollaborationApi.md#get_classification) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification/{id} | Retrieve a classification
 *CollaborationApi* | [**get_classifications**](docs/CollaborationApi.md#get_classifications) | **GET** /cloud/{cloud_pk}/project/{project_pk}/classification | Retrieve all classifications
@@ -310,6 +312,8 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_self_user**](docs/CollaborationApi.md#get_self_user) | **GET** /user | Get info about the current user
 *CollaborationApi* | [**get_tag**](docs/CollaborationApi.md#get_tag) | **GET** /cloud/{cloud_pk}/project/{project_pk}/tag/{id} | Retrieve a tag
 *CollaborationApi* | [**get_tags**](docs/CollaborationApi.md#get_tags) | **GET** /cloud/{cloud_pk}/project/{project_pk}/tag | Retrieve all tags
+*CollaborationApi* | [**get_user_invitation**](docs/CollaborationApi.md#get_user_invitation) | **GET** /user/invitations/{id} | Retrieve an invitation
+*CollaborationApi* | [**get_user_invitations**](docs/CollaborationApi.md#get_user_invitations) | **GET** /user/invitations | List user&#39;s invitations
 *CollaborationApi* | [**get_validation**](docs/CollaborationApi.md#get_validation) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id} | Retrieve a validation to a visa
 *CollaborationApi* | [**get_validations**](docs/CollaborationApi.md#get_validations) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation | List all validations to a visa
 *CollaborationApi* | [**get_visa**](docs/CollaborationApi.md#get_visa) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id} | Retrieve a visa of a document
