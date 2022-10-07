@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.2 (2022-10-07)
+### Fix
+* Cloud_id and project_id in Invitation serializer ([`d7315c0`](https://github.com/bimdata/python-api-client/commit/d7315c0b017a7f475bc79b960feb5d31b73a14e0))
+
 ## v9.6.1 (2022-10-06)
 ### Fix
 * Update fields of userInvitation serializer ([`88f7294`](https://github.com/bimdata/python-api-client/commit/88f7294512206fef11de7cce399d3c6e56344fa6))
