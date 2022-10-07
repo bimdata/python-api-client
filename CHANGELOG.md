@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.3 (2022-10-07)
+### Fix
+* Created_at and responded_at in Invitation model (#570)
+
+* created_at and updated_at in Invitation model
+
+* invitation: manual responded_at field ([`dc7063d`](https://github.com/bimdata/python-api-client/commit/dc7063dac2b4d3f6839d12248b708eb4d0b54a06))
+
 ## v9.6.2 (2022-10-07)
 ### Fix
 * Cloud_id and project_id in Invitation serializer ([`d7315c0`](https://github.com/bimdata/python-api-client/commit/d7315c0b017a7f475bc79b960feb5d31b73a14e0))
