@@ -98,7 +98,9 @@ class UserInvitation(ModelNormal):
         return {
             'id': (int,),  # noqa: E501
             'redirect_uri': (str,),  # noqa: E501
+            'cloud_id': (int,),  # noqa: E501
             'cloud_name': (str,),  # noqa: E501
+            'project_id': (int, none_type,),  # noqa: E501
             'sender': (User,),  # noqa: E501
             'project_name': (str,),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -112,7 +114,9 @@ class UserInvitation(ModelNormal):
     attribute_map = {
         'id': 'id',  # noqa: E501
         'redirect_uri': 'redirect_uri',  # noqa: E501
+        'cloud_id': 'cloud_id',  # noqa: E501
         'cloud_name': 'cloud_name',  # noqa: E501
+        'project_id': 'project_id',  # noqa: E501
         'sender': 'sender',  # noqa: E501
         'project_name': 'project_name',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -120,19 +124,23 @@ class UserInvitation(ModelNormal):
 
     read_only_vars = {
         'id',  # noqa: E501
+        'cloud_id',  # noqa: E501
+        'project_id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, redirect_uri, cloud_name, sender, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, redirect_uri, cloud_id, cloud_name, project_id, sender, *args, **kwargs):  # noqa: E501
         """UserInvitation - a model defined in OpenAPI
 
         Args:
             id (int):
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
+            cloud_id (int):
             cloud_name (str):
+            project_id (int, none_type):
             sender (User):
 
         Keyword Args:
@@ -197,7 +205,9 @@ class UserInvitation(ModelNormal):
 
         self.id = id
         self.redirect_uri = redirect_uri
+        self.cloud_id = cloud_id
         self.cloud_name = cloud_name
+        self.project_id = project_id
         self.sender = sender
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

@@ -6,7 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
 **redirect_uri** | **str** | User will be redirected to this uri when they accept the invitation | 
+**cloud_id** | **int** |  | [readonly] 
 **cloud_name** | **str** |  | 
+**project_id** | **int, none_type** |  | [readonly] 
 **sender** | [**User**](User.md) |  | 
 **project_name** | **str** |  | [optional] 
 **status** | **str** |          A: Accepted         D: Denied         P: Pending          | [optional] 
