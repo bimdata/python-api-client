@@ -689,6 +689,7 @@ Class | Method | HTTP request | Description
  - [Direction](docs/Direction.md)
  - [DirectionRequest](docs/DirectionRequest.md)
  - [Document](docs/Document.md)
+ - [DocumentIdRequest](docs/DocumentIdRequest.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)

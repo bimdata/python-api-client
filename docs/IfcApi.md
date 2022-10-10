@@ -13885,7 +13885,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_documents_of_element_deprecated**
-> [Document] link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+> [Document] link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, document_id_request)
 
 Link one or many documents to an element
 
@@ -13903,6 +13903,7 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import ifc_api
 from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.document_id_request import DocumentIdRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -13947,11 +13948,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     element_uuid = "element_uuid_example" # str | 
     ifc_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    document_id_request = [
+        DocumentIdRequest(
+            id=1,
+        ),
+    ] # [DocumentIdRequest] | 
 
     # example passing only required values which don't have defaults set
     try:
         # Link one or many documents to an element
-        api_response = api_instance.link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk)
+        api_response = api_instance.link_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, document_id_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling IfcApi->link_documents_of_element_deprecated: %s\n" % e)
@@ -13966,6 +13972,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  |
  **ifc_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **document_id_request** | [**[DocumentIdRequest]**](DocumentIdRequest.md)|  |
 
 ### Return type
 
@@ -13977,7 +13984,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: application/json
 
 
