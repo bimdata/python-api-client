@@ -43,6 +43,7 @@ setup(
     description="BIMData API",
     long_description=long_description,
     long_description_content_type="text/markdown",
+    author="bimdata.io"
     author_email="contact@bimdata.io",
     url="https://github.com/bimdata/python-api-client",
     keywords=["Swagger", "BIMData API"],
