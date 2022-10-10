@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.4 (2022-10-10)
+### Fix
+* Fix #536 body in linkDocumentsOfElement ([`01b3da8`](https://github.com/bimdata/python-api-client/commit/01b3da8507448e88b30946aaf5911475aabffad9))
+
 ## v9.6.3 (2022-10-07)
 ### Fix
 * Created_at and responded_at in Invitation model (#570)
