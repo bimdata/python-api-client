@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.5 (2022-10-11)
+### Fix
+* Fix bad body serializer linkDocumentsOfElement ([`81cff13`](https://github.com/bimdata/python-api-client/commit/81cff13e6c4e8b35db22a022735e269d828b749c))
+
 ## v9.6.4 (2022-10-10)
 ### Fix
 * Fix #536 body in linkDocumentsOfElement ([`01b3da8`](https://github.com/bimdata/python-api-client/commit/01b3da8507448e88b30946aaf5911475aabffad9))
