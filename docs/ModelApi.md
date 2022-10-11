@@ -12850,7 +12850,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **link_documents_of_element**
-> [Document] link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, document_id_request)
+> [Document] link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body)
 
 Link one or many documents to an element
 
@@ -12868,7 +12868,6 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
 from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.document_id_request import DocumentIdRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -12913,16 +12912,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     element_uuid = "element_uuid_example" # str | 
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    document_id_request = [
-        DocumentIdRequest(
-            id=1,
-        ),
-    ] # [DocumentIdRequest] | 
+    request_body = [
+        1,
+    ] # [int] | 
 
     # example passing only required values which don't have defaults set
     try:
         # Link one or many documents to an element
-        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, document_id_request)
+        api_response = api_instance.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->link_documents_of_element: %s\n" % e)
@@ -12937,7 +12934,7 @@ Name | Type | Description  | Notes
  **element_uuid** | **str**|  |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **document_id_request** | [**[DocumentIdRequest]**](DocumentIdRequest.md)|  |
+ **request_body** | **[int]**|  |
 
 ### Return type
 

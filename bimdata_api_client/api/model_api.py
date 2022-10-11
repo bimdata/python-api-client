@@ -29,7 +29,6 @@ from bimdata_api_client.model.classification_request import ClassificationReques
 from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
 from bimdata_api_client.model.create_model_request import CreateModelRequest
 from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.document_id_request import DocumentIdRequest
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
@@ -8255,14 +8254,14 @@ class ModelApi(object):
                     'element_uuid',
                     'model_pk',
                     'project_pk',
-                    'document_id_request',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'element_uuid',
                     'model_pk',
                     'project_pk',
-                    'document_id_request',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -8285,8 +8284,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'document_id_request':
-                        ([DocumentIdRequest],),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -8299,7 +8298,7 @@ class ModelApi(object):
                     'element_uuid': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
-                    'document_id_request': 'body',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -20981,7 +20980,7 @@ class ModelApi(object):
         element_uuid,
         model_pk,
         project_pk,
-        document_id_request,
+        request_body,
         **kwargs
     ):
         """Link one or many documents to an element  # noqa: E501
@@ -20990,7 +20989,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, document_id_request, async_req=True)
+        >>> thread = api.link_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -20998,7 +20997,7 @@ class ModelApi(object):
             element_uuid (str):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
-            document_id_request ([DocumentIdRequest]):
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -21065,8 +21064,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
-        kwargs['document_id_request'] = \
-            document_id_request
+        kwargs['request_body'] = \
+            request_body
         return self.link_documents_of_element_endpoint.call_with_http_info(**kwargs)
 
     def list_classification_element_relations(

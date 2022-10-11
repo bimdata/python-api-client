@@ -40,7 +40,6 @@ from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
 from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.document_id_request import DocumentIdRequest
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
