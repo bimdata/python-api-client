@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'IFC', 'DXF', 'POINT_CLOUD', 'GLTF', 'DAE', 'DWG', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'BFX', 'OBJ', 'IFC', 'DXF', 'DAE', 'GLTF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -10096,7 +10096,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this fos user.
     patched_user_cloud_update_request = PatchedUserCloudUpdateRequest(
-        role=100,
+        cloud_role=100,
     ) # PatchedUserCloudUpdateRequest |  (optional)
 
     # example passing only required values which don't have defaults set

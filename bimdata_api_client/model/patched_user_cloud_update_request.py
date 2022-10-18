@@ -56,17 +56,13 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
     """
 
     allowed_values = {
-        ('role',): {
+        ('cloud_role',): {
             '100': 100,
             '50': 50,
         },
     }
 
     validations = {
-        ('role',): {
-            'inclusive_maximum': 32767,
-            'inclusive_minimum': -32768,
-        },
     }
 
     @cached_property
@@ -90,7 +86,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'role': (int,),  # noqa: E501
+            'cloud_role': (int,),  # noqa: E501
         }
 
     @cached_property
@@ -99,7 +95,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
 
 
     attribute_map = {
-        'role': 'role',  # noqa: E501
+        'cloud_role': 'cloud_role',  # noqa: E501
     }
 
     read_only_vars = {
@@ -143,7 +139,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            role (int): Role of the user in the cloud. [optional]  # noqa: E501
+            cloud_role (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -225,7 +221,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            role (int): Role of the user in the cloud. [optional]  # noqa: E501
+            cloud_role (int): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
