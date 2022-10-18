@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.6 (2022-10-18)
+### Fix
+* Rename request param in patch user cloud ([#572](https://github.com/bimdata/python-api-client/issues/572)) ([`2907dd6`](https://github.com/bimdata/python-api-client/commit/2907dd671f669f95d72ae0bb34e3d611ebdeacb4))
+
 ## v9.6.5 (2022-10-11)
 ### Fix
 * Fix bad body serializer linkDocumentsOfElement ([`81cff13`](https://github.com/bimdata/python-api-client/commit/81cff13e6c4e8b35db22a022735e269d828b749c))
