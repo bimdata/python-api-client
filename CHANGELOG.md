@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.7 (2022-10-21)
+### Fix
+* Rename model 360 field (#576)
+
+* rename model 360 field
+
+* keep viewer_360_file field
+
+* remove useless field in write only serializer ([`8de9eae`](https://github.com/bimdata/python-api-client/commit/8de9eaebf5e2991649ccd08332b37ce6db8fac8c))
+
 ## v9.6.6 (2022-10-18)
 ### Fix
 * Rename request param in patch user cloud ([#572](https://github.com/bimdata/python-api-client/issues/572)) ([`2907dd6`](https://github.com/bimdata/python-api-client/commit/2907dd671f669f95d72ae0bb34e3d611ebdeacb4))
