@@ -4,6 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**viewer_360_file** | **file_type** | DEPRECATED: Use &#39;preview_file&#39; instead. | 
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** |  | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 

@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** |  | [optional] 
+**viewer_360_file** | **file_type** | DEPRECATED: Use &#39;preview_file&#39; instead. | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
 **size_ratio** | **float, none_type** | How many meters a unit represents | [optional] 
 **archived** | **bool** |  | [optional] 

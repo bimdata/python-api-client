@@ -10577,7 +10577,7 @@ class IfcApi(object):
                     'gltf_file',
                     'gltf_with_openings_file',
                     'bvh_tree_file',
-                    'viewer_360_file',
+                    'preview_file',
                     'xkt_file',
                 ],
                 'required': [
@@ -10592,7 +10592,7 @@ class IfcApi(object):
                     'gltf_file',
                     'gltf_with_openings_file',
                     'bvh_tree_file',
-                    'viewer_360_file',
+                    'preview_file',
                     'xkt_file',
                 ],
                 'enum': [
@@ -10624,7 +10624,7 @@ class IfcApi(object):
                         (file_type, none_type,),
                     'bvh_tree_file':
                         (file_type, none_type,),
-                    'viewer_360_file':
+                    'preview_file':
                         (file_type, none_type,),
                     'xkt_file':
                         (file_type, none_type,),
@@ -10639,7 +10639,7 @@ class IfcApi(object):
                     'gltf_file': 'gltf_file',
                     'gltf_with_openings_file': 'gltf_with_openings_file',
                     'bvh_tree_file': 'bvh_tree_file',
-                    'viewer_360_file': 'viewer_360_file',
+                    'preview_file': 'preview_file',
                     'xkt_file': 'xkt_file',
                 },
                 'location_map': {
@@ -10652,7 +10652,7 @@ class IfcApi(object):
                     'gltf_file': 'form',
                     'gltf_with_openings_file': 'form',
                     'bvh_tree_file': 'form',
-                    'viewer_360_file': 'form',
+                    'preview_file': 'form',
                     'xkt_file': 'form',
                 },
                 'collection_format_map': {
@@ -24604,7 +24604,7 @@ class IfcApi(object):
             gltf_file (file_type, none_type): [optional]
             gltf_with_openings_file (file_type, none_type): [optional]
             bvh_tree_file (file_type, none_type): [optional]
-            viewer_360_file (file_type, none_type): [optional]
+            preview_file (file_type, none_type): [optional]
             xkt_file (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

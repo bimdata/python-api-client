@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **gltf_file** | **str, none_type** |  | [optional] 
 **gltf_with_openings_file** | **str, none_type** |  | [optional] 
 **bvh_tree_file** | **str, none_type** |  | [optional] 
-**viewer_360_file** | **str, none_type** |  | [optional] 
+**preview_file** | **str, none_type** |  | [optional] 
 **xkt_file** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

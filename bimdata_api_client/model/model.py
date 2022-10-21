@@ -136,7 +136,8 @@ class Model(ModelNormal):
             'map_file': (str, none_type,),  # noqa: E501
             'gltf_file': (str, none_type,),  # noqa: E501
             'bvh_tree_file': (str, none_type,),  # noqa: E501
-            'viewer_360_file': (str, none_type,),  # noqa: E501
+            'preview_file': (str, none_type,),  # noqa: E501
+            'viewer_360_file': (str,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
             'project_id': (int, none_type,),  # noqa: E501
             'errors': ([str], none_type,),  # noqa: E501
@@ -170,6 +171,7 @@ class Model(ModelNormal):
         'map_file': 'map_file',  # noqa: E501
         'gltf_file': 'gltf_file',  # noqa: E501
         'bvh_tree_file': 'bvh_tree_file',  # noqa: E501
+        'preview_file': 'preview_file',  # noqa: E501
         'viewer_360_file': 'viewer_360_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
         'project_id': 'project_id',  # noqa: E501
@@ -199,7 +201,7 @@ class Model(ModelNormal):
         'map_file',  # noqa: E501
         'gltf_file',  # noqa: E501
         'bvh_tree_file',  # noqa: E501
-        'viewer_360_file',  # noqa: E501
+        'preview_file',  # noqa: E501
         'xkt_file',  # noqa: E501
         'project_id',  # noqa: E501
         'errors',  # noqa: E501
@@ -210,7 +212,7 @@ class Model(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, bvh_tree_file, viewer_360_file, xkt_file, project_id, errors, warnings, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, bvh_tree_file, preview_file, viewer_360_file, xkt_file, project_id, errors, warnings, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
         Args:
@@ -227,7 +229,8 @@ class Model(ModelNormal):
             map_file (str, none_type):
             gltf_file (str, none_type):
             bvh_tree_file (str, none_type):
-            viewer_360_file (str, none_type):
+            preview_file (str, none_type):
+            viewer_360_file (str): DEPRECATED: Use 'preview_file' instead.
             xkt_file (str, none_type):
             project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
@@ -312,6 +315,7 @@ class Model(ModelNormal):
         self.map_file = map_file
         self.gltf_file = gltf_file
         self.bvh_tree_file = bvh_tree_file
+        self.preview_file = preview_file
         self.viewer_360_file = viewer_360_file
         self.xkt_file = xkt_file
         self.project_id = project_id
@@ -337,9 +341,10 @@ class Model(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, viewer_360_file, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
+            viewer_360_file (str): DEPRECATED: Use 'preview_file' instead.
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be
@@ -404,6 +409,7 @@ class Model(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.viewer_360_file = viewer_360_file
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
