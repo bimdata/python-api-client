@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.8 (2022-11-07)
+### Fix
+* Fix model deserialization ([`623b8f6`](https://github.com/bimdata/python-api-client/commit/623b8f6234b83b65e312e609d6513f13a5c15171))
+
 ## v9.6.7 (2022-10-21)
 ### Fix
 * Rename model 360 field (#576)
