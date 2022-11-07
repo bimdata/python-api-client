@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **title** | **str** |  | 
-**modified_date** | **datetime** |  | [readonly] 
+**modified_date** | **datetime, none_type** |  | [readonly] 
 **project** | **int** |  | 
 **guid** | **str** |  | [optional] 
 **topic_type** | **str, none_type** |  | [optional] 

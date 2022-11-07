@@ -99,7 +99,7 @@ class Topic(ModelNormal):
         """
         return {
             'title': (str,),  # noqa: E501
-            'modified_date': (datetime,),  # noqa: E501
+            'modified_date': (datetime, none_type,),  # noqa: E501
             'project': (int,),  # noqa: E501
             'guid': (str,),  # noqa: E501
             'topic_type': (str, none_type,),  # noqa: E501
@@ -161,7 +161,7 @@ class Topic(ModelNormal):
 
         Args:
             title (str):
-            modified_date (datetime):
+            modified_date (datetime, none_type):
             project (int):
 
         Keyword Args:

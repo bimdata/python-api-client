@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**modified_date** | **datetime** |  | [readonly] 
+**modified_date** | **datetime, none_type** |  | [readonly] 
 **title** | **str** |  | 
 **project** | **int** |  | 
 **guid** | **str** |  | [optional] 

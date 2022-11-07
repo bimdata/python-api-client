@@ -18,7 +18,7 @@ Name | Type | Description | Notes
 **gltf_file** | **str, none_type** |  | [readonly] 
 **bvh_tree_file** | **str, none_type** |  | [readonly] 
 **preview_file** | **str, none_type** |  | [readonly] 
-**viewer_360_file** | **str** | DEPRECATED: Use &#39;preview_file&#39; instead. | 
+**viewer_360_file** | **str, none_type** | DEPRECATED: Use &#39;preview_file&#39; instead. | [readonly] 
 **xkt_file** | **str, none_type** |  | [readonly] 
 **project_id** | **int, none_type** |  | [readonly] 
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 

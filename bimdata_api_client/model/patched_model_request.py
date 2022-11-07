@@ -103,7 +103,6 @@ class PatchedModelRequest(ModelNormal):
         return {
             'name': (str, none_type,),  # noqa: E501
             'source': (str,),  # noqa: E501
-            'viewer_360_file': (file_type,),  # noqa: E501
             'world_position': ([float], none_type,),  # noqa: E501
             'size_ratio': (float, none_type,),  # noqa: E501
             'archived': (bool,),  # noqa: E501
@@ -120,7 +119,6 @@ class PatchedModelRequest(ModelNormal):
     attribute_map = {
         'name': 'name',  # noqa: E501
         'source': 'source',  # noqa: E501
-        'viewer_360_file': 'viewer_360_file',  # noqa: E501
         'world_position': 'world_position',  # noqa: E501
         'size_ratio': 'size_ratio',  # noqa: E501
         'archived': 'archived',  # noqa: E501
@@ -172,7 +170,6 @@ class PatchedModelRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             source (str): [optional]  # noqa: E501
-            viewer_360_file (file_type): DEPRECATED: Use 'preview_file' instead.. [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501
             archived (bool): [optional]  # noqa: E501
@@ -262,7 +259,6 @@ class PatchedModelRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
             source (str): [optional]  # noqa: E501
-            viewer_360_file (file_type): DEPRECATED: Use 'preview_file' instead.. [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501
             archived (bool): [optional]  # noqa: E501

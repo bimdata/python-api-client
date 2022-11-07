@@ -15187,7 +15187,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_model_request = PatchedModelRequest(
         name="name_example",
         source="UPLOAD",
-        viewer_360_file=open('/path/to/file', 'rb'),
         world_position=[
             3.14,
         ],

@@ -106,7 +106,7 @@ class FullTopic(ModelNormal):
         """
         lazy_import()
         return {
-            'modified_date': (datetime,),  # noqa: E501
+            'modified_date': (datetime, none_type,),  # noqa: E501
             'title': (str,),  # noqa: E501
             'project': (int,),  # noqa: E501
             'guid': (str,),  # noqa: E501
@@ -172,7 +172,7 @@ class FullTopic(ModelNormal):
         """FullTopic - a model defined in OpenAPI
 
         Args:
-            modified_date (datetime):
+            modified_date (datetime, none_type):
             title (str):
             project (int):
 
