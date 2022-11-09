@@ -1296,7 +1296,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **create_dms_tree**
-> [Folder] create_dms_tree(cloud_pk, id, write_folder_request)
+> Folder create_dms_tree(cloud_pk, id, write_folder_request)
 
 Create a complete DMS tree
 
@@ -1388,7 +1388,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**[Folder]**](Folder.md)
+[**Folder**](Folder.md)
 
 ### Authorization
 
@@ -1418,7 +1418,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'DAE', 'OBJ', 'GLTF', 'POINT_CLOUD', 'BFX', 'DXF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'DXF', 'DAE', 'OBJ', 'BFX', 'GLTF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 

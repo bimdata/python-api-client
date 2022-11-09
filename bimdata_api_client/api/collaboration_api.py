@@ -792,7 +792,7 @@ class CollaborationApi(object):
         )
         self.create_dms_tree_endpoint = _Endpoint(
             settings={
-                'response_type': ([Folder],),
+                'response_type': (Folder,),
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -7981,7 +7981,7 @@ class CollaborationApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            [Folder]
+            Folder
                 If the method is called asynchronously, returns the request
                 thread.
         """
@@ -8027,7 +8027,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DWG', 'DAE', 'OBJ', 'GLTF', 'POINT_CLOUD', 'BFX', 'DXF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'POINT_CLOUD', 'DWG', 'DXF', 'DAE', 'OBJ', 'BFX', 'GLTF', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
