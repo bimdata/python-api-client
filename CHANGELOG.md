@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.10 (2022-11-09)
+### Fix
+* Create DMS Tree return same datas as the get route ([#587](https://github.com/bimdata/python-api-client/issues/587)) ([`8ec4ab1`](https://github.com/bimdata/python-api-client/commit/8ec4ab1be66e53ff4d49c782867b8bed5d557058))
+
 ## v9.6.9 (2022-11-09)
 ### Fix
 * Create DMS Tree return same datas as the get route ([#587](https://github.com/bimdata/python-api-client/issues/587)) ([`5bd84de`](https://github.com/bimdata/python-api-client/commit/5bd84de4148c2c19adcff8a8f5acc9d4ff55a2d8))
