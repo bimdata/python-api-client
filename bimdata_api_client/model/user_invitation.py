@@ -101,6 +101,7 @@ class UserInvitation(ModelNormal):
             'cloud_id': (int,),  # noqa: E501
             'cloud_name': (str,),  # noqa: E501
             'project_id': (int, none_type,),  # noqa: E501
+            'client_name': (str,),  # noqa: E501
             'sender': (User,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'project_name': (str,),  # noqa: E501
@@ -119,6 +120,7 @@ class UserInvitation(ModelNormal):
         'cloud_id': 'cloud_id',  # noqa: E501
         'cloud_name': 'cloud_name',  # noqa: E501
         'project_id': 'project_id',  # noqa: E501
+        'client_name': 'client_name',  # noqa: E501
         'sender': 'sender',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
         'project_name': 'project_name',  # noqa: E501
@@ -137,7 +139,7 @@ class UserInvitation(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, redirect_uri, cloud_id, cloud_name, project_id, sender, created_at, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, redirect_uri, cloud_id, cloud_name, project_id, client_name, sender, created_at, *args, **kwargs):  # noqa: E501
         """UserInvitation - a model defined in OpenAPI
 
         Args:
@@ -146,6 +148,7 @@ class UserInvitation(ModelNormal):
             cloud_id (int):
             cloud_name (str):
             project_id (int, none_type):
+            client_name (str):
             sender (User):
             created_at (datetime):
 
@@ -215,6 +218,7 @@ class UserInvitation(ModelNormal):
         self.cloud_id = cloud_id
         self.cloud_name = cloud_name
         self.project_id = project_id
+        self.client_name = client_name
         self.sender = sender
         self.created_at = created_at
         for var_name, var_value in kwargs.items():
@@ -237,11 +241,12 @@ class UserInvitation(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, redirect_uri, cloud_name, sender, *args, **kwargs):  # noqa: E501
+    def __init__(self, redirect_uri, cloud_name, client_name, sender, *args, **kwargs):  # noqa: E501
         """UserInvitation - a model defined in OpenAPI
 
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
             cloud_name (str):
+            client_name (str):
             sender (User):
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -304,6 +309,7 @@ class UserInvitation(ModelNormal):
 
         self.redirect_uri = redirect_uri
         self.cloud_name = cloud_name
+        self.client_name = client_name
         self.sender = sender
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \

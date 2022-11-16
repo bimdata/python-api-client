@@ -2156,7 +2156,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this project.
-    format = "format_example" # str | topic format to export, comma separated. Default = all (optional)
+    format = "format_example" # str | topic format to export, comma separated. Default = standard (optional)
     topics = "topics_example" # str | topic guids to export, comma separated. Default = all (optional)
 
     # example passing only required values which don't have defaults set
@@ -2183,7 +2183,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this project. |
- **format** | **str**| topic format to export, comma separated. Default &#x3D; all | [optional]
+ **format** | **str**| topic format to export, comma separated. Default &#x3D; standard | [optional]
  **topics** | **str**| topic guids to export, comma separated. Default &#x3D; all | [optional]
 
 ### Return type

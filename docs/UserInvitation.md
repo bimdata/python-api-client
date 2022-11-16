@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **cloud_id** | **int** |  | [readonly] 
 **cloud_name** | **str** |  | 
 **project_id** | **int, none_type** |  | [readonly] 
+**client_name** | **str** |  | 
 **sender** | [**User**](User.md) |  | 
 **created_at** | **datetime** |  | [readonly] 
 **project_name** | **str** |  | [optional] 

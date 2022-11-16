@@ -222,7 +222,7 @@ class FullTopic(ModelNormal):
             priority (str, none_type): [optional]  # noqa: E501
             index (int, none_type): [optional]  # noqa: E501
             assigned_to (str, none_type): [optional]  # noqa: E501
-            format (str): [optional]  # noqa: E501
+            format (str):          The BCF data structure may be used for other purposes than BCF Topics. (Storing coordinates, a viewpoint, a list of objecs, etc)         The default value is \"standard\".         If you want to use the BCF routes to store custom data not related to a BCF Topic, you must set this value to something else.         You must add a query string filter if you want to fetch topics with a non \"standard\" format.         . [optional]  # noqa: E501
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([Comment]): [optional]  # noqa: E501
             viewpoints ([Viewpoint]): [optional]  # noqa: E501
@@ -328,7 +328,7 @@ class FullTopic(ModelNormal):
             priority (str, none_type): [optional]  # noqa: E501
             index (int, none_type): [optional]  # noqa: E501
             assigned_to (str, none_type): [optional]  # noqa: E501
-            format (str): [optional]  # noqa: E501
+            format (str):          The BCF data structure may be used for other purposes than BCF Topics. (Storing coordinates, a viewpoint, a list of objecs, etc)         The default value is \"standard\".         If you want to use the BCF routes to store custom data not related to a BCF Topic, you must set this value to something else.         You must add a query string filter if you want to fetch topics with a non \"standard\" format.         . [optional]  # noqa: E501
             due_date (datetime, none_type): [optional]  # noqa: E501
             comments ([Comment]): [optional]  # noqa: E501
             viewpoints ([Viewpoint]): [optional]  # noqa: E501

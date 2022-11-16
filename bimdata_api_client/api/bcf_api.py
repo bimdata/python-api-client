@@ -4929,7 +4929,7 @@ class BcfApi(object):
             id (int): A unique integer value identifying this project.
 
         Keyword Args:
-            format (str): topic format to export, comma separated. Default = all. [optional]
+            format (str): topic format to export, comma separated. Default = standard. [optional]
             topics (str): topic guids to export, comma separated. Default = all. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
