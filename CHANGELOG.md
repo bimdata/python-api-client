@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.11 (2022-11-16)
+### Fix
+* Added missing value (client name) to User Invitation Serializer ([#590](https://github.com/bimdata/python-api-client/issues/590)) ([`19b7898`](https://github.com/bimdata/python-api-client/commit/19b78982253fe658aa0008866a6fab0bbc58d448))
+
 ## v9.6.10 (2022-11-09)
 ### Fix
 * Create DMS Tree return same datas as the get route ([#587](https://github.com/bimdata/python-api-client/issues/587)) ([`8ec4ab1`](https://github.com/bimdata/python-api-client/commit/8ec4ab1be66e53ff4d49c782867b8bed5d557058))
