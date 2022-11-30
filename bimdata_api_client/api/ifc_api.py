@@ -41,7 +41,6 @@ from bimdata_api_client.model.ifc_access_token import IfcAccessToken
 from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
 from bimdata_api_client.model.ifc_checker import IfcChecker
 from bimdata_api_client.model.ifc_checker_request import IfcCheckerRequest
-from bimdata_api_client.model.ifc_export import IfcExport
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
@@ -4485,7 +4484,7 @@ class IfcApi(object):
         )
         self.export_ifc_deprecated_endpoint = _Endpoint(
             settings={
-                'response_type': (IfcExport,),
+                'response_type': None,
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -4547,9 +4546,7 @@ class IfcApi(object):
                 }
             },
             headers_map={
-                'accept': [
-                    'application/json'
-                ],
+                'accept': [],
                 'content_type': [
                     'application/json',
                     'application/x-www-form-urlencoded',
@@ -17269,7 +17266,7 @@ class IfcApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            IfcExport
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

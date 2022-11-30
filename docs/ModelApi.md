@@ -6741,7 +6741,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **export_ifc**
-> IfcExport export_ifc(cloud_pk, id, project_pk, ifc_export_request)
+> export_ifc(cloud_pk, id, project_pk, ifc_export_request)
 
 Export IFC
 
@@ -6759,7 +6759,6 @@ import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
-from bimdata_api_client.model.ifc_export import IfcExport
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6821,8 +6820,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     try:
         # Export IFC
-        api_response = api_instance.export_ifc(cloud_pk, id, project_pk, ifc_export_request)
-        pprint(api_response)
+        api_instance.export_ifc(cloud_pk, id, project_pk, ifc_export_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->export_ifc: %s\n" % e)
 ```
@@ -6839,7 +6837,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**IfcExport**](IfcExport.md)
+void (empty response body)
 
 ### Authorization
 
@@ -6848,14 +6846,14 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
-**200** |  |  -  |
+**204** | No response body |  -  |
 **400** | A required field is missing in the body |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |

@@ -65,7 +65,6 @@ from bimdata_api_client.model.ifc_access_token import IfcAccessToken
 from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
 from bimdata_api_client.model.ifc_checker import IfcChecker
 from bimdata_api_client.model.ifc_checker_request import IfcCheckerRequest
-from bimdata_api_client.model.ifc_export import IfcExport
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest

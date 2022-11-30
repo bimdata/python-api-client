@@ -72,7 +72,6 @@ bimdata_api_client/model/ifc_access_token.py
 bimdata_api_client/model/ifc_access_token_request.py
 bimdata_api_client/model/ifc_checker.py
 bimdata_api_client/model/ifc_checker_request.py
-bimdata_api_client/model/ifc_export.py
 bimdata_api_client/model/ifc_export_request.py
 bimdata_api_client/model/ifc_merge_request.py
 bimdata_api_client/model/ifc_optimize_request.py
@@ -323,7 +322,6 @@ docs/IfcAccessTokenRequest.md
 docs/IfcApi.md
 docs/IfcChecker.md
 docs/IfcCheckerRequest.md
-docs/IfcExport.md
 docs/IfcExportRequest.md
 docs/IfcMergeRequest.md
 docs/IfcOptimizeRequest.md
@@ -578,7 +576,6 @@ test/test_ifc_access_token_request.py
 test/test_ifc_api.py
 test/test_ifc_checker.py
 test/test_ifc_checker_request.py
-test/test_ifc_export.py
 test/test_ifc_export_request.py
 test/test_ifc_merge_request.py
 test/test_ifc_optimize_request.py

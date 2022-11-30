@@ -37,7 +37,6 @@ from bimdata_api_client.model.element_property_set_relation_request import Eleme
 from bimdata_api_client.model.element_request import ElementRequest
 from bimdata_api_client.model.ifc_access_token import IfcAccessToken
 from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
-from bimdata_api_client.model.ifc_export import IfcExport
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
@@ -4179,7 +4178,7 @@ class ModelApi(object):
         )
         self.export_ifc_endpoint = _Endpoint(
             settings={
-                'response_type': (IfcExport,),
+                'response_type': None,
                 'auth': [
                     'ApiKey',
                     'BIMData_Connect',
@@ -4241,9 +4240,7 @@ class ModelApi(object):
                 }
             },
             headers_map={
-                'accept': [
-                    'application/json'
-                ],
+                'accept': [],
                 'content_type': [
                     'application/json',
                     'application/x-www-form-urlencoded',
@@ -16069,7 +16066,7 @@ class ModelApi(object):
             async_req (bool): execute request asynchronously
 
         Returns:
-            IfcExport
+            None
                 If the method is called asynchronously, returns the request
                 thread.
         """

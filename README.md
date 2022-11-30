@@ -714,7 +714,6 @@ Class | Method | HTTP request | Description
  - [IfcAccessTokenRequest](docs/IfcAccessTokenRequest.md)
  - [IfcChecker](docs/IfcChecker.md)
  - [IfcCheckerRequest](docs/IfcCheckerRequest.md)
- - [IfcExport](docs/IfcExport.md)
  - [IfcExportRequest](docs/IfcExportRequest.md)
  - [IfcMergeRequest](docs/IfcMergeRequest.md)
  - [IfcOptimizeRequest](docs/IfcOptimizeRequest.md)
