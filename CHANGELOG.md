@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.6.12 (2022-11-30)
+### Fix
+* Fix model export doc response ([`aa8fbfd`](https://github.com/bimdata/python-api-client/commit/aa8fbfd7a717ba3a5d1c2074effd81ea07b43d18))
+
 ## v9.6.11 (2022-11-16)
 ### Fix
 * Added missing value (client name) to User Invitation Serializer ([#590](https://github.com/bimdata/python-api-client/issues/590)) ([`19b7898`](https://github.com/bimdata/python-api-client/commit/19b78982253fe658aa0008866a6fab0bbc58d448))
