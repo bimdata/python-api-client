@@ -245,6 +245,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**cancel_cloud_user_invitation**](docs/CollaborationApi.md#cancel_cloud_user_invitation) | **DELETE** /cloud/{cloud_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**cancel_project_user_invitation**](docs/CollaborationApi.md#cancel_project_user_invitation) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/invitation/{id} | Cancel a pending invitation
 *CollaborationApi* | [**check_access**](docs/CollaborationApi.md#check_access) | **GET** /cloud/{id}/check-access | Check app access from cloud
+*CollaborationApi* | [**check_project_access**](docs/CollaborationApi.md#check_project_access) | **GET** /cloud/{cloud_pk}/project/{id}/check-access | Check if the current token has access to the requested project
 *CollaborationApi* | [**close_visa**](docs/CollaborationApi.md#close_visa) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{id}/close | Close a visa of a document
 *CollaborationApi* | [**create_classification**](docs/CollaborationApi.md#create_classification) | **POST** /cloud/{cloud_pk}/project/{project_pk}/classification | Create a classification
 *CollaborationApi* | [**create_cloud**](docs/CollaborationApi.md#create_cloud) | **POST** /cloud | Create a cloud
@@ -664,6 +665,7 @@ Class | Method | HTTP request | Description
  - [BuildingModelPlanRequest](docs/BuildingModelPlanRequest.md)
  - [CheckPlan](docs/CheckPlan.md)
  - [CheckPlanRequest](docs/CheckPlanRequest.md)
+ - [CheckProjectAccess](docs/CheckProjectAccess.md)
  - [CheckerResult](docs/CheckerResult.md)
  - [CheckerResultRequest](docs/CheckerResultRequest.md)
  - [Classification](docs/Classification.md)

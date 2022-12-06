@@ -22,6 +22,7 @@ bimdata_api_client/model/building.py
 bimdata_api_client/model/building_model_plan_request.py
 bimdata_api_client/model/check_plan.py
 bimdata_api_client/model/check_plan_request.py
+bimdata_api_client/model/check_project_access.py
 bimdata_api_client/model/checker_result.py
 bimdata_api_client/model/checker_result_request.py
 bimdata_api_client/model/classification.py
@@ -269,6 +270,7 @@ docs/Building.md
 docs/BuildingModelPlanRequest.md
 docs/CheckPlan.md
 docs/CheckPlanRequest.md
+docs/CheckProjectAccess.md
 docs/CheckerApi.md
 docs/CheckerResult.md
 docs/CheckerResultRequest.md
@@ -523,6 +525,7 @@ test/test_building.py
 test/test_building_model_plan_request.py
 test/test_check_plan.py
 test/test_check_plan_request.py
+test/test_check_project_access.py
 test/test_checker_api.py
 test/test_checker_result.py
 test/test_checker_result_request.py

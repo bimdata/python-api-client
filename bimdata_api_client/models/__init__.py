@@ -15,6 +15,7 @@ from bimdata_api_client.model.building import Building
 from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
 from bimdata_api_client.model.check_plan import CheckPlan
 from bimdata_api_client.model.check_plan_request import CheckPlanRequest
+from bimdata_api_client.model.check_project_access import CheckProjectAccess
 from bimdata_api_client.model.checker_result import CheckerResult
 from bimdata_api_client.model.checker_result_request import CheckerResultRequest
 from bimdata_api_client.model.classification import Classification

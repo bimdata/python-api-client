@@ -73,6 +73,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_check_project_access(self):
+        """Test case for check_project_access
+
+        Check if the current token has access to the requested project  # noqa: E501
+        """
+        pass
+
     def test_close_visa(self):
         """Test case for close_visa
 
