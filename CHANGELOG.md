@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v9.7.0 (2022-12-06)
+### Feature
+* Add project check access route(#561)
+
+* Add projcte check-access route
+
+* add route description
+
+* update tests with new invitation routes ([`bfb2c05`](https://github.com/bimdata/python-api-client/commit/bfb2c05b2e5ac3247f359ad45006f95b54b43037))
+
 ## v9.6.12 (2022-11-30)
 ### Fix
 * Fix model export doc response ([`aa8fbfd`](https://github.com/bimdata/python-api-client/commit/aa8fbfd7a717ba3a5d1c2074effd81ea07b43d18))
