@@ -605,6 +605,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_import_manage_group(self):
+        """Test case for import_manage_group
+
+        Import a group from another project  # noqa: E501
+        """
+        pass
+
     def test_invite_cloud_user(self):
         """Test case for invite_cloud_user
 

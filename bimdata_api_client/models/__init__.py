@@ -69,6 +69,7 @@ from bimdata_api_client.model.ifc_checker_request import IfcCheckerRequest
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
+from bimdata_api_client.model.import_group_request import ImportGroupRequest
 from bimdata_api_client.model.invitation import Invitation
 from bimdata_api_client.model.label import Label
 from bimdata_api_client.model.label_request import LabelRequest

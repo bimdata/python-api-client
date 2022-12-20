@@ -76,6 +76,7 @@ bimdata_api_client/model/ifc_checker_request.py
 bimdata_api_client/model/ifc_export_request.py
 bimdata_api_client/model/ifc_merge_request.py
 bimdata_api_client/model/ifc_optimize_request.py
+bimdata_api_client/model/import_group_request.py
 bimdata_api_client/model/invitation.py
 bimdata_api_client/model/label.py
 bimdata_api_client/model/label_request.py
@@ -327,6 +328,7 @@ docs/IfcCheckerRequest.md
 docs/IfcExportRequest.md
 docs/IfcMergeRequest.md
 docs/IfcOptimizeRequest.md
+docs/ImportGroupRequest.md
 docs/Invitation.md
 docs/Label.md
 docs/LabelRequest.md
@@ -582,6 +584,7 @@ test/test_ifc_checker_request.py
 test/test_ifc_export_request.py
 test/test_ifc_merge_request.py
 test/test_ifc_optimize_request.py
+test/test_import_group_request.py
 test/test_invitation.py
 test/test_label.py
 test/test_label_request.py
