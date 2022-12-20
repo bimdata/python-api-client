@@ -2,6 +2,20 @@
 
 <!--next-version-placeholder-->
 
+## v9.8.1 (2022-12-20)
+### Fix
+* Feat/multipage pdf (#596)
+
+* create multipage-pdf
+
+* fix create_model tests
+
+* fix tests
+
+* add explicit comment to signal function
+
+* update help_text for parent and children ([`0eaaff0`](https://github.com/bimdata/python-api-client/commit/0eaaff0c974a843dc80316c30af6059a4870737e))
+
 ## v9.8.0 (2022-12-20)
 ### Feature
 * Create import group from ids (#595)
