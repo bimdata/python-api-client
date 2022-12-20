@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v9.8.0 (2022-12-20)
+### Feature
+* Create import group from ids (#595)
+
+* feat: create import group from id
+
+* remove UserProject property, add select_related to userprojects queryset
+
+* import several groups from a project instead of one ([`b0459fd`](https://github.com/bimdata/python-api-client/commit/b0459fdd1f71ee919cc1963f0c82b5a51b145451))
+
 ## v9.7.0 (2022-12-06)
 ### Feature
 * Add project check access route(#561)
