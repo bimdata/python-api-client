@@ -1525,7 +1525,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'OBJ', 'DXF', 'IFC', 'DWG', 'DAE', 'BFX', 'GLTF', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'PDF', 'GLTF', 'BFX', 'DAE', 'POINT_CLOUD', 'IFC', 'DXF', 'OBJ', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 

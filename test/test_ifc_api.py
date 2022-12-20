@@ -234,6 +234,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_multi_page_ifc_deprecated(self):
+        """Test case for create_multi_page_ifc_deprecated
+
+        Create a multi page model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set_deprecated(self):
         """Test case for create_property_set_deprecated
 

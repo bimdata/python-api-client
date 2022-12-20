@@ -44,6 +44,7 @@ bimdata_api_client/model/components_parent.py
 bimdata_api_client/model/components_parent_request.py
 bimdata_api_client/model/create_building_by_name_request.py
 bimdata_api_client/model/create_model_request.py
+bimdata_api_client/model/create_multi_page_model_request.py
 bimdata_api_client/model/detailed_extensions.py
 bimdata_api_client/model/direction.py
 bimdata_api_client/model/direction_request.py
@@ -295,6 +296,7 @@ docs/ComponentsParent.md
 docs/ComponentsParentRequest.md
 docs/CreateBuildingByNameRequest.md
 docs/CreateModelRequest.md
+docs/CreateMultiPageModelRequest.md
 docs/DetailedExtensions.md
 docs/Direction.md
 docs/DirectionRequest.md
@@ -551,6 +553,7 @@ test/test_components_parent.py
 test/test_components_parent_request.py
 test/test_create_building_by_name_request.py
 test/test_create_model_request.py
+test/test_create_multi_page_model_request.py
 test/test_detailed_extensions.py
 test/test_direction.py
 test/test_direction_request.py

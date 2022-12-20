@@ -374,6 +374,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_ifc_unit_deprecated**](docs/IfcApi.md#create_ifc_unit_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
 *IfcApi* | [**create_layer_deprecated**](docs/IfcApi.md#create_layer_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
 *IfcApi* | [**create_meta_building_deprecated**](docs/IfcApi.md#create_meta_building_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-metabuilding | Create an empty 3D Model
+*IfcApi* | [**create_multi_page_ifc_deprecated**](docs/IfcApi.md#create_multi_page_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/create-multipage-model | Create a multi page model
 *IfcApi* | [**create_property_set_deprecated**](docs/IfcApi.md#create_property_set_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create one or many PropertySet
 *IfcApi* | [**create_property_set_element_relations_deprecated**](docs/IfcApi.md#create_property_set_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 *IfcApi* | [**create_raw_elements_deprecated**](docs/IfcApi.md#create_raw_elements_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
@@ -528,6 +529,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_model**](docs/ModelApi.md#create_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/create-model | Make a PDF or Image file a Model
 *ModelApi* | [**create_model_property_definition**](docs/ModelApi.md#create_model_property_definition) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertydefinition | Create a PropertyDefinition on the model
 *ModelApi* | [**create_model_unit**](docs/ModelApi.md#create_model_unit) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/unit | Create a Unit on a model
+*ModelApi* | [**create_multi_page_model**](docs/ModelApi.md#create_multi_page_model) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/create-multipage-model | Create a multi page model
 *ModelApi* | [**create_property_set**](docs/ModelApi.md#create_property_set) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset | Create one or many PropertySet
 *ModelApi* | [**create_property_set_element_relations**](docs/ModelApi.md#create_property_set_element_relations) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/propertyset-element | Create association between PropertySet and element
 *ModelApi* | [**create_raw_elements**](docs/ModelApi.md#create_raw_elements) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/element/raw | Create elements in an optimized format
@@ -688,6 +690,7 @@ Class | Method | HTTP request | Description
  - [ComponentsParentRequest](docs/ComponentsParentRequest.md)
  - [CreateBuildingByNameRequest](docs/CreateBuildingByNameRequest.md)
  - [CreateModelRequest](docs/CreateModelRequest.md)
+ - [CreateMultiPageModelRequest](docs/CreateMultiPageModelRequest.md)
  - [DetailedExtensions](docs/DetailedExtensions.md)
  - [Direction](docs/Direction.md)
  - [DirectionRequest](docs/DirectionRequest.md)

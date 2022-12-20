@@ -220,6 +220,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_multi_page_model(self):
+        """Test case for create_multi_page_model
+
+        Create a multi page model  # noqa: E501
+        """
+        pass
+
     def test_create_property_set(self):
         """Test case for create_property_set
 

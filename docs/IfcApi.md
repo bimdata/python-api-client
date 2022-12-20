@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**create_ifc_unit_deprecated**](IfcApi.md#create_ifc_unit_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/unit | Create a Unit on a model
 [**create_layer_deprecated**](IfcApi.md#create_layer_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/layer | Create a layer in the model
 [**create_meta_building_deprecated**](IfcApi.md#create_meta_building_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/create-metabuilding | Create an empty 3D Model
+[**create_multi_page_ifc_deprecated**](IfcApi.md#create_multi_page_ifc_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/create-multipage-model | Create a multi page model
 [**create_property_set_deprecated**](IfcApi.md#create_property_set_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset | Create one or many PropertySet
 [**create_property_set_element_relations_deprecated**](IfcApi.md#create_property_set_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertyset-element | Create association between PropertySet and element
 [**create_raw_elements_deprecated**](IfcApi.md#create_raw_elements_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/raw | Create elements in an optimized format
@@ -3870,6 +3871,121 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**|  |
  **project_pk** | **int**|  |
  **create_building_by_name_request** | [**CreateBuildingByNameRequest**](CreateBuildingByNameRequest.md)|  |
+
+### Return type
+
+[**Model**](Model.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_multi_page_ifc_deprecated**
+> Model create_multi_page_ifc_deprecated(cloud_pk, id, project_pk, create_multi_page_model_request)
+
+Create a multi page model
+
+Create a multi page model  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import ifc_api
+from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
+from bimdata_api_client.model.model import Model
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = ifc_api.IfcApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | 
+    create_multi_page_model_request = CreateMultiPageModelRequest(
+        map_files=[
+            open('/path/to/file', 'rb'),
+        ],
+    ) # CreateMultiPageModelRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a multi page model
+        api_response = api_instance.create_multi_page_ifc_deprecated(cloud_pk, id, project_pk, create_multi_page_model_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling IfcApi->create_multi_page_ifc_deprecated: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**|  |
+ **create_multi_page_model_request** | [**CreateMultiPageModelRequest**](CreateMultiPageModelRequest.md)|  |
 
 ### Return type
 

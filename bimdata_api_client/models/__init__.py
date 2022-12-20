@@ -37,6 +37,7 @@ from bimdata_api_client.model.components_parent import ComponentsParent
 from bimdata_api_client.model.components_parent_request import ComponentsParentRequest
 from bimdata_api_client.model.create_building_by_name_request import CreateBuildingByNameRequest
 from bimdata_api_client.model.create_model_request import CreateModelRequest
+from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
 from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
