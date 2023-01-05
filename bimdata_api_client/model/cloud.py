@@ -32,11 +32,11 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.feature import Feature
-    from bimdata_api_client.model.marketplace_app import MarketplaceApp
+    from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
     from bimdata_api_client.model.organization import Organization
     from bimdata_api_client.model.user import User
     globals()['Feature'] = Feature
-    globals()['MarketplaceApp'] = MarketplaceApp
+    globals()['MarketplaceAppLight'] = MarketplaceAppLight
     globals()['Organization'] = Organization
     globals()['User'] = User
 
@@ -100,7 +100,7 @@ class Cloud(ModelNormal):
             'id': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'features': ([Feature],),  # noqa: E501
-            'marketplace_apps': ([MarketplaceApp],),  # noqa: E501
+            'marketplace_apps': ([MarketplaceAppLight],),  # noqa: E501
             'organization': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator_app': (str,),  # noqa: E501
@@ -152,7 +152,7 @@ class Cloud(ModelNormal):
             id (int):
             name (str): Name of the cloud
             features ([Feature]):
-            marketplace_apps ([MarketplaceApp]):
+            marketplace_apps ([MarketplaceAppLight]):
             organization (bool, date, datetime, dict, float, int, list, str, none_type):
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             creator_app (str):

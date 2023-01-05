@@ -80,10 +80,9 @@ from bimdata_api_client.model.layer_element_request import LayerElementRequest
 from bimdata_api_client.model.layer_request import LayerRequest
 from bimdata_api_client.model.line import Line
 from bimdata_api_client.model.line_request import LineRequest
-from bimdata_api_client.model.marketplace_app import MarketplaceApp
 from bimdata_api_client.model.marketplace_app_image import MarketplaceAppImage
-from bimdata_api_client.model.marketplace_app_image_request import MarketplaceAppImageRequest
-from bimdata_api_client.model.marketplace_app_request import MarketplaceAppRequest
+from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
+from bimdata_api_client.model.marketplace_app_light_request import MarketplaceAppLightRequest
 from bimdata_api_client.model.material import Material
 from bimdata_api_client.model.material_list_component import MaterialListComponent
 from bimdata_api_client.model.material_list_component_request import MaterialListComponentRequest

@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** |  | 
 **model_id** | **int, none_type** |  | [readonly] 
 **ifc_id** | **int, none_type** | DEPRECATED: Use &#39;model_id&#39; instead | [readonly] 
-**groups_permissions** | [**[FolderGroupPermission], none_type**](FolderGroupPermission.md) | Groups permissions of folder | [readonly] 
+**groups_permissions** | **bool, none_type** | DEPRECATED: This field must be present because of legacy constraints but will always be empty. If you want to see group permissions of a folder, see &#x60;getFolder&#x60; | [readonly] 
 **default_permission** | **int** | Default permissions of folder | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
-**history** | [**[Document], none_type**](Document.md) | History of a document | [readonly] 
+**history_count** | **int, none_type** | Number of previous versions | [readonly] 
 **tags** | [**[Tag], none_type**](Tag.md) | Tags of a document | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 

@@ -13,11 +13,15 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.marketplace_app_request import MarketplaceAppRequest
+from bimdata_api_client.model.marketplace_app_image import MarketplaceAppImage
+from bimdata_api_client.model.public_organization import PublicOrganization
+globals()['MarketplaceAppImage'] = MarketplaceAppImage
+globals()['PublicOrganization'] = PublicOrganization
+from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
 
 
-class TestMarketplaceAppRequest(unittest.TestCase):
-    """MarketplaceAppRequest unit test stubs"""
+class TestMarketplaceAppLight(unittest.TestCase):
+    """MarketplaceAppLight unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +29,10 @@ class TestMarketplaceAppRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testMarketplaceAppRequest(self):
-        """Test MarketplaceAppRequest"""
+    def testMarketplaceAppLight(self):
+        """Test MarketplaceAppLight"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = MarketplaceAppRequest()  # noqa: E501
+        # model = MarketplaceAppLight()  # noqa: E501
         pass
 
 

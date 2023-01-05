@@ -14,11 +14,11 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.feature import Feature
-from bimdata_api_client.model.marketplace_app import MarketplaceApp
+from bimdata_api_client.model.marketplace_app_light import MarketplaceAppLight
 from bimdata_api_client.model.organization import Organization
 from bimdata_api_client.model.user import User
 globals()['Feature'] = Feature
-globals()['MarketplaceApp'] = MarketplaceApp
+globals()['MarketplaceAppLight'] = MarketplaceAppLight
 globals()['Organization'] = Organization
 globals()['User'] = User
 from bimdata_api_client.model.cloud import Cloud

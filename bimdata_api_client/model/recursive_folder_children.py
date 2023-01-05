@@ -31,12 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.document import Document
-    from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
     from bimdata_api_client.model.tag import Tag
     from bimdata_api_client.model.user import User
-    globals()['Document'] = Document
-    globals()['FolderGroupPermission'] = FolderGroupPermission
     globals()['Tag'] = Tag
     globals()['User'] = User
 
@@ -139,10 +135,10 @@ class RecursiveFolderChildren(ModelNormal):
             'updated_at': (datetime,),  # noqa: E501
             'model_id': (int, none_type,),  # noqa: E501
             'ifc_id': (int, none_type,),  # noqa: E501
-            'groups_permissions': ([FolderGroupPermission], none_type,),  # noqa: E501
+            'groups_permissions': (bool, none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
-            'history': ([Document], none_type,),  # noqa: E501
+            'history_count': (int, none_type,),  # noqa: E501
             'tags': ([Tag], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
@@ -172,7 +168,7 @@ class RecursiveFolderChildren(ModelNormal):
         'groups_permissions': 'groups_permissions',  # noqa: E501
         'default_permission': 'default_permission',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
-        'history': 'history',  # noqa: E501
+        'history_count': 'history_count',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'created_by': 'created_by',  # noqa: E501
         'creator': 'creator',  # noqa: E501
@@ -193,7 +189,7 @@ class RecursiveFolderChildren(ModelNormal):
         'groups_permissions',  # noqa: E501
         'default_permission',  # noqa: E501
         'user_permission',  # noqa: E501
-        'history',  # noqa: E501
+        'history_count',  # noqa: E501
         'tags',  # noqa: E501
     }
 
@@ -201,7 +197,7 @@ class RecursiveFolderChildren(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, history, tags, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, parent_id, type, nature, model_type, name, created_at, updated_at, model_id, ifc_id, groups_permissions, default_permission, user_permission, history_count, tags, *args, **kwargs):  # noqa: E501
         """RecursiveFolderChildren - a model defined in OpenAPI
 
         Args:
@@ -215,10 +211,10 @@ class RecursiveFolderChildren(ModelNormal):
             updated_at (datetime):
             model_id (int, none_type):
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead
-            groups_permissions ([FolderGroupPermission], none_type): Groups permissions of folder
+            groups_permissions (bool, none_type): DEPRECATED: This field must be present because of legacy constraints but will always be empty. If you want to see group permissions of a folder, see `getFolder`
             default_permission (int): Default permissions of folder
             user_permission (int): Aggregate of group user permissions and folder default permission
-            history ([Document], none_type): History of a document
+            history_count (int, none_type): Number of previous versions
             tags ([Tag], none_type): Tags of a document
 
         Keyword Args:
@@ -299,7 +295,7 @@ class RecursiveFolderChildren(ModelNormal):
         self.groups_permissions = groups_permissions
         self.default_permission = default_permission
         self.user_permission = user_permission
-        self.history = history
+        self.history_count = history_count
         self.tags = tags
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
