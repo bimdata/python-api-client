@@ -2,6 +2,28 @@
 
 <!--next-version-placeholder-->
 
+## v9.9.0 (2023-01-05)
+### Feature
+* Remove folder groups and history fields form DMS-Tree(#599)
+
+* optimize some routes and remove group_permissions from dms-tree
+
+* add more tests
+
+* remove history from dms-tree
+
+* typo
+
+* fix documentation
+
+* restore features prefetch
+
+* remove useless prefetch
+
+* fix prefetch
+
+* remove useless prefetch ([`9edfcb5`](https://github.com/bimdata/python-api-client/commit/9edfcb5c93767b5d10776adeb3047a0013b1707e))
+
 ## v9.8.1 (2022-12-20)
 ### Fix
 * Feat/multipage pdf (#596)
