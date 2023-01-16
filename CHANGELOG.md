@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.0 (2023-01-16)
+### Feature
+* Add marketplace app links ([#609](https://github.com/bimdata/python-api-client/issues/609)) ([`c28d8c1`](https://github.com/bimdata/python-api-client/commit/c28d8c161d7341866d8bf3ed6afba861bba0c0e2))
+
 ## v9.9.0 (2023-01-05)
 ### Feature
 * Remove folder groups and history fields form DMS-Tree(#599)
