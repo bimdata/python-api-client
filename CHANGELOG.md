@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.1 (2023-01-27)
+### Fix
+* Force request body on delete method with drf-spectacular ([#615](https://github.com/bimdata/python-api-client/issues/615)) ([`206ee31`](https://github.com/bimdata/python-api-client/commit/206ee31fdd0ade562478a39ba5f7d1caa2ae0991))
+
 ## v9.10.0 (2023-01-16)
 ### Feature
 * Add marketplace app links ([#609](https://github.com/bimdata/python-api-client/issues/609)) ([`c28d8c1`](https://github.com/bimdata/python-api-client/commit/c28d8c161d7341866d8bf3ed6afba861bba0c0e2))
