@@ -32,6 +32,7 @@ from bimdata_api_client.model.create_building_by_name_request import CreateBuild
 from bimdata_api_client.model.create_model_request import CreateModelRequest
 from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
 from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.document_request import DocumentRequest
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
@@ -53,6 +54,7 @@ from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
 from bimdata_api_client.model.model_property import ModelProperty
+from bimdata_api_client.model.model_request import ModelRequest
 from bimdata_api_client.model.patched_checker_result_request import PatchedCheckerResultRequest
 from bimdata_api_client.model.patched_element_request import PatchedElementRequest
 from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
@@ -199,6 +201,7 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'classification_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -224,6 +227,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification_request':
+                        (ClassificationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -234,13 +239,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'classification_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -263,11 +273,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -288,6 +300,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -298,13 +312,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -327,11 +346,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -352,6 +373,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -362,13 +385,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -391,11 +419,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -416,6 +446,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -426,13 +458,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -455,11 +492,13 @@ class IfcApi(object):
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -480,6 +519,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -490,13 +531,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -685,12 +731,14 @@ class IfcApi(object):
                     'element_uuid',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'element_uuid',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -713,6 +761,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -725,13 +775,18 @@ class IfcApi(object):
                     'element_uuid': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -755,12 +810,14 @@ class IfcApi(object):
                     'element_uuid',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'element_uuid',
                     'ifc_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -783,6 +840,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -795,13 +854,18 @@ class IfcApi(object):
                     'element_uuid': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -825,12 +889,14 @@ class IfcApi(object):
                     'ifc_pk',
                     'model_classification_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'model_classification_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -853,6 +919,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -865,13 +933,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'model_classification_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3236,6 +3309,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'token',
+                    'ifc_access_token_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3264,6 +3338,8 @@ class IfcApi(object):
                         (int,),
                     'token':
                         (str,),
+                    'ifc_access_token_request':
+                        (IfcAccessTokenRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3276,13 +3352,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'token': 'path',
+                    'ifc_access_token_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3452,6 +3533,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'ifc_checker_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3480,6 +3562,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'ifc_checker_request':
+                        (IfcCheckerRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3492,13 +3576,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'ifc_checker_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3523,6 +3612,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'checker_result_request',
                 ],
                 'required': [
                     'checker_pk',
@@ -3554,6 +3644,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'checker_result_request':
+                        (CheckerResultRequest,),
                 },
                 'attribute_map': {
                     'checker_pk': 'checker_pk',
@@ -3568,13 +3660,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'checker_result_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3598,12 +3695,14 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'nullable': [
                 ],
@@ -3626,6 +3725,8 @@ class IfcApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'element_request':
+                        (ElementRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3638,13 +3739,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'element_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3667,6 +3773,7 @@ class IfcApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
+                    'model_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3692,6 +3799,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'model_request':
+                        (ModelRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3702,13 +3811,18 @@ class IfcApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
+                    'model_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3732,6 +3846,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'property_definition_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3760,6 +3875,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_definition_request':
+                        (PropertyDefinitionRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3772,13 +3889,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'property_definition_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3802,12 +3924,14 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'property_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'property_request',
                 ],
                 'nullable': [
                 ],
@@ -3830,6 +3954,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_request':
+                        (PropertyRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3842,13 +3968,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'property_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3872,12 +4003,14 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'unit_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'unit_request',
                 ],
                 'nullable': [
                 ],
@@ -3900,6 +4033,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'unit_request':
+                        (UnitRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3912,13 +4047,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'unit_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4006,12 +4146,14 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'layer_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'layer_request',
                 ],
                 'nullable': [
                 ],
@@ -4034,6 +4176,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'layer_request':
+                        (LayerRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4046,13 +4190,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'layer_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4076,6 +4225,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'property_set_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4104,6 +4254,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_set_request':
+                        (PropertySetRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4116,13 +4268,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'property_set_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4146,12 +4303,14 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'space_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'space_request',
                 ],
                 'nullable': [
                 ],
@@ -4174,6 +4333,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'space_request':
+                        (SpaceRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4186,13 +4347,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'space_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4362,12 +4528,14 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'system_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'ifc_pk',
                     'project_pk',
                     'uuid',
+                    'system_request',
                 ],
                 'nullable': [
                 ],
@@ -4390,6 +4558,8 @@ class IfcApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'system_request':
+                        (SystemRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4402,13 +4572,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'system_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4432,12 +4607,14 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'zone_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'zone_request',
                 ],
                 'nullable': [
                 ],
@@ -4460,6 +4637,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'zone_request':
+                        (ZoneRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4472,13 +4651,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'zone_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4503,6 +4687,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'zone_pk',
+                    'zone_space_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4510,6 +4695,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'zone_pk',
+                    'zone_space_request',
                 ],
                 'nullable': [
                 ],
@@ -4534,6 +4720,8 @@ class IfcApi(object):
                         (int,),
                     'zone_pk':
                         (int,),
+                    'zone_space_request':
+                        (ZoneSpaceRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4548,13 +4736,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'zone_pk': 'path',
+                    'zone_space_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9356,6 +9549,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'classification_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9387,6 +9581,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification_request':
+                        (ClassificationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9401,13 +9597,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'classification_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9432,6 +9633,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'document_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9439,6 +9641,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'document_request',
                 ],
                 'nullable': [
                 ],
@@ -9463,6 +9666,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'document_request':
+                        (DocumentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9477,13 +9682,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'document_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9508,6 +9718,7 @@ class IfcApi(object):
                     'id',
                     'ifc_pk',
                     'project_pk',
+                    'property_set_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9539,6 +9750,8 @@ class IfcApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_set_request':
+                        (PropertySetRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9553,13 +9766,18 @@ class IfcApi(object):
                     'id': 'path',
                     'ifc_pk': 'path',
                     'project_pk': 'path',
+                    'property_set_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9586,6 +9804,7 @@ class IfcApi(object):
                     'project_pk',
                     'property_pk',
                     'propertyset_pk',
+                    'property_definition_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9623,6 +9842,8 @@ class IfcApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'property_definition_request':
+                        (PropertyDefinitionRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9641,13 +9862,18 @@ class IfcApi(object):
                     'project_pk': 'path',
                     'property_pk': 'path',
                     'propertyset_pk': 'path',
+                    'property_definition_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9675,6 +9901,7 @@ class IfcApi(object):
                     'property_pk',
                     'propertydefinition_pk',
                     'propertyset_pk',
+                    'unit_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9685,6 +9912,7 @@ class IfcApi(object):
                     'property_pk',
                     'propertydefinition_pk',
                     'propertyset_pk',
+                    'unit_request',
                 ],
                 'nullable': [
                 ],
@@ -9715,6 +9943,8 @@ class IfcApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'unit_request':
+                        (UnitRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9735,13 +9965,18 @@ class IfcApi(object):
                     'property_pk': 'path',
                     'propertydefinition_pk': 'path',
                     'propertyset_pk': 'path',
+                    'unit_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9767,6 +10002,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'propertyset_pk',
+                    'property_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9775,6 +10011,7 @@ class IfcApi(object):
                     'ifc_pk',
                     'project_pk',
                     'propertyset_pk',
+                    'property_request',
                 ],
                 'nullable': [
                 ],
@@ -9801,6 +10038,8 @@ class IfcApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'property_request':
+                        (PropertyRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9817,13 +10056,18 @@ class IfcApi(object):
                     'ifc_pk': 'path',
                     'project_pk': 'path',
                     'propertyset_pk': 'path',
+                    'property_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9848,6 +10092,7 @@ class IfcApi(object):
                     'model_classification_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9855,6 +10100,7 @@ class IfcApi(object):
                     'model_classification_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'nullable': [
                 ],
@@ -9879,6 +10125,8 @@ class IfcApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'element_request':
+                        (ElementRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9893,13 +10141,18 @@ class IfcApi(object):
                     'model_classification_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'element_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -12061,6 +12314,7 @@ class IfcApi(object):
             project_pk (int):
 
         Keyword Args:
+            classification_request (ClassificationRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -12130,6 +12384,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many Property of a model  # noqa: E501
@@ -12138,13 +12393,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_properties_deprecated(cloud_pk, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12209,6 +12465,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_ifc_properties_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_ifc_property_definitions_deprecated(
@@ -12216,6 +12474,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many PropertyDefinitions of a model  # noqa: E501
@@ -12224,13 +12483,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_property_definitions_deprecated(cloud_pk, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12295,6 +12555,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_ifc_property_definitions_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_ifc_units_deprecated(
@@ -12302,6 +12564,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many Units of a model  # noqa: E501
@@ -12310,13 +12573,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_ifc_units_deprecated(cloud_pk, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12381,6 +12645,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_ifc_units_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_property_set_deprecated(
@@ -12388,6 +12654,7 @@ class IfcApi(object):
         cloud_pk,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many PropertySet of a model  # noqa: E501
@@ -12396,13 +12663,14 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_property_set_deprecated(cloud_pk, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12467,6 +12735,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_property_set_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_full_update_elements_deprecated(
@@ -12658,6 +12928,7 @@ class IfcApi(object):
         element_uuid,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove many classifications from an element  # noqa: E501
@@ -12666,7 +12937,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_classifications_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -12674,6 +12945,7 @@ class IfcApi(object):
             element_uuid (str):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12740,6 +13012,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_classifications_of_element_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_remove_documents_of_element_deprecated(
@@ -12748,6 +13022,7 @@ class IfcApi(object):
         element_uuid,
         ifc_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove many documents from an element  # noqa: E501
@@ -12756,7 +13031,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_documents_of_element_deprecated(cloud_pk, element_uuid, ifc_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -12764,6 +13039,7 @@ class IfcApi(object):
             element_uuid (str):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12830,6 +13106,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_documents_of_element_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_remove_elements_from_classification_deprecated(
@@ -12838,6 +13116,7 @@ class IfcApi(object):
         ifc_pk,
         model_classification_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove the classifications from all elements  # noqa: E501
@@ -12846,7 +13125,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -12854,6 +13133,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             model_classification_pk (int): A unique integer value identifying this classification.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12920,6 +13200,8 @@ class IfcApi(object):
             model_classification_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_elements_from_classification_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def bulk_update_elements_deprecated(
@@ -15686,6 +15968,7 @@ class IfcApi(object):
             token (str):
 
         Keyword Args:
+            ifc_access_token_request (IfcAccessTokenRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -15960,6 +16243,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            ifc_checker_request (IfcCheckerRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16052,6 +16336,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            checker_result_request (CheckerResultRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16126,6 +16411,7 @@ class IfcApi(object):
         ifc_pk,
         project_pk,
         uuid,
+        element_request,
         **kwargs
     ):
         """Delete an element of a model  # noqa: E501
@@ -16134,7 +16420,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.delete_element_deprecated(cloud_pk, ifc_pk, project_pk, uuid, element_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16142,6 +16428,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            element_request (ElementRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16208,6 +16495,8 @@ class IfcApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['element_request'] = \
+            element_request
         return self.delete_element_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_ifc_deprecated(
@@ -16232,6 +16521,7 @@ class IfcApi(object):
             project_pk (int):
 
         Keyword Args:
+            model_request (ModelRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16320,6 +16610,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_definition_request (PropertyDefinitionRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16392,6 +16683,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        property_request,
         **kwargs
     ):
         """Delete a Property of a model  # noqa: E501
@@ -16400,7 +16692,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_ifc_property_deprecated(cloud_pk, id, ifc_pk, project_pk, property_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16408,6 +16700,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this property.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            property_request (PropertyRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16474,6 +16767,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['property_request'] = \
+            property_request
         return self.delete_ifc_property_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_ifc_unit_deprecated(
@@ -16482,6 +16777,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        unit_request,
         **kwargs
     ):
         """Delete a Unit of a model  # noqa: E501
@@ -16490,7 +16786,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_ifc_unit_deprecated(cloud_pk, id, ifc_pk, project_pk, unit_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16498,6 +16794,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this unit.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            unit_request (UnitRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16564,6 +16861,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['unit_request'] = \
+            unit_request
         return self.delete_ifc_unit_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_ifc_without_doc_deprecated(
@@ -16658,6 +16957,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        layer_request,
         **kwargs
     ):
         """Delete a layer of a model  # noqa: E501
@@ -16666,7 +16966,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_layer_deprecated(cloud_pk, id, ifc_pk, project_pk, layer_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16674,6 +16974,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this layer.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            layer_request (LayerRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16740,6 +17041,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['layer_request'] = \
+            layer_request
         return self.delete_layer_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_property_set_deprecated(
@@ -16766,6 +17069,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_set_request (PropertySetRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -16838,6 +17142,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        space_request,
         **kwargs
     ):
         """Delete a space  # noqa: E501
@@ -16846,7 +17151,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_space_deprecated(cloud_pk, id, ifc_pk, project_pk, space_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16854,6 +17159,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this space.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            space_request (SpaceRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16920,6 +17226,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['space_request'] = \
+            space_request
         return self.delete_space_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_storey_deprecated(
@@ -17112,6 +17420,7 @@ class IfcApi(object):
         ifc_pk,
         project_pk,
         uuid,
+        system_request,
         **kwargs
     ):
         """Delete a system of a model  # noqa: E501
@@ -17120,7 +17429,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.delete_system_deprecated(cloud_pk, ifc_pk, project_pk, uuid, system_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -17128,6 +17437,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            system_request (SystemRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -17194,6 +17504,8 @@ class IfcApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['system_request'] = \
+            system_request
         return self.delete_system_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_zone_deprecated(
@@ -17202,6 +17514,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        zone_request,
         **kwargs
     ):
         """Delete a zone of a model  # noqa: E501
@@ -17210,7 +17523,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.delete_zone_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -17218,6 +17531,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this zone.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            zone_request (ZoneRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -17284,6 +17598,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['zone_request'] = \
+            zone_request
         return self.delete_zone_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def delete_zone_space_deprecated(
@@ -17293,6 +17609,7 @@ class IfcApi(object):
         ifc_pk,
         project_pk,
         zone_pk,
+        zone_space_request,
         **kwargs
     ):
         """Delete a space of a zone  # noqa: E501
@@ -17301,7 +17618,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, async_req=True)
+        >>> thread = api.delete_zone_space_deprecated(cloud_pk, id, ifc_pk, project_pk, zone_pk, zone_space_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -17310,6 +17627,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             zone_pk (int): A unique integer value identifying this zone.
+            zone_space_request (ZoneSpaceRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -17378,6 +17696,8 @@ class IfcApi(object):
             project_pk
         kwargs['zone_pk'] = \
             zone_pk
+        kwargs['zone_space_request'] = \
+            zone_space_request
         return self.delete_zone_space_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def export_ifc_deprecated(
@@ -23257,6 +23577,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            classification_request (ClassificationRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -23332,6 +23653,7 @@ class IfcApi(object):
         id,
         ifc_pk,
         project_pk,
+        document_request,
         **kwargs
     ):
         """Remove a documents from an element  # noqa: E501
@@ -23340,7 +23662,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, async_req=True)
+        >>> thread = api.remove_document_of_element_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, document_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -23349,6 +23671,7 @@ class IfcApi(object):
             id (int): A unique integer value identifying this document.
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            document_request (DocumentRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -23417,6 +23740,8 @@ class IfcApi(object):
             ifc_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['document_request'] = \
+            document_request
         return self.remove_document_of_element_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def remove_element_property_set_deprecated(
@@ -23445,6 +23770,7 @@ class IfcApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_set_request (PropertySetRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -23543,6 +23869,7 @@ class IfcApi(object):
             propertyset_pk (int): A unique integer value identifying this property set.
 
         Keyword Args:
+            property_definition_request (PropertyDefinitionRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -23625,6 +23952,7 @@ class IfcApi(object):
         property_pk,
         propertydefinition_pk,
         propertyset_pk,
+        unit_request,
         **kwargs
     ):
         """Remove a Unit from a Definition  # noqa: E501
@@ -23633,7 +23961,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
+        >>> thread = api.remove_element_property_set_property_definition_unit_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -23645,6 +23973,7 @@ class IfcApi(object):
             property_pk (int): A unique integer value identifying this property.
             propertydefinition_pk (int): A unique integer value identifying this property definition.
             propertyset_pk (int): A unique integer value identifying this property set.
+            unit_request (UnitRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -23719,6 +24048,8 @@ class IfcApi(object):
             propertydefinition_pk
         kwargs['propertyset_pk'] = \
             propertyset_pk
+        kwargs['unit_request'] = \
+            unit_request
         return self.remove_element_property_set_property_definition_unit_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def remove_element_property_set_property_deprecated(
@@ -23729,6 +24060,7 @@ class IfcApi(object):
         ifc_pk,
         project_pk,
         propertyset_pk,
+        property_request,
         **kwargs
     ):
         """Remove a property from a PropertySet  # noqa: E501
@@ -23737,7 +24069,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, async_req=True)
+        >>> thread = api.remove_element_property_set_property_deprecated(cloud_pk, element_uuid, id, ifc_pk, project_pk, propertyset_pk, property_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -23747,6 +24079,7 @@ class IfcApi(object):
             ifc_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             propertyset_pk (int): A unique integer value identifying this property set.
+            property_request (PropertyRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -23817,6 +24150,8 @@ class IfcApi(object):
             project_pk
         kwargs['propertyset_pk'] = \
             propertyset_pk
+        kwargs['property_request'] = \
+            property_request
         return self.remove_element_property_set_property_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def remove_elements_from_classification_deprecated(
@@ -23826,6 +24161,7 @@ class IfcApi(object):
         model_classification_pk,
         project_pk,
         uuid,
+        element_request,
         **kwargs
     ):
         """Remove the classification from all elements  # noqa: E501
@@ -23834,7 +24170,7 @@ class IfcApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.remove_elements_from_classification_deprecated(cloud_pk, ifc_pk, model_classification_pk, project_pk, uuid, element_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -23843,6 +24179,7 @@ class IfcApi(object):
             model_classification_pk (int): A unique integer value identifying this classification.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            element_request (ElementRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -23911,6 +24248,8 @@ class IfcApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['element_request'] = \
+            element_request
         return self.remove_elements_from_classification_deprecated_endpoint.call_with_http_info(**kwargs)
 
     def reprocess_ifc_deprecated(

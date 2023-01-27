@@ -119,10 +119,12 @@ class WebhookApi(object):
                 'all': [
                     'cloud_pk',
                     'id',
+                    'web_hook_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
+                    'web_hook_request',
                 ],
                 'nullable': [
                 ],
@@ -141,6 +143,8 @@ class WebhookApi(object):
                         (int,),
                     'id':
                         (int,),
+                    'web_hook_request':
+                        (WebHookRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -149,13 +153,18 @@ class WebhookApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
+                    'web_hook_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -497,6 +506,7 @@ class WebhookApi(object):
         self,
         cloud_pk,
         id,
+        web_hook_request,
         **kwargs
     ):
         """Delete a webhook  # noqa: E501
@@ -505,12 +515,13 @@ class WebhookApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_web_hook(cloud_pk, id, async_req=True)
+        >>> thread = api.delete_web_hook(cloud_pk, id, web_hook_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this web hook.
+            web_hook_request (WebHookRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -573,6 +584,8 @@ class WebhookApi(object):
             cloud_pk
         kwargs['id'] = \
             id
+        kwargs['web_hook_request'] = \
+            web_hook_request
         return self.delete_web_hook_endpoint.call_with_http_info(**kwargs)
 
     def get_web_hook(

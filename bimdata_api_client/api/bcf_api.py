@@ -687,6 +687,7 @@ class BcfApi(object):
                     'guid',
                     'projects_pk',
                     'topics_guid',
+                    'comment_request',
                 ],
                 'required': [
                     'guid',
@@ -712,6 +713,8 @@ class BcfApi(object):
                         (int,),
                     'topics_guid':
                         (str,),
+                    'comment_request':
+                        (CommentRequest,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -722,13 +725,18 @@ class BcfApi(object):
                     'guid': 'path',
                     'projects_pk': 'path',
                     'topics_guid': 'path',
+                    'comment_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -750,10 +758,12 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
+                    'label_request',
                 ],
                 'required': [
                     'id',
                     'projects_pk',
+                    'label_request',
                 ],
                 'nullable': [
                 ],
@@ -772,6 +782,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
+                    'label_request':
+                        (LabelRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -780,13 +792,18 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
+                    'label_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -808,10 +825,12 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
+                    'priority_request',
                 ],
                 'required': [
                     'id',
                     'projects_pk',
+                    'priority_request',
                 ],
                 'nullable': [
                 ],
@@ -830,6 +849,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
+                    'priority_request':
+                        (PriorityRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -838,13 +859,18 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
+                    'priority_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -866,10 +892,12 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
+                    'stage_request',
                 ],
                 'required': [
                     'id',
                     'projects_pk',
+                    'stage_request',
                 ],
                 'nullable': [
                 ],
@@ -888,6 +916,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
+                    'stage_request':
+                        (StageRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -896,13 +926,18 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
+                    'stage_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -924,10 +959,12 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
+                    'topic_status_request',
                 ],
                 'required': [
                     'id',
                     'projects_pk',
+                    'topic_status_request',
                 ],
                 'nullable': [
                 ],
@@ -946,6 +983,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
+                    'topic_status_request':
+                        (TopicStatusRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -954,13 +993,18 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
+                    'topic_status_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -982,10 +1026,12 @@ class BcfApi(object):
                 'all': [
                     'id',
                     'projects_pk',
+                    'topic_type_request',
                 ],
                 'required': [
                     'id',
                     'projects_pk',
+                    'topic_type_request',
                 ],
                 'nullable': [
                 ],
@@ -1004,6 +1050,8 @@ class BcfApi(object):
                         (int,),
                     'projects_pk':
                         (int,),
+                    'topic_type_request':
+                        (TopicTypeRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
@@ -1012,13 +1060,18 @@ class BcfApi(object):
                 'location_map': {
                     'id': 'path',
                     'projects_pk': 'path',
+                    'topic_type_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -1040,10 +1093,12 @@ class BcfApi(object):
                 'all': [
                     'guid',
                     'projects_pk',
+                    'topic_request',
                 ],
                 'required': [
                     'guid',
                     'projects_pk',
+                    'topic_request',
                 ],
                 'nullable': [
                 ],
@@ -1062,6 +1117,8 @@ class BcfApi(object):
                         (str,),
                     'projects_pk':
                         (int,),
+                    'topic_request':
+                        (TopicRequest,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -1070,13 +1127,18 @@ class BcfApi(object):
                 'location_map': {
                     'guid': 'path',
                     'projects_pk': 'path',
+                    'topic_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -1100,6 +1162,7 @@ class BcfApi(object):
                     'projects_pk',
                     'topics_guid',
                     'img_format',
+                    'viewpoint_request',
                 ],
                 'required': [
                     'guid',
@@ -1132,6 +1195,8 @@ class BcfApi(object):
                         (str,),
                     'img_format':
                         (str,),
+                    'viewpoint_request':
+                        (ViewpointRequest,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -1144,13 +1209,18 @@ class BcfApi(object):
                     'projects_pk': 'path',
                     'topics_guid': 'path',
                     'img_format': 'query',
+                    'viewpoint_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4268,6 +4338,7 @@ class BcfApi(object):
             topics_guid (str):
 
         Keyword Args:
+            comment_request (CommentRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -4336,6 +4407,7 @@ class BcfApi(object):
         self,
         id,
         projects_pk,
+        label_request,
         **kwargs
     ):
         """Delete a Label  # noqa: E501
@@ -4344,12 +4416,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_extension_label(id, projects_pk, async_req=True)
+        >>> thread = api.delete_extension_label(id, projects_pk, label_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this label.
             projects_pk (int):
+            label_request (LabelRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4412,12 +4485,15 @@ class BcfApi(object):
             id
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['label_request'] = \
+            label_request
         return self.delete_extension_label_endpoint.call_with_http_info(**kwargs)
 
     def delete_extension_priority(
         self,
         id,
         projects_pk,
+        priority_request,
         **kwargs
     ):
         """Delete a Priority  # noqa: E501
@@ -4426,12 +4502,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_extension_priority(id, projects_pk, async_req=True)
+        >>> thread = api.delete_extension_priority(id, projects_pk, priority_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this priority.
             projects_pk (int):
+            priority_request (PriorityRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4494,12 +4571,15 @@ class BcfApi(object):
             id
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['priority_request'] = \
+            priority_request
         return self.delete_extension_priority_endpoint.call_with_http_info(**kwargs)
 
     def delete_extension_stage(
         self,
         id,
         projects_pk,
+        stage_request,
         **kwargs
     ):
         """Delete a Stage  # noqa: E501
@@ -4508,12 +4588,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_extension_stage(id, projects_pk, async_req=True)
+        >>> thread = api.delete_extension_stage(id, projects_pk, stage_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this stage.
             projects_pk (int):
+            stage_request (StageRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4576,12 +4657,15 @@ class BcfApi(object):
             id
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['stage_request'] = \
+            stage_request
         return self.delete_extension_stage_endpoint.call_with_http_info(**kwargs)
 
     def delete_extension_status(
         self,
         id,
         projects_pk,
+        topic_status_request,
         **kwargs
     ):
         """Delete a TopicStatus  # noqa: E501
@@ -4590,12 +4674,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_extension_status(id, projects_pk, async_req=True)
+        >>> thread = api.delete_extension_status(id, projects_pk, topic_status_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this topic status.
             projects_pk (int):
+            topic_status_request (TopicStatusRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4658,12 +4743,15 @@ class BcfApi(object):
             id
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['topic_status_request'] = \
+            topic_status_request
         return self.delete_extension_status_endpoint.call_with_http_info(**kwargs)
 
     def delete_extension_type(
         self,
         id,
         projects_pk,
+        topic_type_request,
         **kwargs
     ):
         """Delete a TopicType  # noqa: E501
@@ -4672,12 +4760,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_extension_type(id, projects_pk, async_req=True)
+        >>> thread = api.delete_extension_type(id, projects_pk, topic_type_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this topic type.
             projects_pk (int):
+            topic_type_request (TopicTypeRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4740,12 +4829,15 @@ class BcfApi(object):
             id
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['topic_type_request'] = \
+            topic_type_request
         return self.delete_extension_type_endpoint.call_with_http_info(**kwargs)
 
     def delete_topic(
         self,
         guid,
         projects_pk,
+        topic_request,
         **kwargs
     ):
         """Delete a topic  # noqa: E501
@@ -4754,12 +4846,13 @@ class BcfApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_topic(guid, projects_pk, async_req=True)
+        >>> thread = api.delete_topic(guid, projects_pk, topic_request, async_req=True)
         >>> result = thread.get()
 
         Args:
             guid (str):
             projects_pk (int):
+            topic_request (TopicRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -4822,6 +4915,8 @@ class BcfApi(object):
             guid
         kwargs['projects_pk'] = \
             projects_pk
+        kwargs['topic_request'] = \
+            topic_request
         return self.delete_topic_endpoint.call_with_http_info(**kwargs)
 
     def delete_viewpoint(
@@ -4847,6 +4942,7 @@ class BcfApi(object):
 
         Keyword Args:
             img_format (str): All snapshot_data will be returned as url instead of base64. [optional] if omitted the server will use the default value of "url"
+            viewpoint_request (ViewpointRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -126,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_web_hook**
-> delete_web_hook(cloud_pk, id)
+> delete_web_hook(cloud_pk, id, web_hook_request)
 
 Delete a webhook
 
@@ -143,6 +143,7 @@ Delete a webhook  Required scopes: webhook:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import webhook_api
+from bimdata_api_client.model.web_hook_request import WebHookRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -185,11 +186,18 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = webhook_api.WebhookApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this web hook.
+    web_hook_request = WebHookRequest(
+        events=[
+            "events_example",
+        ],
+        url="url_example",
+        secret="secret_example",
+    ) # WebHookRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a webhook
-        api_instance.delete_web_hook(cloud_pk, id)
+        api_instance.delete_web_hook(cloud_pk, id, web_hook_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling WebhookApi->delete_web_hook: %s\n" % e)
 ```
@@ -201,6 +209,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this web hook. |
+ **web_hook_request** | [**WebHookRequest**](WebHookRequest.md)|  |
 
 ### Return type
 
@@ -212,7 +221,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 

@@ -49,6 +49,7 @@ bimdata_api_client/model/detailed_extensions.py
 bimdata_api_client/model/direction.py
 bimdata_api_client/model/direction_request.py
 bimdata_api_client/model/document.py
+bimdata_api_client/model/document_request.py
 bimdata_api_client/model/document_with_element_list.py
 bimdata_api_client/model/element.py
 bimdata_api_client/model/element_classification_relation.py
@@ -212,6 +213,7 @@ bimdata_api_client/model/rule_component_request.py
 bimdata_api_client/model/rule_request.py
 bimdata_api_client/model/ruleset.py
 bimdata_api_client/model/ruleset_request.py
+bimdata_api_client/model/select_user_request.py
 bimdata_api_client/model/self_bcf_user.py
 bimdata_api_client/model/self_user.py
 bimdata_api_client/model/simple_element.py
@@ -300,6 +302,7 @@ docs/DetailedExtensions.md
 docs/Direction.md
 docs/DirectionRequest.md
 docs/Document.md
+docs/DocumentRequest.md
 docs/DocumentWithElementList.md
 docs/Element.md
 docs/ElementClassificationRelation.md
@@ -465,6 +468,7 @@ docs/RuleComponentRequest.md
 docs/RuleRequest.md
 docs/Ruleset.md
 docs/RulesetRequest.md
+docs/SelectUserRequest.md
 docs/SelfBcfUser.md
 docs/SelfUser.md
 docs/SimpleElement.md
@@ -556,6 +560,7 @@ test/test_detailed_extensions.py
 test/test_direction.py
 test/test_direction_request.py
 test/test_document.py
+test/test_document_request.py
 test/test_document_with_element_list.py
 test/test_element.py
 test/test_element_classification_relation.py
@@ -721,6 +726,7 @@ test/test_rule_component_request.py
 test/test_rule_request.py
 test/test_ruleset.py
 test/test_ruleset_request.py
+test/test_select_user_request.py
 test/test_self_bcf_user.py
 test/test_self_user.py
 test/test_simple_element.py

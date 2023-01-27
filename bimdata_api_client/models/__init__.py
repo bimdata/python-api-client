@@ -42,6 +42,7 @@ from bimdata_api_client.model.detailed_extensions import DetailedExtensions
 from bimdata_api_client.model.direction import Direction
 from bimdata_api_client.model.direction_request import DirectionRequest
 from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.document_request import DocumentRequest
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
@@ -205,6 +206,7 @@ from bimdata_api_client.model.rule_component_request import RuleComponentRequest
 from bimdata_api_client.model.rule_request import RuleRequest
 from bimdata_api_client.model.ruleset import Ruleset
 from bimdata_api_client.model.ruleset_request import RulesetRequest
+from bimdata_api_client.model.select_user_request import SelectUserRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.self_user import SelfUser
 from bimdata_api_client.model.simple_element import SimpleElement

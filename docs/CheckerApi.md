@@ -859,6 +859,7 @@ A checker is a link between a checkplan and a model. A checker can launch a chec
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.ifc_checker_request import IfcCheckerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -903,11 +904,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this ifc checker.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    ifc_checker_request = IfcCheckerRequest(
+        name="name_example",
+        checkplan_id=1,
+    ) # IfcCheckerRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a checker of a model
         api_instance.delete_checker(cloud_pk, id, model_pk, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete a checker of a model
+        api_instance.delete_checker(cloud_pk, id, model_pk, project_pk, ifc_checker_request=ifc_checker_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_checker: %s\n" % e)
 ```
@@ -921,6 +934,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this ifc checker. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **ifc_checker_request** | [**IfcCheckerRequest**](IfcCheckerRequest.md)|  | [optional]
 
 ### Return type
 
@@ -932,7 +946,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -967,6 +981,7 @@ Delete a CheckerResult  Required scopes: check:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.checker_result_request import CheckerResultRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1012,11 +1027,25 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this checker result.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    checker_result_request = CheckerResultRequest(
+        status="C",
+        result="result_example",
+        collisions="collisions_example",
+        error_detail="error_detail_example",
+    ) # CheckerResultRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a CheckerResult
         api_instance.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete a CheckerResult
+        api_instance.delete_checker_result(checker_pk, cloud_pk, id, model_pk, project_pk, checker_result_request=checker_result_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_checker_result: %s\n" % e)
 ```
@@ -1031,6 +1060,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this checker result. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **checker_result_request** | [**CheckerResultRequest**](CheckerResultRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1042,7 +1072,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -1060,7 +1090,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_checkplan**
-> delete_checkplan(cloud_pk, id, project_pk)
+> delete_checkplan(cloud_pk, id, project_pk, check_plan_request)
 
 Delete a Checkplan
 
@@ -1077,6 +1107,7 @@ Delete a Checkplan  Required scopes: check:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.check_plan_request import CheckPlanRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1120,11 +1151,46 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this check plan.
     project_pk = 1 # int | A unique integer value identifying this project.
+    check_plan_request = CheckPlanRequest(
+        name="name_example",
+        description="description_example",
+        rulesets=[
+            RulesetRequest(
+                parent_ruleset_id=1,
+                name="name_example",
+                description="description_example",
+                rules=[
+                    RuleRequest(
+                        name="name_example",
+                        condition="condition_example",
+                        rule_components=[
+                            RuleComponentRequest(
+                                type="type_example",
+                                value={
+                                    "key": None,
+                                },
+                                operator="operator_example",
+                                params={
+                                    "key": None,
+                                },
+                                condition="condition_example",
+                                rule_components={
+                                    "key": None,
+                                },
+                            ),
+                        ],
+                        on=RuleRequest(),
+                    ),
+                ],
+                rulesets=[],
+            ),
+        ],
+    ) # CheckPlanRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Checkplan
-        api_instance.delete_checkplan(cloud_pk, id, project_pk)
+        api_instance.delete_checkplan(cloud_pk, id, project_pk, check_plan_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_checkplan: %s\n" % e)
 ```
@@ -1137,6 +1203,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this check plan. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **check_plan_request** | [**CheckPlanRequest**](CheckPlanRequest.md)|  |
 
 ### Return type
 
@@ -1148,7 +1215,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -1166,7 +1233,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_rule**
-> delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+> delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule_request)
 
 Delete a Rule
 
@@ -1183,6 +1250,7 @@ Delete a Rule  Required scopes: check:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.rule_request import RuleRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1228,11 +1296,32 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this rule.
     project_pk = 1 # int | A unique integer value identifying this project.
     ruleset_pk = 1 # int | A unique integer value identifying this ruleset.
+    rule_request = RuleRequest(
+        name="name_example",
+        condition="condition_example",
+        rule_components=[
+            RuleComponentRequest(
+                type="type_example",
+                value={
+                    "key": None,
+                },
+                operator="operator_example",
+                params={
+                    "key": None,
+                },
+                condition="condition_example",
+                rule_components={
+                    "key": None,
+                },
+            ),
+        ],
+        on=RuleRequest(),
+    ) # RuleRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Rule
-        api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk)
+        api_instance.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_rule: %s\n" % e)
 ```
@@ -1247,6 +1336,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this rule. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **ruleset_pk** | **int**| A unique integer value identifying this ruleset. |
+ **rule_request** | [**RuleRequest**](RuleRequest.md)|  |
 
 ### Return type
 
@@ -1258,7 +1348,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -1293,6 +1383,7 @@ Delete a RuleComponent  Required scopes: check:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.rule_component_request import RuleComponentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1339,11 +1430,33 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     rule_pk = 1 # int | A unique integer value identifying this rule.
     ruleset_pk = 1 # int | A unique integer value identifying this ruleset.
+    rule_component_request = RuleComponentRequest(
+        type="type_example",
+        value={
+            "key": None,
+        },
+        operator="operator_example",
+        params={
+            "key": None,
+        },
+        condition="condition_example",
+        rule_components={
+            "key": None,
+        },
+    ) # RuleComponentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a RuleComponent
         api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete a RuleComponent
+        api_instance.delete_rule_component(check_plan_pk, cloud_pk, id, project_pk, rule_pk, ruleset_pk, rule_component_request=rule_component_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_rule_component: %s\n" % e)
 ```
@@ -1359,6 +1472,7 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **rule_pk** | **int**| A unique integer value identifying this rule. |
  **ruleset_pk** | **int**| A unique integer value identifying this ruleset. |
+ **rule_component_request** | [**RuleComponentRequest**](RuleComponentRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1370,7 +1484,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -1388,7 +1502,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_ruleset**
-> delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+> delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset_request)
 
 Delete a Ruleset
 
@@ -1405,6 +1519,7 @@ Delete a Ruleset  Required scopes: check:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import checker_api
+from bimdata_api_client.model.ruleset_request import RulesetRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1449,11 +1564,42 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this ruleset.
     project_pk = 1 # int | A unique integer value identifying this project.
+    ruleset_request = RulesetRequest(
+        parent_ruleset_id=1,
+        name="name_example",
+        description="description_example",
+        rules=[
+            RuleRequest(
+                name="name_example",
+                condition="condition_example",
+                rule_components=[
+                    RuleComponentRequest(
+                        type="type_example",
+                        value={
+                            "key": None,
+                        },
+                        operator="operator_example",
+                        params={
+                            "key": None,
+                        },
+                        condition="condition_example",
+                        rule_components={
+                            "key": None,
+                        },
+                    ),
+                ],
+                on=RuleRequest(),
+            ),
+        ],
+        rulesets=[
+            RulesetRequest(),
+        ],
+    ) # RulesetRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Ruleset
-        api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk)
+        api_instance.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CheckerApi->delete_ruleset: %s\n" % e)
 ```
@@ -1467,6 +1613,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this ruleset. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **ruleset_request** | [**RulesetRequest**](RulesetRequest.md)|  |
 
 ### Return type
 
@@ -1478,7 +1625,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 

@@ -30,6 +30,7 @@ from bimdata_api_client.model.create_building_by_name_request import CreateBuild
 from bimdata_api_client.model.create_model_request import CreateModelRequest
 from bimdata_api_client.model.create_multi_page_model_request import CreateMultiPageModelRequest
 from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.document_request import DocumentRequest
 from bimdata_api_client.model.document_with_element_list import DocumentWithElementList
 from bimdata_api_client.model.element import Element
 from bimdata_api_client.model.element_classification_relation import ElementClassificationRelation
@@ -49,6 +50,7 @@ from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
 from bimdata_api_client.model.model_property import ModelProperty
+from bimdata_api_client.model.model_request import ModelRequest
 from bimdata_api_client.model.patched_element_request import PatchedElementRequest
 from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
 from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
@@ -193,6 +195,7 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'classification_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -218,6 +221,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification_request':
+                        (ClassificationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -228,13 +233,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'classification_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -257,11 +267,13 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -282,6 +294,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -292,13 +306,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -321,11 +340,13 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -346,6 +367,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -356,13 +379,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -385,11 +413,13 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -410,6 +440,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -420,13 +452,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -449,11 +486,13 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -474,6 +513,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -484,13 +525,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -679,12 +725,14 @@ class ModelApi(object):
                     'element_uuid',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'element_uuid',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -707,6 +755,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -719,13 +769,18 @@ class ModelApi(object):
                     'element_uuid': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -749,12 +804,14 @@ class ModelApi(object):
                     'element_uuid',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'element_uuid',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -777,6 +834,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -789,13 +848,18 @@ class ModelApi(object):
                     'element_uuid': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -819,12 +883,14 @@ class ModelApi(object):
                     'model_classification_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_classification_pk',
                     'model_pk',
                     'project_pk',
+                    'request_body',
                 ],
                 'nullable': [
                 ],
@@ -847,6 +913,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'request_body':
+                        ([int],),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -859,13 +927,18 @@ class ModelApi(object):
                     'model_classification_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'request_body': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3076,6 +3149,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'token',
+                    'ifc_access_token_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3104,6 +3178,8 @@ class ModelApi(object):
                         (int,),
                     'token':
                         (str,),
+                    'ifc_access_token_request':
+                        (IfcAccessTokenRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3116,13 +3192,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'token': 'path',
+                    'ifc_access_token_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3292,12 +3373,14 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'nullable': [
                 ],
@@ -3320,6 +3403,8 @@ class ModelApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'element_request':
+                        (ElementRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3332,13 +3417,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'element_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3362,12 +3452,14 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'layer_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'model_pk',
                     'project_pk',
+                    'layer_request',
                 ],
                 'nullable': [
                 ],
@@ -3390,6 +3482,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'layer_request':
+                        (LayerRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3402,13 +3496,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'layer_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3431,6 +3530,7 @@ class ModelApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
+                    'model_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3456,6 +3556,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'model_request':
+                        (ModelRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3466,13 +3568,18 @@ class ModelApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
+                    'model_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3496,12 +3603,14 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'property_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'model_pk',
                     'project_pk',
+                    'property_request',
                 ],
                 'nullable': [
                 ],
@@ -3524,6 +3633,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_request':
+                        (PropertyRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3536,13 +3647,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'property_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3566,6 +3682,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'property_definition_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3594,6 +3711,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_definition_request':
+                        (PropertyDefinitionRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3606,13 +3725,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'property_definition_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3636,12 +3760,14 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'unit_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'model_pk',
                     'project_pk',
+                    'unit_request',
                 ],
                 'nullable': [
                 ],
@@ -3664,6 +3790,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'unit_request':
+                        (UnitRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3676,13 +3804,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'unit_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3770,6 +3903,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'property_set_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -3798,6 +3932,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_set_request':
+                        (PropertySetRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3810,13 +3946,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'property_set_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -3840,12 +3981,14 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'space_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'model_pk',
                     'project_pk',
+                    'space_request',
                 ],
                 'nullable': [
                 ],
@@ -3868,6 +4011,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'space_request':
+                        (SpaceRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -3880,13 +4025,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'space_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4056,12 +4206,14 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'system_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'system_request',
                 ],
                 'nullable': [
                 ],
@@ -4084,6 +4236,8 @@ class ModelApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'system_request':
+                        (SystemRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4096,13 +4250,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'system_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4126,12 +4285,14 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'zone_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'model_pk',
                     'project_pk',
+                    'zone_request',
                 ],
                 'nullable': [
                 ],
@@ -4154,6 +4315,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'zone_request':
+                        (ZoneRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4166,13 +4329,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'zone_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -4197,6 +4365,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'zone_pk',
+                    'zone_space_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -4204,6 +4373,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'zone_pk',
+                    'zone_space_request',
                 ],
                 'nullable': [
                 ],
@@ -4228,6 +4398,8 @@ class ModelApi(object):
                         (int,),
                     'zone_pk':
                         (int,),
+                    'zone_space_request':
+                        (ZoneSpaceRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -4242,13 +4414,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'zone_pk': 'path',
+                    'zone_space_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -8684,6 +8861,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'classification_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -8715,6 +8893,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification_request':
+                        (ClassificationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -8729,13 +8909,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'classification_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -8760,6 +8945,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'document_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -8767,6 +8953,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'document_request',
                 ],
                 'nullable': [
                 ],
@@ -8791,6 +8978,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'document_request':
+                        (DocumentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -8805,13 +8994,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'document_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -8836,6 +9030,7 @@ class ModelApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
+                    'property_set_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -8867,6 +9062,8 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'property_set_request':
+                        (PropertySetRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -8881,13 +9078,18 @@ class ModelApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'property_set_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -8913,6 +9115,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'propertyset_pk',
+                    'property_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -8921,6 +9124,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'propertyset_pk',
+                    'property_request',
                 ],
                 'nullable': [
                 ],
@@ -8947,6 +9151,8 @@ class ModelApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'property_request':
+                        (PropertyRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -8963,13 +9169,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'propertyset_pk': 'path',
+                    'property_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -8996,6 +9207,7 @@ class ModelApi(object):
                     'project_pk',
                     'property_pk',
                     'propertyset_pk',
+                    'property_definition_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9033,6 +9245,8 @@ class ModelApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'property_definition_request':
+                        (PropertyDefinitionRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9051,13 +9265,18 @@ class ModelApi(object):
                     'project_pk': 'path',
                     'property_pk': 'path',
                     'propertyset_pk': 'path',
+                    'property_definition_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9085,6 +9304,7 @@ class ModelApi(object):
                     'property_pk',
                     'propertydefinition_pk',
                     'propertyset_pk',
+                    'unit_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9095,6 +9315,7 @@ class ModelApi(object):
                     'property_pk',
                     'propertydefinition_pk',
                     'propertyset_pk',
+                    'unit_request',
                 ],
                 'nullable': [
                 ],
@@ -9125,6 +9346,8 @@ class ModelApi(object):
                         (int,),
                     'propertyset_pk':
                         (int,),
+                    'unit_request':
+                        (UnitRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9145,13 +9368,18 @@ class ModelApi(object):
                     'property_pk': 'path',
                     'propertydefinition_pk': 'path',
                     'propertyset_pk': 'path',
+                    'unit_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -9176,6 +9404,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -9183,6 +9412,7 @@ class ModelApi(object):
                     'model_pk',
                     'project_pk',
                     'uuid',
+                    'element_request',
                 ],
                 'nullable': [
                 ],
@@ -9207,6 +9437,8 @@ class ModelApi(object):
                         (int,),
                     'uuid':
                         (str,),
+                    'element_request':
+                        (ElementRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -9221,13 +9453,18 @@ class ModelApi(object):
                     'model_pk': 'path',
                     'project_pk': 'path',
                     'uuid': 'path',
+                    'element_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
             },
             api_client=api_client
         )
@@ -11223,6 +11460,7 @@ class ModelApi(object):
             project_pk (int):
 
         Keyword Args:
+            classification_request (ClassificationRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -11292,6 +11530,7 @@ class ModelApi(object):
         cloud_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many Property of a model  # noqa: E501
@@ -11300,13 +11539,14 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_model_properties(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_model_properties(cloud_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11371,6 +11611,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_model_properties_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_model_property_definitions(
@@ -11378,6 +11620,7 @@ class ModelApi(object):
         cloud_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many PropertyDefinitions of a model  # noqa: E501
@@ -11386,13 +11629,14 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_model_property_definitions(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_model_property_definitions(cloud_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11457,6 +11701,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_model_property_definitions_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_model_units(
@@ -11464,6 +11710,7 @@ class ModelApi(object):
         cloud_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many Units of a model  # noqa: E501
@@ -11472,13 +11719,14 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_model_units(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_model_units(cloud_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11543,6 +11791,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_model_units_endpoint.call_with_http_info(**kwargs)
 
     def bulk_delete_property_set(
@@ -11550,6 +11800,7 @@ class ModelApi(object):
         cloud_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Delete many PropertySet of a model  # noqa: E501
@@ -11558,13 +11809,14 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_delete_property_set(cloud_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_delete_property_set(cloud_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11629,6 +11881,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_delete_property_set_endpoint.call_with_http_info(**kwargs)
 
     def bulk_full_update_elements(
@@ -11820,6 +12074,7 @@ class ModelApi(object):
         element_uuid,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove many classifications from an element  # noqa: E501
@@ -11828,7 +12083,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_classifications_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -11836,6 +12091,7 @@ class ModelApi(object):
             element_uuid (str):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11902,6 +12158,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_classifications_of_element_endpoint.call_with_http_info(**kwargs)
 
     def bulk_remove_documents_of_element(
@@ -11910,6 +12168,7 @@ class ModelApi(object):
         element_uuid,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove many documents from an element  # noqa: E501
@@ -11918,7 +12177,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_documents_of_element(cloud_pk, element_uuid, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -11926,6 +12185,7 @@ class ModelApi(object):
             element_uuid (str):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -11992,6 +12252,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_documents_of_element_endpoint.call_with_http_info(**kwargs)
 
     def bulk_remove_elements_from_classification(
@@ -12000,6 +12262,7 @@ class ModelApi(object):
         model_classification_pk,
         model_pk,
         project_pk,
+        request_body,
         **kwargs
     ):
         """Remove the classifications from all elements  # noqa: E501
@@ -12008,7 +12271,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, async_req=True)
+        >>> thread = api.bulk_remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, request_body, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -12016,6 +12279,7 @@ class ModelApi(object):
             model_classification_pk (int): A unique integer value identifying this classification.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            request_body ([int]):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -12082,6 +12346,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['request_body'] = \
+            request_body
         return self.bulk_remove_elements_from_classification_endpoint.call_with_http_info(**kwargs)
 
     def bulk_update_elements(
@@ -14670,6 +14936,7 @@ class ModelApi(object):
             token (str):
 
         Keyword Args:
+            ifc_access_token_request (IfcAccessTokenRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -14926,6 +15193,7 @@ class ModelApi(object):
         model_pk,
         project_pk,
         uuid,
+        element_request,
         **kwargs
     ):
         """Delete an element of a model  # noqa: E501
@@ -14934,7 +15202,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_element(cloud_pk, model_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.delete_element(cloud_pk, model_pk, project_pk, uuid, element_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -14942,6 +15210,7 @@ class ModelApi(object):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            element_request (ElementRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15008,6 +15277,8 @@ class ModelApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['element_request'] = \
+            element_request
         return self.delete_element_endpoint.call_with_http_info(**kwargs)
 
     def delete_layer(
@@ -15016,6 +15287,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        layer_request,
         **kwargs
     ):
         """Delete a layer of a model  # noqa: E501
@@ -15024,7 +15296,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_layer(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_layer(cloud_pk, id, model_pk, project_pk, layer_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -15032,6 +15304,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this layer.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            layer_request (LayerRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15098,6 +15371,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['layer_request'] = \
+            layer_request
         return self.delete_layer_endpoint.call_with_http_info(**kwargs)
 
     def delete_model(
@@ -15122,6 +15397,7 @@ class ModelApi(object):
             project_pk (int):
 
         Keyword Args:
+            model_request (ModelRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -15192,6 +15468,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        property_request,
         **kwargs
     ):
         """Delete a Property of a model  # noqa: E501
@@ -15200,7 +15477,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_model_property(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_model_property(cloud_pk, id, model_pk, project_pk, property_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -15208,6 +15485,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this property.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            property_request (PropertyRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15274,6 +15552,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['property_request'] = \
+            property_request
         return self.delete_model_property_endpoint.call_with_http_info(**kwargs)
 
     def delete_model_property_definition(
@@ -15300,6 +15580,7 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_definition_request (PropertyDefinitionRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -15372,6 +15653,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        unit_request,
         **kwargs
     ):
         """Delete a Unit of a model  # noqa: E501
@@ -15380,7 +15662,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_model_unit(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_model_unit(cloud_pk, id, model_pk, project_pk, unit_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -15388,6 +15670,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this unit.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            unit_request (UnitRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15454,6 +15737,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['unit_request'] = \
+            unit_request
         return self.delete_model_unit_endpoint.call_with_http_info(**kwargs)
 
     def delete_model_without_doc(
@@ -15566,6 +15851,7 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_set_request (PropertySetRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -15638,6 +15924,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        space_request,
         **kwargs
     ):
         """Delete a space  # noqa: E501
@@ -15646,7 +15933,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_space(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_space(cloud_pk, id, model_pk, project_pk, space_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -15654,6 +15941,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this space.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            space_request (SpaceRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15720,6 +16008,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['space_request'] = \
+            space_request
         return self.delete_space_endpoint.call_with_http_info(**kwargs)
 
     def delete_storey(
@@ -15912,6 +16202,7 @@ class ModelApi(object):
         model_pk,
         project_pk,
         uuid,
+        system_request,
         **kwargs
     ):
         """Delete a system of a model  # noqa: E501
@@ -15920,7 +16211,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_system(cloud_pk, model_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.delete_system(cloud_pk, model_pk, project_pk, uuid, system_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -15928,6 +16219,7 @@ class ModelApi(object):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            system_request (SystemRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -15994,6 +16286,8 @@ class ModelApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['system_request'] = \
+            system_request
         return self.delete_system_endpoint.call_with_http_info(**kwargs)
 
     def delete_zone(
@@ -16002,6 +16296,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        zone_request,
         **kwargs
     ):
         """Delete a zone of a model  # noqa: E501
@@ -16010,7 +16305,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_zone(cloud_pk, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.delete_zone(cloud_pk, id, model_pk, project_pk, zone_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16018,6 +16313,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this zone.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            zone_request (ZoneRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16084,6 +16380,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['zone_request'] = \
+            zone_request
         return self.delete_zone_endpoint.call_with_http_info(**kwargs)
 
     def delete_zone_space(
@@ -16093,6 +16391,7 @@ class ModelApi(object):
         model_pk,
         project_pk,
         zone_pk,
+        zone_space_request,
         **kwargs
     ):
         """Delete a space of a zone  # noqa: E501
@@ -16101,7 +16400,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, async_req=True)
+        >>> thread = api.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, zone_space_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -16110,6 +16409,7 @@ class ModelApi(object):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             zone_pk (int): A unique integer value identifying this zone.
+            zone_space_request (ZoneSpaceRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -16178,6 +16478,8 @@ class ModelApi(object):
             project_pk
         kwargs['zone_pk'] = \
             zone_pk
+        kwargs['zone_space_request'] = \
+            zone_space_request
         return self.delete_zone_space_endpoint.call_with_http_info(**kwargs)
 
     def export_ifc(
@@ -21606,6 +21908,7 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            classification_request (ClassificationRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -21681,6 +21984,7 @@ class ModelApi(object):
         id,
         model_pk,
         project_pk,
+        document_request,
         **kwargs
     ):
         """Remove a documents from an element  # noqa: E501
@@ -21689,7 +21993,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk, async_req=True)
+        >>> thread = api.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk, document_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -21698,6 +22002,7 @@ class ModelApi(object):
             id (int): A unique integer value identifying this document.
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
+            document_request (DocumentRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -21766,6 +22071,8 @@ class ModelApi(object):
             model_pk
         kwargs['project_pk'] = \
             project_pk
+        kwargs['document_request'] = \
+            document_request
         return self.remove_document_of_element_endpoint.call_with_http_info(**kwargs)
 
     def remove_element_property_set(
@@ -21794,6 +22101,7 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            property_set_request (PropertySetRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -21870,6 +22178,7 @@ class ModelApi(object):
         model_pk,
         project_pk,
         propertyset_pk,
+        property_request,
         **kwargs
     ):
         """Remove a property from a PropertySet  # noqa: E501
@@ -21878,7 +22187,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, async_req=True)
+        >>> thread = api.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, property_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -21888,6 +22197,7 @@ class ModelApi(object):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             propertyset_pk (int): A unique integer value identifying this property set.
+            property_request (PropertyRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -21958,6 +22268,8 @@ class ModelApi(object):
             project_pk
         kwargs['propertyset_pk'] = \
             propertyset_pk
+        kwargs['property_request'] = \
+            property_request
         return self.remove_element_property_set_property_endpoint.call_with_http_info(**kwargs)
 
     def remove_element_property_set_property_definition(
@@ -21990,6 +22302,7 @@ class ModelApi(object):
             propertyset_pk (int): A unique integer value identifying this property set.
 
         Keyword Args:
+            property_definition_request (PropertyDefinitionRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -22072,6 +22385,7 @@ class ModelApi(object):
         property_pk,
         propertydefinition_pk,
         propertyset_pk,
+        unit_request,
         **kwargs
     ):
         """Remove a Unit from a Definition  # noqa: E501
@@ -22080,7 +22394,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, async_req=True)
+        >>> thread = api.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -22092,6 +22406,7 @@ class ModelApi(object):
             property_pk (int): A unique integer value identifying this property.
             propertydefinition_pk (int): A unique integer value identifying this property definition.
             propertyset_pk (int): A unique integer value identifying this property set.
+            unit_request (UnitRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -22166,6 +22481,8 @@ class ModelApi(object):
             propertydefinition_pk
         kwargs['propertyset_pk'] = \
             propertyset_pk
+        kwargs['unit_request'] = \
+            unit_request
         return self.remove_element_property_set_property_definition_unit_endpoint.call_with_http_info(**kwargs)
 
     def remove_elements_from_classification(
@@ -22175,6 +22492,7 @@ class ModelApi(object):
         model_pk,
         project_pk,
         uuid,
+        element_request,
         **kwargs
     ):
         """Remove the classification from all elements  # noqa: E501
@@ -22183,7 +22501,7 @@ class ModelApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid, async_req=True)
+        >>> thread = api.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid, element_request, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -22192,6 +22510,7 @@ class ModelApi(object):
             model_pk (int): A unique integer value identifying this model.
             project_pk (int): A unique integer value identifying this project.
             uuid (str):
+            element_request (ElementRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -22260,6 +22579,8 @@ class ModelApi(object):
             project_pk
         kwargs['uuid'] = \
             uuid
+        kwargs['element_request'] = \
+            element_request
         return self.remove_elements_from_classification_endpoint.call_with_http_info(**kwargs)
 
     def reprocess_model(

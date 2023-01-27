@@ -551,7 +551,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancel_cloud_user_invitation**
-> cancel_cloud_user_invitation(cloud_pk, id)
+> cancel_cloud_user_invitation(cloud_pk, id, cloud_invitation_request)
 
 Cancel a pending invitation
 
@@ -568,6 +568,7 @@ Cancel a pending invitation  Required scopes: org:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.cloud_invitation_request import CloudInvitationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -610,11 +611,15 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this invitation.
+    cloud_invitation_request = CloudInvitationRequest(
+        email="email_example",
+        redirect_uri="redirect_uri_example",
+    ) # CloudInvitationRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Cancel a pending invitation
-        api_instance.cancel_cloud_user_invitation(cloud_pk, id)
+        api_instance.cancel_cloud_user_invitation(cloud_pk, id, cloud_invitation_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->cancel_cloud_user_invitation: %s\n" % e)
 ```
@@ -626,6 +631,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this invitation. |
+ **cloud_invitation_request** | [**CloudInvitationRequest**](CloudInvitationRequest.md)|  |
 
 ### Return type
 
@@ -637,7 +643,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -655,7 +661,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cancel_project_user_invitation**
-> cancel_project_user_invitation(cloud_pk, id, project_pk)
+> cancel_project_user_invitation(cloud_pk, id, project_pk, project_invitation_request)
 
 Cancel a pending invitation
 
@@ -672,6 +678,7 @@ Cancel a pending invitation  Required scopes: org:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -715,11 +722,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this invitation.
     project_pk = 1 # int | A unique integer value identifying this project.
+    project_invitation_request = ProjectInvitationRequest(
+        email="email_example",
+        redirect_uri="redirect_uri_example",
+        role=100,
+    ) # ProjectInvitationRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Cancel a pending invitation
-        api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk)
+        api_instance.cancel_project_user_invitation(cloud_pk, id, project_pk, project_invitation_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->cancel_project_user_invitation: %s\n" % e)
 ```
@@ -732,6 +744,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this invitation. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **project_invitation_request** | [**ProjectInvitationRequest**](ProjectInvitationRequest.md)|  |
 
 ### Return type
 
@@ -743,7 +756,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -1525,7 +1538,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'BFX', 'DWG', 'DAE', 'GLTF', 'PDF', 'DXF', 'POINT_CLOUD', 'IFC', 'OBJ'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'DXF', 'POINT_CLOUD', 'IFC', 'PDF', 'DAE', 'GLTF', 'OBJ', 'BFX', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -2582,7 +2595,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_all_document_history**
-> delete_all_document_history(cloud_pk, document_pk, project_pk)
+> delete_all_document_history(cloud_pk, document_pk, project_pk, document_request)
 
 Delete all document history
 
@@ -2599,6 +2612,7 @@ Delete the document from the head version and all its history  Required scopes: 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document_request import DocumentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2642,11 +2656,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     document_pk = 1 # int | A unique integer value identifying this document.
     project_pk = 1 # int | A unique integer value identifying this project.
+    document_request = DocumentRequest(
+        parent_id=1,
+        name="name_example",
+        file_name="file_name_example",
+        description="description_example",
+        file=open('/path/to/file', 'rb'),
+        size=0,
+        model_source="UPLOAD",
+        ifc_source="UPLOAD",
+        successor_of=1,
+    ) # DocumentRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete all document history
-        api_instance.delete_all_document_history(cloud_pk, document_pk, project_pk)
+        api_instance.delete_all_document_history(cloud_pk, document_pk, project_pk, document_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_all_document_history: %s\n" % e)
 ```
@@ -2659,6 +2684,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **document_pk** | **int**| A unique integer value identifying this document. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **document_request** | [**DocumentRequest**](DocumentRequest.md)|  |
 
 ### Return type
 
@@ -2670,7 +2696,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -2705,6 +2731,7 @@ All elements having this classification will lose it  Required scopes: ifc:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.classification_request import ClassificationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2748,11 +2775,24 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this classification.
     project_pk = 1 # int | A unique integer value identifying this project.
+    classification_request = ClassificationRequest(
+        name="name_example",
+        notation="notation_example",
+        title="title_example",
+    ) # ClassificationRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a classification
         api_instance.delete_classification(cloud_pk, id, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Delete a classification
+        api_instance.delete_classification(cloud_pk, id, project_pk, classification_request=classification_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_classification: %s\n" % e)
 ```
@@ -2765,6 +2805,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this classification. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **classification_request** | [**ClassificationRequest**](ClassificationRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2776,7 +2817,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -2794,7 +2835,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_cloud**
-> delete_cloud(id)
+> delete_cloud(id, cloud_request)
 
 Delete a cloud
 
@@ -2811,6 +2852,7 @@ Delete a cloud  Required scopes: cloud:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.cloud_request import CloudRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2852,11 +2894,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = collaboration_api.CollaborationApi(api_client)
     id = 1 # int | A unique integer value identifying this cloud.
+    cloud_request = CloudRequest(
+        name="name_example",
+        organization_id=1,
+        image=open('/path/to/file', 'rb'),
+    ) # CloudRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a cloud
-        api_instance.delete_cloud(id)
+        api_instance.delete_cloud(id, cloud_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_cloud: %s\n" % e)
 ```
@@ -2867,6 +2914,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this cloud. |
+ **cloud_request** | [**CloudRequest**](CloudRequest.md)|  |
 
 ### Return type
 
@@ -2878,7 +2926,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3000,7 +3048,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document**
-> delete_document(cloud_pk, id, project_pk)
+> delete_document(cloud_pk, id, project_pk, document_request)
 
 Delete the document
 
@@ -3017,6 +3065,7 @@ Delete the document  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document_request import DocumentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3060,11 +3109,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this document.
     project_pk = 1 # int | A unique integer value identifying this project.
+    document_request = DocumentRequest(
+        parent_id=1,
+        name="name_example",
+        file_name="file_name_example",
+        description="description_example",
+        file=open('/path/to/file', 'rb'),
+        size=0,
+        model_source="UPLOAD",
+        ifc_source="UPLOAD",
+        successor_of=1,
+    ) # DocumentRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete the document
-        api_instance.delete_document(cloud_pk, id, project_pk)
+        api_instance.delete_document(cloud_pk, id, project_pk, document_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_document: %s\n" % e)
 ```
@@ -3077,6 +3137,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this document. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **document_request** | [**DocumentRequest**](DocumentRequest.md)|  |
 
 ### Return type
 
@@ -3088,7 +3149,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: Not defined
 
 
@@ -3106,7 +3167,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_document_tag**
-> delete_document_tag(cloud_pk, document_pk, id, project_pk)
+> delete_document_tag(cloud_pk, document_pk, id, project_pk, document_request)
 
 Delete a tag from a document
 
@@ -3123,6 +3184,7 @@ Delete a tag from a document  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document_request import DocumentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3167,11 +3229,22 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     document_pk = 1 # int | A unique integer value identifying this document.
     id = 1 # int | A unique integer value identifying this document.
     project_pk = 1 # int | 
+    document_request = DocumentRequest(
+        parent_id=1,
+        name="name_example",
+        file_name="file_name_example",
+        description="description_example",
+        file=open('/path/to/file', 'rb'),
+        size=0,
+        model_source="UPLOAD",
+        ifc_source="UPLOAD",
+        successor_of=1,
+    ) # DocumentRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a tag from a document
-        api_instance.delete_document_tag(cloud_pk, document_pk, id, project_pk)
+        api_instance.delete_document_tag(cloud_pk, document_pk, id, project_pk, document_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_document_tag: %s\n" % e)
 ```
@@ -3185,6 +3258,7 @@ Name | Type | Description  | Notes
  **document_pk** | **int**| A unique integer value identifying this document. |
  **id** | **int**| A unique integer value identifying this document. |
  **project_pk** | **int**|  |
+ **document_request** | [**DocumentRequest**](DocumentRequest.md)|  |
 
 ### Return type
 
@@ -3196,7 +3270,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3214,7 +3288,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_folder**
-> delete_folder(cloud_pk, id, project_pk)
+> delete_folder(cloud_pk, id, project_pk, folder_without_children_request)
 
 Delete a folder
 
@@ -3231,6 +3305,7 @@ All files and subfolders will be deleted too. If folder is a project's root fold
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3274,11 +3349,16 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this folder.
     project_pk = 1 # int | A unique integer value identifying this project.
+    folder_without_children_request = FolderWithoutChildrenRequest(
+        parent_id=1,
+        name="name_example",
+        default_permission=1,
+    ) # FolderWithoutChildrenRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a folder
-        api_instance.delete_folder(cloud_pk, id, project_pk)
+        api_instance.delete_folder(cloud_pk, id, project_pk, folder_without_children_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_folder: %s\n" % e)
 ```
@@ -3291,6 +3371,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this folder. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **folder_without_children_request** | [**FolderWithoutChildrenRequest**](FolderWithoutChildrenRequest.md)|  |
 
 ### Return type
 
@@ -3302,7 +3383,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3320,7 +3401,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_group_member**
-> delete_group_member(cloud_pk, group_pk, id, project_pk)
+> delete_group_member(cloud_pk, group_pk, id, project_pk, group_request)
 
 Delete a user from a group
 
@@ -3337,6 +3418,7 @@ Delete a userproject from a group. Id is the userproject_id. Must be an admin of
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.group_request import GroupRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3381,11 +3463,15 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     group_pk = 1 # int | A unique integer value identifying this group.
     id = 1 # int | A unique integer value identifying this group.
     project_pk = 1 # int | 
+    group_request = GroupRequest(
+        name="name_example",
+        color="color_example",
+    ) # GroupRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a user from a group
-        api_instance.delete_group_member(cloud_pk, group_pk, id, project_pk)
+        api_instance.delete_group_member(cloud_pk, group_pk, id, project_pk, group_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_group_member: %s\n" % e)
 ```
@@ -3399,6 +3485,7 @@ Name | Type | Description  | Notes
  **group_pk** | **int**| A unique integer value identifying this group. |
  **id** | **int**| A unique integer value identifying this group. |
  **project_pk** | **int**|  |
+ **group_request** | [**GroupRequest**](GroupRequest.md)|  |
 
 ### Return type
 
@@ -3410,7 +3497,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3428,7 +3515,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_manage_group**
-> delete_manage_group(cloud_pk, id, project_pk)
+> delete_manage_group(cloud_pk, id, project_pk, group_request)
 
 Delete a group
 
@@ -3445,6 +3532,7 @@ Delete a group. Must be an admin of the project  Required scopes: org:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.group_request import GroupRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3488,11 +3576,15 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this group.
     project_pk = 1 # int | A unique integer value identifying this project.
+    group_request = GroupRequest(
+        name="name_example",
+        color="color_example",
+    ) # GroupRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a group
-        api_instance.delete_manage_group(cloud_pk, id, project_pk)
+        api_instance.delete_manage_group(cloud_pk, id, project_pk, group_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_manage_group: %s\n" % e)
 ```
@@ -3505,6 +3597,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this group. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **group_request** | [**GroupRequest**](GroupRequest.md)|  |
 
 ### Return type
 
@@ -3516,7 +3609,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3534,7 +3627,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project**
-> delete_project(cloud_pk, id)
+> delete_project(cloud_pk, id, project_request)
 
 Delete a project
 
@@ -3551,6 +3644,7 @@ It can take a long time to respond because we may need to delete all properties 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.project_request import ProjectRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3593,11 +3687,17 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = collaboration_api.CollaborationApi(api_client)
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this project.
+    project_request = ProjectRequest(
+        logo=open('/path/to/file', 'rb'),
+        name="name_example",
+        status="A",
+        parent_id=1,
+    ) # ProjectRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a project
-        api_instance.delete_project(cloud_pk, id)
+        api_instance.delete_project(cloud_pk, id, project_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_project: %s\n" % e)
 ```
@@ -3609,6 +3709,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this project. |
+ **project_request** | [**ProjectRequest**](ProjectRequest.md)|  |
 
 ### Return type
 
@@ -3620,7 +3721,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3638,7 +3739,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_project_access_token**
-> delete_project_access_token(cloud_pk, project_pk, token)
+> delete_project_access_token(cloud_pk, project_pk, token, project_access_token_request)
 
 Delete a token
 
@@ -3655,6 +3756,7 @@ Deleting a token will revoke it  Required scopes: org:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3698,11 +3800,17 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     project_pk = 1 # int | A unique integer value identifying this project.
     token = "token_example" # str | 
+    project_access_token_request = ProjectAccessTokenRequest(
+        scopes=[
+            "bcf:read",
+        ],
+        expires_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
+    ) # ProjectAccessTokenRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a token
-        api_instance.delete_project_access_token(cloud_pk, project_pk, token)
+        api_instance.delete_project_access_token(cloud_pk, project_pk, token, project_access_token_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_project_access_token: %s\n" % e)
 ```
@@ -3715,6 +3823,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **token** | **str**|  |
+ **project_access_token_request** | [**ProjectAccessTokenRequest**](ProjectAccessTokenRequest.md)|  |
 
 ### Return type
 
@@ -3726,7 +3835,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3850,7 +3959,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_tag**
-> delete_tag(cloud_pk, id, project_pk)
+> delete_tag(cloud_pk, id, project_pk, tag_request)
 
 Delete the tag
 
@@ -3867,6 +3976,7 @@ Delete the tag  Required scopes: org:manage
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.tag_request import TagRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -3910,11 +4020,15 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     id = 1 # int | A unique integer value identifying this tag.
     project_pk = 1 # int | A unique integer value identifying this project.
+    tag_request = TagRequest(
+        name="name_example",
+        color="color_example",
+    ) # TagRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete the tag
-        api_instance.delete_tag(cloud_pk, id, project_pk)
+        api_instance.delete_tag(cloud_pk, id, project_pk, tag_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_tag: %s\n" % e)
 ```
@@ -3927,6 +4041,7 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **id** | **int**| A unique integer value identifying this tag. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **tag_request** | [**TagRequest**](TagRequest.md)|  |
 
 ### Return type
 
@@ -3938,7 +4053,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -3956,7 +4071,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_validation**
-> delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+> delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk, visa_validation_request)
 
 Remove a validation
 
@@ -3973,6 +4088,7 @@ Remove a validation  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.visa_validation_request import VisaValidationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4018,11 +4134,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this visa validation.
     project_pk = 1 # int | A unique integer value identifying this project.
     visa_pk = 1 # int | A unique integer value identifying this visa.
+    visa_validation_request = VisaValidationRequest(
+        validator_id=1,
+    ) # VisaValidationRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a validation
-        api_instance.delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk)
+        api_instance.delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk, visa_validation_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_validation: %s\n" % e)
 ```
@@ -4037,6 +4156,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this visa validation. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **visa_pk** | **int**| A unique integer value identifying this visa. |
+ **visa_validation_request** | [**VisaValidationRequest**](VisaValidationRequest.md)|  |
 
 ### Return type
 
@@ -4048,7 +4168,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -4083,6 +4203,7 @@ Remove a visa  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.visa_request import VisaRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4127,11 +4248,24 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     document_pk = 1 # int | A unique integer value identifying this document.
     id = 1 # int | A unique integer value identifying this visa.
     project_pk = 1 # int | A unique integer value identifying this project.
+    visa_request = VisaRequest(
+        creator_id=1,
+        description="description_example",
+        deadline=dateutil_parser('1970-01-01').date(),
+    ) # VisaRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a visa
         api_instance.delete_visa(cloud_pk, document_pk, id, project_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_visa: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Remove a visa
+        api_instance.delete_visa(cloud_pk, document_pk, id, project_pk, visa_request=visa_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_visa: %s\n" % e)
 ```
@@ -4145,6 +4279,7 @@ Name | Type | Description  | Notes
  **document_pk** | **int**| A unique integer value identifying this document. |
  **id** | **int**| A unique integer value identifying this visa. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **visa_request** | [**VisaRequest**](VisaRequest.md)|  | [optional]
 
 ### Return type
 
@@ -4156,7 +4291,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
@@ -4191,6 +4326,7 @@ Remove a comment  Required scopes: document:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.visa_comment_request import VisaCommentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -4236,11 +4372,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this visa comment.
     project_pk = 1 # int | A unique integer value identifying this project.
     visa_pk = 1 # int | A unique integer value identifying this visa.
+    visa_comment_request = VisaCommentRequest(
+        author_id=1,
+        content="content_example",
+    ) # VisaCommentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a comment
         api_instance.delete_visa_comment(cloud_pk, document_pk, id, project_pk, visa_pk)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->delete_visa_comment: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Remove a comment
+        api_instance.delete_visa_comment(cloud_pk, document_pk, id, project_pk, visa_pk, visa_comment_request=visa_comment_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->delete_visa_comment: %s\n" % e)
 ```
@@ -4255,6 +4403,7 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this visa comment. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **visa_pk** | **int**| A unique integer value identifying this visa. |
+ **visa_comment_request** | [**VisaCommentRequest**](VisaCommentRequest.md)|  | [optional]
 
 ### Return type
 
@@ -4266,7 +4415,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
  - **Accept**: Not defined
 
 
