@@ -14,14 +14,10 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.short_user import ShortUser
-from bimdata_api_client.model.tag import Tag
-globals()['ShortUser'] = ShortUser
-globals()['Tag'] = Tag
-from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
 
 
-class TestRecursiveFolderChildren(unittest.TestCase):
-    """RecursiveFolderChildren unit test stubs"""
+class TestShortUser(unittest.TestCase):
+    """ShortUser unit test stubs"""
 
     def setUp(self):
         pass
@@ -29,10 +25,10 @@ class TestRecursiveFolderChildren(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRecursiveFolderChildren(self):
-        """Test RecursiveFolderChildren"""
+    def testShortUser(self):
+        """Test ShortUser"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = RecursiveFolderChildren()  # noqa: E501
+        # model = ShortUser()  # noqa: E501
         pass
 
 

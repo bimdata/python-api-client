@@ -20,7 +20,6 @@ Name | Type | Description | Notes
 **history_count** | **int, none_type** | Number of previous versions | [readonly] 
 **tags** | [**[Tag], none_type**](Tag.md) | Tags of a document | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
-**creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **file_name** | **str, none_type** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 
 **size** | **int, none_type** |  | [optional] 

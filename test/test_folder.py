@@ -15,10 +15,10 @@ import unittest
 import bimdata_api_client
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
-from bimdata_api_client.model.user import User
+from bimdata_api_client.model.short_user import ShortUser
 globals()['FolderGroupPermission'] = FolderGroupPermission
 globals()['RecursiveFolderChildren'] = RecursiveFolderChildren
-globals()['User'] = User
+globals()['ShortUser'] = ShortUser
 from bimdata_api_client.model.folder import Folder
 
 

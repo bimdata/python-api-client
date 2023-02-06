@@ -10127,8 +10127,6 @@ class ModelApi(object):
                     'systems_file',
                     'map_file',
                     'gltf_file',
-                    'gltf_with_openings_file',
-                    'bvh_tree_file',
                     'preview_file',
                     'xkt_file',
                 ],
@@ -10142,8 +10140,6 @@ class ModelApi(object):
                     'systems_file',
                     'map_file',
                     'gltf_file',
-                    'gltf_with_openings_file',
-                    'bvh_tree_file',
                     'preview_file',
                     'xkt_file',
                 ],
@@ -10172,10 +10168,6 @@ class ModelApi(object):
                         (file_type, none_type,),
                     'gltf_file':
                         (file_type, none_type,),
-                    'gltf_with_openings_file':
-                        (file_type, none_type,),
-                    'bvh_tree_file':
-                        (file_type, none_type,),
                     'preview_file':
                         (file_type, none_type,),
                     'xkt_file':
@@ -10189,8 +10181,6 @@ class ModelApi(object):
                     'systems_file': 'systems_file',
                     'map_file': 'map_file',
                     'gltf_file': 'gltf_file',
-                    'gltf_with_openings_file': 'gltf_with_openings_file',
-                    'bvh_tree_file': 'bvh_tree_file',
                     'preview_file': 'preview_file',
                     'xkt_file': 'xkt_file',
                 },
@@ -10202,8 +10192,6 @@ class ModelApi(object):
                     'systems_file': 'form',
                     'map_file': 'form',
                     'gltf_file': 'form',
-                    'gltf_with_openings_file': 'form',
-                    'bvh_tree_file': 'form',
                     'preview_file': 'form',
                     'xkt_file': 'form',
                 },
@@ -23340,8 +23328,6 @@ class ModelApi(object):
             systems_file (file_type, none_type): [optional]
             map_file (file_type, none_type): [optional]
             gltf_file (file_type, none_type): [optional]
-            gltf_with_openings_file (file_type, none_type): [optional]
-            bvh_tree_file (file_type, none_type): [optional]
             preview_file (file_type, none_type): [optional]
             xkt_file (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status

@@ -14,9 +14,9 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
-from bimdata_api_client.model.user import User
+from bimdata_api_client.model.short_user import ShortUser
 globals()['FolderGroupPermission'] = FolderGroupPermission
-globals()['User'] = User
+globals()['ShortUser'] = ShortUser
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
 
 

@@ -31,10 +31,10 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
+    from bimdata_api_client.model.short_user import ShortUser
     from bimdata_api_client.model.tag import Tag
-    from bimdata_api_client.model.user import User
+    globals()['ShortUser'] = ShortUser
     globals()['Tag'] = Tag
-    globals()['User'] = User
 
 
 class RecursiveFolderChildren(ModelNormal):
@@ -141,7 +141,6 @@ class RecursiveFolderChildren(ModelNormal):
             'history_count': (int, none_type,),  # noqa: E501
             'tags': ([Tag], none_type,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'file_name': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'size': (int, none_type,),  # noqa: E501
@@ -171,7 +170,6 @@ class RecursiveFolderChildren(ModelNormal):
         'history_count': 'history_count',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'created_by': 'created_by',  # noqa: E501
-        'creator': 'creator',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'size': 'size',  # noqa: E501
@@ -249,7 +247,6 @@ class RecursiveFolderChildren(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             created_by (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            creator (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             file_name (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             size (int, none_type): [optional]  # noqa: E501
@@ -357,7 +354,6 @@ class RecursiveFolderChildren(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             created_by (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            creator (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             file_name (str, none_type): [optional]  # noqa: E501
             description (str, none_type): [optional]  # noqa: E501
             size (int, none_type): [optional]  # noqa: E501

@@ -15874,8 +15874,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     systems_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     map_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     gltf_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
-    gltf_with_openings_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
-    bvh_tree_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     preview_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     xkt_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
 
@@ -15891,7 +15889,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Update models file (gltf, svg, structure, etc)
-        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, gltf_with_openings_file=gltf_with_openings_file, bvh_tree_file=bvh_tree_file, preview_file=preview_file, xkt_file=xkt_file)
+        api_response = api_instance.update_model_files(cloud_pk, id, project_pk, structure_file=structure_file, systems_file=systems_file, map_file=map_file, gltf_file=gltf_file, preview_file=preview_file, xkt_file=xkt_file)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->update_model_files: %s\n" % e)
@@ -15909,8 +15907,6 @@ Name | Type | Description  | Notes
  **systems_file** | **file_type, none_type**|  | [optional]
  **map_file** | **file_type, none_type**|  | [optional]
  **gltf_file** | **file_type, none_type**|  | [optional]
- **gltf_with_openings_file** | **file_type, none_type**|  | [optional]
- **bvh_tree_file** | **file_type, none_type**|  | [optional]
  **preview_file** | **file_type, none_type**|  | [optional]
  **xkt_file** | **file_type, none_type**|  | [optional]
 

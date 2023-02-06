@@ -32,9 +32,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
-    from bimdata_api_client.model.user import User
+    from bimdata_api_client.model.short_user import ShortUser
     globals()['FolderGroupPermission'] = FolderGroupPermission
-    globals()['User'] = User
+    globals()['ShortUser'] = ShortUser
 
 
 class FolderWithoutChildren(ModelNormal):

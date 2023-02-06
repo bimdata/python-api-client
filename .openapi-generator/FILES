@@ -16,6 +16,7 @@ bimdata_api_client/apis/__init__.py
 bimdata_api_client/configuration.py
 bimdata_api_client/exceptions.py
 bimdata_api_client/model/__init__.py
+bimdata_api_client/model/auth.py
 bimdata_api_client/model/bcf_project.py
 bimdata_api_client/model/bcf_project_request.py
 bimdata_api_client/model/building.py
@@ -216,6 +217,7 @@ bimdata_api_client/model/ruleset_request.py
 bimdata_api_client/model/select_user_request.py
 bimdata_api_client/model/self_bcf_user.py
 bimdata_api_client/model/self_user.py
+bimdata_api_client/model/short_user.py
 bimdata_api_client/model/simple_element.py
 bimdata_api_client/model/size.py
 bimdata_api_client/model/snapshot.py
@@ -244,6 +246,7 @@ bimdata_api_client/model/user.py
 bimdata_api_client/model/user_invitation.py
 bimdata_api_client/model/user_project.py
 bimdata_api_client/model/user_project_id_request.py
+bimdata_api_client/model/version.py
 bimdata_api_client/model/view_setup_hints.py
 bimdata_api_client/model/view_setup_hints_request.py
 bimdata_api_client/model/viewpoint.py
@@ -266,6 +269,7 @@ bimdata_api_client/model/zone_space_request.py
 bimdata_api_client/model_utils.py
 bimdata_api_client/models/__init__.py
 bimdata_api_client/rest.py
+docs/Auth.md
 docs/BcfApi.md
 docs/BcfProject.md
 docs/BcfProjectRequest.md
@@ -471,6 +475,7 @@ docs/RulesetRequest.md
 docs/SelectUserRequest.md
 docs/SelfBcfUser.md
 docs/SelfUser.md
+docs/ShortUser.md
 docs/SimpleElement.md
 docs/Size.md
 docs/Snapshot.md
@@ -500,6 +505,7 @@ docs/User.md
 docs/UserInvitation.md
 docs/UserProject.md
 docs/UserProjectIdRequest.md
+docs/Version.md
 docs/ViewSetupHints.md
 docs/ViewSetupHintsRequest.md
 docs/Viewpoint.md
@@ -524,6 +530,7 @@ git_push.sh
 requirements.txt
 test-requirements.txt
 test/__init__.py
+test/test_auth.py
 test/test_bcf_api.py
 test/test_bcf_project.py
 test/test_bcf_project_request.py
@@ -729,6 +736,7 @@ test/test_ruleset_request.py
 test/test_select_user_request.py
 test/test_self_bcf_user.py
 test/test_self_user.py
+test/test_short_user.py
 test/test_simple_element.py
 test/test_size.py
 test/test_snapshot.py
@@ -758,6 +766,7 @@ test/test_user.py
 test/test_user_invitation.py
 test/test_user_project.py
 test/test_user_project_id_request.py
+test/test_version.py
 test/test_view_setup_hints.py
 test/test_view_setup_hints_request.py
 test/test_viewpoint.py

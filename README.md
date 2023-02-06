@@ -52,6 +52,7 @@ import time
 import bimdata_api_client
 from pprint import pprint
 from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.auth import Auth
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.coloring import Coloring
@@ -85,6 +86,7 @@ from bimdata_api_client.model.topic_status import TopicStatus
 from bimdata_api_client.model.topic_status_request import TopicStatusRequest
 from bimdata_api_client.model.topic_type import TopicType
 from bimdata_api_client.model.topic_type_request import TopicTypeRequest
+from bimdata_api_client.model.version import Version
 from bimdata_api_client.model.viewpoint import Viewpoint
 from bimdata_api_client.model.viewpoint_request import ViewpointRequest
 from bimdata_api_client.model.visibility import Visibility
@@ -178,6 +180,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**full_update_full_topic**](docs/BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
 *BcfApi* | [**full_update_topic**](docs/BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update all fields of a topic
 *BcfApi* | [**full_update_viewpoint**](docs/BcfApi.md#full_update_viewpoint) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update all fields of a Viewpoint
+*BcfApi* | [**get_auth**](docs/BcfApi.md#get_auth) | **GET** /bcf/2.1/auth | Retrieve Authentication Information
 *BcfApi* | [**get_bcf_project**](docs/BcfApi.md#get_bcf_project) | **GET** /bcf/2.1/projects/{id} | Retrieve a BCF project
 *BcfApi* | [**get_bcf_projects**](docs/BcfApi.md#get_bcf_projects) | **GET** /bcf/2.1/projects | Retrieve all BCF projects
 *BcfApi* | [**get_colorings**](docs/BcfApi.md#get_colorings) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/coloring | Retrieve all colorings of a viewpoint
@@ -193,6 +196,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_topic_viewpoints**](docs/BcfApi.md#get_topic_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/topic-viewpoints | Retrieve all viewpoints attached to the topic
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
 *BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
+*BcfApi* | [**get_versions**](docs/BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
 *BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 *BcfApi* | [**get_viewpoints**](docs/BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 *BcfApi* | [**get_visibilities**](docs/BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
@@ -662,6 +666,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [Auth](docs/Auth.md)
  - [BcfProject](docs/BcfProject.md)
  - [BcfProjectRequest](docs/BcfProjectRequest.md)
  - [Building](docs/Building.md)
@@ -862,6 +867,7 @@ Class | Method | HTTP request | Description
  - [SelectUserRequest](docs/SelectUserRequest.md)
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
+ - [ShortUser](docs/ShortUser.md)
  - [SimpleElement](docs/SimpleElement.md)
  - [Size](docs/Size.md)
  - [Snapshot](docs/Snapshot.md)
@@ -890,6 +896,7 @@ Class | Method | HTTP request | Description
  - [UserInvitation](docs/UserInvitation.md)
  - [UserProject](docs/UserProject.md)
  - [UserProjectIdRequest](docs/UserProjectIdRequest.md)
+ - [Version](docs/Version.md)
  - [ViewSetupHints](docs/ViewSetupHints.md)
  - [ViewSetupHintsRequest](docs/ViewSetupHintsRequest.md)
  - [Viewpoint](docs/Viewpoint.md)

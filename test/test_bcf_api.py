@@ -185,6 +185,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_auth(self):
+        """Test case for get_auth
+
+        Retrieve Authentication Information  # noqa: E501
+        """
+        pass
+
     def test_get_bcf_project(self):
         """Test case for get_bcf_project
 
@@ -287,6 +294,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_user
 
         Get current user info  # noqa: E501
+        """
+        pass
+
+    def test_get_versions(self):
+        """Test case for get_versions
+
+        Retrieve all supported BCF versions by this API  # noqa: E501
         """
         pass
 

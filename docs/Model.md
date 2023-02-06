@@ -16,7 +16,6 @@ Name | Type | Description | Notes
 **systems_file** | **str, none_type** |  | [readonly] 
 **map_file** | **str, none_type** |  | [readonly] 
 **gltf_file** | **str, none_type** |  | [readonly] 
-**bvh_tree_file** | **str, none_type** |  | [readonly] 
 **preview_file** | **str, none_type** |  | [readonly] 
 **viewer_360_file** | **str, none_type** | DEPRECATED: Use &#39;preview_file&#39; instead. | [readonly] 
 **xkt_file** | **str, none_type** |  | [readonly] 

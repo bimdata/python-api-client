@@ -9,6 +9,7 @@
 # import sys
 # sys.setrecursionlimit(n)
 
+from bimdata_api_client.model.auth import Auth
 from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.building import Building
@@ -209,6 +210,7 @@ from bimdata_api_client.model.ruleset_request import RulesetRequest
 from bimdata_api_client.model.select_user_request import SelectUserRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.self_user import SelfUser
+from bimdata_api_client.model.short_user import ShortUser
 from bimdata_api_client.model.simple_element import SimpleElement
 from bimdata_api_client.model.size import Size
 from bimdata_api_client.model.snapshot import Snapshot
@@ -237,6 +239,7 @@ from bimdata_api_client.model.user import User
 from bimdata_api_client.model.user_invitation import UserInvitation
 from bimdata_api_client.model.user_project import UserProject
 from bimdata_api_client.model.user_project_id_request import UserProjectIdRequest
+from bimdata_api_client.model.version import Version
 from bimdata_api_client.model.view_setup_hints import ViewSetupHints
 from bimdata_api_client.model.view_setup_hints_request import ViewSetupHintsRequest
 from bimdata_api_client.model.viewpoint import Viewpoint

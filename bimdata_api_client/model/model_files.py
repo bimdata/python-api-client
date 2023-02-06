@@ -86,8 +86,6 @@ class ModelFiles(ModelNormal):
             'systems_file': (str, none_type,),  # noqa: E501
             'map_file': (str, none_type,),  # noqa: E501
             'gltf_file': (str, none_type,),  # noqa: E501
-            'gltf_with_openings_file': (str, none_type,),  # noqa: E501
-            'bvh_tree_file': (str, none_type,),  # noqa: E501
             'preview_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
         }
@@ -102,8 +100,6 @@ class ModelFiles(ModelNormal):
         'systems_file': 'systems_file',  # noqa: E501
         'map_file': 'map_file',  # noqa: E501
         'gltf_file': 'gltf_file',  # noqa: E501
-        'gltf_with_openings_file': 'gltf_with_openings_file',  # noqa: E501
-        'bvh_tree_file': 'bvh_tree_file',  # noqa: E501
         'preview_file': 'preview_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
     }
@@ -153,8 +149,6 @@ class ModelFiles(ModelNormal):
             systems_file (str, none_type): [optional]  # noqa: E501
             map_file (str, none_type): [optional]  # noqa: E501
             gltf_file (str, none_type): [optional]  # noqa: E501
-            gltf_with_openings_file (str, none_type): [optional]  # noqa: E501
-            bvh_tree_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): [optional]  # noqa: E501
         """
@@ -242,8 +236,6 @@ class ModelFiles(ModelNormal):
             systems_file (str, none_type): [optional]  # noqa: E501
             map_file (str, none_type): [optional]  # noqa: E501
             gltf_file (str, none_type): [optional]  # noqa: E501
-            gltf_with_openings_file (str, none_type): [optional]  # noqa: E501
-            bvh_tree_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): [optional]  # noqa: E501
         """
