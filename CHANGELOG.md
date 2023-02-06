@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.2 (2023-02-06)
+### Fix
+* Remove some useless field on dms-tree ([`035c4e4`](https://github.com/bimdata/python-api-client/commit/035c4e4e7f63f75ffd9acc69478ba4265133a096))
+
 ## v9.10.1 (2023-01-27)
 ### Fix
 * Force request body on delete method with drf-spectacular ([#615](https://github.com/bimdata/python-api-client/issues/615)) ([`206ee31`](https://github.com/bimdata/python-api-client/commit/206ee31fdd0ade562478a39ba5f7d1caa2ae0991))
