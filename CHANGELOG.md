@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.3 (2023-03-02)
+### Fix
+* Add model.binary_2d_file field ([`4bd519d`](https://github.com/bimdata/python-api-client/commit/4bd519d8a800557f2ba434d5a43a0a4f6c6273a9))
+
 ## v9.10.2 (2023-02-06)
 ### Fix
 * Remove some useless field on dms-tree ([`035c4e4`](https://github.com/bimdata/python-api-client/commit/035c4e4e7f63f75ffd9acc69478ba4265133a096))
