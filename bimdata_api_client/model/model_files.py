@@ -88,6 +88,7 @@ class ModelFiles(ModelNormal):
             'gltf_file': (str, none_type,),  # noqa: E501
             'preview_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
+            'binary_2d_file': (str, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -102,6 +103,7 @@ class ModelFiles(ModelNormal):
         'gltf_file': 'gltf_file',  # noqa: E501
         'preview_file': 'preview_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
+        'binary_2d_file': 'binary_2d_file',  # noqa: E501
     }
 
     read_only_vars = {
@@ -151,6 +153,7 @@ class ModelFiles(ModelNormal):
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): [optional]  # noqa: E501
+            binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,6 +241,7 @@ class ModelFiles(ModelNormal):
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
             xkt_file (str, none_type): [optional]  # noqa: E501
+            binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

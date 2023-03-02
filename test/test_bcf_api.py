@@ -255,6 +255,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_related_topics(self):
+        """Test case for get_related_topics
+
+        Get all related topics  # noqa: E501
+        """
+        pass
+
     def test_get_selections(self):
         """Test case for get_selections
 
@@ -273,6 +280,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_topic
 
         Retrieve a topic  # noqa: E501
+        """
+        pass
+
+    def test_get_topic_document_references(self):
+        """Test case for get_topic_document_references
+
+        Get all related documents  # noqa: E501
         """
         pass
 

@@ -138,6 +138,7 @@ class Model(ModelNormal):
             'preview_file': (str, none_type,),  # noqa: E501
             'viewer_360_file': (str, none_type,),  # noqa: E501
             'xkt_file': (str, none_type,),  # noqa: E501
+            'binary_2d_file': (str, none_type,),  # noqa: E501
             'project_id': (int, none_type,),  # noqa: E501
             'errors': ([str], none_type,),  # noqa: E501
             'warnings': ([str], none_type,),  # noqa: E501
@@ -174,6 +175,7 @@ class Model(ModelNormal):
         'preview_file': 'preview_file',  # noqa: E501
         'viewer_360_file': 'viewer_360_file',  # noqa: E501
         'xkt_file': 'xkt_file',  # noqa: E501
+        'binary_2d_file': 'binary_2d_file',  # noqa: E501
         'project_id': 'project_id',  # noqa: E501
         'errors': 'errors',  # noqa: E501
         'warnings': 'warnings',  # noqa: E501
@@ -205,6 +207,7 @@ class Model(ModelNormal):
         'preview_file',  # noqa: E501
         'viewer_360_file',  # noqa: E501
         'xkt_file',  # noqa: E501
+        'binary_2d_file',  # noqa: E501
         'project_id',  # noqa: E501
         'errors',  # noqa: E501
         'warnings',  # noqa: E501
@@ -216,7 +219,7 @@ class Model(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, project_id, errors, warnings, page_number, children, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, binary_2d_file, project_id, errors, warnings, page_number, children, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
         Args:
@@ -235,6 +238,7 @@ class Model(ModelNormal):
             preview_file (str, none_type):
             viewer_360_file (str, none_type): DEPRECATED: Use 'preview_file' instead.
             xkt_file (str, none_type):
+            binary_2d_file (str, none_type):
             project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
             warnings ([str], none_type): List of warnings that happened during IFC processing
@@ -322,6 +326,7 @@ class Model(ModelNormal):
         self.preview_file = preview_file
         self.viewer_360_file = viewer_360_file
         self.xkt_file = xkt_file
+        self.binary_2d_file = binary_2d_file
         self.project_id = project_id
         self.errors = errors
         self.warnings = warnings

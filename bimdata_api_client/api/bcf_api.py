@@ -2258,6 +2258,83 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.get_related_topics_endpoint = _Endpoint(
+            settings={
+                'response_type': ([str],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/related_topics',
+                'operation_id': 'get_related_topics',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'format',
+                    'ifcs',
+                    'models',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'format':
+                        (str,),
+                    'ifcs':
+                        ([int],),
+                    'models':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'format': 'format',
+                    'ifcs': 'ifcs',
+                    'models': 'models',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'format': 'query',
+                    'ifcs': 'query',
+                    'models': 'query',
+                },
+                'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.get_selections_endpoint = _Endpoint(
             settings={
                 'response_type': ([Component],),
@@ -2440,6 +2517,83 @@ class BcfApi(object):
                     'projects_pk': 'path',
                 },
                 'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_topic_document_references_endpoint = _Endpoint(
+            settings={
+                'response_type': ([str],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{guid}/document_references',
+                'operation_id': 'get_topic_document_references',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'format',
+                    'ifcs',
+                    'models',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'format':
+                        (str,),
+                    'ifcs':
+                        ([int],),
+                    'models':
+                        ([int],),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'format': 'format',
+                    'ifcs': 'ifcs',
+                    'models': 'models',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'format': 'query',
+                    'ifcs': 'query',
+                    'models': 'query',
+                },
+                'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
                 }
             },
             headers_map={
@@ -6412,6 +6566,91 @@ class BcfApi(object):
             projects_pk
         return self.get_full_topics_endpoint.call_with_http_info(**kwargs)
 
+    def get_related_topics(
+        self,
+        guid,
+        projects_pk,
+        **kwargs
+    ):
+        """Get all related topics  # noqa: E501
+
+        This feature is not supported yet and will always respond with an empty array  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_related_topics(guid, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+
+        Keyword Args:
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [str]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        return self.get_related_topics_endpoint.call_with_http_info(**kwargs)
+
     def get_selections(
         self,
         guid,
@@ -6665,6 +6904,91 @@ class BcfApi(object):
         kwargs['projects_pk'] = \
             projects_pk
         return self.get_topic_endpoint.call_with_http_info(**kwargs)
+
+    def get_topic_document_references(
+        self,
+        guid,
+        projects_pk,
+        **kwargs
+    ):
+        """Get all related documents  # noqa: E501
+
+        This feature is not supported yet and will always respond with an empty array  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_topic_document_references(guid, projects_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+
+        Keyword Args:
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [str]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        return self.get_topic_document_references_endpoint.call_with_http_info(**kwargs)
 
     def get_topic_viewpoints(
         self,

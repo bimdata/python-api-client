@@ -90,6 +90,10 @@ class Extensions(ModelNormal):
             'user_id_type': ([str],),  # noqa: E501
             'priority_colors': ([str, none_type],),  # noqa: E501
             'topic_status_colors': ([str, none_type],),  # noqa: E501
+            'snippet_type': ([str, none_type], none_type,),  # noqa: E501
+            'project_actions': ([str],),  # noqa: E501
+            'topic_actions': ([str],),  # noqa: E501
+            'comment_actions': ([str],),  # noqa: E501
         }
 
     @cached_property
@@ -106,6 +110,10 @@ class Extensions(ModelNormal):
         'user_id_type': 'user_id_type',  # noqa: E501
         'priority_colors': 'priority_colors',  # noqa: E501
         'topic_status_colors': 'topic_status_colors',  # noqa: E501
+        'snippet_type': 'snippet_type',  # noqa: E501
+        'project_actions': 'project_actions',  # noqa: E501
+        'topic_actions': 'topic_actions',  # noqa: E501
+        'comment_actions': 'comment_actions',  # noqa: E501
     }
 
     read_only_vars = {
@@ -115,13 +123,17 @@ class Extensions(ModelNormal):
         'priority',  # noqa: E501
         'stage',  # noqa: E501
         'user_id_type',  # noqa: E501
+        'snippet_type',  # noqa: E501
+        'project_actions',  # noqa: E501
+        'topic_actions',  # noqa: E501
+        'comment_actions',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, topic_type, topic_status, topic_label, priority, stage, user_id_type, priority_colors, topic_status_colors, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, topic_type, topic_status, topic_label, priority, stage, user_id_type, priority_colors, topic_status_colors, snippet_type, project_actions, topic_actions, comment_actions, *args, **kwargs):  # noqa: E501
         """Extensions - a model defined in OpenAPI
 
         Args:
@@ -133,6 +145,10 @@ class Extensions(ModelNormal):
             user_id_type ([str]):
             priority_colors ([str, none_type]): Non standard field. Arrays of priorities and this array are in the same order.
             topic_status_colors ([str, none_type]): Non standard field. Arrays of statuses and this array are in the same order.
+            snippet_type ([str, none_type], none_type): Snippet are not yet supported. This field will always be null.
+            project_actions ([str]):
+            topic_actions ([str]):
+            comment_actions ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -200,6 +216,10 @@ class Extensions(ModelNormal):
         self.user_id_type = user_id_type
         self.priority_colors = priority_colors
         self.topic_status_colors = topic_status_colors
+        self.snippet_type = snippet_type
+        self.project_actions = project_actions
+        self.topic_actions = topic_actions
+        self.comment_actions = comment_actions
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -225,7 +245,6 @@ class Extensions(ModelNormal):
 
             priority_colors ([str, none_type]): Non standard field. Arrays of priorities and this array are in the same order.
             topic_status_colors ([str, none_type]): Non standard field. Arrays of statuses and this array are in the same order.
-
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be

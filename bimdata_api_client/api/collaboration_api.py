@@ -8388,7 +8388,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'BFX', 'DXF', 'IFC', 'DWG', 'GLTF', 'POINT_CLOUD', 'OBJ', 'DAE'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'POINT_CLOUD', 'BFX', 'OBJ', 'DAE', 'DXF', 'GLTF', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
