@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.4 (2023-03-09)
+### Fix
+* Fix requestBody on simple delete route ([`ece7509`](https://github.com/bimdata/python-api-client/commit/ece7509ed7e31a24ef3347245bfd7f9331f1f8fe))
+
 ## v9.10.3 (2023-03-02)
 ### Fix
 * Add model.binary_2d_file field ([`4bd519d`](https://github.com/bimdata/python-api-client/commit/4bd519d8a800557f2ba434d5a43a0a4f6c6273a9))
