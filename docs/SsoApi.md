@@ -114,7 +114,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_user**
-> delete_user(select_user_request)
+> delete_user()
 
 Delete user from BIMData
 
@@ -131,7 +131,6 @@ Delete the user and all clouds where the user is alone
 import time
 import bimdata_api_client
 from bimdata_api_client.api import sso_api
-from bimdata_api_client.model.select_user_request import SelectUserRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -172,24 +171,18 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
-    select_user_request = SelectUserRequest(
-        email="email_example",
-    ) # SelectUserRequest | 
 
-    # example passing only required values which don't have defaults set
+    # example, this endpoint has no required or optional parameters
     try:
         # Delete user from BIMData
-        api_instance.delete_user(select_user_request)
+        api_instance.delete_user()
     except bimdata_api_client.ApiException as e:
         print("Exception when calling SsoApi->delete_user: %s\n" % e)
 ```
 
 
 ### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **select_user_request** | [**SelectUserRequest**](SelectUserRequest.md)|  |
+This endpoint does not need any parameter.
 
 ### Return type
 
@@ -201,7 +194,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 

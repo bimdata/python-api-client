@@ -538,7 +538,6 @@ class CheckerApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
-                    'ifc_checker_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -567,8 +566,6 @@ class CheckerApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'ifc_checker_request':
-                        (IfcCheckerRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -581,18 +578,13 @@ class CheckerApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
-                    'ifc_checker_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -617,7 +609,6 @@ class CheckerApi(object):
                     'id',
                     'model_pk',
                     'project_pk',
-                    'checker_result_request',
                 ],
                 'required': [
                     'checker_pk',
@@ -649,8 +640,6 @@ class CheckerApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'checker_result_request':
-                        (CheckerResultRequest,),
                 },
                 'attribute_map': {
                     'checker_pk': 'checker_pk',
@@ -665,18 +654,13 @@ class CheckerApi(object):
                     'id': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
-                    'checker_result_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -699,13 +683,11 @@ class CheckerApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'check_plan_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'check_plan_request',
                 ],
                 'nullable': [
                 ],
@@ -726,8 +708,6 @@ class CheckerApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'check_plan_request':
-                        (CheckPlanRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -738,18 +718,13 @@ class CheckerApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'check_plan_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -774,7 +749,6 @@ class CheckerApi(object):
                     'id',
                     'project_pk',
                     'ruleset_pk',
-                    'rule_request',
                 ],
                 'required': [
                     'check_plan_pk',
@@ -782,7 +756,6 @@ class CheckerApi(object):
                     'id',
                     'project_pk',
                     'ruleset_pk',
-                    'rule_request',
                 ],
                 'nullable': [
                 ],
@@ -807,8 +780,6 @@ class CheckerApi(object):
                         (int,),
                     'ruleset_pk':
                         (int,),
-                    'rule_request':
-                        (RuleRequest,),
                 },
                 'attribute_map': {
                     'check_plan_pk': 'check_plan_pk',
@@ -823,18 +794,13 @@ class CheckerApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'ruleset_pk': 'path',
-                    'rule_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -860,7 +826,6 @@ class CheckerApi(object):
                     'project_pk',
                     'rule_pk',
                     'ruleset_pk',
-                    'rule_component_request',
                 ],
                 'required': [
                     'check_plan_pk',
@@ -895,8 +860,6 @@ class CheckerApi(object):
                         (int,),
                     'ruleset_pk':
                         (int,),
-                    'rule_component_request':
-                        (RuleComponentRequest,),
                 },
                 'attribute_map': {
                     'check_plan_pk': 'check_plan_pk',
@@ -913,18 +876,13 @@ class CheckerApi(object):
                     'project_pk': 'path',
                     'rule_pk': 'path',
                     'ruleset_pk': 'path',
-                    'rule_component_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -948,14 +906,12 @@ class CheckerApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'ruleset_request',
                 ],
                 'required': [
                     'check_plan_pk',
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'ruleset_request',
                 ],
                 'nullable': [
                 ],
@@ -978,8 +934,6 @@ class CheckerApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'ruleset_request':
-                        (RulesetRequest,),
                 },
                 'attribute_map': {
                     'check_plan_pk': 'check_plan_pk',
@@ -992,18 +946,13 @@ class CheckerApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'ruleset_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -3015,7 +2964,6 @@ class CheckerApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            ifc_checker_request (IfcCheckerRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3108,7 +3056,6 @@ class CheckerApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            checker_result_request (CheckerResultRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3182,7 +3129,6 @@ class CheckerApi(object):
         cloud_pk,
         id,
         project_pk,
-        check_plan_request,
         **kwargs
     ):
         """Delete a Checkplan  # noqa: E501
@@ -3191,14 +3137,13 @@ class CheckerApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_checkplan(cloud_pk, id, project_pk, check_plan_request, async_req=True)
+        >>> thread = api.delete_checkplan(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this check plan.
             project_pk (int): A unique integer value identifying this project.
-            check_plan_request (CheckPlanRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3263,8 +3208,6 @@ class CheckerApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['check_plan_request'] = \
-            check_plan_request
         return self.delete_checkplan_endpoint.call_with_http_info(**kwargs)
 
     def delete_rule(
@@ -3274,7 +3217,6 @@ class CheckerApi(object):
         id,
         project_pk,
         ruleset_pk,
-        rule_request,
         **kwargs
     ):
         """Delete a Rule  # noqa: E501
@@ -3283,7 +3225,7 @@ class CheckerApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, rule_request, async_req=True)
+        >>> thread = api.delete_rule(check_plan_pk, cloud_pk, id, project_pk, ruleset_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -3292,7 +3234,6 @@ class CheckerApi(object):
             id (int): A unique integer value identifying this rule.
             project_pk (int): A unique integer value identifying this project.
             ruleset_pk (int): A unique integer value identifying this ruleset.
-            rule_request (RuleRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3361,8 +3302,6 @@ class CheckerApi(object):
             project_pk
         kwargs['ruleset_pk'] = \
             ruleset_pk
-        kwargs['rule_request'] = \
-            rule_request
         return self.delete_rule_endpoint.call_with_http_info(**kwargs)
 
     def delete_rule_component(
@@ -3393,7 +3332,6 @@ class CheckerApi(object):
             ruleset_pk (int): A unique integer value identifying this ruleset.
 
         Keyword Args:
-            rule_component_request (RuleComponentRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -3470,7 +3408,6 @@ class CheckerApi(object):
         cloud_pk,
         id,
         project_pk,
-        ruleset_request,
         **kwargs
     ):
         """Delete a Ruleset  # noqa: E501
@@ -3479,7 +3416,7 @@ class CheckerApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, ruleset_request, async_req=True)
+        >>> thread = api.delete_ruleset(check_plan_pk, cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -3487,7 +3424,6 @@ class CheckerApi(object):
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this ruleset.
             project_pk (int): A unique integer value identifying this project.
-            ruleset_request (RulesetRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -3554,8 +3490,6 @@ class CheckerApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['ruleset_request'] = \
-            ruleset_request
         return self.delete_ruleset_endpoint.call_with_http_info(**kwargs)
 
     def get_checker(

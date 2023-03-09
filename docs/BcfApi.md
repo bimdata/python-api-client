@@ -1273,7 +1273,6 @@ Delete a comment  Required scopes: bcf:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.comment_request import CommentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1317,29 +1316,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     guid = "guid_example" # str | 
     projects_pk = 1 # int | A unique integer value identifying this project.
     topics_guid = "topics_guid_example" # str | 
-    comment_request = CommentRequest(
-        guid="guid_example",
-        date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        author="author_example",
-        comment="comment_example",
-        viewpoint_guid="viewpoint_guid_example",
-        reply_to_comment_guid="reply_to_comment_guid_example",
-        modified_author="modified_author_example",
-        viewpoint_temp_id=1,
-    ) # CommentRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a comment
         api_instance.delete_comment(guid, projects_pk, topics_guid)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling BcfApi->delete_comment: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a comment
-        api_instance.delete_comment(guid, projects_pk, topics_guid, comment_request=comment_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_comment: %s\n" % e)
 ```
@@ -1352,7 +1333,6 @@ Name | Type | Description  | Notes
  **guid** | **str**|  |
  **projects_pk** | **int**| A unique integer value identifying this project. |
  **topics_guid** | **str**|  |
- **comment_request** | [**CommentRequest**](CommentRequest.md)|  | [optional]
 
 ### Return type
 
@@ -1364,7 +1344,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1382,7 +1362,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_extension_label**
-> delete_extension_label(id, projects_pk, label_request)
+> delete_extension_label(id, projects_pk)
 
 Delete a Label
 
@@ -1399,7 +1379,6 @@ This is not a standard route. Delete a Label. Topics using this label won't be d
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.label_request import LabelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1442,15 +1421,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this label.
     projects_pk = 1 # int | 
-    label_request = LabelRequest(
-        label="label_example",
-        project=1,
-    ) # LabelRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Label
-        api_instance.delete_extension_label(id, projects_pk, label_request)
+        api_instance.delete_extension_label(id, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_label: %s\n" % e)
 ```
@@ -1462,7 +1437,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this label. |
  **projects_pk** | **int**|  |
- **label_request** | [**LabelRequest**](LabelRequest.md)|  |
 
 ### Return type
 
@@ -1474,7 +1448,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1492,7 +1466,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_extension_priority**
-> delete_extension_priority(id, projects_pk, priority_request)
+> delete_extension_priority(id, projects_pk)
 
 Delete a Priority
 
@@ -1509,7 +1483,6 @@ This is not a standard route. Delete a Priority. Topics using this priority won'
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.priority_request import PriorityRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1552,16 +1525,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this priority.
     projects_pk = 1 # int | 
-    priority_request = PriorityRequest(
-        priority="priority_example",
-        color="color_example",
-        project=1,
-    ) # PriorityRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Priority
-        api_instance.delete_extension_priority(id, projects_pk, priority_request)
+        api_instance.delete_extension_priority(id, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_priority: %s\n" % e)
 ```
@@ -1573,7 +1541,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this priority. |
  **projects_pk** | **int**|  |
- **priority_request** | [**PriorityRequest**](PriorityRequest.md)|  |
 
 ### Return type
 
@@ -1585,7 +1552,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1603,7 +1570,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_extension_stage**
-> delete_extension_stage(id, projects_pk, stage_request)
+> delete_extension_stage(id, projects_pk)
 
 Delete a Stage
 
@@ -1620,7 +1587,6 @@ This is not a standard route. Delete a Stage. Topics using this stage won't be d
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.stage_request import StageRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1663,15 +1629,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this stage.
     projects_pk = 1 # int | 
-    stage_request = StageRequest(
-        stage="stage_example",
-        project=1,
-    ) # StageRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Stage
-        api_instance.delete_extension_stage(id, projects_pk, stage_request)
+        api_instance.delete_extension_stage(id, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_stage: %s\n" % e)
 ```
@@ -1683,7 +1645,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this stage. |
  **projects_pk** | **int**|  |
- **stage_request** | [**StageRequest**](StageRequest.md)|  |
 
 ### Return type
 
@@ -1695,7 +1656,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1713,7 +1674,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_extension_status**
-> delete_extension_status(id, projects_pk, topic_status_request)
+> delete_extension_status(id, projects_pk)
 
 Delete a TopicStatus
 
@@ -1730,7 +1691,6 @@ This is not a standard route. Delete a TopicStatus. Topics using this status won
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_status_request import TopicStatusRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1773,16 +1733,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic status.
     projects_pk = 1 # int | 
-    topic_status_request = TopicStatusRequest(
-        topic_status="topic_status_example",
-        color="color_example",
-        project=1,
-    ) # TopicStatusRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a TopicStatus
-        api_instance.delete_extension_status(id, projects_pk, topic_status_request)
+        api_instance.delete_extension_status(id, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_status: %s\n" % e)
 ```
@@ -1794,7 +1749,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this topic status. |
  **projects_pk** | **int**|  |
- **topic_status_request** | [**TopicStatusRequest**](TopicStatusRequest.md)|  |
 
 ### Return type
 
@@ -1806,7 +1760,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1824,7 +1778,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_extension_type**
-> delete_extension_type(id, projects_pk, topic_type_request)
+> delete_extension_type(id, projects_pk)
 
 Delete a TopicType
 
@@ -1841,7 +1795,6 @@ This is not a standard route. Delete a TopicType. Topics using this type won't b
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_type_request import TopicTypeRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1884,15 +1837,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     id = 1 # int | A unique integer value identifying this topic type.
     projects_pk = 1 # int | 
-    topic_type_request = TopicTypeRequest(
-        topic_type="topic_type_example",
-        project=1,
-    ) # TopicTypeRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a TopicType
-        api_instance.delete_extension_type(id, projects_pk, topic_type_request)
+        api_instance.delete_extension_type(id, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_extension_type: %s\n" % e)
 ```
@@ -1904,7 +1853,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this topic type. |
  **projects_pk** | **int**|  |
- **topic_type_request** | [**TopicTypeRequest**](TopicTypeRequest.md)|  |
 
 ### Return type
 
@@ -1916,7 +1864,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -1934,7 +1882,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_topic**
-> delete_topic(guid, projects_pk, topic_request)
+> delete_topic(guid, projects_pk)
 
 Delete a topic
 
@@ -1951,7 +1899,6 @@ Delete a topic  Required scopes: bcf:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.topic_request import TopicRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -1994,40 +1941,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
     projects_pk = 1 # int | 
-    topic_request = TopicRequest(
-        guid="guid_example",
-        topic_type="topic_type_example",
-        topic_status="topic_status_example",
-        title="title_example",
-        priority="priority_example",
-        labels=[
-            "labels_example",
-        ],
-        creation_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        creation_author="creation_author_example",
-        modified_author="modified_author_example",
-        assigned_to="assigned_to_example",
-        reference_links=[
-            "reference_links_example",
-        ],
-        stage="stage_example",
-        description="description_example",
-        due_date=dateutil_parser('1970-01-01T00:00:00.00Z'),
-        ifcs=[
-            1,
-        ],
-        models=[
-            1,
-        ],
-        format="format_example",
-        index=0,
-        project=1,
-    ) # TopicRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a topic
-        api_instance.delete_topic(guid, projects_pk, topic_request)
+        api_instance.delete_topic(guid, projects_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_topic: %s\n" % e)
 ```
@@ -2039,7 +1957,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **str**|  |
  **projects_pk** | **int**|  |
- **topic_request** | [**TopicRequest**](TopicRequest.md)|  |
 
 ### Return type
 
@@ -2051,7 +1968,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -2086,7 +2003,6 @@ This is not a standard route. Delete a Viewpoint  Required scopes: bcf:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import bcf_api
-from bimdata_api_client.model.viewpoint_request import ViewpointRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -2131,56 +2047,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     projects_pk = 1 # int | 
     topics_guid = "topics_guid_example" # str | 
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
-    viewpoint_request = ViewpointRequest(
-        index=0,
-        guid="guid_example",
-        originating_system="originating_system_example",
-        authoring_tool_id="authoring_tool_id_example",
-        orthogonal_camera=None,
-        perspective_camera=None,
-        lines=[
-            LineRequest(
-                end_point=PointRequest(
-                    x=3.14,
-                    y=3.14,
-                    z=3.14,
-                ),
-                start_point=PointRequest(
-                    x=3.14,
-                    y=3.14,
-                    z=3.14,
-                ),
-            ),
-        ],
-        clipping_planes=[
-            ClippingPlaneRequest(
-                location=PointRequest(
-                    x=3.14,
-                    y=3.14,
-                    z=3.14,
-                ),
-                direction=DirectionRequest(
-                    x=3.14,
-                    y=3.14,
-                    z=3.14,
-                ),
-            ),
-        ],
-        snapshot=None,
-        components=None,
-        pins=[
-            PinRequest(
-                name="name_example",
-                color="color_example",
-                point=PointRequest(
-                    x=3.14,
-                    y=3.14,
-                    z=3.14,
-                ),
-            ),
-        ],
-        temp_id=1,
-    ) # ViewpointRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -2193,7 +2059,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Delete a Viewpoint
-        api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format, viewpoint_request=viewpoint_request)
+        api_instance.delete_viewpoint(guid, projects_pk, topics_guid, img_format=img_format)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling BcfApi->delete_viewpoint: %s\n" % e)
 ```
@@ -2207,7 +2073,6 @@ Name | Type | Description  | Notes
  **projects_pk** | **int**|  |
  **topics_guid** | **str**|  |
  **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] if omitted the server will use the default value of "url"
- **viewpoint_request** | [**ViewpointRequest**](ViewpointRequest.md)|  | [optional]
 
 ### Return type
 
@@ -2219,7 +2084,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 

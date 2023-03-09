@@ -23,7 +23,6 @@ from bimdata_api_client.model_utils import (  # noqa: F401
     validate_and_convert_types
 )
 from bimdata_api_client.model.invitation import Invitation
-from bimdata_api_client.model.select_user_request import SelectUserRequest
 
 
 class SsoApi(object):
@@ -105,11 +104,8 @@ class SsoApi(object):
             },
             params_map={
                 'all': [
-                    'select_user_request',
                 ],
-                'required': [
-                    'select_user_request',
-                ],
+                'required': [],
                 'nullable': [
                 ],
                 'enum': [
@@ -123,24 +119,17 @@ class SsoApi(object):
                 'allowed_values': {
                 },
                 'openapi_types': {
-                    'select_user_request':
-                        (SelectUserRequest,),
                 },
                 'attribute_map': {
                 },
                 'location_map': {
-                    'select_user_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -390,7 +379,6 @@ class SsoApi(object):
 
     def delete_user(
         self,
-        select_user_request,
         **kwargs
     ):
         """Delete user from BIMData  # noqa: E501
@@ -399,11 +387,9 @@ class SsoApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_user(select_user_request, async_req=True)
+        >>> thread = api.delete_user(async_req=True)
         >>> result = thread.get()
 
-        Args:
-            select_user_request (SelectUserRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -462,8 +448,6 @@ class SsoApi(object):
         kwargs['_content_type'] = kwargs.get(
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
-        kwargs['select_user_request'] = \
-            select_user_request
         return self.delete_user_endpoint.call_with_http_info(**kwargs)
 
     def deny_invitation(

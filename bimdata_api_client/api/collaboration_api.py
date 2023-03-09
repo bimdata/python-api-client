@@ -30,7 +30,6 @@ from bimdata_api_client.model.cloud_invitation import CloudInvitation
 from bimdata_api_client.model.cloud_invitation_request import CloudInvitationRequest
 from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.document_request import DocumentRequest
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
@@ -387,12 +386,10 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'id',
-                    'cloud_invitation_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
-                    'cloud_invitation_request',
                 ],
                 'nullable': [
                 ],
@@ -411,8 +408,6 @@ class CollaborationApi(object):
                         (int,),
                     'id':
                         (int,),
-                    'cloud_invitation_request':
-                        (CloudInvitationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -421,18 +416,13 @@ class CollaborationApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
-                    'cloud_invitation_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -455,13 +445,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'project_invitation_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'project_invitation_request',
                 ],
                 'nullable': [
                 ],
@@ -482,8 +470,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'project_invitation_request':
-                        (ProjectInvitationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -494,18 +480,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'project_invitation_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -1680,13 +1661,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'document_pk',
                     'project_pk',
-                    'document_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'document_pk',
                     'project_pk',
-                    'document_request',
                 ],
                 'nullable': [
                 ],
@@ -1707,8 +1686,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'document_request':
-                        (DocumentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -1719,18 +1696,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'document_pk': 'path',
                     'project_pk': 'path',
-                    'document_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -1753,7 +1725,6 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'classification_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -1779,8 +1750,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'classification_request':
-                        (ClassificationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -1791,18 +1760,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'classification_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -1823,11 +1787,9 @@ class CollaborationApi(object):
             params_map={
                 'all': [
                     'id',
-                    'cloud_request',
                 ],
                 'required': [
                     'id',
-                    'cloud_request',
                 ],
                 'nullable': [
                 ],
@@ -1844,26 +1806,19 @@ class CollaborationApi(object):
                 'openapi_types': {
                     'id':
                         (int,),
-                    'cloud_request':
-                        (CloudRequest,),
                 },
                 'attribute_map': {
                     'id': 'id',
                 },
                 'location_map': {
                     'id': 'path',
-                    'cloud_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -1944,13 +1899,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'document_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'document_request',
                 ],
                 'nullable': [
                 ],
@@ -1971,8 +1924,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'document_request':
-                        (DocumentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -1983,16 +1934,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'document_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2016,14 +1964,12 @@ class CollaborationApi(object):
                     'document_pk',
                     'id',
                     'project_pk',
-                    'document_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'document_pk',
                     'id',
                     'project_pk',
-                    'document_request',
                 ],
                 'nullable': [
                 ],
@@ -2046,8 +1992,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'document_request':
-                        (DocumentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2060,18 +2004,13 @@ class CollaborationApi(object):
                     'document_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'document_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2094,13 +2033,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'folder_without_children_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'folder_without_children_request',
                 ],
                 'nullable': [
                 ],
@@ -2121,8 +2058,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'folder_without_children_request':
-                        (FolderWithoutChildrenRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2133,18 +2068,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'folder_without_children_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2168,14 +2098,12 @@ class CollaborationApi(object):
                     'group_pk',
                     'id',
                     'project_pk',
-                    'group_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'group_pk',
                     'id',
                     'project_pk',
-                    'group_request',
                 ],
                 'nullable': [
                 ],
@@ -2198,8 +2126,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'group_request':
-                        (GroupRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2212,18 +2138,13 @@ class CollaborationApi(object):
                     'group_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'group_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2246,13 +2167,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'group_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'group_request',
                 ],
                 'nullable': [
                 ],
@@ -2273,8 +2192,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'group_request':
-                        (GroupRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2285,18 +2202,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'group_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2318,12 +2230,10 @@ class CollaborationApi(object):
                 'all': [
                     'cloud_pk',
                     'id',
-                    'project_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
-                    'project_request',
                 ],
                 'nullable': [
                 ],
@@ -2342,8 +2252,6 @@ class CollaborationApi(object):
                         (int,),
                     'id':
                         (int,),
-                    'project_request':
-                        (ProjectRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2352,18 +2260,13 @@ class CollaborationApi(object):
                 'location_map': {
                     'cloud_pk': 'path',
                     'id': 'path',
-                    'project_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2386,13 +2289,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'project_pk',
                     'token',
-                    'project_access_token_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'project_pk',
                     'token',
-                    'project_access_token_request',
                 ],
                 'nullable': [
                 ],
@@ -2413,8 +2314,6 @@ class CollaborationApi(object):
                         (int,),
                     'token':
                         (str,),
-                    'project_access_token_request':
-                        (ProjectAccessTokenRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2425,18 +2324,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'project_pk': 'path',
                     'token': 'path',
-                    'project_access_token_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2523,13 +2417,11 @@ class CollaborationApi(object):
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'tag_request',
                 ],
                 'required': [
                     'cloud_pk',
                     'id',
                     'project_pk',
-                    'tag_request',
                 ],
                 'nullable': [
                 ],
@@ -2550,8 +2442,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'tag_request':
-                        (TagRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2562,18 +2452,13 @@ class CollaborationApi(object):
                     'cloud_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'tag_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2598,7 +2483,6 @@ class CollaborationApi(object):
                     'id',
                     'project_pk',
                     'visa_pk',
-                    'visa_validation_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -2606,7 +2490,6 @@ class CollaborationApi(object):
                     'id',
                     'project_pk',
                     'visa_pk',
-                    'visa_validation_request',
                 ],
                 'nullable': [
                 ],
@@ -2631,8 +2514,6 @@ class CollaborationApi(object):
                         (int,),
                     'visa_pk':
                         (int,),
-                    'visa_validation_request':
-                        (VisaValidationRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2647,18 +2528,13 @@ class CollaborationApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'visa_pk': 'path',
-                    'visa_validation_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2682,7 +2558,6 @@ class CollaborationApi(object):
                     'document_pk',
                     'id',
                     'project_pk',
-                    'visa_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -2711,8 +2586,6 @@ class CollaborationApi(object):
                         (int,),
                     'project_pk':
                         (int,),
-                    'visa_request':
-                        (VisaRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2725,18 +2598,13 @@ class CollaborationApi(object):
                     'document_pk': 'path',
                     'id': 'path',
                     'project_pk': 'path',
-                    'visa_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -2761,7 +2629,6 @@ class CollaborationApi(object):
                     'id',
                     'project_pk',
                     'visa_pk',
-                    'visa_comment_request',
                 ],
                 'required': [
                     'cloud_pk',
@@ -2793,8 +2660,6 @@ class CollaborationApi(object):
                         (int,),
                     'visa_pk':
                         (int,),
-                    'visa_comment_request':
-                        (VisaCommentRequest,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
@@ -2809,18 +2674,13 @@ class CollaborationApi(object):
                     'id': 'path',
                     'project_pk': 'path',
                     'visa_pk': 'path',
-                    'visa_comment_request': 'body',
                 },
                 'collection_format_map': {
                 }
             },
             headers_map={
                 'accept': [],
-                'content_type': [
-                    'application/json',
-                    'application/x-www-form-urlencoded',
-                    'multipart/form-data'
-                ]
+                'content_type': [],
             },
             api_client=api_client
         )
@@ -7628,7 +7488,6 @@ class CollaborationApi(object):
         self,
         cloud_pk,
         id,
-        cloud_invitation_request,
         **kwargs
     ):
         """Cancel a pending invitation  # noqa: E501
@@ -7637,13 +7496,12 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cancel_cloud_user_invitation(cloud_pk, id, cloud_invitation_request, async_req=True)
+        >>> thread = api.cancel_cloud_user_invitation(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this invitation.
-            cloud_invitation_request (CloudInvitationRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -7706,8 +7564,6 @@ class CollaborationApi(object):
             cloud_pk
         kwargs['id'] = \
             id
-        kwargs['cloud_invitation_request'] = \
-            cloud_invitation_request
         return self.cancel_cloud_user_invitation_endpoint.call_with_http_info(**kwargs)
 
     def cancel_project_user_invitation(
@@ -7715,7 +7571,6 @@ class CollaborationApi(object):
         cloud_pk,
         id,
         project_pk,
-        project_invitation_request,
         **kwargs
     ):
         """Cancel a pending invitation  # noqa: E501
@@ -7724,14 +7579,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.cancel_project_user_invitation(cloud_pk, id, project_pk, project_invitation_request, async_req=True)
+        >>> thread = api.cancel_project_user_invitation(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this invitation.
             project_pk (int): A unique integer value identifying this project.
-            project_invitation_request (ProjectInvitationRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -7796,8 +7650,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['project_invitation_request'] = \
-            project_invitation_request
         return self.cancel_project_user_invitation_endpoint.call_with_http_info(**kwargs)
 
     def check_access(
@@ -8388,7 +8240,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'POINT_CLOUD', 'BFX', 'OBJ', 'DAE', 'DXF', 'GLTF', 'DWG', 'IFC'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'DAE', 'GLTF', 'IFC', 'BFX', 'POINT_CLOUD', 'DWG', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -9178,7 +9030,6 @@ class CollaborationApi(object):
         cloud_pk,
         document_pk,
         project_pk,
-        document_request,
         **kwargs
     ):
         """Delete all document history  # noqa: E501
@@ -9187,14 +9038,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_all_document_history(cloud_pk, document_pk, project_pk, document_request, async_req=True)
+        >>> thread = api.delete_all_document_history(cloud_pk, document_pk, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             document_pk (int): A unique integer value identifying this document.
             project_pk (int): A unique integer value identifying this project.
-            document_request (DocumentRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9259,8 +9109,6 @@ class CollaborationApi(object):
             document_pk
         kwargs['project_pk'] = \
             project_pk
-        kwargs['document_request'] = \
-            document_request
         return self.delete_all_document_history_endpoint.call_with_http_info(**kwargs)
 
     def delete_classification(
@@ -9285,7 +9133,6 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            classification_request (ClassificationRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -9353,7 +9200,6 @@ class CollaborationApi(object):
     def delete_cloud(
         self,
         id,
-        cloud_request,
         **kwargs
     ):
         """Delete a cloud  # noqa: E501
@@ -9362,12 +9208,11 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_cloud(id, cloud_request, async_req=True)
+        >>> thread = api.delete_cloud(id, async_req=True)
         >>> result = thread.get()
 
         Args:
             id (int): A unique integer value identifying this cloud.
-            cloud_request (CloudRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9428,8 +9273,6 @@ class CollaborationApi(object):
         kwargs['_host_index'] = kwargs.get('_host_index')
         kwargs['id'] = \
             id
-        kwargs['cloud_request'] = \
-            cloud_request
         return self.delete_cloud_endpoint.call_with_http_info(**kwargs)
 
     def delete_cloud_user(
@@ -9519,7 +9362,6 @@ class CollaborationApi(object):
         cloud_pk,
         id,
         project_pk,
-        document_request,
         **kwargs
     ):
         """Delete the document  # noqa: E501
@@ -9528,14 +9370,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_document(cloud_pk, id, project_pk, document_request, async_req=True)
+        >>> thread = api.delete_document(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this document.
             project_pk (int): A unique integer value identifying this project.
-            document_request (DocumentRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9600,8 +9441,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['document_request'] = \
-            document_request
         return self.delete_document_endpoint.call_with_http_info(**kwargs)
 
     def delete_document_tag(
@@ -9610,7 +9449,6 @@ class CollaborationApi(object):
         document_pk,
         id,
         project_pk,
-        document_request,
         **kwargs
     ):
         """Delete a tag from a document  # noqa: E501
@@ -9619,7 +9457,7 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_document_tag(cloud_pk, document_pk, id, project_pk, document_request, async_req=True)
+        >>> thread = api.delete_document_tag(cloud_pk, document_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -9627,7 +9465,6 @@ class CollaborationApi(object):
             document_pk (int): A unique integer value identifying this document.
             id (int): A unique integer value identifying this document.
             project_pk (int):
-            document_request (DocumentRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9694,8 +9531,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['document_request'] = \
-            document_request
         return self.delete_document_tag_endpoint.call_with_http_info(**kwargs)
 
     def delete_folder(
@@ -9703,7 +9538,6 @@ class CollaborationApi(object):
         cloud_pk,
         id,
         project_pk,
-        folder_without_children_request,
         **kwargs
     ):
         """Delete a folder  # noqa: E501
@@ -9712,14 +9546,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_folder(cloud_pk, id, project_pk, folder_without_children_request, async_req=True)
+        >>> thread = api.delete_folder(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this folder.
             project_pk (int): A unique integer value identifying this project.
-            folder_without_children_request (FolderWithoutChildrenRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9784,8 +9617,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['folder_without_children_request'] = \
-            folder_without_children_request
         return self.delete_folder_endpoint.call_with_http_info(**kwargs)
 
     def delete_group_member(
@@ -9794,7 +9625,6 @@ class CollaborationApi(object):
         group_pk,
         id,
         project_pk,
-        group_request,
         **kwargs
     ):
         """Delete a user from a group  # noqa: E501
@@ -9803,7 +9633,7 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_group_member(cloud_pk, group_pk, id, project_pk, group_request, async_req=True)
+        >>> thread = api.delete_group_member(cloud_pk, group_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -9811,7 +9641,6 @@ class CollaborationApi(object):
             group_pk (int): A unique integer value identifying this group.
             id (int): A unique integer value identifying this group.
             project_pk (int):
-            group_request (GroupRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9878,8 +9707,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['group_request'] = \
-            group_request
         return self.delete_group_member_endpoint.call_with_http_info(**kwargs)
 
     def delete_manage_group(
@@ -9887,7 +9714,6 @@ class CollaborationApi(object):
         cloud_pk,
         id,
         project_pk,
-        group_request,
         **kwargs
     ):
         """Delete a group  # noqa: E501
@@ -9896,14 +9722,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_manage_group(cloud_pk, id, project_pk, group_request, async_req=True)
+        >>> thread = api.delete_manage_group(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this group.
             project_pk (int): A unique integer value identifying this project.
-            group_request (GroupRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -9968,15 +9793,12 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['group_request'] = \
-            group_request
         return self.delete_manage_group_endpoint.call_with_http_info(**kwargs)
 
     def delete_project(
         self,
         cloud_pk,
         id,
-        project_request,
         **kwargs
     ):
         """Delete a project  # noqa: E501
@@ -9985,13 +9807,12 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_project(cloud_pk, id, project_request, async_req=True)
+        >>> thread = api.delete_project(cloud_pk, id, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int):
             id (int): A unique integer value identifying this project.
-            project_request (ProjectRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -10054,8 +9875,6 @@ class CollaborationApi(object):
             cloud_pk
         kwargs['id'] = \
             id
-        kwargs['project_request'] = \
-            project_request
         return self.delete_project_endpoint.call_with_http_info(**kwargs)
 
     def delete_project_access_token(
@@ -10063,7 +9882,6 @@ class CollaborationApi(object):
         cloud_pk,
         project_pk,
         token,
-        project_access_token_request,
         **kwargs
     ):
         """Delete a token  # noqa: E501
@@ -10072,14 +9890,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_project_access_token(cloud_pk, project_pk, token, project_access_token_request, async_req=True)
+        >>> thread = api.delete_project_access_token(cloud_pk, project_pk, token, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             project_pk (int): A unique integer value identifying this project.
             token (str):
-            project_access_token_request (ProjectAccessTokenRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -10144,8 +9961,6 @@ class CollaborationApi(object):
             project_pk
         kwargs['token'] = \
             token
-        kwargs['project_access_token_request'] = \
-            project_access_token_request
         return self.delete_project_access_token_endpoint.call_with_http_info(**kwargs)
 
     def delete_project_user(
@@ -10239,7 +10054,6 @@ class CollaborationApi(object):
         cloud_pk,
         id,
         project_pk,
-        tag_request,
         **kwargs
     ):
         """Delete the tag  # noqa: E501
@@ -10248,14 +10062,13 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_tag(cloud_pk, id, project_pk, tag_request, async_req=True)
+        >>> thread = api.delete_tag(cloud_pk, id, project_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
             cloud_pk (int): A unique integer value identifying this cloud.
             id (int): A unique integer value identifying this tag.
             project_pk (int): A unique integer value identifying this project.
-            tag_request (TagRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -10320,8 +10133,6 @@ class CollaborationApi(object):
             id
         kwargs['project_pk'] = \
             project_pk
-        kwargs['tag_request'] = \
-            tag_request
         return self.delete_tag_endpoint.call_with_http_info(**kwargs)
 
     def delete_validation(
@@ -10331,7 +10142,6 @@ class CollaborationApi(object):
         id,
         project_pk,
         visa_pk,
-        visa_validation_request,
         **kwargs
     ):
         """Remove a validation  # noqa: E501
@@ -10340,7 +10150,7 @@ class CollaborationApi(object):
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
-        >>> thread = api.delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk, visa_validation_request, async_req=True)
+        >>> thread = api.delete_validation(cloud_pk, document_pk, id, project_pk, visa_pk, async_req=True)
         >>> result = thread.get()
 
         Args:
@@ -10349,7 +10159,6 @@ class CollaborationApi(object):
             id (int): A unique integer value identifying this visa validation.
             project_pk (int): A unique integer value identifying this project.
             visa_pk (int): A unique integer value identifying this visa.
-            visa_validation_request (VisaValidationRequest):
 
         Keyword Args:
             _return_http_data_only (bool): response data without head status
@@ -10418,8 +10227,6 @@ class CollaborationApi(object):
             project_pk
         kwargs['visa_pk'] = \
             visa_pk
-        kwargs['visa_validation_request'] = \
-            visa_validation_request
         return self.delete_validation_endpoint.call_with_http_info(**kwargs)
 
     def delete_visa(
@@ -10446,7 +10253,6 @@ class CollaborationApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
-            visa_request (VisaRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -10539,7 +10345,6 @@ class CollaborationApi(object):
             visa_pk (int): A unique integer value identifying this visa.
 
         Keyword Args:
-            visa_comment_request (VisaCommentRequest): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

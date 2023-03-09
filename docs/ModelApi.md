@@ -5079,7 +5079,6 @@ Deleting a token will revoke it.  Required scopes: ifc:token_manage, model:token
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5124,23 +5123,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     token = "token_example" # str | 
-    ifc_access_token_request = IfcAccessTokenRequest(
-        read_only=True,
-        expires_at=dateutil_parser('1970-01-01T00:00:00.00Z'),
-    ) # IfcAccessTokenRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a token
         api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a token
-        api_instance.delete_access_token(cloud_pk, model_pk, project_pk, token, ifc_access_token_request=ifc_access_token_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_access_token: %s\n" % e)
 ```
@@ -5154,7 +5141,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **token** | **str**|  |
- **ifc_access_token_request** | [**IfcAccessTokenRequest**](IfcAccessTokenRequest.md)|  | [optional]
 
 ### Return type
 
@@ -5166,7 +5152,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -5402,7 +5388,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_element**
-> delete_element(cloud_pk, model_pk, project_pk, uuid, element_request)
+> delete_element(cloud_pk, model_pk, project_pk, uuid)
 
 Delete an element of a model
 
@@ -5419,7 +5405,6 @@ The IFC file will not be updated. The remaining elements are available in API an
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5464,69 +5449,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     uuid = "uuid_example" # str | 
-    element_request = ElementRequest(
-        uuid="uuid_example",
-        type="type_example",
-        attributes=PropertySetRequest(
-            name="name_example",
-            description="description_example",
-            type="type_example",
-            properties=[
-                PropertyRequest(
-                    definition=PropertyDefinitionRequest(
-                        unit=None,
-                        name="name_example",
-                        description="description_example",
-                        type="type_example",
-                        value_type="value_type_example",
-                    ),
-                    value={
-                        "key": None,
-                    },
-                ),
-            ],
-        ),
-        property_sets=[
-            PropertySetRequest(
-                name="name_example",
-                description="description_example",
-                type="type_example",
-                properties=[
-                    PropertyRequest(
-                        definition=PropertyDefinitionRequest(
-                            unit=None,
-                            name="name_example",
-                            description="description_example",
-                            type="type_example",
-                            value_type="value_type_example",
-                        ),
-                        value={
-                            "key": None,
-                        },
-                    ),
-                ],
-            ),
-        ],
-        classifications=[
-            ClassificationRequest(
-                name="name_example",
-                notation="notation_example",
-                title="title_example",
-            ),
-        ],
-        layers=[
-            LayerElementRequest(
-                name="name_example",
-                identifier="identifier_example",
-                description="description_example",
-            ),
-        ],
-    ) # ElementRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete an element of a model
-        api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid, element_request)
+        api_instance.delete_element(cloud_pk, model_pk, project_pk, uuid)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_element: %s\n" % e)
 ```
@@ -5540,7 +5467,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
- **element_request** | [**ElementRequest**](ElementRequest.md)|  |
 
 ### Return type
 
@@ -5552,7 +5478,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -5570,7 +5496,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_layer**
-> delete_layer(cloud_pk, id, model_pk, project_pk, layer_request)
+> delete_layer(cloud_pk, id, model_pk, project_pk)
 
 Delete a layer of a model
 
@@ -5587,7 +5513,6 @@ The IFC file will not be updated. The remaining layers are available in API and 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.layer_request import LayerRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5632,19 +5557,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this layer.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    layer_request = LayerRequest(
-        name="name_example",
-        identifier="identifier_example",
-        description="description_example",
-        elements=[
-            "elements_example",
-        ],
-    ) # LayerRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a layer of a model
-        api_instance.delete_layer(cloud_pk, id, model_pk, project_pk, layer_request)
+        api_instance.delete_layer(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_layer: %s\n" % e)
 ```
@@ -5658,7 +5575,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this layer. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **layer_request** | [**LayerRequest**](LayerRequest.md)|  |
 
 ### Return type
 
@@ -5670,7 +5586,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -5705,7 +5621,6 @@ It will also delete the related document  Required scopes: ifc:write, model:writ
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.model_request import ModelRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5749,35 +5664,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | 
     id = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | 
-    model_request = ModelRequest(
-        name="name_example",
-        source="UPLOAD",
-        world_position=[
-            3.14,
-        ],
-        size_ratio=3.14,
-        archived=True,
-        version="version_example",
-        north_vector=[
-            [
-                3.14,
-            ],
-        ],
-        recommanded_2d_angle=3.14,
-    ) # ModelRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a model
         api_instance.delete_model(cloud_pk, id, project_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->delete_model: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a model
-        api_instance.delete_model(cloud_pk, id, project_pk, model_request=model_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_model: %s\n" % e)
 ```
@@ -5790,7 +5681,6 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**|  |
  **id** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**|  |
- **model_request** | [**ModelRequest**](ModelRequest.md)|  | [optional]
 
 ### Return type
 
@@ -5802,7 +5692,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -5820,7 +5710,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_model_property**
-> delete_model_property(cloud_pk, id, model_pk, project_pk, property_request)
+> delete_model_property(cloud_pk, id, model_pk, project_pk)
 
 Delete a Property of a model
 
@@ -5837,7 +5727,6 @@ Delete a Property of a model  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_request import PropertyRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -5882,23 +5771,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this property.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    property_request = PropertyRequest(
-        definition=PropertyDefinitionRequest(
-            unit=None,
-            name="name_example",
-            description="description_example",
-            type="type_example",
-            value_type="value_type_example",
-        ),
-        value={
-            "key": None,
-        },
-    ) # PropertyRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Property of a model
-        api_instance.delete_model_property(cloud_pk, id, model_pk, project_pk, property_request)
+        api_instance.delete_model_property(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_property: %s\n" % e)
 ```
@@ -5912,7 +5789,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this property. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **property_request** | [**PropertyRequest**](PropertyRequest.md)|  |
 
 ### Return type
 
@@ -5924,7 +5800,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -5959,7 +5835,6 @@ Delete a PropertyDefinitions of a model  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6004,26 +5879,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this property definition.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    property_definition_request = PropertyDefinitionRequest(
-        unit=None,
-        name="name_example",
-        description="description_example",
-        type="type_example",
-        value_type="value_type_example",
-    ) # PropertyDefinitionRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a PropertyDefinitions of a model
         api_instance.delete_model_property_definition(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->delete_model_property_definition: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a PropertyDefinitions of a model
-        api_instance.delete_model_property_definition(cloud_pk, id, model_pk, project_pk, property_definition_request=property_definition_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_property_definition: %s\n" % e)
 ```
@@ -6037,7 +5897,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this property definition. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **property_definition_request** | [**PropertyDefinitionRequest**](PropertyDefinitionRequest.md)|  | [optional]
 
 ### Return type
 
@@ -6049,7 +5908,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -6067,7 +5926,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_model_unit**
-> delete_model_unit(cloud_pk, id, model_pk, project_pk, unit_request)
+> delete_model_unit(cloud_pk, id, model_pk, project_pk)
 
 Delete a Unit of a model
 
@@ -6084,7 +5943,6 @@ Delete a Unit of a model  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit_request import UnitRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6129,26 +5987,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this unit.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    unit_request = UnitRequest(
-        type="type_example",
-        name="name_example",
-        unit_type="unit_type_example",
-        prefix="prefix_example",
-        dimensions=[
-            3.14,
-        ],
-        conversion_factor=3.14,
-        conversion_baseunit=UnitRequest(),
-        elements={
-            "key": None,
-        },
-        is_default=True,
-    ) # UnitRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Unit of a model
-        api_instance.delete_model_unit(cloud_pk, id, model_pk, project_pk, unit_request)
+        api_instance.delete_model_unit(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_model_unit: %s\n" % e)
 ```
@@ -6162,7 +6005,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this unit. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **unit_request** | [**UnitRequest**](UnitRequest.md)|  |
 
 ### Return type
 
@@ -6174,7 +6016,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -6315,7 +6157,6 @@ Delete a PropertySet of a model  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set_request import PropertySetRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6360,38 +6201,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this property set.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    property_set_request = PropertySetRequest(
-        name="name_example",
-        description="description_example",
-        type="type_example",
-        properties=[
-            PropertyRequest(
-                definition=PropertyDefinitionRequest(
-                    unit=None,
-                    name="name_example",
-                    description="description_example",
-                    type="type_example",
-                    value_type="value_type_example",
-                ),
-                value={
-                    "key": None,
-                },
-            ),
-        ],
-    ) # PropertySetRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a PropertySet of a model
         api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a PropertySet of a model
-        api_instance.delete_property_set(cloud_pk, id, model_pk, project_pk, property_set_request=property_set_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_property_set: %s\n" % e)
 ```
@@ -6405,7 +6219,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this property set. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **property_set_request** | [**PropertySetRequest**](PropertySetRequest.md)|  | [optional]
 
 ### Return type
 
@@ -6417,7 +6230,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -6435,7 +6248,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_space**
-> delete_space(cloud_pk, id, model_pk, project_pk, space_request)
+> delete_space(cloud_pk, id, model_pk, project_pk)
 
 Delete a space
 
@@ -6452,7 +6265,6 @@ It will not delete related zones. The IFC file will not be updated. The remainin
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.space_request import SpaceRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6497,16 +6309,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this space.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    space_request = SpaceRequest(
-        name="name_example",
-        longname="longname_example",
-        uuid="uuid_example",
-    ) # SpaceRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a space
-        api_instance.delete_space(cloud_pk, id, model_pk, project_pk, space_request)
+        api_instance.delete_space(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_space: %s\n" % e)
 ```
@@ -6520,7 +6327,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this space. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **space_request** | [**SpaceRequest**](SpaceRequest.md)|  |
 
 ### Return type
 
@@ -6532,7 +6338,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -6768,7 +6574,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_system**
-> delete_system(cloud_pk, model_pk, project_pk, uuid, system_request)
+> delete_system(cloud_pk, model_pk, project_pk, uuid)
 
 Delete a system of a model
 
@@ -6785,7 +6591,6 @@ The IFC file will not be updated. The remaining systems are available in API and
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.system_request import SystemRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6830,20 +6635,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     uuid = "uuid_example" # str | 
-    system_request = SystemRequest(
-        uuid="uuid_example",
-        name="name_example",
-        object_type="object_type_example",
-        description="description_example",
-        elements=[
-            "elements_example",
-        ],
-    ) # SystemRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a system of a model
-        api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid, system_request)
+        api_instance.delete_system(cloud_pk, model_pk, project_pk, uuid)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_system: %s\n" % e)
 ```
@@ -6857,7 +6653,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
- **system_request** | [**SystemRequest**](SystemRequest.md)|  |
 
 ### Return type
 
@@ -6869,7 +6664,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -6887,7 +6682,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone**
-> delete_zone(cloud_pk, id, model_pk, project_pk, zone_request)
+> delete_zone(cloud_pk, id, model_pk, project_pk)
 
 Delete a zone of a model
 
@@ -6904,7 +6699,6 @@ The IFC file will not be updated. The remaining zones are available in API and w
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_request import ZoneRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -6949,27 +6743,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this zone.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    zone_request = ZoneRequest(
-        name="name_example",
-        uuid="uuid_example",
-        zones=[
-            ZoneRequest(),
-        ],
-        parent_id=1,
-        spaces=[
-            SpaceRequest(
-                name="name_example",
-                longname="longname_example",
-                uuid="uuid_example",
-            ),
-        ],
-        color="color_example",
-    ) # ZoneRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a zone of a model
-        api_instance.delete_zone(cloud_pk, id, model_pk, project_pk, zone_request)
+        api_instance.delete_zone(cloud_pk, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_zone: %s\n" % e)
 ```
@@ -6983,7 +6761,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this zone. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **zone_request** | [**ZoneRequest**](ZoneRequest.md)|  |
 
 ### Return type
 
@@ -6995,7 +6772,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -7013,7 +6790,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **delete_zone_space**
-> delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, zone_space_request)
+> delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
 
 Delete a space of a zone
 
@@ -7030,7 +6807,6 @@ The IFC file will not be updated. The remaining spaces are available in API and 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.zone_space_request import ZoneSpaceRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -7076,16 +6852,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     zone_pk = 1 # int | A unique integer value identifying this zone.
-    zone_space_request = ZoneSpaceRequest(
-        name="name_example",
-        longname="longname_example",
-        uuid="uuid_example",
-    ) # ZoneSpaceRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a space of a zone
-        api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk, zone_space_request)
+        api_instance.delete_zone_space(cloud_pk, id, model_pk, project_pk, zone_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->delete_zone_space: %s\n" % e)
 ```
@@ -7100,7 +6871,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **zone_pk** | **int**| A unique integer value identifying this zone. |
- **zone_space_request** | [**ZoneSpaceRequest**](ZoneSpaceRequest.md)|  |
 
 ### Return type
 
@@ -7112,7 +6882,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -13814,7 +13584,6 @@ The classification will not be deleted  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.classification_request import ClassificationRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -13860,24 +13629,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this classification.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    classification_request = ClassificationRequest(
-        name="name_example",
-        notation="notation_example",
-        title="title_example",
-    ) # ClassificationRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a classification from an element
         api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Remove a classification from an element
-        api_instance.remove_classification_of_element(cloud_pk, element_uuid, id, model_pk, project_pk, classification_request=classification_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_classification_of_element: %s\n" % e)
 ```
@@ -13892,7 +13648,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this classification. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **classification_request** | [**ClassificationRequest**](ClassificationRequest.md)|  | [optional]
 
 ### Return type
 
@@ -13904,7 +13659,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -13922,7 +13677,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_document_of_element**
-> remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk, document_request)
+> remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
 
 Remove a documents from an element
 
@@ -13939,7 +13694,6 @@ The document will not be deleted  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.document_request import DocumentRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -13985,22 +13739,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this document.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
-    document_request = DocumentRequest(
-        parent_id=1,
-        name="name_example",
-        file_name="file_name_example",
-        description="description_example",
-        file=open('/path/to/file', 'rb'),
-        size=0,
-        model_source="UPLOAD",
-        ifc_source="UPLOAD",
-        successor_of=1,
-    ) # DocumentRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a documents from an element
-        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk, document_request)
+        api_instance.remove_document_of_element(cloud_pk, element_uuid, id, model_pk, project_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_document_of_element: %s\n" % e)
 ```
@@ -14015,7 +13758,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this document. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **document_request** | [**DocumentRequest**](DocumentRequest.md)|  |
 
 ### Return type
 
@@ -14027,7 +13769,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -14062,7 +13804,6 @@ Delete the relation between the element and the property set. Does not delete an
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_set_request import PropertySetRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -14108,38 +13849,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     id = 1 # int | A unique integer value identifying this property set.
     model_pk = 1 # int | 
     project_pk = 1 # int | A unique integer value identifying this project.
-    property_set_request = PropertySetRequest(
-        name="name_example",
-        description="description_example",
-        type="type_example",
-        properties=[
-            PropertyRequest(
-                definition=PropertyDefinitionRequest(
-                    unit=None,
-                    name="name_example",
-                    description="description_example",
-                    type="type_example",
-                    value_type="value_type_example",
-                ),
-                value={
-                    "key": None,
-                },
-            ),
-        ],
-    ) # PropertySetRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a PropertySet from an element
         api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Remove a PropertySet from an element
-        api_instance.remove_element_property_set(cloud_pk, element_uuid, id, model_pk, project_pk, property_set_request=property_set_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set: %s\n" % e)
 ```
@@ -14154,7 +13868,6 @@ Name | Type | Description  | Notes
  **id** | **int**| A unique integer value identifying this property set. |
  **model_pk** | **int**|  |
  **project_pk** | **int**| A unique integer value identifying this project. |
- **property_set_request** | [**PropertySetRequest**](PropertySetRequest.md)|  | [optional]
 
 ### Return type
 
@@ -14166,7 +13879,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -14184,7 +13897,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property**
-> remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, property_request)
+> remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
 
 Remove a property from a PropertySet
 
@@ -14201,7 +13914,6 @@ Remove a property from a PropertySet  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_request import PropertyRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -14248,23 +13960,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     propertyset_pk = 1 # int | A unique integer value identifying this property set.
-    property_request = PropertyRequest(
-        definition=PropertyDefinitionRequest(
-            unit=None,
-            name="name_example",
-            description="description_example",
-            type="type_example",
-            value_type="value_type_example",
-        ),
-        value={
-            "key": None,
-        },
-    ) # PropertyRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a property from a PropertySet
-        api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk, property_request)
+        api_instance.remove_element_property_set_property(cloud_pk, element_uuid, id, model_pk, project_pk, propertyset_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property: %s\n" % e)
 ```
@@ -14280,7 +13980,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **propertyset_pk** | **int**| A unique integer value identifying this property set. |
- **property_request** | [**PropertyRequest**](PropertyRequest.md)|  |
 
 ### Return type
 
@@ -14292,7 +13991,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -14327,7 +14026,6 @@ Delete a Definition to a Property  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.property_definition_request import PropertyDefinitionRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -14375,26 +14073,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     property_pk = 1 # int | A unique integer value identifying this property.
     propertyset_pk = 1 # int | A unique integer value identifying this property set.
-    property_definition_request = PropertyDefinitionRequest(
-        unit=None,
-        name="name_example",
-        description="description_example",
-        type="type_example",
-        value_type="value_type_example",
-    ) # PropertyDefinitionRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Delete a Definition to a Property
         api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk)
-    except bimdata_api_client.ApiException as e:
-        print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
-
-    # example passing only required values which don't have defaults set
-    # and optional values
-    try:
-        # Delete a Definition to a Property
-        api_instance.remove_element_property_set_property_definition(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertyset_pk, property_definition_request=property_definition_request)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property_definition: %s\n" % e)
 ```
@@ -14411,7 +14094,6 @@ Name | Type | Description  | Notes
  **project_pk** | **int**| A unique integer value identifying this project. |
  **property_pk** | **int**| A unique integer value identifying this property. |
  **propertyset_pk** | **int**| A unique integer value identifying this property set. |
- **property_definition_request** | [**PropertyDefinitionRequest**](PropertyDefinitionRequest.md)|  | [optional]
 
 ### Return type
 
@@ -14423,7 +14105,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -14441,7 +14123,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_element_property_set_property_definition_unit**
-> remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit_request)
+> remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
 
 Remove a Unit from a Definition
 
@@ -14458,7 +14140,6 @@ Remove a Unit from a Definition  Required scopes: ifc:write, model:write
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.unit_request import UnitRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -14507,26 +14188,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     property_pk = 1 # int | A unique integer value identifying this property.
     propertydefinition_pk = 1 # int | A unique integer value identifying this property definition.
     propertyset_pk = 1 # int | A unique integer value identifying this property set.
-    unit_request = UnitRequest(
-        type="type_example",
-        name="name_example",
-        unit_type="unit_type_example",
-        prefix="prefix_example",
-        dimensions=[
-            3.14,
-        ],
-        conversion_factor=3.14,
-        conversion_baseunit=UnitRequest(),
-        elements={
-            "key": None,
-        },
-        is_default=True,
-    ) # UnitRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Remove a Unit from a Definition
-        api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk, unit_request)
+        api_instance.remove_element_property_set_property_definition_unit(cloud_pk, element_uuid, id, model_pk, project_pk, property_pk, propertydefinition_pk, propertyset_pk)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_element_property_set_property_definition_unit: %s\n" % e)
 ```
@@ -14544,7 +14210,6 @@ Name | Type | Description  | Notes
  **property_pk** | **int**| A unique integer value identifying this property. |
  **propertydefinition_pk** | **int**| A unique integer value identifying this property definition. |
  **propertyset_pk** | **int**| A unique integer value identifying this property set. |
- **unit_request** | [**UnitRequest**](UnitRequest.md)|  |
 
 ### Return type
 
@@ -14556,7 +14221,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
@@ -14574,7 +14239,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **remove_elements_from_classification**
-> remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid, element_request)
+> remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
 
 Remove the classification from all elements
 
@@ -14591,7 +14256,6 @@ Remove the classification from all elements. No element nor classification will 
 import time
 import bimdata_api_client
 from bimdata_api_client.api import model_api
-from bimdata_api_client.model.element_request import ElementRequest
 from pprint import pprint
 # Defining the host is optional and defaults to http://localhost
 # See configuration.py for a list of all supported configuration parameters.
@@ -14637,69 +14301,11 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
     uuid = "uuid_example" # str | 
-    element_request = ElementRequest(
-        uuid="uuid_example",
-        type="type_example",
-        attributes=PropertySetRequest(
-            name="name_example",
-            description="description_example",
-            type="type_example",
-            properties=[
-                PropertyRequest(
-                    definition=PropertyDefinitionRequest(
-                        unit=None,
-                        name="name_example",
-                        description="description_example",
-                        type="type_example",
-                        value_type="value_type_example",
-                    ),
-                    value={
-                        "key": None,
-                    },
-                ),
-            ],
-        ),
-        property_sets=[
-            PropertySetRequest(
-                name="name_example",
-                description="description_example",
-                type="type_example",
-                properties=[
-                    PropertyRequest(
-                        definition=PropertyDefinitionRequest(
-                            unit=None,
-                            name="name_example",
-                            description="description_example",
-                            type="type_example",
-                            value_type="value_type_example",
-                        ),
-                        value={
-                            "key": None,
-                        },
-                    ),
-                ],
-            ),
-        ],
-        classifications=[
-            ClassificationRequest(
-                name="name_example",
-                notation="notation_example",
-                title="title_example",
-            ),
-        ],
-        layers=[
-            LayerElementRequest(
-                name="name_example",
-                identifier="identifier_example",
-                description="description_example",
-            ),
-        ],
-    ) # ElementRequest | 
 
     # example passing only required values which don't have defaults set
     try:
         # Remove the classification from all elements
-        api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid, element_request)
+        api_instance.remove_elements_from_classification(cloud_pk, model_classification_pk, model_pk, project_pk, uuid)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->remove_elements_from_classification: %s\n" % e)
 ```
@@ -14714,7 +14320,6 @@ Name | Type | Description  | Notes
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
  **uuid** | **str**|  |
- **element_request** | [**ElementRequest**](ElementRequest.md)|  |
 
 ### Return type
 
@@ -14726,7 +14331,7 @@ void (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 
