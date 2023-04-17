@@ -3972,14 +3972,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
-    format = "format_example" # str |  (optional)
-    ifcs = [
-        1,
-    ] # [int] |  (optional)
+    format = "format_example" # str | format (optional)
+    ifcs = "ifcs_example" # str | ifcs (optional)
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
-    models = [
-        1,
-    ] # [int] |  (optional)
+    models = "models_example" # str | models (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4005,10 +4001,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
- **format** | **str**|  | [optional]
- **ifcs** | **[int]**|  | [optional]
+ **format** | **str**| format | [optional]
+ **ifcs** | **str**| ifcs | [optional]
  **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] if omitted the server will use the default value of "url"
- **models** | **[int]**|  | [optional]
+ **models** | **str**| models | [optional]
 
 ### Return type
 
@@ -4095,13 +4091,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
     projects_pk = 1 # int | 
-    format = "format_example" # str |  (optional)
-    ifcs = [
-        1,
-    ] # [int] |  (optional)
-    models = [
-        1,
-    ] # [int] |  (optional)
+    format = "format_example" # str | format (optional)
+    ifcs = "ifcs_example" # str | ifcs (optional)
+    models = "models_example" # str | models (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4128,9 +4120,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **str**|  |
  **projects_pk** | **int**|  |
- **format** | **str**|  | [optional]
- **ifcs** | **[int]**|  | [optional]
- **models** | **[int]**|  | [optional]
+ **format** | **str**| format | [optional]
+ **ifcs** | **str**| ifcs | [optional]
+ **models** | **str**| models | [optional]
 
 ### Return type
 
@@ -4534,13 +4526,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
     projects_pk = 1 # int | 
-    format = "format_example" # str |  (optional)
-    ifcs = [
-        1,
-    ] # [int] |  (optional)
-    models = [
-        1,
-    ] # [int] |  (optional)
+    format = "format_example" # str | format (optional)
+    ifcs = "ifcs_example" # str | ifcs (optional)
+    models = "models_example" # str | models (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4567,9 +4555,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **str**|  |
  **projects_pk** | **int**|  |
- **format** | **str**|  | [optional]
- **ifcs** | **[int]**|  | [optional]
- **models** | **[int]**|  | [optional]
+ **format** | **str**| format | [optional]
+ **ifcs** | **str**| ifcs | [optional]
+ **models** | **str**| models | [optional]
 
 ### Return type
 
@@ -4771,13 +4759,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
-    format = "format_example" # str |  (optional)
-    ifcs = [
-        1,
-    ] # [int] |  (optional)
-    models = [
-        1,
-    ] # [int] |  (optional)
+    format = "format_example" # str | format (optional)
+    ifcs = "ifcs_example" # str | ifcs (optional)
+    models = "models_example" # str | models (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4803,9 +4787,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
- **format** | **str**|  | [optional]
- **ifcs** | **[int]**|  | [optional]
- **models** | **[int]**|  | [optional]
+ **format** | **str**| format | [optional]
+ **ifcs** | **str**| ifcs | [optional]
+ **models** | **str**| models | [optional]
 
 ### Return type
 

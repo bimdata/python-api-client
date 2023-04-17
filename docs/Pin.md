@@ -5,6 +5,7 @@ Adds nested create feature
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [readonly] 
 **point** | [**Point**](Point.md) |  | 
 **name** | **str, none_type** |  | [optional] 
 **color** | **str, none_type** |  | [optional] 

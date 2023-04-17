@@ -2155,11 +2155,11 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        ([int],),
+                        (str,),
                     'img_format':
                         (str,),
                     'models':
-                        ([int],),
+                        (str,),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
@@ -2176,8 +2176,6 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
-                    'ifcs': 'multi',
-                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2234,9 +2232,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        ([int],),
+                        (str,),
                     'models':
-                        ([int],),
+                        (str,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -2253,8 +2251,6 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
-                    'ifcs': 'multi',
-                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2503,9 +2499,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        ([int],),
+                        (str,),
                     'models':
-                        ([int],),
+                        (str,),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -2522,8 +2518,6 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
-                    'ifcs': 'multi',
-                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2646,9 +2640,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        ([int],),
+                        (str,),
                     'models':
-                        ([int],),
+                        (str,),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
@@ -2663,8 +2657,6 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
-                    'ifcs': 'multi',
-                    'models': 'multi',
                 }
             },
             headers_map={
@@ -6406,10 +6398,10 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): [optional]
-            ifcs ([int]): [optional]
+            format (str): format. [optional]
+            ifcs (str): ifcs. [optional]
             img_format (str): All snapshot_data will be returned as url instead of base64. [optional] if omitted the server will use the default value of "url"
-            models ([int]): [optional]
+            models (str): models. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6490,9 +6482,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): [optional]
-            ifcs ([int]): [optional]
-            models ([int]): [optional]
+            format (str): format. [optional]
+            ifcs (str): ifcs. [optional]
+            models (str): models. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6829,9 +6821,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): [optional]
-            ifcs ([int]): [optional]
-            models ([int]): [optional]
+            format (str): format. [optional]
+            ifcs (str): ifcs. [optional]
+            models (str): models. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -6995,9 +6987,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): [optional]
-            ifcs ([int]): [optional]
-            models ([int]): [optional]
+            format (str): format. [optional]
+            ifcs (str): ifcs. [optional]
+            models (str): models. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

@@ -94,6 +94,7 @@ class Pin(ModelNormal):
         """
         lazy_import()
         return {
+            'id': (int,),  # noqa: E501
             'point': (Point,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
@@ -105,22 +106,25 @@ class Pin(ModelNormal):
 
 
     attribute_map = {
+        'id': 'id',  # noqa: E501
         'point': 'point',  # noqa: E501
         'name': 'name',  # noqa: E501
         'color': 'color',  # noqa: E501
     }
 
     read_only_vars = {
+        'id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, point, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, point, *args, **kwargs):  # noqa: E501
         """Pin - a model defined in OpenAPI
 
         Args:
+            id (int):
             point (Point):
 
         Keyword Args:
@@ -183,6 +187,7 @@ class Pin(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.id = id
         self.point = point
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
@@ -207,7 +212,6 @@ class Pin(ModelNormal):
     def __init__(self, point, *args, **kwargs):  # noqa: E501
         """Pin - a model defined in OpenAPI
 
-        Args:
             point (Point):
 
         Keyword Args:
