@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.5 (2023-04-17)
+### Fix
+* Add id field to Pin ([`395d86c`](https://github.com/bimdata/python-api-client/commit/395d86c06bef50cc68b9e5f440f059addd8c5678))
+
 ## v9.10.4 (2023-03-09)
 ### Fix
 * Fix requestBody on simple delete route ([`ece7509`](https://github.com/bimdata/python-api-client/commit/ece7509ed7e31a24ef3347245bfd7f9331f1f8fe))
