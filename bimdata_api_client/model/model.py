@@ -32,8 +32,10 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 def lazy_import():
     from bimdata_api_client.model.document import Document
+    from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
     from bimdata_api_client.model.user import User
     globals()['Document'] = Document
+    globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
     globals()['User'] = User
 
 
@@ -143,7 +145,7 @@ class Model(ModelNormal):
             'errors': ([str], none_type,),  # noqa: E501
             'warnings': ([str], none_type,),  # noqa: E501
             'page_number': (int, none_type,),  # noqa: E501
-            'children': ([Model],),  # noqa: E501
+            'children': ([ModelSerializerWithoutChildren],),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'source': (str,),  # noqa: E501
             'world_position': ([float], none_type,),  # noqa: E501
@@ -243,7 +245,7 @@ class Model(ModelNormal):
             errors ([str], none_type): List of errors that happened during IFC processing
             warnings ([str], none_type): List of warnings that happened during IFC processing
             page_number (int, none_type): The page number of the related pdf
-            children ([Model]): Contains additional pages of a pdf
+            children ([ModelSerializerWithoutChildren]): Contains additional pages of a pdf
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

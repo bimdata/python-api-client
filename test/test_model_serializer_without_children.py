@@ -14,16 +14,14 @@ import unittest
 
 import bimdata_api_client
 from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 from bimdata_api_client.model.user import User
 globals()['Document'] = Document
-globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
 globals()['User'] = User
-from bimdata_api_client.model.model import Model
+from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 
 
-class TestModel(unittest.TestCase):
-    """Model unit test stubs"""
+class TestModelSerializerWithoutChildren(unittest.TestCase):
+    """ModelSerializerWithoutChildren unit test stubs"""
 
     def setUp(self):
         pass
@@ -31,10 +29,10 @@ class TestModel(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModel(self):
-        """Test Model"""
+    def testModelSerializerWithoutChildren(self):
+        """Test ModelSerializerWithoutChildren"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Model()  # noqa: E501
+        # model = ModelSerializerWithoutChildren()  # noqa: E501
         pass
 
 

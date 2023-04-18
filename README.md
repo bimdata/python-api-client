@@ -754,6 +754,7 @@ Class | Method | HTTP request | Description
  - [ModelFiles](docs/ModelFiles.md)
  - [ModelProperty](docs/ModelProperty.md)
  - [ModelRequest](docs/ModelRequest.md)
+ - [ModelSerializerWithoutChildren](docs/ModelSerializerWithoutChildren.md)
  - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
  - [Organization](docs/Organization.md)
  - [OrganizationRequest](docs/OrganizationRequest.md)

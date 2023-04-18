@@ -4,7 +4,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**is_unsupervised** | **bool** |  | [readonly] 
 **managed_by** | **str** |  | 
 **role** | **int** |  | 
 **total_size** | **int, none_type** |  | [readonly] 

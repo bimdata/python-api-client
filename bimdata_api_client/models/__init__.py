@@ -95,6 +95,7 @@ from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
 from bimdata_api_client.model.model_property import ModelProperty
 from bimdata_api_client.model.model_request import ModelRequest
+from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 from bimdata_api_client.model.model_with_positioning_plan import ModelWithPositioningPlan
 from bimdata_api_client.model.organization import Organization
 from bimdata_api_client.model.organization_request import OrganizationRequest

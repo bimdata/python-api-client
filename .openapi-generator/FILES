@@ -102,6 +102,7 @@ bimdata_api_client/model/model_errors_request.py
 bimdata_api_client/model/model_files.py
 bimdata_api_client/model/model_property.py
 bimdata_api_client/model/model_request.py
+bimdata_api_client/model/model_serializer_without_children.py
 bimdata_api_client/model/model_with_positioning_plan.py
 bimdata_api_client/model/organization.py
 bimdata_api_client/model/organization_request.py
@@ -358,6 +359,7 @@ docs/ModelErrorsRequest.md
 docs/ModelFiles.md
 docs/ModelProperty.md
 docs/ModelRequest.md
+docs/ModelSerializerWithoutChildren.md
 docs/ModelWithPositioningPlan.md
 docs/Organization.md
 docs/OrganizationRequest.md
@@ -617,6 +619,7 @@ test/test_model_errors_request.py
 test/test_model_files.py
 test/test_model_property.py
 test/test_model_request.py
+test/test_model_serializer_without_children.py
 test/test_model_with_positioning_plan.py
 test/test_organization.py
 test/test_organization_request.py

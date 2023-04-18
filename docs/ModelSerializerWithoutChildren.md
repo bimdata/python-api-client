@@ -1,4 +1,4 @@
-# Model
+# ModelSerializerWithoutChildren
 
 
 ## Properties
@@ -24,7 +24,6 @@ Name | Type | Description | Notes
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
 **page_number** | **int, none_type** | The page number of the related pdf | [readonly] 
-**children** | [**[ModelSerializerWithoutChildren]**](ModelSerializerWithoutChildren.md) | Contains additional pages of a pdf | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** |  | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
