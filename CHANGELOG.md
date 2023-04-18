@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.6 (2023-04-18)
+### Fix
+* Fix ordering pdf pages ([#638](https://github.com/bimdata/python-api-client/issues/638)) ([`1f9ffe8`](https://github.com/bimdata/python-api-client/commit/1f9ffe8da45895f1262475ea73d3ddee52a75eaa))
+
 ## v9.10.5 (2023-04-17)
 ### Fix
 * Add id field to Pin ([`395d86c`](https://github.com/bimdata/python-api-client/commit/395d86c06bef50cc68b9e5f440f059addd8c5678))
