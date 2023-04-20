@@ -2,6 +2,20 @@
 
 <!--next-version-placeholder-->
 
+## v9.10.7 (2023-04-20)
+### Fix
+* Feat/permission explicit propagate (#636)
+
+* add delete permission route, remove signals implicit propagation
+
+* explicit propagation for permissions
+
+* remove useless tests
+
+* fix nested group folder serializer
+
+* include delete groupFolder in update route ([`5eca95a`](https://github.com/bimdata/python-api-client/commit/5eca95ae72a16146fd80159b081749529464f728))
+
 ## v9.10.6 (2023-04-18)
 ### Fix
 * Fix ordering pdf pages ([#638](https://github.com/bimdata/python-api-client/issues/638)) ([`1f9ffe8`](https://github.com/bimdata/python-api-client/commit/1f9ffe8da45895f1262475ea73d3ddee52a75eaa))
