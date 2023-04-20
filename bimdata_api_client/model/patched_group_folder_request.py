@@ -57,17 +57,15 @@ class PatchedGroupFolderRequest(ModelNormal):
 
     allowed_values = {
         ('permission',): {
-            '1': 1,
-            '50': 50,
-            '100': 100,
+            'None': None,
+            '1': "1",
+            '50': "50",
+            '100': "100",
+            'NULL': "null",
         },
     }
 
     validations = {
-        ('permission',): {
-            'inclusive_maximum': 32767,
-            'inclusive_minimum': -32768,
-        },
     }
 
     @cached_property
@@ -91,7 +89,8 @@ class PatchedGroupFolderRequest(ModelNormal):
                 and the value is attribute type.
         """
         return {
-            'permission': (int,),  # noqa: E501
+            'permission': (int, none_type,),  # noqa: E501
+            'propagate': (bool,),  # noqa: E501
         }
 
     @cached_property
@@ -101,6 +100,7 @@ class PatchedGroupFolderRequest(ModelNormal):
 
     attribute_map = {
         'permission': 'permission',  # noqa: E501
+        'propagate': 'propagate',  # noqa: E501
     }
 
     read_only_vars = {
@@ -144,7 +144,8 @@ class PatchedGroupFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int): Group's permission for a folder. [optional]  # noqa: E501
+            permission (int, none_type): [optional]  # noqa: E501
+            propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -226,7 +227,8 @@ class PatchedGroupFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int): Group's permission for a folder. [optional]  # noqa: E501
+            permission (int, none_type): [optional]  # noqa: E501
+            propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

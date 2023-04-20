@@ -60,8 +60,6 @@ bimdata_api_client/model/extensions.py
 bimdata_api_client/model/feature.py
 bimdata_api_client/model/feature_request.py
 bimdata_api_client/model/folder.py
-bimdata_api_client/model/folder_group_permission.py
-bimdata_api_client/model/folder_group_permission_request.py
 bimdata_api_client/model/folder_tree.py
 bimdata_api_client/model/folder_user_project.py
 bimdata_api_client/model/folder_without_children.py
@@ -70,6 +68,7 @@ bimdata_api_client/model/full_topic.py
 bimdata_api_client/model/full_topic_request.py
 bimdata_api_client/model/group.py
 bimdata_api_client/model/group_folder.py
+bimdata_api_client/model/group_folder_read.py
 bimdata_api_client/model/group_request.py
 bimdata_api_client/model/ifc_access_token.py
 bimdata_api_client/model/ifc_access_token_request.py
@@ -315,8 +314,6 @@ docs/Extensions.md
 docs/Feature.md
 docs/FeatureRequest.md
 docs/Folder.md
-docs/FolderGroupPermission.md
-docs/FolderGroupPermissionRequest.md
 docs/FolderTree.md
 docs/FolderUserProject.md
 docs/FolderWithoutChildren.md
@@ -325,6 +322,7 @@ docs/FullTopic.md
 docs/FullTopicRequest.md
 docs/Group.md
 docs/GroupFolder.md
+docs/GroupFolderRead.md
 docs/GroupRequest.md
 docs/IfcAccessToken.md
 docs/IfcAccessTokenRequest.md
@@ -575,8 +573,6 @@ test/test_extensions.py
 test/test_feature.py
 test/test_feature_request.py
 test/test_folder.py
-test/test_folder_group_permission.py
-test/test_folder_group_permission_request.py
 test/test_folder_tree.py
 test/test_folder_user_project.py
 test/test_folder_without_children.py
@@ -585,6 +581,7 @@ test/test_full_topic.py
 test/test_full_topic_request.py
 test/test_group.py
 test/test_group_folder.py
+test/test_group_folder_read.py
 test/test_group_request.py
 test/test_ifc_access_token.py
 test/test_ifc_access_token_request.py

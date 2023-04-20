@@ -31,9 +31,9 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
+    from bimdata_api_client.model.group_folder_read import GroupFolderRead
     from bimdata_api_client.model.short_user import ShortUser
-    globals()['FolderGroupPermission'] = FolderGroupPermission
+    globals()['GroupFolderRead'] = GroupFolderRead
     globals()['ShortUser'] = ShortUser
 
 
@@ -114,7 +114,7 @@ class FolderWithoutChildren(ModelNormal):
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
             'created_by': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'groups_permissions': ([FolderGroupPermission],),  # noqa: E501
+            'groups_permissions': ([GroupFolderRead],),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'default_permission': (int,),  # noqa: E501
@@ -165,7 +165,7 @@ class FolderWithoutChildren(ModelNormal):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             created_by (bool, date, datetime, dict, float, int, list, str, none_type):
-            groups_permissions ([FolderGroupPermission]):
+            groups_permissions ([GroupFolderRead]): List of group permissions
             user_permission (int): Aggregate of group user permissions and folder default permission
 
         Keyword Args:

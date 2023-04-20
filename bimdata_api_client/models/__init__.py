@@ -53,8 +53,6 @@ from bimdata_api_client.model.extensions import Extensions
 from bimdata_api_client.model.feature import Feature
 from bimdata_api_client.model.feature_request import FeatureRequest
 from bimdata_api_client.model.folder import Folder
-from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
-from bimdata_api_client.model.folder_group_permission_request import FolderGroupPermissionRequest
 from bimdata_api_client.model.folder_tree import FolderTree
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
@@ -63,6 +61,7 @@ from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
 from bimdata_api_client.model.group import Group
 from bimdata_api_client.model.group_folder import GroupFolder
+from bimdata_api_client.model.group_folder_read import GroupFolderRead
 from bimdata_api_client.model.group_request import GroupRequest
 from bimdata_api_client.model.ifc_access_token import IfcAccessToken
 from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest

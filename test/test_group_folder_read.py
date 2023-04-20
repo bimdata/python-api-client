@@ -15,11 +15,11 @@ import unittest
 import bimdata_api_client
 from bimdata_api_client.model.group import Group
 globals()['Group'] = Group
-from bimdata_api_client.model.folder_group_permission import FolderGroupPermission
+from bimdata_api_client.model.group_folder_read import GroupFolderRead
 
 
-class TestFolderGroupPermission(unittest.TestCase):
-    """FolderGroupPermission unit test stubs"""
+class TestGroupFolderRead(unittest.TestCase):
+    """GroupFolderRead unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +27,10 @@ class TestFolderGroupPermission(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testFolderGroupPermission(self):
-        """Test FolderGroupPermission"""
+    def testGroupFolderRead(self):
+        """Test GroupFolderRead"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = FolderGroupPermission()  # noqa: E501
+        # model = GroupFolderRead()  # noqa: E501
         pass
 
 

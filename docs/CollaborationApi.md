@@ -101,7 +101,7 @@ Method | HTTP request | Description
 [**update_cloud_user**](CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
 [**update_document**](CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
 [**update_folder**](CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
-[**update_group_folder**](CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder
+[**update_group_folder**](CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 [**update_manage_group**](CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 [**update_project**](CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 [**update_project_access_token**](CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
@@ -1525,7 +1525,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DWG', 'POINT_CLOUD', 'DXF', 'OBJ', 'IFC', 'GLTF', 'DAE', 'BFX'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'POINT_CLOUD', 'DAE', 'GLTF', 'IFC', 'OBJ', 'DWG', 'BFX', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -10509,7 +10509,7 @@ Name | Type | Description  | Notes
 
 Update some fields of a folder
 
- Update some fields of a folder. Only project admins can update the `default_permission` field.  `default_permission` choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.  Caution: The 'default_permission' field is not applied to users belonging to one or more groups.   Required scopes: document:write
+ Update some fields of a folder. Only project admins can update the `default_permission` field.  `default_permission` choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When propagate is set to True, the permission of all children in the folder will be updated.  Caution: The 'default_permission' field is not applied to users belonging to one or more groups.   Required scopes: document:write
 
 ### Example
 
@@ -10631,9 +10631,9 @@ Name | Type | Description  | Notes
 # **update_group_folder**
 > GroupFolder update_group_folder(cloud_pk, folder_pk, id, project_pk)
 
-Update the permission of a group on a folder
+Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 
- Update the permission of a group on a folder. Permissions choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRTIE ``` When this route is used, the permission of all children in the folder will be updated unless a child has already been updated with this route. In this case, if the updated permission is the same as the previously modified child's, the child will lose its \"independence\" and follow the parent's future permission when it is modified again.               Required scopes: org:manage
+ Update the permission of a group on a folder. Permissions choices are : ``` 1: ACCESS_DENIED, 50: READ_ONLY, 100: READ_WRITE, None: Default value (See the default_permission field of the folder) ``` When propagate is set to True, the permission of all children in the folder will be updated.               Required scopes: org:manage
 
 ### Example
 
@@ -10694,11 +10694,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_pk = 1 # int | A unique integer value identifying this project.
     patched_group_folder_request = PatchedGroupFolderRequest(
         permission=1,
+        propagate=False,
     ) # PatchedGroupFolderRequest |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
-        # Update the permission of a group on a folder
+        # Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
         api_response = api_instance.update_group_folder(cloud_pk, folder_pk, id, project_pk)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
@@ -10707,7 +10708,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # example passing only required values which don't have defaults set
     # and optional values
     try:
-        # Update the permission of a group on a folder
+        # Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
         api_response = api_instance.update_group_folder(cloud_pk, folder_pk, id, project_pk, patched_group_folder_request=patched_group_folder_request)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:

@@ -63,17 +63,15 @@ class GroupFolder(ModelNormal):
 
     allowed_values = {
         ('permission',): {
-            '1': 1,
-            '50': 50,
-            '100': 100,
+            'None': None,
+            '1': "1",
+            '50': "50",
+            '100': "100",
+            'NULL': "null",
         },
     }
 
     validations = {
-        ('permission',): {
-            'inclusive_maximum': 32767,
-            'inclusive_minimum': -32768,
-        },
     }
 
     @cached_property
@@ -101,7 +99,7 @@ class GroupFolder(ModelNormal):
         return {
             'folder': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'group': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'permission': (int,),  # noqa: E501
+            'permission': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -124,12 +122,13 @@ class GroupFolder(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, folder, group, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, folder, group, permission, *args, **kwargs):  # noqa: E501
         """GroupFolder - a model defined in OpenAPI
 
         Args:
             folder (bool, date, datetime, dict, float, int, list, str, none_type):
             group (bool, date, datetime, dict, float, int, list, str, none_type):
+            permission (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -162,7 +161,6 @@ class GroupFolder(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int): Group's permission for a folder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -192,6 +190,7 @@ class GroupFolder(ModelNormal):
 
         self.folder = folder
         self.group = group
+        self.permission = permission
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -212,8 +211,10 @@ class GroupFolder(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, permission, *args, **kwargs):  # noqa: E501
         """GroupFolder - a model defined in OpenAPI
+
+            permission (int, none_type):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -246,7 +247,6 @@ class GroupFolder(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int): Group's permission for a folder. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -272,6 +272,7 @@ class GroupFolder(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.permission = permission
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

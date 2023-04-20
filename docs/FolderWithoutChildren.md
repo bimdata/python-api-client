@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **created_by** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**groups_permissions** | [**[FolderGroupPermission]**](FolderGroupPermission.md) |  | [readonly] 
+**groups_permissions** | [**[GroupFolderRead]**](GroupFolderRead.md) | List of group permissions | [readonly] 
 **user_permission** | **int** | Aggregate of group user permissions and folder default permission | [readonly] 
 **parent_id** | **int, none_type** |  | [optional] 
 **default_permission** | **int** | Permission for a Folder | [optional] 

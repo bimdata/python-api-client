@@ -706,7 +706,7 @@ class TestCollaborationApi(unittest.TestCase):
     def test_update_group_folder(self):
         """Test case for update_group_folder
 
-        Update the permission of a group on a folder  # noqa: E501
+        Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.  # noqa: E501
         """
         pass
 

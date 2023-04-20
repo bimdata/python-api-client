@@ -341,7 +341,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_cloud_user**](docs/CollaborationApi.md#update_cloud_user) | **PATCH** /cloud/{cloud_pk}/user/{id} | Change the user role in the cloud
 *CollaborationApi* | [**update_document**](docs/CollaborationApi.md#update_document) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id} | Update some fields of the document
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
-*CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder
+*CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
@@ -712,8 +712,6 @@ Class | Method | HTTP request | Description
  - [Feature](docs/Feature.md)
  - [FeatureRequest](docs/FeatureRequest.md)
  - [Folder](docs/Folder.md)
- - [FolderGroupPermission](docs/FolderGroupPermission.md)
- - [FolderGroupPermissionRequest](docs/FolderGroupPermissionRequest.md)
  - [FolderTree](docs/FolderTree.md)
  - [FolderUserProject](docs/FolderUserProject.md)
  - [FolderWithoutChildren](docs/FolderWithoutChildren.md)
@@ -722,6 +720,7 @@ Class | Method | HTTP request | Description
  - [FullTopicRequest](docs/FullTopicRequest.md)
  - [Group](docs/Group.md)
  - [GroupFolder](docs/GroupFolder.md)
+ - [GroupFolderRead](docs/GroupFolderRead.md)
  - [GroupRequest](docs/GroupRequest.md)
  - [IfcAccessToken](docs/IfcAccessToken.md)
  - [IfcAccessTokenRequest](docs/IfcAccessTokenRequest.md)
