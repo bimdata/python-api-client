@@ -6985,8 +6985,6 @@ class ModelApi(object):
                     },
                     ('type',): {
 
-                        "BFX": "BFX",
-                        "DAE": "DAE",
                         "DWG": "DWG",
                         "DXF": "DXF",
                         "GLTF": "GLTF",

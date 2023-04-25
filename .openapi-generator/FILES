@@ -50,6 +50,7 @@ bimdata_api_client/model/detailed_extensions.py
 bimdata_api_client/model/direction.py
 bimdata_api_client/model/direction_request.py
 bimdata_api_client/model/document.py
+bimdata_api_client/model/document_preview_file.py
 bimdata_api_client/model/document_with_element_list.py
 bimdata_api_client/model/element.py
 bimdata_api_client/model/element_classification_relation.py
@@ -304,6 +305,7 @@ docs/DetailedExtensions.md
 docs/Direction.md
 docs/DirectionRequest.md
 docs/Document.md
+docs/DocumentPreviewFile.md
 docs/DocumentWithElementList.md
 docs/Element.md
 docs/ElementClassificationRelation.md
@@ -563,6 +565,7 @@ test/test_detailed_extensions.py
 test/test_direction.py
 test/test_direction_request.py
 test/test_document.py
+test/test_document_preview_file.py
 test/test_document_with_element_list.py
 test/test_element.py
 test/test_element_classification_relation.py

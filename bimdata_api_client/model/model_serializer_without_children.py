@@ -71,8 +71,6 @@ class ModelSerializerWithoutChildren(ModelNormal):
             'JPEG': "JPEG",
             'PNG': "PNG",
             'OBJ': "OBJ",
-            'DAE': "DAE",
-            'BFX': "BFX",
             'POINT_CLOUD': "POINT_CLOUD",
             'METABUILDING': "METABUILDING",
         },

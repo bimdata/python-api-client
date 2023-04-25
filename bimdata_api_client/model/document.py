@@ -74,8 +74,6 @@ class Document(ModelNormal):
             'JPEG': "JPEG",
             'PNG': "PNG",
             'OBJ': "OBJ",
-            'DAE': "DAE",
-            'BFX': "BFX",
             'POINT_CLOUD': "POINT_CLOUD",
             'NULL': "null",
         },
@@ -92,10 +90,6 @@ class Document(ModelNormal):
         },
         ('file_name',): {
             'max_length': 512,
-        },
-        ('size',): {
-            'inclusive_maximum': 9223372036854775807,
-            'inclusive_minimum': 0,
         },
     }
 
@@ -127,6 +121,7 @@ class Document(ModelNormal):
             'project': (int,),  # noqa: E501
             'name': (str,),  # noqa: E501
             'file': (str,),  # noqa: E501
+            'size': (int, none_type,),  # noqa: E501
             'tags': ([Tag],),  # noqa: E501
             'visas': ([Visa],),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
@@ -136,10 +131,10 @@ class Document(ModelNormal):
             'ifc_id': (int, none_type,),  # noqa: E501
             'user_permission': (int,),  # noqa: E501
             'is_head_version': (bool,),  # noqa: E501
+            'office_preview': (str, none_type,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
-            'size': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -153,6 +148,7 @@ class Document(ModelNormal):
         'project': 'project',  # noqa: E501
         'name': 'name',  # noqa: E501
         'file': 'file',  # noqa: E501
+        'size': 'size',  # noqa: E501
         'tags': 'tags',  # noqa: E501
         'visas': 'visas',  # noqa: E501
         'created_at': 'created_at',  # noqa: E501
@@ -162,16 +158,17 @@ class Document(ModelNormal):
         'ifc_id': 'ifc_id',  # noqa: E501
         'user_permission': 'user_permission',  # noqa: E501
         'is_head_version': 'is_head_version',  # noqa: E501
+        'office_preview': 'office_preview',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
-        'size': 'size',  # noqa: E501
     }
 
     read_only_vars = {
         'id',  # noqa: E501
         'created_by',  # noqa: E501
         'project',  # noqa: E501
+        'size',  # noqa: E501
         'tags',  # noqa: E501
         'visas',  # noqa: E501
         'created_at',  # noqa: E501
@@ -181,13 +178,14 @@ class Document(ModelNormal):
         'ifc_id',  # noqa: E501
         'user_permission',  # noqa: E501
         'is_head_version',  # noqa: E501
+        'office_preview',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, is_head_version, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, is_head_version, office_preview, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -196,15 +194,17 @@ class Document(ModelNormal):
             project (int):
             name (str): Shown name of the file
             file (str):
+            size (int, none_type): Size of the file.
             tags ([Tag]):
             visas ([Visa]):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update
             model_id (int, none_type):
-            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, DAE, BFX, POINT_CLOUD
+            model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
             user_permission (int): Aggregate of group user permissions and folder default permission
             is_head_version (bool): Document is a head of version or is owned by another document
+            office_preview (str, none_type): Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -240,7 +240,6 @@ class Document(ModelNormal):
             parent_id (int, none_type): [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
-            size (int, none_type): Size of the file.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -273,6 +272,7 @@ class Document(ModelNormal):
         self.project = project
         self.name = name
         self.file = file
+        self.size = size
         self.tags = tags
         self.visas = visas
         self.created_at = created_at
@@ -282,6 +282,7 @@ class Document(ModelNormal):
         self.ifc_id = ifc_id
         self.user_permission = user_permission
         self.is_head_version = is_head_version
+        self.office_preview = office_preview
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -341,7 +342,6 @@ class Document(ModelNormal):
             parent_id (int, none_type): [optional]  # noqa: E501
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
-            size (int, none_type): Size of the file.. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

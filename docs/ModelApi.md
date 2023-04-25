@@ -10880,7 +10880,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         "C",
     ] # [str] |  (optional)
     type = [
-        "BFX",
+        "DWG",
     ] # [str] |  (optional)
 
     # example passing only required values which don't have defaults set

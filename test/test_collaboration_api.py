@@ -717,6 +717,13 @@ class TestCollaborationApi(unittest.TestCase):
         """
         pass
 
+    def test_update_preview_file(self):
+        """Test case for update_preview_file
+
+        Update preview of the document  # noqa: E501
+        """
+        pass
+
     def test_update_project(self):
         """Test case for update_project
 

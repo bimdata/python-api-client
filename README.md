@@ -343,6 +343,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**update_folder**](docs/CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 *CollaborationApi* | [**update_group_folder**](docs/CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 *CollaborationApi* | [**update_manage_group**](docs/CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
+*CollaborationApi* | [**update_preview_file**](docs/CollaborationApi.md#update_preview_file) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file | Update preview of the document
 *CollaborationApi* | [**update_project**](docs/CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 *CollaborationApi* | [**update_project_access_token**](docs/CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 *CollaborationApi* | [**update_project_user**](docs/CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
@@ -702,6 +703,7 @@ Class | Method | HTTP request | Description
  - [Direction](docs/Direction.md)
  - [DirectionRequest](docs/DirectionRequest.md)
  - [Document](docs/Document.md)
+ - [DocumentPreviewFile](docs/DocumentPreviewFile.md)
  - [DocumentWithElementList](docs/DocumentWithElementList.md)
  - [Element](docs/Element.md)
  - [ElementClassificationRelation](docs/ElementClassificationRelation.md)

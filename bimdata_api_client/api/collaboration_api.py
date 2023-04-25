@@ -30,6 +30,7 @@ from bimdata_api_client.model.cloud_invitation import CloudInvitation
 from bimdata_api_client.model.cloud_invitation_request import CloudInvitationRequest
 from bimdata_api_client.model.cloud_request import CloudRequest
 from bimdata_api_client.model.document import Document
+from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
 from bimdata_api_client.model.folder import Folder
 from bimdata_api_client.model.folder_user_project import FolderUserProject
 from bimdata_api_client.model.folder_without_children import FolderWithoutChildren
@@ -944,7 +945,6 @@ class CollaborationApi(object):
                     'parent_id',
                     'file_name',
                     'description',
-                    'size',
                     'model_source',
                     'ifc_source',
                     'successor_of',
@@ -958,7 +958,6 @@ class CollaborationApi(object):
                 'nullable': [
                     'parent_id',
                     'description',
-                    'size',
                 ],
                 'enum': [
                     'model_source',
@@ -967,7 +966,6 @@ class CollaborationApi(object):
                 'validation': [
                     'name',
                     'file_name',
-                    'size',
                 ]
             },
             root_map={
@@ -979,11 +977,6 @@ class CollaborationApi(object):
                     ('file_name',): {
                         'max_length': 512,
                         'min_length': 1,
-                    },
-                    ('size',): {
-
-                        'inclusive_maximum': 9223372036854775807,
-                        'inclusive_minimum': 0,
                     },
                 },
                 'allowed_values': {
@@ -1019,8 +1012,6 @@ class CollaborationApi(object):
                         (str,),
                     'description':
                         (str, none_type,),
-                    'size':
-                        (int, none_type,),
                     'model_source':
                         (str,),
                     'ifc_source':
@@ -1036,7 +1027,6 @@ class CollaborationApi(object):
                     'parent_id': 'parent_id',
                     'file_name': 'file_name',
                     'description': 'description',
-                    'size': 'size',
                     'model_source': 'model_source',
                     'ifc_source': 'ifc_source',
                     'successor_of': 'successor_of',
@@ -1049,7 +1039,6 @@ class CollaborationApi(object):
                     'parent_id': 'form',
                     'file_name': 'form',
                     'description': 'form',
-                    'size': 'form',
                     'model_source': 'form',
                     'ifc_source': 'form',
                     'successor_of': 'form',
@@ -6589,6 +6578,80 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.update_preview_file_endpoint = _Endpoint(
+            settings={
+                'response_type': (DocumentPreviewFile,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file',
+                'operation_id': 'update_preview_file',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'office_preview',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'office_preview':
+                        (file_type,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                    'office_preview': 'office_preview',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'office_preview': 'form',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'multipart/form-data',
+                    'application/x-www-form-urlencoded'
+                ]
+            },
+            api_client=api_client
+        )
         self.update_project_endpoint = _Endpoint(
             settings={
                 'response_type': (Project,),
@@ -8240,7 +8303,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'POINT_CLOUD', 'DAE', 'GLTF', 'IFC', 'OBJ', 'DWG', 'BFX', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'GLTF', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8257,7 +8320,6 @@ class CollaborationApi(object):
             parent_id (int, none_type): [optional]
             file_name (str): Full name of the file. [optional]
             description (str, none_type): Description of the file. [optional]
-            size (int, none_type): Size of the file.. [optional]
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]
             successor_of (int): Old document version to replace. Only for create. [optional]
@@ -15529,6 +15591,93 @@ class CollaborationApi(object):
         kwargs['project_pk'] = \
             project_pk
         return self.update_manage_group_endpoint.call_with_http_info(**kwargs)
+
+    def update_preview_file(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        **kwargs
+    ):
+        """Update preview of the document  # noqa: E501
+
+        Update preview of the document  Required scopes: document:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_preview_file(cloud_pk, id, project_pk, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int): A unique integer value identifying this cloud.
+            id (int): A unique integer value identifying this document.
+            project_pk (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            office_preview (file_type): Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt. [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            DocumentPreviewFile
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        return self.update_preview_file_endpoint.call_with_http_info(**kwargs)
 
     def update_project(
         self,

@@ -81,10 +81,6 @@ class PatchedDocumentRequest(ModelNormal):
             'max_length': 512,
             'min_length': 1,
         },
-        ('size',): {
-            'inclusive_maximum': 9223372036854775807,
-            'inclusive_minimum': 0,
-        },
     }
 
     @cached_property
@@ -113,7 +109,6 @@ class PatchedDocumentRequest(ModelNormal):
             'file_name': (str,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'file': (file_type,),  # noqa: E501
-            'size': (int, none_type,),  # noqa: E501
             'model_source': (str,),  # noqa: E501
             'ifc_source': (str,),  # noqa: E501
             'successor_of': (int,),  # noqa: E501
@@ -130,7 +125,6 @@ class PatchedDocumentRequest(ModelNormal):
         'file_name': 'file_name',  # noqa: E501
         'description': 'description',  # noqa: E501
         'file': 'file',  # noqa: E501
-        'size': 'size',  # noqa: E501
         'model_source': 'model_source',  # noqa: E501
         'ifc_source': 'ifc_source',  # noqa: E501
         'successor_of': 'successor_of',  # noqa: E501
@@ -182,7 +176,6 @@ class PatchedDocumentRequest(ModelNormal):
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             file (file_type): [optional]  # noqa: E501
-            size (int, none_type): Size of the file.. [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
@@ -272,7 +265,6 @@ class PatchedDocumentRequest(ModelNormal):
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             file (file_type): [optional]  # noqa: E501
-            size (int, none_type): Size of the file.. [optional]  # noqa: E501
             model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501

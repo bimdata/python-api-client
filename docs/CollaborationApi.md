@@ -103,6 +103,7 @@ Method | HTTP request | Description
 [**update_folder**](CollaborationApi.md#update_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{id} | Update some fields of a folder
 [**update_group_folder**](CollaborationApi.md#update_group_folder) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/folder/{folder_pk}/group/{id} | Update the permission of a group on a folder. When propagate is set to True, the permission of all children in the folder will be updated.
 [**update_manage_group**](CollaborationApi.md#update_manage_group) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/group/{id} | Update some fields of a group
+[**update_preview_file**](CollaborationApi.md#update_preview_file) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/document/{id}/preview-file | Update preview of the document
 [**update_project**](CollaborationApi.md#update_project) | **PATCH** /cloud/{cloud_pk}/project/{id} | Update some fields of a project
 [**update_project_access_token**](CollaborationApi.md#update_project_access_token) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/access-token/{token} | Update some fields of a token
 [**update_project_user**](CollaborationApi.md#update_project_user) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/user/{id} | Change the user role in the cloud
@@ -1525,7 +1526,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'POINT_CLOUD', 'DAE', 'GLTF', 'IFC', 'OBJ', 'DWG', 'BFX', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'OBJ', 'IFC', 'DWG', 'POINT_CLOUD', 'GLTF', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1586,7 +1587,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     parent_id = 1 # int, none_type |  (optional)
     file_name = "file_name_example" # str | Full name of the file (optional)
     description = "description_example" # str, none_type | Description of the file (optional)
-    size = 0 # int, none_type | Size of the file. (optional)
     model_source = "UPLOAD" # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
     ifc_source = "UPLOAD" # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
     successor_of = 1 # int | Old document version to replace. Only for create (optional)
@@ -1603,7 +1603,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # and optional values
     try:
         # Create a document
-        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, size=size, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of)
+        api_response = api_instance.create_document(cloud_pk, project_pk, name, file, parent_id=parent_id, file_name=file_name, description=description, model_source=model_source, ifc_source=ifc_source, successor_of=successor_of)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling CollaborationApi->create_document: %s\n" % e)
@@ -1621,7 +1621,6 @@ Name | Type | Description  | Notes
  **parent_id** | **int, none_type**|  | [optional]
  **file_name** | **str**| Full name of the file | [optional]
  **description** | **str, none_type**| Description of the file | [optional]
- **size** | **int, none_type**| Size of the file. | [optional]
  **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
  **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
  **successor_of** | **int**| Old document version to replace. Only for create | [optional]
@@ -10443,7 +10442,6 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         file_name="file_name_example",
         description="description_example",
         file=open('/path/to/file', 'rb'),
-        size=0,
         model_source="UPLOAD",
         ifc_source="UPLOAD",
         successor_of=1,
@@ -10860,6 +10858,125 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_preview_file**
+> DocumentPreviewFile update_preview_file(cloud_pk, id, project_pk)
+
+Update preview of the document
+
+Update preview of the document  Required scopes: document:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import collaboration_api
+from bimdata_api_client.model.document_preview_file import DocumentPreviewFile
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = collaboration_api.CollaborationApi(api_client)
+    cloud_pk = 1 # int | A unique integer value identifying this cloud.
+    id = 1 # int | A unique integer value identifying this document.
+    project_pk = 1 # int | A unique integer value identifying this project.
+    office_preview = open('/path/to/file', 'rb') # file_type | Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update preview of the document
+        api_response = api_instance.update_preview_file(cloud_pk, id, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_preview_file: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update preview of the document
+        api_response = api_instance.update_preview_file(cloud_pk, id, project_pk, office_preview=office_preview)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling CollaborationApi->update_preview_file: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**| A unique integer value identifying this cloud. |
+ **id** | **int**| A unique integer value identifying this document. |
+ **project_pk** | **int**| A unique integer value identifying this project. |
+ **office_preview** | **file_type**| Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt | [optional]
+
+### Return type
+
+[**DocumentPreviewFile**](DocumentPreviewFile.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
  - **Accept**: application/json
 
 

@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **file_name** | **str** | Full name of the file | [optional] 
 **description** | **str, none_type** | Description of the file | [optional] 
 **file** | **file_type** |  | [optional] 
-**size** | **int, none_type** | Size of the file. | [optional] 
 **model_source** | **str** | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional] 
 **ifc_source** | **str** | DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional] 
 **successor_of** | **int** | Old document version to replace. Only for create | [optional] 
