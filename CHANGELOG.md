@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v9.11.0 (2023-04-25)
+### Feature
+* Add document-preview (#642)
+
+* add document-preview
+
+* add admin reprocess
+
+* rename field ([`ce78abd`](https://github.com/bimdata/python-api-client/commit/ce78abdfe55727155d5c94ce9b73ea9d1db56023))
+
 ## v9.10.7 (2023-04-20)
 ### Fix
 * Feat/permission explicit propagate (#636)
