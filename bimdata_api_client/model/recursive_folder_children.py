@@ -143,6 +143,7 @@ class RecursiveFolderChildren(ModelNormal):
             'description': (str, none_type,),  # noqa: E501
             'size': (int, none_type,),  # noqa: E501
             'file': (str, none_type,),  # noqa: E501
+            'office_preview': (str, none_type,),  # noqa: E501
             'children': ([RecursiveFolderChildren], none_type,),  # noqa: E501
         }
 
@@ -172,6 +173,7 @@ class RecursiveFolderChildren(ModelNormal):
         'description': 'description',  # noqa: E501
         'size': 'size',  # noqa: E501
         'file': 'file',  # noqa: E501
+        'office_preview': 'office_preview',  # noqa: E501
         'children': 'children',  # noqa: E501
     }
 
@@ -249,6 +251,7 @@ class RecursiveFolderChildren(ModelNormal):
             description (str, none_type): [optional]  # noqa: E501
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
+            office_preview (str, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
@@ -356,6 +359,7 @@ class RecursiveFolderChildren(ModelNormal):
             description (str, none_type): [optional]  # noqa: E501
             size (int, none_type): [optional]  # noqa: E501
             file (str, none_type): [optional]  # noqa: E501
+            office_preview (str, none_type): [optional]  # noqa: E501
             children ([RecursiveFolderChildren], none_type): [optional]  # noqa: E501
         """
 
