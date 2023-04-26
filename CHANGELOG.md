@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.11.2 (2023-04-26)
+### Fix
+* Allow null cloud serializer + add sub field to userproject ([#643](https://github.com/bimdata/python-api-client/issues/643)) ([`8d8ad1c`](https://github.com/bimdata/python-api-client/commit/8d8ad1c438519e2a63f5d8cef203f9ecd27042a0))
+
 ## v9.11.1 (2023-04-26)
 ### Fix
 * Add office_preview to dms-tree serializer ([`4afbee7`](https://github.com/bimdata/python-api-client/commit/4afbee7f7205b8fd767aab0abf376b60b8e515cc))
