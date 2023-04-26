@@ -99,6 +99,7 @@ class FolderUserProject(ModelNormal):
             'firstname': (str, none_type,),  # noqa: E501
             'lastname': (str, none_type,),  # noqa: E501
             'profile_picture': (str, none_type,),  # noqa: E501
+            'sub': (str, none_type,),  # noqa: E501
             'role': (int,),  # noqa: E501
             'permission': (int,),  # noqa: E501
         }
@@ -116,6 +117,7 @@ class FolderUserProject(ModelNormal):
         'firstname': 'firstname',  # noqa: E501
         'lastname': 'lastname',  # noqa: E501
         'profile_picture': 'profile_picture',  # noqa: E501
+        'sub': 'sub',  # noqa: E501
         'role': 'role',  # noqa: E501
         'permission': 'permission',  # noqa: E501
     }
@@ -128,6 +130,7 @@ class FolderUserProject(ModelNormal):
         'firstname',  # noqa: E501
         'lastname',  # noqa: E501
         'profile_picture',  # noqa: E501
+        'sub',  # noqa: E501
         'role',  # noqa: E501
         'permission',  # noqa: E501
     }
@@ -136,7 +139,7 @@ class FolderUserProject(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, user_id, invitation_id, email, firstname, lastname, profile_picture, role, permission, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, user_id, invitation_id, email, firstname, lastname, profile_picture, sub, role, permission, *args, **kwargs):  # noqa: E501
         """FolderUserProject - a model defined in OpenAPI
 
         Args:
@@ -147,6 +150,7 @@ class FolderUserProject(ModelNormal):
             firstname (str, none_type):
             lastname (str, none_type):
             profile_picture (str, none_type):
+            sub (str, none_type):
             role (int):
             permission (int):
 
@@ -215,6 +219,7 @@ class FolderUserProject(ModelNormal):
         self.firstname = firstname
         self.lastname = lastname
         self.profile_picture = profile_picture
+        self.sub = sub
         self.role = role
         self.permission = permission
         for var_name, var_value in kwargs.items():

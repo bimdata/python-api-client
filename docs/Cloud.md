@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **marketplace_apps** | [**[MarketplaceAppLight]**](MarketplaceAppLight.md) |  | [readonly] 
 **organization** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
-**creator_app** | **str** |  | [readonly] 
+**creator_app** | **str, none_type** |  | [readonly] 
 **is_default** | **bool** |  | [readonly] 
 **created_at** | **datetime** | Creation date | [readonly] 
 **updated_at** | **datetime** | Date of the last update | [readonly] 

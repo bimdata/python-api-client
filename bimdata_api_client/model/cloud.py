@@ -103,7 +103,7 @@ class Cloud(ModelNormal):
             'marketplace_apps': ([MarketplaceAppLight],),  # noqa: E501
             'organization': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
             'creator': (bool, date, datetime, dict, float, int, list, str, none_type,),  # noqa: E501
-            'creator_app': (str,),  # noqa: E501
+            'creator_app': (str, none_type,),  # noqa: E501
             'is_default': (bool,),  # noqa: E501
             'created_at': (datetime,),  # noqa: E501
             'updated_at': (datetime,),  # noqa: E501
@@ -155,7 +155,7 @@ class Cloud(ModelNormal):
             marketplace_apps ([MarketplaceAppLight]):
             organization (bool, date, datetime, dict, float, int, list, str, none_type):
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
-            creator_app (str):
+            creator_app (str, none_type):
             is_default (bool):
             created_at (datetime): Creation date
             updated_at (datetime): Date of the last update

@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **firstname** | **str, none_type** |  | [readonly] 
 **lastname** | **str, none_type** |  | [readonly] 
 **profile_picture** | **str, none_type** |  | [readonly] 
+**sub** | **str, none_type** |  | [readonly] 
 **role** | **int** |  | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
