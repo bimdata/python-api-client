@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.11.1 (2023-04-26)
+### Fix
+* Add office_preview to dms-tree serializer ([`4afbee7`](https://github.com/bimdata/python-api-client/commit/4afbee7f7205b8fd767aab0abf376b60b8e515cc))
+
 ## v9.11.0 (2023-04-25)
 ### Feature
 * Add document-preview (#642)
