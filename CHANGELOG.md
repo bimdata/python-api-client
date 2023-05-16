@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.11.3 (2023-05-16)
+### Fix
+* Add filters to getRawElements and getSimpleElements ([`1bf3b71`](https://github.com/bimdata/python-api-client/commit/1bf3b7188e48b5697cbd008bbbd41ac198fcbd16))
+
 ## v9.11.2 (2023-04-26)
 ### Fix
 * Allow null cloud serializer + add sub field to userproject ([#643](https://github.com/bimdata/python-api-client/issues/643)) ([`8d8ad1c`](https://github.com/bimdata/python-api-client/commit/8d8ad1c438519e2a63f5d8cef203f9ecd27042a0))
