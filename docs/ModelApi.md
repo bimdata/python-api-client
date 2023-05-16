@@ -11429,11 +11429,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    classification = "classification_example" # str |  (optional)
+    classification__notation = "classification__notation_example" # str |  (optional)
+    type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all elements in a optimized format
         api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all elements in a optimized format
+        api_response = api_instance.get_raw_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_raw_elements: %s\n" % e)
@@ -11447,6 +11459,9 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **classification** | **str**|  | [optional]
+ **classification__notation** | **str**|  | [optional]
+ **type** | **str**|  | [optional]
 
 ### Return type
 
@@ -11645,11 +11660,23 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     cloud_pk = 1 # int | A unique integer value identifying this cloud.
     model_pk = 1 # int | A unique integer value identifying this model.
     project_pk = 1 # int | A unique integer value identifying this project.
+    classification = "classification_example" # str |  (optional)
+    classification__notation = "classification__notation_example" # str |  (optional)
+    type = "type_example" # str |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
         # Retrieve all elements of a model with a simple value representation
         api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Retrieve all elements of a model with a simple value representation
+        api_response = api_instance.get_simple_elements(cloud_pk, model_pk, project_pk, classification=classification, classification__notation=classification__notation, type=type)
         pprint(api_response)
     except bimdata_api_client.ApiException as e:
         print("Exception when calling ModelApi->get_simple_elements: %s\n" % e)
@@ -11663,6 +11690,9 @@ Name | Type | Description  | Notes
  **cloud_pk** | **int**| A unique integer value identifying this cloud. |
  **model_pk** | **int**| A unique integer value identifying this model. |
  **project_pk** | **int**| A unique integer value identifying this project. |
+ **classification** | **str**|  | [optional]
+ **classification__notation** | **str**|  | [optional]
+ **type** | **str**|  | [optional]
 
 ### Return type
 

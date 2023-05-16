@@ -7331,6 +7331,9 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'classification',
+                    'classification__notation',
+                    'type',
                 ],
                 'required': [
                     'cloud_pk',
@@ -7356,16 +7359,28 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification':
+                        (str,),
+                    'classification__notation':
+                        (str,),
+                    'type':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'model_pk': 'model_pk',
                     'project_pk': 'project_pk',
+                    'classification': 'classification',
+                    'classification__notation': 'classification__notation',
+                    'type': 'type',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'classification': 'query',
+                    'classification__notation': 'query',
+                    'type': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -7469,6 +7484,9 @@ class ModelApi(object):
                     'cloud_pk',
                     'model_pk',
                     'project_pk',
+                    'classification',
+                    'classification__notation',
+                    'type',
                 ],
                 'required': [
                     'cloud_pk',
@@ -7494,16 +7512,28 @@ class ModelApi(object):
                         (int,),
                     'project_pk':
                         (int,),
+                    'classification':
+                        (str,),
+                    'classification__notation':
+                        (str,),
+                    'type':
+                        (str,),
                 },
                 'attribute_map': {
                     'cloud_pk': 'cloud_pk',
                     'model_pk': 'model_pk',
                     'project_pk': 'project_pk',
+                    'classification': 'classification',
+                    'classification__notation': 'classification__notation',
+                    'type': 'type',
                 },
                 'location_map': {
                     'cloud_pk': 'path',
                     'model_pk': 'path',
                     'project_pk': 'path',
+                    'classification': 'query',
+                    'classification__notation': 'query',
+                    'type': 'query',
                 },
                 'collection_format_map': {
                 }
@@ -19919,6 +19949,9 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            classification (str): [optional]
+            classification__notation (str): [optional]
+            type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -20095,6 +20128,9 @@ class ModelApi(object):
             project_pk (int): A unique integer value identifying this project.
 
         Keyword Args:
+            classification (str): [optional]
+            classification__notation (str): [optional]
+            type (str): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
