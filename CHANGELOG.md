@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v9.12.0 (2023-05-17)
+### Feature
+* Add xkt_files fields to support many xtk versions (#647)
+
+* add xkt_files fields to support many xtk versions
+
+* fix xkt_file serialization, add admin, migrate data to XktFile
+
+* add unique xkt version constraint ([`1b3009c`](https://github.com/bimdata/python-api-client/commit/1b3009c81b2e5e3a189ed61e34345885803a83f2))
+
 ## v9.11.3 (2023-05-16)
 ### Fix
 * Add filters to getRawElements and getSimpleElements ([`1bf3b71`](https://github.com/bimdata/python-api-client/commit/1bf3b7188e48b5697cbd008bbbd41ac198fcbd16))
