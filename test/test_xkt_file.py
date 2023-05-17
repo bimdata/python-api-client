@@ -13,17 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.document import Document
-from bimdata_api_client.model.user import User
 from bimdata_api_client.model.xkt_file import XktFile
-globals()['Document'] = Document
-globals()['User'] = User
-globals()['XktFile'] = XktFile
-from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 
 
-class TestModelSerializerWithoutChildren(unittest.TestCase):
-    """ModelSerializerWithoutChildren unit test stubs"""
+class TestXktFile(unittest.TestCase):
+    """XktFile unit test stubs"""
 
     def setUp(self):
         pass
@@ -31,10 +25,10 @@ class TestModelSerializerWithoutChildren(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testModelSerializerWithoutChildren(self):
-        """Test ModelSerializerWithoutChildren"""
+    def testXktFile(self):
+        """Test XktFile"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = ModelSerializerWithoutChildren()  # noqa: E501
+        # model = XktFile()  # noqa: E501
         pass
 
 

@@ -83,6 +83,7 @@ from bimdata_api_client.model.system import System
 from bimdata_api_client.model.system_request import SystemRequest
 from bimdata_api_client.model.unit import Unit
 from bimdata_api_client.model.unit_request import UnitRequest
+from bimdata_api_client.model.xkt_file import XktFile
 from bimdata_api_client.model.zone import Zone
 from bimdata_api_client.model.zone_request import ZoneRequest
 from bimdata_api_client.model.zone_space import ZoneSpace
@@ -2963,6 +2964,93 @@ class ModelApi(object):
             headers_map={
                 'accept': [],
                 'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.create_xkt_file_endpoint = _Endpoint(
+            settings={
+                'response_type': (XktFile,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{project_pk}/model/{id}/xkt-file',
+                'operation_id': 'create_xkt_file',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'version',
+                    'file',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_pk',
+                    'version',
+                    'file',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                    'version',
+                ]
+            },
+            root_map={
+                'validations': {
+                    ('version',): {
+
+                        'inclusive_maximum': 2147483647,
+                        'inclusive_minimum': 0,
+                    },
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_pk':
+                        (int,),
+                    'version':
+                        (int,),
+                    'file':
+                        (file_type,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                    'project_pk': 'project_pk',
+                    'version': 'version',
+                    'file': 'file',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_pk': 'path',
+                    'version': 'form',
+                    'file': 'form',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'multipart/form-data',
+                    'application/x-www-form-urlencoded'
+                ]
             },
             api_client=api_client
         )
@@ -12398,7 +12486,7 @@ class ModelApi(object):
     ):
         """Create a token for this model  # noqa: E501
 
-        Tokens are read_only by default and are valid 1 day  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
+        DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14583,6 +14671,100 @@ class ModelApi(object):
             project_pk
         return self.create_tileset_endpoint.call_with_http_info(**kwargs)
 
+    def create_xkt_file(
+        self,
+        cloud_pk,
+        id,
+        project_pk,
+        version,
+        file,
+        **kwargs
+    ):
+        """Create an xkt file for the model. Overrides existing file with same version  # noqa: E501
+
+        This route does not accept JSON, only files as x-www-form-urlencoded  Required scopes: ifc:write, model:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_xkt_file(cloud_pk, id, project_pk, version, file, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this model.
+            project_pk (int):
+            version (int):
+            file (file_type):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            XktFile
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_pk'] = \
+            project_pk
+        kwargs['version'] = \
+            version
+        kwargs['file'] = \
+            file
+        return self.create_xkt_file_endpoint.call_with_http_info(**kwargs)
+
     def create_zone(
         self,
         cloud_pk,
@@ -14778,7 +14960,7 @@ class ModelApi(object):
     ):
         """Delete a token  # noqa: E501
 
-        Deleting a token will revoke it.  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
+        DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -16496,7 +16678,7 @@ class ModelApi(object):
     ):
         """Retrieve one token created for this model  # noqa: E501
 
-        Retrieve one token created for this model  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
+        DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -16585,7 +16767,7 @@ class ModelApi(object):
     ):
         """Retrieve all tokens created for this model  # noqa: E501
 
-        Retrieve all tokens created for this model  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
+        DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -22486,7 +22668,7 @@ class ModelApi(object):
     ):
         """Update some fields of a token  # noqa: E501
 
-        You can update the expiration date or the read_only field  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
+        DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -23148,7 +23330,7 @@ class ModelApi(object):
             map_file (file_type, none_type): [optional]
             gltf_file (file_type, none_type): [optional]
             preview_file (file_type, none_type): [optional]
-            xkt_file (file_type, none_type): [optional]
+            xkt_file (file_type, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]
             binary_2d_file (file_type, none_type): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

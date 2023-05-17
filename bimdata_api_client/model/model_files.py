@@ -152,7 +152,7 @@ class ModelFiles(ModelNormal):
             map_file (str, none_type): [optional]  # noqa: E501
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
-            xkt_file (str, none_type): [optional]  # noqa: E501
+            xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
             binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 
@@ -240,7 +240,7 @@ class ModelFiles(ModelNormal):
             map_file (str, none_type): [optional]  # noqa: E501
             gltf_file (str, none_type): [optional]  # noqa: E501
             preview_file (str, none_type): [optional]  # noqa: E501
-            xkt_file (str, none_type): [optional]  # noqa: E501
+            xkt_file (str, none_type): DEPRECATED. xkt file url is now in xkt_files field with its version number. [optional]  # noqa: E501
             binary_2d_file (str, none_type): [optional]  # noqa: E501
         """
 

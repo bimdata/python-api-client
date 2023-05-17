@@ -254,6 +254,7 @@ from bimdata_api_client.model.visibility_request import VisibilityRequest
 from bimdata_api_client.model.web_hook import WebHook
 from bimdata_api_client.model.web_hook_request import WebHookRequest
 from bimdata_api_client.model.write_folder_request import WriteFolderRequest
+from bimdata_api_client.model.xkt_file import XktFile
 from bimdata_api_client.model.zone import Zone
 from bimdata_api_client.model.zone_request import ZoneRequest
 from bimdata_api_client.model.zone_space import ZoneSpace

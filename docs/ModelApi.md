@@ -41,6 +41,7 @@ Method | HTTP request | Description
 [**create_storey_plan**](ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 [**create_system**](ModelApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Create a system in the model
 [**create_tileset**](ModelApi.md#create_tileset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Create the tileset of the model and upload all files
+[**create_xkt_file**](ModelApi.md#create_xkt_file) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/xkt-file | Create an xkt file for the model. Overrides existing file with same version
 [**create_zone**](ModelApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Create a zone in the model
 [**create_zone_space**](ModelApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Create a space in a zone
 [**delete_access_token**](ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
@@ -1799,7 +1800,7 @@ Name | Type | Description  | Notes
 
 Create a token for this model
 
-Tokens are read_only by default and are valid 1 day  Required scopes: ifc:token_manage, model:token_manage
+DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage
 
 ### Example
 
@@ -4807,6 +4808,118 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **create_xkt_file**
+> XktFile create_xkt_file(cloud_pk, id, project_pk, version, file)
+
+Create an xkt file for the model. Overrides existing file with same version
+
+This route does not accept JSON, only files as x-www-form-urlencoded  Required scopes: ifc:write, model:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import model_api
+from bimdata_api_client.model.xkt_file import XktFile
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = model_api.ModelApi(api_client)
+    cloud_pk = 1 # int | 
+    id = 1 # int | A unique integer value identifying this model.
+    project_pk = 1 # int | 
+    version = 0 # int | 
+    file = open('/path/to/file', 'rb') # file_type | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create an xkt file for the model. Overrides existing file with same version
+        api_response = api_instance.create_xkt_file(cloud_pk, id, project_pk, version, file)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling ModelApi->create_xkt_file: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **cloud_pk** | **int**|  |
+ **id** | **int**| A unique integer value identifying this model. |
+ **project_pk** | **int**|  |
+ **version** | **int**|  |
+ **file** | **file_type**|  |
+
+### Return type
+
+[**XktFile**](XktFile.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: multipart/form-data, application/x-www-form-urlencoded
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **create_zone**
 > [Zone] create_zone(cloud_pk, model_pk, project_pk, zone_request)
 
@@ -5066,7 +5179,7 @@ Name | Type | Description  | Notes
 
 Delete a token
 
-Deleting a token will revoke it.  Required scopes: ifc:token_manage, model:token_manage
+DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage
 
 ### Example
 
@@ -7196,7 +7309,7 @@ Name | Type | Description  | Notes
 
 Retrieve one token created for this model
 
-Retrieve one token created for this model  Required scopes: ifc:token_manage, model:token_manage
+DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage
 
 ### Example
 
@@ -7305,7 +7418,7 @@ Name | Type | Description  | Notes
 
 Retrieve all tokens created for this model
 
-Retrieve all tokens created for this model  Required scopes: ifc:token_manage, model:token_manage
+DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage
 
 ### Example
 
@@ -14489,7 +14602,7 @@ void (empty response body)
 
 Update some fields of a token
 
-You can update the expiration date or the read_only field  Required scopes: ifc:token_manage, model:token_manage
+DEPECRATED: Use ProjectAccessToken instead  Required scopes: ifc:token_manage, model:token_manage
 
 ### Example
 
@@ -15510,7 +15623,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     map_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     gltf_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
     preview_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
-    xkt_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
+    xkt_file = open('/path/to/file', 'rb') # file_type, none_type | DEPRECATED. xkt file url is now in xkt_files field with its version number (optional)
     binary_2d_file = open('/path/to/file', 'rb') # file_type, none_type |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -15544,7 +15657,7 @@ Name | Type | Description  | Notes
  **map_file** | **file_type, none_type**|  | [optional]
  **gltf_file** | **file_type, none_type**|  | [optional]
  **preview_file** | **file_type, none_type**|  | [optional]
- **xkt_file** | **file_type, none_type**|  | [optional]
+ **xkt_file** | **file_type, none_type**| DEPRECATED. xkt file url is now in xkt_files field with its version number | [optional]
  **binary_2d_file** | **file_type, none_type**|  | [optional]
 
 ### Return type

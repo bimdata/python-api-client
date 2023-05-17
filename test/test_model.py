@@ -16,9 +16,11 @@ import bimdata_api_client
 from bimdata_api_client.model.document import Document
 from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 from bimdata_api_client.model.user import User
+from bimdata_api_client.model.xkt_file import XktFile
 globals()['Document'] = Document
 globals()['ModelSerializerWithoutChildren'] = ModelSerializerWithoutChildren
 globals()['User'] = User
+globals()['XktFile'] = XktFile
 from bimdata_api_client.model.model import Model
 
 

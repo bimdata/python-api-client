@@ -297,6 +297,13 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
+    def test_create_xkt_file_deprecated(self):
+        """Test case for create_xkt_file_deprecated
+
+        Create an xkt file for the model. Overrides existing file with same version  # noqa: E501
+        """
+        pass
+
     def test_create_zone_deprecated(self):
         """Test case for create_zone_deprecated
 

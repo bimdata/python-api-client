@@ -390,6 +390,7 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_storey_plan_deprecated**](docs/IfcApi.md#create_storey_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *IfcApi* | [**create_system_deprecated**](docs/IfcApi.md#create_system_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/system | Create a system in the model
 *IfcApi* | [**create_tileset_deprecated**](docs/IfcApi.md#create_tileset_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/tileset | Create the tileset of the model and upload all files
+*IfcApi* | [**create_xkt_file_deprecated**](docs/IfcApi.md#create_xkt_file_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id}/xkt-file | Create an xkt file for the model. Overrides existing file with same version
 *IfcApi* | [**create_zone_deprecated**](docs/IfcApi.md#create_zone_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Create a zone in the model
 *IfcApi* | [**create_zone_space_deprecated**](docs/IfcApi.md#create_zone_space_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Create a space in a zone
 *IfcApi* | [**delete_access_token_deprecated**](docs/IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
@@ -545,6 +546,7 @@ Class | Method | HTTP request | Description
 *ModelApi* | [**create_storey_plan**](docs/ModelApi.md#create_storey_plan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/storey/{storey_uuid}/plan/add | Create a relation between a 2d model and a storey
 *ModelApi* | [**create_system**](docs/ModelApi.md#create_system) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/system | Create a system in the model
 *ModelApi* | [**create_tileset**](docs/ModelApi.md#create_tileset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/tileset | Create the tileset of the model and upload all files
+*ModelApi* | [**create_xkt_file**](docs/ModelApi.md#create_xkt_file) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{id}/xkt-file | Create an xkt file for the model. Overrides existing file with same version
 *ModelApi* | [**create_zone**](docs/ModelApi.md#create_zone) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone | Create a zone in the model
 *ModelApi* | [**create_zone_space**](docs/ModelApi.md#create_zone_space) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/zone/{zone_pk}/space | Create a space in a zone
 *ModelApi* | [**delete_access_token**](docs/ModelApi.md#delete_access_token) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/access_token/{token} | Delete a token
@@ -914,6 +916,7 @@ Class | Method | HTTP request | Description
  - [WebHook](docs/WebHook.md)
  - [WebHookRequest](docs/WebHookRequest.md)
  - [WriteFolderRequest](docs/WriteFolderRequest.md)
+ - [XktFile](docs/XktFile.md)
  - [Zone](docs/Zone.md)
  - [ZoneRequest](docs/ZoneRequest.md)
  - [ZoneSpace](docs/ZoneSpace.md)

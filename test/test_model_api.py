@@ -283,6 +283,13 @@ class TestModelApi(unittest.TestCase):
         """
         pass
 
+    def test_create_xkt_file(self):
+        """Test case for create_xkt_file
+
+        Create an xkt file for the model. Overrides existing file with same version  # noqa: E501
+        """
+        pass
+
     def test_create_zone(self):
         """Test case for create_zone
 
