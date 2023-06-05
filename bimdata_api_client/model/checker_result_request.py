@@ -149,7 +149,7 @@ class CheckerResultRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            status (str): [optional]  # noqa: E501
+            status (str): * `C` - completed * `P` - pending * `E` - errored. [optional]  # noqa: E501
             result (str, none_type): [optional]  # noqa: E501
             collisions (str, none_type): [optional]  # noqa: E501
             error_detail (str): [optional]  # noqa: E501
@@ -234,7 +234,7 @@ class CheckerResultRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            status (str): [optional]  # noqa: E501
+            status (str): * `C` - completed * `P` - pending * `E` - errored. [optional]  # noqa: E501
             result (str, none_type): [optional]  # noqa: E501
             collisions (str, none_type): [optional]  # noqa: E501
             error_detail (str): [optional]  # noqa: E501

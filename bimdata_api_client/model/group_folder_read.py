@@ -121,7 +121,7 @@ class GroupFolderRead(ModelNormal):
 
         Args:
             group (Group):
-            permission (int, none_type):
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -208,7 +208,7 @@ class GroupFolderRead(ModelNormal):
 
         Args:
             group (Group):
-            permission (int, none_type):
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

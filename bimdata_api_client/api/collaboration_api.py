@@ -8303,7 +8303,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'OBJ', 'DWG', 'GLTF', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -8320,8 +8320,8 @@ class CollaborationApi(object):
             parent_id (int, none_type): [optional]
             file_name (str): Full name of the file. [optional]
             description (str, none_type): Description of the file. [optional]
-            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]
-            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]
+            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
+            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]
             successor_of (int): Old document version to replace. Only for create. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.

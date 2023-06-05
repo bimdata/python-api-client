@@ -151,8 +151,8 @@ class FolderUserProject(ModelNormal):
             lastname (str, none_type):
             profile_picture (str, none_type):
             sub (str, none_type):
-            role (int):
-            permission (int):
+            role (int): * `100` - admin * `50` - user * `25` - guest
+            permission (int): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

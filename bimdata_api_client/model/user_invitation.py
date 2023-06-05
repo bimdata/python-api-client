@@ -184,7 +184,7 @@ class UserInvitation(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending         . [optional]  # noqa: E501
+            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             responded_at (datetime, none_type): [optional]  # noqa: E501
         """
 
@@ -280,7 +280,7 @@ class UserInvitation(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending         . [optional]  # noqa: E501
+            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             responded_at (datetime, none_type): [optional]  # noqa: E501
         """
 

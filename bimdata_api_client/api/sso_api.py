@@ -621,7 +621,7 @@ class SsoApi(object):
 
 
         Keyword Args:
-            status (str):          A: Accepted         D: Denied         P: Pending         . [optional]
+            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

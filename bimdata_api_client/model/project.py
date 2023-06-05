@@ -102,6 +102,7 @@ class Project(ModelNormal):
             'updated_at': (datetime,),  # noqa: E501
             'root_folder_id': (int, none_type,),  # noqa: E501
             'logo': (str, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
         }
@@ -119,6 +120,7 @@ class Project(ModelNormal):
         'updated_at': 'updated_at',  # noqa: E501
         'root_folder_id': 'root_folder_id',  # noqa: E501
         'logo': 'logo',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'status': 'status',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
     }
@@ -178,7 +180,8 @@ class Project(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             logo (str, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
         """
 
@@ -269,7 +272,8 @@ class Project(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             logo (str, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
         """
 

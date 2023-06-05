@@ -124,7 +124,7 @@ class ProjectInvitationRequest(ModelNormal):
         Args:
             email (str): email of the user to invite
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
-            role (int):
+            role (int): * `100` - admin * `50` - user * `25` - guest
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -213,7 +213,7 @@ class ProjectInvitationRequest(ModelNormal):
         Args:
             email (str): email of the user to invite
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
-            role (int):
+            role (int): * `100` - admin * `50` - user * `25` - guest
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

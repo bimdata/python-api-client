@@ -229,7 +229,7 @@ class Model(ModelNormal):
 
         Args:
             id (int):
-            type (str):
+            type (str): * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             status (str):
             created_at (datetime):
@@ -283,7 +283,7 @@ class Model(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
-            source (str): [optional]  # noqa: E501
+            source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501
             archived (bool): [optional]  # noqa: E501
@@ -394,7 +394,7 @@ class Model(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             name (str, none_type): [optional]  # noqa: E501
-            source (str): [optional]  # noqa: E501
+            source (str): * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             world_position ([float], none_type): [x,y,z] array of the position of the local_placement in world coordinates. [optional]  # noqa: E501
             size_ratio (float, none_type): How many meters a unit represents. [optional]  # noqa: E501
             archived (bool): [optional]  # noqa: E501

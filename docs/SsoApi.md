@@ -474,7 +474,7 @@ configuration.api_key['Bearer'] = 'YOUR_API_KEY'
 with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = sso_api.SsoApi(api_client)
-    status = "A" # str |          A: Accepted         D: Denied         P: Pending          (optional)
+    status = "A" # str |          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending (optional)
 
     # example passing only required values which don't have defaults set
     # and optional values
@@ -491,7 +491,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **status** | **str**|          A: Accepted         D: Denied         P: Pending          | [optional]
+ **status** | **str**|          A: Accepted         D: Denied         P: Pending           * &#x60;A&#x60; - accepted * &#x60;D&#x60; - denied * &#x60;P&#x60; - pending | [optional]
 
 ### Return type
 

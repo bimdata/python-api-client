@@ -139,8 +139,8 @@ class Size(ModelNormal):
         """Size - a model defined in OpenAPI
 
         Args:
-            managed_by (str):
-            role (int):
+            managed_by (str): * `BIMDATA_PLATFORM` - BIMDATA_PLATFORM * `ORGANIZATION` - ORGANIZATION
+            role (int): * `100` - admin * `50` - user
             total_size (int, none_type):
             smart_data_size (int, none_type):
             total_size_available (int, none_type):
@@ -242,8 +242,8 @@ class Size(ModelNormal):
         """Size - a model defined in OpenAPI
 
         Args:
-            managed_by (str):
-            role (int):
+            managed_by (str): * `BIMDATA_PLATFORM` - BIMDATA_PLATFORM * `ORGANIZATION` - ORGANIZATION
+            role (int): * `100` - admin * `50` - user
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
                                 will be type checked and a TypeError will be

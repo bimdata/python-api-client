@@ -4,8 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**managed_by** | **str** |  | 
-**role** | **int** |  | 
+**managed_by** | **str** | * &#x60;BIMDATA_PLATFORM&#x60; - BIMDATA_PLATFORM * &#x60;ORGANIZATION&#x60; - ORGANIZATION | 
+**role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user | 
 **total_size** | **int, none_type** |  | [readonly] 
 **smart_data_size** | **int, none_type** |  | [readonly] 
 **total_size_available** | **int, none_type** |  | [readonly] 

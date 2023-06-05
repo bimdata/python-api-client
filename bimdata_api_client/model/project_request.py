@@ -92,6 +92,7 @@ class ProjectRequest(ModelNormal):
         return {
             'name': (str,),  # noqa: E501
             'logo': (file_type, none_type,),  # noqa: E501
+            'description': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
         }
@@ -104,6 +105,7 @@ class ProjectRequest(ModelNormal):
     attribute_map = {
         'name': 'name',  # noqa: E501
         'logo': 'logo',  # noqa: E501
+        'description': 'description',  # noqa: E501
         'status': 'status',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
     }
@@ -153,7 +155,8 @@ class ProjectRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             logo (file_type, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
         """
 
@@ -241,7 +244,8 @@ class ProjectRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             logo (file_type, none_type): [optional]  # noqa: E501
-            status (str): [optional]  # noqa: E501
+            description (str, none_type): [optional]  # noqa: E501
+            status (str): * `A` - active * `D` - deleted. [optional]  # noqa: E501
             parent_id (int, none_type): [optional]  # noqa: E501
         """
 

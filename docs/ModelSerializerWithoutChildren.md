@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [readonly] 
-**type** | **str** |  | [readonly] 
+**type** | **str** | * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **status** | **str** |  | [readonly] 
 **created_at** | **datetime** |  | [readonly] 
@@ -26,7 +26,7 @@ Name | Type | Description | Notes
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
 **page_number** | **int, none_type** | The page number of the related pdf | [readonly] 
 **name** | **str, none_type** |  | [optional] 
-**source** | **str** |  | [optional] 
+**source** | **str** | * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 
 **world_position** | **[float], none_type** | [x,y,z] array of the position of the local_placement in world coordinates | [optional] 
 **size_ratio** | **float, none_type** | How many meters a unit represents | [optional] 
 **archived** | **bool** |  | [optional] 

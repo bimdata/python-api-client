@@ -158,7 +158,7 @@ class WriteFolderRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            default_permission (int): Permission for a Folder. [optional]  # noqa: E501
+            default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
             children ([WriteFolderRequest], none_type): [optional]  # noqa: E501
         """
 
@@ -246,7 +246,7 @@ class WriteFolderRequest(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
-            default_permission (int): Permission for a Folder. [optional]  # noqa: E501
+            default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
             children ([WriteFolderRequest], none_type): [optional]  # noqa: E501
         """
 

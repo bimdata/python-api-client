@@ -148,7 +148,7 @@ class CloudRole(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            role (int): Role of the user in the cloud. [optional]  # noqa: E501
+            role (int): Role of the user in the cloud  * `100` - admin * `50` - user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -234,7 +234,7 @@ class CloudRole(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            role (int): Role of the user in the cloud. [optional]  # noqa: E501
+            role (int): Role of the user in the cloud  * `100` - admin * `50` - user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

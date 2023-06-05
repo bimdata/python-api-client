@@ -144,7 +144,7 @@ class PatchedGroupFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int, none_type): [optional]  # noqa: E501
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
             propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 
@@ -227,7 +227,7 @@ class PatchedGroupFolderRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            permission (int, none_type): [optional]  # noqa: E501
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
             propagate (bool): [optional] if omitted the server will use the default value of False  # noqa: E501
         """
 

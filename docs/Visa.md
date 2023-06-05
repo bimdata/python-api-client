@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **validations_in_error** | **[int]** | Validation IDs where one or more validators have no longer access to the visa document. | [readonly] 
 **creator** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [readonly] 
 **document_id** | **int** |  | [readonly] 
-**status** | **str** |  | [readonly] 
+**status** | **str** | * &#x60;O&#x60; - opened * &#x60;A&#x60; - paused * &#x60;C&#x60; - closed | [readonly] 
 **comments** | [**[VisaComment]**](VisaComment.md) |  | [readonly] 
 **created_at** | **datetime** |  | [readonly] 
 **updated_at** | **datetime** |  | [readonly] 

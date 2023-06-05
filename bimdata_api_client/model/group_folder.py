@@ -128,7 +128,7 @@ class GroupFolder(ModelNormal):
         Args:
             folder (bool, date, datetime, dict, float, int, list, str, none_type):
             group (bool, date, datetime, dict, float, int, list, str, none_type):
-            permission (int, none_type):
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -214,7 +214,7 @@ class GroupFolder(ModelNormal):
     def __init__(self, permission, *args, **kwargs):  # noqa: E501
         """GroupFolder - a model defined in OpenAPI
 
-            permission (int, none_type):
+            permission (int, none_type): * `1` - denied * `50` - read_only * `100` - read_write
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [readonly] 
 **created_at** | **datetime** |  | [readonly] 
 **updated_at** | **datetime** |  | [readonly] 
-**status** | **str** |  | [optional] 
+**status** | **str** | * &#x60;C&#x60; - completed * &#x60;P&#x60; - pending * &#x60;E&#x60; - errored | [optional] 
 **result** | **str, none_type** |  | [optional] 
 **collisions** | **str, none_type** |  | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]

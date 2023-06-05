@@ -157,7 +157,7 @@ class CheckProjectAccess(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            user_role (int): [optional]  # noqa: E501
+            user_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -251,7 +251,7 @@ class CheckProjectAccess(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            user_role (int): [optional]  # noqa: E501
+            user_role (int): * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

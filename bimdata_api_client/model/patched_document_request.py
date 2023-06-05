@@ -176,8 +176,8 @@ class PatchedDocumentRequest(ModelNormal):
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             file (file_type): [optional]  # noqa: E501
-            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
-            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
+            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
+            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
         """
 
@@ -265,8 +265,8 @@ class PatchedDocumentRequest(ModelNormal):
             file_name (str): Full name of the file. [optional]  # noqa: E501
             description (str, none_type): Description of the file. [optional]  # noqa: E501
             file (file_type): [optional]  # noqa: E501
-            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
-            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...). [optional]  # noqa: E501
+            model_source (str): Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
+            ifc_source (str): DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED. [optional]  # noqa: E501
             successor_of (int): Old document version to replace. Only for create. [optional]  # noqa: E501
         """
 

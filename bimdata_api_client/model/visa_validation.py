@@ -138,7 +138,7 @@ class VisaValidation(ModelNormal):
             id (int):
             visa_id (int):
             validator (bool, date, datetime, dict, float, int, list, str, none_type):
-            status (str):
+            status (str): * `P` - pending * `A` - accepted * `D` - denied
             has_commented (bool): Return True if validator has commented the visa
             created_at (datetime):
             updated_at (datetime):

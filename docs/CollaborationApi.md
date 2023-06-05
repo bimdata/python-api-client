@@ -1526,7 +1526,7 @@ Name | Type | Description  | Notes
 
 Create a document
 
-Create a document. If the document is one of {'DXF', 'OBJ', 'DWG', 'GLTF', 'IFC', 'POINT_CLOUD'}, a model will be created and attached to this document  Required scopes: document:write
+Create a document. If the document is one of {'GLTF', 'DWG', 'POINT_CLOUD', 'OBJ', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write
 
 ### Example
 
@@ -1587,8 +1587,8 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     parent_id = 1 # int, none_type |  (optional)
     file_name = "file_name_example" # str | Full name of the file (optional)
     description = "description_example" # str, none_type | Description of the file (optional)
-    model_source = "UPLOAD" # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
-    ifc_source = "UPLOAD" # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) (optional)
+    model_source = "UPLOAD" # str | Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
+    ifc_source = "UPLOAD" # str | DEPRECATED: Use 'model_source' instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
     successor_of = 1 # int | Old document version to replace. Only for create (optional)
 
     # example passing only required values which don't have defaults set
@@ -1621,8 +1621,8 @@ Name | Type | Description  | Notes
  **parent_id** | **int, none_type**|  | [optional]
  **file_name** | **str**| Full name of the file | [optional]
  **description** | **str, none_type**| Description of the file | [optional]
- **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
- **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...) | [optional]
+ **model_source** | **str**| Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
+ **ifc_source** | **str**| DEPRECATED: Use &#39;model_source&#39; instead. Define the model.source field if the upload is a Model (IFC, PDF, DWG...)  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
  **successor_of** | **int**| Old document version to replace. Only for create | [optional]
 
 ### Return type
@@ -1942,6 +1942,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     project_request = ProjectRequest(
         logo=open('/path/to/file', 'rb'),
         name="name_example",
+        description="description_example",
         status="A",
         parent_id=1,
     ) # ProjectRequest | 
@@ -11058,6 +11059,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     patched_project_request = PatchedProjectRequest(
         logo=open('/path/to/file', 'rb'),
         name="name_example",
+        description="description_example",
         status="A",
         parent_id=1,
     ) # PatchedProjectRequest |  (optional)

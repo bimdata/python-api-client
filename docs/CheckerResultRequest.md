@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**status** | **str** |  | [optional] 
+**status** | **str** | * &#x60;C&#x60; - completed * &#x60;P&#x60; - pending * &#x60;E&#x60; - errored | [optional] 
 **result** | **str, none_type** |  | [optional] 
 **collisions** | **str, none_type** |  | [optional] 
 **error_detail** | **str** |  | [optional] 

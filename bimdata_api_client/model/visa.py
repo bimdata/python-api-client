@@ -154,7 +154,7 @@ class Visa(ModelNormal):
             validations_in_error ([int]): Validation IDs where one or more validators have no longer access to the visa document.
             creator (bool, date, datetime, dict, float, int, list, str, none_type):
             document_id (int):
-            status (str):
+            status (str): * `O` - opened * `A` - paused * `C` - closed
             comments ([VisaComment]):
             created_at (datetime):
             updated_at (datetime):

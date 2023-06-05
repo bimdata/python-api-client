@@ -156,7 +156,7 @@ class ProcessorHandler(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            status (str): [optional]  # noqa: E501
+            status (str): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]  # noqa: E501
             detail_message (str, none_type): [optional]  # noqa: E501
         """
 
@@ -241,7 +241,7 @@ class ProcessorHandler(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            status (str): [optional]  # noqa: E501
+            status (str): * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix. [optional]  # noqa: E501
             detail_message (str, none_type): [optional]  # noqa: E501
         """
 

@@ -154,7 +154,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
-            default_permission (int): Permission for a Folder. [optional]  # noqa: E501
+            default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -238,7 +238,7 @@ class PatchedFolderWithoutChildrenRequest(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             parent_id (int, none_type): [optional]  # noqa: E501
             name (str): Name of the folder. [optional]  # noqa: E501
-            default_permission (int): Permission for a Folder. [optional]  # noqa: E501
+            default_permission (int): Permission for a Folder  * `1` - denied * `50` - read_only * `100` - read_write. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

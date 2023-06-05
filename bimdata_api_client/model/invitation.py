@@ -159,7 +159,7 @@ class Invitation(ModelNormal):
             client_id (int):
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
             cloud_name (str):
-            cloud_role (int): Role the user will have when they accept the invitation
+            cloud_role (int): Role the user will have when they accept the invitation  * `100` - admin * `50` - user
             email (str): email of the user to invite
 
         Keyword Args:
@@ -194,8 +194,8 @@ class Invitation(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
-            project_role (int, none_type): Role the user will have when they accept the invitation. [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending         . [optional]  # noqa: E501
+            project_role (int, none_type): Role the user will have when they accept the invitation  * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             sender_provider_sub (str): OIDC sub of the sender. The original sub from the provider is used instead of the broker sub. [optional]  # noqa: E501
         """
 
@@ -255,7 +255,7 @@ class Invitation(ModelNormal):
 
             redirect_uri (str): User will be redirected to this uri when they accept the invitation
             cloud_name (str):
-            cloud_role (int): Role the user will have when they accept the invitation
+            cloud_role (int): Role the user will have when they accept the invitation  * `100` - admin * `50` - user
             email (str): email of the user to invite
 
         Keyword Args:
@@ -290,8 +290,8 @@ class Invitation(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             project_name (str): [optional]  # noqa: E501
-            project_role (int, none_type): Role the user will have when they accept the invitation. [optional]  # noqa: E501
-            status (str):          A: Accepted         D: Denied         P: Pending         . [optional]  # noqa: E501
+            project_role (int, none_type): Role the user will have when they accept the invitation  * `100` - admin * `50` - user * `25` - guest. [optional]  # noqa: E501
+            status (str):          A: Accepted         D: Denied         P: Pending           * `A` - accepted * `D` - denied * `P` - pending. [optional]  # noqa: E501
             sender_provider_sub (str): OIDC sub of the sender. The original sub from the provider is used instead of the broker sub. [optional]  # noqa: E501
         """
 

@@ -139,7 +139,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            cloud_role (int): [optional]  # noqa: E501
+            cloud_role (int): * `100` - admin * `50` - user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -221,7 +221,7 @@ class PatchedUserCloudUpdateRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            cloud_role (int): [optional]  # noqa: E501
+            cloud_role (int): * `100` - admin * `50` - user. [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

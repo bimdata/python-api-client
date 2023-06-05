@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **lastname** | **str, none_type** |  | [readonly] 
 **profile_picture** | **str, none_type** |  | [readonly] 
 **sub** | **str, none_type** |  | [readonly] 
-**role** | **int** |  | [readonly] 
+**role** | **int** | * &#x60;100&#x60; - admin * &#x60;50&#x60; - user * &#x60;25&#x60; - guest | [readonly] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
