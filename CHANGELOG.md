@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.13.0 (2023-06-05)
+### Feature
+* Add project description ([#659](https://github.com/bimdata/python-api-client/issues/659)) ([`7d29aa4`](https://github.com/bimdata/python-api-client/commit/7d29aa46f1839229a97cb06c517d9a40315b965c))
+
 ## v9.12.0 (2023-05-17)
 ### Feature
 * Add xkt_files fields to support many xtk versions (#647)
