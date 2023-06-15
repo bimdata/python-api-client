@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.13.1 (2023-06-15)
+### Fix
+* Add parent_id field in model ([`7ec69f0`](https://github.com/bimdata/python-api-client/commit/7ec69f034ceaa5620ef3a68b254375d832be3ee7))
+
 ## v9.13.0 (2023-06-05)
 ### Feature
 * Add project description ([#659](https://github.com/bimdata/python-api-client/issues/659)) ([`7d29aa4`](https://github.com/bimdata/python-api-client/commit/7d29aa46f1839229a97cb06c517d9a40315b965c))
