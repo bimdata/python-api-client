@@ -24,6 +24,7 @@ Name | Type | Description | Notes
 **project_id** | **int, none_type** |  | [readonly] 
 **errors** | **[str], none_type** | List of errors that happened during IFC processing | [readonly] 
 **warnings** | **[str], none_type** | List of warnings that happened during IFC processing | [readonly] 
+**parent_id** | **int, none_type** | The first page of the pdf | [readonly] 
 **page_number** | **int, none_type** | The page number of the related pdf | [readonly] 
 **name** | **str, none_type** |  | [optional] 
 **source** | **str** | * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional] 

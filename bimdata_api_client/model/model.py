@@ -145,6 +145,7 @@ class Model(ModelNormal):
             'project_id': (int, none_type,),  # noqa: E501
             'errors': ([str], none_type,),  # noqa: E501
             'warnings': ([str], none_type,),  # noqa: E501
+            'parent_id': (int, none_type,),  # noqa: E501
             'page_number': (int, none_type,),  # noqa: E501
             'children': ([ModelSerializerWithoutChildren],),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
@@ -183,6 +184,7 @@ class Model(ModelNormal):
         'project_id': 'project_id',  # noqa: E501
         'errors': 'errors',  # noqa: E501
         'warnings': 'warnings',  # noqa: E501
+        'parent_id': 'parent_id',  # noqa: E501
         'page_number': 'page_number',  # noqa: E501
         'children': 'children',  # noqa: E501
         'name': 'name',  # noqa: E501
@@ -216,6 +218,7 @@ class Model(ModelNormal):
         'project_id',  # noqa: E501
         'errors',  # noqa: E501
         'warnings',  # noqa: E501
+        'parent_id',  # noqa: E501
         'page_number',  # noqa: E501
         'children',  # noqa: E501
     }
@@ -224,7 +227,7 @@ class Model(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, binary_2d_file, project_id, errors, warnings, page_number, children, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, type, creator, status, created_at, updated_at, document_id, document, structure_file, systems_file, map_file, gltf_file, preview_file, viewer_360_file, xkt_file, xkt_files, binary_2d_file, project_id, errors, warnings, parent_id, page_number, children, *args, **kwargs):  # noqa: E501
         """Model - a model defined in OpenAPI
 
         Args:
@@ -248,6 +251,7 @@ class Model(ModelNormal):
             project_id (int, none_type):
             errors ([str], none_type): List of errors that happened during IFC processing
             warnings ([str], none_type): List of warnings that happened during IFC processing
+            parent_id (int, none_type): The first page of the pdf
             page_number (int, none_type): The page number of the related pdf
             children ([ModelSerializerWithoutChildren]): Contains additional pages of a pdf
 
@@ -337,6 +341,7 @@ class Model(ModelNormal):
         self.project_id = project_id
         self.errors = errors
         self.warnings = warnings
+        self.parent_id = parent_id
         self.page_number = page_number
         self.children = children
         for var_name, var_value in kwargs.items():
