@@ -136,20 +136,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_create_checker_deprecated(self):
-        """Test case for create_checker_deprecated
-
-        Create a checker to a model  # noqa: E501
-        """
-        pass
-
-    def test_create_checker_result_deprecated(self):
-        """Test case for create_checker_result_deprecated
-
-        Create a CheckerResult  # noqa: E501
-        """
-        pass
-
     def test_create_classification_element_relations_deprecated(self):
         """Test case for create_classification_element_relations_deprecated
 
@@ -339,20 +325,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_delete_checker_deprecated(self):
-        """Test case for delete_checker_deprecated
-
-        Delete a checker of a model  # noqa: E501
-        """
-        pass
-
-    def test_delete_checker_result_deprecated(self):
-        """Test case for delete_checker_result_deprecated
-
-        Delete a CheckerResult  # noqa: E501
-        """
-        pass
-
     def test_delete_element_deprecated(self):
         """Test case for delete_element_deprecated
 
@@ -497,34 +469,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for get_buildings_deprecated
 
         Retrieve all buildings of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_checker_deprecated(self):
-        """Test case for get_checker_deprecated
-
-        Retrieve a checker of a model  # noqa: E501
-        """
-        pass
-
-    def test_get_checker_result_deprecated(self):
-        """Test case for get_checker_result_deprecated
-
-        Retrieve one CheckerResult  # noqa: E501
-        """
-        pass
-
-    def test_get_checker_results_deprecated(self):
-        """Test case for get_checker_results_deprecated
-
-        Retrieve all CheckerResults  # noqa: E501
-        """
-        pass
-
-    def test_get_checkers_deprecated(self):
-        """Test case for get_checkers_deprecated
-
-        Retrieve all checkers of a model  # noqa: E501
         """
         pass
 
@@ -864,13 +808,6 @@ class TestIfcApi(unittest.TestCase):
         """
         pass
 
-    def test_launch_new_check_deprecated(self):
-        """Test case for launch_new_check_deprecated
-
-        Launch a new check on the model  # noqa: E501
-        """
-        pass
-
     def test_link_documents_of_element_deprecated(self):
         """Test case for link_documents_of_element_deprecated
 
@@ -980,20 +917,6 @@ class TestIfcApi(unittest.TestCase):
         """Test case for update_building_plan_positioning_deprecated
 
         Update the postioning of the plan in the building  # noqa: E501
-        """
-        pass
-
-    def test_update_checker_deprecated(self):
-        """Test case for update_checker_deprecated
-
-        Update some fields of a checker of a model  # noqa: E501
-        """
-        pass
-
-    def test_update_checker_result_deprecated(self):
-        """Test case for update_checker_result_deprecated
-
-        Update some fields of a CheckerResult  # noqa: E501
         """
         pass
 

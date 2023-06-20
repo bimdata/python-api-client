@@ -11,6 +11,7 @@ Method | HTTP request | Description
 [**create_extension_status**](BcfApi.md#create_extension_status) | **POST** /bcf/2.1/projects/{projects_pk}/extension/status | Create a TopicStatus
 [**create_extension_type**](BcfApi.md#create_extension_type) | **POST** /bcf/2.1/projects/{projects_pk}/extension/type | Create a TopicType
 [**create_full_topic**](BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
+[**create_pin**](BcfApi.md#create_pin) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin | Create a Pin
 [**create_topic**](BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
 [**create_viewpoint**](BcfApi.md#create_viewpoint) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Create a Viewpoint
 [**delete_comment**](BcfApi.md#delete_comment) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Delete a comment
@@ -19,12 +20,14 @@ Method | HTTP request | Description
 [**delete_extension_stage**](BcfApi.md#delete_extension_stage) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Delete a Stage
 [**delete_extension_status**](BcfApi.md#delete_extension_status) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Delete a TopicStatus
 [**delete_extension_type**](BcfApi.md#delete_extension_type) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Delete a TopicType
+[**delete_pin**](BcfApi.md#delete_pin) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Delete a Pin
 [**delete_topic**](BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 [**delete_viewpoint**](BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
 [**download_bcf_export**](BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
 [**full_update_bcf_project**](BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | Update all fields of a BCF project
 [**full_update_comment**](BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update all fields of a comment
 [**full_update_full_topic**](BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
+[**full_update_pin**](BcfApi.md#full_update_pin) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update all fields of a Pin
 [**full_update_topic**](BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update all fields of a topic
 [**full_update_viewpoint**](BcfApi.md#full_update_viewpoint) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update all fields of a Viewpoint
 [**get_auth**](BcfApi.md#get_auth) | **GET** /bcf/2.1/auth | Retrieve Authentication Information
@@ -37,6 +40,7 @@ Method | HTTP request | Description
 [**get_extensions**](BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
 [**get_full_topic**](BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Retrieve a full topic
 [**get_full_topics**](BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | Retrieve all full topics
+[**get_pins**](BcfApi.md#get_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin | Retrieve all Pins of a viewpoint
 [**get_related_topics**](BcfApi.md#get_related_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/related_topics | Get all related topics
 [**get_selections**](BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection | Retrieve all selections of a viewpoint
 [**get_snapshot**](BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot | Retrieve the viewpoint&#39; snapshot
@@ -46,6 +50,7 @@ Method | HTTP request | Description
 [**get_topics**](BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
 [**get_user**](BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
 [**get_versions**](BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
+[**get_viewpoin_pin**](BcfApi.md#get_viewpoin_pin) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Retrieve a Pin
 [**get_viewpoint**](BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 [**get_viewpoints**](BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 [**get_visibilities**](BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
@@ -58,6 +63,7 @@ Method | HTTP request | Description
 [**update_extension_status**](BcfApi.md#update_extension_status) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Update a TopicStatus
 [**update_extension_type**](BcfApi.md#update_extension_type) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Update a TopicType
 [**update_full_topic**](BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update some fields of a topic
+[**update_pin**](BcfApi.md#update_pin) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update some fields of a Pin
 [**update_topic**](BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update some fields of a topic
 [**update_viewpoint**](BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update some fields of a Viewpoint
 
@@ -881,6 +887,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 components=None,
                 pins=[
                     PinRequest(
+                        guid="guid_example",
                         name="name_example",
                         color="color_example",
                         point=PointRequest(
@@ -888,6 +895,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             y=3.14,
                             z=3.14,
                         ),
+                        index=0,
                     ),
                 ],
                 temp_id=1,
@@ -927,6 +935,127 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FullTopic**](FullTopic.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **create_pin**
+> Pin create_pin(projects_pk, topics_guid, viewpoints_guid, pin_request)
+
+Create a Pin
+
+This is not a standard route. Create a Pin  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+    pin_request = PinRequest(
+        guid="guid_example",
+        name="name_example",
+        color="color_example",
+        point=PointRequest(
+            x=3.14,
+            y=3.14,
+            z=3.14,
+        ),
+        index=0,
+    ) # PinRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Create a Pin
+        api_response = api_instance.create_pin(projects_pk, topics_guid, viewpoints_guid, pin_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->create_pin: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
+ **pin_request** | [**PinRequest**](PinRequest.md)|  |
+
+### Return type
+
+[**Pin**](Pin.md)
 
 ### Authorization
 
@@ -1188,6 +1317,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         components=None,
         pins=[
             PinRequest(
+                guid="guid_example",
                 name="name_example",
                 color="color_example",
                 point=PointRequest(
@@ -1195,6 +1325,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     y=3.14,
                     z=3.14,
                 ),
+                index=0,
             ),
         ],
         temp_id=1,
@@ -1853,6 +1984,114 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **int**| A unique integer value identifying this topic type. |
  **projects_pk** | **int**|  |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**204** | No response body |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **delete_pin**
+> delete_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+
+Delete a Pin
+
+This is not a standard route. Delete a Pin  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    guid = "guid_example" # str | 
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Delete a Pin
+        api_instance.delete_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->delete_pin: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **guid** | **str**|  |
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
 
 ### Return type
 
@@ -2595,6 +2834,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 components=None,
                 pins=[
                     PinRequest(
+                        guid="guid_example",
                         name="name_example",
                         color="color_example",
                         point=PointRequest(
@@ -2602,6 +2842,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             y=3.14,
                             z=3.14,
                         ),
+                        index=0,
                     ),
                 ],
                 temp_id=1,
@@ -2642,6 +2883,129 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FullTopic**](FullTopic.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **full_update_pin**
+> Pin full_update_pin(guid, projects_pk, topics_guid, viewpoints_guid, pin_request)
+
+Update all fields of a Pin
+
+This is not a standard route. Update all fields of a Pin  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    guid = "guid_example" # str | 
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+    pin_request = PinRequest(
+        guid="guid_example",
+        name="name_example",
+        color="color_example",
+        point=PointRequest(
+            x=3.14,
+            y=3.14,
+            z=3.14,
+        ),
+        index=0,
+    ) # PinRequest | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update all fields of a Pin
+        api_response = api_instance.full_update_pin(guid, projects_pk, topics_guid, viewpoints_guid, pin_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->full_update_pin: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **guid** | **str**|  |
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
+ **pin_request** | [**PinRequest**](PinRequest.md)|  |
+
+### Return type
+
+[**Pin**](Pin.md)
 
 ### Authorization
 
@@ -2906,6 +3270,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         components=None,
         pins=[
             PinRequest(
+                guid="guid_example",
                 name="name_example",
                 color="color_example",
                 point=PointRequest(
@@ -2913,6 +3278,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     y=3.14,
                     z=3.14,
                 ),
+                index=0,
             ),
         ],
         temp_id=1,
@@ -4031,6 +4397,112 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **get_pins**
+> [Pin] get_pins(projects_pk, topics_guid, viewpoints_guid)
+
+Retrieve all Pins of a viewpoint
+
+This is not a standard route. Retrieve all Pins of a viewpoint  Required scopes: bcf:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.pin import Pin
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve all Pins of a viewpoint
+        api_response = api_instance.get_pins(projects_pk, topics_guid, viewpoints_guid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->get_pins: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
+
+### Return type
+
+[**[Pin]**](Pin.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **get_related_topics**
 > [str] get_related_topics(guid, projects_pk)
 
@@ -5008,6 +5480,115 @@ This endpoint does not need any parameter.
 **200** |  |  -  |
 **401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
 **403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **get_viewpoin_pin**
+> Pin get_viewpoin_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+
+Retrieve a Pin
+
+This is not a standard route. Retrieve a Pin  Required scopes: bcf:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.pin import Pin
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    guid = "guid_example" # str | 
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Retrieve a Pin
+        api_response = api_instance.get_viewpoin_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->get_viewpoin_pin: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **guid** | **str**|  |
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
+
+### Return type
+
+[**Pin**](Pin.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
 **500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
@@ -6452,6 +7033,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 components=None,
                 pins=[
                     PinRequest(
+                        guid="guid_example",
                         name="name_example",
                         color="color_example",
                         point=PointRequest(
@@ -6459,6 +7041,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             y=3.14,
                             z=3.14,
                         ),
+                        index=0,
                     ),
                 ],
                 temp_id=1,
@@ -6498,6 +7081,138 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**FullTopic**](FullTopic.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**400** | A required field is missing in the body |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **update_pin**
+> Pin update_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+
+Update some fields of a Pin
+
+This is not a standard route. Update some fields of a Pin  Required scopes: bcf:write
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    guid = "guid_example" # str | 
+    projects_pk = 1 # int | 
+    topics_guid = "topics_guid_example" # str | 
+    viewpoints_guid = "viewpoints_guid_example" # str | 
+    patched_pin_request = PatchedPinRequest(
+        guid="guid_example",
+        name="name_example",
+        color="color_example",
+        point=PointRequest(
+            x=3.14,
+            y=3.14,
+            z=3.14,
+        ),
+        index=0,
+    ) # PatchedPinRequest |  (optional)
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Update some fields of a Pin
+        api_response = api_instance.update_pin(guid, projects_pk, topics_guid, viewpoints_guid)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->update_pin: %s\n" % e)
+
+    # example passing only required values which don't have defaults set
+    # and optional values
+    try:
+        # Update some fields of a Pin
+        api_response = api_instance.update_pin(guid, projects_pk, topics_guid, viewpoints_guid, patched_pin_request=patched_pin_request)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->update_pin: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **guid** | **str**|  |
+ **projects_pk** | **int**|  |
+ **topics_guid** | **str**|  |
+ **viewpoints_guid** | **str**|  |
+ **patched_pin_request** | [**PatchedPinRequest**](PatchedPinRequest.md)|  | [optional]
+
+### Return type
+
+[**Pin**](Pin.md)
 
 ### Authorization
 
@@ -6771,6 +7486,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         components=None,
         pins=[
             PinRequest(
+                guid="guid_example",
                 name="name_example",
                 color="color_example",
                 point=PointRequest(
@@ -6778,6 +7494,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     y=3.14,
                     z=3.14,
                 ),
+                index=0,
             ),
         ],
         temp_id=1,

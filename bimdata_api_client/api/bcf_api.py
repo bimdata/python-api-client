@@ -39,12 +39,15 @@ from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProje
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
 from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
 from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
 from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
 from bimdata_api_client.model.patched_viewpoint_request import PatchedViewpointRequest
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
 from bimdata_api_client.model.priority import Priority
 from bimdata_api_client.model.priority_request import PriorityRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
@@ -513,6 +516,81 @@ class BcfApi(object):
                     'projects_pk': 'path',
                     'full_topic_request': 'body',
                     'img_format': 'query',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.create_pin_endpoint = _Endpoint(
+            settings={
+                'response_type': (Pin,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin',
+                'operation_id': 'create_pin',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                    'pin_request',
+                ],
+                'required': [
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                    'pin_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                    'pin_request':
+                        (PinRequest,),
+                },
+                'attribute_map': {
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
+                    'pin_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -1024,6 +1102,76 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.delete_pin_endpoint = _Endpoint(
+            settings={
+                'response_type': None,
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
+                'operation_id': 'delete_pin',
+                'http_method': 'DELETE',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.delete_topic_endpoint = _Endpoint(
             settings={
                 'response_type': None,
@@ -1420,6 +1568,87 @@ class BcfApi(object):
                     'projects_pk': 'path',
                     'full_topic_request': 'body',
                     'img_format': 'query',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
+        self.full_update_pin_endpoint = _Endpoint(
+            settings={
+                'response_type': (Pin,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
+                'operation_id': 'full_update_pin',
+                'http_method': 'PUT',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                    'pin_request',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                    'pin_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                    'pin_request':
+                        (PinRequest,),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
+                    'pin_request': 'body',
                 },
                 'collection_format_map': {
                 }
@@ -2186,6 +2415,72 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.get_pins_endpoint = _Endpoint(
+            settings={
+                'response_type': ([Pin],),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin',
+                'operation_id': 'get_pins',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'required': [
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                },
+                'attribute_map': {
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.get_related_topics_endpoint = _Endpoint(
             settings={
                 'response_type': ([str],),
@@ -2749,6 +3044,78 @@ class BcfApi(object):
                 'attribute_map': {
                 },
                 'location_map': {
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
+        self.get_viewpoin_pin_endpoint = _Endpoint(
+            settings={
+                'response_type': (Pin,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
+                'operation_id': 'get_viewpoin_pin',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
                 },
                 'collection_format_map': {
                 }
@@ -3593,6 +3960,86 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.update_pin_endpoint = _Endpoint(
+            settings={
+                'response_type': (Pin,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid}',
+                'operation_id': 'update_pin',
+                'http_method': 'PATCH',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                    'patched_pin_request',
+                ],
+                'required': [
+                    'guid',
+                    'projects_pk',
+                    'topics_guid',
+                    'viewpoints_guid',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'guid':
+                        (str,),
+                    'projects_pk':
+                        (int,),
+                    'topics_guid':
+                        (str,),
+                    'viewpoints_guid':
+                        (str,),
+                    'patched_pin_request':
+                        (PatchedPinRequest,),
+                },
+                'attribute_map': {
+                    'guid': 'guid',
+                    'projects_pk': 'projects_pk',
+                    'topics_guid': 'topics_guid',
+                    'viewpoints_guid': 'viewpoints_guid',
+                },
+                'location_map': {
+                    'guid': 'path',
+                    'projects_pk': 'path',
+                    'topics_guid': 'path',
+                    'viewpoints_guid': 'path',
+                    'patched_pin_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.update_topic_endpoint = _Endpoint(
             settings={
                 'response_type': (Topic,),
@@ -4322,6 +4769,96 @@ class BcfApi(object):
             full_topic_request
         return self.create_full_topic_endpoint.call_with_http_info(**kwargs)
 
+    def create_pin(
+        self,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        pin_request,
+        **kwargs
+    ):
+        """Create a Pin  # noqa: E501
+
+        This is not a standard route. Create a Pin  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.create_pin(projects_pk, topics_guid, viewpoints_guid, pin_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+            pin_request (PinRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Pin
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        kwargs['pin_request'] = \
+            pin_request
+        return self.create_pin_endpoint.call_with_http_info(**kwargs)
+
     def create_topic(
         self,
         projects_pk,
@@ -4984,6 +5521,96 @@ class BcfApi(object):
             projects_pk
         return self.delete_extension_type_endpoint.call_with_http_info(**kwargs)
 
+    def delete_pin(
+        self,
+        guid,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        **kwargs
+    ):
+        """Delete a Pin  # noqa: E501
+
+        This is not a standard route. Delete a Pin  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.delete_pin(guid, projects_pk, topics_guid, viewpoints_guid, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            None
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        return self.delete_pin_endpoint.call_with_http_info(**kwargs)
+
     def delete_topic(
         self,
         guid,
@@ -5488,6 +6115,100 @@ class BcfApi(object):
         kwargs['full_topic_request'] = \
             full_topic_request
         return self.full_update_full_topic_endpoint.call_with_http_info(**kwargs)
+
+    def full_update_pin(
+        self,
+        guid,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        pin_request,
+        **kwargs
+    ):
+        """Update all fields of a Pin  # noqa: E501
+
+        This is not a standard route. Update all fields of a Pin  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.full_update_pin(guid, projects_pk, topics_guid, viewpoints_guid, pin_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+            pin_request (PinRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Pin
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        kwargs['pin_request'] = \
+            pin_request
+        return self.full_update_pin_endpoint.call_with_http_info(**kwargs)
 
     def full_update_topic(
         self,
@@ -6462,6 +7183,92 @@ class BcfApi(object):
             projects_pk
         return self.get_full_topics_endpoint.call_with_http_info(**kwargs)
 
+    def get_pins(
+        self,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        **kwargs
+    ):
+        """Retrieve all Pins of a viewpoint  # noqa: E501
+
+        This is not a standard route. Retrieve all Pins of a viewpoint  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_pins(projects_pk, topics_guid, viewpoints_guid, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            [Pin]
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        return self.get_pins_endpoint.call_with_http_info(**kwargs)
+
     def get_related_topics(
         self,
         guid,
@@ -7195,6 +8002,96 @@ class BcfApi(object):
             '_content_type')
         kwargs['_host_index'] = kwargs.get('_host_index')
         return self.get_versions_endpoint.call_with_http_info(**kwargs)
+
+    def get_viewpoin_pin(
+        self,
+        guid,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        **kwargs
+    ):
+        """Retrieve a Pin  # noqa: E501
+
+        This is not a standard route. Retrieve a Pin  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.get_viewpoin_pin(guid, projects_pk, topics_guid, viewpoints_guid, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Pin
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        return self.get_viewpoin_pin_endpoint.call_with_http_info(**kwargs)
 
     def get_viewpoint(
         self,
@@ -8198,6 +9095,97 @@ class BcfApi(object):
         kwargs['projects_pk'] = \
             projects_pk
         return self.update_full_topic_endpoint.call_with_http_info(**kwargs)
+
+    def update_pin(
+        self,
+        guid,
+        projects_pk,
+        topics_guid,
+        viewpoints_guid,
+        **kwargs
+    ):
+        """Update some fields of a Pin  # noqa: E501
+
+        This is not a standard route. Update some fields of a Pin  Required scopes: bcf:write  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.update_pin(guid, projects_pk, topics_guid, viewpoints_guid, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            guid (str):
+            projects_pk (int):
+            topics_guid (str):
+            viewpoints_guid (str):
+
+        Keyword Args:
+            patched_pin_request (PatchedPinRequest): [optional]
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Pin
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['guid'] = \
+            guid
+        kwargs['projects_pk'] = \
+            projects_pk
+        kwargs['topics_guid'] = \
+            topics_guid
+        kwargs['viewpoints_guid'] = \
+            viewpoints_guid
+        return self.update_pin_endpoint.call_with_http_info(**kwargs)
 
     def update_topic(
         self,

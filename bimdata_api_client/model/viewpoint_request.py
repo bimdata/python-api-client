@@ -195,7 +195,7 @@ class ViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
+            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 
@@ -288,7 +288,7 @@ class ViewpointRequest(ModelNormal):
             clipping_planes ([ClippingPlaneRequest], none_type): [optional]  # noqa: E501
             snapshot (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
             components (bool, date, datetime, dict, float, int, list, str, none_type): [optional]  # noqa: E501
-            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. [optional]  # noqa: E501
+            pins ([PinRequest], none_type): Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields `pins`, but you can't edit pins through here. You must use dedicated pin routes.. [optional]  # noqa: E501
             temp_id (int, none_type): Only used when using POST on the full-topic route to bind viewpoint with comment. [optional]  # noqa: E501
         """
 

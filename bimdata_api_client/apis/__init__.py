@@ -15,7 +15,6 @@
 
 # Import APIs into API package:
 from bimdata_api_client.api.bcf_api import BcfApi
-from bimdata_api_client.api.checker_api import CheckerApi
 from bimdata_api_client.api.collaboration_api import CollaborationApi
 from bimdata_api_client.api.ifc_api import IfcApi
 from bimdata_api_client.api.model_api import ModelApi

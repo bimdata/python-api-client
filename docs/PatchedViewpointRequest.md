@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **clipping_planes** | [**[ClippingPlaneRequest], none_type**](ClippingPlaneRequest.md) |  | [optional] 
 **snapshot** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
 **components** | **bool, date, datetime, dict, float, int, list, str, none_type** |  | [optional] 
-**pins** | [**[PinRequest], none_type**](PinRequest.md) | Non standard field. Pins (or markers/annotations) are points of interest | [optional] 
+**pins** | [**[PinRequest], none_type**](PinRequest.md) | Non standard field. Pins (or markers/annotations) are points of interest. When creating a Viewpoint you can create pins with the fields &#x60;pins&#x60;, but you can&#39;t edit pins through here. You must use dedicated pin routes. | [optional] 
 **temp_id** | **int, none_type** | Only used when using POST on the full-topic route to bind viewpoint with comment | [optional] 
 **any string name** | **bool, date, datetime, dict, float, int, list, str, none_type** | any string name can be used but the value must be the correct type | [optional]
 

@@ -69,12 +69,15 @@ from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProje
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
 from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopicRequest
 from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
 from bimdata_api_client.model.patched_topic_request import PatchedTopicRequest
 from bimdata_api_client.model.patched_topic_status_request import PatchedTopicStatusRequest
 from bimdata_api_client.model.patched_topic_type_request import PatchedTopicTypeRequest
 from bimdata_api_client.model.patched_viewpoint_request import PatchedViewpointRequest
+from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.pin_request import PinRequest
 from bimdata_api_client.model.priority import Priority
 from bimdata_api_client.model.priority_request import PriorityRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
@@ -164,6 +167,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**create_extension_status**](docs/BcfApi.md#create_extension_status) | **POST** /bcf/2.1/projects/{projects_pk}/extension/status | Create a TopicStatus
 *BcfApi* | [**create_extension_type**](docs/BcfApi.md#create_extension_type) | **POST** /bcf/2.1/projects/{projects_pk}/extension/type | Create a TopicType
 *BcfApi* | [**create_full_topic**](docs/BcfApi.md#create_full_topic) | **POST** /bcf/2.1/projects/{projects_pk}/full-topic | Create a Topic with viewpoints and comments
+*BcfApi* | [**create_pin**](docs/BcfApi.md#create_pin) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin | Create a Pin
 *BcfApi* | [**create_topic**](docs/BcfApi.md#create_topic) | **POST** /bcf/2.1/projects/{projects_pk}/topics | Create a topic
 *BcfApi* | [**create_viewpoint**](docs/BcfApi.md#create_viewpoint) | **POST** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Create a Viewpoint
 *BcfApi* | [**delete_comment**](docs/BcfApi.md#delete_comment) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Delete a comment
@@ -172,12 +176,14 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**delete_extension_stage**](docs/BcfApi.md#delete_extension_stage) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/stage/{id} | Delete a Stage
 *BcfApi* | [**delete_extension_status**](docs/BcfApi.md#delete_extension_status) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Delete a TopicStatus
 *BcfApi* | [**delete_extension_type**](docs/BcfApi.md#delete_extension_type) | **DELETE** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Delete a TopicType
+*BcfApi* | [**delete_pin**](docs/BcfApi.md#delete_pin) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Delete a Pin
 *BcfApi* | [**delete_topic**](docs/BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 *BcfApi* | [**delete_viewpoint**](docs/BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
 *BcfApi* | [**download_bcf_export**](docs/BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
 *BcfApi* | [**full_update_bcf_project**](docs/BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | Update all fields of a BCF project
 *BcfApi* | [**full_update_comment**](docs/BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update all fields of a comment
 *BcfApi* | [**full_update_full_topic**](docs/BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
+*BcfApi* | [**full_update_pin**](docs/BcfApi.md#full_update_pin) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update all fields of a Pin
 *BcfApi* | [**full_update_topic**](docs/BcfApi.md#full_update_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update all fields of a topic
 *BcfApi* | [**full_update_viewpoint**](docs/BcfApi.md#full_update_viewpoint) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update all fields of a Viewpoint
 *BcfApi* | [**get_auth**](docs/BcfApi.md#get_auth) | **GET** /bcf/2.1/auth | Retrieve Authentication Information
@@ -190,6 +196,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_extensions**](docs/BcfApi.md#get_extensions) | **GET** /bcf/2.1/projects/{id}/extensions | Retrieve project extensions
 *BcfApi* | [**get_full_topic**](docs/BcfApi.md#get_full_topic) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Retrieve a full topic
 *BcfApi* | [**get_full_topics**](docs/BcfApi.md#get_full_topics) | **GET** /bcf/2.1/projects/{projects_pk}/full-topic | Retrieve all full topics
+*BcfApi* | [**get_pins**](docs/BcfApi.md#get_pins) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin | Retrieve all Pins of a viewpoint
 *BcfApi* | [**get_related_topics**](docs/BcfApi.md#get_related_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{guid}/related_topics | Get all related topics
 *BcfApi* | [**get_selections**](docs/BcfApi.md#get_selections) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/selection | Retrieve all selections of a viewpoint
 *BcfApi* | [**get_snapshot**](docs/BcfApi.md#get_snapshot) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/snapshot | Retrieve the viewpoint&#39; snapshot
@@ -199,6 +206,7 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**get_topics**](docs/BcfApi.md#get_topics) | **GET** /bcf/2.1/projects/{projects_pk}/topics | Retrieve all topics
 *BcfApi* | [**get_user**](docs/BcfApi.md#get_user) | **GET** /bcf/2.1/current-user | Get current user info
 *BcfApi* | [**get_versions**](docs/BcfApi.md#get_versions) | **GET** /bcf/versions | Retrieve all supported BCF versions by this API
+*BcfApi* | [**get_viewpoin_pin**](docs/BcfApi.md#get_viewpoin_pin) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Retrieve a Pin
 *BcfApi* | [**get_viewpoint**](docs/BcfApi.md#get_viewpoint) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Retrieve a Viewpoint
 *BcfApi* | [**get_viewpoints**](docs/BcfApi.md#get_viewpoints) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints | Retrieve all Viewpoints of a topic
 *BcfApi* | [**get_visibilities**](docs/BcfApi.md#get_visibilities) | **GET** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid}/visibility | Retrieve all visibilities of a viewpoint
@@ -211,39 +219,9 @@ Class | Method | HTTP request | Description
 *BcfApi* | [**update_extension_status**](docs/BcfApi.md#update_extension_status) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/status/{id} | Update a TopicStatus
 *BcfApi* | [**update_extension_type**](docs/BcfApi.md#update_extension_type) | **PATCH** /bcf/2.1/projects/{projects_pk}/extension/type/{id} | Update a TopicType
 *BcfApi* | [**update_full_topic**](docs/BcfApi.md#update_full_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update some fields of a topic
+*BcfApi* | [**update_pin**](docs/BcfApi.md#update_pin) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{viewpoints_guid}/pin/{guid} | Update some fields of a Pin
 *BcfApi* | [**update_topic**](docs/BcfApi.md#update_topic) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Update some fields of a topic
 *BcfApi* | [**update_viewpoint**](docs/BcfApi.md#update_viewpoint) | **PATCH** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Update some fields of a Viewpoint
-*CheckerApi* | [**create_checker**](docs/CheckerApi.md#create_checker) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker | Create a checker to a model
-*CheckerApi* | [**create_checker_result**](docs/CheckerApi.md#create_checker_result) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result | Create a CheckerResult
-*CheckerApi* | [**create_checkplan**](docs/CheckerApi.md#create_checkplan) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Create a Checkplan
-*CheckerApi* | [**create_rule**](docs/CheckerApi.md#create_rule) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Create a Rule
-*CheckerApi* | [**create_rule_component**](docs/CheckerApi.md#create_rule_component) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Create a RuleComponent
-*CheckerApi* | [**create_ruleset**](docs/CheckerApi.md#create_ruleset) | **POST** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Create a Ruleset
-*CheckerApi* | [**delete_checker**](docs/CheckerApi.md#delete_checker) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Delete a checker of a model
-*CheckerApi* | [**delete_checker_result**](docs/CheckerApi.md#delete_checker_result) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
-*CheckerApi* | [**delete_checkplan**](docs/CheckerApi.md#delete_checkplan) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Delete a Checkplan
-*CheckerApi* | [**delete_rule**](docs/CheckerApi.md#delete_rule) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Delete a Rule
-*CheckerApi* | [**delete_rule_component**](docs/CheckerApi.md#delete_rule_component) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Delete a RuleComponent
-*CheckerApi* | [**delete_ruleset**](docs/CheckerApi.md#delete_ruleset) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Delete a Ruleset
-*CheckerApi* | [**get_checker**](docs/CheckerApi.md#get_checker) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Retrieve a checker of a model
-*CheckerApi* | [**get_checker_result**](docs/CheckerApi.md#get_checker_result) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
-*CheckerApi* | [**get_checker_results**](docs/CheckerApi.md#get_checker_results) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
-*CheckerApi* | [**get_checkers**](docs/CheckerApi.md#get_checkers) | **GET** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker | Retrieve all checkers of a model
-*CheckerApi* | [**get_checkplan**](docs/CheckerApi.md#get_checkplan) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Retrieve one Checkplan
-*CheckerApi* | [**get_checkplans**](docs/CheckerApi.md#get_checkplans) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan | Retrieve all Checkplans
-*CheckerApi* | [**get_rule**](docs/CheckerApi.md#get_rule) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Retrieve one Rule
-*CheckerApi* | [**get_rule_component**](docs/CheckerApi.md#get_rule_component) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Retrieve one RuleComponent
-*CheckerApi* | [**get_rule_components**](docs/CheckerApi.md#get_rule_components) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent | Retrieve all RuleComponents
-*CheckerApi* | [**get_rules**](docs/CheckerApi.md#get_rules) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule | Retrieve all Rules
-*CheckerApi* | [**get_ruleset**](docs/CheckerApi.md#get_ruleset) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Retrieve one Ruleset
-*CheckerApi* | [**get_rulesets**](docs/CheckerApi.md#get_rulesets) | **GET** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset | Retrieve all Rulesets
-*CheckerApi* | [**launch_new_check**](docs/CheckerApi.md#launch_new_check) | **POST** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id}/launch-check | Launch a new check on the model
-*CheckerApi* | [**update_checker**](docs/CheckerApi.md#update_checker) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{id} | Update some fields of a checker of a model
-*CheckerApi* | [**update_checker_result**](docs/CheckerApi.md#update_checker_result) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/model/{model_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
-*CheckerApi* | [**update_checkplan**](docs/CheckerApi.md#update_checkplan) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{id} | Update some fields of a Checkplan
-*CheckerApi* | [**update_rule**](docs/CheckerApi.md#update_rule) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{id} | Update some fields of a Rule
-*CheckerApi* | [**update_rule_component**](docs/CheckerApi.md#update_rule_component) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{ruleset_pk}/rule/{rule_pk}/rulecomponent/{id} | Update some fields of a RuleComponent
-*CheckerApi* | [**update_ruleset**](docs/CheckerApi.md#update_ruleset) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/checkplan/{check_plan_pk}/ruleset/{id} | Update some fields of a Ruleset
 *CollaborationApi* | [**accept_user_invitation**](docs/CollaborationApi.md#accept_user_invitation) | **POST** /user/invitations/{id}/accept | Accept an invitation
 *CollaborationApi* | [**accept_validation**](docs/CollaborationApi.md#accept_validation) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/validation/{id}/accept | Accept a validation
 *CollaborationApi* | [**add_document_tag**](docs/CollaborationApi.md#add_document_tag) | **POST** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/tag | Add a tag to a document
@@ -367,8 +345,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**create_access_token_deprecated**](docs/IfcApi.md#create_access_token_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token | Create a token for this model
 *IfcApi* | [**create_building_deprecated**](docs/IfcApi.md#create_building_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building | Create a building of a model
 *IfcApi* | [**create_building_plan_deprecated**](docs/IfcApi.md#create_building_plan_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/add | Create a relation between a 2d model and a building
-*IfcApi* | [**create_checker_deprecated**](docs/IfcApi.md#create_checker_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Create a checker to a model
-*IfcApi* | [**create_checker_result_deprecated**](docs/IfcApi.md#create_checker_result_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Create a CheckerResult
 *IfcApi* | [**create_classification_element_relations_deprecated**](docs/IfcApi.md#create_classification_element_relations_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | Create association between existing classification and existing element
 *IfcApi* | [**create_classifications_of_element_deprecated**](docs/IfcApi.md#create_classifications_of_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Create one or many classifications to an element
 *IfcApi* | [**create_element_deprecated**](docs/IfcApi.md#create_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element | Create an element in the model
@@ -396,8 +372,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**delete_access_token_deprecated**](docs/IfcApi.md#delete_access_token_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Delete a token
 *IfcApi* | [**delete_building_deprecated**](docs/IfcApi.md#delete_building_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Delete a building of a model
 *IfcApi* | [**delete_building_plan_deprecated**](docs/IfcApi.md#delete_building_plan_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id} | Delete the relation between a 2d model and a building
-*IfcApi* | [**delete_checker_deprecated**](docs/IfcApi.md#delete_checker_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Delete a checker of a model
-*IfcApi* | [**delete_checker_result_deprecated**](docs/IfcApi.md#delete_checker_result_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Delete a CheckerResult
 *IfcApi* | [**delete_element_deprecated**](docs/IfcApi.md#delete_element_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Delete an element of a model
 *IfcApi* | [**delete_ifc_deprecated**](docs/IfcApi.md#delete_ifc_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Delete a model
 *IfcApi* | [**delete_ifc_property_definition_deprecated**](docs/IfcApi.md#delete_ifc_property_definition_deprecated) | **DELETE** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/propertydefinition/{id} | Delete a PropertyDefinitions of a model
@@ -419,10 +393,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_building_deprecated**](docs/IfcApi.md#get_building_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Retrieve a building of a model
 *IfcApi* | [**get_building_plan_positioning_deprecated**](docs/IfcApi.md#get_building_plan_positioning_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id}/positioning | Retrieve the postioning of the plan in the building
 *IfcApi* | [**get_buildings_deprecated**](docs/IfcApi.md#get_buildings_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building | Retrieve all buildings of a model
-*IfcApi* | [**get_checker_deprecated**](docs/IfcApi.md#get_checker_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Retrieve a checker of a model
-*IfcApi* | [**get_checker_result_deprecated**](docs/IfcApi.md#get_checker_result_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Retrieve one CheckerResult
-*IfcApi* | [**get_checker_results_deprecated**](docs/IfcApi.md#get_checker_results_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result | Retrieve all CheckerResults
-*IfcApi* | [**get_checkers_deprecated**](docs/IfcApi.md#get_checkers_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker | Retrieve all checkers of a model
 *IfcApi* | [**get_classifications_of_element_deprecated**](docs/IfcApi.md#get_classifications_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/classification | Retrieve all classifications of an element
 *IfcApi* | [**get_documents_of_element_deprecated**](docs/IfcApi.md#get_documents_of_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Retrieve all documents of an element
 *IfcApi* | [**get_element_deprecated**](docs/IfcApi.md#get_element_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Retrieve an element of a model
@@ -471,7 +441,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**get_zone_space_deprecated**](docs/IfcApi.md#get_zone_space_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space/{id} | Retrieve one space of a zone
 *IfcApi* | [**get_zone_spaces_deprecated**](docs/IfcApi.md#get_zone_spaces_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone/{zone_pk}/space | Retrieve all spaces of a zone
 *IfcApi* | [**get_zones_deprecated**](docs/IfcApi.md#get_zones_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/zone | Retrieve zones of a model
-*IfcApi* | [**launch_new_check_deprecated**](docs/IfcApi.md#launch_new_check_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id}/launch-check | Launch a new check on the model
 *IfcApi* | [**link_documents_of_element_deprecated**](docs/IfcApi.md#link_documents_of_element_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/documents | Link one or many documents to an element
 *IfcApi* | [**list_classification_element_relations_deprecated**](docs/IfcApi.md#list_classification_element_relations_deprecated) | **GET** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/classification-element | List all associations between classifications and elements
 *IfcApi* | [**merge_ifcs_deprecated**](docs/IfcApi.md#merge_ifcs_deprecated) | **POST** /cloud/{cloud_pk}/project/{project_pk}/ifc/merge | Merge IFC files
@@ -488,8 +457,6 @@ Class | Method | HTTP request | Description
 *IfcApi* | [**update_access_token_deprecated**](docs/IfcApi.md#update_access_token_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/access_token/{token} | Update some fields of a token
 *IfcApi* | [**update_building_deprecated**](docs/IfcApi.md#update_building_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{uuid} | Update some fields of a building
 *IfcApi* | [**update_building_plan_positioning_deprecated**](docs/IfcApi.md#update_building_plan_positioning_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/building/{building_uuid}/plan/{id}/positioning | Update the postioning of the plan in the building
-*IfcApi* | [**update_checker_deprecated**](docs/IfcApi.md#update_checker_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{id} | Update some fields of a checker of a model
-*IfcApi* | [**update_checker_result_deprecated**](docs/IfcApi.md#update_checker_result_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/checker/{checker_pk}/result/{id} | Update some fields of a CheckerResult
 *IfcApi* | [**update_element_deprecated**](docs/IfcApi.md#update_element_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{uuid} | Update some fields of an element
 *IfcApi* | [**update_element_property_set_property_deprecated**](docs/IfcApi.md#update_element_property_set_property_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{ifc_pk}/element/{element_uuid}/propertyset/{propertyset_pk}/property/{id} | Update a property from an element
 *IfcApi* | [**update_ifc_deprecated**](docs/IfcApi.md#update_ifc_deprecated) | **PATCH** /cloud/{cloud_pk}/project/{project_pk}/ifc/{id} | Update some fields of a model
@@ -676,11 +643,7 @@ Class | Method | HTTP request | Description
  - [BcfProjectRequest](docs/BcfProjectRequest.md)
  - [Building](docs/Building.md)
  - [BuildingModelPlanRequest](docs/BuildingModelPlanRequest.md)
- - [CheckPlan](docs/CheckPlan.md)
- - [CheckPlanRequest](docs/CheckPlanRequest.md)
  - [CheckProjectAccess](docs/CheckProjectAccess.md)
- - [CheckerResult](docs/CheckerResult.md)
- - [CheckerResultRequest](docs/CheckerResultRequest.md)
  - [Classification](docs/Classification.md)
  - [ClassificationRequest](docs/ClassificationRequest.md)
  - [ClippingPlane](docs/ClippingPlane.md)
@@ -728,8 +691,6 @@ Class | Method | HTTP request | Description
  - [GroupRequest](docs/GroupRequest.md)
  - [IfcAccessToken](docs/IfcAccessToken.md)
  - [IfcAccessTokenRequest](docs/IfcAccessTokenRequest.md)
- - [IfcChecker](docs/IfcChecker.md)
- - [IfcCheckerRequest](docs/IfcCheckerRequest.md)
  - [IfcExportRequest](docs/IfcExportRequest.md)
  - [IfcMergeRequest](docs/IfcMergeRequest.md)
  - [IfcOptimizeRequest](docs/IfcOptimizeRequest.md)
@@ -756,7 +717,6 @@ Class | Method | HTTP request | Description
  - [ModelErrorsRequest](docs/ModelErrorsRequest.md)
  - [ModelFiles](docs/ModelFiles.md)
  - [ModelProperty](docs/ModelProperty.md)
- - [ModelRequest](docs/ModelRequest.md)
  - [ModelSerializerWithoutChildren](docs/ModelSerializerWithoutChildren.md)
  - [ModelWithPositioningPlan](docs/ModelWithPositioningPlan.md)
  - [Organization](docs/Organization.md)
@@ -764,8 +724,6 @@ Class | Method | HTTP request | Description
  - [OrthogonalCamera](docs/OrthogonalCamera.md)
  - [OrthogonalCameraRequest](docs/OrthogonalCameraRequest.md)
  - [PatchedBcfProjectRequest](docs/PatchedBcfProjectRequest.md)
- - [PatchedCheckPlanRequest](docs/PatchedCheckPlanRequest.md)
- - [PatchedCheckerResultRequest](docs/PatchedCheckerResultRequest.md)
  - [PatchedClassificationRequest](docs/PatchedClassificationRequest.md)
  - [PatchedCloudRequest](docs/PatchedCloudRequest.md)
  - [PatchedCommentRequest](docs/PatchedCommentRequest.md)
@@ -776,10 +734,10 @@ Class | Method | HTTP request | Description
  - [PatchedGroupFolderRequest](docs/PatchedGroupFolderRequest.md)
  - [PatchedGroupRequest](docs/PatchedGroupRequest.md)
  - [PatchedIfcAccessTokenRequest](docs/PatchedIfcAccessTokenRequest.md)
- - [PatchedIfcCheckerRequest](docs/PatchedIfcCheckerRequest.md)
  - [PatchedLabelRequest](docs/PatchedLabelRequest.md)
  - [PatchedLayerRequest](docs/PatchedLayerRequest.md)
  - [PatchedModelRequest](docs/PatchedModelRequest.md)
+ - [PatchedPinRequest](docs/PatchedPinRequest.md)
  - [PatchedPositioningPlanRequest](docs/PatchedPositioningPlanRequest.md)
  - [PatchedPriorityRequest](docs/PatchedPriorityRequest.md)
  - [PatchedProcessorHandlerRequest](docs/PatchedProcessorHandlerRequest.md)
@@ -788,9 +746,6 @@ Class | Method | HTTP request | Description
  - [PatchedPropertyDefinitionRequest](docs/PatchedPropertyDefinitionRequest.md)
  - [PatchedPropertyRequest](docs/PatchedPropertyRequest.md)
  - [PatchedPropertySetRequest](docs/PatchedPropertySetRequest.md)
- - [PatchedRuleComponentRequest](docs/PatchedRuleComponentRequest.md)
- - [PatchedRuleRequest](docs/PatchedRuleRequest.md)
- - [PatchedRulesetRequest](docs/PatchedRulesetRequest.md)
  - [PatchedSpaceRequest](docs/PatchedSpaceRequest.md)
  - [PatchedStageRequest](docs/PatchedStageRequest.md)
  - [PatchedStoreyBuildingRequest](docs/PatchedStoreyBuildingRequest.md)
@@ -863,12 +818,6 @@ Class | Method | HTTP request | Description
  - [RawUnit](docs/RawUnit.md)
  - [RawUnitRequest](docs/RawUnitRequest.md)
  - [RecursiveFolderChildren](docs/RecursiveFolderChildren.md)
- - [Rule](docs/Rule.md)
- - [RuleComponent](docs/RuleComponent.md)
- - [RuleComponentRequest](docs/RuleComponentRequest.md)
- - [RuleRequest](docs/RuleRequest.md)
- - [Ruleset](docs/Ruleset.md)
- - [RulesetRequest](docs/RulesetRequest.md)
  - [SelfBcfUser](docs/SelfBcfUser.md)
  - [SelfUser](docs/SelfUser.md)
  - [ShortUser](docs/ShortUser.md)

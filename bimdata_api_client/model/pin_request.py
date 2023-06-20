@@ -69,6 +69,10 @@ class PinRequest(ModelNormal):
         ('color',): {
             'max_length': 8,
         },
+        ('index',): {
+            'inclusive_maximum': 2147483647,
+            'inclusive_minimum': 0,
+        },
     }
 
     @cached_property
@@ -95,8 +99,10 @@ class PinRequest(ModelNormal):
         lazy_import()
         return {
             'point': (PointRequest,),  # noqa: E501
+            'guid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
+            'index': (int, none_type,),  # noqa: E501
         }
 
     @cached_property
@@ -106,8 +112,10 @@ class PinRequest(ModelNormal):
 
     attribute_map = {
         'point': 'point',  # noqa: E501
+        'guid': 'guid',  # noqa: E501
         'name': 'name',  # noqa: E501
         'color': 'color',  # noqa: E501
+        'index': 'index',  # noqa: E501
     }
 
     read_only_vars = {
@@ -154,8 +162,10 @@ class PinRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            guid (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            index (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)
@@ -241,8 +251,10 @@ class PinRequest(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
+            guid (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
+            index (int, none_type): [optional]  # noqa: E501
         """
 
         _check_type = kwargs.pop('_check_type', True)

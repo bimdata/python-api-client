@@ -13,11 +13,13 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.rule_component_request import RuleComponentRequest
+from bimdata_api_client.model.point_request import PointRequest
+globals()['PointRequest'] = PointRequest
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 
 
-class TestRuleComponentRequest(unittest.TestCase):
-    """RuleComponentRequest unit test stubs"""
+class TestPatchedPinRequest(unittest.TestCase):
+    """PatchedPinRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -25,10 +27,10 @@ class TestRuleComponentRequest(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testRuleComponentRequest(self):
-        """Test RuleComponentRequest"""
+    def testPatchedPinRequest(self):
+        """Test PatchedPinRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = RuleComponentRequest()  # noqa: E501
+        # model = PatchedPinRequest()  # noqa: E501
         pass
 
 

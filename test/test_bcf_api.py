@@ -73,6 +73,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_create_pin(self):
+        """Test case for create_pin
+
+        Create a Pin  # noqa: E501
+        """
+        pass
+
     def test_create_topic(self):
         """Test case for create_topic
 
@@ -129,6 +136,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_delete_pin(self):
+        """Test case for delete_pin
+
+        Delete a Pin  # noqa: E501
+        """
+        pass
+
     def test_delete_topic(self):
         """Test case for delete_topic
 
@@ -168,6 +182,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for full_update_full_topic
 
         Update all fields of a topic  # noqa: E501
+        """
+        pass
+
+    def test_full_update_pin(self):
+        """Test case for full_update_pin
+
+        Update all fields of a Pin  # noqa: E501
         """
         pass
 
@@ -255,6 +276,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_get_pins(self):
+        """Test case for get_pins
+
+        Retrieve all Pins of a viewpoint  # noqa: E501
+        """
+        pass
+
     def test_get_related_topics(self):
         """Test case for get_related_topics
 
@@ -315,6 +343,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for get_versions
 
         Retrieve all supported BCF versions by this API  # noqa: E501
+        """
+        pass
+
+    def test_get_viewpoin_pin(self):
+        """Test case for get_viewpoin_pin
+
+        Retrieve a Pin  # noqa: E501
         """
         pass
 
@@ -399,6 +434,13 @@ class TestBcfApi(unittest.TestCase):
         """Test case for update_full_topic
 
         Update some fields of a topic  # noqa: E501
+        """
+        pass
+
+    def test_update_pin(self):
+        """Test case for update_pin
+
+        Update some fields of a Pin  # noqa: E501
         """
         pass
 

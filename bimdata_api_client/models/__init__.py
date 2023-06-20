@@ -14,11 +14,7 @@ from bimdata_api_client.model.bcf_project import BcfProject
 from bimdata_api_client.model.bcf_project_request import BcfProjectRequest
 from bimdata_api_client.model.building import Building
 from bimdata_api_client.model.building_model_plan_request import BuildingModelPlanRequest
-from bimdata_api_client.model.check_plan import CheckPlan
-from bimdata_api_client.model.check_plan_request import CheckPlanRequest
 from bimdata_api_client.model.check_project_access import CheckProjectAccess
-from bimdata_api_client.model.checker_result import CheckerResult
-from bimdata_api_client.model.checker_result_request import CheckerResultRequest
 from bimdata_api_client.model.classification import Classification
 from bimdata_api_client.model.classification_request import ClassificationRequest
 from bimdata_api_client.model.clipping_plane import ClippingPlane
@@ -66,8 +62,6 @@ from bimdata_api_client.model.group_folder_read import GroupFolderRead
 from bimdata_api_client.model.group_request import GroupRequest
 from bimdata_api_client.model.ifc_access_token import IfcAccessToken
 from bimdata_api_client.model.ifc_access_token_request import IfcAccessTokenRequest
-from bimdata_api_client.model.ifc_checker import IfcChecker
-from bimdata_api_client.model.ifc_checker_request import IfcCheckerRequest
 from bimdata_api_client.model.ifc_export_request import IfcExportRequest
 from bimdata_api_client.model.ifc_merge_request import IfcMergeRequest
 from bimdata_api_client.model.ifc_optimize_request import IfcOptimizeRequest
@@ -94,7 +88,6 @@ from bimdata_api_client.model.model_errors import ModelErrors
 from bimdata_api_client.model.model_errors_request import ModelErrorsRequest
 from bimdata_api_client.model.model_files import ModelFiles
 from bimdata_api_client.model.model_property import ModelProperty
-from bimdata_api_client.model.model_request import ModelRequest
 from bimdata_api_client.model.model_serializer_without_children import ModelSerializerWithoutChildren
 from bimdata_api_client.model.model_with_positioning_plan import ModelWithPositioningPlan
 from bimdata_api_client.model.organization import Organization
@@ -102,8 +95,6 @@ from bimdata_api_client.model.organization_request import OrganizationRequest
 from bimdata_api_client.model.orthogonal_camera import OrthogonalCamera
 from bimdata_api_client.model.orthogonal_camera_request import OrthogonalCameraRequest
 from bimdata_api_client.model.patched_bcf_project_request import PatchedBcfProjectRequest
-from bimdata_api_client.model.patched_check_plan_request import PatchedCheckPlanRequest
-from bimdata_api_client.model.patched_checker_result_request import PatchedCheckerResultRequest
 from bimdata_api_client.model.patched_classification_request import PatchedClassificationRequest
 from bimdata_api_client.model.patched_cloud_request import PatchedCloudRequest
 from bimdata_api_client.model.patched_comment_request import PatchedCommentRequest
@@ -114,10 +105,10 @@ from bimdata_api_client.model.patched_full_topic_request import PatchedFullTopic
 from bimdata_api_client.model.patched_group_folder_request import PatchedGroupFolderRequest
 from bimdata_api_client.model.patched_group_request import PatchedGroupRequest
 from bimdata_api_client.model.patched_ifc_access_token_request import PatchedIfcAccessTokenRequest
-from bimdata_api_client.model.patched_ifc_checker_request import PatchedIfcCheckerRequest
 from bimdata_api_client.model.patched_label_request import PatchedLabelRequest
 from bimdata_api_client.model.patched_layer_request import PatchedLayerRequest
 from bimdata_api_client.model.patched_model_request import PatchedModelRequest
+from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 from bimdata_api_client.model.patched_positioning_plan_request import PatchedPositioningPlanRequest
 from bimdata_api_client.model.patched_priority_request import PatchedPriorityRequest
 from bimdata_api_client.model.patched_processor_handler_request import PatchedProcessorHandlerRequest
@@ -126,9 +117,6 @@ from bimdata_api_client.model.patched_project_request import PatchedProjectReque
 from bimdata_api_client.model.patched_property_definition_request import PatchedPropertyDefinitionRequest
 from bimdata_api_client.model.patched_property_request import PatchedPropertyRequest
 from bimdata_api_client.model.patched_property_set_request import PatchedPropertySetRequest
-from bimdata_api_client.model.patched_rule_component_request import PatchedRuleComponentRequest
-from bimdata_api_client.model.patched_rule_request import PatchedRuleRequest
-from bimdata_api_client.model.patched_ruleset_request import PatchedRulesetRequest
 from bimdata_api_client.model.patched_space_request import PatchedSpaceRequest
 from bimdata_api_client.model.patched_stage_request import PatchedStageRequest
 from bimdata_api_client.model.patched_storey_building_request import PatchedStoreyBuildingRequest
@@ -201,12 +189,6 @@ from bimdata_api_client.model.raw_system_request import RawSystemRequest
 from bimdata_api_client.model.raw_unit import RawUnit
 from bimdata_api_client.model.raw_unit_request import RawUnitRequest
 from bimdata_api_client.model.recursive_folder_children import RecursiveFolderChildren
-from bimdata_api_client.model.rule import Rule
-from bimdata_api_client.model.rule_component import RuleComponent
-from bimdata_api_client.model.rule_component_request import RuleComponentRequest
-from bimdata_api_client.model.rule_request import RuleRequest
-from bimdata_api_client.model.ruleset import Ruleset
-from bimdata_api_client.model.ruleset_request import RulesetRequest
 from bimdata_api_client.model.self_bcf_user import SelfBcfUser
 from bimdata_api_client.model.self_user import SelfUser
 from bimdata_api_client.model.short_user import ShortUser
