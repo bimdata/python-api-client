@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.14.0 (2023-06-20)
+### Feature
+* Add pins routes (#663)
+
+* WIP: add pins detail views
+
+* fix view and add tests ([`8ad8d81`](https://github.com/bimdata/python-api-client/commit/8ad8d81e62fd9c2f9083a4bc6c4908fed4f4aac3))
+
 ## v9.13.1 (2023-06-15)
 ### Fix
 * Add parent_id field in model ([`7ec69f0`](https://github.com/bimdata/python-api-client/commit/7ec69f034ceaa5620ef3a68b254375d832be3ee7))
