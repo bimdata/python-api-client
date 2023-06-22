@@ -155,6 +155,7 @@ bimdata_api_client/model/project.py
 bimdata_api_client/model/project_access_token.py
 bimdata_api_client/model/project_access_token_request.py
 bimdata_api_client/model/project_folder_tree.py
+bimdata_api_client/model/project_import_request.py
 bimdata_api_client/model/project_invitation.py
 bimdata_api_client/model/project_invitation_request.py
 bimdata_api_client/model/project_request.py
@@ -394,6 +395,7 @@ docs/Project.md
 docs/ProjectAccessToken.md
 docs/ProjectAccessTokenRequest.md
 docs/ProjectFolderTree.md
+docs/ProjectImportRequest.md
 docs/ProjectInvitation.md
 docs/ProjectInvitationRequest.md
 docs/ProjectRequest.md
@@ -636,6 +638,7 @@ test/test_project.py
 test/test_project_access_token.py
 test/test_project_access_token_request.py
 test/test_project_folder_tree.py
+test/test_project_import_request.py
 test/test_project_invitation.py
 test/test_project_invitation_request.py
 test/test_project_request.py

@@ -305,6 +305,7 @@ Class | Method | HTTP request | Description
 *CollaborationApi* | [**get_visa_comment**](docs/CollaborationApi.md#get_visa_comment) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment/{id} | Retrieve a comment
 *CollaborationApi* | [**get_visa_comments**](docs/CollaborationApi.md#get_visa_comments) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa/{visa_pk}/comment | List all comment of a visa
 *CollaborationApi* | [**get_visas**](docs/CollaborationApi.md#get_visas) | **GET** /cloud/{cloud_pk}/project/{project_pk}/document/{document_pk}/visa | List all visas of a document
+*CollaborationApi* | [**import_from_project**](docs/CollaborationApi.md#import_from_project) | **POST** /cloud/{cloud_pk}/project/{id}/import_from | Import data from a project
 *CollaborationApi* | [**import_manage_group**](docs/CollaborationApi.md#import_manage_group) | **POST** /cloud/{cloud_pk}/project/{project_pk}/group/import | Import a group from another project
 *CollaborationApi* | [**invite_cloud_user**](docs/CollaborationApi.md#invite_cloud_user) | **POST** /cloud/{cloud_pk}/invitation | Invite a cloud administrator
 *CollaborationApi* | [**invite_project_user**](docs/CollaborationApi.md#invite_project_user) | **POST** /cloud/{cloud_pk}/project/{project_pk}/invitation | Invite a project member
@@ -778,6 +779,7 @@ Class | Method | HTTP request | Description
  - [ProjectAccessToken](docs/ProjectAccessToken.md)
  - [ProjectAccessTokenRequest](docs/ProjectAccessTokenRequest.md)
  - [ProjectFolderTree](docs/ProjectFolderTree.md)
+ - [ProjectImportRequest](docs/ProjectImportRequest.md)
  - [ProjectInvitation](docs/ProjectInvitation.md)
  - [ProjectInvitationRequest](docs/ProjectInvitationRequest.md)
  - [ProjectRequest](docs/ProjectRequest.md)

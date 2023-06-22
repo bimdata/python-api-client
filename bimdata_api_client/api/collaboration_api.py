@@ -57,6 +57,7 @@ from bimdata_api_client.model.project import Project
 from bimdata_api_client.model.project_access_token import ProjectAccessToken
 from bimdata_api_client.model.project_access_token_request import ProjectAccessTokenRequest
 from bimdata_api_client.model.project_folder_tree import ProjectFolderTree
+from bimdata_api_client.model.project_import_request import ProjectImportRequest
 from bimdata_api_client.model.project_invitation import ProjectInvitation
 from bimdata_api_client.model.project_invitation_request import ProjectInvitationRequest
 from bimdata_api_client.model.project_request import ProjectRequest
@@ -5453,6 +5454,75 @@ class CollaborationApi(object):
             },
             api_client=api_client
         )
+        self.import_from_project_endpoint = _Endpoint(
+            settings={
+                'response_type': (Project,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/cloud/{cloud_pk}/project/{id}/import_from',
+                'operation_id': 'import_from_project',
+                'http_method': 'POST',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'cloud_pk',
+                    'id',
+                    'project_import_request',
+                ],
+                'required': [
+                    'cloud_pk',
+                    'id',
+                    'project_import_request',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'cloud_pk':
+                        (int,),
+                    'id':
+                        (int,),
+                    'project_import_request':
+                        (ProjectImportRequest,),
+                },
+                'attribute_map': {
+                    'cloud_pk': 'cloud_pk',
+                    'id': 'id',
+                },
+                'location_map': {
+                    'cloud_pk': 'path',
+                    'id': 'path',
+                    'project_import_request': 'body',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [
+                    'application/json',
+                    'application/x-www-form-urlencoded',
+                    'multipart/form-data'
+                ]
+            },
+            api_client=api_client
+        )
         self.import_manage_group_endpoint = _Endpoint(
             settings={
                 'response_type': ([Group],),
@@ -8303,7 +8373,7 @@ class CollaborationApi(object):
     ):
         """Create a document  # noqa: E501
 
-        Create a document. If the document is one of {'DXF', 'OBJ', 'IFC', 'POINT_CLOUD', 'GLTF', 'DWG'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
+        Create a document. If the document is one of {'GLTF', 'POINT_CLOUD', 'DWG', 'OBJ', 'IFC', 'DXF'}, a model will be created and attached to this document  Required scopes: document:write  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
@@ -14201,6 +14271,92 @@ class CollaborationApi(object):
             project_pk
         return self.get_visas_endpoint.call_with_http_info(**kwargs)
 
+    def import_from_project(
+        self,
+        cloud_pk,
+        id,
+        project_import_request,
+        **kwargs
+    ):
+        """Import data from a project  # noqa: E501
+
+        Import dms tree and/or the groups from a project  Required scopes: org:manage  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.import_from_project(cloud_pk, id, project_import_request, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            cloud_pk (int):
+            id (int): A unique integer value identifying this project.
+            project_import_request (ProjectImportRequest):
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            Project
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['cloud_pk'] = \
+            cloud_pk
+        kwargs['id'] = \
+            id
+        kwargs['project_import_request'] = \
+            project_import_request
+        return self.import_from_project_endpoint.call_with_http_info(**kwargs)
+
     def import_manage_group(
         self,
         cloud_pk,
@@ -14210,7 +14366,7 @@ class CollaborationApi(object):
     ):
         """Import a group from another project  # noqa: E501
 
-        Import a group from another project. Must be an admin of the project  Required scopes: org:manage  # noqa: E501
+        DEPECRATED: Use ImportFromProject instead  Required scopes: org:manage  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
 
