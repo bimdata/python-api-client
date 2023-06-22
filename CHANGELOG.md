@@ -2,6 +2,18 @@
 
 <!--next-version-placeholder-->
 
+## v9.15.0 (2023-06-22)
+### Feature
+* Import from project route (#664)
+
+* feat: clone project route
+
+* renaming route, reverse pk and project_id
+
+* renaming
+
+* simpler help text ([`7e45889`](https://github.com/bimdata/python-api-client/commit/7e4588908ae01e5763e65058eccdf7852a2180da))
+
 ## v9.14.0 (2023-06-20)
 ### Feature
 * Add pins routes (#663)
