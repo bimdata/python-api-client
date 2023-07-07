@@ -129,8 +129,9 @@ class Document(ModelNormal):
             'model_id': (int, none_type,),  # noqa: E501
             'model_type': (str, none_type,),  # noqa: E501
             'ifc_id': (int, none_type,),  # noqa: E501
-            'user_permission': (int,),  # noqa: E501
+            'head_id': (int, none_type,),  # noqa: E501
             'is_head_version': (bool,),  # noqa: E501
+            'user_permission': (int,),  # noqa: E501
             'office_preview': (str, none_type,),  # noqa: E501
             'parent_id': (int, none_type,),  # noqa: E501
             'file_name': (str,),  # noqa: E501
@@ -156,8 +157,9 @@ class Document(ModelNormal):
         'model_id': 'model_id',  # noqa: E501
         'model_type': 'model_type',  # noqa: E501
         'ifc_id': 'ifc_id',  # noqa: E501
-        'user_permission': 'user_permission',  # noqa: E501
+        'head_id': 'head_id',  # noqa: E501
         'is_head_version': 'is_head_version',  # noqa: E501
+        'user_permission': 'user_permission',  # noqa: E501
         'office_preview': 'office_preview',  # noqa: E501
         'parent_id': 'parent_id',  # noqa: E501
         'file_name': 'file_name',  # noqa: E501
@@ -176,8 +178,9 @@ class Document(ModelNormal):
         'model_id',  # noqa: E501
         'model_type',  # noqa: E501
         'ifc_id',  # noqa: E501
-        'user_permission',  # noqa: E501
+        'head_id',  # noqa: E501
         'is_head_version',  # noqa: E501
+        'user_permission',  # noqa: E501
         'office_preview',  # noqa: E501
     }
 
@@ -185,7 +188,7 @@ class Document(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, user_permission, is_head_version, office_preview, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, created_by, project, name, file, size, tags, visas, created_at, updated_at, model_id, model_type, ifc_id, head_id, is_head_version, user_permission, office_preview, *args, **kwargs):  # noqa: E501
         """Document - a model defined in OpenAPI
 
         Args:
@@ -202,8 +205,9 @@ class Document(ModelNormal):
             model_id (int, none_type):
             model_type (str, none_type): Model's type. Values can be IFC, DWG, DXF, GLTF, PDF, JPEG, PNG, OBJ, POINT_CLOUD
             ifc_id (int, none_type): DEPRECATED: Use 'model_id' instead.
-            user_permission (int): Aggregate of group user permissions and folder default permission
+            head_id (int, none_type): Document id of head version
             is_head_version (bool): Document is a head of version or is owned by another document
+            user_permission (int): Aggregate of group user permissions and folder default permission
             office_preview (str, none_type): Office files will be converted as pdf to provide a web preview. Supported extensions are .ppt, .pptx, .odp, .xls, .xlsx, .ods, .doc, .docx, .odt
 
         Keyword Args:
@@ -280,8 +284,9 @@ class Document(ModelNormal):
         self.model_id = model_id
         self.model_type = model_type
         self.ifc_id = ifc_id
-        self.user_permission = user_permission
+        self.head_id = head_id
         self.is_head_version = is_head_version
+        self.user_permission = user_permission
         self.office_preview = office_preview
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
