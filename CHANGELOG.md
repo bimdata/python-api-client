@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.15.1 (2023-07-07)
+### Fix
+* Add head_id field to Document serializer ([#669](https://github.com/bimdata/python-api-client/issues/669)) ([`02c7125`](https://github.com/bimdata/python-api-client/commit/02c71259431aa17f56c50fafe8ecef2e61702860))
+
 ## v9.15.0 (2023-06-22)
 ### Feature
 * Import from project route (#664)
