@@ -890,10 +890,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         guid="guid_example",
                         name="name_example",
                         color="color_example",
-                        point=PointRequest(
+                        point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
-                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -1026,10 +1025,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         guid="guid_example",
         name="name_example",
         color="color_example",
-        point=PointRequest(
+        point=GeometryPointRequest(
             x=3.14,
             y=3.14,
-            z=3.14,
         ),
         index=0,
     ) # PinRequest | 
@@ -1320,10 +1318,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 guid="guid_example",
                 name="name_example",
                 color="color_example",
-                point=PointRequest(
+                point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
-                    z=3.14,
                 ),
                 index=0,
             ),
@@ -2837,10 +2834,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         guid="guid_example",
                         name="name_example",
                         color="color_example",
-                        point=PointRequest(
+                        point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
-                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -2975,10 +2971,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         guid="guid_example",
         name="name_example",
         color="color_example",
-        point=PointRequest(
+        point=GeometryPointRequest(
             x=3.14,
             y=3.14,
-            z=3.14,
         ),
         index=0,
     ) # PinRequest | 
@@ -3273,10 +3268,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 guid="guid_example",
                 name="name_example",
                 color="color_example",
-                point=PointRequest(
+                point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
-                    z=3.14,
                 ),
                 index=0,
             ),
@@ -7036,10 +7030,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         guid="guid_example",
                         name="name_example",
                         color="color_example",
-                        point=PointRequest(
+                        point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
-                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -7173,10 +7166,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         guid="guid_example",
         name="name_example",
         color="color_example",
-        point=PointRequest(
+        point=GeometryPointRequest(
             x=3.14,
             y=3.14,
-            z=3.14,
         ),
         index=0,
     ) # PatchedPinRequest |  (optional)
@@ -7489,10 +7481,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 guid="guid_example",
                 name="name_example",
                 color="color_example",
-                point=PointRequest(
+                point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
-                    z=3.14,
                 ),
                 index=0,
             ),

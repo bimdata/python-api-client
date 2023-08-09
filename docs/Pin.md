@@ -4,7 +4,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**point** | [**Point**](Point.md) |  | 
+**point** | [**GeometryPoint**](GeometryPoint.md) |  | 
 **guid** | **str** |  | [optional] 
 **name** | **str, none_type** |  | [optional] 
 **color** | **str, none_type** |  | [optional] 

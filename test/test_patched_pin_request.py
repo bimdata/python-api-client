@@ -13,8 +13,8 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.point_request import PointRequest
-globals()['PointRequest'] = PointRequest
+from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
+globals()['GeometryPointRequest'] = GeometryPointRequest
 from bimdata_api_client.model.patched_pin_request import PatchedPinRequest
 
 

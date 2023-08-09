@@ -56,6 +56,8 @@ from bimdata_api_client.model.folder_without_children import FolderWithoutChildr
 from bimdata_api_client.model.folder_without_children_request import FolderWithoutChildrenRequest
 from bimdata_api_client.model.full_topic import FullTopic
 from bimdata_api_client.model.full_topic_request import FullTopicRequest
+from bimdata_api_client.model.geometry_point import GeometryPoint
+from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
 from bimdata_api_client.model.group import Group
 from bimdata_api_client.model.group_folder import GroupFolder
 from bimdata_api_client.model.group_folder_read import GroupFolderRead

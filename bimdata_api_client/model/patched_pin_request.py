@@ -31,8 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.point_request import PointRequest
-    globals()['PointRequest'] = PointRequest
+    from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
+    globals()['GeometryPointRequest'] = GeometryPointRequest
 
 
 class PatchedPinRequest(ModelNormal):
@@ -101,7 +101,7 @@ class PatchedPinRequest(ModelNormal):
             'guid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
-            'point': (PointRequest,),  # noqa: E501
+            'point': (GeometryPointRequest,),  # noqa: E501
             'index': (int, none_type,),  # noqa: E501
         }
 
@@ -162,7 +162,7 @@ class PatchedPinRequest(ModelNormal):
             guid (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
-            point (PointRequest): [optional]  # noqa: E501
+            point (GeometryPointRequest): [optional]  # noqa: E501
             index (int, none_type): [optional]  # noqa: E501
         """
 
@@ -248,7 +248,7 @@ class PatchedPinRequest(ModelNormal):
             guid (str): [optional]  # noqa: E501
             name (str, none_type): [optional]  # noqa: E501
             color (str, none_type): [optional]  # noqa: E501
-            point (PointRequest): [optional]  # noqa: E501
+            point (GeometryPointRequest): [optional]  # noqa: E501
             index (int, none_type): [optional]  # noqa: E501
         """
 

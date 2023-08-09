@@ -4306,6 +4306,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             name="name_example",
             longname="longname_example",
             uuid="uuid_example",
+            geometry=[
+                GeometryPointRequest(
+                    x=3.14,
+                    y=3.14,
+                ),
+            ],
         ),
     ] # [SpaceRequest] | 
 
@@ -4994,6 +5000,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     name="name_example",
                     longname="longname_example",
                     uuid="uuid_example",
+                    geometry=[
+                        GeometryPointRequest(
+                            x=3.14,
+                            y=3.14,
+                        ),
+                    ],
                 ),
             ],
             color="color_example",
@@ -16771,6 +16783,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         name="name_example",
         longname="longname_example",
         uuid="uuid_example",
+        geometry=[
+            GeometryPointRequest(
+                x=3.14,
+                y=3.14,
+            ),
+        ],
     ) # PatchedSpaceRequest |  (optional)
 
     # example passing only required values which don't have defaults set
@@ -17291,6 +17309,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         name="name_example",
                         longname="longname_example",
                         uuid="uuid_example",
+                        geometry=[
+                            GeometryPointRequest(
+                                x=3.14,
+                                y=3.14,
+                            ),
+                        ],
                     ),
                 ],
                 color="color_example",
@@ -17302,6 +17326,12 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 name="name_example",
                 longname="longname_example",
                 uuid="uuid_example",
+                geometry=[
+                    GeometryPointRequest(
+                        x=3.14,
+                        y=3.14,
+                    ),
+                ],
             ),
         ],
         color="color_example",

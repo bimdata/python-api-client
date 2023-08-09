@@ -31,8 +31,8 @@ from bimdata_api_client.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from bimdata_api_client.model.point_request import PointRequest
-    globals()['PointRequest'] = PointRequest
+    from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
+    globals()['GeometryPointRequest'] = GeometryPointRequest
 
 
 class PinRequest(ModelNormal):
@@ -98,7 +98,7 @@ class PinRequest(ModelNormal):
         """
         lazy_import()
         return {
-            'point': (PointRequest,),  # noqa: E501
+            'point': (GeometryPointRequest,),  # noqa: E501
             'guid': (str,),  # noqa: E501
             'name': (str, none_type,),  # noqa: E501
             'color': (str, none_type,),  # noqa: E501
@@ -129,7 +129,7 @@ class PinRequest(ModelNormal):
         """PinRequest - a model defined in OpenAPI
 
         Args:
-            point (PointRequest):
+            point (GeometryPointRequest):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -218,7 +218,7 @@ class PinRequest(ModelNormal):
         """PinRequest - a model defined in OpenAPI
 
         Args:
-            point (PointRequest):
+            point (GeometryPointRequest):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

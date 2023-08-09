@@ -13,13 +13,11 @@ import sys
 import unittest
 
 import bimdata_api_client
-from bimdata_api_client.model.geometry_point import GeometryPoint
-globals()['GeometryPoint'] = GeometryPoint
-from bimdata_api_client.model.pin import Pin
+from bimdata_api_client.model.geometry_point_request import GeometryPointRequest
 
 
-class TestPin(unittest.TestCase):
-    """Pin unit test stubs"""
+class TestGeometryPointRequest(unittest.TestCase):
+    """GeometryPointRequest unit test stubs"""
 
     def setUp(self):
         pass
@@ -27,10 +25,10 @@ class TestPin(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPin(self):
-        """Test Pin"""
+    def testGeometryPointRequest(self):
+        """Test GeometryPointRequest"""
         # FIXME: construct object with mandatory attributes with example values
-        # model = Pin()  # noqa: E501
+        # model = GeometryPointRequest()  # noqa: E501
         pass
 
 

@@ -62,6 +62,8 @@ bimdata_api_client/model/folder_without_children.py
 bimdata_api_client/model/folder_without_children_request.py
 bimdata_api_client/model/full_topic.py
 bimdata_api_client/model/full_topic_request.py
+bimdata_api_client/model/geometry_point.py
+bimdata_api_client/model/geometry_point_request.py
 bimdata_api_client/model/group.py
 bimdata_api_client/model/group_folder.py
 bimdata_api_client/model/group_folder_read.py
@@ -300,6 +302,8 @@ docs/FolderWithoutChildren.md
 docs/FolderWithoutChildrenRequest.md
 docs/FullTopic.md
 docs/FullTopicRequest.md
+docs/GeometryPoint.md
+docs/GeometryPointRequest.md
 docs/Group.md
 docs/GroupFolder.md
 docs/GroupFolderRead.md
@@ -543,6 +547,8 @@ test/test_folder_without_children.py
 test/test_folder_without_children_request.py
 test/test_full_topic.py
 test/test_full_topic_request.py
+test/test_geometry_point.py
+test/test_geometry_point_request.py
 test/test_group.py
 test/test_group_folder.py
 test/test_group_folder_read.py

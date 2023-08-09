@@ -686,6 +686,8 @@ Class | Method | HTTP request | Description
  - [FolderWithoutChildrenRequest](docs/FolderWithoutChildrenRequest.md)
  - [FullTopic](docs/FullTopic.md)
  - [FullTopicRequest](docs/FullTopicRequest.md)
+ - [GeometryPoint](docs/GeometryPoint.md)
+ - [GeometryPointRequest](docs/GeometryPointRequest.md)
  - [Group](docs/Group.md)
  - [GroupFolder](docs/GroupFolder.md)
  - [GroupFolderRead](docs/GroupFolderRead.md)
