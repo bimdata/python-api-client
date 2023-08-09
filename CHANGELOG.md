@@ -2,6 +2,14 @@
 
 <!--next-version-placeholder-->
 
+## v9.16.0 (2023-08-09)
+### Feature
+* Add space geometry (#672)
+
+* add space geometry
+
+* restor deleted code line ([`0670d25`](https://github.com/bimdata/python-api-client/commit/0670d25901e4923b1d65fdbca2249a8a5bf11597))
+
 ## v9.15.1 (2023-07-07)
 ### Fix
 * Add head_id field to Document serializer ([#669](https://github.com/bimdata/python-api-client/issues/669)) ([`02c7125`](https://github.com/bimdata/python-api-client/commit/02c71259431aa17f56c50fafe8ecef2e61702860))
