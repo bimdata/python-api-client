@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.16.1 (2023-08-24)
+### Fix
+* Add z field to geometryPoint ([`0fc0507`](https://github.com/bimdata/python-api-client/commit/0fc05073daec5f8d22a2a237a5ddf79856f3118c))
+
 ## v9.16.0 (2023-08-09)
 ### Feature
 * Add space geometry (#672)
