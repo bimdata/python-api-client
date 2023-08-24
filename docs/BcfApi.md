@@ -893,6 +893,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
+                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -1028,6 +1029,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         point=GeometryPointRequest(
             x=3.14,
             y=3.14,
+            z=3.14,
         ),
         index=0,
     ) # PinRequest | 
@@ -1321,6 +1323,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
+                    z=3.14,
                 ),
                 index=0,
             ),
@@ -2837,6 +2840,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
+                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -2974,6 +2978,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         point=GeometryPointRequest(
             x=3.14,
             y=3.14,
+            z=3.14,
         ),
         index=0,
     ) # PinRequest | 
@@ -3271,6 +3276,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
+                    z=3.14,
                 ),
                 index=0,
             ),
@@ -7033,6 +7039,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         point=GeometryPointRequest(
                             x=3.14,
                             y=3.14,
+                            z=3.14,
                         ),
                         index=0,
                     ),
@@ -7169,6 +7176,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
         point=GeometryPointRequest(
             x=3.14,
             y=3.14,
+            z=3.14,
         ),
         index=0,
     ) # PatchedPinRequest |  (optional)
@@ -7484,6 +7492,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 point=GeometryPointRequest(
                     x=3.14,
                     y=3.14,
+                    z=3.14,
                 ),
                 index=0,
             ),

@@ -4310,6 +4310,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                 GeometryPointRequest(
                     x=3.14,
                     y=3.14,
+                    z=3.14,
                 ),
             ],
         ),
@@ -5004,6 +5005,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                         GeometryPointRequest(
                             x=3.14,
                             y=3.14,
+                            z=3.14,
                         ),
                     ],
                 ),
@@ -16787,6 +16789,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
             GeometryPointRequest(
                 x=3.14,
                 y=3.14,
+                z=3.14,
             ),
         ],
     ) # PatchedSpaceRequest |  (optional)
@@ -17313,6 +17316,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                             GeometryPointRequest(
                                 x=3.14,
                                 y=3.14,
+                                z=3.14,
                             ),
                         ],
                     ),
@@ -17330,6 +17334,7 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
                     GeometryPointRequest(
                         x=3.14,
                         y=3.14,
+                        z=3.14,
                     ),
                 ],
             ),

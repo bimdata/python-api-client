@@ -84,6 +84,7 @@ class GeometryPoint(ModelNormal):
         return {
             'x': (float,),  # noqa: E501
             'y': (float,),  # noqa: E501
+            'z': (float,),  # noqa: E501
         }
 
     @cached_property
@@ -94,6 +95,7 @@ class GeometryPoint(ModelNormal):
     attribute_map = {
         'x': 'x',  # noqa: E501
         'y': 'y',  # noqa: E501
+        'z': 'z',  # noqa: E501
     }
 
     read_only_vars = {
@@ -103,12 +105,13 @@ class GeometryPoint(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, x, y, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, x, y, z, *args, **kwargs):  # noqa: E501
         """GeometryPoint - a model defined in OpenAPI
 
         Args:
             x (float):
             y (float):
+            z (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -170,6 +173,7 @@ class GeometryPoint(ModelNormal):
 
         self.x = x
         self.y = y
+        self.z = z
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -190,12 +194,13 @@ class GeometryPoint(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, x, y, *args, **kwargs):  # noqa: E501
+    def __init__(self, x, y, z, *args, **kwargs):  # noqa: E501
         """GeometryPoint - a model defined in OpenAPI
 
         Args:
             x (float):
             y (float):
+            z (float):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -255,6 +260,7 @@ class GeometryPoint(ModelNormal):
 
         self.x = x
         self.y = y
+        self.z = z
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
