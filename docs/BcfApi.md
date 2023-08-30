@@ -24,6 +24,7 @@ Method | HTTP request | Description
 [**delete_topic**](BcfApi.md#delete_topic) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{guid} | Delete a topic
 [**delete_viewpoint**](BcfApi.md#delete_viewpoint) | **DELETE** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/viewpoints/{guid} | Delete a Viewpoint
 [**download_bcf_export**](BcfApi.md#download_bcf_export) | **GET** /bcf/2.1/projects/{id}/export | Export project&#39;s topics in bcf-xml format
+[**download_bcf_export_xlsx**](BcfApi.md#download_bcf_export_xlsx) | **GET** /bcf/2.1/projects/{id}/export-xlsx | Export project&#39;s topics in excel format
 [**full_update_bcf_project**](BcfApi.md#full_update_bcf_project) | **PUT** /bcf/2.1/projects/{id} | Update all fields of a BCF project
 [**full_update_comment**](BcfApi.md#full_update_comment) | **PUT** /bcf/2.1/projects/{projects_pk}/topics/{topics_guid}/comments/{guid} | Update all fields of a comment
 [**full_update_full_topic**](BcfApi.md#full_update_full_topic) | **PUT** /bcf/2.1/projects/{projects_pk}/full-topic/{guid} | Update all fields of a topic
@@ -2455,6 +2456,109 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+# **download_bcf_export_xlsx**
+> BcfProject download_bcf_export_xlsx(id)
+
+Export project's topics in excel format
+
+This is not a standard route. Export project's topics in excel format  Required scopes: bcf:read
+
+### Example
+
+* Api Key Authentication (ApiKey):
+* OAuth Authentication (BIMData_Connect):
+* OAuth Authentication (BIMData_Connect):
+* Api Key Authentication (Bearer):
+
+```python
+import time
+import bimdata_api_client
+from bimdata_api_client.api import bcf_api
+from bimdata_api_client.model.bcf_project import BcfProject
+from pprint import pprint
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+
+# The client must configure the authentication and authorization parameters
+# in accordance with the API server security policy.
+# Examples for each auth method are provided below, use the example that
+# satisfies your auth use case.
+
+# Configure API key authorization: ApiKey
+configuration.api_key['ApiKey'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['ApiKey'] = 'Bearer'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure OAuth2 access token for authorization: BIMData_Connect
+configuration = bimdata_api_client.Configuration(
+    host = "http://localhost"
+)
+configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# Configure API key authorization: Bearer
+configuration.api_key['Bearer'] = 'YOUR_API_KEY'
+
+# Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+# configuration.api_key_prefix['Bearer'] = 'Bearer'
+
+# Enter a context with an instance of the API client
+with bimdata_api_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = bcf_api.BcfApi(api_client)
+    id = 1 # int | A unique integer value identifying this project.
+
+    # example passing only required values which don't have defaults set
+    try:
+        # Export project's topics in excel format
+        api_response = api_instance.download_bcf_export_xlsx(id)
+        pprint(api_response)
+    except bimdata_api_client.ApiException as e:
+        print("Exception when calling BcfApi->download_bcf_export_xlsx: %s\n" % e)
+```
+
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **int**| A unique integer value identifying this project. |
+
+### Return type
+
+[**BcfProject**](BcfProject.md)
+
+### Authorization
+
+[ApiKey](../README.md#ApiKey), [BIMData_Connect](../README.md#BIMData_Connect), [BIMData_Connect](../README.md#BIMData_Connect), [Bearer](../README.md#Bearer)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+**401** | The authentication failed. Your token may be expired, missing or malformed |  -  |
+**403** | You don&#39;t have the authorization to access this resource. Check if the resource is exclusive to users or app (eg: /user is exclusive to users) or if your user has the right to access this resource. |  -  |
+**404** | The resource does not exist or you don&#39;t have the right to see if the resource exists |  -  |
+**500** | Something really bad happened. Check if your route is correct. By example: /cloud/[object Object]/project may raise a 500. An alert is automatically sent to us, we&#39;ll look at it shortly. |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 # **full_update_bcf_project**
 > BcfProject full_update_bcf_project(id, bcf_project_request)
 
@@ -4338,10 +4442,14 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
-    format = "format_example" # str | format (optional)
-    ifcs = "ifcs_example" # str | ifcs (optional)
+    format = "format_example" # str |  (optional)
+    ifcs = [
+        1,
+    ] # [int] |  (optional)
     img_format = "url" # str | All snapshot_data will be returned as url instead of base64 (optional) if omitted the server will use the default value of "url"
-    models = "models_example" # str | models (optional)
+    models = [
+        1,
+    ] # [int] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4367,10 +4475,10 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
- **format** | **str**| format | [optional]
- **ifcs** | **str**| ifcs | [optional]
+ **format** | **str**|  | [optional]
+ **ifcs** | **[int]**|  | [optional]
  **img_format** | **str**| All snapshot_data will be returned as url instead of base64 | [optional] if omitted the server will use the default value of "url"
- **models** | **str**| models | [optional]
+ **models** | **[int]**|  | [optional]
 
 ### Return type
 
@@ -4563,9 +4671,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
     projects_pk = 1 # int | 
-    format = "format_example" # str | format (optional)
-    ifcs = "ifcs_example" # str | ifcs (optional)
-    models = "models_example" # str | models (optional)
+    format = "format_example" # str |  (optional)
+    ifcs = [
+        1,
+    ] # [int] |  (optional)
+    models = [
+        1,
+    ] # [int] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -4592,9 +4704,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **str**|  |
  **projects_pk** | **int**|  |
- **format** | **str**| format | [optional]
- **ifcs** | **str**| ifcs | [optional]
- **models** | **str**| models | [optional]
+ **format** | **str**|  | [optional]
+ **ifcs** | **[int]**|  | [optional]
+ **models** | **[int]**|  | [optional]
 
 ### Return type
 
@@ -4998,9 +5110,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = bcf_api.BcfApi(api_client)
     guid = "guid_example" # str | 
     projects_pk = 1 # int | 
-    format = "format_example" # str | format (optional)
-    ifcs = "ifcs_example" # str | ifcs (optional)
-    models = "models_example" # str | models (optional)
+    format = "format_example" # str |  (optional)
+    ifcs = [
+        1,
+    ] # [int] |  (optional)
+    models = [
+        1,
+    ] # [int] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5027,9 +5143,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **guid** | **str**|  |
  **projects_pk** | **int**|  |
- **format** | **str**| format | [optional]
- **ifcs** | **str**| ifcs | [optional]
- **models** | **str**| models | [optional]
+ **format** | **str**|  | [optional]
+ **ifcs** | **[int]**|  | [optional]
+ **models** | **[int]**|  | [optional]
 
 ### Return type
 
@@ -5231,9 +5347,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = bcf_api.BcfApi(api_client)
     projects_pk = 1 # int | 
-    format = "format_example" # str | format (optional)
-    ifcs = "ifcs_example" # str | ifcs (optional)
-    models = "models_example" # str | models (optional)
+    format = "format_example" # str |  (optional)
+    ifcs = [
+        1,
+    ] # [int] |  (optional)
+    models = [
+        1,
+    ] # [int] |  (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -5259,9 +5379,9 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **projects_pk** | **int**|  |
- **format** | **str**| format | [optional]
- **ifcs** | **str**| ifcs | [optional]
- **models** | **str**| models | [optional]
+ **format** | **str**|  | [optional]
+ **ifcs** | **[int]**|  | [optional]
+ **models** | **[int]**|  | [optional]
 
 ### Return type
 

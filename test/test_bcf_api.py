@@ -164,6 +164,13 @@ class TestBcfApi(unittest.TestCase):
         """
         pass
 
+    def test_download_bcf_export_xlsx(self):
+        """Test case for download_bcf_export_xlsx
+
+        Export project's topics in excel format  # noqa: E501
+        """
+        pass
+
     def test_full_update_bcf_project(self):
         """Test case for full_update_bcf_project
 

@@ -1368,6 +1368,60 @@ class BcfApi(object):
             },
             api_client=api_client
         )
+        self.download_bcf_export_xlsx_endpoint = _Endpoint(
+            settings={
+                'response_type': (BcfProject,),
+                'auth': [
+                    'ApiKey',
+                    'BIMData_Connect',
+                    'BIMData_Connect',
+                    'Bearer'
+                ],
+                'endpoint_path': '/bcf/2.1/projects/{id}/export-xlsx',
+                'operation_id': 'download_bcf_export_xlsx',
+                'http_method': 'GET',
+                'servers': None,
+            },
+            params_map={
+                'all': [
+                    'id',
+                ],
+                'required': [
+                    'id',
+                ],
+                'nullable': [
+                ],
+                'enum': [
+                ],
+                'validation': [
+                ]
+            },
+            root_map={
+                'validations': {
+                },
+                'allowed_values': {
+                },
+                'openapi_types': {
+                    'id':
+                        (int,),
+                },
+                'attribute_map': {
+                    'id': 'id',
+                },
+                'location_map': {
+                    'id': 'path',
+                },
+                'collection_format_map': {
+                }
+            },
+            headers_map={
+                'accept': [
+                    'application/json'
+                ],
+                'content_type': [],
+            },
+            api_client=api_client
+        )
         self.full_update_bcf_project_endpoint = _Endpoint(
             settings={
                 'response_type': (BcfProject,),
@@ -2384,11 +2438,11 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        (str,),
+                        ([int],),
                     'img_format':
                         (str,),
                     'models':
-                        (str,),
+                        ([int],),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
@@ -2405,6 +2459,8 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2527,9 +2583,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        (str,),
+                        ([int],),
                     'models':
-                        (str,),
+                        ([int],),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -2546,6 +2602,8 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2794,9 +2852,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        (str,),
+                        ([int],),
                     'models':
-                        (str,),
+                        ([int],),
                 },
                 'attribute_map': {
                     'guid': 'guid',
@@ -2813,6 +2871,8 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
                 }
             },
             headers_map={
@@ -2935,9 +2995,9 @@ class BcfApi(object):
                     'format':
                         (str,),
                     'ifcs':
-                        (str,),
+                        ([int],),
                     'models':
-                        (str,),
+                        ([int],),
                 },
                 'attribute_map': {
                     'projects_pk': 'projects_pk',
@@ -2952,6 +3012,8 @@ class BcfApi(object):
                     'models': 'query',
                 },
                 'collection_format_map': {
+                    'ifcs': 'multi',
+                    'models': 'multi',
                 }
             },
             headers_map={
@@ -5860,6 +5922,84 @@ class BcfApi(object):
             id
         return self.download_bcf_export_endpoint.call_with_http_info(**kwargs)
 
+    def download_bcf_export_xlsx(
+        self,
+        id,
+        **kwargs
+    ):
+        """Export project's topics in excel format  # noqa: E501
+
+        This is not a standard route. Export project's topics in excel format  Required scopes: bcf:read  # noqa: E501
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please pass async_req=True
+
+        >>> thread = api.download_bcf_export_xlsx(id, async_req=True)
+        >>> result = thread.get()
+
+        Args:
+            id (int): A unique integer value identifying this project.
+
+        Keyword Args:
+            _return_http_data_only (bool): response data without head status
+                code and headers. Default is True.
+            _preload_content (bool): if False, the urllib3.HTTPResponse object
+                will be returned without reading/decoding response data.
+                Default is True.
+            _request_timeout (int/float/tuple): timeout setting for this request. If
+                one number provided, it will be total request timeout. It can also
+                be a pair (tuple) of (connection, read) timeouts.
+                Default is None.
+            _check_input_type (bool): specifies if type checking
+                should be done one the data sent to the server.
+                Default is True.
+            _check_return_type (bool): specifies if type checking
+                should be done one the data received from the server.
+                Default is True.
+            _spec_property_naming (bool): True if the variable names in the input data
+                are serialized names, as specified in the OpenAPI document.
+                False if the variable names in the input data
+                are pythonic names, e.g. snake case (default)
+            _content_type (str/None): force body content-type.
+                Default is None and content-type will be predicted by allowed
+                content-types and body.
+            _host_index (int/None): specifies the index of the server
+                that we want to use.
+                Default is read from the configuration.
+            async_req (bool): execute request asynchronously
+
+        Returns:
+            BcfProject
+                If the method is called asynchronously, returns the request
+                thread.
+        """
+        kwargs['async_req'] = kwargs.get(
+            'async_req', False
+        )
+        kwargs['_return_http_data_only'] = kwargs.get(
+            '_return_http_data_only', True
+        )
+        kwargs['_preload_content'] = kwargs.get(
+            '_preload_content', True
+        )
+        kwargs['_request_timeout'] = kwargs.get(
+            '_request_timeout', None
+        )
+        kwargs['_check_input_type'] = kwargs.get(
+            '_check_input_type', True
+        )
+        kwargs['_check_return_type'] = kwargs.get(
+            '_check_return_type', True
+        )
+        kwargs['_spec_property_naming'] = kwargs.get(
+            '_spec_property_naming', False
+        )
+        kwargs['_content_type'] = kwargs.get(
+            '_content_type')
+        kwargs['_host_index'] = kwargs.get('_host_index')
+        kwargs['id'] = \
+            id
+        return self.download_bcf_export_xlsx_endpoint.call_with_http_info(**kwargs)
+
     def full_update_bcf_project(
         self,
         id,
@@ -7119,10 +7259,10 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): format. [optional]
-            ifcs (str): ifcs. [optional]
+            format (str): [optional]
+            ifcs ([int]): [optional]
             img_format (str): All snapshot_data will be returned as url instead of base64. [optional] if omitted the server will use the default value of "url"
-            models (str): models. [optional]
+            models ([int]): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7289,9 +7429,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): format. [optional]
-            ifcs (str): ifcs. [optional]
-            models (str): models. [optional]
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7628,9 +7768,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): format. [optional]
-            ifcs (str): ifcs. [optional]
-            models (str): models. [optional]
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object
@@ -7794,9 +7934,9 @@ class BcfApi(object):
             projects_pk (int):
 
         Keyword Args:
-            format (str): format. [optional]
-            ifcs (str): ifcs. [optional]
-            models (str): models. [optional]
+            format (str): [optional]
+            ifcs ([int]): [optional]
+            models ([int]): [optional]
             _return_http_data_only (bool): response data without head status
                 code and headers. Default is True.
             _preload_content (bool): if False, the urllib3.HTTPResponse object

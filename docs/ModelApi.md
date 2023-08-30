@@ -11002,13 +11002,13 @@ with bimdata_api_client.ApiClient(configuration) as api_client:
     api_instance = model_api.ModelApi(api_client)
     cloud_pk = 1 # int | 
     project_pk = 1 # int | 
-    source = "EXPORT" # str | * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED  * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
+    source = "EXPORT" # str | * `UPLOAD` - UPLOAD * `SPLIT` - SPLIT * `MERGE` - MERGE * `EXPORT` - EXPORT * `OPTIMIZED` - OPTIMIZED (optional)
     status = [
         "C",
-    ] # [str] | * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix  * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix (optional)
+    ] # [str] | * `C` - completed * `D` - deleted * `P` - pending * `W` - waiting * `I` - in process * `E` - errored * `X` - won't fix (optional)
     type = [
         "DWG",
-    ] # [str] | * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING  * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING (optional)
+    ] # [str] | * `IFC` - IFC * `DWG` - DWG * `DXF` - DXF * `GLTF` - GLTF * `PDF` - PDF * `JPEG` - JPEG * `PNG` - PNG * `OBJ` - OBJ * `POINT_CLOUD` - POINT_CLOUD * `METABUILDING` - METABUILDING (optional)
 
     # example passing only required values which don't have defaults set
     try:
@@ -11035,9 +11035,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **cloud_pk** | **int**|  |
  **project_pk** | **int**|  |
- **source** | **str**| * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED  * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
- **status** | **[str]**| * &#x60;C&#x60; - completed * &#x60;D&#x60; - deleted * &#x60;P&#x60; - pending * &#x60;W&#x60; - waiting * &#x60;I&#x60; - in process * &#x60;E&#x60; - errored * &#x60;X&#x60; - won&#39;t fix  * &#x60;C&#x60; - completed * &#x60;D&#x60; - deleted * &#x60;P&#x60; - pending * &#x60;W&#x60; - waiting * &#x60;I&#x60; - in process * &#x60;E&#x60; - errored * &#x60;X&#x60; - won&#39;t fix | [optional]
- **type** | **[str]**| * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING  * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING | [optional]
+ **source** | **str**| * &#x60;UPLOAD&#x60; - UPLOAD * &#x60;SPLIT&#x60; - SPLIT * &#x60;MERGE&#x60; - MERGE * &#x60;EXPORT&#x60; - EXPORT * &#x60;OPTIMIZED&#x60; - OPTIMIZED | [optional]
+ **status** | **[str]**| * &#x60;C&#x60; - completed * &#x60;D&#x60; - deleted * &#x60;P&#x60; - pending * &#x60;W&#x60; - waiting * &#x60;I&#x60; - in process * &#x60;E&#x60; - errored * &#x60;X&#x60; - won&#39;t fix | [optional]
+ **type** | **[str]**| * &#x60;IFC&#x60; - IFC * &#x60;DWG&#x60; - DWG * &#x60;DXF&#x60; - DXF * &#x60;GLTF&#x60; - GLTF * &#x60;PDF&#x60; - PDF * &#x60;JPEG&#x60; - JPEG * &#x60;PNG&#x60; - PNG * &#x60;OBJ&#x60; - OBJ * &#x60;POINT_CLOUD&#x60; - POINT_CLOUD * &#x60;METABUILDING&#x60; - METABUILDING | [optional]
 
 ### Return type
 
