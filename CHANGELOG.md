@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.17.0 (2023-08-30)
+### Feature
+* Feat(organization): add main_model field to Project model ([`391aa88`](https://github.com/bimdata/python-api-client/commit/391aa888082ac451c6fd742b167a58eb567dfaad))
+
 ## v9.16.1 (2023-08-24)
 ### Fix
 * Add z field to geometryPoint ([`0fc0507`](https://github.com/bimdata/python-api-client/commit/0fc05073daec5f8d22a2a237a5ddf79856f3118c))
