@@ -95,6 +95,7 @@ class ProjectWithChildren(ModelNormal):
             'updated_at': (datetime,),  # noqa: E501
             'children': ([ProjectWithChildren],),  # noqa: E501
             'root_folder_id': (int, none_type,),  # noqa: E501
+            'main_model_id': (int, none_type,),  # noqa: E501
             'logo': (str, none_type,),  # noqa: E501
             'description': (str, none_type,),  # noqa: E501
             'status': (str,),  # noqa: E501
@@ -113,6 +114,7 @@ class ProjectWithChildren(ModelNormal):
         'updated_at': 'updated_at',  # noqa: E501
         'children': 'children',  # noqa: E501
         'root_folder_id': 'root_folder_id',  # noqa: E501
+        'main_model_id': 'main_model_id',  # noqa: E501
         'logo': 'logo',  # noqa: E501
         'description': 'description',  # noqa: E501
         'status': 'status',  # noqa: E501
@@ -125,13 +127,14 @@ class ProjectWithChildren(ModelNormal):
         'updated_at',  # noqa: E501
         'children',  # noqa: E501
         'root_folder_id',  # noqa: E501
+        'main_model_id',  # noqa: E501
     }
 
     _composed_schemas = {}
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, id, name, created_at, updated_at, children, root_folder_id, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, id, name, created_at, updated_at, children, root_folder_id, main_model_id, *args, **kwargs):  # noqa: E501
         """ProjectWithChildren - a model defined in OpenAPI
 
         Args:
@@ -141,6 +144,7 @@ class ProjectWithChildren(ModelNormal):
             updated_at (datetime): Date of the last update
             children ([ProjectWithChildren]):
             root_folder_id (int, none_type):
+            main_model_id (int, none_type): Main model of the project
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -210,6 +214,7 @@ class ProjectWithChildren(ModelNormal):
         self.updated_at = updated_at
         self.children = children
         self.root_folder_id = root_folder_id
+        self.main_model_id = main_model_id
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

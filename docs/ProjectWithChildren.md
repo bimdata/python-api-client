@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **updated_at** | **datetime** | Date of the last update | [readonly] 
 **children** | [**[ProjectWithChildren]**](ProjectWithChildren.md) |  | [readonly] 
 **root_folder_id** | **int, none_type** |  | [readonly] 
+**main_model_id** | **int, none_type** | Main model of the project | [readonly] 
 **logo** | **str, none_type** |  | [optional] 
 **description** | **str, none_type** |  | [optional] 
 **status** | **str** | * &#x60;A&#x60; - active * &#x60;D&#x60; - deleted | [optional] 
