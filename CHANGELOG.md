@@ -2,6 +2,24 @@
 
 <!--next-version-placeholder-->
 
+## v9.18.0 (2023-08-30)
+### Feature
+* Add xlsx export (#676)
+
+* action xlsx export
+
+* black
+
+* add documentation
+
+* add BIMData logo
+
+* poetry update
+
+---------
+
+Co-authored-by: Amoki <hugo@bimdata.io> ([`953ab41`](https://github.com/bimdata/python-api-client/commit/953ab414de0dcec8e23237bb0da99251b4041aa9))
+
 ## v9.17.0 (2023-08-30)
 ### Feature
 * Feat(organization): add main_model field to Project model ([`391aa88`](https://github.com/bimdata/python-api-client/commit/391aa888082ac451c6fd742b167a58eb567dfaad))
