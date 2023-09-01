@@ -2,6 +2,10 @@
 
 <!--next-version-placeholder-->
 
+## v9.18.1 (2023-09-01)
+### Fix
+* Fix bcf excel export documentation ([`4054f7c`](https://github.com/bimdata/python-api-client/commit/4054f7c0aba4a707528736a9dee98c2c14933727))
+
 ## v9.18.0 (2023-08-30)
 ### Feature
 * Add xlsx export (#676)
